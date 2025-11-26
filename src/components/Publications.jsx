@@ -32,7 +32,7 @@ const Publications = () => {
     return (
         <section id="publications" className={styles.publications}>
             <div className={`container ${styles.container}`}>
-                <h2 className={styles.sectionTitle}>Selected Publications</h2>
+                <h2 className={styles.sectionTitle}>주요 논문</h2>
 
                 <div className={styles.list}>
                     {publications.map((pub, index) => (

@@ -6,21 +6,21 @@ const ResearchProjects = () => {
     const projects = [
         {
             icon: <FileText size={24} />,
-            title: "Decentralized Clinical Trials",
-            category: "Protocol Design",
-            description: "Implemented remote monitoring protocols reducing patient burden by 40% in Phase III oncology trials."
+            title: "분산형 임상시험",
+            category: "프로토콜 설계",
+            description: "3상 종양학 임상시험에서 환자 부담을 40% 줄이는 원격 모니터링 프로토콜 구현"
         },
         {
             icon: <Activity size={24} />,
-            title: "Digital Biomarker Validation",
-            category: "Clinical Validation",
-            description: "Led the validation study for a novel wearable sensor detecting early signs of atrial fibrillation."
+            title: "디지털 바이오마커 검증",
+            category: "임상 검증",
+            description: "심방세동 조기 징후 감지를 위한 새로운 웨어러블 센서 검증 연구 주도"
         },
         {
             icon: <Globe size={24} />,
-            title: "Global Regulatory Strategy",
-            category: "Regulatory Affairs",
-            description: "Navigated FDA and EMA requirements for a first-in-class AI-driven diagnostic tool."
+            title: "글로벌 규제 전략",
+            category: "규제 업무",
+            description: "최초의 AI 기반 진단 도구에 대한 FDA 및 EMA 요구사항 처리"
         }
     ];
 
@@ -28,7 +28,7 @@ const ResearchProjects = () => {
         <section id="research" className={styles.research}>
             <div className={`container ${styles.container}`}>
                 <div className={styles.header}>
-                    <h2 className={styles.sectionTitle}>Research Highlights</h2>
+                    <h2 className={styles.sectionTitle}>연구 하이라이트</h2>
                     <div className={styles.line}></div>
                 </div>
 
@@ -41,7 +41,7 @@ const ResearchProjects = () => {
                             </div>
                             <h3 className={styles.title}>{project.title}</h3>
                             <p className={styles.description}>{project.description}</p>
-                            <a href="#" className={styles.link}>View Case Study →</a>
+                            <a href="#" className={styles.link}>사례 연구 보기 →</a>
                         </div>
                     ))}
                 </div>

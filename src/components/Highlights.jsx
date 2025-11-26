@@ -6,23 +6,23 @@ const Highlights = () => {
     const items = [
         {
             icon: <Activity size={32} strokeWidth={1.5} />,
-            title: "Clinical Strategy",
-            description: "Optimizing trial protocols for efficiency and patient safety."
+            title: "임상 전략",
+            description: "효율성과 환자 안전을 위한 임상시험 프로토콜 최적화"
         },
         {
             icon: <Brain size={32} strokeWidth={1.5} />,
-            title: "AI Integration",
-            description: "Leveraging machine learning for predictive health analytics."
+            title: "AI 통합",
+            description: "예측 건강 분석을 위한 머신러닝 활용"
         },
         {
             icon: <Database size={32} strokeWidth={1.5} />,
-            title: "Data Science",
-            description: "Transforming complex datasets into actionable medical insights."
+            title: "데이터 과학",
+            description: "복잡한 데이터셋을 실행 가능한 의학적 통찰력으로 변환"
         },
         {
             icon: <Users size={32} strokeWidth={1.5} />,
-            title: "Patient Centricity",
-            description: "Designing digital health solutions with the user in mind."
+            title: "환자 중심성",
+            description: "사용자를 염두에 둔 디지털 헬스 솔루션 설계"
         }
     ];
 

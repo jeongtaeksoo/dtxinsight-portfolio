@@ -6,27 +6,23 @@ const Contact = () => {
     return (
         <section id="contact" className={styles.contact}>
             <div className={`container ${styles.container}`}>
-                <h2 className={styles.title}>Let's Connect</h2>
+                <h2 className={styles.title}>연결하기</h2>
                 <p className={styles.subtitle}>
-                    Interested in collaboration or have questions about my work? I'd love to hear from you.
+                    협업에 관심이 있거나 제 업무에 대해 궁금한 점이 있으신가요? 연락 주시면 기껋게 답변드리겠습니다.
                 </p>
 
                 <div className={styles.links}>
-                    <a href="mailto:contact@dtxinsight.com" className={styles.link}>
+                    <a href="mailto:jeongtaeksoo@gmail.com" className={styles.link}>
                         <Mail size={20} />
-                        <span>contact@dtxinsight.com</span>
+                        <span>jeongtaeksoo@gmail.com</span>
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                    <a href="https://www.linkedin.com/in/taeksoo-jeong-b4a91b1a3/" target="_blank" rel="noopener noreferrer" className={styles.link}>
                         <Linkedin size={20} />
                         <span>LinkedIn</span>
                     </a>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                    <a href="https://orcid.org/0000-0002-4756-5969" target="_blank" rel="noopener noreferrer" className={styles.link}>
                         <Github size={20} />
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                        <Twitter size={20} />
-                        <span>Twitter</span>
+                        <span>ORCID</span>
                     </a>
                 </div>
             </div>
@@ -35,7 +31,7 @@ const Contact = () => {
                 <div className="container">
                     <div className={styles.footerContent}>
                         <p className={styles.copyright}>© 2025 DTX Insight. All rights reserved.</p>
-                        <p className={styles.tagline}>Clinical Research × AI Innovation</p>
+                        <p className={styles.tagline}>임상연구 × AI 혁신</p>
                     </div>
                 </div>
             </footer>

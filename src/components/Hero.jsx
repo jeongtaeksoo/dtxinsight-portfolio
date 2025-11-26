@@ -8,15 +8,15 @@ const Hero = () => {
             <div className={`container ${styles.container}`}>
                 <div className={styles.content}>
                     <h1 className={styles.title}>
-                        Bridging Clinical Research <br />
-                        <span className={styles.highlight}>& AI Innovation</span>
+                        임상연구 전략가 <br />
+                        <span className={styles.highlight}>&amp; AI 디지털헬스 혁신가</span>
                     </h1>
                     <p className={styles.subtitle}>
-                        Clinical Research Strategist & AI Digital Health Innovator transforming healthcare through data-driven insights and cutting-edge technology.
+                        데이터 기반 통찰력과 최첨단 기술로 헬스케어를 혁신하는 임상연구 전략가이자 AI 디지털헬스 혁신가입니다.
                     </p>
                     <div className={styles.actions}>
-                        <a href="#contact" className={styles.primaryBtn}>Get in Touch</a>
-                        <a href="#research" className={styles.secondaryBtn}>View Research</a>
+                        <a href="#contact" className={styles.primaryBtn}>연락하기</a>
+                        <a href="#research" className={styles.secondaryBtn}>연구 보기</a>
                     </div>
                 </div>
                 <div className={styles.imageWrapper}>
