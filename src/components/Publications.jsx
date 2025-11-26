@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './Publications.module.css';
+import poster1 from '../assets/poster_1.jpg';
+import poster2 from '../assets/poster_2.jpg';
 
 const Publications = () => {
     const publications = [
@@ -49,6 +51,18 @@ const Publications = () => {
                             </div>
                         </div>
                     ))}
+                </div>
+
+                <div className={styles.posterSection}>
+                    <h3 className={styles.posterTitle}>학회 발표 포스터</h3>
+                    <div className={styles.posterGallery}>
+                        <div className={styles.posterItem}>
+                            <img src={poster1} alt="학회 발표 포스터 1" className={styles.posterImage} />
+                        </div>
+                        <div className={styles.posterItem}>
+                            <img src={poster2} alt="학회 발표 포스터 2" className={styles.posterImage} />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

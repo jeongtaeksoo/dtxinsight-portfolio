@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Hero.module.css';
-import profileImg from '../assets/profile_photo_placeholder.png'; // Assuming the generated image will be moved here
+import profileImg from '../assets/profile_photo.jpg';
 
 const Hero = () => {
     return (
