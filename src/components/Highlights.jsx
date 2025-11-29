@@ -21,8 +21,8 @@ const Highlights = () => {
         },
         {
             icon: <Users size={32} strokeWidth={1.5} />,
-            title: "규제 및 윤리",
-            description: "IRB 심의, CRIS 등록 및 보건복지부 실증사업 대응"
+            title: "학술 연구 성과",
+            description: "SCI급 논문 게재 및 국내 학술대회 포스터 발표"
         }
     ];
 

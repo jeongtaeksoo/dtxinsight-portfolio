@@ -8,21 +8,25 @@ const Contact = () => {
             <div className={`container ${styles.container}`}>
                 <h2 className={styles.title}>연결하기</h2>
                 <p className={styles.subtitle}>
-                    협업에 관심이 있거나 제 업무에 대해 궁금한 점이 있으신가요? 연락 주시면 기껋게 답변드리겠습니다.
+                    협업에 관심이 있거나 제 업무에 대해 궁금한 점이 있으신가요? 연락 주시면 기껗게 답변드리겠습니다.
                 </p>
 
                 <div className={styles.links}>
                     <a href="mailto:jeongtaeksoo@gmail.com" className={styles.link}>
-                        <Mail size={20} />
+                        <GmailIcon size={24} />
                         <span>jeongtaeksoo@gmail.com</span>
                     </a>
                     <a href="https://www.linkedin.com/in/taeksoo-jeong-20685b296/" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                        <Linkedin size={20} />
+                        <LinkedInIcon size={24} />
                         <span>LinkedIn</span>
                     </a>
                     <a href="https://orcid.org/0009-0001-1451-5457" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                        <Github size={20} />
+                        <OrcidIcon size={24} />
                         <span>ORCID</span>
+                    </a>
+                    <a href="https://github.com/jeongtaeksoo" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                        <GithubIcon size={24} />
+                        <span>GitHub</span>
                     </a>
                 </div>
             </div>

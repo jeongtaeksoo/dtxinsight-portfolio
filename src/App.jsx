@@ -17,7 +17,6 @@ function App() {
       <main>
         <Hero />
         <Highlights />
-        <About />
         <ResearchProjects />
         <DigitalHealthProjects />
         <Publications />
