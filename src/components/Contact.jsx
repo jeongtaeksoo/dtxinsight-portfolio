@@ -16,11 +16,11 @@ const Contact = () => {
                         <Mail size={20} />
                         <span>jeongtaeksoo@gmail.com</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/taeksoo-jeong-b4a91b1a3/" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                    <a href="https://www.linkedin.com/in/taeksoo-jeong-20685b296/" target="_blank" rel="noopener noreferrer" className={styles.link}>
                         <Linkedin size={20} />
                         <span>LinkedIn</span>
                     </a>
-                    <a href="https://orcid.org/0000-0002-4756-5969" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                    <a href="https://orcid.org/0009-0001-1451-5457" target="_blank" rel="noopener noreferrer" className={styles.link}>
                         <Github size={20} />
                         <span>ORCID</span>
                     </a>

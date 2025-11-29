@@ -6,28 +6,16 @@ import poster2 from '../assets/poster_2.jpg';
 const Publications = () => {
     const publications = [
         {
-            year: "2024",
-            title: "AI-Driven Biomarkers in Neurodegenerative Disease Trials",
-            journal: "Journal of Digital Medicine",
+            year: "2025",
+            title: "AI-driven cognitive telerehabilitation for stroke: a randomized controlled trial",
+            journal: "Frontiers in Neurology",
             status: "Published"
         },
         {
-            year: "2023",
-            title: "Optimizing Patient Recruitment via Machine Learning Models",
-            journal: "Clinical Trials Today",
-            status: "Published"
-        },
-        {
-            year: "2023",
-            title: "The Future of Decentralized Trials: A Strategic Framework",
-            journal: "International Journal of Clinical Research",
-            status: "Featured"
-        },
-        {
-            year: "2022",
-            title: "Ethical Considerations in AI Healthcare Algorithms",
-            journal: "Digital Health Ethics Review",
-            status: "Published"
+            year: "2025",
+            title: "Designing a Generative AI Framework for Cognitive Intervention in Older Adults: An Engineering Protocol for Clinical Application",
+            journal: "MDPI (To be submitted)",
+            status: "To be submitted"
         }
     ];
 
@@ -57,10 +45,12 @@ const Publications = () => {
                     <h3 className={styles.posterTitle}>학회 발표 포스터</h3>
                     <div className={styles.posterGallery}>
                         <div className={styles.posterItem}>
-                            <img src={poster1} alt="학회 발표 포스터 1" className={styles.posterImage} />
+                            <img src={poster1} alt="Artificial Intelligence-Guided Mobile Telerehabilitation for Subjects with Cognitive Impairment" className={styles.posterImage} />
+                            <p className={styles.posterCaption}>Artificial Intelligence-Guided Mobile Telerehabilitation for Subjects with Cognitive Impairment</p>
                         </div>
                         <div className={styles.posterItem}>
-                            <img src={poster2} alt="학회 발표 포스터 2" className={styles.posterImage} />
+                            <img src={poster2} alt="Predictive Value of Cognitive Function and ALT for Functional Ambulation Gain in MCA Stroke Patients" className={styles.posterImage} />
+                            <p className={styles.posterCaption}>Predictive Value of Cognitive Function and ALT for Functional Ambulation Gain in MCA Stroke Patients</p>
                         </div>
                     </div>
                 </div>
