@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Linkedin, Github, Twitter } from 'lucide-react';
+import { GmailIcon, LinkedInIcon, OrcidIcon, GithubIcon } from './Icons';
 import styles from './Contact.module.css';
 
 const Contact = () => {
