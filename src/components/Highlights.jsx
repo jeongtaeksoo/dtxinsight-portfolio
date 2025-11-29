@@ -6,23 +6,23 @@ const Highlights = () => {
     const items = [
         {
             icon: <Activity size={32} strokeWidth={1.5} />,
-            title: "임상 전략",
-            description: "효율성과 환자 안전을 위한 임상시험 프로토콜 최적화"
+            title: "다기관 임상 운영",
+            description: "3.9억 원 규모 R&D 총괄 및 다기관 RCT 관리"
         },
         {
             icon: <Brain size={32} strokeWidth={1.5} />,
-            title: "AI 통합",
-            description: "예측 건강 분석을 위한 머신러닝 활용"
+            title: "AI & 디지털 헬스",
+            description: "생성형 AI 기반 인지 훈련 프레임워크 설계"
         },
         {
             icon: <Database size={32} strokeWidth={1.5} />,
-            title: "데이터 과학",
-            description: "복잡한 데이터셋을 실행 가능한 의학적 통찰력으로 변환"
+            title: "데이터 관리",
+            description: "데이터 품질 점검 및 임상 데이터 관리"
         },
         {
             icon: <Users size={32} strokeWidth={1.5} />,
-            title: "환자 중심성",
-            description: "사용자를 염두에 둔 디지털 헬스 솔루션 설계"
+            title: "규제 및 윤리",
+            description: "IRB 심의, CRIS 등록 및 보건복지부 실증사업 대응"
         }
     ];
 

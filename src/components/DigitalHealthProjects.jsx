@@ -8,15 +8,15 @@ const DigitalHealthProjects = () => {
             <div className={`container ${styles.container}`}>
                 <div className={styles.content}>
                     <span className={styles.label}>특집 혁신</span>
-                    <h2 className={styles.title}>AI 기반 환자 모니터링 플랫폼</h2>
+                    <h2 className={styles.title}>생성형 AI 기반 인지 중재 프레임워크</h2>
                     <p className={styles.description}>
-                        만성 질환을 실시간으로 모니터링하도록 설계된 종합 디지털 치료 플랫폼입니다.
-                        웨어러블 데이터를 예측 AI 모델과 통합하여 파일럿 단계에서 재입원을 25% 감소시켰습니다.
+                        고령자의 인지기능 저하와 디지털 배제를 해결하기 위한 3중 에이전트(Coach-Teacher-Companion) 시스템을 설계했습니다.
+                        일상생활 속 자연스러운 인지훈련 흐름(Context-Adaptive Cognitive Flow)을 구현하여 사용자 참여를 극대화합니다.
                     </p>
                     <ul className={styles.features}>
-                        <li>실시간 이상 감지</li>
-                        <li>HIPAA 준수 데이터 아키텍처</li>
-                        <li>직관적인 임상의 대시보드</li>
+                        <li>Coach-Teacher-Companion 3중 에이전트</li>
+                        <li>Context-Adaptive Cognitive Flow</li>
+                        <li>고령자 친화적 디지털 인터페이스</li>
                     </ul>
                     <a href="#" className={styles.cta}>기술 탐색하기</a>
                 </div>

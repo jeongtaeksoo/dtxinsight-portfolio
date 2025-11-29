@@ -6,21 +6,21 @@ const ResearchProjects = () => {
     const projects = [
         {
             icon: <FileText size={24} />,
-            title: "분산형 임상시험",
+            title: "다기관 임상시험 관리",
             category: "프로토콜 설계",
-            description: "3상 종양학 임상시험에서 환자 부담을 40% 줄이는 원격 모니터링 프로토콜 구현"
+            description: "3.9억 원 규모 다기관 R&D 프로젝트 총괄 및 AI 기반 디지털 인지훈련 치료제 다기관 무작위대조 임상시험 관리"
         },
         {
             icon: <Activity size={24} />,
             title: "디지털 바이오마커 검증",
             category: "임상 검증",
-            description: "심방세동 조기 징후 감지를 위한 새로운 웨어러블 센서 검증 연구 주도"
+            description: "뇌졸중 환자를 위한 AI 기반 인지 원격재활의 임상 효과 검증 (Frontiers in Neurology 게재)"
         },
         {
             icon: <Globe size={24} />,
-            title: "글로벌 규제 전략",
+            title: "디지털 헬스케어 실증",
             category: "규제 업무",
-            description: "최초의 AI 기반 진단 도구에 대한 FDA 및 EMA 요구사항 처리"
+            description: "보건복지부·한국보건산업진흥원 실증사업 중간보고회 Q&A 세션 진행 및 실증 연구 관련 질의응답 대응"
         }
     ];
 
