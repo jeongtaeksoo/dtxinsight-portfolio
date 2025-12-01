@@ -8,7 +8,7 @@ const Contact = () => {
             <div className={`container ${styles.container}`}>
                 <h2 className={styles.title}>연결하기</h2>
                 <p className={styles.subtitle}>
-                    협업에 관심이 있거나 제 업무에 대해 궁금한 점이 있으신가요? 연락 주시면 기껗게 답변드리겠습니다.
+                    협업에 관심이 있거나 제 업무에 대해 궁금한 점이 있으신가요?
                 </p>
 
                 <div className={styles.links}>
