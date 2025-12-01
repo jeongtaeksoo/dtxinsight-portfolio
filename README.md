@@ -2,14 +2,14 @@
 
 Premium personal portfolio website for Clinical Research Strategist & AI Digital Health Innovator.
 
-## 🚀 Tech Stack
+##  Tech Stack
 
 - **Framework**: Vite + React
 - **Styling**: Vanilla CSS (CSS Modules)
 - **Icons**: Lucide React
 - **Fonts**: Playfair Display (Serif), Inter (Sans-serif)
 
-## 🎨 Design Philosophy
+##  Design Philosophy
 
 Minimal, clinical, research-driven aesthetic inspired by:
 - Apple.com (Clean, premium design)
@@ -17,28 +17,28 @@ Minimal, clinical, research-driven aesthetic inspired by:
 - Notion (Modern simplicity)
 - Perplexity (AI-driven elegance)
 
-## 📦 Installation
+##  Installation
 
 ```bash
 npm install
 ```
 
-## 🏃‍♂️ Development
+##  Development
 
 ```bash
 npm run dev
 ```
 
-## 🏗️ Build
+##  Build
 
 ```bash
 npm run build
 ```
 
-## 🌐 Deployment
+##  Deployment
 
 This site is deployed on Vercel and connected to **www.dtxinsight.com**.
 
-## 📄 License
+##  License
 
 © 2025 DTX Insight. All rights reserved.
