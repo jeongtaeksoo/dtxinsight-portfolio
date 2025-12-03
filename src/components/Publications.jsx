@@ -7,21 +7,24 @@ const Publications = () => {
     const publications = [
         {
             year: "2025",
+            title: "Designing a Generative AI Framework for Cognitive Intervention in Older Adults: An Engineering Protocol for Clinical Application",
+            journal: "MDPI Healthcare (Major Revision)",
+            status: "Major Revision",
+            role: "제1저자"
+        },
+        {
+            year: "2025",
             title: "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
             journal: "Annals of Rehabilitation Medicine (Under Review)",
-            status: "Under Review"
+            status: "Under Review",
+            role: "공저자"
         },
         {
             year: "2025",
             title: "AI-driven cognitive telerehabilitation for stroke: a randomized controlled trial",
             journal: "Frontiers in Neurology",
-            status: "Published"
-        },
-        {
-            year: "2025",
-            title: "Designing a Generative AI Framework for Cognitive Intervention in Older Adults: An Engineering Protocol for Clinical Application",
-            journal: "MDPI Healthcare (Major Revision)",
-            status: "Major Revision"
+            status: "Published",
+            role: "공저자"
         }
     ];
 
@@ -38,6 +41,9 @@ const Publications = () => {
                                 <h3 className={styles.title}>{pub.title}</h3>
                             </div>
                             <div className={styles.right}>
+                                <span className={`${styles.role} ${pub.role === '제1저자' ? styles.firstAuthor : ''}`}>
+                                    {pub.role}
+                                </span>
                                 <span className={styles.journal}>{pub.journal}</span>
                                 <span className={`${styles.status} ${pub.status === 'Featured' ? styles.featured : ''}`}>
                                     {pub.status}

@@ -54,6 +54,22 @@
     gap: var(--spacing-lg);
 }
 
+.role {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    color: #666;
+    white-space: nowrap;
+}
+
+.role.firstAuthor {
+    background-color: #e3f2fd;
+    color: #1976d2;
+    font-weight: 600;
+}
+
 .journal {
     font-style: italic;
     color: var(--color-text-secondary);
