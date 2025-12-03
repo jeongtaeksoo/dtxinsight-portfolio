@@ -33,6 +33,7 @@
 .desktopNav {
     display: flex;
     gap: var(--spacing-lg);
+    align-items: center;
 }
 
 .navLink {
@@ -60,6 +61,12 @@
 
 .navLink:hover::after {
     width: 100%;
+}
+
+.desktopLangSwitch {
+    margin-left: var(--spacing-md);
+    padding-left: var(--spacing-md);
+    border-left: 1px solid var(--color-border);
 }
 
 .mobileMenuBtn {

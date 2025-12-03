@@ -1,10 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import LanguageSwitch from './LanguageSwitch';
 import styles from './Header.module.css';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [currentLang, setCurrentLang] = useState('KR');
+
+    const handleLanguageChange = (lang) => {
+        setCurrentLang(lang);
+        // Here you would typically trigger the actual language change logic
+        console.log(`Language changed to: ${lang}`);
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -33,6 +41,12 @@ const Header = () => {
                             {link.name}
                         </a>
                     ))}
+                    <div className={styles.desktopLangSwitch}>
+                        <LanguageSwitch
+                            currentLang={currentLang}
+                            onLanguageChange={handleLanguageChange}
+                        />
+                    </div>
                 </nav>
 
                 <button
@@ -44,6 +58,10 @@ const Header = () => {
 
                 {isMobileMenuOpen && (
                     <div className={styles.mobileNav}>
+                        <LanguageSwitch
+                            currentLang={currentLang}
+                            onLanguageChange={handleLanguageChange}
+                        />
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
