@@ -5,7 +5,7 @@ import styles from './Skills.module.css';
 const Skills = () => {
     const skills = [
         { icon: <Stethoscope size={28} strokeWidth={1.5} />, name: "임상시험" },
-        { icon: <Code size={28} strokeWidth={1.5} />, name: "Python & R" },
+        { icon: <Code size={28} strokeWidth={1.5} />, name: "Python & SPSS" },
         { icon: <LineChart size={28} strokeWidth={1.5} />, name: "데이터 분석" },
         { icon: <Microscope size={28} strokeWidth={1.5} />, name: "연구 설계" }
     ];

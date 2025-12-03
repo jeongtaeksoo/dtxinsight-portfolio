@@ -7,6 +7,12 @@ const Publications = () => {
     const publications = [
         {
             year: "2025",
+            title: "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
+            journal: "Annals of Rehabilitation Medicine (Under Review)",
+            status: "Under Review"
+        },
+        {
+            year: "2025",
             title: "AI-driven cognitive telerehabilitation for stroke: a randomized controlled trial",
             journal: "Frontiers in Neurology",
             status: "Published"
@@ -14,8 +20,8 @@ const Publications = () => {
         {
             year: "2025",
             title: "Designing a Generative AI Framework for Cognitive Intervention in Older Adults: An Engineering Protocol for Clinical Application",
-            journal: "MDPI (To be submitted)",
-            status: "To be submitted"
+            journal: "MDPI Healthcare (Major Revision)",
+            status: "Major Revision"
         }
     ];
 
