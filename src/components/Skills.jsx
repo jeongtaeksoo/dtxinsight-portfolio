@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Database, LineChart, Microscope, Stethoscope, Shield } from 'lucide-react';
+import { Code, Database, LineChart, Microscope, Stethoscope, Shield, MessageCircle, Brain } from 'lucide-react';
 import styles from './Skills.module.css';
 
 const Skills = () => {
@@ -7,7 +7,9 @@ const Skills = () => {
         { icon: <Stethoscope size={28} strokeWidth={1.5} />, name: "임상시험" },
         { icon: <Code size={28} strokeWidth={1.5} />, name: "Python & SPSS" },
         { icon: <LineChart size={28} strokeWidth={1.5} />, name: "데이터 분석" },
-        { icon: <Microscope size={28} strokeWidth={1.5} />, name: "연구 설계" }
+        { icon: <Microscope size={28} strokeWidth={1.5} />, name: "연구 설계" },
+        { icon: <MessageCircle size={28} strokeWidth={1.5} />, name: "커뮤니케이션" },
+        { icon: <Brain size={28} strokeWidth={1.5} />, name: "AI" }
     ];
 
     return (
