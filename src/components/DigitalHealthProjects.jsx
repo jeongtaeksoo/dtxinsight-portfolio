@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import styles from './DigitalHealthProjects.module.css';
-import dashboardImg from '../assets/dashboard_mockup.png';
+import ctcFrameworkImg from '../assets/ctc_framework.png';
 
 const DigitalHealthProjects = () => {
     const { t } = useLanguage();
@@ -23,7 +23,7 @@ const DigitalHealthProjects = () => {
                     <a href="#" className={styles.cta}>{t('innovation.cta')}</a>
                 </div>
                 <div className={styles.imageWrapper}>
-                    <img src={dashboardImg} alt="Dashboard UI" className={styles.image} />
+                    <img src={ctcFrameworkImg} alt="CTC Framework UI" className={styles.image} />
                 </div>
             </div>
         </section>
