@@ -1,28 +1,31 @@
 import React from 'react';
 import { Brain, Database, Activity, Users } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import styles from './Highlights.module.css';
 
 const Highlights = () => {
+    const { t } = useLanguage();
+
     const items = [
         {
             icon: <Activity size={32} strokeWidth={1.5} />,
-            title: "다기관 임상 운영",
-            description: "3.9억 원 규모 R&D 총괄 및 다기관 RCT 관리"
+            title: t('highlights.items.0.title'),
+            description: t('highlights.items.0.description')
         },
         {
             icon: <Brain size={32} strokeWidth={1.5} />,
-            title: "AI & 디지털 헬스",
-            description: "생성형 AI 기반 인지 훈련 프레임워크 설계"
+            title: t('highlights.items.1.title'),
+            description: t('highlights.items.1.description')
         },
         {
             icon: <Database size={32} strokeWidth={1.5} />,
-            title: "데이터 관리",
-            description: "데이터 품질 점검 및 임상 데이터 관리"
+            title: t('highlights.items.2.title'),
+            description: t('highlights.items.2.description')
         },
         {
             icon: <Users size={32} strokeWidth={1.5} />,
-            title: "학술 연구 성과",
-            description: "SCI급 논문 게재 및 국내 학술대회 포스터 발표"
+            title: t('highlights.items.3.title'),
+            description: t('highlights.items.3.description')
         }
     ];
 

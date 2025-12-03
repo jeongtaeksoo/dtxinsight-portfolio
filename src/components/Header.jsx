@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import LanguageSwitch from './LanguageSwitch';
+import { useLanguage } from '../context/LanguageContext';
 import styles from './Header.module.css';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [currentLang, setCurrentLang] = useState('KR');
-
-    const handleLanguageChange = (lang) => {
-        setCurrentLang(lang);
-        // Here you would typically trigger the actual language change logic
-        console.log(`Language changed to: ${lang}`);
-    };
+    const { language, changeLanguage, t } = useLanguage();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -23,11 +18,11 @@ const Header = () => {
     }, []);
 
     const navLinks = [
-        { name: 'About', href: '#about' },
-        { name: 'Research', href: '#research' },
-        { name: 'Innovation', href: '#innovation' },
-        { name: 'Publications', href: '#publications' },
-        { name: 'Contact', href: '#contact' },
+        { name: t('nav.about'), href: '#about' },
+        { name: t('nav.research'), href: '#research' },
+        { name: t('nav.innovation'), href: '#innovation' },
+        { name: t('nav.publications'), href: '#publications' },
+        { name: t('nav.contact'), href: '#contact' },
     ];
 
     return (
@@ -43,8 +38,8 @@ const Header = () => {
                     ))}
                     <div className={styles.desktopLangSwitch}>
                         <LanguageSwitch
-                            currentLang={currentLang}
-                            onLanguageChange={handleLanguageChange}
+                            currentLang={language}
+                            onLanguageChange={changeLanguage}
                         />
                     </div>
                 </nav>
@@ -59,8 +54,8 @@ const Header = () => {
                 {isMobileMenuOpen && (
                     <div className={styles.mobileNav}>
                         <LanguageSwitch
-                            currentLang={currentLang}
-                            onLanguageChange={handleLanguageChange}
+                            currentLang={language}
+                            onLanguageChange={changeLanguage}
                         />
                         {navLinks.map((link) => (
                             <a

@@ -1,14 +1,17 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import { GmailIcon, LinkedInIcon, OrcidIcon, GithubIcon } from './Icons';
 import styles from './Contact.module.css';
 
 const Contact = () => {
+    const { t } = useLanguage();
+
     return (
         <section id="contact" className={styles.contact}>
             <div className={`container ${styles.container}`}>
-                <h2 className={styles.title}>연결하기</h2>
+                <h2 className={styles.title}>{t('contact.title')}</h2>
                 <p className={styles.subtitle}>
-                    협업에 관심이 있거나 제 업무에 대해 궁금한 점이 있으신가요?
+                    {t('contact.subtitle')}
                 </p>
 
                 <div className={styles.links}>
@@ -34,8 +37,8 @@ const Contact = () => {
             <footer className={styles.footer}>
                 <div className="container">
                     <div className={styles.footerContent}>
-                        <p className={styles.copyright}>© 2025 DTX Insight. All rights reserved.</p>
-                        <p className={styles.tagline}>임상연구 × AI 혁신</p>
+                        <p className={styles.copyright}>{t('contact.footer.rights')}</p>
+                        <p className={styles.tagline}>{t('contact.footer.tagline')}</p>
                     </div>
                 </div>
             </footer>

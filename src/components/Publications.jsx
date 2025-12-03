@@ -1,37 +1,40 @@
 import React from 'react';
+import { useLanguage } from '../context/LanguageContext';
 import styles from './Publications.module.css';
 import poster1 from '../assets/poster_1.jpg';
 import poster2 from '../assets/poster_2.jpg';
 
 const Publications = () => {
+    const { t } = useLanguage();
+
     const publications = [
         {
             year: "2025",
             title: "Designing a Generative AI Framework for Cognitive Intervention in Older Adults: An Engineering Protocol for Clinical Application",
             journal: "MDPI Healthcare (Major Revision)",
             status: "Major Revision",
-            role: "제1저자"
+            role: t('publications.roles.first')
         },
         {
             year: "2025",
             title: "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
             journal: "Annals of Rehabilitation Medicine (Under Review)",
             status: "Under Review",
-            role: "공저자"
+            role: t('publications.roles.co')
         },
         {
             year: "2025",
             title: "AI-driven cognitive telerehabilitation for stroke: a randomized controlled trial",
             journal: "Frontiers in Neurology",
             status: "Published",
-            role: "공저자"
+            role: t('publications.roles.co')
         }
     ];
 
     return (
         <section id="publications" className={styles.publications}>
             <div className={`container ${styles.container}`}>
-                <h2 className={styles.sectionTitle}>주요 논문</h2>
+                <h2 className={styles.sectionTitle}>{t('publications.title')}</h2>
 
                 <div className={styles.list}>
                     {publications.map((pub, index) => (
@@ -54,7 +57,7 @@ const Publications = () => {
                 </div>
 
                 <div className={styles.posterSection}>
-                    <h3 className={styles.posterTitle}>학회 발표 포스터</h3>
+                    <h3 className={styles.posterTitle}>{t('publications.posterTitle')}</h3>
                     <div className={styles.posterGallery}>
                         <div className={styles.posterItem}>
                             <img src={poster1} alt="Artificial Intelligence-Guided Mobile Telerehabilitation for Subjects with Cognitive Impairment" className={styles.posterImage} />

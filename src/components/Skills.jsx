@@ -1,21 +1,24 @@
 import React from 'react';
 import { Code, Database, LineChart, Microscope, Stethoscope, Shield, MessageCircle, Brain } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 import styles from './Skills.module.css';
 
 const Skills = () => {
+    const { t } = useLanguage();
+
     const skills = [
-        { icon: <Stethoscope size={28} strokeWidth={1.5} />, name: "임상시험" },
-        { icon: <Code size={28} strokeWidth={1.5} />, name: "Python & SPSS" },
-        { icon: <LineChart size={28} strokeWidth={1.5} />, name: "데이터 분석" },
-        { icon: <Microscope size={28} strokeWidth={1.5} />, name: "연구 설계" },
-        { icon: <MessageCircle size={28} strokeWidth={1.5} />, name: "커뮤니케이션" },
-        { icon: <Brain size={28} strokeWidth={1.5} />, name: "AI" }
+        { icon: <Stethoscope size={28} strokeWidth={1.5} />, name: t('skills.items.clinical') },
+        { icon: <Code size={28} strokeWidth={1.5} />, name: t('skills.items.python') },
+        { icon: <LineChart size={28} strokeWidth={1.5} />, name: t('skills.items.data') },
+        { icon: <Microscope size={28} strokeWidth={1.5} />, name: t('skills.items.design') },
+        { icon: <MessageCircle size={28} strokeWidth={1.5} />, name: t('skills.items.comm') },
+        { icon: <Brain size={28} strokeWidth={1.5} />, name: t('skills.items.ai') }
     ];
 
     return (
         <section className={styles.skills}>
             <div className={`container ${styles.container}`}>
-                <h2 className={styles.sectionTitle}>핵심 역량</h2>
+                <h2 className={styles.sectionTitle}>{t('skills.title')}</h2>
 
                 <div className={styles.grid}>
                     {skills.map((skill, index) => (
