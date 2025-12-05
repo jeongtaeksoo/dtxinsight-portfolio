@@ -13,7 +13,7 @@ const ResearchProjects = () => {
                 <div className="flex items-center gap-4 mb-10">
                     <h2 className="text-3xl font-bold">{t('research.title')}</h2>
                     <div className="h-px flex-grow bg-gradient-to-r from-white/20 to-transparent"></div>
-                    <span className="font-mono text-sm text-primary">~/research-projects</span>
+
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -27,10 +27,6 @@ const ResearchProjects = () => {
                             <p>{project.description}</p>
                         </WindowCard>
                     ))}
-                </div>
-
-                <div className="mt-10 text-center">
-                    <a href="#" className="font-mono text-sm text-primary hover:underline">{t('research.link')}</a>
                 </div>
             </div>
         </section>

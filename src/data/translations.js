@@ -33,8 +33,7 @@ export const translations = {
                 { title: "다기관 임상시험 관리", category: "프로토콜 설계", description: "3.9억 원 규모 다기관 R&D 프로젝트 총괄 및 AI 기반 디지털 인지훈련 치료제 다기관 무작위대조 임상시험 관리" },
                 { title: "디지털 바이오마커 검증", category: "임상 검증", description: "뇌졸중 환자를 위한 AI 기반 인지 원격재활의 임상 효과 검증 (Frontiers in Neurology 게재)" },
                 { title: "디지털 헬스케어 실증", category: "규제 업무", description: "보건복지부·한국보건산업진흥원 실증사업 중간보고회 Q&A 세션 진행 및 실증 연구 관련 질의응답 대응" }
-            ],
-            link: "사례 연구 보기 →"
+            ]
         },
         innovation: {
             label: "특집 혁신",
@@ -113,8 +112,7 @@ export const translations = {
                 { title: "Multi-center Clinical Trial Management", category: "Protocol Design", description: "Overseeing 390M KRW Multi-center R&D Project & Managing AI-based Digital Cognitive Training RCT" },
                 { title: "Digital Biomarker Validation", category: "Clinical Validation", description: "Clinical Efficacy Validation of AI-based Cognitive Telerehabilitation for Stroke Patients (Published in Frontiers in Neurology)" },
                 { title: "Digital Healthcare Demonstration", category: "Regulatory Affairs", description: "Q&A Session at MOHW/KHIDI Demonstration Project Interim Report & Response to Demonstration Research Inquiries" }
-            ],
-            link: "View Case Study →"
+            ]
         },
         innovation: {
             label: "Featured Innovation",
@@ -193,8 +191,7 @@ export const translations = {
                 { title: "多機関臨床試験管理", category: "プロトコル設計", description: "3.9億ウォン規模の多機関R&Dプロジェクト総括およびAIベースのデジタル認知訓練治療薬の多機関ランダム化比較試験管理" },
                 { title: "デジタルバイオマーカー検証", category: "臨床検証", description: "脳卒中患者のためのAIベース認知遠隔リハビリテーションの臨床効果検証 (Frontiers in Neurology 掲載)" },
                 { title: "デジタルヘルスケア実証", category: "規制業務", description: "保健福祉部・韓国保健産業振興院の実証事業中間報告会Q&Aセッション進行および実証研究関連の質疑応答対応" }
-            ],
-            link: "事例研究を見る →"
+            ]
         },
         innovation: {
             label: "特集イノベーション",
