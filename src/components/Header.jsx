@@ -23,12 +23,25 @@ const Header = () => {
     };
 
     const navLinks = [
-        { name: t('nav.about'), href: '#about' },
+        { name: t('nav.about'), href: '#top' },
         { name: t('nav.research'), href: '#research' },
         { name: t('nav.innovation'), href: '#innovation' },
         { name: t('nav.publications'), href: '#publications' },
         { name: t('nav.contact'), href: '#contact' },
     ];
+
+    const handleNavClick = (e, href) => {
+        e.preventDefault();
+        if (href === '#top') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            const element = document.querySelector(href);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        setIsMobileMenuOpen(false);
+    };
 
     const languages = [
         { code: 'en', label: 'EN' },
@@ -82,7 +95,8 @@ const Header = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-base font-medium text-muted hover:text-white transition-colors"
+                            onClick={(e) => handleNavClick(e, link.href)}
+                            className="text-base font-medium text-muted hover:text-white transition-colors cursor-pointer"
                         >
                             {link.name}
                         </a>
@@ -144,7 +158,7 @@ const Header = () => {
                                     key={link.name}
                                     href={link.href}
                                     className={styles.mobileNavLink}
-                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    onClick={(e) => handleNavClick(e, link.href)}
                                     custom={index + 1}
                                     variants={itemVariants}
                                 >
