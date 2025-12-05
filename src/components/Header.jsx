@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import LanguageSwitch from './LanguageSwitch';
+import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -36,15 +36,47 @@ const Header = () => {
         { code: 'ko', label: 'KR' },
     ];
 
+    const menuVariants = {
+        closed: {
+            opacity: 0,
+            y: -20,
+            transition: {
+                duration: 0.25,
+                ease: [0.4, 0, 0.2, 1]
+            }
+        },
+        open: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.3,
+                ease: [0.4, 0, 0.2, 1]
+            }
+        }
+    };
+
+    const itemVariants = {
+        closed: { opacity: 0, x: -10 },
+        open: (i) => ({
+            opacity: 1,
+            x: 0,
+            transition: {
+                delay: i * 0.05,
+                duration: 0.25,
+                ease: [0.4, 0, 0.2, 1]
+            }
+        })
+    };
+
     return (
         <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-white/5 py-3' : 'bg-transparent py-5'}`}>
             <div className="container mx-auto px-4 flex justify-between items-center">
-                {/* Logo - 10-15% larger */}
+                {/* Logo */}
                 <a href="#" className="text-2xl md:text-3xl font-bold tracking-tighter text-white hover:text-primary transition-colors">
                     DTX<span className="text-primary">Insight</span>
                 </a>
 
-                {/* Desktop Nav - 10-15% larger text */}
+                {/* Desktop Nav */}
                 <nav className="hidden md:flex items-center gap-8">
                     {navLinks.map((link) => (
                         <a
@@ -57,7 +89,7 @@ const Header = () => {
                     ))}
                 </nav>
 
-                {/* Language Switch - 10-15% larger */}
+                {/* Desktop Language Switch */}
                 <div className="hidden md:flex items-center gap-2 bg-white/5 rounded-full px-3 py-1.5 border border-white/5">
                     {languages.map((lang) => (
                         <button
@@ -74,29 +106,55 @@ const Header = () => {
                 <button
                     className={styles.mobileMenuBtn}
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    aria-label="Toggle menu"
                 >
                     {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
 
-                {/* Mobile Menu */}
-                {isMobileMenuOpen && (
-                    <div className={styles.mobileNav}>
-                        <LanguageSwitch
-                            currentLang={i18n.language}
-                            onLanguageChange={changeLanguage}
-                        />
-                        {navLinks.map((link) => (
-                            <a
-                                key={link.name}
-                                href={link.href}
-                                className={styles.mobileNavLink}
-                                onClick={() => setIsMobileMenuOpen(false)}
+                {/* Premium Mobile Menu */}
+                <AnimatePresence>
+                    {isMobileMenuOpen && (
+                        <motion.div
+                            className={styles.mobileNav}
+                            initial="closed"
+                            animate="open"
+                            exit="closed"
+                            variants={menuVariants}
+                        >
+                            {/* Language Switch */}
+                            <motion.div
+                                className={styles.mobileLanguageSwitch}
+                                custom={0}
+                                variants={itemVariants}
                             >
-                                {link.name}
-                            </a>
-                        ))}
-                    </div>
-                )}
+                                {languages.map((lang) => (
+                                    <button
+                                        key={lang.code}
+                                        onClick={() => changeLanguage(lang.code)}
+                                        className={`${styles.mobileLangBtn} ${i18n.language === lang.code ? styles.activeLang : ''}`}
+                                    >
+                                        {lang.label}
+                                    </button>
+                                ))}
+                            </motion.div>
+
+                            {/* Nav Links */}
+                            {navLinks.map((link, index) => (
+                                <motion.a
+                                    key={link.name}
+                                    href={link.href}
+                                    className={styles.mobileNavLink}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    custom={index + 1}
+                                    variants={itemVariants}
+                                >
+                                    <span className={styles.navIndicator}></span>
+                                    {link.name}
+                                </motion.a>
+                            ))}
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </header>
     );
