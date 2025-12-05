@@ -2,8 +2,8 @@ import React, { useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
-const PARTICLE_COUNT = 150;
-const CONNECTION_DISTANCE = 3; // Max distance to draw a line
+const PARTICLE_COUNT = 100; // Reduced from 150 (approx 33% reduction as requested)
+const CONNECTION_DISTANCE = 3;
 const MOUSE_INFLUENCE = 0.5;
 
 function NeuralNetwork() {

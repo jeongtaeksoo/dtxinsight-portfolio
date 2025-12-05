@@ -102,5 +102,9 @@
             "rights": "© 2025 DTX Insight. All rights reserved.",
             "tagline": "臨床研究 × AI イノベーション"
         }
+    },
+    "collaborative": {
+        "partner_name": "ファン・ゴンフィ 博士課程 (北海道大学)",
+        "description": "高齢者向け認知活性化AIアプリケーションの共同設計。臨床要件と工学的ソリューションの間のギャップを埋めるための共同研究を行っています。"
     }
 }

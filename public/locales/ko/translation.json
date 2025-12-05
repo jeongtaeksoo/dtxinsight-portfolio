@@ -102,5 +102,9 @@
             "rights": "© 2025 DTX Insight. All rights reserved.",
             "tagline": "임상연구 × AI 혁신"
         }
+    },
+    "collaborative": {
+        "partner_name": "황건휘 박사과정생 (Hokkaido University)",
+        "description": "고령자 친화적 인지 활성화 AI 애플리케이션 공동 설계. 임상적 요구사항과 공학적 솔루션 간의 간극을 좁히는 융합 연구를 수행하고 있습니다."
     }
 }

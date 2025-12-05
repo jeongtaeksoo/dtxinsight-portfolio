@@ -70,7 +70,10 @@ const NarrativeScroll = () => {
     ];
 
     return (
-        <section className="py-20 relative overflow-hidden">
+        <section className="relative py-20 overflow-hidden">
+            {/* Gradient Overlay for Contrast */}
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-surface/50 to-background z-0 pointer-events-none" />
+
             {/* Vertical Line */}
             <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/5 -translate-x-1/2 z-0 hidden md:block" />
             <motion.div
@@ -79,12 +82,12 @@ const NarrativeScroll = () => {
             />
 
             <div className="container mx-auto px-4 relative z-10" ref={containerRef}>
-                <div className="text-center mb-20">
-                    <h2 className="text-3xl font-bold mb-2">My Research Journey</h2>
-                    <p className="text-muted">From Identification to Innovation</p>
+                <div className="text-center mb-32">
+                    <h2 className="text-4xl font-bold mb-4 text-white">My Research Journey</h2>
+                    <p className="text-muted text-lg">From Identification to Innovation</p>
                 </div>
 
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-4xl mx-auto space-y-32">
                     {steps.map((step, index) => (
                         <NarrativeStep
                             key={step.id}

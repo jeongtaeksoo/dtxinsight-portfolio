@@ -102,5 +102,9 @@
             "rights": "© 2025 DTX Insight. All rights reserved.",
             "tagline": "Clinical Research × AI Innovation"
         }
+    },
+    "collaborative": {
+        "partner_name": "Geonhui Hwang, Ph.D. Candidate",
+        "description": "Co-designing AI applications for cognitive activation in older adults. Our joint research focuses on bridging the gap between clinical requirements and engineering solutions."
     }
 }

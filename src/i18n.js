@@ -9,12 +9,9 @@ i18n
     .use(initReactI18next)
     .init({
         fallbackLng: 'en',
-        debug: true, // Enable debug for development
+        debug: false,
         interpolation: {
-            escapeValue: false, // React already safe from XSS
-        },
-        backend: {
-            loadPath: '/locales/{{lng}}/translation.json',
+            escapeValue: false,
         },
         detection: {
             order: ['queryString', 'cookie', 'localStorage', 'navigator'],

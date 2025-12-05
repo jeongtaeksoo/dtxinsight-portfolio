@@ -12,7 +12,8 @@ const Layout = ({ children }) => {
             <div className="relative z-10 flex flex-col min-h-screen">
                 <Header />
 
-                <main className="flex-grow container mx-auto px-4 py-8">
+                {/* Main Content Area */}
+                <main className="relative z-10 w-full max-w-[1200px] mx-auto flex flex-col gap-[140px]">
                     {children}
                 </main>
 
