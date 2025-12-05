@@ -9,7 +9,7 @@ const CollaborativeProjects = () => {
     return (
         <section className={styles.section}>
             <div className={`container ${styles.container}`}>
-                <a href="#" className={styles.logoWrapper} target="_blank" rel="noopener noreferrer">
+                <a href="https://www.hwiwasoo.com" className={styles.logoWrapper} target="_blank" rel="noopener noreferrer">
                     <img src={logoImg} alt="Collaborative Project Logo" className={styles.logo} />
                 </a>
                 <div className={styles.content}>
