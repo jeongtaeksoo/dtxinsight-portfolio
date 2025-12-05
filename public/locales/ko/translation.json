@@ -9,11 +9,40 @@
         "projects": "프로젝트"
     },
     "hero": {
-        "title": "임상연구 코디네이터",
-        "titleHighlight": "& AI 디지털헬스 연구원",
-        "subtitle": "임상시험 운영 관리와 AI 기반 디지털 치료제 연구를 통해 헬스케어 혁신을 주도합니다. 가톨릭관동대학교 국제성모병원 재활의학과에서 3.9억 원 규모의 다기관 R&D 프로젝트를 관리하고 있습니다.",
-        "contactBtn": "연락하기",
-        "researchBtn": "연구 보기"
+        "name": "정택수",
+        "affiliation": "現 가톨릭관동대학교 국제성모병원 재활의학과 연구원",
+        "credential": "RN (Registered Nurse)",
+        "tagline": "Clinical Research Coordinator & AI-driven Healthcare Innovator"
+    },
+    "journey": {
+        "title": "My Research Journey",
+        "subtitle": "문제 인식에서 혁신까지",
+        "steps": [
+            {
+                "id": "problem",
+                "icon": "Search",
+                "title": "문제 인식 (Problem Identification)",
+                "desc": "저는 어떤 프로젝트든 먼저 현장의 흐름과 이해관계자의 어려움을 관찰하는 것에서 시작합니다.\n데이터, 프로세스, 사용자 경험에서 드러나는 비효율을 정리하여\n\"정확히 무엇을 해결해야 하는가?\"를 명확히 규정합니다."
+            },
+            {
+                "id": "hypothesis",
+                "icon": "Lightbulb",
+                "title": "구조화·가설 설정 (Hypothesis & Structuring)",
+                "desc": "문제를 단순히 나열하는 것이 아니라,\n원인–과정–결과의 구조로 재해석해 검증 가능한 가설을 만듭니다.\n이 단계에서 임상적 통찰·데이터 패턴·운영적 제약을 모두 반영하여\n현실적인 방향성과 목표를 설정합니다."
+            },
+            {
+                "id": "solution",
+                "icon": "Cog",
+                "title": "솔루션 설계 및 실행 (Solution Design & Execution)",
+                "desc": "프로젝트 목적에 따라 다음 요소들을 통합적으로 설계합니다.\n\n• 임상시험 운영 및 데이터 흐름 구조\n• 사용자 경험을 고려한 디지털 인터페이스\n• AI/자동화 모델 설계 및 적용\n• 조직 내 협업 및 커뮤니케이션 플로우\n• 프로세스 최적화 및 오류 예방 시스템\n\n중요한 점은 단순한 아이디어가 아니라\n실제 현장에서 작동하는 구조를 만든다는 점입니다."
+            },
+            {
+                "id": "impact",
+                "icon": "BarChart3",
+                "title": "성과 검증 및 개선 (Impact Validation)",
+                "desc": "솔루션의 효과를 데이터로 검증하고, 정량·정성 평가를 기반으로 개선 사항을 도출합니다.\n\n• 통계 및 지표 기반 분석\n• 사용자·환자·의료진 피드백\n• 프로세스 안정성 평가\n• 재현성과 확장성 검토\n\n프로젝트가 \"완료되는 것\"이 아니라\n조직에 지속적인 가치를 만드는 것을 목표로 합니다."
+            }
+        ]
     },
     "about": {
         "title": "철학 & 접근법",
@@ -73,8 +102,10 @@
         "cta": "기술 탐색하기"
     },
     "collaborative": {
-        "title": "협력 프로젝트",
-        "description": "황건휘 박사 과정생(홋카이도 대학)과 공동 설계.\n고령자 친화적 인지 활성화를 위한 AI 애플리케이션."
+        "sectionTitle": "협력 프로젝트",
+        "projectTitle": "휘와수 프로젝트",
+        "subtitle": "Hokkaido University 소속 연구자와의 개인 연구 협력 프로젝트",
+        "description": "고령자 친화적 인지 활성화를 위한 AI 애플리케이션 공동 설계"
     },
     "publications": {
         "title": "주요 논문",
@@ -82,7 +113,31 @@
         "roles": {
             "first": "제1저자",
             "co": "공저자"
-        }
+        },
+        "items": [
+            {
+                "title": "AI-driven cognitive telerehabilitation for stroke: a randomized controlled trial",
+                "journal": "Frontiers in Neurology",
+                "date": "2025",
+                "role": "공저자",
+                "status": "게재 완료",
+                "doi": "https://doi.org/10.3389/fneur.2025.1636017"
+            },
+            {
+                "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
+                "journal": "MDPI Healthcare",
+                "date": "2025",
+                "role": "제1저자",
+                "status": "Major Revision"
+            },
+            {
+                "title": "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
+                "journal": "Annals of Rehabilitation Medicine",
+                "date": "2025",
+                "role": "공저자",
+                "status": "심사 중"
+            }
+        ]
     },
     "skills": {
         "title": "핵심 역량",
@@ -102,9 +157,5 @@
             "rights": "© 2025 DTX Insight. All rights reserved.",
             "tagline": "임상연구 × AI 혁신"
         }
-    },
-    "collaborative": {
-        "partner_name": "황건휘 박사과정생 (Hokkaido University)",
-        "description": "고령자 친화적 인지 활성화 AI 애플리케이션 공동 설계. 임상적 요구사항과 공학적 솔루션 간의 간극을 좁히는 융합 연구를 수행하고 있습니다."
     }
 }

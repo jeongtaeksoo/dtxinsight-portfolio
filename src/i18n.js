@@ -17,6 +17,9 @@ i18n
             order: ['queryString', 'cookie', 'localStorage', 'navigator'],
             caches: ['localStorage'],
         },
+        backend: {
+            loadPath: '/locales/{{lng}}/translation.json',
+        },
     });
 
 export default i18n;

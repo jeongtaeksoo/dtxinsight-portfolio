@@ -33,49 +33,52 @@ const Header = () => {
     const languages = [
         { code: 'en', label: 'EN' },
         { code: 'jp', label: '日本語' },
-        { code: 'ko', label: 'KR' }, // User requested 'KR' label
+        { code: 'ko', label: 'KR' },
     ];
 
     return (
-        <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-white/5 py-4' : 'bg-transparent py-6'}`}>
+        <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-white/5 py-3' : 'bg-transparent py-5'}`}>
             <div className="container mx-auto px-4 flex justify-between items-center">
-                <a href="#" className="text-xl font-bold tracking-tighter text-white hover:text-primary transition-colors">
+                {/* Logo - 10-15% larger */}
+                <a href="#" className="text-2xl md:text-3xl font-bold tracking-tighter text-white hover:text-primary transition-colors">
                     DTX<span className="text-primary">Insight</span>
                 </a>
 
-                {/* Desktop Nav */}
+                {/* Desktop Nav - 10-15% larger text */}
                 <nav className="hidden md:flex items-center gap-8">
                     {navLinks.map((link) => (
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-sm font-medium text-muted hover:text-white transition-colors"
+                            className="text-base font-medium text-muted hover:text-white transition-colors"
                         >
                             {link.name}
                         </a>
                     ))}
                 </nav>
 
-                {/* Language Switch */}
-                <div className="hidden md:flex items-center gap-2 bg-white/5 rounded-full px-2 py-1 border border-white/5">
+                {/* Language Switch - 10-15% larger */}
+                <div className="hidden md:flex items-center gap-2 bg-white/5 rounded-full px-3 py-1.5 border border-white/5">
                     {languages.map((lang) => (
                         <button
                             key={lang.code}
                             onClick={() => changeLanguage(lang.code)}
-                            className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${i18n.language === lang.code ? 'bg-primary text-white shadow-lg' : 'text-muted hover:text-white'}`}
+                            className={`px-4 py-1.5 text-sm rounded-full transition-all duration-300 ${i18n.language === lang.code ? 'bg-primary text-white shadow-lg' : 'text-muted hover:text-white'}`}
                         >
                             {lang.label}
                         </button>
                     ))}
                 </div>
 
+                {/* Mobile Menu Button */}
                 <button
                     className={styles.mobileMenuBtn}
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
-                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
 
+                {/* Mobile Menu */}
                 {isMobileMenuOpen && (
                     <div className={styles.mobileNav}>
                         <LanguageSwitch

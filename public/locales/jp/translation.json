@@ -9,11 +9,40 @@
         "projects": "プロジェクト"
     },
     "hero": {
-        "title": "臨床研究コーディネーター",
-        "titleHighlight": "＆ AIデジタルヘルス研究員",
-        "subtitle": "臨床試験の運営管理とAIベースのデジタル治療薬研究を通じて、ヘルスケアの革新を主導しています。カトリック関東大学国際聖母病院のリハビリテーション医学科で、3.9億ウォン規模の多機関R&Dプロジェクトを管理しています。",
-        "contactBtn": "お問い合わせ",
-        "researchBtn": "研究を見る"
+        "name": "チョン・テクス",
+        "affiliation": "カトリック関東大学国際聖母病院 リハビリテーション医学科 研究員",
+        "credential": "RN（看護師免許）",
+        "tagline": "Clinical Research Coordinator & AI-driven Healthcare Innovator"
+    },
+    "journey": {
+        "title": "My Research Journey",
+        "subtitle": "問題認識からイノベーションへ",
+        "steps": [
+            {
+                "id": "problem",
+                "icon": "Search",
+                "title": "問題認識（Problem Identification）",
+                "desc": "私はどんなプロジェクトでも、まず現場の流れとステークホルダーの課題を観察することから始めます。\nデータ、プロセス、ユーザー体験における非効率を整理し、\n「正確に何を解決すべきか？」を明確に定義します。"
+            },
+            {
+                "id": "hypothesis",
+                "icon": "Lightbulb",
+                "title": "構造化・仮説設定（Hypothesis & Structuring）",
+                "desc": "問題を単にリストアップするのではなく、\n原因–過程–結果の構造で再解釈し、検証可能な仮説を作ります。\nこの段階で臨床的洞察・データパターン・運営上の制約をすべて反映し、\n現実的な方向性と目標を設定します。"
+            },
+            {
+                "id": "solution",
+                "icon": "Cog",
+                "title": "ソリューション設計・実行（Solution Design & Execution）",
+                "desc": "プロジェクトの目的に応じて、以下の要素を統合的に設計します。\n\n• 臨床試験運営およびデータフロー構造\n• ユーザー体験を考慮したデジタルインターフェース\n• AI/自動化モデルの設計と適用\n• 組織内協業およびコミュニケーションフロー\n• プロセス最適化およびエラー予防システム\n\n重要なのは、単なるアイデアではなく、\n現場で実際に機能する構造を作ることです。"
+            },
+            {
+                "id": "impact",
+                "icon": "BarChart3",
+                "title": "成果検証・改善（Impact Validation）",
+                "desc": "ソリューションの効果をデータで検証し、定量・定性評価に基づいて改善点を導き出します。\n\n• 統計および指標基盤の分析\n• ユーザー・患者・医療従事者のフィードバック\n• プロセス安定性評価\n• 再現性と拡張性の検討\n\nプロジェクトが「完了する」ことではなく、\n組織に持続的な価値を生み出すことを目標としています。"
+            }
+        ]
     },
     "about": {
         "title": "哲学とアプローチ",
@@ -73,8 +102,10 @@
         "cta": "技術を探る"
     },
     "collaborative": {
-        "title": "共同プロジェクト",
-        "description": "北海道大学の黄建輝（博士課程）と共同設計。\n高齢者に優しい認知活性化のためのAIアプリケーション。"
+        "sectionTitle": "共同プロジェクト",
+        "projectTitle": "フィワスプロジェクト",
+        "subtitle": "北海道大学所属研究者との個人研究協力プロジェクト",
+        "description": "高齢者に優しい認知活性化のためのAIアプリケーション共同設計"
     },
     "publications": {
         "title": "主な論文",
@@ -82,7 +113,31 @@
         "roles": {
             "first": "第1著者",
             "co": "共著者"
-        }
+        },
+        "items": [
+            {
+                "title": "AI-driven cognitive telerehabilitation for stroke: a randomized controlled trial",
+                "journal": "Frontiers in Neurology",
+                "date": "2025",
+                "role": "共著者",
+                "status": "掲載完了",
+                "doi": "https://doi.org/10.3389/fneur.2025.1636017"
+            },
+            {
+                "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
+                "journal": "MDPI Healthcare",
+                "date": "2025",
+                "role": "第1著者",
+                "status": "Major Revision"
+            },
+            {
+                "title": "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
+                "journal": "Annals of Rehabilitation Medicine",
+                "date": "2025",
+                "role": "共著者",
+                "status": "審査中"
+            }
+        ]
     },
     "skills": {
         "title": "コアコンピタンス",
@@ -102,9 +157,5 @@
             "rights": "© 2025 DTX Insight. All rights reserved.",
             "tagline": "臨床研究 × AI イノベーション"
         }
-    },
-    "collaborative": {
-        "partner_name": "ファン・ゴンフィ 博士課程 (北海道大学)",
-        "description": "高齢者向け認知活性化AIアプリケーションの共同設計。臨床要件と工学的ソリューションの間のギャップを埋めるための共同研究を行っています。"
     }
 }

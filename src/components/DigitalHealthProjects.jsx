@@ -24,19 +24,16 @@ const DigitalHealthProjects = () => {
                 {/* Interactive CTC Model */}
                 <CTCModel />
 
-                {/* Features List (keeping text for SEO/Accessibility, styled nicely) */}
+                {/* Features List - Titles Only */}
                 <div className="grid md:grid-cols-3 gap-8 mt-12">
-                    <div className="p-6 rounded-xl bg-surface/50 border border-white/5 hover:border-primary/50 transition-colors">
-                        <h3 className="text-xl font-bold mb-2 text-primary">Context-Aware</h3>
-                        <p className="text-sm text-muted">Adapts intervention difficulty based on real-time fatigue and mood analysis.</p>
+                    <div className="p-6 rounded-xl bg-surface/50 border border-white/5 hover:border-primary/50 transition-colors text-center">
+                        <h3 className="text-xl font-bold text-primary">Context-Aware</h3>
                     </div>
-                    <div className="p-6 rounded-xl bg-surface/50 border border-white/5 hover:border-primary/50 transition-colors">
-                        <h3 className="text-xl font-bold mb-2 text-primary">Multi-Modal</h3>
-                        <p className="text-sm text-muted">Combines voice, touch, and visual cues for senior-friendly accessibility.</p>
+                    <div className="p-6 rounded-xl bg-surface/50 border border-white/5 hover:border-primary/50 transition-colors text-center">
+                        <h3 className="text-xl font-bold text-primary">Multi-Modal</h3>
                     </div>
-                    <div className="p-6 rounded-xl bg-surface/50 border border-white/5 hover:border-primary/50 transition-colors">
-                        <h3 className="text-xl font-bold mb-2 text-primary">Evidence-Based</h3>
-                        <p className="text-sm text-muted">Designed based on clinical guidelines for cognitive rehabilitation.</p>
+                    <div className="p-6 rounded-xl bg-surface/50 border border-white/5 hover:border-primary/50 transition-colors text-center">
+                        <h3 className="text-xl font-bold text-primary">Evidence-Based</h3>
                     </div>
                 </div>
             </div>

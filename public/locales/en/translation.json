@@ -9,11 +9,40 @@
         "projects": "Projects"
     },
     "hero": {
-        "title": "Clinical Research Coordinator",
-        "titleHighlight": "& AI Digital Health Researcher",
-        "subtitle": "Leading healthcare innovation through clinical trial management and AI-based digital therapeutics research. Managing a multi-center R&D project worth 390 million KRW at the Department of Rehabilitation Medicine, International St. Mary's Hospital.",
-        "contactBtn": "Contact Me",
-        "researchBtn": "View Research"
+        "name": "Taeksoo Jeong",
+        "affiliation": "Research Associate, Dept. of Rehabilitation Medicine, International St. Mary's Hospital, Catholic Kwandong University",
+        "credential": "RN (Registered Nurse)",
+        "tagline": "Clinical Research Coordinator & AI-driven Healthcare Innovator"
+    },
+    "journey": {
+        "title": "My Research Journey",
+        "subtitle": "From Identification to Innovation",
+        "steps": [
+            {
+                "id": "problem",
+                "icon": "Search",
+                "title": "Problem Identification",
+                "desc": "I begin every project by observing on-site workflows and identifying stakeholders' pain points.\nI document inefficiencies in data, processes, and user experience to clearly define:\n\"Exactly what problem needs to be solved?\""
+            },
+            {
+                "id": "hypothesis",
+                "icon": "Lightbulb",
+                "title": "Hypothesis & Structuring",
+                "desc": "Rather than simply listing problems,\nI reinterpret them through a cause-process-outcome framework to create testable hypotheses.\nAt this stage, I integrate clinical insights, data patterns, and operational constraints\nto set realistic directions and goals."
+            },
+            {
+                "id": "solution",
+                "icon": "Cog",
+                "title": "Solution Design & Execution",
+                "desc": "Based on project objectives, I design integrated solutions including:\n\n• Clinical trial operations and data flow architecture\n• User experience-focused digital interfaces\n• AI/automation model design and implementation\n• Organizational collaboration and communication workflows\n• Process optimization and error prevention systems\n\nThe key is creating structures that actually work in real-world settings,\nnot just theoretical ideas."
+            },
+            {
+                "id": "impact",
+                "icon": "BarChart3",
+                "title": "Impact Validation",
+                "desc": "I validate solution effectiveness through data-driven evaluation and derive improvements based on quantitative and qualitative assessments.\n\n• Statistics and metrics-based analysis\n• User, patient, and clinician feedback\n• Process stability evaluation\n• Reproducibility and scalability review\n\nThe goal is not just to \"complete\" a project,\nbut to create lasting value for the organization."
+            }
+        ]
     },
     "about": {
         "title": "Philosophy & Approach",
@@ -73,8 +102,10 @@
         "cta": "Explore Technology"
     },
     "collaborative": {
-        "title": "Collaborative Projects",
-        "description": "Designed with Geonhwi Hwang (PhD Candidate, Hokkaido University).\nOlder adult–friendly AI application for cognitive activation."
+        "sectionTitle": "Collaborative Project",
+        "projectTitle": "HWIWASOO Project",
+        "subtitle": "Personal Research Collaboration with a Researcher at Hokkaido University",
+        "description": "Co-designing AI Applications for Cognitive Activation in Older Adults"
     },
     "publications": {
         "title": "Selected Publications",
@@ -82,7 +113,31 @@
         "roles": {
             "first": "1st Author",
             "co": "Co-author"
-        }
+        },
+        "items": [
+            {
+                "title": "AI-driven cognitive telerehabilitation for stroke: a randomized controlled trial",
+                "journal": "Frontiers in Neurology",
+                "date": "2025",
+                "role": "Co-author",
+                "status": "Published",
+                "doi": "https://doi.org/10.3389/fneur.2025.1636017"
+            },
+            {
+                "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
+                "journal": "MDPI Healthcare",
+                "date": "2025",
+                "role": "1st Author",
+                "status": "Major Revision"
+            },
+            {
+                "title": "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
+                "journal": "Annals of Rehabilitation Medicine",
+                "date": "2025",
+                "role": "Co-author",
+                "status": "Under Review"
+            }
+        ]
     },
     "skills": {
         "title": "Core Competencies",
@@ -102,9 +157,5 @@
             "rights": "© 2025 DTX Insight. All rights reserved.",
             "tagline": "Clinical Research × AI Innovation"
         }
-    },
-    "collaborative": {
-        "partner_name": "Geonhui Hwang, Ph.D. Candidate",
-        "description": "Co-designing AI applications for cognitive activation in older adults. Our joint research focuses on bridging the gap between clinical requirements and engineering solutions."
     }
 }
