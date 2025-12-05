@@ -5,6 +5,7 @@ import Highlights from './components/Highlights';
 import About from './components/About';
 import ResearchProjects from './components/ResearchProjects';
 import DigitalHealthProjects from './components/DigitalHealthProjects';
+import CollaborativeProjects from './components/CollaborativeProjects';
 import Publications from './components/Publications';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
@@ -19,6 +20,7 @@ function App() {
         <Highlights />
         <ResearchProjects />
         <DigitalHealthProjects />
+        <CollaborativeProjects />
         <Publications />
         <Skills />
         <Contact />
