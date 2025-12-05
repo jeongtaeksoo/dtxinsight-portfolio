@@ -1,0 +1,106 @@
+{
+    "nav": {
+        "about": "소개",
+        "research": "연구",
+        "innovation": "혁신",
+        "publications": "논문",
+        "contact": "연락처",
+        "highlights": "주요 성과",
+        "projects": "프로젝트"
+    },
+    "hero": {
+        "title": "임상연구 코디네이터",
+        "titleHighlight": "& AI 디지털헬스 연구원",
+        "subtitle": "임상시험 운영 관리와 AI 기반 디지털 치료제 연구를 통해 헬스케어 혁신을 주도합니다. 가톨릭관동대학교 국제성모병원 재활의학과에서 3.9억 원 규모의 다기관 R&D 프로젝트를 관리하고 있습니다.",
+        "contactBtn": "연락하기",
+        "researchBtn": "연구 보기"
+    },
+    "about": {
+        "title": "철학 & 접근법",
+        "description1": "헬스케어의 미래는 엄격한 임상 검증과 적응형 인공지능의 교차점에 있다고 믿습니다. 저는 간호학 배경과 임상연구 경험을 바탕으로, 새로운 기술이 최첨단일 뿐만 아니라 임상적으로 의미 있고 환자 중심적이도록 보장합니다.",
+        "description2": "현재 가톨릭관동대학교 국제성모병원에서 임상연구 코디네이터로 재직하며, 디지털 바이오마커와 분산형 임상시험 방법론을 통해 신약 개발을 가속화하고 환자 결과를 개선하는 전략을 설계하고 있습니다."
+    },
+    "highlights": {
+        "items": [
+            {
+                "title": "다기관 임상 운영",
+                "description": "3.9억 원 규모 R&D 총괄 및 다기관 RCT 관리"
+            },
+            {
+                "title": "AI & 디지털 헬스",
+                "description": "생성형 AI 기반 인지 훈련 프레임워크 설계"
+            },
+            {
+                "title": "데이터 관리",
+                "description": "데이터 품질 점검 및 임상 데이터 관리"
+            },
+            {
+                "title": "학술 연구 성과",
+                "description": "SCI급 논문 게재 및 국내 학술대회 포스터 발표"
+            }
+        ]
+    },
+    "research": {
+        "title": "연구 하이라이트",
+        "projects": [
+            {
+                "title": "다기관 임상시험 관리",
+                "category": "프로토콜 설계",
+                "description": "3.9억 원 규모 다기관 R&D 프로젝트 총괄 및 AI 기반 디지털 인지훈련 치료제 다기관 무작위대조 임상시험 관리"
+            },
+            {
+                "title": "디지털 바이오마커 검증",
+                "category": "임상 검증",
+                "description": "뇌졸중 환자를 위한 AI 기반 인지 원격재활의 임상 효과 검증 (Frontiers in Neurology 게재)"
+            },
+            {
+                "title": "디지털 헬스케어 실증",
+                "category": "규제 업무",
+                "description": "보건복지부·한국보건산업진흥원 실증사업 중간보고회 Q&A 세션 진행 및 실증 연구 관련 질의응답 대응"
+            }
+        ],
+        "link": "사례 연구 보기 →"
+    },
+    "innovation": {
+        "label": "특집 혁신",
+        "title": "생성형 AI 기반 인지 중재 프레임워크",
+        "description": "고령자의 인지기능 저하와 디지털 배제를 해결하기 위한 3중 에이전트(Coach-Teacher-Companion) 시스템을 설계했습니다. 일상생활 속 자연스러운 인지훈련 흐름(Context-Adaptive Cognitive Flow)을 구현하여 사용자 참여를 극대화합니다.",
+        "features": [
+            "Coach-Teacher-Companion 3중 에이전트",
+            "Context-Adaptive Cognitive Flow",
+            "고령자 친화적 디지털 인터페이스"
+        ],
+        "cta": "기술 탐색하기"
+    },
+    "collaborative": {
+        "title": "협력 프로젝트",
+        "description": "황건휘 박사 과정생(홋카이도 대학)과 공동 설계.\n고령자 친화적 인지 활성화를 위한 AI 애플리케이션."
+    },
+    "publications": {
+        "title": "주요 논문",
+        "posterTitle": "학회 발표 포스터",
+        "roles": {
+            "first": "제1저자",
+            "co": "공저자"
+        }
+    },
+    "skills": {
+        "title": "핵심 역량",
+        "items": {
+            "clinical": "임상시험",
+            "python": "Python & SPSS",
+            "data": "데이터 분석",
+            "design": "연구 설계",
+            "comm": "커뮤니케이션",
+            "ai": "AI"
+        }
+    },
+    "contact": {
+        "title": "연결하기",
+        "subtitle": "협업에 관심이 있거나 제 업무에 대해 궁금한 점이 있으신가요?",
+        "footer": {
+            "rights": "© 2025 DTX Insight. All rights reserved.",
+            "tagline": "임상연구 × AI 혁신"
+        }
+    }
+}

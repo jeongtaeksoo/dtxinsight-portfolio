@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import LanguageSwitch from './LanguageSwitch';
-import { useLanguage } from '../context/LanguageContext';
 import styles from './Header.module.css';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const { language, changeLanguage, t } = useLanguage();
+    const { t, i18n } = useTranslation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -17,12 +17,15 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const changeLanguage = (lang) => {
+        i18n.changeLanguage(lang);
+    };
+
     const navLinks = [
-        { name: t('nav.about'), href: '#about' },
+        { name: t('nav.highlights'), href: '#highlights' },
         { name: t('nav.research'), href: '#research' },
-        { name: t('nav.innovation'), href: '#innovation' },
+        { name: t('nav.projects'), href: '#projects' },
         { name: t('nav.publications'), href: '#publications' },
-        { name: t('nav.contact'), href: '#contact' },
     ];
 
     return (
@@ -38,7 +41,7 @@ const Header = () => {
                     ))}
                     <div className={styles.desktopLangSwitch}>
                         <LanguageSwitch
-                            currentLang={language}
+                            currentLang={i18n.language}
                             onLanguageChange={changeLanguage}
                         />
                     </div>
@@ -54,7 +57,7 @@ const Header = () => {
                 {isMobileMenuOpen && (
                     <div className={styles.mobileNav}>
                         <LanguageSwitch
-                            currentLang={language}
+                            currentLang={i18n.language}
                             onLanguageChange={changeLanguage}
                         />
                         {navLinks.map((link) => (

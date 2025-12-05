@@ -1,10 +1,10 @@
 import React from 'react';
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from 'react-i18next';
 import styles from './CollaborativeProjects.module.css';
 import logoImg from '../assets/logo.png';
 
 const CollaborativeProjects = () => {
-    const { t } = useLanguage();
+    const { t } = useTranslation();
 
     return (
         <section className={styles.section}>

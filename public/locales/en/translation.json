@@ -1,0 +1,106 @@
+{
+    "nav": {
+        "about": "About",
+        "research": "Research",
+        "innovation": "Innovation",
+        "publications": "Publications",
+        "contact": "Contact",
+        "highlights": "Highlights",
+        "projects": "Projects"
+    },
+    "hero": {
+        "title": "Clinical Research Coordinator",
+        "titleHighlight": "& AI Digital Health Researcher",
+        "subtitle": "Leading healthcare innovation through clinical trial management and AI-based digital therapeutics research. Managing a multi-center R&D project worth 390 million KRW at the Department of Rehabilitation Medicine, International St. Mary's Hospital.",
+        "contactBtn": "Contact Me",
+        "researchBtn": "View Research"
+    },
+    "about": {
+        "title": "Philosophy & Approach",
+        "description1": "I believe the future of healthcare lies at the intersection of rigorous clinical validation and adaptive AI. With a background in nursing and clinical research, I ensure new technologies are not only cutting-edge but also clinically meaningful and patient-centered.",
+        "description2": "Currently working as a Clinical Research Coordinator at International St. Mary's Hospital, designing strategies to accelerate drug development and improve patient outcomes through digital biomarkers and decentralized clinical trial methodologies."
+    },
+    "highlights": {
+        "items": [
+            {
+                "title": "Multi-center Clinical Operations",
+                "description": "Managing 390M KRW R&D & Multi-center RCT"
+            },
+            {
+                "title": "AI & Digital Health",
+                "description": "Designing Generative AI-based Cognitive Training Framework"
+            },
+            {
+                "title": "Data Management",
+                "description": "Data Quality Check & Clinical Data Management"
+            },
+            {
+                "title": "Academic Achievements",
+                "description": "SCI Journal Publication & Domestic Conference Poster Presentation"
+            }
+        ]
+    },
+    "research": {
+        "title": "Research Highlights",
+        "projects": [
+            {
+                "title": "Multi-center Clinical Trial Management",
+                "category": "Protocol Design",
+                "description": "Overseeing 390M KRW Multi-center R&D Project & Managing AI-based Digital Cognitive Training RCT"
+            },
+            {
+                "title": "Digital Biomarker Validation",
+                "category": "Clinical Validation",
+                "description": "Clinical Efficacy Validation of AI-based Cognitive Telerehabilitation for Stroke Patients (Published in Frontiers in Neurology)"
+            },
+            {
+                "title": "Digital Healthcare Demonstration",
+                "category": "Regulatory Affairs",
+                "description": "Q&A Session at MOHW/KHIDI Demonstration Project Interim Report & Response to Demonstration Research Inquiries"
+            }
+        ],
+        "link": "View Case Study →"
+    },
+    "innovation": {
+        "label": "Featured Innovation",
+        "title": "Generative AI-based Cognitive Intervention Framework",
+        "description": "Designed a triple-agent (Coach-Teacher-Companion) system to address cognitive decline and digital exclusion in older adults. Implements Context-Adaptive Cognitive Flow in daily life to maximize user engagement.",
+        "features": [
+            "Coach-Teacher-Companion Triple Agent",
+            "Context-Adaptive Cognitive Flow",
+            "Senior-friendly Digital Interface"
+        ],
+        "cta": "Explore Technology"
+    },
+    "collaborative": {
+        "title": "Collaborative Projects",
+        "description": "Designed with Geonhwi Hwang (PhD Candidate, Hokkaido University).\nOlder adult–friendly AI application for cognitive activation."
+    },
+    "publications": {
+        "title": "Selected Publications",
+        "posterTitle": "Conference Posters",
+        "roles": {
+            "first": "1st Author",
+            "co": "Co-author"
+        }
+    },
+    "skills": {
+        "title": "Core Competencies",
+        "items": {
+            "clinical": "Clinical Trials",
+            "python": "Python & SPSS",
+            "data": "Data Analysis",
+            "design": "Study Design",
+            "comm": "Communication",
+            "ai": "AI"
+        }
+    },
+    "contact": {
+        "title": "Connect",
+        "subtitle": "Interested in collaboration or have questions about my work?",
+        "footer": {
+            "rights": "© 2025 DTX Insight. All rights reserved.",
+            "tagline": "Clinical Research × AI Innovation"
+        }
+    }
+}

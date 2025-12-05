@@ -1,9 +1,9 @@
 import React from 'react';
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from 'react-i18next';
 import styles from './About.module.css';
 
 const About = () => {
-    const { t } = useLanguage();
+    const { t } = useTranslation();
     return (
         <section id="about" className={styles.about}>
             <div className={`container ${styles.container}`}>

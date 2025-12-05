@@ -1,10 +1,10 @@
 import React from 'react';
 import { Code, Database, LineChart, Microscope, Stethoscope, Shield, MessageCircle, Brain } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from 'react-i18next';
 import styles from './Skills.module.css';
 
 const Skills = () => {
-    const { t } = useLanguage();
+    const { t } = useTranslation();
 
     const skills = [
         { icon: <Stethoscope size={28} strokeWidth={1.5} />, name: t('skills.items.clinical') },

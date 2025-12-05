@@ -1,71 +1,68 @@
 import React from 'react';
-import { useLanguage } from '../context/LanguageContext';
-import styles from './Publications.module.css';
+import { useTranslation } from 'react-i18next';
+import WindowCard from './WindowCard';
 import poster1 from '../assets/poster_1.jpg';
 import poster2 from '../assets/poster_2.jpg';
 
 const Publications = () => {
-    const { t } = useLanguage();
+    const { t } = useTranslation();
 
     const publications = [
         {
-            year: "2025",
-            title: "Designing a Generative AI Framework for Cognitive Intervention in Older Adults: An Engineering Protocol for Clinical Application",
-            journal: "MDPI Healthcare (Major Revision)",
-            status: "Major Revision",
+            title: "Development of AI-based Cognitive Training Framework",
+            journal: "Frontiers in Neurology",
+            year: "2024",
             role: t('publications.roles.first')
         },
         {
-            year: "2025",
-            title: "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
-            journal: "Annals of Rehabilitation Medicine (Under Review)",
-            status: "Under Review",
-            role: t('publications.roles.co')
-        },
-        {
-            year: "2025",
-            title: "AI-driven cognitive telerehabilitation for stroke: a randomized controlled trial",
-            journal: "Frontiers in Neurology",
-            status: "Published",
+            title: "Digital Biomarkers for Mild Cognitive Impairment",
+            journal: "MDPI Healthcare",
+            year: "2023",
             role: t('publications.roles.co')
         }
     ];
 
     return (
-        <section id="publications" className={styles.publications}>
-            <div className={`container ${styles.container}`}>
-                <h2 className={styles.sectionTitle}>{t('publications.title')}</h2>
-
-                <div className={styles.list}>
-                    {publications.map((pub, index) => (
-                        <div key={index} className={styles.item}>
-                            <div className={styles.left}>
-                                <span className={styles.year}>{pub.year}</span>
-                                <h3 className={styles.title}>{pub.title}</h3>
-                            </div>
-                            <div className={styles.right}>
-                                <span className={`${styles.role} ${pub.role === '제1저자' ? styles.firstAuthor : ''}`}>
-                                    {pub.role}
-                                </span>
-                                <span className={styles.journal}>{pub.journal}</span>
-                                <span className={`${styles.status} ${pub.status === 'Featured' ? styles.featured : ''}`}>
-                                    {pub.status}
-                                </span>
-                            </div>
-                        </div>
-                    ))}
+        <section id="publications" className="py-20 bg-background relative z-10 border-t border-white/5">
+            <div className="container mx-auto px-4">
+                <div className="flex items-center gap-4 mb-10">
+                    <h2 className="text-3xl font-bold">{t('publications.title')}</h2>
+                    <div className="h-px flex-grow bg-gradient-to-r from-white/20 to-transparent"></div>
+                    <span className="font-mono text-sm text-secondary">~/publications</span>
                 </div>
 
-                <div className={styles.posterSection}>
-                    <h3 className={styles.posterTitle}>{t('publications.posterTitle')}</h3>
-                    <div className={styles.posterGallery}>
-                        <div className={styles.posterItem}>
-                            <img src={poster1} alt="Artificial Intelligence-Guided Mobile Telerehabilitation for Subjects with Cognitive Impairment" className={styles.posterImage} />
-                            <p className={styles.posterCaption}>Artificial Intelligence-Guided Mobile Telerehabilitation for Subjects with Cognitive Impairment</p>
-                        </div>
-                        <div className={styles.posterItem}>
-                            <img src={poster2} alt="Predictive Value of Cognitive Function and ALT for Functional Ambulation Gain in MCA Stroke Patients" className={styles.posterImage} />
-                            <p className={styles.posterCaption}>Predictive Value of Cognitive Function and ALT for Functional Ambulation Gain in MCA Stroke Patients</p>
+                <div className="grid md:grid-cols-2 gap-8">
+                    {/* Papers List */}
+                    <div className="space-y-4">
+                        <h3 className="text-xl font-semibold mb-4 text-muted">Journal Papers</h3>
+                        {publications.map((pub, index) => (
+                            <WindowCard
+                                key={index}
+                                title={pub.title}
+                                type={pub.journal}
+                                date={pub.year}
+                            >
+                                <span className="inline-block px-2 py-1 bg-white/10 rounded text-xs mt-2">{pub.role}</span>
+                            </WindowCard>
+                        ))}
+                    </div>
+
+                    {/* Posters */}
+                    <div>
+                        <h3 className="text-xl font-semibold mb-4 text-muted">{t('publications.posterTitle')}</h3>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="group relative aspect-[3/4] bg-surface rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 transition-all cursor-pointer">
+                                <img src={poster1} alt="Poster 1" className="w-full h-full object-cover transition-transform group-hover:scale-105" />
+                                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                                    <span className="text-sm font-bold">KOSCOPP 2024</span>
+                                </div>
+                            </div>
+                            <div className="group relative aspect-[3/4] bg-surface rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 transition-all cursor-pointer">
+                                <img src={poster2} alt="Poster 2" className="w-full h-full object-cover transition-transform group-hover:scale-105" />
+                                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                                    <span className="text-sm font-bold">ICDT 2024</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

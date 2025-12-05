@@ -1,52 +1,47 @@
-@import './variables.css';
+@import "tailwindcss";
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@theme {
+  --color-background: #0B0F19;
+  --color-surface: #151B2B;
+  --color-primary: #7C3AED;
+  --color-secondary: #2DD4BF;
+  --color-text: #F1F5F9;
+  --color-muted: #94A3B8;
+
+  --font-sans: 'Inter', sans-serif;
+
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-body {
-    background-color: var(--color-bg);
-    color: var(--color-text-main);
-    font-family: var(--font-sans);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@layer base {
+  body {
+    @apply bg-background text-text font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans font-semibold text-text;
+  }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--font-serif);
-    font-weight: 600;
-    line-height: 1.2;
-    color: var(--color-text-main);
+/* Custom Scrollbar for "Research OS" feel */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: color var(--transition-fast);
+::-webkit-scrollbar-track {
+  @apply bg-background;
 }
 
-button {
-    font-family: var(--font-sans);
-    cursor: pointer;
-    border: none;
-    background: none;
+::-webkit-scrollbar-thumb {
+  @apply bg-surface rounded-full;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
-.container {
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
 }

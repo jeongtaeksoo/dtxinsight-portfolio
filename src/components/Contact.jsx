@@ -1,10 +1,10 @@
 import React from 'react';
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from 'react-i18next';
 import { GmailIcon, LinkedInIcon, OrcidIcon, GithubIcon } from './Icons';
 import styles from './Contact.module.css';
 
 const Contact = () => {
-    const { t } = useLanguage();
+    const { t } = useTranslation();
 
     return (
         <section id="contact" className={styles.contact}>

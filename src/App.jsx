@@ -1,31 +1,23 @@
-import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Highlights from './components/Highlights';
-import About from './components/About';
-import ResearchProjects from './components/ResearchProjects';
-import DigitalHealthProjects from './components/DigitalHealthProjects';
-import CollaborativeProjects from './components/CollaborativeProjects';
-import Publications from './components/Publications';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
+import Hero from './components/Hero'
+import NarrativeScroll from './components/NarrativeScroll'
+import ResearchProjects from './components/ResearchProjects'
+import DigitalHealthProjects from './components/DigitalHealthProjects'
+import CollaborativeProjects from './components/CollaborativeProjects'
+import Publications from './components/Publications'
+import Skills from './components/Skills'
+import Layout from './components/Layout'
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-
-      <main>
-        <Hero />
-        <Highlights />
-        <ResearchProjects />
-        <DigitalHealthProjects />
-        <CollaborativeProjects />
-        <Publications />
-        <Skills />
-        <Contact />
-      </main>
-    </div>
+    <Layout>
+      <Hero />
+      <NarrativeScroll />
+      <ResearchProjects />
+      <DigitalHealthProjects />
+      <CollaborativeProjects />
+      <Publications />
+      <Skills />
+    </Layout>
   );
 }
 

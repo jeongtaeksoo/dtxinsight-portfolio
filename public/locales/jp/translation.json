@@ -1,0 +1,106 @@
+{
+    "nav": {
+        "about": "紹介",
+        "research": "研究",
+        "innovation": "革新",
+        "publications": "論文",
+        "contact": "連絡先",
+        "highlights": "ハイライト",
+        "projects": "プロジェクト"
+    },
+    "hero": {
+        "title": "臨床研究コーディネーター",
+        "titleHighlight": "＆ AIデジタルヘルス研究員",
+        "subtitle": "臨床試験の運営管理とAIベースのデジタル治療薬研究を通じて、ヘルスケアの革新を主導しています。カトリック関東大学国際聖母病院のリハビリテーション医学科で、3.9億ウォン規模の多機関R&Dプロジェクトを管理しています。",
+        "contactBtn": "お問い合わせ",
+        "researchBtn": "研究を見る"
+    },
+    "about": {
+        "title": "哲学とアプローチ",
+        "description1": "ヘルスケアの未来は、厳格な臨床検証と適応型AIの交差点にあると信じています。看護学の背景と臨床研究の経験を活かし、新しい技術が最先端であるだけでなく、臨床的に意味があり、患者中心的であることを保証します。",
+        "description2": "現在、カトリック関東大学国際聖母病院で臨床研究コーディネーターとして在職し、デジタルバイオマーカーと分散型臨床試験の方法論を通じて、新薬開発を加速させ、患者の予後を改善する戦略を設計しています。"
+    },
+    "highlights": {
+        "items": [
+            {
+                "title": "多機関臨床運営",
+                "description": "3.9億ウォン規模のR&D総括および多機関RCT管理"
+            },
+            {
+                "title": "AI & デジタルヘルス",
+                "description": "生成AIベースの認知訓練フレームワーク設計"
+            },
+            {
+                "title": "データ管理",
+                "description": "データ品質点検および臨床データ管理"
+            },
+            {
+                "title": "学術研究成果",
+                "description": "SCI級論文掲載および国内学術大会ポスター発表"
+            }
+        ]
+    },
+    "research": {
+        "title": "研究ハイライト",
+        "projects": [
+            {
+                "title": "多機関臨床試験管理",
+                "category": "プロトコル設計",
+                "description": "3.9億ウォン規模の多機関R&Dプロジェクト総括およびAIベースのデジタル認知訓練治療薬の多機関ランダム化比較試験管理"
+            },
+            {
+                "title": "デジタルバイオマーカー検証",
+                "category": "臨床検証",
+                "description": "脳卒中患者のためのAIベース認知遠隔リハビリテーションの臨床効果検証 (Frontiers in Neurology 掲載)"
+            },
+            {
+                "title": "デジタルヘルスケア実証",
+                "category": "規制業務",
+                "description": "保健福祉部・韓国保健産業振興院の実証事業中間報告会Q&Aセッション進行および実証研究関連の質疑応答対応"
+            }
+        ],
+        "link": "事例研究を見る →"
+    },
+    "innovation": {
+        "label": "特集イノベーション",
+        "title": "生成AIベースの認知介入フレームワーク",
+        "description": "高齢者の認知機能低下とデジタル排除を解決するための3重エージェント(Coach-Teacher-Companion)システムを設計しました。日常生活の中での自然な認知訓練の流れ(Context-Adaptive Cognitive Flow)を実現し、ユーザー参加を最大化します。",
+        "features": [
+            "Coach-Teacher-Companion 3重エージェント",
+            "Context-Adaptive Cognitive Flow",
+            "高齢者向けデジタルインターフェース"
+        ],
+        "cta": "技術を探る"
+    },
+    "collaborative": {
+        "title": "共同プロジェクト",
+        "description": "北海道大学の黄建輝（博士課程）と共同設計。\n高齢者に優しい認知活性化のためのAIアプリケーション。"
+    },
+    "publications": {
+        "title": "主な論文",
+        "posterTitle": "学会発表ポスター",
+        "roles": {
+            "first": "第1著者",
+            "co": "共著者"
+        }
+    },
+    "skills": {
+        "title": "コアコンピタンス",
+        "items": {
+            "clinical": "臨床試験",
+            "python": "Python & SPSS",
+            "data": "データ分析",
+            "design": "研究設計",
+            "comm": "コミュニケーション",
+            "ai": "AI"
+        }
+    },
+    "contact": {
+        "title": "お問い合わせ",
+        "subtitle": "コラボレーションに興味がある方、または私の仕事について質問がありますか？",
+        "footer": {
+            "rights": "© 2025 DTX Insight. All rights reserved.",
+            "tagline": "臨床研究 × AI イノベーション"
+        }
+    }
+}
