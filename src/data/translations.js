@@ -46,10 +46,6 @@ export const translations = {
             ],
             cta: "기술 탐색하기"
         },
-        collaborative: {
-            title: "협력 프로젝트",
-            description: "황건휘 박사 과정생(홋카이도 대학)과 공동 설계.\n고령자 친화적 인지 활성화를 위한 AI 애플리케이션."
-        },
         publications: {
             title: "주요 논문",
             posterTitle: "학회 발표 포스터",
@@ -125,10 +121,6 @@ export const translations = {
             ],
             cta: "Explore Technology"
         },
-        collaborative: {
-            title: "Collaborative Projects",
-            description: "Designed with Geonhwi Hwang (PhD Candidate, Hokkaido University).\nOlder adult–friendly AI application for cognitive activation."
-        },
         publications: {
             title: "Selected Publications",
             posterTitle: "Conference Posters",
@@ -203,10 +195,6 @@ export const translations = {
                 "高齢者向けデジタルインターフェース"
             ],
             cta: "技術を探る"
-        },
-        collaborative: {
-            title: "共同プロジェクト",
-            description: "北海道大学の黄建輝（博士課程）と共同設計。\n高齢者に優しい認知活性化のためのAIアプリケーション。"
         },
         publications: {
             title: "主な論文",

@@ -100,12 +100,6 @@
         ],
         "cta": "技術を探る"
     },
-    "collaborative": {
-        "sectionTitle": "共同プロジェクト",
-        "projectTitle": "フィワスプロジェクト",
-        "subtitle": "北海道大学所属研究者との個人研究協力プロジェクト",
-        "description": "高齢者に優しい認知活性化のためのAIアプリケーション共同設計"
-    },
     "publications": {
         "title": "主な論文",
         "posterTitle": "学会発表ポスター",
