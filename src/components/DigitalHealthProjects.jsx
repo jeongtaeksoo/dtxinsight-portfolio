@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 import styles from './DigitalHealthProjects.module.css';
 import CTCModel from './CTCModel';
 
+import { ExternalLink } from 'lucide-react';
+
 const DigitalHealthProjects = () => {
     const { t } = useTranslation();
 
@@ -16,9 +18,19 @@ const DigitalHealthProjects = () => {
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
                         {t('innovation.title')}
                     </h2>
-                    <p className="max-w-2xl mx-auto text-muted text-lg leading-relaxed">
+                    <p className="max-w-2xl mx-auto text-muted text-lg leading-relaxed mb-8">
                         {t('innovation.description')}
                     </p>
+
+                    <a
+                        href="https://ctc-coach-qzujrcjvcf4g39jgr8hhsz.streamlit.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-bold hover:shadow-lg hover:shadow-primary/25 transition-all transform hover:-translate-y-1"
+                    >
+                        {t('innovation.demoBtn')}
+                        <ExternalLink size={20} />
+                    </a>
                 </div>
 
                 {/* Interactive CTC Model */}
