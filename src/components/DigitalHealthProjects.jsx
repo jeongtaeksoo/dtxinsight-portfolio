@@ -26,7 +26,7 @@ const DigitalHealthProjects = () => {
                         href="https://ctc-coach-qzujrcjvcf4g39jgr8hhsz.streamlit.app"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-bold hover:shadow-lg hover:shadow-primary/25 transition-all transform hover:-translate-y-1"
+                        className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-primary/50 text-primary bg-primary/5 hover:bg-primary/10 hover:border-primary transition-all font-semibold text-sm"
                     >
                         {t('innovation.demoBtn')}
                         <ExternalLink size={20} />

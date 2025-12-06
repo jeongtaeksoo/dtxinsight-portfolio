@@ -45,7 +45,7 @@ export const translations = {
                 "고령자 친화적 디지털 인터페이스"
             ],
             cta: "기술 탐색하기",
-            demoBtn: "데모 버전 체험하기"
+            demoBtn: "Demo"
         },
         publications: {
             title: "주요 논문",
@@ -121,7 +121,7 @@ export const translations = {
                 "Senior-friendly Digital Interface"
             ],
             cta: "Explore Technology",
-            demoBtn: "Try Demo Version"
+            demoBtn: "Demo"
         },
         publications: {
             title: "Selected Publications",
@@ -197,7 +197,7 @@ export const translations = {
                 "高齢者向けデジタルインターフェース"
             ],
             cta: "技術を探る",
-            demoBtn: "デモ版を試す"
+            demoBtn: "Demo"
         },
         publications: {
             title: "主な論文",
