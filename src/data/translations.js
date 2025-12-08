@@ -44,8 +44,7 @@ export const translations = {
                 "Context-Adaptive Cognitive Flow",
                 "고령자 친화적 디지털 인터페이스"
             ],
-            cta: "기술 탐색하기",
-            demoBtn: "Demo"
+            cta: "기술 탐색하기"
         },
         publications: {
             title: "주요 논문",
@@ -120,8 +119,7 @@ export const translations = {
                 "Context-Adaptive Cognitive Flow",
                 "Senior-friendly Digital Interface"
             ],
-            cta: "Explore Technology",
-            demoBtn: "Demo"
+            cta: "Explore Technology"
         },
         publications: {
             title: "Selected Publications",
@@ -196,8 +194,7 @@ export const translations = {
                 "Context-Adaptive Cognitive Flow",
                 "高齢者向けデジタルインターフェース"
             ],
-            cta: "技術を探る",
-            demoBtn: "Demo"
+            cta: "技術を探る"
         },
         publications: {
             title: "主な論文",
