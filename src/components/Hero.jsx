@@ -61,6 +61,15 @@ const Hero = () => {
                     <p className="text-base md:text-lg bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary font-semibold">
                         {t('hero.tagline')}
                     </p>
+
+                    {/* Resume Download Link */}
+                    <a
+                        href="/Resume.pdf"
+                        download="Taeksoo_Jeong_Resume.pdf"
+                        className="mt-4 inline-block text-base md:text-lg text-primary hover:text-secondary transition-colors duration-300 underline underline-offset-4"
+                    >
+                        {t('hero.resume')}
+                    </a>
                 </motion.div>
             </div>
 
