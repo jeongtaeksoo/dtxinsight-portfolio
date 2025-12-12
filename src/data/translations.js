@@ -58,7 +58,7 @@ export const translations = {
             title: "핵심 역량",
             items: {
                 clinical: "임상시험",
-                python: "Python & SPSS",
+                python: "Python",
                 data: "데이터 분석",
                 design: "연구 설계",
                 comm: "커뮤니케이션",
@@ -133,7 +133,7 @@ export const translations = {
             title: "Core Competencies",
             items: {
                 clinical: "Clinical Trials",
-                python: "Python & SPSS",
+                python: "Python",
                 data: "Data Analysis",
                 design: "Study Design",
                 comm: "Communication",
@@ -208,7 +208,7 @@ export const translations = {
             title: "コアコンピタンス",
             items: {
                 clinical: "臨床試験",
-                python: "Python & SPSS",
+                python: "Python",
                 data: "データ分析",
                 design: "研究設計",
                 comm: "コミュニケーション",
