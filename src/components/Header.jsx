@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Header.module.css';
+import logo from '/logo.png';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -85,8 +86,11 @@ const Header = () => {
         <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-white/5 py-3' : 'bg-transparent py-5'}`}>
             <div className="container mx-auto px-4 flex justify-between items-center">
                 {/* Logo */}
-                <a href="#" className="text-2xl md:text-3xl font-bold tracking-tighter text-white hover:text-primary transition-colors">
-                    DTX<span className="text-primary">Insight</span>
+                <a href="#" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                    <img src={logo} alt="DTXInsight Logo" className="w-8 h-8 md:w-10 md:h-10 object-contain rounded-lg" />
+                    <span className="text-2xl md:text-3xl font-bold tracking-tighter text-white">
+                        DTX<span className="text-primary">Insight</span>
+                    </span>
                 </a>
 
                 {/* Desktop Nav */}
