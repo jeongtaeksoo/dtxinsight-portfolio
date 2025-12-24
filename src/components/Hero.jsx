@@ -64,8 +64,8 @@ const Hero = () => {
 
                     {/* Resume Download Link */}
                     <a
-                        href="/Resume.pdf"
-                        download="Taeksoo_Jeong_Resume.pdf"
+                        href="/RESUME.pdf"
+                        download="RESUME.pdf"
                         className="mt-4 inline-block text-base md:text-lg text-primary hover:text-secondary transition-colors duration-300 underline underline-offset-4"
                     >
                         {t('hero.resume')}
