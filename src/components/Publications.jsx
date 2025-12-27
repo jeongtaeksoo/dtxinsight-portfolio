@@ -16,7 +16,7 @@ const Publications = () => {
     const posters = [
         { id: 1, src: poster1, title: 'KOSCOPP 2024' },
         { id: 2, src: poster2, title: 'ICDT 2024' },
-        { id: 3, src: poster3, title: 'AI DRIVEN COGNITIVE' }
+        { id: 3, src: poster3, title: 'E-Poster-Park-AI DRIVEN COGNITIVE' }
     ];
 
     return (
