@@ -48,7 +48,7 @@ export const translations = {
         },
         publications: {
             title: "주요 논문",
-            posterTitle: "학회 발표 포스터",
+            posterTitle: "학회 포스터",
             roles: {
                 first: "제1저자",
                 co: "공저자"
@@ -198,7 +198,7 @@ export const translations = {
         },
         publications: {
             title: "主な論文",
-            posterTitle: "学会発表ポスター",
+            posterTitle: "学会ポスター",
             roles: {
                 first: "第1著者",
                 co: "共著者"
