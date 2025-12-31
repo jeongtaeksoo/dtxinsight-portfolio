@@ -115,7 +115,8 @@
                 "date": "2025",
                 "role": "Co-author",
                 "status": "Published",
-                "doi": "https://doi.org/10.3389/fneur.2025.1636017"
+                "doi": "https://doi.org/10.3389/fneur.2025.1636017",
+                "summary": "In a recent multicenter randomized controlled trial, AI-based cognitive telerehabilitation showed equivalent efficacy to traditional therapist-supervised cognitive rehabilitation.\n\n63 stroke patients in the subacute phase (within 6 months) were randomly assigned to two groups for a total of 24 sessions over 6 weeks. Both groups showed significant improvements in key cognitive indicators (K-MMSE2, TMT, Digit Span).\n\nUnsupervised **AI self-operated telerehabilitation demonstrated non-inferiority** compared to the therapist-led group, with high usability satisfaction.\n\nThese results suggest that AI cognitive rehabilitation platforms allowing real-time personalization and remote monitoring provide clinical value on par with conventional treatments."
             },
             {
                 "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
@@ -123,7 +124,8 @@
                 "date": "2025",
                 "role": "1st Author",
                 "status": "Published",
-                "doi": "https://www.mdpi.com/2227-9032/13/24/3225"
+                "doi": "https://www.mdpi.com/2227-9032/13/24/3225",
+                "summary": "Digital exclusion and technology anxiety remain significant barriers to the practical application of cognitive interventions for the elderly. This clinical protocol paper proposes a multi-agent generative AI framework with a Coach–Teacher–Companion (CTC) structure to address these limitations.\n\nThe framework is designed to naturally integrate cognitive training into daily life and provide simultaneous cognitive, behavioral, and emotional support through adaptive difficulty adjustment and emotional monitoring. It systematically presents methodological and ethical safeguards for clinical application, including assessments for digital literacy (MDPQ-16), technology anxiety (CARS), and emotional safety (PANAS).\n\nDesigned to evaluate **usability (SUS), user experience (UEQ-S), adherence, emotional stability, and key cognitive indicators (MMSE, TMT, Digit Span)** through a 6-week pilot feasibility study protocol (n=14), this study provide initial evidence for the structural feasibility of clinical application of generative AI-based cognitive intervention for the elderly."
             },
             {
                 "title": "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
@@ -131,7 +133,8 @@
                 "date": "2025",
                 "role": "Co-author",
                 "status": "Published",
-                "doi": "https://doi.org/10.5535/arm.250060"
+                "doi": "https://doi.org/10.5535/arm.250060",
+                "summary": "This preliminary study evaluates the clinical feasibility and usability of AI-based mobile cognitive telerehabilitation. 13 participants, including stroke patients and older adults with Mild Cognitive Impairment (MCI), underwent a 6-week, 24-session AI self-operated cognitive rehabilitation program.\n\nMMSE scores improved significantly compared to pre-intervention, with overall improvement trends in Digit Span and Trail Making Test. While product quality and satisfaction were high in the overall usability assessment, the 'tolerance for error' domain was relatively low, highlighting the need for UI/UX improvements considering the elderly and digitally vulnerable populations.\n\nThis study shows that AI-based cognitive telerehabilitation, feasible without constant therapist intervention, is safe and practicable in real clinical environments and has potential effects on cognitive function improvement. It is significant in presenting the importance of usability-centered design amidst the expansion of digital therapeutics and telerehabilitation."
             },
             {
                 "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults with Mild Cognitive Impairment: A pilot Study",
