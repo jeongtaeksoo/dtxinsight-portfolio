@@ -182,7 +182,7 @@ const Publications = () => {
                                         <div className="space-y-4">
                                             <h4 className="text-sm font-bold text-muted uppercase tracking-widest flex items-center gap-2">
                                                 <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                                Core Summary (LinkedIn)
+                                                Core Summary
                                             </h4>
                                             <div className="text-white/80 leading-relaxed text-sm whitespace-pre-line bg-white/5 p-5 rounded-lg border border-white/5 font-light">
                                                 {selectedPaper.summary}
