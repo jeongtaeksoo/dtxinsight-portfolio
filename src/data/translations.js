@@ -17,7 +17,7 @@ export const translations = {
         about: {
             title: '철학 & 접근법',
             description1: '헬스케어의 미래는 엄격한 임상 검증과 적응형 인공지능의 교차점에 있다고 믿습니다. 저는 간호학 배경과 임상연구 경험을 바탕으로, 새로운 기술이 최첨단일 뿐만 아니라 임상적으로 의미 있고 환자 중심적이도록 보장합니다.',
-            description2: '현재 가톨릭관동대학교 국제성모병원에서 임상연구 코디네이터로 재직하며, 디지털 바이오마커와 분산형 임상시험 방법론을 통해 신약 개발을 가속화하고 환자 결과를 개선하는 전략을 설계하고 있습니다.'
+            description2: '가톨릭관동대학교 국제성모병원에서 임상연구 코디네이터로 재직했으며, 디지털 바이오마커와 분산형 임상시험 방법론을 통해 신약 개발을 가속화하고 환자 결과를 개선하는 전략을 설계하였습니다.'
         },
         highlights: {
             items: [
@@ -92,7 +92,7 @@ export const translations = {
         about: {
             title: 'Philosophy & Approach',
             description1: 'I believe the future of healthcare lies at the intersection of rigorous clinical validation and adaptive AI. With a background in nursing and clinical research, I ensure new technologies are not only cutting-edge but also clinically meaningful and patient-centered.',
-            description2: 'Currently working as a Clinical Research Coordinator at International St. Mary\'s Hospital, designing strategies to accelerate drug development and improve patient outcomes through digital biomarkers and decentralized clinical trial methodologies.'
+            description2: 'Worked as a Clinical Research Coordinator at International St. Mary\'s Hospital, designing strategies to accelerate drug development and improve patient outcomes through digital biomarkers and decentralized clinical trial methodologies.'
         },
         highlights: {
             items: [
@@ -167,7 +167,7 @@ export const translations = {
         about: {
             title: '哲学とアプローチ',
             description1: 'ヘルスケアの未来は、厳格な臨床検証と適応型AIの交差点にあると信じています。看護学の背景と臨床研究の経験を活かし、新しい技術が最先端であるだけでなく、臨床的に意味があり、患者中心的であることを保証します。',
-            description2: '現在、カトリック関東大学国際聖母病院で臨床研究コーディネーターとして在職し、デジタルバイオマーカーと分散型臨床試験の方法論を通じて、新薬開発を加速させ、患者の予後を改善する戦略を設計しています。'
+            description2: '以前、カトリック関東大学国際聖母病院で臨床研究コーディネーターとして在職し、デジタルバイオマーカーと分散型臨床試験の方法論を通じて、新薬開発を加速させ、患者の予後を改善する戦略を設計していました。'
         },
         highlights: {
             items: [
