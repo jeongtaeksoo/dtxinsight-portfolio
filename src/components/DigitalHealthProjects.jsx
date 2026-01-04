@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { ExternalLink } from 'lucide-react';
 import styles from './DigitalHealthProjects.module.css';
 import CTCModel from './CTCModel';
 
@@ -16,9 +17,19 @@ const DigitalHealthProjects = () => {
                     <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
                         {t('innovation.title')}
                     </h2>
-                    <p className="max-w-2xl mx-auto text-muted text-lg leading-relaxed">
+                    <p className="max-w-2xl mx-auto text-muted text-lg leading-relaxed mb-8">
                         {t('innovation.description')}
                     </p>
+
+                    <a
+                        href="https://hwiwasoo.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full font-bold hover:bg-primary/80 transition-all transform hover:scale-105 shadow-lg shadow-primary/20"
+                    >
+                        {t('innovation.cta')}
+                        <ExternalLink size={20} />
+                    </a>
                 </div>
 
                 {/* Interactive CTC Model */}

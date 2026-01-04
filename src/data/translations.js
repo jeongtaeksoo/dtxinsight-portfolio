@@ -37,14 +37,14 @@ export const translations = {
         },
         innovation: {
             label: "특집 혁신",
-            title: "생성형 AI 기반 인지 중재 프레임워크",
-            description: "고령자의 인지기능 저하와 디지털 배제를 해결하기 위한 3중 에이전트(Coach-Teacher-Companion) 시스템을 설계했습니다. 일상생활 속 자연스러운 인지훈련 흐름(Context-Adaptive Cognitive Flow)을 구현하여 사용자 참여를 극대화합니다.",
+            title: "휘와수(Hwiwasoo): 생성형 AI 기반 인지 중재 프레임워크",
+            description: "고령자의 인지기능 저하와 디지털 배제를 해결하기 위해 홋카이도 대학교 응용물리학 박사과정과 함께 공동으로 시작한 '휘와수' 프로젝트입니다. 3중 에이전트(Coach-Teacher-Companion) 시스템을 통해 일상생활 속 자연스러운 인지훈련 흐름(Context-Adaptive Cognitive Flow)을 구현하여 사용자 참여를 극대화합니다.",
             features: [
                 "Coach-Teacher-Companion 3중 에이전트",
                 "Context-Adaptive Cognitive Flow",
                 "고령자 친화적 디지털 인터페이스"
             ],
-            cta: "기술 탐색하기"
+            cta: "휘와수 바로가기"
         },
         publications: {
             title: "주요 논문",
@@ -112,14 +112,14 @@ export const translations = {
         },
         innovation: {
             label: "Featured Innovation",
-            title: "Generative AI-based Cognitive Intervention Framework",
-            description: "Designed a triple-agent (Coach-Teacher-Companion) system to address cognitive decline and digital exclusion in older adults. Implements Context-Adaptive Cognitive Flow in daily life to maximize user engagement.",
+            title: "Hwiwasoo: Generative AI-based Cognitive Intervention Framework",
+            description: "The 'Hwiwasoo' project, co-founded with a PhD student in Applied Physics at Hokkaido University to address cognitive decline and digital exclusion in older adults. It implements a triple-agent (Coach-Teacher-Companion) system to create a Context-Adaptive Cognitive Flow in daily life, maximizing user engagement.",
             features: [
                 "Coach-Teacher-Companion Triple Agent",
                 "Context-Adaptive Cognitive Flow",
                 "Senior-friendly Digital Interface"
             ],
-            cta: "Explore Technology"
+            cta: "Visit Hwiwasoo"
         },
         publications: {
             title: "Selected Publications",
@@ -187,14 +187,14 @@ export const translations = {
         },
         innovation: {
             label: "特集イノベーション",
-            title: "生成AIベースの認知介入フレームワーク",
-            description: "高齢者の認知機能低下とデジタル排除を解決するための3重エージェント(Coach-Teacher-Companion)システムを設計しました。日常生活の中での自然な認知訓練の流れ(Context-Adaptive Cognitive Flow)を実現し、ユーザー参加を最大化します。",
+            title: "휘와수(Hwiwasoo): 生成AIベースの認知介入フレームワーク",
+            description: "高齢者の認知機能低下とデジタル排除を解決するために、北海道大学・応用物理学専攻の博士課程の学生と共同で開始した「휘와수(Hwiwasoo)」プロジェクトです。3重エージェント(Coach-Teacher-Companion)システムを通じて日常生活の中での自然な認知訓練の流れ(Context-Adaptive Cognitive Flow)を実現し、ユーザー参加を最大化します。",
             features: [
                 "Coach-Teacher-Companion 3重エージェント",
                 "Context-Adaptive Cognitive Flow",
                 "高齢者向けデジタルインターフェース"
             ],
-            cta: "技術を探る"
+            cta: "Hwiwasoo サイトへ"
         },
         publications: {
             title: "主な論文",
