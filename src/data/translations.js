@@ -44,7 +44,7 @@ export const translations = {
                 "Context-Adaptive Cognitive Flow",
                 "고령자 친화적 디지털 인터페이스"
             ],
-            cta: "휘와수 바로가기"
+            cta: "Hwiwasoo"
         },
         publications: {
             title: "주요 논문",
@@ -119,7 +119,7 @@ export const translations = {
                 "Context-Adaptive Cognitive Flow",
                 "Senior-friendly Digital Interface"
             ],
-            cta: "Visit Hwiwasoo"
+            cta: "Hwiwasoo"
         },
         publications: {
             title: "Selected Publications",
@@ -194,7 +194,7 @@ export const translations = {
                 "Context-Adaptive Cognitive Flow",
                 "高齢者向けデジタルインターフェース"
             ],
-            cta: "Hwiwasoo サイトへ"
+            cta: "Hwiwasoo"
         },
         publications: {
             title: "主な論文",
