@@ -92,14 +92,14 @@
     },
     "innovation": {
         "label": "特集イノベーション",
-        "title": "生成AIベースの認知介入フレームワーク",
-        "description": "高齢者の認知機能低下とデジタル排除を解決するための3重エージェント(Coach-Teacher-Companion)システムを設計しました。日常生活の中での自然な認知訓練の流れ(Context-Adaptive Cognitive Flow)を実現し、ユーザー参加を最大化します。",
+        "title": "휘와수(Hwiwasoo): 生成AIベースの認知介入フレームワーク",
+        "description": "高齢者の認知機能低下とデジタル排除を解決するために、北海道大学・応用物理学専攻の博士課程の学生と共同で開始した「휘와수(Hwiwasoo)」プロジェクトです。3重エージェント(Coach-Teacher-Companion)システムを通じて日常生活の中での自然な認知訓練の流れ(Context-Adaptive Cognitive Flow)を実現し、ユーザー参加を最大化します。",
         "features": [
             "Coach-Teacher-Companion 3重エージェント",
             "Context-Adaptive Cognitive Flow",
             "高齢者向けデジタルインターフェース"
         ],
-        "cta": "技術を探る"
+        "cta": "Hwiwasoo"
     },
     "publications": {
         "title": "主な論文",

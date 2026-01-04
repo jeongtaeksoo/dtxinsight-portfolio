@@ -92,14 +92,14 @@
     },
     "innovation": {
         "label": "특집 혁신",
-        "title": "생성형 AI 기반 인지 중재 프레임워크",
-        "description": "고령자의 인지기능 저하와 디지털 배제를 해결하기 위한 3중 에이전트(Coach-Teacher-Companion) 시스템을 설계했습니다. 일상생활 속 자연스러운 인지훈련 흐름(Context-Adaptive Cognitive Flow)을 구현하여 사용자 참여를 극대화합니다.",
+        "title": "휘와수(Hwiwasoo): 생성형 AI 기반 인지 중재 프레임워크",
+        "description": "고령자의 인지기능 저하와 디지털 배제를 해결하기 위해 홋카이도 대학교 응용물리학 박사과정과 함께 공동으로 시작한 '휘와수' 프로젝트입니다. 3중 에이전트(Coach-Teacher-Companion) 시스템을 통해 일상생활 속 자연스러운 인지훈련 흐름(Context-Adaptive Cognitive Flow)을 구현하여 사용자 참여를 극대화합니다.",
         "features": [
             "Coach-Teacher-Companion 3중 에이전트",
             "Context-Adaptive Cognitive Flow",
             "고령자 친화적 디지털 인터페이스"
         ],
-        "cta": "기술 탐색하기"
+        "cta": "Hwiwasoo"
     },
     "publications": {
         "title": "주요 논문",

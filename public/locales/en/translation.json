@@ -92,14 +92,14 @@
     },
     "innovation": {
         "label": "Featured Innovation",
-        "title": "Generative AI-based Cognitive Intervention Framework",
-        "description": "Designed a triple-agent (Coach-Teacher-Companion) system to address cognitive decline and digital exclusion in older adults. Implements Context-Adaptive Cognitive Flow in daily life to maximize user engagement.",
+        "title": "Hwiwasoo: Generative AI-based Cognitive Intervention Framework",
+        "description": "The 'Hwiwasoo' project, co-founded with a PhD student in Applied Physics at Hokkaido University to address cognitive decline and digital exclusion in older adults. It implements a triple-agent (Coach-Teacher-Companion) system to create a Context-Adaptive Cognitive Flow in daily life, maximizing user engagement.",
         "features": [
             "Coach-Teacher-Companion Triple Agent",
             "Context-Adaptive Cognitive Flow",
             "Senior-friendly Digital Interface"
         ],
-        "cta": "Explore Technology"
+        "cta": "Hwiwasoo"
     },
     "publications": {
         "title": "Selected Publications",
