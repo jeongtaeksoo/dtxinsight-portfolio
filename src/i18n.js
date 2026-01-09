@@ -10,6 +10,9 @@ i18n
     .init({
         fallbackLng: 'en',
         debug: false,
+        react: {
+            useSuspense: false,
+        },
         interpolation: {
             escapeValue: false,
         },
@@ -18,7 +21,7 @@ i18n
             caches: ['localStorage'],
         },
         backend: {
-            loadPath: '/locales/{{lng}}/translation.json',
+            loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/translation.json`,
         },
     });
 

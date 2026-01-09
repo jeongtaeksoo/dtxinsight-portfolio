@@ -7,6 +7,8 @@ import profileImg from '../assets/profile_id_photo.png';
 const Hero = () => {
     const { t } = useTranslation();
 
+    const resumeHref = `${import.meta.env.BASE_URL}RESUME.pdf`;
+
     return (
         <section id="top" className="relative min-h-screen flex items-center overflow-hidden py-20">
             <div className="container mx-auto px-4 z-10 relative flex flex-col items-center justify-center gap-8">
@@ -69,7 +71,7 @@ const Hero = () => {
 
                     {/* Resume Download Link */}
                     <a
-                        href="/RESUME.pdf"
+                        href={resumeHref}
                         download="RESUME.pdf"
                         className="mt-4 inline-block text-base md:text-lg text-primary hover:text-secondary transition-colors duration-300 underline underline-offset-4"
                     >
