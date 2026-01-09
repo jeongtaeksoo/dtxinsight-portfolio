@@ -1,7 +1,7 @@
 {
     "nav": {
-        "about": "프로필",
-        "research": "경력",
+        "about": "소개",
+        "research": "연구",
         "innovation": "혁신",
         "publications": "논문",
         "contact": "연락처",
@@ -10,11 +10,10 @@
     },
     "hero": {
         "name": "정택수",
-        "affiliation": "임상연구 코디네이터 (CRC)",
-        "organization": "가톨릭관동대학교 국제성모병원 · 재활의학과",
-        "credential": "간호사 (RN)",
-        "tagline": "디지털 치료제(DTx) 및 AI 기반 인지재활 임상연구",
-        "resume": "이력서"
+        "affiliation": "前 가톨릭관동대학교 국제성모병원 재활의학과 연구원",
+        "credential": "RN (Registered Nurse)",
+        "tagline": "Clinical Research Coordinator & AI-driven Healthcare Innovator",
+        "resume": "Resume"
     },
     "journey": {
         "title": "My Research Journey",
@@ -46,97 +45,59 @@
             }
         ]
     },
-    "profile": {
-        "title": "프로필",
-        "items": [
-            {
-                "key": "dob",
-                "label": "생년월일",
-                "value": "1998년 5월 2일"
-            },
-            {
-                "key": "military",
-                "label": "병역",
-                "value": "대한민국 육군 명예전역"
-            },
-            {
-                "key": "location",
-                "label": "주소",
-                "value": "대한민국 인천광역시 부평구"
-            }
-        ]
-    },
     "about": {
         "title": "철학 & 접근법",
-        "description1": "간호학 전공 후 임상연구 코디네이터로 디지털 치료제 및 인지재활 임상시험을 수행해 왔습니다.",
-        "description2": "가톨릭관동대학교 국제성모병원 재활의학과(2024–2025)에서 3.9억 원 규모 다기관 R&D 프로젝트를 총괄하며 IRB/CRIS, 데이터 품질 관리, 연구 모니터링을 담당했습니다."
+        "description1": "헬스케어의 미래는 엄격한 임상 검증과 적응형 인공지능의 교차점에 있다고 믿습니다. 저는 간호학 배경과 임상연구 경험을 바탕으로, 새로운 기술이 최첨단일 뿐만 아니라 임상적으로 의미 있고 환자 중심적이도록 보장합니다.",
+        "description2": "가톨릭관동대학교 국제성모병원에서 임상연구 코디네이터로 재직했으며, 디지털 바이오마커와 분산형 임상시험 방법론을 통해 신약 개발을 가속화하고 환자 결과를 개선하는 전략을 설계하였습니다."
     },
     "highlights": {
         "items": [
             {
-                "title": "다기관 R&D",
-                "description": "3.9억 원 규모 프로젝트 및 다기관 RCT 관리"
+                "title": "다기관 임상 운영",
+                "description": "3.9억 원 규모 R&D 총괄 및 다기관 RCT 관리"
             },
             {
-                "title": "SCI 논문",
-                "description": "제1저자(MDPI) 및 공저자(Frontiers, ARM)"
+                "title": "AI & 디지털 헬스",
+                "description": "생성형 AI 기반 인지 훈련 프레임워크 설계"
             },
             {
-                "title": "학회 포스터",
-                "description": "대한재활의학회 추계학술대회 포스터 2건"
+                "title": "데이터 관리",
+                "description": "데이터 품질 점검 및 임상 데이터 관리"
             },
             {
-                "title": "정부 협력",
-                "description": "보건복지부·KHIDI 실증사업 Q&A 세션"
+                "title": "학술 연구 성과",
+                "description": "SCI급 논문 게재 및 국내 학술대회 포스터 발표"
             }
         ]
     },
     "research": {
-        "title": "경력",
-        "labels": {
-            "achievements": "주요 성과",
-            "responsibilities": "주요 업무"
-        },
+        "title": "연구 하이라이트",
         "projects": [
             {
-                "title": "임상연구 코디네이터",
-                "category": "가톨릭관동대학교 국제성모병원 | 재활의학과",
-                "date": "2024.01–2025.12",
-                "summary": "AI 기반 디지털 인지훈련 치료제의 경도인지장애(MCI) 및 뇌졸중 대상 다기관 무작위대조 임상시험.",
-                "achievements": [
-                    "3.9억 원 규모 다기관 R&D 프로젝트 총괄",
-                    "SCI급 제1저자 논문 1편(MDPI Healthcare) 게재",
-                    "SCI급 공저자 논문 1편(Frontiers in Neurology) 게재",
-                    "대한재활의학회 추계학술대회 포스터 2건 발표",
-                    "보건복지부·KHIDI 디지털 헬스케어 실증사업 중간보고회 Q&A 세션 진행",
-                    "디지털 헬스케어 실증 연구 관련 정부 관계자 기술 논의 참여"
-                ],
-                "responsibilities": [
-                    "AI 기반 디지털 인지훈련 치료제 다기관 무작위대조 임상시험 총괄",
-                    "대상자 모집·선별, IRB 제출·심의, CRIS 등록, 연구비 집행, 보고서 작성",
-                    "임상시험 문서 관리, 데이터 품질 관리, 연구 진행 모니터링",
-                    "의사·간호사·치료사 등 다학제 협업을 통한 연구 프로세스 개선",
-                    "논문 작성 및 학회 발표"
-                ]
+                "title": "다기관 임상시험 관리",
+                "category": "프로토콜 설계",
+                "description": "3.9억 원 규모 다기관 R&D 프로젝트 총괄 및 AI 기반 디지털 인지훈련 치료제 다기관 무작위대조 임상시험 관리"
             },
             {
-                "title": "프리랜서",
-                "category": "플코스킨 | 계약 완료",
-                "date": "2025.02–2025.08",
-                "responsibilities": [
-                    "임상시험 초기 IRB 문서 검토 및 지원"
-                ]
+                "title": "디지털 바이오마커 검증",
+                "category": "임상 검증",
+                "description": "뇌졸중 환자를 위한 AI 기반 인지 원격재활의 임상 효과 검증 (Frontiers in Neurology 게재)"
+            },
+            {
+                "title": "디지털 헬스케어 실증",
+                "category": "규제 업무",
+                "description": "보건복지부·한국보건산업진흥원 실증사업 중간보고회 Q&A 세션 진행 및 실증 연구 관련 질의응답 대응"
             }
         ]
     },
     "innovation": {
-        "label": "특집 프로젝트",
-        "title": "Hwiwasoo: 생성형 AI 기반 인지 중재 프레임워크",
-        "description": "고령자 인지 중재를 위한 생성형 AI 기반 3중 에이전트(Coach–Teacher–Companion) 프레임워크이며, MDPI Healthcare(2025.12.10)에서 프로토콜로 제시되었습니다.",
+        "label": "특집 혁신",
+        "title": "생성형 AI 기반 인지 중재 프레임워크",
+        "description": "고령자의 인지기능 저하와 디지털 배제를 해결하기 위해 홋카이도 대학교 응용물리학 박사과정과 함께 공동으로 시작한 '휘와수' 프로젝트입니다. 3중 에이전트(Coach-Teacher-Companion) 시스템을 통해 일상생활 속 자연스러운 인지훈련 흐름(Context-Adaptive Cognitive Flow)을 구현하여 사용자 참여를 극대화합니다.",
         "features": [
-            "Coach–Teacher–Companion 3중 에이전트",
+            "Coach-Teacher-Companion 3중 에이전트",
             "Context-Adaptive Cognitive Flow",
-            "고령자 대상 임상 적용 프로토콜"
+            "고령자 친화적 디지털 인터페이스"
         ],
         "cta": "Hwiwasoo"
     },
@@ -151,145 +112,56 @@
             {
                 "title": "AI-driven cognitive telerehabilitation for stroke: a randomized controlled trial",
                 "journal": "Frontiers in Neurology",
-                "date": "2025.08.14",
+                "date": "2025",
                 "role": "공저자",
                 "status": "게재 완료",
                 "doi": "https://doi.org/10.3389/fneur.2025.1636017",
-                "summary": "뇌졸중 환자를 대상으로 AI 기반 인지 텔레리해빌리테이션의 임상적 유효성을 평가한 다기관 무작위대조시험으로, 치료사 감독 재활과 유사한 인지 개선 결과를 보고했습니다."
+                "summary": "최근 다기관 무작위대조시험에서 AI 기반 인지 텔레리해빌리테이션이 전통적 치료사 감독 인지재활과 동일한 효과를 보였습니다.\n\n급성기 이후(6개월 이내) 뇌졸중 환자 63명을 두 군으로 무작위 배정해 6주간 총 24회 세션을 수행했고, 주요 인지 지표(K-MMSE2, TMT, Digit Span) 모두 유의한 향상을 보였습니다.\n\n비감독형 **AI 자가운영 텔레리해빌리테이션은 전통적 치료사 주도군 대비 비열등성(non-inferiority)**이 입증되었으며, 사용성 만족도도 높게 나타났습니다.\n\n이 결과는 실시간 개인화 및 원격 모니터링이 가능한 AI 인지재활 플랫폼이 기존 치료와 동일 수준의 임상적 가치를 가진다는 근거를 제시합니다."
             },
             {
-                "title": "Designing a Generative AI Framework for Cognitive Intervention in Older Adults: An Engineering Protocol for Clinical Application",
+                "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
                 "journal": "MDPI Healthcare",
-                "date": "2025.12.10",
-                "role": "제1저자 (공동)",
+                "date": "2025",
+                "role": "제1저자",
                 "status": "게재 완료",
                 "doi": "https://www.mdpi.com/2227-9032/13/24/3225",
-                "summary": "고령자 인지 중재를 위한 생성형 AI 기반 3중 에이전트(Coach–Teacher–Companion) 시스템을 제안하고, 일상생활에 통합되는 적응형 인지 흐름을 구현하는 프로토콜을 제시합니다.\n\n공동 제1저자: 황건휘(홋카이도대학교 응용물리학 박사과정).\n교신저자: 김두영(가톨릭관동대학교 국제성모병원 재활의학과)."
+                "summary": "디지털 소외(digital exclusion)와 기술 불안으로 인해 고령층 인지중재의 실제 적용에는 여전히 높은 진입 장벽이 존재합니다. 본 연구는 이러한 한계를 해결하기 위해 Coach–Teacher–Companion(CTC) 구조의 다중 에이전트 생성형 AI 프레임워크를 제안하는 임상 프로토콜 논문입니다.\n\n본 프레임워크는 일상생활에 자연스럽게 인지 훈련을 통합하고, 적응형 난이도 조절과 정서 모니터링을 통해 인지·행동·정서 지원을 동시에 제공하도록 설계되었습니다. 특히 디지털 리터러시(MDPQ-16), 기술 불안(CARS), 정서 안전성(PANAS) 평가를 포함한 임상 적용을 위한 방법론적·윤리적 안전장치를 체계적으로 제시합니다.\n\n6주간의 파일럿 타당성 연구 프로토콜(n=14)을 통해 **사용성(SUS), 사용자 경험(UEQ-S), 순응도, 정서 안정성, 주요 인지 지표(MMSE, TMT, Digit Span)**를 평가하도록 설계되었으며, 본 연구는 고령층 대상 생성형 AI 기반 인지중재의 임상 적용 가능성을 구조적으로 제시하는 초기 근거를 제공합니다."
             },
             {
                 "title": "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
                 "journal": "Annals of Rehabilitation Medicine",
-                "date": "2025.12.31",
+                "date": "2025",
                 "role": "공저자",
                 "status": "게재 완료",
                 "doi": "https://doi.org/10.5535/arm.250060",
-                "summary": "AI 기반 모바일 인지 텔레리해빌리테이션(Zenicog®)의 적용 가능성을 평가한 연구로, 경도인지장애 및 뇌졸중 환자에서의 구현 가능성과 인지 개선 잠재력을 제시했습니다."
+                "summary": "AI 기반 모바일 인지 텔레리해빌리테이션의 임상적 적용 가능성과 사용성을 평가한 예비 연구입니다. 뇌졸중 환자 및 경도인지장애(MCI) 고령자 13명을 대상으로 6주간 총 24회 세션의 AI 자가운영 인지재활 프로그램을 적용했습니다.\n\nMMSE 점수는 중재 전 대비 유의하게 향상되었으며, Digit Span과 Trail Making Test에서도 전반적인 개선 경향을 보였습니다. 전체 사용성 평가에서 제품 품질과 만족도는 높은 수준을 기록했으나, 오류 허용성(tolerance for error) 영역은 상대적으로 낮아 고령자 및 디지털 취약계층을 고려한 UI/UX 개선 필요성이 확인되었습니다.\n\n본 연구는 치료사 상시 개입 없이도 수행 가능한 AI 기반 인지 텔레리해빌리테이션이 실제 임상 환경에서 안전하고 실현 가능하며, 인지 기능 개선에 잠재적 효과를 가질 수 있음을 보여줍니다. 특히 디지털 치료제 및 원격 재활이 확대되는 흐름 속에서, 사용성 중심 설계의 중요성을 함께 제시한 연구라는 점에서 의미가 있습니다."
             },
             {
                 "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults with Mild Cognitive Impairment: A pilot Study",
                 "journal": "Brain & Neurorehabilitation",
                 "date": "2025",
                 "role": "공저자",
-                "status": "게재 확정"
-            }
-        ],
-        "posters": [
-            {
-                "title": "Artificial Intelligence-Guided Mobile Telerehabilitation for Subjects with Cognitive Impairment",
-                "event": "대한재활의학회(KARM) 추계 학술대회 2024",
-                "image": "poster1"
-            },
-            {
-                "title": "Predictive Value of Cognitive Function and ALT for Functional Ambulation Gain in MCA Stroke Patients",
-                "event": "대한재활의학회(KARM) 추계 학술대회 2024",
-                "image": "poster2"
+                "status": "Accept"
             }
         ]
     },
     "skills": {
         "title": "핵심 역량",
-        "items": [
-            "임상연구 전문성",
-            "다기관 임상시험 운영",
-            "IRB & CRIS 관리",
-            "데이터 관리 및 임상시험 문서화",
-            "대상자 모집 및 관리",
-            "논문 작성",
-            "연구비 집행 및 관리",
-            "학술 연구 기여",
-            "AI 및 디지털 헬스케어",
-            "AI 도구(ChatGPT, Claude)",
-            "디지털 치료제(DTx)",
-            "디자인/협업 도구(Figma, Google Workspace)",
-            "문헌 검토 및 분석",
-            "AI 기반 연구 방법론"
-        ]
-    },
-    "professional": {
-        "education": {
-            "title": "학력 및 자격",
-            "school": "전남과학대학교",
-            "degree": "간호학 학사",
-            "date": "2017.03 ~ 2023.02"
-        },
-        "certifications": {
-            "title": "수료 및 자격 사항",
-            "items": [
-                {
-                    "name": "간호사 면허(면허번호 494848)",
-                    "issuer": "보건복지부",
-                    "date": "2023.02"
-                },
-                {
-                    "name": "임상시험 종사자 교육 (CRA 신규자, 1,200분)",
-                    "issuer": "국가임상시험지원재단 (KoNECT)",
-                    "date": "2025.02"
-                },
-                {
-                    "name": "리더십",
-                    "issuer": "LinkedIn Learning",
-                    "date": "2024.05"
-                },
-                {
-                    "name": "커뮤니케이션 & 리더십",
-                    "issuer": "LinkedIn Learning",
-                    "date": "2024.05"
-                }
-            ]
-        },
-        "conferences": {
-            "title": "학회 활동",
-            "items": [
-                {
-                    "name": "대한재활의학회(KARM) 춘계·추계 국제학술대회 참여",
-                    "date": "2024–2025 (총 4회)"
-                }
-            ]
+        "items": {
+            "clinical": "임상시험",
+            "python": "Python",
+            "data": "데이터 분석",
+            "design": "연구 설계",
+            "comm": "커뮤니케이션",
+            "ai": "AI"
         }
     },
     "contact": {
         "title": "연결하기",
         "subtitle": "협업에 관심이 있거나 제 업무에 대해 궁금한 점이 있으신가요?",
-        "items": [
-            {
-                "type": "email",
-                "label": "jeongtaeksoo8@gmail.com",
-                "href": "mailto:jeongtaeksoo8@gmail.com"
-            },
-            {
-                "type": "phone",
-                "label": "+82-10-4023-0289",
-                "href": "tel:+821040230289"
-            },
-            {
-                "type": "linkedin",
-                "label": "LinkedIn",
-                "href": "https://www.linkedin.com/in/taeksoo-jeong-20685b296/"
-            },
-            {
-                "type": "orcid",
-                "label": "ORCID",
-                "href": "https://orcid.org/0009-0001-1451-5457"
-            },
-            {
-                "type": "github",
-                "label": "GitHub",
-                "href": "https://github.com/jeongtaeksoo"
-            }
-        ],
         "footer": {
             "rights": "© 2025 DTX Insight. All rights reserved.",
-            "tagline": "임상연구 × 디지털 치료제"
+            "tagline": "임상연구 × AI 혁신"
         }
     }
 }

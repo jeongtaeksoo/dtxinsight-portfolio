@@ -42,7 +42,7 @@ const NarrativeScroll = () => {
 
     const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
-    const fallbackSteps = [
+    const steps = t('journey.steps', { returnObjects: true }) || [
         {
             id: 'problem',
             icon: 'Search',
@@ -68,8 +68,6 @@ const NarrativeScroll = () => {
             desc: "솔루션의 효과를 데이터로 검증하고, 정량·정성 평가를 기반으로 개선 사항을 도출합니다.\n\n• 사용자·환자·의료진 피드백\n• 프로세스 안정성 평가\n• 재현성과 확장성 검토\n\n프로젝트가 \"완료되는 것\"이 아니라\n조직에 지속적인 가치를 만드는 것을 목표로 합니다."
         }
     ];
-    const stepsData = t('journey.steps', { returnObjects: true });
-    const steps = Array.isArray(stepsData) ? stepsData : fallbackSteps;
 
     const iconMap = {
         'Search': Search,

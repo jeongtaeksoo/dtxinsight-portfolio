@@ -5,10 +5,7 @@ import WindowCard from './WindowCard';
 const ResearchProjects = () => {
     const { t } = useTranslation();
 
-    const projectsData = t('research.projects', { returnObjects: true });
-    const projects = Array.isArray(projectsData) ? projectsData : [];
-    const labelsData = t('research.labels', { returnObjects: true });
-    const labels = labelsData && typeof labelsData === 'object' && !Array.isArray(labelsData) ? labelsData : {};
+    const projects = (t('research.projects', { returnObjects: true }) || []);
 
     return (
         <section id="research" className="py-20 bg-background relative z-10">
@@ -19,44 +16,15 @@ const ResearchProjects = () => {
 
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {projects.map((project, index) => (
                         <WindowCard
                             key={index}
                             title={project.title}
                             type={project.category}
-                            date={project.date}
                             className="h-full"
                         >
-                            {project.summary && (
-                                <p className="text-sm text-muted mb-4">{project.summary}</p>
-                            )}
-
-                            {Array.isArray(project.achievements) && project.achievements.length > 0 && (
-                                <div className="mb-4">
-                                    <p className="text-[11px] uppercase tracking-widest text-primary font-semibold">
-                                        {labels.achievements || 'Key Achievements'}
-                                    </p>
-                                    <ul className="mt-2 space-y-1 text-xs text-muted list-disc list-inside">
-                                        {project.achievements.map((item, itemIndex) => (
-                                            <li key={`${project.title}-achievement-${itemIndex}`}>{item}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
-
-                            {Array.isArray(project.responsibilities) && project.responsibilities.length > 0 && (
-                                <div>
-                                    <p className="text-[11px] uppercase tracking-widest text-secondary font-semibold">
-                                        {labels.responsibilities || 'Key Responsibilities'}
-                                    </p>
-                                    <ul className="mt-2 space-y-1 text-xs text-muted list-disc list-inside">
-                                        {project.responsibilities.map((item, itemIndex) => (
-                                            <li key={`${project.title}-responsibility-${itemIndex}`}>{item}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
+                            <p>{project.description}</p>
                         </WindowCard>
                     ))}
                 </div>

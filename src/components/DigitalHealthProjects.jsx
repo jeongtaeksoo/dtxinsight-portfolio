@@ -6,8 +6,6 @@ import CTCModel from './CTCModel';
 
 const DigitalHealthProjects = () => {
     const { t } = useTranslation();
-    const featuresData = t('innovation.features', { returnObjects: true });
-    const features = Array.isArray(featuresData) ? featuresData : [];
 
     return (
         <section id="innovation" className="py-20 bg-background relative z-10">
@@ -39,11 +37,15 @@ const DigitalHealthProjects = () => {
 
                 {/* Features List - Titles Only */}
                 <div className="grid md:grid-cols-3 gap-8 mt-12">
-                    {features.map((feature, index) => (
-                        <div key={`${feature}-${index}`} className="p-6 rounded-xl bg-surface/50 border border-white/5 hover:border-primary/50 transition-colors text-center">
-                            <h3 className="text-xl font-bold text-primary">{feature}</h3>
-                        </div>
-                    ))}
+                    <div className="p-6 rounded-xl bg-surface/50 border border-white/5 hover:border-primary/50 transition-colors text-center">
+                        <h3 className="text-xl font-bold text-primary">Context-Aware</h3>
+                    </div>
+                    <div className="p-6 rounded-xl bg-surface/50 border border-white/5 hover:border-primary/50 transition-colors text-center">
+                        <h3 className="text-xl font-bold text-primary">Multi-Modal</h3>
+                    </div>
+                    <div className="p-6 rounded-xl bg-surface/50 border border-white/5 hover:border-primary/50 transition-colors text-center">
+                        <h3 className="text-xl font-bold text-primary">Evidence-Based</h3>
+                    </div>
                 </div>
             </div>
         </section>

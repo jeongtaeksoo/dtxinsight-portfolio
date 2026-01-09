@@ -1,19 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { GmailIcon, LinkedInIcon, OrcidIcon, GithubIcon, PhoneIcon } from './Icons';
+import { GmailIcon, LinkedInIcon, OrcidIcon, GithubIcon } from './Icons';
 import styles from './Contact.module.css';
 
 const Contact = () => {
     const { t } = useTranslation();
-    const itemsData = t('contact.items', { returnObjects: true });
-    const items = Array.isArray(itemsData) ? itemsData : [];
-    const iconMap = {
-        email: GmailIcon,
-        phone: PhoneIcon,
-        linkedin: LinkedInIcon,
-        orcid: OrcidIcon,
-        github: GithubIcon
-    };
 
     return (
         <section id="contact" className={styles.contact}>
@@ -25,22 +16,22 @@ const Contact = () => {
                     </p>
 
                     <div className={styles.links}>
-                        {items.map((item, index) => {
-                            const Icon = iconMap[item.type] || GmailIcon;
-                            const isExternal = item.href?.startsWith('http');
-                            return (
-                                <a
-                                    key={`${item.type}-${index}`}
-                                    href={item.href}
-                                    target={isExternal ? "_blank" : undefined}
-                                    rel={isExternal ? "noopener noreferrer" : undefined}
-                                    className={styles.link}
-                                >
-                                    <Icon size={24} />
-                                    <span>{item.label}</span>
-                                </a>
-                            );
-                        })}
+                        <a href="mailto:jeongtaeksoo@gmail.com" className={styles.link}>
+                            <GmailIcon size={24} />
+                            <span>jeongtaeksoo@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/taeksoo-jeong-20685b296/" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                            <LinkedInIcon size={24} />
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://orcid.org/0009-0001-1451-5457" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                            <OrcidIcon size={24} />
+                            <span>ORCID</span>
+                        </a>
+                        <a href="https://github.com/jeongtaeksoo" target="_blank" rel="noopener noreferrer" className={styles.link}>
+                            <GithubIcon size={24} />
+                            <span>GitHub</span>
+                        </a>
                     </div>
                 </div>
             </div>

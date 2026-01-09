@@ -9,13 +9,7 @@ i18n
     .use(initReactI18next)
     .init({
         fallbackLng: 'en',
-        supportedLngs: ['en', 'ko', 'jp'],
-        nonExplicitSupportedLngs: true,
-        load: 'languageOnly',
         debug: false,
-        react: {
-            useSuspense: false,
-        },
         interpolation: {
             escapeValue: false,
         },
@@ -24,7 +18,7 @@ i18n
             caches: ['localStorage'],
         },
         backend: {
-            loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/translation.json`,
+            loadPath: '/locales/{{lng}}/translation.json',
         },
     });
 
