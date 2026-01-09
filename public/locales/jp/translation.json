@@ -1,7 +1,7 @@
 {
     "nav": {
-        "about": "紹介",
-        "research": "研究",
+        "about": "プロフィール",
+        "research": "経歴",
         "innovation": "革新",
         "publications": "論文",
         "contact": "連絡先",
@@ -10,10 +10,11 @@
     },
     "hero": {
         "name": "チョン・テクス",
-        "affiliation": "前 カトリック関東大学国際聖母病院 リハビリテーション医学科 研究員",
+        "affiliation": "臨床研究コーディネーター（CRC）",
+        "organization": "カトリック関東大学 国際聖母病院・リハビリテーション医学科",
         "credential": "RN（看護師免許）",
-        "tagline": "Clinical Research Coordinator & AI-driven Healthcare Innovator",
-        "resume": "Resume"
+        "tagline": "デジタル治療(DTx)とAI認知リハビリの臨床研究",
+        "resume": "履歴書"
     },
     "journey": {
         "title": "My Research Journey",
@@ -45,59 +46,97 @@
             }
         ]
     },
+    "profile": {
+        "title": "プロフィール",
+        "items": [
+            {
+                "key": "dob",
+                "label": "生年月日",
+                "value": "1998年5月2日"
+            },
+            {
+                "key": "military",
+                "label": "兵役",
+                "value": "大韓民国陸軍 名誉除隊"
+            },
+            {
+                "key": "location",
+                "label": "所在地",
+                "value": "大韓民国 仁川広域市 富平区"
+            }
+        ]
+    },
     "about": {
         "title": "哲学とアプローチ",
-        "description1": "ヘルスケアの未来は、厳格な臨床検証と適応型AIの交差点にあると信じています。看護学の背景と臨床研究の経験を活かし、新しい技術が最先端であるだけでなく、臨床的に意味があり、患者中心的であることを保証します。",
-        "description2": "以前、カトリック関東大学国際聖母病院で臨床研究コーディネーターとして在職し、デジタルバイオマーカーと分散型臨床試験の方法論を通じて、新薬開発を加速させ、患者の予後를 改善する戦略を設計していました。"
+        "description1": "看護学のバックグラウンドと臨床研究経験を活かし、デジタル治療と認知リハビリの臨床試験に従事してきました。",
+        "description2": "2024–2025年にカトリック関東大学国際聖母病院リハビリテーション医学科で、3.9億ウォン規模の多機関R&Dプロジェクトを統括し、IRB/CRIS、データ品質管理、研究モニタリングを担当しました。"
     },
     "highlights": {
         "items": [
             {
-                "title": "多機関臨床運営",
-                "description": "3.9億ウォン規模のR&D総括および多機関RCT管理"
+                "title": "多機関R&D",
+                "description": "3.9億ウォン規模のプロジェクトおよび多機関RCT管理"
             },
             {
-                "title": "AI & デジタルヘルス",
-                "description": "生成AIベースの認知訓練フレームワーク設計"
+                "title": "SCI論文",
+                "description": "第1著者(MDPI)および共著者(Frontiers, ARM)"
             },
             {
-                "title": "データ管理",
-                "description": "データ品質点検および臨床データ管理"
+                "title": "学会ポスター",
+                "description": "KARM秋季学術大会ポスター2件"
             },
             {
-                "title": "学術研究成果",
-                "description": "SCI級論文掲載および国内学術大会ポスター発表"
+                "title": "政府連携",
+                "description": "MOHW/KHIDI 実証事業Q&Aセッション"
             }
         ]
     },
     "research": {
-        "title": "研究ハイライト",
+        "title": "職務経歴",
+        "labels": {
+            "achievements": "主な成果",
+            "responsibilities": "主な担当業務"
+        },
         "projects": [
             {
-                "title": "多機関臨床試験管理",
-                "category": "プロトコル設計",
-                "description": "3.9億ウォン規模の多機関R&Dプロジェクト総括およびAIベースのデジタル認知訓練治療薬の多機関ランダム化比較試験管理"
+                "title": "臨床研究コーディネーター",
+                "category": "カトリック関東大学 国際聖母病院 | リハビリテーション医学科",
+                "date": "2024.01–2025.12",
+                "summary": "AIベースのデジタル認知訓練治療の軽度認知障害(MCI)および脳卒中を対象とした多機関ランダム化比較試験。",
+                "achievements": [
+                    "3.9億ウォン規模の多機関R&Dプロジェクトを統括",
+                    "SCI論文の第1著者1報（MDPI Healthcare）",
+                    "SCI論文の共著1報（Frontiers in Neurology）",
+                    "KARM秋季学術大会ポスター2件発表",
+                    "MOHW/KHIDI デジタルヘルスケア実証事業 中間報告会Q&Aセッションを実施",
+                    "デジタルヘルスケア実証研究に関する政府関係者との技術討議に参加"
+                ],
+                "responsibilities": [
+                    "AIベースのデジタル認知訓練治療の多機関ランダム化比較試験を統括",
+                    "被験者募集・スクリーニング、IRB申請・審査、CRIS登録、研究費執行、報告書作成",
+                    "臨床試験文書管理、データ品質管理、研究進捗モニタリング",
+                    "医師・看護師・療法士との多職種連携による研究フロー改善",
+                    "論文作成および学会発表"
+                ]
             },
             {
-                "title": "デジタルバイオマーカー検証",
-                "category": "臨床検証",
-                "description": "脳卒中患者のためのAIベース認知遠隔リハビリテーションの臨床効果検証 (Frontiers in Neurology 掲載)"
-            },
-            {
-                "title": "デジタルヘルスケア実証",
-                "category": "規制業務",
-                "description": "保健福祉部・韓国保健産業振興院の実証事業中間報告会Q&Aセッション進行および実証研究関連の質疑応答対応"
+                "title": "フリーランス",
+                "category": "Plcoskin | 契約完了",
+                "date": "2025.02–2025.08",
+                "responsibilities": [
+                    "臨床試験の初期IRB文書のレビューおよび支援"
+                ]
             }
         ]
     },
     "innovation": {
-        "label": "特集イノベーション",
-        "title": "生成AIベースの認知介入フレームワーク",
-        "description": "高齢者の認知機能低下とデジタル排除を解決するために、北海道大学・応用物理学専攻の博士課程の学生と共同で開始した「휘와수(Hwiwasoo)」プロジェクトです。3重エージェント(Coach-Teacher-Companion)システムを通じて日常生活の中での自然な認知訓練の流れ(Context-Adaptive Cognitive Flow)を実現し、ユーザー参加を最大化します。",
+        "label": "特集プロジェクト",
+        "title": "Hwiwasoo: 生成AIベースの認知介入フレームワーク",
+        "description": "高齢者の認知介入を目的とした生成AIベースの3重エージェント(Coach–Teacher–Companion)フレームワークで、MDPI Healthcare(2025.12.10)にプロトコルとして掲載されています。",
         "features": [
-            "Coach-Teacher-Companion 3重エージェント",
+            "Coach–Teacher–Companion 3重エージェント",
             "Context-Adaptive Cognitive Flow",
-            "高齢者向けデジタルインターフェース"
+            "高齢者向け臨床適用プロトコル"
         ],
         "cta": "Hwiwasoo"
     },
@@ -112,56 +151,145 @@
             {
                 "title": "AI-driven cognitive telerehabilitation for stroke: a randomized controlled trial",
                 "journal": "Frontiers in Neurology",
-                "date": "2025",
+                "date": "2025.08.14",
                 "role": "共著者",
                 "status": "掲載完了",
                 "doi": "https://doi.org/10.3389/fneur.2025.1636017",
-                "summary": "最近の多施設共同ランダム化比較試験において、AIベースの認知遠隔リハビリテーションは、従来の療法士監視下の認知リハビリテーションと同等の有効性を示しました。\n\n亜急性期（6ヶ月以内）の脳卒中患者63名を2つのグループに無作為に割り当て、6週間で計24回のセッションを実施した結果、主要な認知指標（K-MMSE2、TMT、Digit Span）すべてにおいて有意な改善が見られました。\n\n非監視型の**AI自己運営遠隔リハビリテーションは、療法士主導群と比較して非劣性（non-inferiority）**が立証され、ユーザビリティ満足度も高く得られました。\n\nこの結果は、リアルタイムのパーソナライズと遠隔モニタリングが可能なAI認知リハビリテーションプラットフォームが、既存の治療と同レベル의 臨床的価値を有することを示唆しています。"
+                "summary": "脳卒中患者を対象としたAIベースの認知遠隔リハビリテーションの臨床的有効性を評価した多施設共同ランダム化比較試験で、療法士監視下の認知リハビリと同等の改善を示しました。"
             },
             {
-                "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
+                "title": "Designing a Generative AI Framework for Cognitive Intervention in Older Adults: An Engineering Protocol for Clinical Application",
                 "journal": "MDPI Healthcare",
-                "date": "2025",
-                "role": "第1著者",
+                "date": "2025.12.10",
+                "role": "第1著者（共同）",
                 "status": "掲載完了",
                 "doi": "https://www.mdpi.com/2227-9032/13/24/3225",
-                "summary": "デジタル格差（digital exclusion）とテクノロジー不安により、高齢者の認知介入の実際の適用には依然として高い障壁が存在します。本研究は、これらの限界を解決するために、Coach–Teacher–Companion（CTC）構造のマルチエージェント生成AIフレームワークを提案する臨床プロトコル論文です。\n\n本フレームワークは、日常生活に自然に認知訓練を統合し、適応型の難易度調整と感情モニタリングを通じて、認知・行動・感情のサポートを同時に提供するように設計されています。特に、デジタルリテラシー（MDPQ-16）、テクノロジー不安（CARS）、感情的安全性（PANAS）の評価を含む、臨床適用のための方法論적・倫理的な安全策を体系的に提示しています。\n\n6週間のパイロット妥当性研究プロトコル（n=14）を通じて、**ユーザビリティ（SUS）、ユーザーエクスペリエンス（UEQ-S）、アドヒアランス、感情の安定性、主要な認知指標（MMSE, TMT, Digit Span）**を評価するように設計されており、本研究は高齢者向けの生成AIベースの認知介入の臨床適用の可能性を構造的に提示する初期の根拠を提供します。"
+                "summary": "高齢者の認知介入を目的とした生成AIベースの3重エージェント(Coach–Teacher–Companion)システムを提案し、日常生活に統合される適応型認知フローのプロトコルを提示します。\n\n共同第1著者: Geonhwi Hwang（北海道大学 応用物理学 博士課程）.\n責任著者: Doo Young Kim, MD, PhD（カトリック関東大学 国際聖母病院 リハビリテーション医学科）."
             },
             {
                 "title": "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
                 "journal": "Annals of Rehabilitation Medicine",
-                "date": "2025",
+                "date": "2025.12.31",
                 "role": "共著者",
                 "status": "掲載完了",
                 "doi": "https://doi.org/10.5535/arm.250060",
-                "summary": "AIベースのモバイル認知遠隔リハビリテーションの臨床的適用可能性とユーザビリティを評価した予備研究です。脳卒中患者および軽度認知障害（MCI）の高齢者13名を対象に、6週間で計24回のセッションからなるAI自己運営認知リハビリテーションプログラムを適用しました。\n\nMMSEスコアは介入前と比較して有意に向上し、Digit SpanおよびTrail Making Testでも全般的な改善傾向が見られました。全体的なユーザビリティ評価では製品の品質と満足度は高い水準を記録しましたが、「エラー許容度（tolerance for error）」の領域は相対的に低く、高齢者やデジタル脆弱層を考慮したUI/UX改善の必要性が確認されました。\n\n本研究は、療法士の常時介入なしでも実施可能なAIベースの認知遠隔リハビリテーションが、実際の臨床環境で安全かつ実現可能であり、認知機能の改善に潜在的な効果を持ち得ることを示しています。特にデジタル治療薬や遠隔リハビリテーションが拡大する流れの中で、ユーザビリティ中心の設計の重要性を提示した研究として意義があります。"
+                "summary": "AIベースのモバイル認知遠隔リハビリテーション(Zenicog®)の実施可能性を評価し、軽度認知障害および脳卒中患者での適用可能性と改善の可能性を示しました。"
             },
             {
                 "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults with Mild Cognitive Impairment: A pilot Study",
                 "journal": "Brain & Neurorehabilitation",
                 "date": "2025",
                 "role": "共著者",
-                "status": "Accept"
+                "status": "採択"
+            }
+        ],
+        "posters": [
+            {
+                "title": "Artificial Intelligence-Guided Mobile Telerehabilitation for Subjects with Cognitive Impairment",
+                "event": "KARM 秋季学術大会 2024",
+                "image": "poster1"
+            },
+            {
+                "title": "Predictive Value of Cognitive Function and ALT for Functional Ambulation Gain in MCA Stroke Patients",
+                "event": "KARM 秋季学術大会 2024",
+                "image": "poster2"
             }
         ]
     },
     "skills": {
         "title": "コアコンピタンス",
-        "items": {
-            "clinical": "臨床試験",
-            "python": "Python",
-            "data": "データ分析",
-            "design": "研究設計",
-            "comm": "コミュニケーション",
-            "ai": "AI"
+        "items": [
+            "臨床研究の専門性",
+            "多機関臨床試験運営",
+            "IRB & CRIS 管理",
+            "データ管理および臨床試験文書化",
+            "被験者募集および管理",
+            "論文執筆",
+            "研究費管理",
+            "学術研究への貢献",
+            "AIおよびデジタルヘルスケア",
+            "AIツール(ChatGPT, Claude)",
+            "デジタル治療(DTx)",
+            "デザイン/協業ツール(Figma, Google Workspace)",
+            "文献レビューと分析",
+            "AIベース研究方法論"
+        ]
+    },
+    "professional": {
+        "education": {
+            "title": "学歴および資格",
+            "school": "全南科学大学",
+            "degree": "看護学 学士",
+            "date": "2017.03 ~ 2023.02"
+        },
+        "certifications": {
+            "title": "資格およびトレーニング",
+            "items": [
+                {
+                    "name": "看護師免許（番号 494848）",
+                    "issuer": "保健福祉部",
+                    "date": "2023.02"
+                },
+                {
+                    "name": "臨床試験従事者教育（CRA 新規者、1,200分）",
+                    "issuer": "韓国国家臨床試験支援財団 (KoNECT)",
+                    "date": "2025.02"
+                },
+                {
+                    "name": "リーダーシップ",
+                    "issuer": "LinkedIn Learning",
+                    "date": "2024.05"
+                },
+                {
+                    "name": "コミュニケーション & リーダーシップ",
+                    "issuer": "LinkedIn Learning",
+                    "date": "2024.05"
+                }
+            ]
+        },
+        "conferences": {
+            "title": "学会活動",
+            "items": [
+                {
+                    "name": "大韓リハビリテーション医学会(KARM) 春季・秋季国際学術大会 参加",
+                    "date": "2024–2025（計4回）"
+                }
+            ]
         }
     },
     "contact": {
         "title": "お問い合わせ",
         "subtitle": "コラボレーションに興味がある方、または私の仕事について質問がありますか？",
+        "items": [
+            {
+                "type": "email",
+                "label": "jeongtaeksoo8@gmail.com",
+                "href": "mailto:jeongtaeksoo8@gmail.com"
+            },
+            {
+                "type": "phone",
+                "label": "+82-10-4023-0289",
+                "href": "tel:+821040230289"
+            },
+            {
+                "type": "linkedin",
+                "label": "LinkedIn",
+                "href": "https://www.linkedin.com/in/taeksoo-jeong-20685b296/"
+            },
+            {
+                "type": "orcid",
+                "label": "ORCID",
+                "href": "https://orcid.org/0009-0001-1451-5457"
+            },
+            {
+                "type": "github",
+                "label": "GitHub",
+                "href": "https://github.com/jeongtaeksoo"
+            }
+        ],
         "footer": {
             "rights": "© 2025 DTX Insight. All rights reserved.",
-            "tagline": "臨床研究 × AI イノベーション"
+            "tagline": "臨床研究 × デジタル治療"
         }
     }
 }

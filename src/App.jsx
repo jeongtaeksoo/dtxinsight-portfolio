@@ -1,5 +1,6 @@
 import Hero from './components/Hero'
-import NarrativeScroll from './components/NarrativeScroll'
+import ProfileDetails from './components/ProfileDetails'
+import ProfessionalDevelopment from './components/ProfessionalDevelopment'
 import ResearchProjects from './components/ResearchProjects'
 import DigitalHealthProjects from './components/DigitalHealthProjects'
 import Publications from './components/Publications'
@@ -10,7 +11,8 @@ function App() {
   return (
     <Layout>
       <Hero />
-      <NarrativeScroll />
+      <ProfileDetails />
+      <ProfessionalDevelopment />
       <ResearchProjects />
       <DigitalHealthProjects />
       <Publications />

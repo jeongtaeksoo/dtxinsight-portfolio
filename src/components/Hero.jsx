@@ -8,7 +8,7 @@ const Hero = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden py-20">
+        <section id="top" className="relative min-h-screen flex items-center overflow-hidden py-20">
             <div className="container mx-auto px-4 z-10 relative flex flex-col items-center justify-center gap-8">
 
                 {/* Profile Image */}
@@ -50,6 +50,11 @@ const Hero = () => {
                     {/* Current Position */}
                     <p className="text-lg md:text-xl text-muted mb-2">
                         {t('hero.affiliation')}
+                    </p>
+
+                    {/* Organization */}
+                    <p className="text-sm md:text-base text-muted mb-3">
+                        {t('hero.organization')}
                     </p>
 
                     {/* Credential */}

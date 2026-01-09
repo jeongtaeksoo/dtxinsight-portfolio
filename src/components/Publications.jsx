@@ -13,12 +13,16 @@ const Publications = () => {
     const [selectedPaper, setSelectedPaper] = useState(null);
 
     const publications = t('publications.items', { returnObjects: true }) || [];
-
-    const posters = [
-        { id: 1, src: poster1, title: 'KOSCOPP 2024' },
-        { id: 2, src: poster2, title: 'ICDT 2024' },
-        { id: 3, src: poster3, title: 'E-Poster-Park-AI DRIVEN COGNITIVE' }
-    ];
+    const posterAssets = { poster1, poster2, poster3 };
+    const posterData = t('publications.posters', { returnObjects: true }) || [];
+    const posters = posterData
+        .map((poster, index) => ({
+            id: poster.id || index + 1,
+            src: posterAssets[poster.image] || posterAssets.poster1,
+            title: poster.title,
+            event: poster.event
+        }))
+        .filter((poster) => poster.title && poster.src);
 
     return (
         <section id="publications" className="py-20 bg-background relative z-10 border-t border-white/5">
@@ -77,7 +81,12 @@ const Publications = () => {
                                         className="w-full h-full object-cover transition-transform group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
-                                        <span className="text-xs font-bold">{poster.title}</span>
+                                        <div className="space-y-1">
+                                            <span className="text-xs font-bold block">{poster.title}</span>
+                                            {poster.event && (
+                                                <span className="text-[10px] text-white/70 block">{poster.event}</span>
+                                            )}
+                                        </div>
                                     </div>
                                 </motion.div>
                             ))}
@@ -114,6 +123,9 @@ const Publications = () => {
                             </button>
                             <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white text-center">
                                 <h4 className="font-bold">{selectedPoster.title}</h4>
+                                {selectedPoster.event && (
+                                    <p className="text-xs text-white/70 mt-1">{selectedPoster.event}</p>
+                                )}
                             </div>
                         </motion.div>
                     </div>
