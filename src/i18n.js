@@ -9,6 +9,9 @@ i18n
     .use(initReactI18next)
     .init({
         fallbackLng: 'en',
+        supportedLngs: ['en', 'ko', 'jp'],
+        nonExplicitSupportedLngs: true,
+        load: 'languageOnly',
         debug: false,
         react: {
             useSuspense: false,

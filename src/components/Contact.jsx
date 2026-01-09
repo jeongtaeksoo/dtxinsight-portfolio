@@ -5,7 +5,8 @@ import styles from './Contact.module.css';
 
 const Contact = () => {
     const { t } = useTranslation();
-    const items = t('contact.items', { returnObjects: true }) || [];
+    const itemsData = t('contact.items', { returnObjects: true });
+    const items = Array.isArray(itemsData) ? itemsData : [];
     const iconMap = {
         email: GmailIcon,
         phone: PhoneIcon,

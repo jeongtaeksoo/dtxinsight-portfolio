@@ -6,7 +6,8 @@ import CTCModel from './CTCModel';
 
 const DigitalHealthProjects = () => {
     const { t } = useTranslation();
-    const features = t('innovation.features', { returnObjects: true }) || [];
+    const featuresData = t('innovation.features', { returnObjects: true });
+    const features = Array.isArray(featuresData) ? featuresData : [];
 
     return (
         <section id="innovation" className="py-20 bg-background relative z-10">

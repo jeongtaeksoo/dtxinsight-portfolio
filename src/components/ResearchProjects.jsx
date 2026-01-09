@@ -5,8 +5,10 @@ import WindowCard from './WindowCard';
 const ResearchProjects = () => {
     const { t } = useTranslation();
 
-    const projects = (t('research.projects', { returnObjects: true }) || []);
-    const labels = t('research.labels', { returnObjects: true }) || {};
+    const projectsData = t('research.projects', { returnObjects: true });
+    const projects = Array.isArray(projectsData) ? projectsData : [];
+    const labelsData = t('research.labels', { returnObjects: true });
+    const labels = labelsData && typeof labelsData === 'object' && !Array.isArray(labelsData) ? labelsData : {};
 
     return (
         <section id="research" className="py-20 bg-background relative z-10">

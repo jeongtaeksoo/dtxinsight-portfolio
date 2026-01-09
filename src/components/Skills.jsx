@@ -6,8 +6,12 @@ import styles from './Skills.module.css';
 const Skills = () => {
     const { t } = useTranslation();
 
-    const skillsData = t('skills.items', { returnObjects: true }) || [];
-    const skills = Array.isArray(skillsData) ? skillsData : Object.values(skillsData);
+    const skillsData = t('skills.items', { returnObjects: true });
+    const skills = Array.isArray(skillsData)
+        ? skillsData
+        : skillsData && typeof skillsData === 'object'
+            ? Object.values(skillsData)
+            : [];
 
     return (
         <section className={styles.skills}>

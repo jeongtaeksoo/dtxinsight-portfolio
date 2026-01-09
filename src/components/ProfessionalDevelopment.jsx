@@ -6,9 +6,12 @@ import { motion } from 'framer-motion';
 const ProfessionalDevelopment = () => {
     const { t } = useTranslation();
 
-    const education = t('professional.education', { returnObjects: true });
-    const certifications = t('professional.certifications.items', { returnObjects: true }) || [];
-    const conferences = t('professional.conferences.items', { returnObjects: true }) || [];
+    const educationData = t('professional.education', { returnObjects: true });
+    const education = educationData && typeof educationData === 'object' && !Array.isArray(educationData) ? educationData : {};
+    const certificationsData = t('professional.certifications.items', { returnObjects: true });
+    const certifications = Array.isArray(certificationsData) ? certificationsData : [];
+    const conferencesData = t('professional.conferences.items', { returnObjects: true });
+    const conferences = Array.isArray(conferencesData) ? conferencesData : [];
 
     return (
         <section className="py-24 bg-background relative overflow-hidden">

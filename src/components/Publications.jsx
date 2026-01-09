@@ -12,9 +12,11 @@ const Publications = () => {
     const [selectedPoster, setSelectedPoster] = useState(null);
     const [selectedPaper, setSelectedPaper] = useState(null);
 
-    const publications = t('publications.items', { returnObjects: true }) || [];
+    const publicationsData = t('publications.items', { returnObjects: true });
+    const publications = Array.isArray(publicationsData) ? publicationsData : [];
     const posterAssets = { poster1, poster2, poster3 };
-    const posterData = t('publications.posters', { returnObjects: true }) || [];
+    const posterDataRaw = t('publications.posters', { returnObjects: true });
+    const posterData = Array.isArray(posterDataRaw) ? posterDataRaw : [];
     const posters = posterData
         .map((poster, index) => ({
             id: poster.id || index + 1,

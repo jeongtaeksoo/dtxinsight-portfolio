@@ -11,7 +11,8 @@ const iconMap = {
 
 const ProfileDetails = () => {
     const { t } = useTranslation();
-    const items = t('profile.items', { returnObjects: true }) || [];
+    const itemsData = t('profile.items', { returnObjects: true });
+    const items = Array.isArray(itemsData) ? itemsData : [];
 
     return (
         <section id="profile" className="py-20 bg-background relative z-10 border-y border-white/5">
