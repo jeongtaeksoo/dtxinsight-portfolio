@@ -74,14 +74,14 @@
         "title": "Research Highlights",
         "projects": [
             {
-                "title": "Multi-center Clinical Trial Management",
-                "category": "Protocol Design",
-                "description": "Overseeing 390M KRW Multi-center R&D Project & Managing AI-based Digital Cognitive Training RCT"
+                "title": "Multi-center RCT Management (MCI)",
+                "category": "Protocol Design & Operations",
+                "description": "Project Manager for 390M KRW National Project & Managing Multi-center RCT for AI-coached Cognitive Intervention in MCI (CRIS: KCT0008968)"
             },
             {
-                "title": "Digital Biomarker Validation",
-                "category": "Clinical Validation",
-                "description": "Clinical Efficacy Validation of AI-based Cognitive Telerehabilitation for Stroke Patients (Published in Frontiers in Neurology)"
+                "title": "Digital Therapeutics Validation (Stroke)",
+                "category": "Clinical Efficacy Verification",
+                "description": "Clinical efficacy and digital biomarker validation of AI-based cognitive training for stroke patients (CRIS: KCT0008969 / Published in Frontiers in Neurology)"
             },
             {
                 "title": "Digital Healthcare Demonstration",
