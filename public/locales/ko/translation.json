@@ -76,12 +76,12 @@
             {
                 "title": "다기관 무작위 대조 임상시험 (MCI)",
                 "category": "프로토콜 설계 & 운영",
-                "description": "3.9억 원 규모 국책 과제 총괄 및 경도인지장애(MCI) 대상 AI 코칭 인지중재 프로그램의 다기관 RCT 관리 (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>MCI</a>)"
+                "description": "3.9억 원 규모 국책 과제 총괄 및 경도인지장애(MCI) 대상 AI 코칭 인지중재 프로그램의 다기관 RCT 관리 (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
             },
             {
                 "title": "디지털 치료기기 임상 검증 (Stroke)",
                 "category": "임상 효과성 검증",
-                "description": "뇌졸중 환자 대상 AI 기반 인지 훈련의 임상적 유효성 및 디지털 바이오마커 검증 (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>Stroke</a> / Frontiers in Neurology 게재)"
+                "description": "뇌졸중 환자 대상 AI 기반 인지 훈련의 임상적 유효성 및 디지털 바이오마커 검증 (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
             },
             {
                 "title": "디지털 헬스케어 실증",
