@@ -76,12 +76,12 @@
             {
                 "title": "Multi-center RCT Management (MCI)",
                 "category": "Protocol Design & Operations",
-                "description": "Project Manager for 390M KRW National Project & Managing Multi-center RCT for AI-coached Cognitive Intervention in MCI (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
+                "description": "Randomized Controlled Trial (RCT) to evaluate the effectiveness of the Zenicog® cognitive rehabilitation program in older adults with MCI (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
             },
             {
                 "title": "Digital Therapeutics Validation (Stroke)",
                 "category": "Clinical Efficacy Verification",
-                "description": "Clinical efficacy and digital biomarker validation of AI-based cognitive training for stroke patients (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
+                "description": "Randomized Controlled Trial (RCT) to evaluate the effectiveness of the Zenicog® cognitive rehabilitation program in subacute stroke patients (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
             },
             {
                 "title": "Digital Healthcare Demonstration",
