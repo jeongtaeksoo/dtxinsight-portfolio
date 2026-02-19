@@ -24,7 +24,7 @@ const ResearchProjects = () => {
                             type={project.category}
                             className="h-full"
                         >
-                            <p>{project.description}</p>
+                            <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
                         </WindowCard>
                     ))}
                 </div>
