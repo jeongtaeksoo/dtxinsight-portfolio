@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 const skillDetails = [
     { Icon: Stethoscope, key: 'clinical', desc: '다기관 RCT 운영 및 프로토콜 설계' },
-    { Icon: Code,        key: 'python',   desc: '데이터 처리 및 분석 스크립트 개발' },
+    { Icon: Code,        key: 'vibecording', desc: '바이브코딩 기반 프로토타이핑 및 자동화 구현' },
     { Icon: LineChart,   key: 'data',     desc: 'SPSS, Python 기반 임상 데이터 분석' },
     { Icon: Microscope,  key: 'design',   desc: '임상시험 및 실증 연구 설계' },
     { Icon: MessageCircle, key: 'comm',   desc: '다기관 이해관계자 조정 및 보고' },
