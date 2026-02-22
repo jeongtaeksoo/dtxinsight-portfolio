@@ -166,6 +166,14 @@
             "design": "연구 설계",
             "comm": "커뮤니케이션",
             "ai": "AI"
+        },
+        "descriptions": {
+            "clinical": "다기관 RCT 운영 및 프로토콜 설계",
+            "vibecording": "바이브코딩 기반 프로토타이핑 및 자동화 구현",
+            "data": "SPSS, Python 기반 임상 데이터 분석",
+            "design": "임상시험 및 실증 연구 설계",
+            "comm": "다기관 이해관계자 조정 및 보고",
+            "ai": "생성형 AI 기반 디지털 치료제 연구"
         }
     },
     "contact": {

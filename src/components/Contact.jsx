@@ -6,10 +6,10 @@ const Contact = () => {
     const { t } = useTranslation();
 
     const links = [
-        { href: 'mailto:jeongtaeksoo@gmail.com',                        Icon: GmailIcon,    label: 'jeongtaeksoo@gmail.com' },
+        { href: 'mailto:jeongtaeksoo8@gmail.com', Icon: GmailIcon, label: 'jeongtaeksoo8@gmail.com' },
         { href: 'https://www.linkedin.com/in/taeksoo-jeong-20685b296/', Icon: LinkedInIcon, label: 'LinkedIn' },
-        { href: 'https://orcid.org/0009-0001-1451-5457',                Icon: OrcidIcon,    label: 'ORCID' },
-        { href: 'https://github.com/jeongtaeksoo',                       Icon: GithubIcon,   label: 'GitHub' },
+        { href: 'https://orcid.org/0009-0001-1451-5457', Icon: OrcidIcon, label: 'ORCID' },
+        { href: 'https://github.com/jeongtaeksoo', Icon: GithubIcon, label: 'GitHub' },
     ];
 
     return (

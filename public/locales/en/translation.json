@@ -166,6 +166,14 @@
             "design": "Study Design",
             "comm": "Communication",
             "ai": "AI"
+        },
+        "descriptions": {
+            "clinical": "Multi-center RCT Operation & Protocol Design",
+            "vibecording": "Vibecording-based Prototyping & Automation Implementation",
+            "data": "SPSS & Python-based Clinical Data Analysis",
+            "design": "Clinical Trial & Demonstration Study Design",
+            "comm": "Multi-stakeholder Coordination & Reporting",
+            "ai": "Generative AI-based Digital Therapeutics Research"
         }
     },
     "contact": {

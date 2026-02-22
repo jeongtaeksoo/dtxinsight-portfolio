@@ -166,6 +166,14 @@
             "design": "研究設計",
             "comm": "コミュニケーション",
             "ai": "AI"
+        },
+        "descriptions": {
+            "clinical": "多機関RCTの運営およびプロトコル設計",
+            "vibecording": "Vibecordingベースのプロトタイピングと自動化の実装",
+            "data": "SPSSおよびPythonベースの臨床データ分析",
+            "design": "臨床試験および実証研究の設計",
+            "comm": "多機関ステークホルダーの調整および報告",
+            "ai": "生成AIベースのデジタル治療薬研究"
         }
     },
     "contact": {
