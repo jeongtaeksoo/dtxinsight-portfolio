@@ -1,47 +1,45 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { GmailIcon, LinkedInIcon, OrcidIcon, GithubIcon } from './Icons';
-import styles from './Contact.module.css';
 
 const Contact = () => {
     const { t } = useTranslation();
 
-    return (
-        <section id="contact" className={styles.contact}>
-            <div className="container mx-auto px-4">
-                <div className={styles.content}>
-                    <h2 className={styles.title}>{t('contact.title')}</h2>
-                    <p className={styles.subtitle}>
-                        {t('contact.subtitle')}
-                    </p>
+    const links = [
+        { href: 'mailto:jeongtaeksoo@gmail.com',                        Icon: GmailIcon,    label: 'jeongtaeksoo@gmail.com' },
+        { href: 'https://www.linkedin.com/in/taeksoo-jeong-20685b296/', Icon: LinkedInIcon, label: 'LinkedIn' },
+        { href: 'https://orcid.org/0009-0001-1451-5457',                Icon: OrcidIcon,    label: 'ORCID' },
+        { href: 'https://github.com/jeongtaeksoo',                       Icon: GithubIcon,   label: 'GitHub' },
+    ];
 
-                    <div className={styles.links}>
-                        <a href="mailto:jeongtaeksoo@gmail.com" className={styles.link}>
-                            <GmailIcon size={24} />
-                            <span>jeongtaeksoo@gmail.com</span>
+    return (
+        <section id="contact" className="mt-20 border-t border-border">
+            <div className="max-w-[1200px] mx-auto px-4 py-20 text-center">
+                <h2 className="text-3xl font-bold text-text mb-3">{t('contact.title')}</h2>
+                <p className="text-muted mb-10 max-w-md mx-auto text-sm leading-relaxed">
+                    {t('contact.subtitle')}
+                </p>
+
+                <div className="flex flex-wrap justify-center gap-3">
+                    {links.map(({ href, Icon, label }) => (
+                        <a
+                            key={label}
+                            href={href}
+                            target={href.startsWith('mailto') ? undefined : '_blank'}
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2.5 px-5 py-2.5 border border-border rounded-lg text-text hover:border-primary hover:text-primary transition-colors text-sm font-medium bg-white"
+                        >
+                            <Icon size={17} />
+                            {label}
                         </a>
-                        <a href="https://www.linkedin.com/in/taeksoo-jeong-20685b296/" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                            <LinkedInIcon size={24} />
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://orcid.org/0009-0001-1451-5457" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                            <OrcidIcon size={24} />
-                            <span>ORCID</span>
-                        </a>
-                        <a href="https://github.com/jeongtaeksoo" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                            <GithubIcon size={24} />
-                            <span>GitHub</span>
-                        </a>
-                    </div>
+                    ))}
                 </div>
             </div>
 
-            <footer className={styles.footer}>
-                <div className="container mx-auto px-4">
-                    <div className={styles.footerContent}>
-                        <p className={styles.copyright}>{t('contact.footer.rights')}</p>
-                        <p className={styles.tagline}>{t('contact.footer.tagline')}</p>
-                    </div>
+            <footer className="border-t border-border bg-white">
+                <div className="max-w-[1200px] mx-auto px-4 py-5 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-muted">
+                    <p>{t('contact.footer.rights')}</p>
+                    <p>{t('contact.footer.tagline')}</p>
                 </div>
             </footer>
         </section>
