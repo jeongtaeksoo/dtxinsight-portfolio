@@ -26,9 +26,9 @@ const Publications = () => {
     const innovationFeatures = t('innovation.features', { returnObjects: true }) || [];
 
     const posters = [
-        { id: 1, src: poster1, title: 'KOSCOPP 2024' },
-        { id: 2, src: poster2, title: 'ICDT 2024' },
-        { id: 3, src: poster3, title: 'E-Poster-Park-AI DRIVEN COGNITIVE' },
+        { id: 1, src: poster1, title: 'KOSCOPP 2024', link: 'https://www.karm.or.kr/workshop/?abyear=202402&mode=green_search' },
+        { id: 2, src: poster2, title: 'ICDT 2024', link: 'https://www.karm.or.kr/workshop/?abyear=202402&mode=green_search' },
+        { id: 3, src: poster3, title: 'E-Poster-Park-AI DRIVEN COGNITIVE', link: 'https://journals.sagepub.com/doi/epub/10.1177/17474930251371448' },
     ];
 
     return (
@@ -86,8 +86,13 @@ const Publications = () => {
                                     alt={poster.title}
                                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                 />
-                                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
-                                    <span className="text-xs font-semibold text-white leading-tight">{poster.title}</span>
+                                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+                                    <span className="text-xs font-semibold text-white leading-tight mb-1">{poster.title}</span>
+                                    {poster.link && (
+                                        <span className="text-[10px] text-white/80 flex items-center gap-1">
+                                            <ExternalLink size={10} /> Link available
+                                        </span>
+                                    )}
                                 </div>
                             </motion.div>
                         ))}
@@ -152,8 +157,19 @@ const Publications = () => {
                             >
                                 <X size={18} />
                             </button>
-                            <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-black/60 to-transparent text-white text-center">
-                                <h4 className="font-semibold text-sm">{selectedPoster.title}</h4>
+                            <div className="absolute bottom-0 inset-x-0 p-5 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white text-center flex flex-col items-center gap-3">
+                                <h4 className="font-semibold text-sm drop-shadow-md">{selectedPoster.title}</h4>
+                                {selectedPoster.link && (
+                                    <a
+                                        href={selectedPoster.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold bg-white text-black hover:bg-gray-100 hover:scale-105 transition-all shadow-lg"
+                                        onClick={(e) => e.stopPropagation()}
+                                    >
+                                        초록 / 원문 보기 <ExternalLink size={14} />
+                                    </a>
+                                )}
                             </div>
                         </motion.div>
                     </div>
