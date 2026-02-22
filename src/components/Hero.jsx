@@ -10,7 +10,6 @@ const Hero = () => {
     const stats = [
         { label: t('hero.stat1Label'), value: t('hero.stat1Value') },
         { label: t('hero.stat2Label'), value: t('hero.stat2Value') },
-        { label: t('hero.stat3Label'), value: t('hero.stat3Value') },
     ];
 
     return (
