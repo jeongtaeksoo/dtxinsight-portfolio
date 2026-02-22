@@ -13,7 +13,14 @@
         "affiliation": "Former Research Associate, Dept. of Rehabilitation Medicine, International St. Mary's Hospital, Catholic Kwandong University",
         "credential": "RN (Registered Nurse, Korea)",
         "tagline": "Clinical Research Coordinator & AI-driven Healthcare Innovator",
-        "resume": "Resume"
+        "resume": "Resume",
+        "researchBtn": "View Research",
+        "stat1Value": "390M KRW",
+        "stat1Label": "R&D Scale",
+        "stat2Value": "3",
+        "stat2Label": "SCI Publications",
+        "stat3Value": "2",
+        "stat3Label": "Randomized Controlled Trials"
     },
     "journey": {
         "title": "My Research Journey",
@@ -74,13 +81,13 @@
         "title": "Research Highlights",
         "projects": [
             {
-                "title": "Multi-center RCT Management (MCI)",
-                "category": "Protocol Design & Operations",
+                "title": "Randomized Controlled Trial Management (MCI)",
+                "category": "Clinical Efficacy Validation & Operations",
                 "description": "Randomized Controlled Trial (RCT) to evaluate the effectiveness of the Zenicog® cognitive rehabilitation program in older adults with MCI (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
             },
             {
-                "title": "Digital Therapeutics Validation (Stroke)",
-                "category": "Clinical Efficacy Verification",
+                "title": "Multi-center Randomized Controlled Trial (Stroke)",
+                "category": "Clinical Efficacy Validation & Operations",
                 "description": "Randomized Controlled Trial (RCT) to evaluate the effectiveness of the Zenicog® cognitive rehabilitation program in subacute stroke patients (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
             },
             {

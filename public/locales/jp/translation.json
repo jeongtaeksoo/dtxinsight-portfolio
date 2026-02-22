@@ -13,7 +13,14 @@
         "affiliation": "前 カトリック関東大学国際聖母病院 リハビリテーション医学科 研究員",
         "credential": "RN（韓国看護師免許）",
         "tagline": "Clinical Research Coordinator & AI-driven Healthcare Innovator",
-        "resume": "Resume"
+        "resume": "Resume",
+        "researchBtn": "研究を見る",
+        "stat1Value": "3.9億KRW",
+        "stat1Label": "R&D規模",
+        "stat2Value": "3本",
+        "stat2Label": "SCI論文",
+        "stat3Value": "2件",
+        "stat3Label": "ランダム化比較試験"
     },
     "journey": {
         "title": "My Research Journey",
@@ -74,13 +81,13 @@
         "title": "研究ハイライト",
         "projects": [
             {
-                "title": "多施設共同ランダム化比較試験 (MCI)",
-                "category": "プロトコル設計 & 運営",
+                "title": "ランダム化比較試験 (MCI)",
+                "category": "臨床有効性検証&運営",
                 "description": "軽度認知障害（MCI）の高齢者を対象としたZenicog®認知リハビリテーションプログラムの効果を検証するためのランダム化比較試験（RCT） (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
             },
             {
-                "title": "デジタル治療機器の臨床検証 (Stroke)",
-                "category": "臨床有効性検証",
+                "title": "多施設共同ランダム化比較試験 (Stroke)",
+                "category": "臨床有効性検証&運営",
                 "description": "亜急性期脳卒中患者を対象としたZenicog®認知リハビリテーションプログラムの効果を検証するためのランダム化比較試験（RCT） (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
             },
             {

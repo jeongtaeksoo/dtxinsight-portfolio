@@ -25,8 +25,8 @@ const Header = () => {
     const navLinks = [
         { name: t('nav.about'), href: '#top' },
         { name: t('nav.research'), href: '#research' },
-        { name: t('nav.innovation'), href: '#innovation' },
         { name: t('nav.publications'), href: '#publications' },
+        { name: t('nav.innovation'), href: '#innovation' },
         { name: t('nav.contact'), href: '#contact' },
     ];
 

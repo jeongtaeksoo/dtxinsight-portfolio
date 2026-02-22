@@ -21,6 +21,7 @@ const Publications = () => {
     const [selectedPaper, setSelectedPaper] = useState(null);
 
     const publications = t('publications.items', { returnObjects: true }) || [];
+    const innovationFeatures = t('innovation.features', { returnObjects: true }) || [];
 
     const posters = [
         { id: 1, src: poster1, title: 'KOSCOPP 2024' },
@@ -88,6 +89,26 @@ const Publications = () => {
                                 </div>
                             </motion.div>
                         ))}
+                    </div>
+
+                    <div className="mt-8 p-6 rounded-xl border border-border bg-accent-bg/60">
+                        <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-3">
+                            {t('innovation.label')}
+                        </span>
+                        <h4 className="text-xl font-bold text-text mb-3">
+                            {t('innovation.title')}
+                        </h4>
+                        <p className="text-sm text-muted leading-relaxed mb-4">
+                            {t('innovation.description')}
+                        </p>
+                        <ul className="space-y-2">
+                            {innovationFeatures.map((feature, idx) => (
+                                <li key={`${feature}-${idx}`} className="text-sm text-text flex items-start gap-2">
+                                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                                    <span>{feature}</span>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>

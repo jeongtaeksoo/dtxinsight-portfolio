@@ -13,7 +13,14 @@
         "affiliation": "前 가톨릭관동대학교 국제성모병원 재활의학과 연구원",
         "credential": "RN (대한민국 간호사)",
         "tagline": "Clinical Research Coordinator & AI-driven Healthcare Innovator",
-        "resume": "Resume"
+        "resume": "Resume",
+        "researchBtn": "연구 보기",
+        "stat1Value": "3.9억 KRW",
+        "stat1Label": "R&D 규모",
+        "stat2Value": "3편",
+        "stat2Label": "SCI 논문",
+        "stat3Value": "2건",
+        "stat3Label": "무작위 대조 임상시험"
     },
     "journey": {
         "title": "My Research Journey",
@@ -74,13 +81,13 @@
         "title": "연구 하이라이트",
         "projects": [
             {
-                "title": "다기관 무작위 대조 임상시험 (MCI)",
-                "category": "프로토콜 설계 & 운영",
+                "title": "무작위 대조 임상시험 (MCI)",
+                "category": "임상 효과성 검증&운영",
                 "description": "경도인지장애(MCI) 노인 대상 Zenicog® 인지재활 프로그램의 효과 검증을 위한 무작위 대조 연구(RCT) (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
             },
             {
-                "title": "디지털 치료기기 임상 검증 (Stroke)",
-                "category": "임상 효과성 검증",
+                "title": "다기관 무작위 대조 임상시험 (Stroke)",
+                "category": "임상 효과성 검증&운영",
                 "description": "아급성기 뇌졸중 환자 대상 Zenicog® 인지재활 프로그램의 효과 검증을 위한 무작위 대조 연구(RCT) (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
             },
             {
