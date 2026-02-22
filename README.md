@@ -39,6 +39,17 @@ npm run build
 
 This site is deployed on Vercel and connected to **www.dtxinsight.com**.
 
+```bash
+# One-time Vercel auth
+npx vercel login
+
+# Preview deployment
+npm run deploy:preview
+
+# Production deployment (www.dtxinsight.com)
+npm run deploy
+```
+
 ##  License
 
 © 2025 DTX Insight. All rights reserved.
