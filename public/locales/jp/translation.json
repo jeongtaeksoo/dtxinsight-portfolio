@@ -17,8 +17,8 @@
         "researchBtn": "研究を見る",
         "stat1Value": "3.9億KRW",
         "stat1Label": "R&D規模",
-        "stat2Value": "3本",
-        "stat2Label": "SCI論文",
+        "stat2Value": "5本",
+        "stat2Label": "SCI・ESCI・KCI論文（投稿含む）",
         "stat3Value": "2件",
         "stat3Label": "ランダム化比較試験"
     },

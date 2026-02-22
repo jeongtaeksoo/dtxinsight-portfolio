@@ -15,6 +15,8 @@ const statusStyle = (status) => {
     return 'bg-yellow-50 text-yellow-700 border border-yellow-200';
 };
 
+const innovationFeatureTitles = ['Context-Aware', 'Multi-Modal', 'Evidence-Based'];
+
 const Publications = () => {
     const { t } = useTranslation();
     const [selectedPoster, setSelectedPoster] = useState(null);
@@ -91,7 +93,7 @@ const Publications = () => {
                         ))}
                     </div>
 
-                    <div className="mt-8 p-6 rounded-xl border border-border bg-accent-bg/60">
+                    <div id="innovation" className="mt-8 p-6 rounded-xl border border-border bg-accent-bg/60">
                         <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-3">
                             {t('innovation.label')}
                         </span>
@@ -101,14 +103,25 @@ const Publications = () => {
                         <p className="text-sm text-muted leading-relaxed mb-4">
                             {t('innovation.description')}
                         </p>
-                        <ul className="space-y-2">
-                            {innovationFeatures.map((feature, idx) => (
-                                <li key={`${feature}-${idx}`} className="text-sm text-text flex items-start gap-2">
-                                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
-                                    <span>{feature}</span>
-                                </li>
+
+                        <a
+                            href="https://hwiwasoo.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold bg-primary text-white hover:bg-primary/90 transition-colors mb-4"
+                        >
+                            {t('innovation.cta')}
+                            <ExternalLink size={13} />
+                        </a>
+
+                        <div className="grid sm:grid-cols-3 gap-3">
+                            {innovationFeatureTitles.map((title, idx) => (
+                                <div key={title} className="p-3 rounded-lg bg-surface border border-border">
+                                    <p className="text-xs font-semibold text-primary mb-1">{title}</p>
+                                    <p className="text-sm text-text leading-relaxed">{innovationFeatures[idx] || ''}</p>
+                                </div>
                             ))}
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </div>

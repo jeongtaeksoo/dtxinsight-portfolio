@@ -17,8 +17,8 @@
         "researchBtn": "View Research",
         "stat1Value": "390M KRW",
         "stat1Label": "R&D Scale",
-        "stat2Value": "3",
-        "stat2Label": "SCI Publications",
+        "stat2Value": "5",
+        "stat2Label": "SCI/ESCI/KCI Papers (Incl. Submissions)",
         "stat3Value": "2",
         "stat3Label": "Randomized Controlled Trials"
     },

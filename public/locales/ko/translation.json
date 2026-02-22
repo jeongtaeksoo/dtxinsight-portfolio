@@ -17,8 +17,8 @@
         "researchBtn": "연구 보기",
         "stat1Value": "3.9억 KRW",
         "stat1Label": "R&D 규모",
-        "stat2Value": "3편",
-        "stat2Label": "SCI 논문",
+        "stat2Value": "5편",
+        "stat2Label": "SCI·ESCI·KCI 논문(투고 포함)",
         "stat3Value": "2건",
         "stat3Label": "무작위 대조 임상시험"
     },
