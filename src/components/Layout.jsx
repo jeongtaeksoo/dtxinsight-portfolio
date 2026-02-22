@@ -1,22 +1,15 @@
 import React from 'react';
-import Background3D from './Background3D';
-import Header from './Header'; // Temporarily using existing Header, will refactor later
-import Contact from './Contact'; // Reuse Contact for now
+import Header from './Header';
+import Contact from './Contact';
 
 const Layout = ({ children }) => {
     return (
-        <div className="relative min-h-screen text-text font-sans selection:bg-primary/30">
-            <Background3D />
-
-            {/* Content wrapper with z-index to sit above canvas */}
-            <div className="relative z-10 flex flex-col min-h-screen">
+        <div className="relative min-h-screen bg-background text-text font-sans">
+            <div className="flex flex-col min-h-screen">
                 <Header />
-
-                {/* Main Content Area */}
-                <main className="relative z-10 w-full max-w-[1200px] mx-auto flex flex-col gap-[140px]">
+                <main className="w-full max-w-[1200px] mx-auto flex flex-col gap-[120px] px-4">
                     {children}
                 </main>
-
                 <Contact />
             </div>
         </div>
