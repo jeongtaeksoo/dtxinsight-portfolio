@@ -1,0 +1,174 @@
+{
+    "nav": {
+        "about": "소개",
+        "research": "연구",
+        "innovation": "혁신",
+        "publications": "논문",
+        "contact": "연락처",
+        "highlights": "주요 성과",
+        "projects": "프로젝트"
+    },
+    "hero": {
+        "name": "정택수",
+        "affiliation": "前 가톨릭관동대학교 국제성모병원 재활의학과 연구원",
+        "credential": "RN (대한민국 간호사)",
+        "tagline": "Clinical Research Coordinator & AI-driven Healthcare Innovator",
+        "resume": "Resume"
+    },
+    "journey": {
+        "title": "My Research Journey",
+        "subtitle": "문제 인식에서 혁신까지",
+        "steps": [
+            {
+                "id": "problem",
+                "icon": "Search",
+                "title": "문제 인식 (Problem Identification)",
+                "desc": "저는 어떤 프로젝트든 먼저 현장의 흐름과 이해관계자의 어려움을 관찰하는 것에서 시작합니다.\n데이터, 프로세스, 사용자 경험에서 드러나는 비효율을 정리하여\n\"정확히 무엇을 해결해야 하는가?\"를 명확히 규정합니다."
+            },
+            {
+                "id": "hypothesis",
+                "icon": "Lightbulb",
+                "title": "구조화·가설 설정 (Hypothesis & Structuring)",
+                "desc": "문제를 단순히 나열하는 것이 아니라,\n원인–과정–결과의 구조로 재해석해 검증 가능한 가설을 만듭니다.\n이 단계에서 임상적 통찰·데이터 패턴·운영적 제약을 모두 반영하여\n현실적인 방향성과 목표를 설정합니다."
+            },
+            {
+                "id": "solution",
+                "icon": "Cog",
+                "title": "솔루션 설계 및 실행 (Solution Design & Execution)",
+                "desc": "프로젝트 목적에 따라 다음 요소들을 통합적으로 설계합니다.\n\n• 임상시험 운영 및 데이터 흐름 구조\n• 사용자 경험을 고려한 디지털 인터페이스\n• AI/자동화 모델 설계 및 적용\n• 조직 내 협업 및 커뮤니케이션 플로우\n• 프로세스 최적화 및 오류 예방 시스템\n\n중요한 점은 단순한 아이디어가 아니라\n실제 현장에서 작동하는 구조를 만든다는 점입니다."
+            },
+            {
+                "id": "impact",
+                "icon": "BarChart3",
+                "title": "성과 검증 및 개선 (Impact Validation)",
+                "desc": "솔루션의 효과를 데이터로 검증하고, 정량·정성 평가를 기반으로 개선 사항을 도출합니다.\n\n• 사용자·환자·의료진 피드백\n• 프로세스 안정성 평가\n• 재현성과 확장성 검토\n\n프로젝트가 \"완료되는 것\"이 아니라\n조직에 지속적인 가치를 만드는 것을 목표로 합니다."
+            }
+        ]
+    },
+    "about": {
+        "title": "철학 & 접근법",
+        "description1": "헬스케어의 미래는 엄격한 임상 검증과 적응형 인공지능의 교차점에 있다고 믿습니다. 저는 간호학 배경과 임상연구 경험을 바탕으로, 새로운 기술이 최첨단일 뿐만 아니라 임상적으로 의미 있고 환자 중심적이도록 보장합니다.",
+        "description2": "가톨릭관동대학교 국제성모병원에서 임상연구 코디네이터로 재직했으며, 디지털 바이오마커와 분산형 임상시험 방법론을 통해 신약 개발을 가속화하고 환자 결과를 개선하는 전략을 설계하였습니다."
+    },
+    "highlights": {
+        "items": [
+            {
+                "title": "다기관 임상 운영",
+                "description": "3.9억 원 규모 R&D 총괄 및 다기관 RCT 관리"
+            },
+            {
+                "title": "AI & 디지털 헬스",
+                "description": "생성형 AI 기반 인지 훈련 프레임워크 설계"
+            },
+            {
+                "title": "데이터 관리",
+                "description": "데이터 품질 점검 및 임상 데이터 관리"
+            },
+            {
+                "title": "학술 연구 성과",
+                "description": "SCI급 논문 게재 및 국내 학술대회 포스터 발표"
+            }
+        ]
+    },
+    "research": {
+        "title": "연구 하이라이트",
+        "projects": [
+            {
+                "title": "다기관 무작위 대조 임상시험 (MCI)",
+                "category": "프로토콜 설계 & 운영",
+                "description": "경도인지장애(MCI) 노인 대상 Zenicog® 인지재활 프로그램의 효과 검증을 위한 무작위 대조 연구(RCT) (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
+            },
+            {
+                "title": "디지털 치료기기 임상 검증 (Stroke)",
+                "category": "임상 효과성 검증",
+                "description": "아급성기 뇌졸중 환자 대상 Zenicog® 인지재활 프로그램의 효과 검증을 위한 무작위 대조 연구(RCT) (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
+            },
+            {
+                "title": "디지털 헬스케어 실증",
+                "category": "규제 업무",
+                "description": "보건복지부·한국보건산업진흥원 실증사업 중간보고회 Q&A 세션 진행 및 실증 연구 관련 질의응답 대응"
+            }
+        ]
+    },
+    "innovation": {
+        "label": "특집 혁신",
+        "title": "생성형 AI 기반 인지 중재 프레임워크",
+        "description": "고령자의 인지기능 저하와 디지털 배제를 해결하기 위해 홋카이도 대학교 응용물리학 박사과정과 함께 공동으로 시작한 '휘와수' 프로젝트입니다. 3중 에이전트(Coach-Teacher-Companion) 시스템을 통해 일상생활 속 자연스러운 인지훈련 흐름(Context-Adaptive Cognitive Flow)을 구현하여 사용자 참여를 극대화합니다.",
+        "features": [
+            "Coach-Teacher-Companion 3중 에이전트",
+            "Context-Adaptive Cognitive Flow",
+            "고령자 친화적 디지털 인터페이스"
+        ],
+        "cta": "Hwiwasoo"
+    },
+    "publications": {
+        "title": "주요 논문",
+        "posterTitle": "학회 포스터",
+        "roles": {
+            "first": "제1저자",
+            "co": "공저자"
+        },
+        "items": [
+            {
+                "title": "AI-driven cognitive telerehabilitation for stroke: a randomized controlled trial",
+                "journal": "Frontiers in Neurology",
+                "date": "2025",
+                "role": "공저자",
+                "status": "게재 완료",
+                "doi": "https://doi.org/10.3389/fneur.2025.1636017",
+                "summary": "최근 다기관 무작위대조시험에서 AI 기반 인지 텔레리해빌리테이션이 전통적 치료사 감독 인지재활과 동일한 효과를 보였습니다.\n\n급성기 이후(6개월 이내) 뇌졸중 환자 63명을 두 군으로 무작위 배정해 6주간 총 24회 세션을 수행했고, 주요 인지 지표(K-MMSE2, TMT, Digit Span) 모두 유의한 향상을 보였습니다.\n\n비감독형 **AI 자가운영 텔레리해빌리테이션은 전통적 치료사 주도군 대비 비열등성(non-inferiority)**이 입증되었으며, 사용성 만족도도 높게 나타났습니다.\n\n이 결과는 실시간 개인화 및 원격 모니터링이 가능한 AI 인지재활 플랫폼이 기존 치료와 동일 수준의 임상적 가치를 가진다는 근거를 제시합니다."
+            },
+            {
+                "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
+                "journal": "MDPI Healthcare",
+                "date": "2025",
+                "role": "제1저자",
+                "status": "게재 완료",
+                "doi": "https://www.mdpi.com/2227-9032/13/24/3225",
+                "summary": "디지털 소외(digital exclusion)와 기술 불안으로 인해 고령층 인지중재의 실제 적용에는 여전히 높은 진입 장벽이 존재합니다. 본 연구는 이러한 한계를 해결하기 위해 Coach–Teacher–Companion(CTC) 구조의 다중 에이전트 생성형 AI 프레임워크를 제안하는 임상 프로토콜 논문입니다.\n\n본 프레임워크는 일상생활에 자연스럽게 인지 훈련을 통합하고, 적응형 난이도 조절과 정서 모니터링을 통해 인지·행동·정서 지원을 동시에 제공하도록 설계되었습니다. 특히 디지털 리터러시(MDPQ-16), 기술 불안(CARS), 정서 안전성(PANAS) 평가를 포함한 임상 적용을 위한 방법론적·윤리적 안전장치를 체계적으로 제시합니다.\n\n6주간의 파일럿 타당성 연구 프로토콜(n=14)을 통해 **사용성(SUS), 사용자 경험(UEQ-S), 순응도, 정서 안정성, 주요 인지 지표(MMSE, TMT, Digit Span)**를 평가하도록 설계되었으며, 본 연구는 고령층 대상 생성형 AI 기반 인지중재의 임상 적용 가능성을 구조적으로 제시하는 초기 근거를 제공합니다."
+            },
+            {
+                "title": "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
+                "journal": "Annals of Rehabilitation Medicine",
+                "date": "2025",
+                "role": "공저자",
+                "status": "게재 완료",
+                "doi": "https://doi.org/10.5535/arm.250060",
+                "summary": "AI 기반 모바일 인지 텔레리해빌리테이션의 임상적 적용 가능성과 사용성을 평가한 예비 연구입니다. 뇌졸중 환자 및 경도인지장애(MCI) 고령자 13명을 대상으로 6주간 총 24회 세션의 AI 자가운영 인지재활 프로그램을 적용했습니다.\n\nMMSE 점수는 중재 전 대비 유의하게 향상되었으며, Digit Span과 Trail Making Test에서도 전반적인 개선 경향을 보였습니다. 전체 사용성 평가에서 제품 품질과 만족도는 높은 수준을 기록했으나, 오류 허용성(tolerance for error) 영역은 상대적으로 낮아 고령자 및 디지털 취약계층을 고려한 UI/UX 개선 필요성이 확인되었습니다.\n\n본 연구는 치료사 상시 개입 없이도 수행 가능한 AI 기반 인지 텔레리해빌리테이션이 실제 임상 환경에서 안전하고 실현 가능하며, 인지 기능 개선에 잠재적 효과를 가질 수 있음을 보여줍니다. 특히 디지털 치료제 및 원격 재활이 확대되는 흐름 속에서, 사용성 중심 설계의 중요성을 함께 제시한 연구라는 점에서 의미가 있습니다."
+            },
+            {
+                "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults with Mild Cognitive Impairment: A pilot Study",
+                "journal": "Brain & Neurorehabilitation",
+                "date": "2026",
+                "role": "공저자",
+                "status": "Accept"
+            },
+            {
+                "title": "AI-Driven Telerehabilitation for Older Adults with Mild Cognitive Impairment: A Randomized Controlled Trial",
+                "journal": "Frontiers in Neurology",
+                "date": "2026",
+                "role": "공저자",
+                "status": "Submitted"
+            }
+        ]
+    },
+    "skills": {
+        "title": "핵심 역량",
+        "items": {
+            "clinical": "임상시험",
+            "python": "Python",
+            "data": "데이터 분석",
+            "design": "연구 설계",
+            "comm": "커뮤니케이션",
+            "ai": "AI"
+        }
+    },
+    "contact": {
+        "title": "연결하기",
+        "subtitle": "협업에 관심이 있거나 제 업무에 대해 궁금한 점이 있으신가요?",
+        "footer": {
+            "rights": "© 2025 DTX Insight. All rights reserved.",
+            "tagline": "임상연구 × AI 혁신"
+        }
+    }
+}

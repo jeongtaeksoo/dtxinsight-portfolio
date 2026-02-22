@@ -1,0 +1,174 @@
+{
+    "nav": {
+        "about": "紹介",
+        "research": "研究",
+        "innovation": "革新",
+        "publications": "論文",
+        "contact": "連絡先",
+        "highlights": "ハイライト",
+        "projects": "プロジェクト"
+    },
+    "hero": {
+        "name": "チョン・テクス",
+        "affiliation": "前 カトリック関東大学国際聖母病院 リハビリテーション医学科 研究員",
+        "credential": "RN（韓国看護師免許）",
+        "tagline": "Clinical Research Coordinator & AI-driven Healthcare Innovator",
+        "resume": "Resume"
+    },
+    "journey": {
+        "title": "My Research Journey",
+        "subtitle": "問題認識からイノベーションへ",
+        "steps": [
+            {
+                "id": "problem",
+                "icon": "Search",
+                "title": "問題認識（Problem Identification）",
+                "desc": "私はどんなプロジェクトでも、まず現場の流れとステークホルダーの課題を観察することから始めます。\nデータ、プロセス、ユーザー体験における非効率を整理し、\n「正確に何を解決すべきか？」を明確に定義します。"
+            },
+            {
+                "id": "hypothesis",
+                "icon": "Lightbulb",
+                "title": "構造化・仮説設定（Hypothesis & Structuring）",
+                "desc": "問題を単にリストアップするのではなく、\n原因–過程–結果の構造で再解釈し、検証可能な仮説を作ります。\nこの段階で臨床的洞察・データパターン・運営上の制約をすべて反映し、\n現実的な方向性と目標を設定します。"
+            },
+            {
+                "id": "solution",
+                "icon": "Cog",
+                "title": "ソリューション設計・実行（Solution Design & Execution）",
+                "desc": "プロジェクトの目的に応じて、以下の要素を統合的に設計します。\n\n• 臨床試験運営およびデータフロー構造\n• ユーザー体験を考慮したデジタルインターフェース\n• AI/自動化モデルの設計と適用\n• 組織内協業およびコミュニケーションフロー\n• プロセス最適化およびエラー予防システム\n\n重要なのは、単なるアイデアではなく、\n現場で実際に機能する構造を作ることです。"
+            },
+            {
+                "id": "impact",
+                "icon": "BarChart3",
+                "title": "成果検証・改善（Impact Validation）",
+                "desc": "ソリューションの効果をデータで検証し、定量・定性評価に基づいて改善点を導き出します。\n\n• 統計および指標基盤の分析\n• ユーザー・患者・医療従事者のフィードバック\n• プロセス安定性評価\n• 再現性と拡張性の検討\n\nプロジェクトが「完了する」ことではなく、\n組織に持続的な価値を生み出すことを目標としています。"
+            }
+        ]
+    },
+    "about": {
+        "title": "哲学とアプローチ",
+        "description1": "ヘルスケアの未来は、厳格な臨床検証と適応型AIの交差点にあると信じています。看護学の背景と臨床研究の経験を活かし、新しい技術が最先端であるだけでなく、臨床的に意味があり、患者中心的であることを保証します。",
+        "description2": "以前、カトリック関東大学国際聖母病院で臨床研究コーディネーターとして在職し、デジタルバイオマーカーと分散型臨床試験の方法論を通じて、新薬開発を加速させ、患者の予後를 改善する戦略を設計していました。"
+    },
+    "highlights": {
+        "items": [
+            {
+                "title": "多機関臨床運営",
+                "description": "3.9億ウォン規模のR&D総括および多機関RCT管理"
+            },
+            {
+                "title": "AI & デジタルヘルス",
+                "description": "生成AIベースの認知訓練フレームワーク設計"
+            },
+            {
+                "title": "データ管理",
+                "description": "データ品質点検および臨床データ管理"
+            },
+            {
+                "title": "学術研究成果",
+                "description": "SCI級論文掲載および国内学術大会ポスター発表"
+            }
+        ]
+    },
+    "research": {
+        "title": "研究ハイライト",
+        "projects": [
+            {
+                "title": "多施設共同ランダム化比較試験 (MCI)",
+                "category": "プロトコル設計 & 運営",
+                "description": "軽度認知障害（MCI）の高齢者を対象としたZenicog®認知リハビリテーションプログラムの効果を検証するためのランダム化比較試験（RCT） (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
+            },
+            {
+                "title": "デジタル治療機器の臨床検証 (Stroke)",
+                "category": "臨床有効性検証",
+                "description": "亜急性期脳卒中患者を対象としたZenicog®認知リハビリテーションプログラムの効果を検証するためのランダム化比較試験（RCT） (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
+            },
+            {
+                "title": "デジタルヘルスケア実証",
+                "category": "規制業務",
+                "description": "保健福祉部・韓国保健産業振興院の実証事業中間報告会Q&Aセッション進行および実証研究関連の質疑応答対応"
+            }
+        ]
+    },
+    "innovation": {
+        "label": "特集イノベーション",
+        "title": "生成AIベースの認知介入フレームワーク",
+        "description": "高齢者の認知機能低下とデジタル排除を解決するために、北海道大学・応用物理学専攻の博士課程の学生と共同で開始した「휘와수(Hwiwasoo)」プロジェクトです。3重エージェント(Coach-Teacher-Companion)システムを通じて日常生活の中での自然な認知訓練の流れ(Context-Adaptive Cognitive Flow)を実現し、ユーザー参加を最大化します。",
+        "features": [
+            "Coach-Teacher-Companion 3重エージェント",
+            "Context-Adaptive Cognitive Flow",
+            "高齢者向けデジタルインターフェース"
+        ],
+        "cta": "Hwiwasoo"
+    },
+    "publications": {
+        "title": "主な論文",
+        "posterTitle": "学会ポスター",
+        "roles": {
+            "first": "第1著者",
+            "co": "共著者"
+        },
+        "items": [
+            {
+                "title": "AI-driven cognitive telerehabilitation for stroke: a randomized controlled trial",
+                "journal": "Frontiers in Neurology",
+                "date": "2025",
+                "role": "共著者",
+                "status": "掲載完了",
+                "doi": "https://doi.org/10.3389/fneur.2025.1636017",
+                "summary": "最近の多施設共同ランダム化比較試験において、AIベースの認知遠隔リハビリテーションは、従来の療法士監視下の認知リハビリテーションと同等の有効性を示しました。\n\n亜急性期（6ヶ月以内）の脳卒中患者63名を2つのグループに無作為に割り当て、6週間で計24回のセッションを実施した結果、主要な認知指標（K-MMSE2、TMT、Digit Span）すべてにおいて有意な改善が見られました。\n\n非監視型の**AI自己運営遠隔リハビリテーションは、療法士主導群と比較して非劣性（non-inferiority）**が立証され、ユーザビリティ満足度も高く得られました。\n\nこの結果は、リアルタイムのパーソナライズと遠隔モニタリングが可能なAI認知リハビリテーションプラットフォームが、既存の治療と同レベル의 臨床的価値を有することを示唆しています。"
+            },
+            {
+                "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
+                "journal": "MDPI Healthcare",
+                "date": "2025",
+                "role": "第1著者",
+                "status": "掲載完了",
+                "doi": "https://www.mdpi.com/2227-9032/13/24/3225",
+                "summary": "デジタル格差（digital exclusion）とテクノロジー不安により、高齢者の認知介入の実際の適用には依然として高い障壁が存在します。本研究は、これらの限界を解決するために、Coach–Teacher–Companion（CTC）構造のマルチエージェント生成AIフレームワークを提案する臨床プロトコル論文です。\n\n本フレームワークは、日常生活に自然に認知訓練を統合し、適応型の難易度調整と感情モニタリングを通じて、認知・行動・感情のサポートを同時に提供するように設計されています。特に、デジタルリテラシー（MDPQ-16）、テクノロジー不安（CARS）、感情的安全性（PANAS）の評価を含む、臨床適用のための方法論적・倫理的な安全策を体系的に提示しています。\n\n6週間のパイロット妥当性研究プロトコル（n=14）を通じて、**ユーザビリティ（SUS）、ユーザーエクスペリエンス（UEQ-S）、アドヒアランス、感情の安定性、主要な認知指標（MMSE, TMT, Digit Span）**を評価するように設計されており、本研究は高齢者向けの生成AIベースの認知介入の臨床適用の可能性を構造的に提示する初期の根拠を提供します。"
+            },
+            {
+                "title": "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
+                "journal": "Annals of Rehabilitation Medicine",
+                "date": "2025",
+                "role": "共著者",
+                "status": "掲載完了",
+                "doi": "https://doi.org/10.5535/arm.250060",
+                "summary": "AIベースのモバイル認知遠隔リハビリテーションの臨床的適用可能性とユーザビリティを評価した予備研究です。脳卒中患者および軽度認知障害（MCI）の高齢者13名を対象に、6週間で計24回のセッションからなるAI自己運営認知リハビリテーションプログラムを適用しました。\n\nMMSEスコアは介入前と比較して有意に向上し、Digit SpanおよびTrail Making Testでも全般的な改善傾向が見られました。全体的なユーザビリティ評価では製品の品質と満足度は高い水準を記録しましたが、「エラー許容度（tolerance for error）」の領域は相対的に低く、高齢者やデジタル脆弱層を考慮したUI/UX改善の必要性が確認されました。\n\n本研究は、療法士の常時介入なしでも実施可能なAIベースの認知遠隔リハビリテーションが、実際の臨床環境で安全かつ実現可能であり、認知機能の改善に潜在的な効果を持ち得ることを示しています。特にデジタル治療薬や遠隔リハビリテーションが拡大する流れの中で、ユーザビリティ中心の設計の重要性を提示した研究として意義があります。"
+            },
+            {
+                "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults with Mild Cognitive Impairment: A pilot Study",
+                "journal": "Brain & Neurorehabilitation",
+                "date": "2026",
+                "role": "共著者",
+                "status": "Accept"
+            },
+            {
+                "title": "AI-Driven Telerehabilitation for Older Adults with Mild Cognitive Impairment: A Randomized Controlled Trial",
+                "journal": "Frontiers in Neurology",
+                "date": "2026",
+                "role": "共著者",
+                "status": "Submitted"
+            }
+        ]
+    },
+    "skills": {
+        "title": "コアコンピタンス",
+        "items": {
+            "clinical": "臨床試験",
+            "python": "Python",
+            "data": "データ分析",
+            "design": "研究設計",
+            "comm": "コミュニケーション",
+            "ai": "AI"
+        }
+    },
+    "contact": {
+        "title": "お問い合わせ",
+        "subtitle": "コラボレーションに興味がある方、または私の仕事について質問がありますか？",
+        "footer": {
+            "rights": "© 2025 DTX Insight. All rights reserved.",
+            "tagline": "臨床研究 × AI イノベーション"
+        }
+    }
+}

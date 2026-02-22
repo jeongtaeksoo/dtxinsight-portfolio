@@ -1,0 +1,174 @@
+{
+    "nav": {
+        "about": "About",
+        "research": "Research",
+        "innovation": "Innovation",
+        "publications": "Publications",
+        "contact": "Contact",
+        "highlights": "Highlights",
+        "projects": "Projects"
+    },
+    "hero": {
+        "name": "Taeksoo Jeong",
+        "affiliation": "Former Research Associate, Dept. of Rehabilitation Medicine, International St. Mary's Hospital, Catholic Kwandong University",
+        "credential": "RN (Registered Nurse, Korea)",
+        "tagline": "Clinical Research Coordinator & AI-driven Healthcare Innovator",
+        "resume": "Resume"
+    },
+    "journey": {
+        "title": "My Research Journey",
+        "subtitle": "From Identification to Innovation",
+        "steps": [
+            {
+                "id": "problem",
+                "icon": "Search",
+                "title": "Problem Identification",
+                "desc": "I begin every project by observing on-site workflows and identifying stakeholders' pain points.\nI document inefficiencies in data, processes, and user experience to clearly define:\n\"Exactly what problem needs to be solved?\""
+            },
+            {
+                "id": "hypothesis",
+                "icon": "Lightbulb",
+                "title": "Hypothesis & Structuring",
+                "desc": "Rather than simply listing problems,\nI reinterpret them through a cause-process-outcome framework to create testable hypotheses.\nAt this stage, I integrate clinical insights, data patterns, and operational constraints\nto set realistic directions and goals."
+            },
+            {
+                "id": "solution",
+                "icon": "Cog",
+                "title": "Solution Design & Execution",
+                "desc": "Based on project objectives, I design integrated solutions including:\n\n• Clinical trial operations and data flow architecture\n• User experience-focused digital interfaces\n• AI/automation model design and implementation\n• Organizational collaboration and communication workflows\n• Process optimization and error prevention systems\n\nThe key is creating structures that actually work in real-world settings,\nnot just theoretical ideas."
+            },
+            {
+                "id": "impact",
+                "icon": "BarChart3",
+                "title": "Impact Validation",
+                "desc": "I validate solution effectiveness through data-driven evaluation and derive improvements based on quantitative and qualitative assessments.\n\n• Statistics and metrics-based analysis\n• User, patient, and clinician feedback\n• Process stability evaluation\n• Reproducibility and scalability review\n\nThe goal is not just to \"complete\" a project,\nbut to create lasting value for the organization."
+            }
+        ]
+    },
+    "about": {
+        "title": "Philosophy & Approach",
+        "description1": "I believe the future of healthcare lies at the intersection of rigorous clinical validation and adaptive AI. With a background in nursing and clinical research, I ensure new technologies are not only cutting-edge but also clinically meaningful and patient-centered.",
+        "description2": "Worked as a Clinical Research Coordinator at International St. Mary's Hospital, designing strategies to accelerate drug development and improve patient outcomes through digital biomarkers and decentralized clinical trial methodologies."
+    },
+    "highlights": {
+        "items": [
+            {
+                "title": "Multi-center Clinical Operations",
+                "description": "Managing 390M KRW R&D & Multi-center RCT"
+            },
+            {
+                "title": "AI & Digital Health",
+                "description": "Designing Generative AI-based Cognitive Training Framework"
+            },
+            {
+                "title": "Data Management",
+                "description": "Data Quality Check & Clinical Data Management"
+            },
+            {
+                "title": "Academic Achievements",
+                "description": "SCI Journal Publication & Domestic Conference Poster Presentation"
+            }
+        ]
+    },
+    "research": {
+        "title": "Research Highlights",
+        "projects": [
+            {
+                "title": "Multi-center RCT Management (MCI)",
+                "category": "Protocol Design & Operations",
+                "description": "Randomized Controlled Trial (RCT) to evaluate the effectiveness of the Zenicog® cognitive rehabilitation program in older adults with MCI (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
+            },
+            {
+                "title": "Digital Therapeutics Validation (Stroke)",
+                "category": "Clinical Efficacy Verification",
+                "description": "Randomized Controlled Trial (RCT) to evaluate the effectiveness of the Zenicog® cognitive rehabilitation program in subacute stroke patients (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
+            },
+            {
+                "title": "Digital Healthcare Demonstration",
+                "category": "Regulatory Affairs",
+                "description": "Q&A Session at MOHW/KHIDI Demonstration Project Interim Report & Response to Demonstration Research Inquiries"
+            }
+        ]
+    },
+    "innovation": {
+        "label": "Featured Innovation",
+        "title": "Generative AI-based Cognitive Intervention Framework",
+        "description": "The 'Hwiwasoo' project, co-founded with a PhD student in Applied Physics at Hokkaido University to address cognitive decline and digital exclusion in older adults. It implements a triple-agent (Coach-Teacher-Companion) system to create a Context-Adaptive Cognitive Flow in daily life, maximizing user engagement.",
+        "features": [
+            "Coach-Teacher-Companion Triple Agent",
+            "Context-Adaptive Cognitive Flow",
+            "Senior-friendly Digital Interface"
+        ],
+        "cta": "Hwiwasoo"
+    },
+    "publications": {
+        "title": "Selected Publications",
+        "posterTitle": "Conference Posters",
+        "roles": {
+            "first": "1st Author",
+            "co": "Co-author"
+        },
+        "items": [
+            {
+                "title": "AI-driven cognitive telerehabilitation for stroke: a randomized controlled trial",
+                "journal": "Frontiers in Neurology",
+                "date": "2025",
+                "role": "Co-author",
+                "status": "Published",
+                "doi": "https://doi.org/10.3389/fneur.2025.1636017",
+                "summary": "In a recent multicenter randomized controlled trial, AI-based cognitive telerehabilitation showed equivalent efficacy to traditional therapist-supervised cognitive rehabilitation.\n\n63 stroke patients in the subacute phase (within 6 months) were randomly assigned to two groups for a total of 24 sessions over 6 weeks. Both groups showed significant improvements in key cognitive indicators (K-MMSE2, TMT, Digit Span).\n\nUnsupervised **AI self-operated telerehabilitation demonstrated non-inferiority** compared to the therapist-led group, with high usability satisfaction.\n\nThese results suggest that AI cognitive rehabilitation platforms allowing real-time personalization and remote monitoring provide clinical value on par with conventional treatments."
+            },
+            {
+                "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
+                "journal": "MDPI Healthcare",
+                "date": "2025",
+                "role": "1st Author",
+                "status": "Published",
+                "doi": "https://www.mdpi.com/2227-9032/13/24/3225",
+                "summary": "Digital exclusion and technology anxiety remain significant barriers to the practical application of cognitive interventions for the elderly. This clinical protocol paper proposes a multi-agent generative AI framework with a Coach–Teacher–Companion (CTC) structure to address these limitations.\n\nThe framework is designed to naturally integrate cognitive training into daily life and provide simultaneous cognitive, behavioral, and emotional support through adaptive difficulty adjustment and emotional monitoring. It systematically presents methodological and ethical safeguards for clinical application, including assessments for digital literacy (MDPQ-16), technology anxiety (CARS), and emotional safety (PANAS).\n\nDesigned to evaluate **usability (SUS), user experience (UEQ-S), adherence, emotional stability, and key cognitive indicators (MMSE, TMT, Digit Span)** through a 6-week pilot feasibility study protocol (n=14), this study provide initial evidence for the structural feasibility of clinical application of generative AI-based cognitive intervention for the elderly."
+            },
+            {
+                "title": "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
+                "journal": "Annals of Rehabilitation Medicine",
+                "date": "2025",
+                "role": "Co-author",
+                "status": "Published",
+                "doi": "https://doi.org/10.5535/arm.250060",
+                "summary": "This preliminary study evaluates the clinical feasibility and usability of AI-based mobile cognitive telerehabilitation. 13 participants, including stroke patients and older adults with Mild Cognitive Impairment (MCI), underwent a 6-week, 24-session AI self-operated cognitive rehabilitation program.\n\nMMSE scores improved significantly compared to pre-intervention, with overall improvement trends in Digit Span and Trail Making Test. While product quality and satisfaction were high in the overall usability assessment, the 'tolerance for error' domain was relatively low, highlighting the need for UI/UX improvements considering the elderly and digitally vulnerable populations.\n\nThis study shows that AI-based cognitive telerehabilitation, feasible without constant therapist intervention, is safe and practicable in real clinical environments and has potential effects on cognitive function improvement. It is significant in presenting the importance of usability-centered design amidst the expansion of digital therapeutics and telerehabilitation."
+            },
+            {
+                "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults with Mild Cognitive Impairment: A pilot Study",
+                "journal": "Brain & Neurorehabilitation",
+                "date": "2026",
+                "role": "Co-author",
+                "status": "Accept"
+            },
+            {
+                "title": "AI-Driven Telerehabilitation for Older Adults with Mild Cognitive Impairment: A Randomized Controlled Trial",
+                "journal": "Frontiers in Neurology",
+                "date": "2026",
+                "role": "Co-author",
+                "status": "Submitted"
+            }
+        ]
+    },
+    "skills": {
+        "title": "Core Competencies",
+        "items": {
+            "clinical": "Clinical Trials",
+            "python": "Python",
+            "data": "Data Analysis",
+            "design": "Study Design",
+            "comm": "Communication",
+            "ai": "AI"
+        }
+    },
+    "contact": {
+        "title": "Connect",
+        "subtitle": "Interested in collaboration or have questions about my work?",
+        "footer": {
+            "rights": "© 2025 DTX Insight. All rights reserved.",
+            "tagline": "Clinical Research × AI Innovation"
+        }
+    }
+}
