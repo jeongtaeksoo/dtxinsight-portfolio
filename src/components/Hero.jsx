@@ -1,87 +1,98 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
+import { Download, ArrowRight } from 'lucide-react';
 import profileImg from '../assets/profile_id_photo.png';
 
 const Hero = () => {
     const { t } = useTranslation();
 
+    const stats = [
+        { label: t('hero.stat1Label'), value: t('hero.stat1Value') },
+        { label: t('hero.stat2Label'), value: t('hero.stat2Value') },
+        { label: t('hero.stat3Label'), value: t('hero.stat3Value') },
+    ];
+
     return (
-        <section className="relative min-h-screen flex items-center overflow-hidden py-20">
-            <div className="container mx-auto px-4 z-10 relative flex flex-col items-center justify-center gap-8">
+        <section className="pt-32 pb-16 md:pt-40 md:pb-24">
+            <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-16">
 
-                {/* Profile Image */}
+                {/* Left: Text */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                    className="relative"
+                    className="flex-1 text-center md:text-left"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.6 }}
                 >
-                    <div className="relative w-[200px] h-[200px] md:w-[280px] md:h-[280px]">
-                        {/* Glow Effect Behind */}
-                        <div className="absolute inset-0 bg-primary/30 blur-[60px] rounded-full scale-110 animate-pulse-slow"></div>
-
-                        {/* Image Container */}
-                        <div className="relative w-full h-full rounded-2xl md:rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl">
-                            <img
-                                src={profileImg}
-                                alt={t('hero.name') || "정택수"}
-                                className="w-full h-full object-cover object-top"
-                            />
-                            {/* Subtle Gradient Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"></div>
-                        </div>
-                    </div>
-                </motion.div>
-
-                {/* Profile Information */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.5 }}
-                    className="text-center max-w-2xl"
-                >
-                    {/* Name */}
-                    <h1 className="text-3xl md:text-5xl font-bold mb-4 text-white">
-                        {t('hero.name')}
-                    </h1>
-
-                    {/* Current Position */}
-                    <p className="text-lg md:text-xl text-muted mb-2">
-                        {t('hero.affiliation')}
-                    </p>
-
-                    {/* Credential */}
-                    <p className="text-base md:text-lg text-secondary font-medium mb-4">
+                    <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-3">
                         {t('hero.credential')}
                     </p>
 
-                    {/* Tagline */}
-                    <p className="text-base md:text-lg bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary font-semibold">
+                    <h1 className="text-4xl md:text-6xl font-bold text-text mb-2 leading-tight">
+                        {t('hero.name')}
+                    </h1>
+
+                    <p className="text-base md:text-lg text-muted mb-2">
+                        {t('hero.affiliation')}
+                    </p>
+
+                    <p className="text-base md:text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary mb-8">
                         {t('hero.tagline')}
                     </p>
 
-                    {/* Resume Download Link */}
-                    <a
-                        href="/RESUME.pdf"
-                        download="RESUME.pdf"
-                        className="mt-4 inline-block text-base md:text-lg text-primary hover:text-secondary transition-colors duration-300 underline underline-offset-4"
-                    >
-                        {t('hero.resume')}
-                    </a>
+                    {/* CTA Buttons */}
+                    <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-10">
+                        <a
+                            href="/RESUME.pdf"
+                            download="RESUME.pdf"
+                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors shadow-sm text-sm"
+                        >
+                            <Download size={15} />
+                            {t('hero.resume')}
+                        </a>
+                        <a
+                            href="#research"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                document.querySelector('#research')?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                            className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-text rounded-lg font-semibold hover:border-primary hover:text-primary transition-colors text-sm"
+                        >
+                            {t('hero.researchBtn')}
+                            <ArrowRight size={15} />
+                        </a>
+                    </div>
+
+                    {/* Stats Bar */}
+                    <div className="flex flex-wrap justify-center md:justify-start">
+                        {stats.map((stat, i) => (
+                            <div
+                                key={i}
+                                className={`px-5 py-3 ${i > 0 ? 'border-l border-border' : ''}`}
+                            >
+                                <p className="text-xl font-bold text-text">{stat.value}</p>
+                                <p className="text-xs text-muted mt-0.5">{stat.label}</p>
+                            </div>
+                        ))}
+                    </div>
+                </motion.div>
+
+                {/* Right: Profile Image */}
+                <motion.div
+                    className="flex-shrink-0"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.15 }}
+                >
+                    <div className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden border border-border shadow-md">
+                        <img
+                            src={profileImg}
+                            alt={t('hero.name')}
+                            className="w-full h-full object-cover object-top"
+                        />
+                    </div>
                 </motion.div>
             </div>
-
-            {/* Scroll Indicator */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5, duration: 1 }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/30 animate-pulse-slow"
-            >
-                <ChevronDown size={32} />
-            </motion.div>
         </section>
     );
 };

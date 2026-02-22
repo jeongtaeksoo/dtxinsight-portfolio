@@ -8,12 +8,11 @@ const ResearchProjects = () => {
     const projects = (t('research.projects', { returnObjects: true }) || []);
 
     return (
-        <section id="research" className="py-20 bg-background relative z-10">
-            <div className="container mx-auto px-4">
+        <section id="research" className="py-16">
+            <div>
                 <div className="flex items-center gap-4 mb-10">
-                    <h2 className="text-3xl font-bold">{t('research.title')}</h2>
-                    <div className="h-px flex-grow bg-gradient-to-r from-white/20 to-transparent"></div>
-
+                    <h2 className="text-3xl font-bold text-text">{t('research.title')}</h2>
+                    <div className="h-px flex-grow bg-gradient-to-r from-border to-transparent"></div>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -30,6 +29,7 @@ const ResearchProjects = () => {
                 </div>
             </div>
         </section>
+
     );
 };
 

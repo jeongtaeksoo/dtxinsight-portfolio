@@ -1,21 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0B0E1A;
-  --color-surface: #151B2B;
-  --color-primary: #7564FF;
-  --color-secondary: #29D3C8;
-  --color-text: #FFFFFF;
-  --color-muted: #B7C1D5;
-  --color-card: rgba(255, 255, 255, 0.05);
+  --color-background: #FAFAFA;
+  --color-surface:    #FFFFFF;
+  --color-primary:    #7564FF;
+  --color-secondary:  #0EA5E9;
+  --color-text:       #111827;
+  --color-muted:      #6B7280;
+  --color-border:     #E5E7EB;
+  --color-accent-bg:  #F3F0FF;
+  --color-card:       rgba(0, 0, 0, 0.03);
 
   --font-sans: 'Inter', sans-serif;
 
-  --animate-spin-slow: spin 20s linear infinite;
+  --animate-spin-slow:  spin 20s linear infinite;
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 
-  /* Custom Spacing */
-  --spacing-section: 140px;
+  --spacing-section: 120px;
 }
 
 @layer base {
@@ -23,29 +24,13 @@
     @apply bg-background text-text font-sans antialiased;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     @apply font-sans font-semibold text-text;
   }
 }
 
-/* Custom Scrollbar for "Research OS" feel */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-background;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-surface rounded-full;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-primary/50;
-}
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { @apply bg-background; }
+::-webkit-scrollbar-thumb { @apply bg-border rounded-full; }
+::-webkit-scrollbar-thumb:hover { @apply bg-primary/40; }

@@ -1,33 +1,46 @@
 import React from 'react';
-import { Code, Database, LineChart, Microscope, Stethoscope, Shield, MessageCircle, Brain } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Code, LineChart, Microscope, Stethoscope, MessageCircle, Brain } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import styles from './Skills.module.css';
+
+const skillDetails = [
+    { Icon: Stethoscope, key: 'clinical', desc: '다기관 RCT 운영 및 프로토콜 설계' },
+    { Icon: Code,        key: 'python',   desc: '데이터 처리 및 분석 스크립트 개발' },
+    { Icon: LineChart,   key: 'data',     desc: 'SPSS, Python 기반 임상 데이터 분석' },
+    { Icon: Microscope,  key: 'design',   desc: '임상시험 및 실증 연구 설계' },
+    { Icon: MessageCircle, key: 'comm',   desc: '다기관 이해관계자 조정 및 보고' },
+    { Icon: Brain,       key: 'ai',       desc: '생성형 AI 기반 디지털 치료제 연구' },
+];
 
 const Skills = () => {
     const { t } = useTranslation();
 
-    const skills = [
-        { icon: <Stethoscope size={28} strokeWidth={1.5} />, name: t('skills.items.clinical') },
-        { icon: <Code size={28} strokeWidth={1.5} />, name: t('skills.items.python') },
-        { icon: <LineChart size={28} strokeWidth={1.5} />, name: t('skills.items.data') },
-        { icon: <Microscope size={28} strokeWidth={1.5} />, name: t('skills.items.design') },
-        { icon: <MessageCircle size={28} strokeWidth={1.5} />, name: t('skills.items.comm') },
-        { icon: <Brain size={28} strokeWidth={1.5} />, name: t('skills.items.ai') }
-    ];
-
     return (
-        <section className={styles.skills}>
-            <div className={`container ${styles.container}`}>
-                <h2 className={styles.sectionTitle}>{t('skills.title')}</h2>
+        <section className="py-16">
+            <div className="flex items-center gap-4 mb-10">
+                <h2 className="text-3xl font-bold text-text">{t('skills.title')}</h2>
+                <div className="h-px flex-grow bg-gradient-to-r from-border to-transparent" />
+            </div>
 
-                <div className={styles.grid}>
-                    {skills.map((skill, index) => (
-                        <div key={index} className={styles.skillCard}>
-                            <div className={styles.icon}>{skill.icon}</div>
-                            <span className={styles.name}>{skill.name}</span>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {skillDetails.map(({ Icon, key, desc }, index) => (
+                    <motion.div
+                        key={key}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: index * 0.07 }}
+                        className="flex items-start gap-4 p-5 bg-surface border border-border rounded-xl hover:border-primary transition-colors"
+                    >
+                        <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent-bg flex items-center justify-center">
+                            <Icon size={20} className="text-primary" strokeWidth={1.5} />
                         </div>
-                    ))}
-                </div>
+                        <div>
+                            <p className="font-semibold text-text text-sm">{t(`skills.items.${key}`)}</p>
+                            <p className="text-xs text-muted mt-0.5 leading-relaxed">{desc}</p>
+                        </div>
+                    </motion.div>
+                ))}
             </div>
         </section>
     );

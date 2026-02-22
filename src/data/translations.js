@@ -8,11 +8,19 @@ export const translations = {
             contact: '연락처'
         },
         hero: {
-            title: '임상연구 코디네이터',
-            titleHighlight: '& AI 디지털헬스 연구원',
-            subtitle: '임상시험 운영 관리와 AI 기반 디지털 치료제 연구를 통해 헬스케어 혁신을 주도합니다. 가톨릭관동대학교 국제성모병원 재활의학과에서 3.9억 원 규모의 다기관 R&D 프로젝트를 관리하고 있습니다.',
+            name: '정택수',
+            affiliation: '가톨릭관동대학교 국제성모병원 재활의학과',
+            credential: 'RN · 임상연구 코디네이터',
+            tagline: '임상연구 × AI 디지털헬스 혁신',
+            resume: '이력서 다운로드',
+            stat1Label: 'R&D 규모',
+            stat1Value: '3.9억 KRW',
+            stat2Label: 'SCI 논문',
+            stat2Value: '게재 완료',
+            stat3Label: '다기관 임상시험',
+            stat3Value: '총괄 경험',
             contactBtn: '연락하기',
-            researchBtn: '연구 보기'
+            researchBtn: '연구 보기',
         },
         about: {
             title: '철학 & 접근법',
@@ -83,11 +91,19 @@ export const translations = {
             contact: 'Contact'
         },
         hero: {
-            title: 'Clinical Research Coordinator',
-            titleHighlight: '& AI Digital Health Researcher',
-            subtitle: 'Leading healthcare innovation through clinical trial management and AI-based digital therapeutics research. Managing a multi-center R&D project worth 390 million KRW at the Department of Rehabilitation Medicine, International St. Mary\'s Hospital.',
+            name: 'Taeksoo Jeong',
+            affiliation: 'Dept. of Rehabilitation Medicine, International St. Mary\'s Hospital, CKU',
+            credential: 'RN · Clinical Research Coordinator',
+            tagline: 'Clinical Research × AI Digital Health Innovation',
+            resume: 'Download Resume',
+            stat1Label: 'R&D Scale',
+            stat1Value: '390M KRW',
+            stat2Label: 'SCI Publication',
+            stat2Value: 'Published',
+            stat3Label: 'Multi-center RCT',
+            stat3Value: 'Managed',
             contactBtn: 'Contact Me',
-            researchBtn: 'View Research'
+            researchBtn: 'View Research',
         },
         about: {
             title: 'Philosophy & Approach',
@@ -158,11 +174,19 @@ export const translations = {
             contact: '連絡先'
         },
         hero: {
-            title: '臨床研究コーディネーター',
-            titleHighlight: '＆ AIデジタルヘルス研究員',
-            subtitle: '臨床試験の運営管理とAIベースのデジタル治療薬研究を通じて、ヘルスケアの革新を主導しています。カトリック関東大学国際聖母病院のリハビリテーション医学科で、3.9億ウォン規模の多機関R&Dプロジェクトを管理しています。',
+            name: '鄭澤洙 (ジョン・テクス)',
+            affiliation: 'カトリック関東大学国際聖母病院 リハビリテーション医学科',
+            credential: 'RN · 臨床研究コーディネーター',
+            tagline: '臨床研究 × AIデジタルヘルス革新',
+            resume: '履歴書をダウンロード',
+            stat1Label: 'R&D規模',
+            stat1Value: '3.9億ウォン',
+            stat2Label: 'SCI論文',
+            stat2Value: '掲載完了',
+            stat3Label: '多機関RCT',
+            stat3Value: '管理経験',
             contactBtn: 'お問い合わせ',
-            researchBtn: '研究を見る'
+            researchBtn: '研究を見る',
         },
         about: {
             title: '哲学とアプローチ',
