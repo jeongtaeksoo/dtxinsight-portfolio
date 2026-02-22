@@ -12,8 +12,8 @@ function App() {
       <Hero />
       <NarrativeScroll />
       <ResearchProjects />
-      <DigitalHealthProjects />
       <Publications />
+      <DigitalHealthProjects />
       <Skills />
     </Layout>
   );
