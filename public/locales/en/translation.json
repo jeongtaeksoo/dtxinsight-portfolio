@@ -21,34 +21,17 @@
         "stat2Value": "5",
         "stat2Label": "SCI/ESCI/KCI Papers (Incl. Submissions)"
     },
-    "journey": {
-        "title": "My Career Journey",
-        "subtitle": "Nurse → Clinical Research → AI Digital Health",
-        "steps": [
-            {
-                "id": "nursing",
-                "icon": "Stethoscope",
-                "title": "Identifying the Problem at the Bedside",
-                "desc": "As a nurse, working on the ward left me with one persistent question:\n\"Can patients continue their rehabilitation after discharge?\"\nThe technology existed, but there was a missing bridge between clinical validation and real-world user experience."
-            },
-            {
-                "id": "crc",
-                "icon": "Microscope",
-                "title": "Designing a 390M KRW R&D Program",
-                "desc": "As a CRC at International St. Mary's Hospital, I led a multi-center RCT for an AI-based digital cognitive rehabilitation program from the ground up.\nIRB approval, CRIS registration, participant recruitment, budget management, and cross-disciplinary coordination with physicians, nurses, and therapists — I operated the full clinical research lifecycle."
-            },
-            {
-                "id": "innovation",
-                "icon": "Lightbulb",
-                "title": "Co-designing an AI Framework",
-                "desc": "I co-founded the 'Hwiwasoo' project with a PhD researcher in Applied Physics at Hokkaido University.\nWe designed a Coach-Teacher-Companion triple-agent system enabling older adults to engage in cognitive training naturally in daily life. The result was published in MDPI Healthcare as co-first author."
-            },
-            {
-                "id": "validation",
-                "icon": "BarChart3",
-                "title": "Closing the Loop with Evidence",
-                "desc": "Ideas are only as good as their evidence.\nThrough 5 papers (published, accepted, and submitted) in Frontiers in Neurology, Annals of Rehabilitation Medicine, and MDPI Healthcare, I have validated the clinical efficacy of AI-based digital rehabilitation."
-            }
+    "timeline": {
+        "title": "Career Timeline",
+        "subtitle": "Key Milestones",
+        "items": [
+            { "date": "2023.02", "title": "Registered Nurse License (Korea)", "note": null },
+            { "date": "2024.01", "title": "Joined International St. Mary's Hospital as CRC", "note": null },
+            { "date": "2024.08", "title": "Conference Poster Presentations × 2 (KOSCOPP)", "note": null },
+            { "date": "2025.08", "title": "Published in Frontiers in Neurology (Co-author)", "note": null },
+            { "date": "2025.12", "title": "Published in MDPI Healthcare (Co-first Author)", "note": "Hwiwasoo Project — Co-founded with a PhD researcher at Hokkaido University. A generative AI cognitive training framework for older adults." },
+            { "date": "2025.12", "title": "Published in Annals of Rehabilitation Medicine (Co-author)", "note": null },
+            { "date": "2026", "title": "Brain & Neurorehabilitation (Accepted) + Frontiers in Neurology (Submitted)", "note": null }
         ]
     },
     "about": {

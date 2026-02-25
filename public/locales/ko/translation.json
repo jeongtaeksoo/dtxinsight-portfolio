@@ -21,34 +21,17 @@
         "stat2Value": "5편",
         "stat2Label": "SCI·ESCI·KCI 논문(투고 포함)"
     },
-    "journey": {
-        "title": "나의 커리어 여정",
-        "subtitle": "간호사 → 임상연구 → AI 디지털헬스",
-        "steps": [
-            {
-                "id": "nursing",
-                "icon": "Stethoscope",
-                "title": "임상 현장에서 문제를 발견하다",
-                "desc": "간호사로서 병동에서 보낸 시간은 제게 하나의 물음을 남겼습니다.\n\"환자는 퇴원 이후에도 재활을 이어갈 수 있을까?\"\n기술적 가능성은 있었지만, 임상적 검증과 사용자 경험을 연결하는 다리가 부족했습니다."
-            },
-            {
-                "id": "crc",
-                "icon": "Microscope",
-                "title": "3.9억 원 규모 R&D를 설계하다",
-                "desc": "가톨릭관동대 국제성모병원에서 CRC로 일하며, AI 기반 디지털 인지훈련 치료제의 다기관 RCT를 처음부터 끝까지 주도했습니다.\nIRB 심의, CRIS 등록, 대상자 모집·관리, 연구비 집행, 교수진·간호사·치료사 다직종 협업 — 임상연구의 전 주기를 직접 운영했습니다."
-            },
-            {
-                "id": "innovation",
-                "icon": "Lightbulb",
-                "title": "AI 프레임워크를 공동 설계하다",
-                "desc": "홋카이도대학교 응용물리학 박사과정 연구자와 함께 '휘와수' 프로젝트를 공동 창시했습니다.\nCoach-Teacher-Companion 3중 에이전트 구조를 통해 고령자가 일상 속에서 자연스럽게 인지훈련을 이어갈 수 있도록 설계했으며, 그 결과를 MDPI Healthcare에 공동 제1저자로 게재했습니다."
-            },
-            {
-                "id": "validation",
-                "icon": "BarChart3",
-                "title": "논문으로 검증하다",
-                "desc": "아이디어로 끝나지 않기 위해, 모든 연구는 데이터로 닫습니다.\nFrontiers in Neurology, Annals of Rehabilitation Medicine, MDPI Healthcare 등에 5편의 논문(게재·게재예정·투고 포함)을 통해 AI 디지털 재활의 임상적 유효성을 검증했습니다."
-            }
+    "timeline": {
+        "title": "커리어 타임라인",
+        "subtitle": "주요 성과 및 이정표",
+        "items": [
+            { "date": "2023.02", "title": "간호사 면허 취득 (보건복지부)", "note": null },
+            { "date": "2024.01", "title": "가톨릭관동대 국제성모병원 CRC 입사", "note": null },
+            { "date": "2024.08", "title": "대한재활의학회 추계 포스터 2편 발표", "note": null },
+            { "date": "2025.08", "title": "Frontiers in Neurology 게재 (공저)", "note": null },
+            { "date": "2025.12", "title": "MDPI Healthcare 게재 (공동 제1저자)", "note": "휘와수(Hwiwasoo) 프로젝트 — 홋카이도대학교 연구자와 공동 창시한 고령자 AI 인지훈련 프레임워크" },
+            { "date": "2025.12", "title": "Annals of Rehabilitation Medicine 게재 (공저)", "note": null },
+            { "date": "2026", "title": "Brain & Neurorehabilitation Accept + Frontiers in Neurology 투고 중", "note": null }
         ]
     },
     "about": {

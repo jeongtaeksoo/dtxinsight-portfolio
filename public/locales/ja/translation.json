@@ -21,34 +21,17 @@
         "stat2Value": "5本",
         "stat2Label": "SCI・ESCI・KCI論文（投稿含む）"
     },
-    "journey": {
-        "title": "私のキャリアの歩み",
-        "subtitle": "看護師 → 臨床研究 → AIデジタルヘルス",
-        "steps": [
-            {
-                "id": "nursing",
-                "icon": "Stethoscope",
-                "title": "臨床現場で問題を発見する",
-                "desc": "看護師として病棟で過ごした時間は、私に一つの問いを残しました。\n「患者は退院後もリハビリを続けられるのか？」\n技術的な可能性はありましたが、臨床的検証とユーザー体験をつなぐ橋が不足していました。"
-            },
-            {
-                "id": "crc",
-                "icon": "Microscope",
-                "title": "3.9億ウォン規模のR&Dを設計する",
-                "desc": "カトリック関東大学国際聖母病院でCRCとして、AIベースのデジタル認知訓練治療薬の多施設RCTを最初から最後まで主導しました。\nIRB審議、CRIS登録、参加者募集・管理、研究費執行、教授・看護師・療法士との多職種連携 — 臨床研究の全サイクルを直接運営しました。"
-            },
-            {
-                "id": "innovation",
-                "icon": "Lightbulb",
-                "title": "AIフレームワークを共同設計する",
-                "desc": "北海道大学応用物理学専攻の博士課程研究者と共に「휘와수(Hwiwasoo)」プロジェクトを共同創設しました。\nCoach-Teacher-Companion 3重エージェント構造を通じて、高齢者が日常生活の中で自然に認知訓練を継続できるよう設計し、その成果をMDPI Healthcareに共同第1著者として発表しました。"
-            },
-            {
-                "id": "validation",
-                "icon": "BarChart3",
-                "title": "論文でエビデンスを示す",
-                "desc": "アイデアだけで終わらせないために、すべての研究はデータで締めくくります。\nFrontiers in Neurology、Annals of Rehabilitation Medicine、MDPI Healthcareなどに5本の論文（掲載済み・受理済み・投稿中を含む）を通じて、AIデジタルリハビリテーションの臨床的有効性を検証しました。"
-            }
+    "timeline": {
+        "title": "キャリアタイムライン",
+        "subtitle": "主要マイルストーン",
+        "items": [
+            { "date": "2023.02", "title": "看護師免許取得（韓国）", "note": null },
+            { "date": "2024.01", "title": "カトリック関東大学国際聖母病院 CRC着任", "note": null },
+            { "date": "2024.08", "title": "大韓リハビリテーション医学会秋季 ポスター発表2件", "note": null },
+            { "date": "2025.08", "title": "Frontiers in Neurology 掲載（共著）", "note": null },
+            { "date": "2025.12", "title": "MDPI Healthcare 掲載（共同第1著者）", "note": "휘와수(Hwiwasoo)プロジェクト — 北海道大学の研究者と共同創設した高齢者向けAI認知訓練フレームワーク" },
+            { "date": "2025.12", "title": "Annals of Rehabilitation Medicine 掲載（共著）", "note": null },
+            { "date": "2026", "title": "Brain & Neurorehabilitation 受理 + Frontiers in Neurology 投稿中", "note": null }
         ]
     },
     "about": {
