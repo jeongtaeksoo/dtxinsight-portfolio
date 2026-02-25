@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { Search, Lightbulb, Cog, BarChart3 } from 'lucide-react';
+import { Search, Lightbulb, Cog, BarChart3, Stethoscope, Microscope } from 'lucide-react';
 
-const iconMap = { Search, Lightbulb, Cog, BarChart3 };
-const defaultIcons = [Search, Lightbulb, Cog, BarChart3];
+const iconMap = { Search, Lightbulb, Cog, BarChart3, Stethoscope, Microscope };
+const defaultIcons = [Stethoscope, Microscope, Lightbulb, BarChart3];
 
 const defaultSteps = [
     {

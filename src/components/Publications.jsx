@@ -15,14 +15,13 @@ const statusStyle = (status) => {
     return 'bg-yellow-50 text-yellow-700 border border-yellow-200';
 };
 
-const innovationFeatureTitles = ['Context-Aware', 'Multi-Modal', 'Evidence-Based'];
-
 const Publications = () => {
     const { t } = useTranslation();
     const [selectedPoster, setSelectedPoster] = useState(null);
     const [selectedPaper, setSelectedPaper] = useState(null);
 
     const publications = t('publications.items', { returnObjects: true }) || [];
+    const innovationFeatureTitles = t('publications.innovationFeatureTitles', { returnObjects: true }) || ['Context-Aware', 'Multi-Modal', 'Evidence-Based'];
     const innovationFeatures = t('innovation.features', { returnObjects: true }) || [];
 
     const posters = [
@@ -245,7 +244,7 @@ const Publications = () => {
                                         </div>
                                     ) : (
                                         <div className="text-center py-8 text-muted text-sm italic">
-                                            Summary coming soon.
+                                            {t('publications.summaryComingSoon')}
                                         </div>
                                     )}
 
@@ -254,7 +253,7 @@ const Publications = () => {
                                             onClick={() => setSelectedPaper(null)}
                                             className="px-6 py-2 bg-gray-100 hover:bg-gray-200 text-text text-xs rounded-lg transition-colors border border-border font-semibold"
                                         >
-                                            닫기
+                                            {t('publications.closeBtn')}
                                         </button>
                                     </div>
                                 </div>

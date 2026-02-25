@@ -60,6 +60,16 @@ const Hero = () => {
                             {t('hero.researchBtn')}
                             <ArrowRight size={15} />
                         </a>
+                        <a
+                            href="#contact"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                            className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary/10 text-primary rounded-lg font-semibold hover:bg-primary/20 transition-colors text-sm"
+                        >
+                            {t('hero.contactBtn')}
+                        </a>
                     </div>
 
                     {/* Stats Bar */}

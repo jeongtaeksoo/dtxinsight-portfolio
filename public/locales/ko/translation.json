@@ -21,32 +21,32 @@
         "stat2Label": "SCI·ESCI·KCI 논문(투고 포함)"
     },
     "journey": {
-        "title": "My Research Journey",
-        "subtitle": "문제 인식에서 혁신까지",
+        "title": "나의 커리어 여정",
+        "subtitle": "간호사 → 임상연구 → AI 디지털헬스",
         "steps": [
             {
-                "id": "problem",
-                "icon": "Search",
-                "title": "문제 인식 (Problem Identification)",
-                "desc": "저는 어떤 프로젝트든 먼저 현장의 흐름과 이해관계자의 어려움을 관찰하는 것에서 시작합니다.\n데이터, 프로세스, 사용자 경험에서 드러나는 비효율을 정리하여\n\"정확히 무엇을 해결해야 하는가?\"를 명확히 규정합니다."
+                "id": "nursing",
+                "icon": "Stethoscope",
+                "title": "임상 현장에서 문제를 발견하다",
+                "desc": "간호사로서 병동에서 보낸 시간은 제게 하나의 물음을 남겼습니다.\n\"환자는 퇴원 이후에도 재활을 이어갈 수 있을까?\"\n기술적 가능성은 있었지만, 임상적 검증과 사용자 경험을 연결하는 다리가 부족했습니다."
             },
             {
-                "id": "hypothesis",
+                "id": "crc",
+                "icon": "Microscope",
+                "title": "3.9억 원 규모 R&D를 설계하다",
+                "desc": "가톨릭관동대 국제성모병원에서 CRC로 일하며, AI 기반 디지털 인지훈련 치료제의 다기관 RCT를 처음부터 끝까지 주도했습니다.\nIRB 심의, CRIS 등록, 대상자 모집·관리, 연구비 집행, 교수진·간호사·치료사 다직종 협업 — 임상연구의 전 주기를 직접 운영했습니다."
+            },
+            {
+                "id": "innovation",
                 "icon": "Lightbulb",
-                "title": "구조화·가설 설정 (Hypothesis & Structuring)",
-                "desc": "문제를 단순히 나열하는 것이 아니라,\n원인–과정–결과의 구조로 재해석해 검증 가능한 가설을 만듭니다.\n이 단계에서 임상적 통찰·데이터 패턴·운영적 제약을 모두 반영하여\n현실적인 방향성과 목표를 설정합니다."
+                "title": "AI 프레임워크를 공동 설계하다",
+                "desc": "홋카이도대학교 응용물리학 박사과정 연구자와 함께 '휘와수' 프로젝트를 공동 창시했습니다.\nCoach-Teacher-Companion 3중 에이전트 구조를 통해 고령자가 일상 속에서 자연스럽게 인지훈련을 이어갈 수 있도록 설계했으며, 그 결과를 MDPI Healthcare에 공동 제1저자로 게재했습니다."
             },
             {
-                "id": "solution",
-                "icon": "Cog",
-                "title": "솔루션 설계 및 실행 (Solution Design & Execution)",
-                "desc": "프로젝트 목적에 따라 다음 요소들을 통합적으로 설계합니다.\n\n• 임상시험 운영 및 데이터 흐름 구조\n• 사용자 경험을 고려한 디지털 인터페이스\n• AI/자동화 모델 설계 및 적용\n• 조직 내 협업 및 커뮤니케이션 플로우\n• 프로세스 최적화 및 오류 예방 시스템\n\n중요한 점은 단순한 아이디어가 아니라\n실제 현장에서 작동하는 구조를 만든다는 점입니다."
-            },
-            {
-                "id": "impact",
+                "id": "validation",
                 "icon": "BarChart3",
-                "title": "성과 검증 및 개선 (Impact Validation)",
-                "desc": "솔루션의 효과를 데이터로 검증하고, 정량·정성 평가를 기반으로 개선 사항을 도출합니다.\n\n• 사용자·환자·의료진 피드백\n• 프로세스 안정성 평가\n• 재현성과 확장성 검토\n\n프로젝트가 \"완료되는 것\"이 아니라\n조직에 지속적인 가치를 만드는 것을 목표로 합니다."
+                "title": "논문으로 검증하다",
+                "desc": "아이디어로 끝나지 않기 위해, 모든 연구는 데이터로 닫습니다.\nFrontiers in Neurology, Annals of Rehabilitation Medicine, MDPI Healthcare 등에 5편의 논문(게재·게재예정·투고 포함)을 통해 AI 디지털 재활의 임상적 유효성을 검증했습니다."
             }
         ]
     },
@@ -89,9 +89,9 @@
                 "description": "아급성기 뇌졸중 환자 대상 Zenicog® 인지재활 프로그램의 효과 검증을 위한 무작위 대조 연구(RCT) (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
             },
             {
-                "title": "디지털 헬스케어 실증",
-                "category": "규제 업무",
-                "description": "보건복지부·한국보건산업진흥원 실증사업 중간보고회 Q&A 세션 진행 및 실증 연구 관련 질의응답 대응"
+                "title": "정부 디지털 헬스케어 실증사업 발표",
+                "category": "규제·정책 대응",
+                "description": "보건복지부 첨단의료지원관 국장·의료정보정책과장·한국보건산업진흥원 바이오헬스혁신본부장 등 국책 주요 인사 대상 실증사업 중간보고 Q&A 세션 주도 — 임상연구 성과를 정책 결정자에게 직접 발표"
             }
         ]
     },
@@ -109,6 +109,9 @@
     "publications": {
         "title": "주요 논문",
         "posterTitle": "학회 포스터",
+        "innovationFeatureTitles": ["맥락 인식", "멀티모달", "근거 기반"],
+        "closeBtn": "닫기",
+        "summaryComingSoon": "요약 준비 중입니다.",
         "roles": {
             "first": "제1저자",
             "co": "공저자"
@@ -127,7 +130,7 @@
                 "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
                 "journal": "MDPI Healthcare",
                 "date": "2025",
-                "role": "제1저자",
+                "role": "공동 제1저자",
                 "status": "게재 완료",
                 "doi": "https://www.mdpi.com/2227-9032/13/24/3225",
                 "summary": "디지털 소외(digital exclusion)와 기술 불안으로 인해 고령층 인지중재의 실제 적용에는 여전히 높은 진입 장벽이 존재합니다. 본 연구는 이러한 한계를 해결하기 위해 Coach–Teacher–Companion(CTC) 구조의 다중 에이전트 생성형 AI 프레임워크를 제안하는 임상 프로토콜 논문입니다.\n\n본 프레임워크는 일상생활에 자연스럽게 인지 훈련을 통합하고, 적응형 난이도 조절과 정서 모니터링을 통해 인지·행동·정서 지원을 동시에 제공하도록 설계되었습니다. 특히 디지털 리터러시(MDPQ-16), 기술 불안(CARS), 정서 안전성(PANAS) 평가를 포함한 임상 적용을 위한 방법론적·윤리적 안전장치를 체계적으로 제시합니다.\n\n6주간의 파일럿 타당성 연구 프로토콜(n=14)을 통해 **사용성(SUS), 사용자 경험(UEQ-S), 순응도, 정서 안정성, 주요 인지 지표(MMSE, TMT, Digit Span)**를 평가하도록 설계되었으며, 본 연구는 고령층 대상 생성형 AI 기반 인지중재의 임상 적용 가능성을 구조적으로 제시하는 초기 근거를 제공합니다."
@@ -161,18 +164,18 @@
         "title": "핵심 역량",
         "items": {
             "clinical": "임상시험",
-            "vibecording": "Vibecording",
+            "vibecording": "AI 프로토타이핑",
             "data": "데이터 분석",
             "design": "연구 설계",
-            "comm": "커뮤니케이션",
+            "comm": "논문 작성 & 학회 발표",
             "ai": "AI"
         },
         "descriptions": {
             "clinical": "다기관 RCT 운영 및 프로토콜 설계",
-            "vibecording": "바이브코딩 기반 프로토타이핑 및 자동화 구현",
+            "vibecording": "AI 기반 임상 도구 신속 프로토타이핑 (Vite, React, Python)",
             "data": "SPSS, Python 기반 임상 데이터 분석",
             "design": "임상시험 및 실증 연구 설계",
-            "comm": "다기관 이해관계자 조정 및 보고",
+            "comm": "SCI·ESCI·KCI 논문(투고 포함) 작성 및 학회 포스터 발표",
             "ai": "생성형 AI 기반 디지털 치료제 연구"
         }
     },

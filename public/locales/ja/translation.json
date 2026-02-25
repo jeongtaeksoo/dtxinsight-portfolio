@@ -21,32 +21,32 @@
         "stat2Label": "SCI・ESCI・KCI論文（投稿含む）"
     },
     "journey": {
-        "title": "My Research Journey",
-        "subtitle": "問題認識からイノベーションへ",
+        "title": "私のキャリアの歩み",
+        "subtitle": "看護師 → 臨床研究 → AIデジタルヘルス",
         "steps": [
             {
-                "id": "problem",
-                "icon": "Search",
-                "title": "問題認識（Problem Identification）",
-                "desc": "私はどんなプロジェクトでも、まず現場の流れとステークホルダーの課題を観察することから始めます。\nデータ、プロセス、ユーザー体験における非効率を整理し、\n「正確に何を解決すべきか？」を明確に定義します。"
+                "id": "nursing",
+                "icon": "Stethoscope",
+                "title": "臨床現場で問題を発見する",
+                "desc": "看護師として病棟で過ごした時間は、私に一つの問いを残しました。\n「患者は退院後もリハビリを続けられるのか？」\n技術的な可能性はありましたが、臨床的検証とユーザー体験をつなぐ橋が不足していました。"
             },
             {
-                "id": "hypothesis",
+                "id": "crc",
+                "icon": "Microscope",
+                "title": "3.9億ウォン規模のR&Dを設計する",
+                "desc": "カトリック関東大学国際聖母病院でCRCとして、AIベースのデジタル認知訓練治療薬の多施設RCTを最初から最後まで主導しました。\nIRB審議、CRIS登録、参加者募集・管理、研究費執行、教授・看護師・療法士との多職種連携 — 臨床研究の全サイクルを直接運営しました。"
+            },
+            {
+                "id": "innovation",
                 "icon": "Lightbulb",
-                "title": "構造化・仮説設定（Hypothesis & Structuring）",
-                "desc": "問題を単にリストアップするのではなく、\n原因–過程–結果の構造で再解釈し、検証可能な仮説を作ります。\nこの段階で臨床的洞察・データパターン・運営上の制約をすべて反映し、\n現実的な方向性と目標を設定します。"
+                "title": "AIフレームワークを共同設計する",
+                "desc": "北海道大学応用物理学専攻の博士課程研究者と共に「휘와수(Hwiwasoo)」プロジェクトを共同創設しました。\nCoach-Teacher-Companion 3重エージェント構造を通じて、高齢者が日常生活の中で自然に認知訓練を継続できるよう設計し、その成果をMDPI Healthcareに共同第1著者として発表しました。"
             },
             {
-                "id": "solution",
-                "icon": "Cog",
-                "title": "ソリューション設計・実行（Solution Design & Execution）",
-                "desc": "プロジェクトの目的に応じて、以下の要素を統合的に設計します。\n\n• 臨床試験運営およびデータフロー構造\n• ユーザー体験を考慮したデジタルインターフェース\n• AI/自動化モデルの設計と適用\n• 組織内協業およびコミュニケーションフロー\n• プロセス最適化およびエラー予防システム\n\n重要なのは、単なるアイデアではなく、\n現場で実際に機能する構造を作ることです。"
-            },
-            {
-                "id": "impact",
+                "id": "validation",
                 "icon": "BarChart3",
-                "title": "成果検証・改善（Impact Validation）",
-                "desc": "ソリューションの効果をデータで検証し、定量・定性評価に基づいて改善点を導き出します。\n\n• 統計および指標基盤の分析\n• ユーザー・患者・医療従事者のフィードバック\n• プロセス安定性評価\n• 再現性と拡張性の検討\n\nプロジェクトが「完了する」ことではなく、\n組織に持続的な価値を生み出すことを目標としています。"
+                "title": "論文でエビデンスを示す",
+                "desc": "アイデアだけで終わらせないために、すべての研究はデータで締めくくります。\nFrontiers in Neurology、Annals of Rehabilitation Medicine、MDPI Healthcareなどに5本の論文（掲載済み・受理済み・投稿中を含む）を通じて、AIデジタルリハビリテーションの臨床的有効性を検証しました。"
             }
         ]
     },
@@ -89,9 +89,9 @@
                 "description": "亜急性期脳卒中患者を対象としたZenicog®認知リハビリテーションプログラムの効果を検証するためのランダム化比較試験（RCT） (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
             },
             {
-                "title": "デジタルヘルスケア実証",
-                "category": "規制業務",
-                "description": "保健福祉部・韓国保健産業振興院の実証事業中間報告会Q&Aセッション進行および実証研究関連の質疑応答対応"
+                "title": "政府デジタルヘルスケア実証事業発表",
+                "category": "規制・政策対応",
+                "description": "保健福祉部先端医療支援官局長・医療情報政策課長・韓国保健産業振興院バイオヘルス革新本部長等の国策主要人士を対象とした実証事業中間報告Q&Aセッションを主導 — 臨床研究成果を政策立案者に直接発表"
             }
         ]
     },
@@ -109,6 +109,9 @@
     "publications": {
         "title": "主な論文",
         "posterTitle": "学会ポスター",
+        "innovationFeatureTitles": ["コンテキスト認識", "マルチモーダル", "エビデンスベース"],
+        "closeBtn": "閉じる",
+        "summaryComingSoon": "要約を準備中です。",
         "roles": {
             "first": "第1著者",
             "co": "共著者"
@@ -127,7 +130,7 @@
                 "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
                 "journal": "MDPI Healthcare",
                 "date": "2025",
-                "role": "第1著者",
+                "role": "共同第1著者",
                 "status": "掲載完了",
                 "doi": "https://www.mdpi.com/2227-9032/13/24/3225",
                 "summary": "デジタル格差（digital exclusion）とテクノロジー不安により、高齢者の認知介入の実際の適用には依然として高い障壁が存在します。本研究は、これらの限界を解決するために、Coach–Teacher–Companion（CTC）構造のマルチエージェント生成AIフレームワークを提案する臨床プロトコル論文です。\n\n本フレームワークは、日常生活に自然に認知訓練を統合し、適応型の難易度調整と感情モニタリングを通じて、認知・行動・感情のサポートを同時に提供するように設計されています。特に、デジタルリテラシー（MDPQ-16）、テクノロジー不安（CARS）、感情的安全性（PANAS）の評価を含む、臨床適用のための方法論적・倫理的な安全策を体系的に提示しています。\n\n6週間のパイロット妥当性研究プロトコル（n=14）を通じて、**ユーザビリティ（SUS）、ユーザーエクスペリエンス（UEQ-S）、アドヒアランス、感情の安定性、主要な認知指標（MMSE, TMT, Digit Span）**を評価するように設計されており、本研究は高齢者向けの生成AIベースの認知介入の臨床適用の可能性を構造的に提示する初期の根拠を提供します。"
@@ -161,18 +164,18 @@
         "title": "コアコンピタンス",
         "items": {
             "clinical": "臨床試験",
-            "vibecording": "Vibecording",
+            "vibecording": "AIプロトタイピング",
             "data": "データ分析",
             "design": "研究設計",
-            "comm": "コミュニケーション",
+            "comm": "論文執筆・学会発表",
             "ai": "AI"
         },
         "descriptions": {
             "clinical": "多機関RCTの運営およびプロトコル設計",
-            "vibecording": "Vibecordingベースのプロトタイピングと自動化の実装",
+            "vibecording": "Vite・React・PythonによるAI支援臨床ツールの高速プロトタイピング",
             "data": "SPSSおよびPythonベースの臨床データ分析",
             "design": "臨床試験および実証研究の設計",
-            "comm": "多機関ステークホルダーの調整および報告",
+            "comm": "SCI・ESCI・KCI論文（投稿含む）執筆および学会ポスター発表",
             "ai": "生成AIベースのデジタル治療薬研究"
         }
     },

@@ -1,20 +1,17 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import styles from './About.module.css';
 
 const About = () => {
     const { t } = useTranslation();
     return (
-        <section id="about" className={styles.about}>
-            <div className={`container ${styles.container}`}>
-                <h2 className={styles.title}>{t('about.title')}</h2>
-                <div className={styles.divider}></div>
-                <p className={styles.description}>
-                    {t('about.description1')}
-                </p>
-                <p className={styles.description}>
-                    {t('about.description2')}
-                </p>
+        <section id="about" className="py-16 border-t border-border">
+            <div className="flex items-center gap-4 mb-10">
+                <h2 className="text-3xl font-bold text-text">{t('about.title')}</h2>
+                <div className="h-px flex-grow bg-gradient-to-r from-border to-transparent" />
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+                <p className="text-muted leading-relaxed text-sm">{t('about.description1')}</p>
+                <p className="text-muted leading-relaxed text-sm">{t('about.description2')}</p>
             </div>
         </section>
     );

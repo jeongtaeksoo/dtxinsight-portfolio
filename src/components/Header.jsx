@@ -23,9 +23,10 @@ const Header = () => {
     };
 
     const navLinks = [
-        { name: t('nav.about'), href: '#top' },
+        { name: t('nav.about'), href: '#about' },
         { name: t('nav.research'), href: '#research' },
         { name: t('nav.publications'), href: '#publications' },
+        { name: t('nav.innovation'), href: '#innovation' },
         { name: t('nav.contact'), href: '#contact' },
     ];
 
@@ -44,8 +45,8 @@ const Header = () => {
 
     const languages = [
         { code: 'en', label: 'EN' },
-        { code: 'jp', label: '日本語' },
-        { code: 'ko', label: 'KR' },
+        { code: 'ja', label: 'JA' },
+        { code: 'ko', label: 'KO' },
     ];
 
     const menuVariants = {

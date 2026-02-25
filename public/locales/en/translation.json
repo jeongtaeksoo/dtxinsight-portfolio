@@ -21,32 +21,32 @@
         "stat2Label": "SCI/ESCI/KCI Papers (Incl. Submissions)"
     },
     "journey": {
-        "title": "My Research Journey",
-        "subtitle": "From Identification to Innovation",
+        "title": "My Career Journey",
+        "subtitle": "Nurse → Clinical Research → AI Digital Health",
         "steps": [
             {
-                "id": "problem",
-                "icon": "Search",
-                "title": "Problem Identification",
-                "desc": "I begin every project by observing on-site workflows and identifying stakeholders' pain points.\nI document inefficiencies in data, processes, and user experience to clearly define:\n\"Exactly what problem needs to be solved?\""
+                "id": "nursing",
+                "icon": "Stethoscope",
+                "title": "Identifying the Problem at the Bedside",
+                "desc": "As a nurse, working on the ward left me with one persistent question:\n\"Can patients continue their rehabilitation after discharge?\"\nThe technology existed, but there was a missing bridge between clinical validation and real-world user experience."
             },
             {
-                "id": "hypothesis",
+                "id": "crc",
+                "icon": "Microscope",
+                "title": "Designing a 390M KRW R&D Program",
+                "desc": "As a CRC at International St. Mary's Hospital, I led a multi-center RCT for an AI-based digital cognitive rehabilitation program from the ground up.\nIRB approval, CRIS registration, participant recruitment, budget management, and cross-disciplinary coordination with physicians, nurses, and therapists — I operated the full clinical research lifecycle."
+            },
+            {
+                "id": "innovation",
                 "icon": "Lightbulb",
-                "title": "Hypothesis & Structuring",
-                "desc": "Rather than simply listing problems,\nI reinterpret them through a cause-process-outcome framework to create testable hypotheses.\nAt this stage, I integrate clinical insights, data patterns, and operational constraints\nto set realistic directions and goals."
+                "title": "Co-designing an AI Framework",
+                "desc": "I co-founded the 'Hwiwasoo' project with a PhD researcher in Applied Physics at Hokkaido University.\nWe designed a Coach-Teacher-Companion triple-agent system enabling older adults to engage in cognitive training naturally in daily life. The result was published in MDPI Healthcare as co-first author."
             },
             {
-                "id": "solution",
-                "icon": "Cog",
-                "title": "Solution Design & Execution",
-                "desc": "Based on project objectives, I design integrated solutions including:\n\n• Clinical trial operations and data flow architecture\n• User experience-focused digital interfaces\n• AI/automation model design and implementation\n• Organizational collaboration and communication workflows\n• Process optimization and error prevention systems\n\nThe key is creating structures that actually work in real-world settings,\nnot just theoretical ideas."
-            },
-            {
-                "id": "impact",
+                "id": "validation",
                 "icon": "BarChart3",
-                "title": "Impact Validation",
-                "desc": "I validate solution effectiveness through data-driven evaluation and derive improvements based on quantitative and qualitative assessments.\n\n• Statistics and metrics-based analysis\n• User, patient, and clinician feedback\n• Process stability evaluation\n• Reproducibility and scalability review\n\nThe goal is not just to \"complete\" a project,\nbut to create lasting value for the organization."
+                "title": "Closing the Loop with Evidence",
+                "desc": "Ideas are only as good as their evidence.\nThrough 5 papers (published, accepted, and submitted) in Frontiers in Neurology, Annals of Rehabilitation Medicine, and MDPI Healthcare, I have validated the clinical efficacy of AI-based digital rehabilitation."
             }
         ]
     },
@@ -89,9 +89,9 @@
                 "description": "Randomized Controlled Trial (RCT) to evaluate the effectiveness of the Zenicog® cognitive rehabilitation program in subacute stroke patients (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
             },
             {
-                "title": "Digital Healthcare Demonstration",
-                "category": "Regulatory Affairs",
-                "description": "Q&A Session at MOHW/KHIDI Demonstration Project Interim Report & Response to Demonstration Research Inquiries"
+                "title": "Government-Level Digital Health Demonstration",
+                "category": "Regulatory Affairs & Presentation",
+                "description": "Led Q&A at MOHW/KHIDI mid-term demonstration review attended by Director-General of Advanced Medical Technology, Deputy Director of Health IT Policy, and KHIDI Biohealth Innovation Division Head — representing clinical research outcomes to national policy stakeholders."
             }
         ]
     },
@@ -109,6 +109,9 @@
     "publications": {
         "title": "Selected Publications",
         "posterTitle": "Conference Posters",
+        "innovationFeatureTitles": ["Context-Aware", "Multi-Modal", "Evidence-Based"],
+        "closeBtn": "Close",
+        "summaryComingSoon": "Summary coming soon.",
         "roles": {
             "first": "1st Author",
             "co": "Co-author"
@@ -127,7 +130,7 @@
                 "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
                 "journal": "MDPI Healthcare",
                 "date": "2025",
-                "role": "1st Author",
+                "role": "Co-first Author",
                 "status": "Published",
                 "doi": "https://www.mdpi.com/2227-9032/13/24/3225",
                 "summary": "Digital exclusion and technology anxiety remain significant barriers to the practical application of cognitive interventions for the elderly. This clinical protocol paper proposes a multi-agent generative AI framework with a Coach–Teacher–Companion (CTC) structure to address these limitations.\n\nThe framework is designed to naturally integrate cognitive training into daily life and provide simultaneous cognitive, behavioral, and emotional support through adaptive difficulty adjustment and emotional monitoring. It systematically presents methodological and ethical safeguards for clinical application, including assessments for digital literacy (MDPQ-16), technology anxiety (CARS), and emotional safety (PANAS).\n\nDesigned to evaluate **usability (SUS), user experience (UEQ-S), adherence, emotional stability, and key cognitive indicators (MMSE, TMT, Digit Span)** through a 6-week pilot feasibility study protocol (n=14), this study provide initial evidence for the structural feasibility of clinical application of generative AI-based cognitive intervention for the elderly."
@@ -161,18 +164,18 @@
         "title": "Core Competencies",
         "items": {
             "clinical": "Clinical Trials",
-            "vibecording": "Vibecording",
+            "vibecording": "AI Prototyping",
             "data": "Data Analysis",
             "design": "Study Design",
-            "comm": "Communication",
+            "comm": "Publications & Presentation",
             "ai": "AI"
         },
         "descriptions": {
             "clinical": "Multi-center RCT Operation & Protocol Design",
-            "vibecording": "Vibecording-based Prototyping & Automation Implementation",
+            "vibecording": "Rapid prototyping of clinical AI tools via AI-assisted development (Vite, React, Python)",
             "data": "SPSS & Python-based Clinical Data Analysis",
             "design": "Clinical Trial & Demonstration Study Design",
-            "comm": "Multi-stakeholder Coordination & Reporting",
+            "comm": "SCI/ESCI/KCI papers (incl. submissions) & conference poster presentations",
             "ai": "Generative AI-based Digital Therapeutics Research"
         }
     },
