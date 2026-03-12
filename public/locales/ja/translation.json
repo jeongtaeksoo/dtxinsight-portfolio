@@ -149,7 +149,7 @@
         "items": {
             "clinical": "臨床試験",
             "vibecording": "AIプロトタイピング",
-            "data": "データ分析",
+            "data": "プロジェクト管理",
             "design": "研究設計",
             "comm": "論文執筆・学会発表",
             "ai": "AI"
@@ -157,7 +157,7 @@
         "descriptions": {
             "clinical": "多機関RCTの運営およびプロトコル設計",
             "vibecording": "Vite・React・PythonによるAI支援臨床ツールの高速プロトタイピング",
-            "data": "SPSSおよびPythonベースの臨床データ分析",
+            "data": "多機関臨床試験および多学際融合技術の設計",
             "design": "臨床試験および実証研究の設計",
             "comm": "SCI・ESCI・KCI論文（投稿含む）執筆および学会ポスター発表",
             "ai": "生成AIベースのデジタル治療薬研究"

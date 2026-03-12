@@ -67,7 +67,7 @@ export const translations = {
             items: {
                 clinical: "임상시험",
                 python: "Python",
-                data: "데이터 분석",
+                data: "프로젝트 관리",
                 design: "연구 설계",
                 comm: "커뮤니케이션",
                 ai: "AI"
@@ -150,7 +150,7 @@ export const translations = {
             items: {
                 clinical: "Clinical Trials",
                 python: "Python",
-                data: "Data Analysis",
+                data: "Project Management",
                 design: "Study Design",
                 comm: "Communication",
                 ai: "AI"
@@ -233,7 +233,7 @@ export const translations = {
             items: {
                 clinical: "臨床試験",
                 python: "Python",
-                data: "データ分析",
+                data: "プロジェクト管理",
                 design: "研究設計",
                 comm: "コミュニケーション",
                 ai: "AI"

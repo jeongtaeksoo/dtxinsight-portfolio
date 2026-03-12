@@ -149,7 +149,7 @@
         "items": {
             "clinical": "Clinical Trials",
             "vibecording": "AI Prototyping",
-            "data": "Data Analysis",
+            "data": "Project Management",
             "design": "Study Design",
             "comm": "Publications & Presentation",
             "ai": "AI"
@@ -157,7 +157,7 @@
         "descriptions": {
             "clinical": "Multi-center RCT Operation & Protocol Design",
             "vibecording": "Rapid prototyping of clinical AI tools via AI-assisted development (Vite, React, Python)",
-            "data": "SPSS & Python-based Clinical Data Analysis",
+            "data": "Design of Multi-center RCT & Multidisciplinary Convergence Technology",
             "design": "Clinical Trial & Demonstration Study Design",
             "comm": "SCI/ESCI/KCI papers (incl. submissions) & conference poster presentations",
             "ai": "Generative AI-based Digital Therapeutics Research"

@@ -149,7 +149,7 @@
         "items": {
             "clinical": "임상시험",
             "vibecording": "AI 프로토타이핑",
-            "data": "데이터 분석",
+            "data": "프로젝트 관리",
             "design": "연구 설계",
             "comm": "논문 작성 & 학회 발표",
             "ai": "AI"
@@ -157,7 +157,7 @@
         "descriptions": {
             "clinical": "다기관 RCT 운영 및 프로토콜 설계",
             "vibecording": "AI 기반 임상 도구 신속 프로토타이핑 (Vite, React, Python)",
-            "data": "SPSS, Python 기반 임상 데이터 분석",
+            "data": "다기관 임상시험 및 다학제 융합 기술 설계",
             "design": "임상시험 및 실증 연구 설계",
             "comm": "SCI·ESCI·KCI 논문(투고 포함) 작성 및 학회 포스터 발표",
             "ai": "생성형 AI 기반 디지털 치료제 연구"
