@@ -10,7 +10,7 @@ export const translations = {
         hero: {
             name: '정택수',
             affiliation: '가톨릭관동대학교 국제성모병원 재활의학과',
-            credential: 'RN · 임상연구 코디네이터',
+            credential: 'RN',
             tagline: '임상연구 × AI 디지털헬스 혁신',
             resume: '이력서 다운로드',
             stat1Label: 'R&D 규모',
@@ -93,7 +93,7 @@ export const translations = {
         hero: {
             name: 'Taeksoo Jeong',
             affiliation: 'Dept. of Rehabilitation Medicine, International St. Mary\'s Hospital, CKU',
-            credential: 'RN · Clinical Research Coordinator',
+            credential: 'RN',
             tagline: 'Clinical Research × AI Digital Health Innovation',
             resume: 'Download Resume',
             stat1Label: 'R&D Scale',
@@ -176,7 +176,7 @@ export const translations = {
         hero: {
             name: '鄭澤洙 (ジョン・テクス)',
             affiliation: 'カトリック関東大学国際聖母病院 リハビリテーション医学科',
-            credential: 'RN · 臨床研究コーディネーター',
+            credential: 'RN',
             tagline: '臨床研究 × AIデジタルヘルス革新',
             resume: '履歴書をダウンロード',
             stat1Label: 'R&D規模',
