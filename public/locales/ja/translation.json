@@ -25,14 +25,47 @@
         "title": "キャリアタイムライン",
         "subtitle": "主要マイルストーン",
         "items": [
-            { "date": "2023.02", "title": "看護師免許取得（韓国）", "note": null },
-            { "date": "2024.01", "badge": "2024.01 - 2025.12", "title": "カトリック関東大学国際聖母病院 CRC", "note": null },
-            { "date": "2024.08", "title": "大韓リハビリテーション医学会秋季 ポスター発表2件", "note": null },
-            { "date": "2025.08", "title": "Frontiers in Neurology 掲載（共著）", "note": null },
-            { "date": "2025.12", "title": "MDPI Healthcare 掲載（共同第1著者）", "note": "휘와수(Hwiwasoo)プロジェクト — 北海道大学の研究者と共同創設した高齢者向けAI認知訓練フレームワーク" },
-            { "date": "2025.12", "title": "Annals of Rehabilitation Medicine 掲載（共著）", "note": null },
-            { "date": "2026.03", "title": "Brain & Neurorehabilitation 掲載（共著）", "note": null },
-            { "date": "2026", "title": "Frontiers in Neurology 投稿中", "note": null }
+            {
+                "date": "2023.02",
+                "title": "看護師免許取得（韓国）",
+                "note": null
+            },
+            {
+                "date": "2024.01",
+                "badge": "2024.01 - 2025.12",
+                "title": "カトリック関東大学国際聖母病院 CRC",
+                "note": null
+            },
+            {
+                "date": "2024.08",
+                "title": "大韓リハビリテーション医学会秋季 ポスター発表2件",
+                "note": null
+            },
+            {
+                "date": "2025.08",
+                "title": "Frontiers in Neurology 掲載（共著）",
+                "note": null
+            },
+            {
+                "date": "2025.12",
+                "title": "MDPI Healthcare 掲載（共同第1著者）",
+                "note": "휘와수(Hwiwasoo)プロジェクト — 北海道大学の研究者と共同創設した高齢者向けAI認知訓練フレームワーク"
+            },
+            {
+                "date": "2025.12",
+                "title": "Annals of Rehabilitation Medicine 掲載（共著）",
+                "note": null
+            },
+            {
+                "date": "2026.03",
+                "title": "Brain & Neurorehabilitation 掲載（共著）",
+                "note": null
+            },
+            {
+                "date": "2026",
+                "title": "Frontiers in Neurology 投稿中",
+                "note": null
+            }
         ]
     },
     "about": {
@@ -94,7 +127,11 @@
     "publications": {
         "title": "主な論文",
         "posterTitle": "学会ポスター",
-        "innovationFeatureTitles": ["コンテキスト認識", "マルチモーダル", "エビデンスベース"],
+        "innovationFeatureTitles": [
+            "コンテキスト認識",
+            "マルチモーダル",
+            "エビデンスベース"
+        ],
         "closeBtn": "閉じる",
         "summaryComingSoon": "要約を準備中です。",
         "roles": {
@@ -109,7 +146,8 @@
                 "role": "共著者",
                 "status": "掲載完了",
                 "doi": "https://doi.org/10.3389/fneur.2025.1636017",
-                "summary": "最近の多施設共同ランダム化比較試験において、AIベースの認知遠隔リハビリテーションは、従来の療法士監視下の認知リハビリテーションと同等の有効性を示しました。\n\n亜急性期（6ヶ月以内）の脳卒中患者63名を2つのグループに無作為に割り当て、6週間で計24回のセッションを実施した結果、主要な認知指標（K-MMSE2、TMT、Digit Span）すべてにおいて有意な改善が見られました。\n\n非監視型の**AI自己運営遠隔リハビリテーションは、療法士主導群と比較して非劣性（non-inferiority）**が立証され、ユーザビリティ満足度も高く得られました。\n\nこの結果は、リアルタイムのパーソナライズと遠隔モニタリングが可能なAI認知リハビリテーションプラットフォームが、既存の治療と同レベル의 臨床的価値を有することを示唆しています。"
+                "summary": "最近の多施設共同ランダム化比較試験において、AIベースの認知遠隔リハビリテーションは、従来の療法士監視下の認知リハビリテーションと同等の有効性を示しました。\n\n亜急性期（6ヶ月以内）の脳卒中患者63名を2つのグループに無作為に割り当て、6週間で計24回のセッションを実施した結果、主要な認知指標（K-MMSE2、TMT、Digit Span）すべてにおいて有意な改善が見られました。\n\n非監視型の**AI自己運営遠隔リハビリテーションは、療法士主導群と比較して非劣性（non-inferiority）**が立証され、ユーザビリティ満足度も高く得られました。\n\nこの結果は、リアルタイムのパーソナライズと遠隔モニタリングが可能なAI認知リハビリテーションプラットフォームが、既存の治療と同レベル의 臨床的価値を有することを示唆しています。",
+                "authors": "Suebeen Kim, Si-Woon Park, <b>Taeksoo Jeong</b><sup>†</sup>, Min-Soo Kang, Doo Young Kim"
             },
             {
                 "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
@@ -118,7 +156,8 @@
                 "role": "共同第1著者",
                 "status": "掲載完了",
                 "doi": "https://www.mdpi.com/2227-9032/13/24/3225",
-                "summary": "デジタル格差（digital exclusion）とテクノロジー不安により、高齢者の認知介入の実際の適用には依然として高い障壁が存在します。本研究は、これらの限界を解決するために、Coach–Teacher–Companion（CTC）構造のマルチエージェント生成AIフレームワークを提案する臨床プロトコル論文です。\n\n本フレームワークは、日常生活に自然に認知訓練を統合し、適応型の難易度調整と感情モニタリングを通じて、認知・行動・感情のサポートを同時に提供するように設計されています。特に、デジタルリテラシー（MDPQ-16）、テクノロジー不安（CARS）、感情的安全性（PANAS）の評価を含む、臨床適用のための方法論적・倫理的な安全策を体系的に提示しています。\n\n6週間のパイロット妥当性研究プロトコル（n=14）を通じて、**ユーザビリティ（SUS）、ユーザーエクスペリエンス（UEQ-S）、アドヒアランス、感情の安定性、主要な認知指標（MMSE, TMT, Digit Span）**を評価するように設計されており、本研究は高齢者向けの生成AIベースの認知介入の臨床適用の可能性を構造的に提示する初期の根拠を提供します。"
+                "summary": "デジタル格差（digital exclusion）とテクノロジー不安により、高齢者の認知介入の実際の適用には依然として高い障壁が存在します。本研究は、これらの限界を解決するために、Coach–Teacher–Companion（CTC）構造のマルチエージェント生成AIフレームワークを提案する臨床プロトコル論文です。\n\n本フレームワークは、日常生活に自然に認知訓練を統合し、適応型の難易度調整と感情モニタリングを通じて、認知・行動・感情のサポートを同時に提供するように設計されています。特に、デジタルリテラシー（MDPQ-16）、テクノロジー不安（CARS）、感情的安全性（PANAS）の評価を含む、臨床適用のための方法論적・倫理的な安全策を体系的に提示しています。\n\n6週間のパイロット妥当性研究プロトコル（n=14）を通じて、**ユーザビリティ（SUS）、ユーザーエクスペリエンス（UEQ-S）、アドヒアランス、感情の安定性、主要な認知指標（MMSE, TMT, Digit Span）**を評価するように設計されており、本研究は高齢者向けの生成AIベースの認知介入の臨床適用の可能性を構造的に提示する初期の根拠を提供します。",
+                "authors": "<b>Taeksoo Jeong</b><sup>†</sup>, Geonhwi Hwang<sup>†</sup>, Doo Young Kim"
             },
             {
                 "title": "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
@@ -127,7 +166,8 @@
                 "role": "共著者",
                 "status": "掲載完了",
                 "doi": "https://doi.org/10.5535/arm.250060",
-                "summary": "AIベースのモバイル認知遠隔リハビリテーションの臨床的適用可能性とユーザビリティを評価した予備研究です。脳卒中患者および軽度認知障害（MCI）の高齢者13名を対象に、6週間で計24回のセッションからなるAI自己運営認知リハビリテーションプログラムを適用しました。\n\nMMSEスコアは介入前と比較して有意に向上し、Digit SpanおよびTrail Making Testでも全般的な改善傾向が見られました。全体的なユーザビリティ評価では製品の品質と満足度は高い水準を記録しましたが、「エラー許容度（tolerance for error）」の領域は相対的に低く、高齢者やデジタル脆弱層を考慮したUI/UX改善の必要性が確認されました。\n\n本研究は、療法士の常時介入なしでも実施可能なAIベースの認知遠隔リハビリテーションが、実際の臨床環境で安全かつ実現可能であり、認知機能の改善に潜在的な効果を持ち得ることを示しています。特にデジタル治療薬や遠隔リハビリテーションが拡大する流れの中で、ユーザビリティ中心の設計の重要性を提示した研究として意義があります。"
+                "summary": "AIベースのモバイル認知遠隔リハビリテーションの臨床的適用可能性とユーザビリティを評価した予備研究です。脳卒中患者および軽度認知障害（MCI）の高齢者13名を対象に、6週間で計24回のセッションからなるAI自己運営認知リハビリテーションプログラムを適用しました。\n\nMMSEスコアは介入前と比較して有意に向上し、Digit SpanおよびTrail Making Testでも全般的な改善傾向が見られました。全体的なユーザビリティ評価では製品の品質と満足度は高い水準を記録しましたが、「エラー許容度（tolerance for error）」の領域は相対的に低く、高齢者やデジタル脆弱層を考慮したUI/UX改善の必要性が確認されました。\n\n本研究は、療法士の常時介入なしでも実施可能なAIベースの認知遠隔リハビリテーションが、実際の臨床環境で安全かつ実現可能であり、認知機能の改善に潜在的な効果を持ち得ることを示しています。特にデジタル治療薬や遠隔リハビリテーションが拡大する流れの中で、ユーザビリティ中心の設計の重要性を提示した研究として意義があります。",
+                "authors": "Suebeen Kim, Doo Young Kim, Si-Woon Park, Namo Jeon, <b>Taeksoo Jeong</b><sup>†</sup>, Min-Soo Kang, Sangwook Park"
             },
             {
                 "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults With Mild Cognitive Impairment: A Pilot Study",
@@ -135,14 +175,16 @@
                 "date": "2026",
                 "role": "共著者",
                 "status": "掲載完了",
-                "doi": "https://doi.org/10.12786/bn.2026.19.e2"
+                "doi": "https://doi.org/10.12786/bn.2026.19.e2",
+                "authors": "Suebeen Kim, <b>Taeksoo Jeong</b><sup>†</sup>, Sangwook Park, Doo Young Kim"
             },
             {
                 "title": "AI-Driven Telerehabilitation for Older Adults with Mild Cognitive Impairment: A Randomized Controlled Trial",
                 "journal": "Frontiers in Neurology",
                 "date": "2026",
                 "role": "共著者",
-                "status": "Submitted"
+                "status": "Submitted",
+                "authors": "Minsong Kim, Si-Woon Park*, Doo Young Kim, <b>Taeksoo Jeong</b><sup>†</sup>"
             }
         ]
     },
