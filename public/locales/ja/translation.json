@@ -31,7 +31,7 @@
             { "date": "2025.08", "title": "Frontiers in Neurology 掲載（共著）", "note": null },
             { "date": "2025.12", "title": "MDPI Healthcare 掲載（共同第1著者）", "note": "휘와수(Hwiwasoo)プロジェクト — 北海道大学の研究者と共同創設した高齢者向けAI認知訓練フレームワーク" },
             { "date": "2025.12", "title": "Annals of Rehabilitation Medicine 掲載（共著）", "note": null },
-            { "date": "2026", "title": "Brain & Neurorehabilitation 受理 + Frontiers in Neurology 投稿中", "note": null }
+            { "date": "2026", "title": "Brain & Neurorehabilitation 掲載 + Frontiers in Neurology 投稿中", "note": null }
         ]
     },
     "about": {
@@ -129,11 +129,12 @@
                 "summary": "AIベースのモバイル認知遠隔リハビリテーションの臨床的適用可能性とユーザビリティを評価した予備研究です。脳卒中患者および軽度認知障害（MCI）の高齢者13名を対象に、6週間で計24回のセッションからなるAI自己運営認知リハビリテーションプログラムを適用しました。\n\nMMSEスコアは介入前と比較して有意に向上し、Digit SpanおよびTrail Making Testでも全般的な改善傾向が見られました。全体的なユーザビリティ評価では製品の品質と満足度は高い水準を記録しましたが、「エラー許容度（tolerance for error）」の領域は相対的に低く、高齢者やデジタル脆弱層を考慮したUI/UX改善の必要性が確認されました。\n\n本研究は、療法士の常時介入なしでも実施可能なAIベースの認知遠隔リハビリテーションが、実際の臨床環境で安全かつ実現可能であり、認知機能の改善に潜在的な効果を持ち得ることを示しています。特にデジタル治療薬や遠隔リハビリテーションが拡大する流れの中で、ユーザビリティ中心の設計の重要性を提示した研究として意義があります。"
             },
             {
-                "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults with Mild Cognitive Impairment: A pilot Study",
+                "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults With Mild Cognitive Impairment: A Pilot Study",
                 "journal": "Brain & Neurorehabilitation",
                 "date": "2026",
                 "role": "共著者",
-                "status": "Accept"
+                "status": "掲載完了",
+                "doi": "https://doi.org/10.12786/bn.2026.19.e2"
             },
             {
                 "title": "AI-Driven Telerehabilitation for Older Adults with Mild Cognitive Impairment: A Randomized Controlled Trial",

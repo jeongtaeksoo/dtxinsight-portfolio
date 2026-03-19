@@ -31,7 +31,7 @@
             { "date": "2025.08", "title": "Published in Frontiers in Neurology (Co-author)", "note": null },
             { "date": "2025.12", "title": "Published in MDPI Healthcare (Co-first Author)", "note": "Hwiwasoo Project — Co-founded with a PhD researcher at Hokkaido University. A generative AI cognitive training framework for older adults." },
             { "date": "2025.12", "title": "Published in Annals of Rehabilitation Medicine (Co-author)", "note": null },
-            { "date": "2026", "title": "Brain & Neurorehabilitation (Accepted) + Frontiers in Neurology (Submitted)", "note": null }
+            { "date": "2026", "title": "Brain & Neurorehabilitation (Published) + Frontiers in Neurology (Submitted)", "note": null }
         ]
     },
     "about": {
@@ -129,11 +129,12 @@
                 "summary": "This preliminary study evaluates the clinical feasibility and usability of AI-based mobile cognitive telerehabilitation. 13 participants, including stroke patients and older adults with Mild Cognitive Impairment (MCI), underwent a 6-week, 24-session AI self-operated cognitive rehabilitation program.\n\nMMSE scores improved significantly compared to pre-intervention, with overall improvement trends in Digit Span and Trail Making Test. While product quality and satisfaction were high in the overall usability assessment, the 'tolerance for error' domain was relatively low, highlighting the need for UI/UX improvements considering the elderly and digitally vulnerable populations.\n\nThis study shows that AI-based cognitive telerehabilitation, feasible without constant therapist intervention, is safe and practicable in real clinical environments and has potential effects on cognitive function improvement. It is significant in presenting the importance of usability-centered design amidst the expansion of digital therapeutics and telerehabilitation."
             },
             {
-                "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults with Mild Cognitive Impairment: A pilot Study",
+                "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults With Mild Cognitive Impairment: A Pilot Study",
                 "journal": "Brain & Neurorehabilitation",
                 "date": "2026",
                 "role": "Co-author",
-                "status": "Accept"
+                "status": "Published",
+                "doi": "https://doi.org/10.12786/bn.2026.19.e2"
             },
             {
                 "title": "AI-Driven Telerehabilitation for Older Adults with Mild Cognitive Impairment: A Randomized Controlled Trial",
