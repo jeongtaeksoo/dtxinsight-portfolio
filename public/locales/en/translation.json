@@ -147,7 +147,7 @@
                 "status": "Published",
                 "doi": "https://doi.org/10.3389/fneur.2025.1636017",
                 "summary": "In a recent multicenter randomized controlled trial, AI-based cognitive telerehabilitation showed equivalent efficacy to traditional therapist-supervised cognitive rehabilitation.\n\n63 stroke patients in the subacute phase (within 6 months) were randomly assigned to two groups for a total of 24 sessions over 6 weeks. Both groups showed significant improvements in key cognitive indicators (K-MMSE2, TMT, Digit Span).\n\nUnsupervised **AI self-operated telerehabilitation demonstrated non-inferiority** compared to the therapist-led group, with high usability satisfaction.\n\nThese results suggest that AI cognitive rehabilitation platforms allowing real-time personalization and remote monitoring provide clinical value on par with conventional treatments.",
-                "authors": "Suebeen Kim, Si-Woon Park, <b>Taeksoo Jeong</b><sup>†</sup>, Min-Soo Kang, Doo Young Kim"
+                "authors": "Suebeen Kim, Si-Woon Park, <b>Taeksoo Jeong</b>, Min-Soo Kang, Doo Young Kim"
             },
             {
                 "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
@@ -167,7 +167,7 @@
                 "status": "Published",
                 "doi": "https://doi.org/10.5535/arm.250060",
                 "summary": "This preliminary study evaluates the clinical feasibility and usability of AI-based mobile cognitive telerehabilitation. 13 participants, including stroke patients and older adults with Mild Cognitive Impairment (MCI), underwent a 6-week, 24-session AI self-operated cognitive rehabilitation program.\n\nMMSE scores improved significantly compared to pre-intervention, with overall improvement trends in Digit Span and Trail Making Test. While product quality and satisfaction were high in the overall usability assessment, the 'tolerance for error' domain was relatively low, highlighting the need for UI/UX improvements considering the elderly and digitally vulnerable populations.\n\nThis study shows that AI-based cognitive telerehabilitation, feasible without constant therapist intervention, is safe and practicable in real clinical environments and has potential effects on cognitive function improvement. It is significant in presenting the importance of usability-centered design amidst the expansion of digital therapeutics and telerehabilitation.",
-                "authors": "Suebeen Kim, Doo Young Kim, Si-Woon Park, Namo Jeon, <b>Taeksoo Jeong</b><sup>†</sup>, Min-Soo Kang, Sangwook Park"
+                "authors": "Suebeen Kim, Doo Young Kim, Si-Woon Park, Namo Jeon, <b>Taeksoo Jeong</b>, Min-Soo Kang, Sangwook Park"
             },
             {
                 "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults With Mild Cognitive Impairment: A Pilot Study",
@@ -176,7 +176,7 @@
                 "role": "Co-author",
                 "status": "Published",
                 "doi": "https://doi.org/10.12786/bn.2026.19.e2",
-                "authors": "Suebeen Kim, <b>Taeksoo Jeong</b><sup>†</sup>, Sangwook Park, Doo Young Kim"
+                "authors": "Suebeen Kim, <b>Taeksoo Jeong</b>, Sangwook Park, Doo Young Kim"
             },
             {
                 "title": "AI-Driven Telerehabilitation for Older Adults with Mild Cognitive Impairment: A Randomized Controlled Trial",
@@ -184,7 +184,7 @@
                 "date": "2026",
                 "role": "Co-author",
                 "status": "Submitted",
-                "authors": "Minsong Kim, Si-Woon Park*, Doo Young Kim, <b>Taeksoo Jeong</b><sup>†</sup>"
+                "authors": "Minsong Kim, Si-Woon Park*, Doo Young Kim, <b>Taeksoo Jeong</b>"
             }
         ]
     },

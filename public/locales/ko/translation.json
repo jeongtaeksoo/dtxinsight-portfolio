@@ -147,7 +147,7 @@
                 "status": "게재 완료",
                 "doi": "https://doi.org/10.3389/fneur.2025.1636017",
                 "summary": "최근 다기관 무작위대조시험에서 AI 기반 인지 텔레리해빌리테이션이 전통적 치료사 감독 인지재활과 동일한 효과를 보였습니다.\n\n급성기 이후(6개월 이내) 뇌졸중 환자 63명을 두 군으로 무작위 배정해 6주간 총 24회 세션을 수행했고, 주요 인지 지표(K-MMSE2, TMT, Digit Span) 모두 유의한 향상을 보였습니다.\n\n비감독형 **AI 자가운영 텔레리해빌리테이션은 전통적 치료사 주도군 대비 비열등성(non-inferiority)**이 입증되었으며, 사용성 만족도도 높게 나타났습니다.\n\n이 결과는 실시간 개인화 및 원격 모니터링이 가능한 AI 인지재활 플랫폼이 기존 치료와 동일 수준의 임상적 가치를 가진다는 근거를 제시합니다.",
-                "authors": "Suebeen Kim, Si-Woon Park, <b>Taeksoo Jeong</b><sup>†</sup>, Min-Soo Kang, Doo Young Kim"
+                "authors": "Suebeen Kim, Si-Woon Park, <b>Taeksoo Jeong</b>, Min-Soo Kang, Doo Young Kim"
             },
             {
                 "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
@@ -167,7 +167,7 @@
                 "status": "게재 완료",
                 "doi": "https://doi.org/10.5535/arm.250060",
                 "summary": "AI 기반 모바일 인지 텔레리해빌리테이션의 임상적 적용 가능성과 사용성을 평가한 예비 연구입니다. 뇌졸중 환자 및 경도인지장애(MCI) 고령자 13명을 대상으로 6주간 총 24회 세션의 AI 자가운영 인지재활 프로그램을 적용했습니다.\n\nMMSE 점수는 중재 전 대비 유의하게 향상되었으며, Digit Span과 Trail Making Test에서도 전반적인 개선 경향을 보였습니다. 전체 사용성 평가에서 제품 품질과 만족도는 높은 수준을 기록했으나, 오류 허용성(tolerance for error) 영역은 상대적으로 낮아 고령자 및 디지털 취약계층을 고려한 UI/UX 개선 필요성이 확인되었습니다.\n\n본 연구는 치료사 상시 개입 없이도 수행 가능한 AI 기반 인지 텔레리해빌리테이션이 실제 임상 환경에서 안전하고 실현 가능하며, 인지 기능 개선에 잠재적 효과를 가질 수 있음을 보여줍니다. 특히 디지털 치료제 및 원격 재활이 확대되는 흐름 속에서, 사용성 중심 설계의 중요성을 함께 제시한 연구라는 점에서 의미가 있습니다.",
-                "authors": "Suebeen Kim, Doo Young Kim, Si-Woon Park, Namo Jeon, <b>Taeksoo Jeong</b><sup>†</sup>, Min-Soo Kang, Sangwook Park"
+                "authors": "Suebeen Kim, Doo Young Kim, Si-Woon Park, Namo Jeon, <b>Taeksoo Jeong</b>, Min-Soo Kang, Sangwook Park"
             },
             {
                 "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults With Mild Cognitive Impairment: A Pilot Study",
@@ -176,7 +176,7 @@
                 "role": "공저자",
                 "status": "게재 완료",
                 "doi": "https://doi.org/10.12786/bn.2026.19.e2",
-                "authors": "Suebeen Kim, <b>Taeksoo Jeong</b><sup>†</sup>, Sangwook Park, Doo Young Kim"
+                "authors": "Suebeen Kim, <b>Taeksoo Jeong</b>, Sangwook Park, Doo Young Kim"
             },
             {
                 "title": "AI-Driven Telerehabilitation for Older Adults with Mild Cognitive Impairment: A Randomized Controlled Trial",
@@ -184,7 +184,7 @@
                 "date": "2026",
                 "role": "공저자",
                 "status": "Submitted",
-                "authors": "Minsong Kim, Si-Woon Park*, Doo Young Kim, <b>Taeksoo Jeong</b><sup>†</sup>"
+                "authors": "Minsong Kim, Si-Woon Park*, Doo Young Kim, <b>Taeksoo Jeong</b>"
             }
         ]
     },
