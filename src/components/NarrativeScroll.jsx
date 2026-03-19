@@ -39,9 +39,16 @@ const NarrativeScroll = () => {
 
                             {/* Content */}
                             <div className="flex-1 pb-1">
-                                <p className="text-sm font-semibold text-text leading-snug">
-                                    {item.title}
-                                </p>
+                                <div className="flex flex-wrap items-center gap-2">
+                                    <p className="text-sm font-semibold text-text leading-snug">
+                                        {item.title}
+                                    </p>
+                                    {item.badge && (
+                                        <span className="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-mono font-medium border border-primary/20">
+                                            {item.badge}
+                                        </span>
+                                    )}
+                                </div>
                                 {item.note && (
                                     <p className="text-xs text-muted mt-1.5 leading-relaxed border-l-2 border-primary/30 pl-3">
                                         {item.note}
