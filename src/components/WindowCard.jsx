@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
-const WindowCard = ({ title, type, date, children, onClick, className = "" }) => {
+const WindowCard = ({ title, type, date, authors, children, onClick, className = "" }) => {
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -33,8 +33,16 @@ const WindowCard = ({ title, type, date, children, onClick, className = "" }) =>
                     {children}
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-border flex justify-end">
-                    <ArrowUpRight size={14} className="text-muted group-hover:text-primary transition-colors" />
+                <div className="mt-4 pt-3 border-t border-border flex justify-between items-start gap-4">
+                    {authors ? (
+                        <span 
+                            className="text-xs text-muted font-serif leading-relaxed line-clamp-2" 
+                            dangerouslySetInnerHTML={{ __html: authors }} 
+                        />
+                    ) : (
+                        <div />
+                    )}
+                    <ArrowUpRight size={14} className="text-muted group-hover:text-primary transition-colors shrink-0 mt-0.5" />
                 </div>
             </div>
         </motion.div>

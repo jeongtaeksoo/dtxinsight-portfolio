@@ -47,6 +47,7 @@ const Publications = () => {
                             title={pub.title}
                             type={pub.journal}
                             date={pub.date || pub.year}
+                            authors={pub.authors}
                             onClick={() => setSelectedPaper(pub)}
                         >
                             <div className="flex flex-wrap items-center gap-2 mt-2">
