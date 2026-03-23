@@ -1,0 +1,203 @@
+P-36
+Predictive Value of Cognitive Function and ALT for Functional
+Ambulation Gain in MCA Stroke Patients
+Namo Jeon*, Taeksoo Jeong, Doo Young Kim'
+Department of
+Rehabilitation Medicine, International St Mary'k Hospital, Catholic Kwandong University College of Medicine, Incheon 22711. Korea
+Introduction
+• Stroke is a leading cause of disability, significantly impacting mobility. Effective rehabilitation depends on accurate
+predictors of recovery. Recent studies suggest that both cognitive function and certain initial laboratory biomarkers, such
+as aminotransferase (ALT), could be crucial for predicting recovery outcomes. This study investigates how cognitive
+function and ALT levels can predict functional ambulation in survivors of middle cerebral artery (MCA) stroke.
+Method
+• This retrospective study analyzed 87 patients who experienced a first-time middle cerebral artery (MCA) stroke and
+began rehabilitation within 30 days of their stroke, between June 2016 and June 2023 at a university hospital. Key
+covariates such as age, sex, National Institutes of Health Stroke Scale (NIHSS), Berg Balance Scale (BBS), Mini-Mental
+State Examination (MMSE), and low alanine aminotransferase (ALT) levels were considered.
+•Participants: The study included MCA stroke patients who were initially non-ambulatory and excluded those with
+conditions that could affect gait, such as musculoskeletal disorders, quadriplegia, or other brain region strokes. The total
+study population was 87 individuals.
+• Outcome Variable: The primary outcome was whether the patient achieved functional ambulation, measured using the
+Functional Ambulation Categories (FAC) scale, after short-term rehabilitation. A FAC score of 3 or higher indicated
+functional ambulation.
+• Data Analysis: To identify predictors of ambulation recovery, multivariate binary logistic regression was used.
+Covariates like comorbidities, stroke type, lesion size, balance, and cognitive function were factored into the model.
+Results
+• Comparison of General Characteristics and Group Outcomes (Table 1)
+The study found that individuals who did not achieve functional ambulation were older (69.4 vs. 61.2 years, p = 0.004)
+and had lower initial BBS and MMSE scores compared to those who regained ambulation (p < 0.001). Men were more
+likely to regain walking function than women (p = 0.035). Extremely low ALT levels were associated with poor
+ambulation outcomes (p = 0.014). Among 32 participants with aphasia, all had left-hemisphere lesions, but aphasia
+incidence showed no significant difference between groups.
+Table 1. General Characteristics and Functional Ambulation After
+Subacute Rehabilitation.
+Binary logistic regression (Table 2)
+The binary logistic regression identified several key
+predictors of functional ambulation. Male sex, higher initial
+No (n-52)
+Yes (n-35)
+after subacute rehabilitation
+Sex
+p-value
+0.035€
+MMSE (220), and BBS (220) scores were associated with
+increased odds of achieving functional ambulation, while
+28 (53.8%)
+24(46.2%)
+69.4 = 132
+10 (28.6%)
+25 (71.496)
+612 * 11.5
+older age, higher CharIson Comorbidity Index (CCI), and
+Age
+Stroke type
+- Hemorrhagic
+0.004"
+extremely low ALT levels (≤10 U/L) negatively impacted
+recovery. Serum albumin and hemoglobin levels were
+18 (34.6%)
+14 (40.014)
+positive predictors. In the multivariate analysis, male sex,
+Side of brain lesion
+0.727
+MMSE, BBS scores, and low ALT levels remained
+25 (48.1%6)
+27(51.9%)
+19 (54.316)
+significant predictors. These findings highlight the
+10-(43.17)
+importance of cognitive function, balance, and biochemical
+ASPECTS
+4.0 | 3.0; 7.01
+CCI
+6.0 | 5.0; 7.0]
+4.2 |39;441
+5.0 | 4.0;601
+0.009*
+markers in post-stroke ambulation recovery.
+ALT
+18.D [E1.0,23.0)
+Group by ALT level
+13 (25.0%)
+23.0 [16.0; 28.0)
+1(29%)
+0.7 | 0.6: 0.9)
+0.059:
+0.014"
+0.585
+Creatinine
+Hemoglobin
+Onset to rehabilitation (days)
+Aphasia
+Initial MMSE
+0.7 [06: 09)
+13.4 ÷ 1.7
+9.5 / 6.0; 17.51
+16 (30.816)
+6.0 | 4.0; 9.51
+16 (45.7%)
+0.156
+Initial FAC
+20[00: 4.01
+22.0 [15.5; 26.0)
+5.0 | 1.5: 22.0)
+<0.001*
+4 (7.7%)
+Олено складс (аms)
+BES at discharge
+FAC at discharge
+8.6 = 9.3
+14 (26.9%)
+3 (8.6%)
+10(28.010)
+37.0 (31.0;42.01
+38.6 ÷ 10:6
+0(0.0%)
+0(0.0%6)
+<0.001*
+201001*
+Table 2. Binary Logistic Regression for Predicting Functional Ambulation
+Predictors of Panctional Ambulation
+(Binary logistic regression)
+Sex (rel: male)
+Age
+Initial NIHSS
+Stroke type (rel. Hemorrhagde)
+- TU
+-0.051
+-0.061
+-0.231
+0.950
+0.941
+0.79t
+Side of brain lesion (ref: LL)
+ASPECTS
+serum albumin
+serum creatinine
+1.457
+-0.240
+serum ALT level group
+(ref: 10 and below 10 L/L)
+Initial MMSE group
+(ref: below 20 groap)
+initial BBS group
+(ref: 20 and below group)
+Aphasia group
+Receptive aphasia grap
+2.428
+3.016
+-0.639
+-0.553
+Exp(B)
+p-1220c
+0.022•
+0.006*
+0.065
+0.610
+0.570
+0.884
+0.133
+0.684
+0.010•
+4,293
+0.028*
+0.787
+0.582
+1.519
+0.003-
+11.333
+0.022-
+3.375
+0.008*
+20,400
+0.005°
+0.528
+0.159
+0.575
+0.254
+Exp (B)
+p-Value
+0.046*
+-0.202
+-0.349
+0.817
+0.705
+0.069
+2.324
+10.218
+0.045*
+3.980
+0.017-
+0 (0.0%)
+15 (42.9%)
+0(0.0%)
+3(8.6%)
+*p=0.05. ALT (Alanine Aminotransferase), ASPECTS (Albesta Stroke Program Early CT Score), BBS (Berg Balance Scale), CCI (Charlson Comorbidity Index), FAC (Functional Ambulation Category).
+MMSE (Mini-Mental State Examination), NIHSS (National Institutes of Health Stroke Scale)
+Conclusion
+• Extremely low ALT levels, indicative of frailty, significantly predict poor recovery in MCA stroke patients. This study
+underscores the importance of routine biomarkers and cognitive assessments in enhancing prognostic accuracy and
+tailoring rehabilitation strategies to improve patient outcomes.
+Acknowledgement
+This research was supported by a grant of the Korean Health Technology R&D Project through the Korea Health Industry Development Institute
+(KHIDI), funded by the Ministry of Health & Welfare, Republic of Korea (Grant number: RS-2024-00263587)

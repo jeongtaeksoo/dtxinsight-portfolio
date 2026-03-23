@@ -25,7 +25,7 @@ const Publications = () => {
     const innovationFeatures = t('innovation.features', { returnObjects: true }) || [];
 
     const posters = [
-        { id: 1, src: poster1, title: 'KOSCOPP 2024', link: 'https://www.karm.or.kr/workshop/?abyear=202402&mode=green_search' },
+        { id: 1, src: poster1, title: 'KOSCOPP 2024', link: 'https://www.karm.or.kr/workshop/?abyear=202402&mode=green_view&sid=5985' },
         { id: 2, src: poster2, title: 'ICDT 2024', link: 'https://www.karm.or.kr/workshop/?abyear=202402&mode=green_search' },
         { id: 3, src: poster3, title: 'E-Poster-Park-AI DRIVEN COGNITIVE', link: 'https://journals.sagepub.com/doi/epub/10.1177/17474930251371448' },
     ];
