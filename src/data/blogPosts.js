@@ -49,6 +49,230 @@ export const getLocalizedBlogPost = (post, language = DEFAULT_BLOG_LOCALE) => {
 
 export const blogPosts = [
   {
+    slug: 'practical-way-to-connect-obsidian-and-claude-code',
+    category: 'ai',
+    createdAt: '2026-03-31T15:40:00+09:00',
+    heroImage: {
+      src: '/blog/ai-workflow-hero.jpg',
+    },
+    locales: {
+      ko: {
+        title: '옵시디언과 Claude Code를 연결해 쓰는 가장 현실적인 방법',
+        keywords: ['AI'],
+        excerpt: '옵시디언과 Claude Code를 묶는 원클릭 버튼이 따로 있는 것은 아니지만, 볼트 폴더를 함께 쓰고 URI·CLI·MCP를 단계적으로 붙이면 생각보다 단단한 작업 흐름을 만들 수 있습니다.',
+        heroImage: {
+          alt: '노트와 코드 작업이 함께 열려 있는 데스크 위 노트북과 문서 화면',
+          caption: '옵시디언과 Claude Code의 조합은 화려한 통합 버튼보다, 같은 작업 공간을 공유하면서 마찰을 줄이는 쪽에서 힘이 나옵니다.',
+        },
+        contentHtml: `
+          <p>옵시디언을 오래 쓰다 보면 비슷한 순간이 자주 옵니다. 메모는 점점 쌓이는데, 정리와 재구성은 늘 손이 많이 갑니다. 반대로 Claude Code 같은 도구를 붙이면 초안 정리, 구조 재편, 문서 요약은 빨라지지만, 노트 앱과 작업 환경이 따로 놀기 쉽습니다.</p>
+          <p>그래서 많은 분이 “옵시디언과 Claude Code를 직접 연결하는 공식 방법이 있나?”를 먼저 찾게 됩니다. 결론부터 말하면, 모두가 바로 누르는 원클릭 통합이 있는 구조는 아닙니다.</p>
+          <p>대신 현실적으로는 더 좋은 길이 있습니다. 옵시디언 볼트를 Claude Code의 작업 공간으로 쓰고, 필요할 때 URI와 CLI를 붙이고, 정말 도구 수준으로 엮고 싶을 때만 MCP로 가는 방식입니다.</p>
+
+          <h3>먼저 전제를 바로잡자: 핵심은 전용 버튼보다 같은 작업 공간입니다</h3>
+          <p>옵시디언 공식 문서를 보면 볼트는 결국 내 로컬 파일을 담는 작업 공간입니다. 이 점이 중요합니다. Claude Code는 특정 “옵시디언 전용 통합”이 아니라, 내가 연 폴더와 파일을 기준으로 가장 잘 작동하는 도구에 가깝기 때문입니다.</p>
+          <p>즉 두 도구를 연결하는 첫 단계는 복잡한 플러그인 설치가 아니라, 옵시디언이 쓰는 볼트 폴더를 Claude Code도 그대로 읽고 다루게 만드는 것입니다. 이 접근이 생각보다 강한 이유는 메모, 초안, 회의록, 블로그 문서가 한 자리에서 이어지기 시작하기 때문입니다.</p>
+          <blockquote>이 조합에서 가장 중요한 것은 “직접 연결”보다 “같은 볼트를 두 도구가 같이 쓰는가”입니다.</blockquote>
+
+          <h3>1단계: 옵시디언 볼트 폴더를 Claude Code 작업 디렉터리로 씁니다</h3>
+          <p>가장 안정적인 시작은 단순합니다. 옵시디언 볼트 폴더를 터미널에서 열고 그 안에서 <code>claude</code>를 실행하면 됩니다. 그러면 Claude Code는 이미 정리된 마크다운 노트, 폴더 구조, 첨부 파일 흐름을 그대로 문맥으로 삼을 수 있습니다.</p>
+          <p>여기서 바로 해둘 만한 일은 볼트 루트에 <code>CLAUDE.md</code>를 두는 것입니다. Anthropic 공식 문서 기준으로 이 파일은 세션 시작 시 읽히는 프로젝트 지침 역할을 합니다. 옵시디언을 쓰는 분이라면 여기에 위키링크를 유지할지, 프론트매터 형식은 어떻게 둘지, 첨부 파일 경로는 건드리지 말지 같은 규칙을 적어두는 편이 좋습니다.</p>
+          <ul>
+            <li>긴 회의록을 요약해 짧은 메모로 줄이기</li>
+            <li>흩어진 노트를 하나의 글 초안으로 묶기</li>
+            <li>폴더 구조를 정리하면서 제목과 링크를 함께 손보기</li>
+            <li>리서치 노트에서 핵심 문단만 추려 블로그 뼈대 만들기</li>
+          </ul>
+          <p>이 단계만으로도 체감은 꽤 큽니다. 굳이 대단한 자동화를 하지 않아도, “노트 앱 따로, AI 도구 따로”였던 흐름이 하나로 붙기 시작하기 때문입니다.</p>
+
+          <h3>2단계: URI와 CLI를 붙이면 작업 흐름이 훨씬 짧아집니다</h3>
+          <p>기본 연결이 끝나면 다음은 여기를 자동화하는 문제입니다. 옵시디언 공식 도움말을 보면 <code>obsidian://</code> URI는 노트 열기, 새 노트 만들기, 데일리 노트 열기, 검색 실행 같은 작업을 다른 앱이나 단축어에서 바로 부를 수 있게 해줍니다. 이건 Claude Code와의 연결에서도 꽤 쓸모가 있습니다.</p>
+          <p>예를 들어 Claude Code가 특정 문서를 정리한 뒤, 마지막에 <code>obsidian://open</code>이나 <code>obsidian://new</code> 흐름으로 넘겨서 해당 노트를 바로 띄우게 할 수 있습니다. 브라우저, 단축어 앱, 런처와도 잘 이어집니다.</p>
+          <p>여기서 한 단계 더 가면 Obsidian CLI가 있습니다. 최근 공식 CLI는 <code>obsidian daily</code>, <code>obsidian search</code>, <code>obsidian create</code>, <code>obsidian read</code> 같은 명령을 지원하고, 앱이 실행 중이면 터미널에서 바로 노트를 다루게 해줍니다. 개인적으로는 대부분의 사용자가 이 단계까지만 해도 충분하다고 봅니다.</p>
+          <ul>
+            <li>오늘 메모를 열고 싶을 때: <code>obsidian daily</code></li>
+            <li>특정 키워드가 들어간 노트를 찾을 때: <code>obsidian search query="..."</code></li>
+            <li>새 글 초안을 만들 때: <code>obsidian create name="..."</code></li>
+            <li>외부 도구에서 노트 하나를 바로 열 때: <code>obsidian://open</code></li>
+          </ul>
+          <p>즉, Claude Code가 내용을 만들고 다듬는 쪽이라면, URI와 CLI는 그 결과물을 옵시디언의 실제 노트 흐름 안으로 다시 밀어 넣는 접착제에 가깝습니다.</p>
+
+          <h3>3단계: MCP는 가장 강하지만, 그만큼 판단이 더 필요합니다</h3>
+          <p>MCP는 Anthropic이 설명하는 대로 외부 데이터와 도구를 AI에 연결하는 개방형 표준입니다. 그래서 정말로 “옵시디언 노트를 Claude Code의 도구처럼 다루고 싶다”면 MCP 방향이 가장 강한 선택지입니다.</p>
+          <p>실제로 커뮤니티에는 옵시디언과 Claude Code를 잇는 MCP 서버 프로젝트도 나와 있습니다. 다만 여기부터는 성격이 조금 달라집니다. 단순히 같은 폴더를 읽는 수준이 아니라, 플러그인과 로컬 API, 툴 권한, 민감한 노트 처리 같은 보안 판단이 같이 따라옵니다.</p>
+          <p>옵시디언 공식 보안 문서도 커뮤니티 플러그인은 파일 접근, 인터넷 연결, 추가 프로그램 설치까지 가능한 만큼 신중하게 판단하라고 안내합니다. 민감한 볼트를 다루는 분이라면 이 부분을 가볍게 보면 안 됩니다.</p>
+          <blockquote>MCP는 가장 멋져 보이는 단계이기도 하지만, 대부분의 사람에게는 가장 먼저 할 일이 아니라 가장 나중에 붙일 일에 가깝습니다.</blockquote>
+
+          <h3>그래서 저는 이런 순서를 권합니다</h3>
+          <ol>
+            <li>먼저 옵시디언 볼트를 Claude Code 작업 폴더로 둡니다.</li>
+            <li>볼트 루트에 <code>CLAUDE.md</code>를 두고 마크다운 규칙과 링크 규칙을 고정합니다.</li>
+            <li>반복 동작이 불편해질 때 URI나 CLI를 붙입니다.</li>
+            <li>그래도 실시간 툴 연동이 아쉽고, 보안 범위를 감당할 수 있을 때만 MCP로 갑니다.</li>
+          </ol>
+          <p>이 순서가 좋은 이유는 단순합니다. 처음부터 복잡한 통합을 만들지 않아도 충분히 생산성이 올라가고, 어디까지가 내게 필요한 연결인지도 더 빨리 보이기 때문입니다.</p>
+
+          <h3>결국 중요한 것은 연결감보다 마찰 감소입니다</h3>
+          <p>옵시디언과 Claude Code를 같이 쓰는 목적은 보기 좋은 통합 화면을 만드는 데 있지 않습니다. 노트를 다시 찾고, 초안을 만들고, 정리한 결과를 다시 볼트 안으로 넣는 과정을 덜 귀찮게 만드는 데 있습니다.</p>
+          <p>그래서 이 조합은 오히려 화려하지 않을 때 더 좋습니다. 같은 볼트를 공유하고, 필요한 자동화만 얹고, 정말 필요할 때만 더 강한 연결을 선택하는 쪽이 오래 갑니다. 실전에서는 그 정도가 가장 단단합니다.</p>
+
+          <h3>참고자료</h3>
+          <ul>
+            <li><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noreferrer">Anthropic Claude Code overview</a></li>
+            <li><a href="https://docs.anthropic.com/en/docs/mcp" target="_blank" rel="noreferrer">Anthropic Model Context Protocol documentation</a></li>
+            <li><a href="https://help.obsidian.md/vault" target="_blank" rel="noreferrer">Obsidian Help: vaults</a></li>
+            <li><a href="https://help.obsidian.md/Extending%2BObsidian/Obsidian%2BURI" target="_blank" rel="noreferrer">Obsidian Help: Obsidian URI</a></li>
+            <li><a href="https://help.obsidian.md/cli" target="_blank" rel="noreferrer">Obsidian Help: CLI</a></li>
+            <li><a href="https://help.obsidian.md/plugin-security" target="_blank" rel="noreferrer">Obsidian Help: plugin security</a></li>
+            <li><a href="https://github.com/iansinnott/obsidian-claude-code-mcp" target="_blank" rel="noreferrer">iansinnott/obsidian-claude-code-mcp</a></li>
+          </ul>
+        `,
+      },
+      en: {
+        title: 'The Most Practical Way to Connect Obsidian and Claude Code',
+        keywords: ['AI'],
+        excerpt: 'There is no universal one-click integration between Obsidian and Claude Code, but a shared vault folder plus URI, CLI and MCP in the right order creates a workflow that is much more useful than it first sounds.',
+        heroImage: {
+          alt: 'Laptop screens showing notes and development tools on a tidy desk',
+          caption: 'The useful connection between Obsidian and Claude Code comes less from a flashy integration and more from reducing friction inside the same working space.',
+        },
+        contentHtml: `
+          <p>If you keep a serious Obsidian vault, the same problem eventually shows up. Your notes become rich, but turning them into drafts, summaries and reusable documents still takes time. Claude Code can speed that part up, yet it is easy for the note app and the AI workflow to live in separate lanes.</p>
+          <p>That is why people often start with the same question: is there an official direct way to connect Obsidian and Claude Code? The practical answer is not a simple yes.</p>
+          <p>There is no universal first-party one-click bridge. What works better in practice is a layered setup: share the vault folder first, add URI or CLI automation next, and only move to MCP if you truly need a deeper tool-level connection.</p>
+
+          <h3>Start with the right assumption: shared workspace matters more than a dedicated button</h3>
+          <p>Obsidian vaults are local working spaces. That matters because Claude Code is strongest when it can operate directly on the files and folders you already use. In other words, the first real connection between the two tools is not a plugin. It is the fact that both of them can work on the same vault.</p>
+          <p>Once Claude Code is pointed at the vault folder, your notes, drafts, research files and markdown structure stop being background material and start becoming live working context.</p>
+          <blockquote>The most useful version of this setup is not “Obsidian integrated into Claude Code.” It is “both tools operating on the same vault without friction.”</blockquote>
+
+          <h3>Step 1: use the Obsidian vault as the Claude Code working directory</h3>
+          <p>The most stable starting point is simple: open the vault folder in your terminal and run <code>claude</code> there. Claude Code can then work directly with the markdown files, folders and attachments you already maintain in Obsidian.</p>
+          <p>This is also the right place to add a <code>CLAUDE.md</code> file at the vault root. Anthropic documents <code>CLAUDE.md</code> as the instruction file Claude Code reads at the beginning of a session. For an Obsidian workflow, that is where you define rules such as preserving wikilinks, keeping frontmatter intact and avoiding attachment path changes.</p>
+          <ul>
+            <li>Condense long meeting notes into cleaner summaries.</li>
+            <li>Merge scattered notes into a blog draft.</li>
+            <li>Refactor folder structure while preserving note links.</li>
+            <li>Turn research notes into a publishable outline.</li>
+          </ul>
+          <p>Even without deeper automation, this alone already changes the feel of the workflow.</p>
+
+          <h3>Step 2: add Obsidian URI and CLI when you want shorter loops</h3>
+          <p>Once the basic setup is working, the next improvement is reducing the number of manual steps. Obsidian URI is built exactly for that kind of bridge. The official documentation shows that <code>obsidian://</code> can open notes, create notes, open the daily note and run searches from outside the app.</p>
+          <p>That means Claude Code can help generate or clean content, and your shortcuts or scripts can immediately bounce you back into the exact note you want to review.</p>
+          <p>The newer Obsidian CLI pushes this idea further. The official CLI supports commands such as <code>obsidian daily</code>, <code>obsidian search</code>, <code>obsidian create</code> and <code>obsidian read</code>. For most users, this is the sweet spot: enough automation to feel fast, without taking on too much complexity.</p>
+          <ul>
+            <li><code>obsidian daily</code> to jump into the daily note</li>
+            <li><code>obsidian search query="..."</code> to find notes quickly</li>
+            <li><code>obsidian create name="..."</code> to create a new draft from terminal flow</li>
+            <li><code>obsidian://open</code> to jump into a specific note from another tool</li>
+          </ul>
+
+          <h3>Step 3: use MCP only if you need a stronger tool-level connection</h3>
+          <p>MCP, as Anthropic describes it, is the open protocol for connecting Claude Code to external tools and data sources. So if your goal is to make Obsidian feel less like a folder and more like a live tool surface, MCP is the strongest path.</p>
+          <p>Community projects already exist for this, including an Obsidian-Claude Code MCP server on GitHub. But this is where the setup stops being light. You are now dealing with plugin trust, local APIs, permission boundaries and the reality of sensitive notes.</p>
+          <p>Obsidian's own security guidance is clear that community plugins can access files, reach the internet and even install additional programs. That does not mean you should avoid them entirely. It means this is the stage where security judgment matters.</p>
+          <blockquote>MCP is the most powerful layer, but it is usually the last layer to add, not the first.</blockquote>
+
+          <h3>The order I would recommend</h3>
+          <ol>
+            <li>Point Claude Code at the Obsidian vault folder.</li>
+            <li>Add <code>CLAUDE.md</code> to lock in markdown and link conventions.</li>
+            <li>Bring in URI or CLI once repetition starts getting annoying.</li>
+            <li>Move to MCP only if you need live tool integration and can evaluate the security tradeoffs.</li>
+          </ol>
+          <p>That order works because it gets you useful gains early without forcing complexity too soon.</p>
+
+          <h3>What really matters is not integration theater but lower friction</h3>
+          <p>The value here is not in saying that your note app and AI tool are “fully integrated.” The value is in making it easier to find notes, shape drafts and return the result to the vault without breaking your working rhythm.</p>
+          <p>In practice, the calmer setup is often the better one. Shared vault first, lightweight automation next, deeper integration only when it is truly earned.</p>
+
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noreferrer">Anthropic Claude Code overview</a></li>
+            <li><a href="https://docs.anthropic.com/en/docs/mcp" target="_blank" rel="noreferrer">Anthropic Model Context Protocol documentation</a></li>
+            <li><a href="https://help.obsidian.md/vault" target="_blank" rel="noreferrer">Obsidian Help: vaults</a></li>
+            <li><a href="https://help.obsidian.md/Extending%2BObsidian/Obsidian%2BURI" target="_blank" rel="noreferrer">Obsidian Help: Obsidian URI</a></li>
+            <li><a href="https://help.obsidian.md/cli" target="_blank" rel="noreferrer">Obsidian Help: CLI</a></li>
+            <li><a href="https://help.obsidian.md/plugin-security" target="_blank" rel="noreferrer">Obsidian Help: plugin security</a></li>
+            <li><a href="https://github.com/iansinnott/obsidian-claude-code-mcp" target="_blank" rel="noreferrer">iansinnott/obsidian-claude-code-mcp</a></li>
+          </ul>
+        `,
+      },
+      ja: {
+        title: 'ObsidianとClaude Codeをつなげて使う、いちばん現実的な方法',
+        keywords: ['AI'],
+        excerpt: 'ObsidianとClaude Codeに万能なワンクリック統合があるわけではありませんが、同じVaultを共有し、URI・CLI・MCPを順番に足していくと、かなり実用的な作業フローになります。',
+        heroImage: {
+          alt: 'ノートと開発ツールが並んだノートPC画面と整った作業机',
+          caption: 'ObsidianとClaude Codeの組み合わせは、派手な統合機能より、同じ作業空間の中で摩擦を減らすことに強みがあります。',
+        },
+        contentHtml: `
+          <p>ObsidianのVaultを長く育てていると、似た悩みが出てきます。メモは増えるのに、それを要約したり、下書きにまとめたり、使いやすい形に整えたりする作業は意外と手間がかかります。Claude Codeを使えばそこはかなり速くなりますが、ノートの世界とAIの作業が別々に動いてしまいやすいのも事実です。</p>
+          <p>そこで多くの人がまず気になるのが、「ObsidianとClaude Codeを直接つなぐ公式な方法はあるのか」という点だと思います。実際には、そこは少し整理して考えたほうがわかりやすいです。</p>
+          <p>万能なワンクリック統合があるというより、同じVaultを共有し、必要に応じてURIやCLIを足し、さらに必要ならMCPへ進むという段階的な組み方のほうが現実的です。</p>
+
+          <h3>まず前提を整えると、専用ボタンより同じ作業空間の共有が重要です</h3>
+          <p>ObsidianのVaultはローカルの作業空間です。Claude Codeは、そのフォルダとファイルを直接扱えるときに最も実用的に働きます。つまり、この二つを結ぶ最初の一歩は特別なプラグインではなく、同じVaultを両方が扱うことです。</p>
+          <p>この形にすると、メモ、下書き、調査ノート、Markdown構造そのものが、Claude Codeにとって生きた作業コンテキストになります。</p>
+          <blockquote>この組み合わせの本質は「完全統合」より、「同じVaultを共有しながら切り替えの面倒を減らすこと」にあります。</blockquote>
+
+          <h3>1段階目: ObsidianのVaultをClaude Codeの作業ディレクトリにします</h3>
+          <p>いちばん安定した出発点はとても単純です。Vaultフォルダをターミナルで開き、その中で <code>claude</code> を実行します。これでClaude Codeは、ObsidianのMarkdownノート、フォルダ構成、添付ファイルの流れをそのまま前提に扱えるようになります。</p>
+          <p>この段階でVaultのルートに <code>CLAUDE.md</code> を置いておくと便利です。Anthropicの公式説明では、これはClaude Codeがセッション開始時に読む指示ファイルです。Obsidian用途なら、Wikiリンクを維持すること、フロントマターを壊さないこと、添付ファイルの参照先を勝手に変えないことなどを書いておくと安定します。</p>
+          <ul>
+            <li>長い会議メモを短く整理する</li>
+            <li>散らばったノートをひとつの下書きにまとめる</li>
+            <li>リンクを保ちながら構造を整える</li>
+            <li>調査ノートから記事の骨組みを作る</li>
+          </ul>
+          <p>この段階だけでも、作業感はかなり変わります。</p>
+
+          <h3>2段階目: URIとCLIを足すと往復がかなり短くなります</h3>
+          <p>基本形が動いたら、次は手数を減らす段階です。Obsidian URIは、ノートを開く、新規作成する、デイリーノートを開く、検索する、といった操作を他のアプリやショートカットから呼び出せる仕組みです。</p>
+          <p>Claude Codeで内容を整えたあと、そのまま目的のノートを開いて見直したい場面では、この仕組みがとても便利です。</p>
+          <p>さらに最近のObsidian CLIでは、<code>obsidian daily</code>、<code>obsidian search</code>、<code>obsidian create</code>、<code>obsidian read</code> などが使えます。多くの人にとっては、この段階がいちばん扱いやすい落としどころだと思います。</p>
+          <ul>
+            <li><code>obsidian daily</code> でその日のノートを開く</li>
+            <li><code>obsidian search query="..."</code> で素早く検索する</li>
+            <li><code>obsidian create name="..."</code> で新規下書きを作る</li>
+            <li><code>obsidian://open</code> で他ツールから特定ノートへ飛ぶ</li>
+          </ul>
+
+          <h3>3段階目: 本当に強く結びたいときだけMCPを使います</h3>
+          <p>MCPは、Anthropicが案内している外部ツール接続のためのオープンな仕組みです。Obsidianを単なる共有フォルダではなく、Claude Codeから扱える道具のようにしたいなら、この方向が最も強力です。</p>
+          <p>実際、コミュニティにはObsidianとClaude CodeをつなぐMCPサーバープロジェクトもあります。ただし、ここから先は軽い設定では済みません。プラグインの信頼性、ローカルAPI、権限範囲、機密ノートの扱いまで考える必要が出てきます。</p>
+          <p>Obsidianの公式セキュリティ文書でも、コミュニティプラグインはファイル、ネットワーク、追加プログラムにまで触れうるので慎重に判断するよう案内されています。機密性の高いVaultなら、ここは特に重要です。</p>
+          <blockquote>MCPは最も強力ですが、最初に入れるべきものというより、必要になってから最後に足すものだと考えたほうが安全です。</blockquote>
+
+          <h3>私ならこの順番をすすめます</h3>
+          <ol>
+            <li>まずClaude CodeをObsidianのVaultフォルダで動かします。</li>
+            <li><code>CLAUDE.md</code> を置いてMarkdownとリンクのルールを固定します。</li>
+            <li>繰り返し操作が増えたらURIかCLIを足します。</li>
+            <li>それでも足りず、権限や安全性を見極められるならMCPへ進みます。</li>
+          </ol>
+          <p>この順番のよいところは、早い段階で十分な効果を得ながら、必要以上に複雑にしないことです。</p>
+
+          <h3>結局大事なのは、統合感より摩擦を減らすことです</h3>
+          <p>ObsidianとClaude Codeを一緒に使う価値は、「完全統合された」と言えることではありません。ノートを探し、下書きを整え、結果をまたVaultへ戻す流れを、少しでも自然にすることにあります。</p>
+          <p>実際には、派手すぎない構成のほうが長く使えます。同じVaultを共有し、必要な自動化だけを足し、本当に必要なときだけ深い連携に進む。そのくらいが、いちばん実務的です。</p>
+
+          <h3>参考資料</h3>
+          <ul>
+            <li><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noreferrer">Anthropic Claude Code overview</a></li>
+            <li><a href="https://docs.anthropic.com/en/docs/mcp" target="_blank" rel="noreferrer">Anthropic Model Context Protocol documentation</a></li>
+            <li><a href="https://help.obsidian.md/vault" target="_blank" rel="noreferrer">Obsidian Help: vaults</a></li>
+            <li><a href="https://help.obsidian.md/Extending%2BObsidian/Obsidian%2BURI" target="_blank" rel="noreferrer">Obsidian Help: Obsidian URI</a></li>
+            <li><a href="https://help.obsidian.md/cli" target="_blank" rel="noreferrer">Obsidian Help: CLI</a></li>
+            <li><a href="https://help.obsidian.md/plugin-security" target="_blank" rel="noreferrer">Obsidian Help: plugin security</a></li>
+            <li><a href="https://github.com/iansinnott/obsidian-claude-code-mcp" target="_blank" rel="noreferrer">iansinnott/obsidian-claude-code-mcp</a></li>
+          </ul>
+        `,
+      },
+    },
+  },
+  {
     slug: 'why-kakao-healthcare-looks-bigger-than-a-single-diabetes-app',
     category: 'healthcare',
     createdAt: '2026-03-31T14:20:00+09:00',
