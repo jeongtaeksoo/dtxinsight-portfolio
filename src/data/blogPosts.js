@@ -53,7 +53,7 @@ export const blogPosts = [
     category: 'ai',
     createdAt: '2026-03-31T15:40:00+09:00',
     heroImage: {
-      src: '/blog/ai-workflow-hero.jpg',
+      src: '/blog/obsidian-claude-code-hero.jpg',
     },
     locales: {
       ko: {
@@ -61,8 +61,8 @@ export const blogPosts = [
         keywords: ['AI'],
         excerpt: '요즘 커뮤니티에서 말하는 옵시디언과 Claude 연결은 대체로 세 갈래입니다. shared vault, 옵시디언 내부 플러그인, MCP 서버형을 구분해서 보면 어떤 방식이 내 작업에 맞는지 훨씬 선명해집니다.',
         heroImage: {
-          alt: '노트와 코드 작업이 함께 열려 있는 데스크 위 노트북과 문서 화면',
-          caption: '옵시디언과 Claude Code의 조합은 화려한 통합 버튼보다, 같은 작업 공간을 공유하면서 마찰을 줄이는 쪽에서 힘이 나옵니다.',
+          alt: '책상 위에서 노트를 적으며 노트북으로 작업하는 손과 메모 공간이 함께 보이는 장면',
+          caption: '옵시디언과 Claude Code의 연결은 거창한 대시보드보다, 메모와 작업 화면이 같은 흐름 안에 놓일 때 가장 실용적으로 느껴집니다.',
         },
         contentHtml: `
           <p>요즘 Reddit이나 포럼에서 “옵시디언과 Claude를 붙여 쓴다”는 이야기를 자주 보게 됩니다. 그런데 막상 내용을 들여다보면 모두 같은 기술을 말하는 것은 아닙니다. 겉으로는 비슷해 보여도 실제 구조는 제법 다릅니다.</p>
@@ -131,8 +131,8 @@ export const blogPosts = [
         keywords: ['AI'],
         excerpt: 'What people call “Obsidian plus Claude” now usually means three different things: a shared vault workflow, an embedded Obsidian plugin, or an MCP server bridge. Once those are separated, the tradeoffs become much clearer.',
         heroImage: {
-          alt: 'Laptop screens showing notes and development tools on a tidy desk',
-          caption: 'The useful connection between Obsidian and Claude Code comes less from a flashy integration and more from reducing friction inside the same working space.',
+          alt: 'Hands writing notes beside an open laptop on a wooden desk',
+          caption: 'The practical value of Obsidian and Claude Code shows up when note-taking and active work stay in the same flow instead of living in separate tools.',
         },
         contentHtml: `
           <p>If you have been seeing more posts about “connecting Obsidian and Claude,” your impression is right, but those posts are not all talking about the same layer. Some show Claude Code working directly against a vault folder. Others show Claude inside an Obsidian sidebar. Others are really about MCP servers.</p>
@@ -192,8 +192,8 @@ export const blogPosts = [
         keywords: ['AI'],
         excerpt: '最近よく見かける「ObsidianとClaudeの連携」は、実は一つの方法ではありません。shared vault、Obsidian内プラグイン、MCPサーバー型を分けて見ると、自分に合う形がかなりわかりやすくなります。',
         heroImage: {
-          alt: 'ノートと開発ツールが並んだノートPC画面と整った作業机',
-          caption: 'ObsidianとClaude Codeの組み合わせは、派手な統合機能より、同じ作業空間の中で摩擦を減らすことに強みがあります。',
+          alt: '木の机でノートを書きながらノートPCを操作している手元の様子',
+          caption: 'ObsidianとClaude Codeのよさは、派手な統合画面より、メモと実作業が同じ流れに収まるところにあります。',
         },
         contentHtml: `
           <p>最近、Redditやフォーラムで「ObsidianとClaudeをつなげて使う」という話をよく見かけます。ただ、そこで語られているものは必ずしも同じ技術ではありません。見た目は似ていても、中身はかなり違います。</p>
