@@ -150,7 +150,7 @@ const BlogBoard = () => {
             onClick={() => openPost(post)}
             className="group w-full rounded-2xl border border-border bg-background px-5 py-5 text-left transition-all hover:border-primary/50 hover:bg-white"
           >
-            <div className="flex flex-wrap items-start justify-between gap-3">
+            <div className="flex flex-wrap items-start gap-3">
               <div>
                 <h4 className="text-lg font-semibold text-text transition-colors group-hover:text-primary">
                   {post.title}
@@ -167,9 +167,6 @@ const BlogBoard = () => {
                   ))}
                 </div>
               </div>
-              <span className="rounded-full border border-border px-3 py-1 text-xs font-medium text-muted">
-                {post.categoryLabel || t('blogSection.postFallback')}
-              </span>
             </div>
 
             {preview && (
