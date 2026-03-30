@@ -52,6 +52,7 @@ const BlogBoard = () => {
     []
   );
   const latestPost = posts[0] || null;
+  const previewPosts = posts.slice(0, 3);
 
   const openArchive = () => {
     setViewPost(null);
@@ -221,45 +222,51 @@ const BlogBoard = () => {
           </p>
         </div>
       ) : (
-        <button
-          type="button"
-          onClick={() => openPost(latestPost)}
-          className="group w-full max-w-4xl overflow-hidden rounded-[28px] border border-border bg-white text-left shadow-sm transition-all hover:border-primary/50 hover:shadow-md"
-        >
-          <div className="grid md:grid-cols-[300px,1fr]">
-            {latestPost.heroImage && (
-              <div className="overflow-hidden bg-background">
-                <img
-                  src={latestPost.heroImage.src}
-                  alt={latestPost.heroImage.alt}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02] aspect-[4/3] md:aspect-auto"
-                />
-              </div>
-            )}
+        <div className="flex flex-wrap gap-4">
+          {previewPosts.map((post) => {
+            const keywords = getPostKeywords(post);
 
-            <div className="p-5 md:p-6">
-              <div className="flex flex-wrap items-center gap-2">
-                {getPostKeywords(latestPost).map((keyword) => (
-                  <span
-                    key={`${latestPost.slug}-${keyword}`}
-                    className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold ${KEYWORD_STYLES[keyword] || 'border-border bg-white text-muted'}`}
-                  >
-                    {keyword}
-                  </span>
-                ))}
-              </div>
+            return (
+              <button
+                key={post.slug}
+                type="button"
+                onClick={() => openPost(post)}
+                className="group relative aspect-square w-[220px] overflow-hidden rounded-[28px] border border-border bg-white text-left shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md sm:w-[240px]"
+              >
+                {post.heroImage && (
+                  <img
+                    src={post.heroImage.src}
+                    alt={post.heroImage.alt}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  />
+                )}
 
-              <h4 className="mt-4 text-xl font-bold leading-tight text-text transition-colors group-hover:text-primary md:text-2xl">
-                {latestPost.title}
-              </h4>
-              <p className="mt-3 text-sm text-muted">{formatDate(latestPost.createdAt)}</p>
-              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted md:text-[15px]">
-                {latestPost.excerpt || stripHtml(latestPost.contentHtml).slice(0, 150)}
-              </p>
-            </div>
-          </div>
-        </button>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/5" />
+
+                <div className="relative flex h-full flex-col justify-between p-4">
+                  <div className="flex flex-wrap gap-2">
+                    {keywords.map((keyword) => (
+                      <span
+                        key={`${post.slug}-${keyword}`}
+                        className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold backdrop-blur-sm ${KEYWORD_STYLES[keyword] || 'border-white/40 bg-white/10 text-white'}`}
+                      >
+                        {keyword}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div>
+                    <p className="text-xs text-white/80">{formatDate(post.createdAt)}</p>
+                    <h4 className="mt-2 text-lg font-bold leading-snug text-white">
+                      {post.title}
+                    </h4>
+                  </div>
+                </div>
+              </button>
+            );
+          })}
+        </div>
       )}
     </div>
   );
