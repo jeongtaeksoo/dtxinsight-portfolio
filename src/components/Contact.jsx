@@ -14,8 +14,7 @@ const Contact = () => {
 
     return (
         <section id="contact" className="mt-20 border-t border-border">
-            <div className="max-w-[1200px] mx-auto px-4 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left">
-                {/* Left Side: Contact Links */}
+            <div className="max-w-[1200px] mx-auto px-4 py-20 text-center md:text-left">
                 <div className="flex flex-col justify-center items-center md:items-start">
                     <h2 className="text-3xl font-bold text-text mb-3">{t('contact.title')}</h2>
                     <p className="text-muted mb-10 max-w-md text-sm leading-relaxed">
@@ -36,24 +35,6 @@ const Contact = () => {
                             </a>
                         ))}
                     </div>
-                </div>
-
-                {/* Right Side: Blog Note */}
-                <div className="bg-card rounded-2xl p-8 border border-border/50 shadow-sm relative overflow-hidden text-left bg-zinc-50 dark:bg-zinc-800/10 flex flex-col justify-between min-h-[320px]">
-                    <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70 mb-3">Blog</p>
-                        <h3 className="text-2xl font-bold text-text mb-4">기록과 포스팅</h3>
-                        <p className="max-w-md text-sm leading-relaxed text-muted">
-                            일상에서 시작한 생각과 AI, 헬스케어에 대한 기록을 이 공간에 차분히 쌓아가고 있습니다.
-                        </p>
-                    </div>
-
-                    <a
-                        href="#blog"
-                        className="mt-8 inline-flex w-fit items-center gap-2 rounded-full border border-border bg-white px-5 py-2.5 text-sm font-medium text-text transition-colors hover:border-primary hover:text-primary"
-                    >
-                        블로그 섹션 보기
-                    </a>
                 </div>
             </div>
 
