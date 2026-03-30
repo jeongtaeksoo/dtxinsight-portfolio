@@ -130,6 +130,11 @@ const BlogBoard = () => {
     return date.toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
   };
 
+  const sanitizeBlogContent = (html) => DOMPurify.sanitize(html, {
+    ADD_TAGS: ['video', 'source'],
+    ADD_ATTR: ['controls', 'playsinline', 'preload', 'src', 'poster', 'class', 'type'],
+  });
+
   // Editor View
   if (isEditing) {
     return (
@@ -203,7 +208,7 @@ const BlogBoard = () => {
           
           <div 
             className="prose prose-invert max-w-none text-text/90 prose-p:leading-relaxed prose-a:text-primary prose-img:rounded-xl"
-            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(viewPost.content) }}
+            dangerouslySetInnerHTML={{ __html: sanitizeBlogContent(viewPost.content) }}
           />
 
           {isAdmin && (
