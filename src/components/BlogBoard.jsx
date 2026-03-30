@@ -90,7 +90,7 @@ const BlogBoard = () => {
     }))
   ), [language, t]);
 
-  const previewPosts = posts.slice(0, 3);
+  const previewPosts = posts.slice(0, 5);
 
   const openArchive = () => {
     setViewPostSlug(null);
@@ -297,50 +297,53 @@ const BlogBoard = () => {
           </p>
         </div>
       ) : (
-        <div className="flex flex-wrap gap-4">
-          {previewPosts.map((post) => {
-            const keywords = getPostKeywords(post);
+        <div className="-mr-2 overflow-x-auto pb-3 pr-2 custom-scrollbar">
+          <div className="flex min-w-max snap-x gap-4 pr-4">
+            {previewPosts.map((post, index) => {
+              const keywords = getPostKeywords(post);
 
-            return (
-              <button
-                key={post.slug}
-                type="button"
-                onClick={() => openPost(post)}
-                className="group relative aspect-square w-[220px] overflow-hidden rounded-[28px] border border-border bg-white text-left shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md sm:w-[240px]"
-              >
-                {post.heroImage && (
-                  <img
-                    src={post.heroImage.src}
-                    alt={post.heroImage.alt}
-                    loading="lazy"
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                  />
-                )}
+              return (
+                <button
+                  key={post.slug}
+                  type="button"
+                  onClick={() => openPost(post)}
+                  className="group relative aspect-square w-[208px] shrink-0 snap-start overflow-hidden rounded-[28px] border border-border bg-white text-left shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md sm:w-[220px] md:w-[228px]"
+                  style={{ marginLeft: index === 0 ? 0 : index * 6 }}
+                >
+                  {post.heroImage && (
+                    <img
+                      src={post.heroImage.src}
+                      alt={post.heroImage.alt}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    />
+                  )}
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/5" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/5" />
 
-                <div className="relative flex h-full flex-col justify-between p-4">
-                  <div className="flex flex-wrap gap-2">
-                    {keywords.map((keyword) => (
-                      <span
-                        key={`${post.slug}-${keyword}`}
-                        className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold backdrop-blur-sm ${KEYWORD_STYLES[post.category] || 'border-white/40 bg-white/10 text-white'}`}
-                      >
-                        {keyword}
-                      </span>
-                    ))}
+                  <div className="relative flex h-full flex-col justify-between p-4">
+                    <div className="flex flex-wrap gap-2">
+                      {keywords.map((keyword) => (
+                        <span
+                          key={`${post.slug}-${keyword}`}
+                          className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold backdrop-blur-sm ${KEYWORD_STYLES[post.category] || 'border-white/40 bg-white/10 text-white'}`}
+                        >
+                          {keyword}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div>
+                      <p className="text-xs text-white/80">{formatDate(post.createdAt, language)}</p>
+                      <h4 className="mt-2 text-lg font-bold leading-snug text-white">
+                        {post.title}
+                      </h4>
+                    </div>
                   </div>
-
-                  <div>
-                    <p className="text-xs text-white/80">{formatDate(post.createdAt, language)}</p>
-                    <h4 className="mt-2 text-lg font-bold leading-snug text-white">
-                      {post.title}
-                    </h4>
-                  </div>
-                </div>
-              </button>
-            );
-          })}
+                </button>
+              );
+            })}
+          </div>
         </div>
       )}
     </div>
