@@ -209,6 +209,18 @@
             "ai": "生成AIベースのデジタル治療薬研究"
         }
     },
+    "blogSection": {
+        "label": "ブログ",
+        "recentPosts": "最新記事",
+        "viewSection": "ブログ一覧を見る",
+        "allPosts": "記事一覧",
+        "viewPost": "記事を見る",
+        "backToList": "記事一覧",
+        "closeArchive": "ブログ一覧を閉じる",
+        "emptyTitle": "まだ公開された記事がありません。",
+        "emptyDescription": "最初の記事がまもなくこの場所に表示されます。",
+        "postFallback": "記事"
+    },
     "contact": {
         "title": "お問い合わせ",
         "subtitle": "コラボレーションに興味がある方、または私の仕事について質問がありますか？",

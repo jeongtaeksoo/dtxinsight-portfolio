@@ -209,6 +209,18 @@
             "ai": "Generative AI-based Digital Therapeutics Research"
         }
     },
+    "blogSection": {
+        "label": "Blog",
+        "recentPosts": "Latest Posts",
+        "viewSection": "View Blog Section",
+        "allPosts": "All Posts",
+        "viewPost": "Read Post",
+        "backToList": "All Posts",
+        "closeArchive": "Close blog archive",
+        "emptyTitle": "No posts have been published yet.",
+        "emptyDescription": "The first post will appear in this space soon.",
+        "postFallback": "Post"
+    },
     "contact": {
         "title": "Connect",
         "subtitle": "Interested in collaboration or have questions about my work?",

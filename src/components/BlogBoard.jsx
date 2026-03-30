@@ -1,7 +1,8 @@
 import React, { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ChevronLeft, X } from 'lucide-react';
 import DOMPurify from 'dompurify';
-import { blogPosts } from '../data/blogPosts';
+import { blogPosts, getLocalizedBlogPost, resolveBlogLocale } from '../data/blogPosts';
 
 const sanitizeBlogContent = (html) => DOMPurify.sanitize(html, {
   ADD_TAGS: ['video', 'source', 'figure', 'figcaption'],
@@ -9,23 +10,29 @@ const sanitizeBlogContent = (html) => DOMPurify.sanitize(html, {
 });
 
 const KEYWORD_STYLES = {
-  AI: 'border-sky-200 bg-sky-50 text-sky-700',
-  '헬스케어': 'border-emerald-200 bg-emerald-50 text-emerald-700',
-  '일상': 'border-amber-200 bg-amber-50 text-amber-700',
+  ai: 'border-sky-200 bg-sky-50 text-sky-700',
+  healthcare: 'border-emerald-200 bg-emerald-50 text-emerald-700',
+  daily: 'border-amber-200 bg-amber-50 text-amber-700',
+};
+
+const DATE_LOCALES = {
+  ko: 'ko-KR',
+  en: 'en-US',
+  ja: 'ja-JP',
 };
 
 const stripHtml = (html = '') => (
   html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()
 );
 
-const formatDate = (dateString) => {
+const formatDate = (dateString, language) => {
   const date = new Date(dateString);
 
   if (Number.isNaN(date.getTime())) {
     return dateString;
   }
 
-  return date.toLocaleDateString('ko-KR', {
+  return date.toLocaleDateString(DATE_LOCALES[language] ?? DATE_LOCALES.ko, {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
@@ -37,35 +44,43 @@ const getPostKeywords = (post) => {
     return post.keywords;
   }
 
-  if (post.category) {
-    return [post.category];
+  if (post.categoryLabel) {
+    return [post.categoryLabel];
   }
 
   return ['Post'];
 };
 
 const BlogBoard = () => {
-  const [viewPost, setViewPost] = useState(null);
+  const { t, i18n } = useTranslation();
+  const [viewPostSlug, setViewPostSlug] = useState(null);
   const [isArchiveOpen, setIsArchiveOpen] = useState(false);
-  const posts = useMemo(
-    () => [...blogPosts].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)),
-    []
+  const language = resolveBlogLocale(i18n.resolvedLanguage || i18n.language);
+
+  const posts = useMemo(() => (
+    [...blogPosts]
+      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+      .map((post) => getLocalizedBlogPost(post, language))
+  ), [language]);
+  const viewPost = useMemo(
+    () => posts.find((post) => post.slug === viewPostSlug) ?? null,
+    [posts, viewPostSlug]
   );
-  const latestPost = posts[0] || null;
+
   const previewPosts = posts.slice(0, 3);
 
   const openArchive = () => {
-    setViewPost(null);
+    setViewPostSlug(null);
     setIsArchiveOpen(true);
   };
 
   const openPost = (post) => {
-    setViewPost(post);
+    setViewPostSlug(post.slug);
     setIsArchiveOpen(true);
   };
 
   const closeOverlay = () => {
-    setViewPost(null);
+    setViewPostSlug(null);
     setIsArchiveOpen(false);
   };
 
@@ -75,18 +90,20 @@ const BlogBoard = () => {
     return (
       <article className="mx-auto max-w-3xl">
         <button
-          onClick={() => setViewPost(null)}
+          onClick={() => setViewPostSlug(null)}
           className="mb-5 inline-flex items-center gap-1 text-sm font-medium text-muted transition-colors hover:text-text"
         >
-          <ChevronLeft size={16} /> 전체 글 목록
+          <ChevronLeft size={16} /> {t('blogSection.backToList')}
         </button>
 
         <div className="mb-5 flex flex-wrap items-center gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70">Blog</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70">
+            {t('blogSection.label')}
+          </p>
           {keywords.map((keyword) => (
             <span
               key={keyword}
-              className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold ${KEYWORD_STYLES[keyword] || 'border-border bg-white text-muted'}`}
+              className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold ${KEYWORD_STYLES[post.category] || 'border-border bg-white text-muted'}`}
             >
               {keyword}
             </span>
@@ -94,7 +111,7 @@ const BlogBoard = () => {
         </div>
 
         <h2 className="text-3xl font-bold leading-tight text-text md:text-4xl">{post.title}</h2>
-        <p className="mt-3 text-sm text-muted">{formatDate(post.createdAt)}</p>
+        <p className="mt-3 text-sm text-muted">{formatDate(post.createdAt, language)}</p>
 
         {post.heroImage && (
           <figure className="mt-8 mb-10">
@@ -138,12 +155,12 @@ const BlogBoard = () => {
                 <h4 className="text-lg font-semibold text-text transition-colors group-hover:text-primary">
                   {post.title}
                 </h4>
-                <p className="mt-1 text-xs text-muted">{formatDate(post.createdAt)}</p>
+                <p className="mt-1 text-xs text-muted">{formatDate(post.createdAt, language)}</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {keywords.map((keyword) => (
                     <span
                       key={`${post.slug}-${keyword}`}
-                      className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold ${KEYWORD_STYLES[keyword] || 'border-border bg-white text-muted'}`}
+                      className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold ${KEYWORD_STYLES[post.category] || 'border-border bg-white text-muted'}`}
                     >
                       {keyword}
                     </span>
@@ -151,7 +168,7 @@ const BlogBoard = () => {
                 </div>
               </div>
               <span className="rounded-full border border-border px-3 py-1 text-xs font-medium text-muted">
-                {post.category || 'Post'}
+                {post.categoryLabel || t('blogSection.postFallback')}
               </span>
             </div>
 
@@ -173,16 +190,18 @@ const BlogBoard = () => {
         <div className="mx-auto flex h-full w-full max-w-6xl flex-col overflow-hidden rounded-[32px] border border-border bg-white shadow-2xl animate-in fade-in zoom-in-95 duration-300">
           <div className="flex items-center justify-between border-b border-border px-5 py-4 md:px-7">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70">Blog</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70">
+                {t('blogSection.label')}
+              </p>
               <h3 className="mt-2 text-xl font-bold text-text md:text-2xl">
-                {viewPost ? '글 보기' : '전체 글 목록'}
+                {viewPost ? t('blogSection.viewPost') : t('blogSection.allPosts')}
               </h3>
             </div>
             <button
               type="button"
               onClick={closeOverlay}
               className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-primary hover:text-primary"
-              aria-label="블로그 목록 닫기"
+              aria-label={t('blogSection.closeArchive')}
             >
               <X size={18} />
             </button>
@@ -197,11 +216,13 @@ const BlogBoard = () => {
   }
 
   return (
-    <div className="flex flex-col h-full">
-      <div className="flex flex-wrap items-end justify-between gap-4 mb-6">
+    <div className="flex h-full flex-col">
+      <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70 mb-2">Blog</p>
-          <h3 className="text-2xl font-bold text-text">최근 글</h3>
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-primary/70">
+            {t('blogSection.label')}
+          </p>
+          <h3 className="text-2xl font-bold text-text">{t('blogSection.recentPosts')}</h3>
         </div>
         {posts.length > 0 && (
           <button
@@ -209,16 +230,16 @@ const BlogBoard = () => {
             onClick={openArchive}
             className="inline-flex items-center gap-2 rounded-full border border-border bg-white px-5 py-2.5 text-sm font-medium text-text transition-colors hover:border-primary hover:text-primary"
           >
-            블로그 섹션 보기
+            {t('blogSection.viewSection')}
           </button>
         )}
       </div>
 
       {posts.length === 0 ? (
         <div className="flex flex-1 flex-col items-center justify-center rounded-2xl border border-dashed border-border bg-white/5 px-6 text-center">
-          <p className="text-base font-semibold text-text">아직 게시된 글이 없습니다.</p>
+          <p className="text-base font-semibold text-text">{t('blogSection.emptyTitle')}</p>
           <p className="mt-2 max-w-md text-sm leading-relaxed text-muted">
-            곧 첫 번째 글이 이 공간에 올라올 예정입니다.
+            {t('blogSection.emptyDescription')}
           </p>
         </div>
       ) : (
@@ -249,7 +270,7 @@ const BlogBoard = () => {
                     {keywords.map((keyword) => (
                       <span
                         key={`${post.slug}-${keyword}`}
-                        className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold backdrop-blur-sm ${KEYWORD_STYLES[keyword] || 'border-white/40 bg-white/10 text-white'}`}
+                        className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold backdrop-blur-sm ${KEYWORD_STYLES[post.category] || 'border-white/40 bg-white/10 text-white'}`}
                       >
                         {keyword}
                       </span>
@@ -257,7 +278,7 @@ const BlogBoard = () => {
                   </div>
 
                   <div>
-                    <p className="text-xs text-white/80">{formatDate(post.createdAt)}</p>
+                    <p className="text-xs text-white/80">{formatDate(post.createdAt, language)}</p>
                     <h4 className="mt-2 text-lg font-bold leading-snug text-white">
                       {post.title}
                     </h4>
