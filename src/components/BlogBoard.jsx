@@ -32,6 +32,18 @@ const formatDate = (dateString) => {
   });
 };
 
+const getPostKeywords = (post) => {
+  if (Array.isArray(post.keywords) && post.keywords.length > 0) {
+    return post.keywords;
+  }
+
+  if (post.category) {
+    return [post.category];
+  }
+
+  return ['Post'];
+};
+
 const BlogBoard = () => {
   const [viewPost, setViewPost] = useState(null);
   const [isArchiveOpen, setIsArchiveOpen] = useState(false);
@@ -57,7 +69,7 @@ const BlogBoard = () => {
   };
 
   const renderPostDetail = (post) => {
-    const keywords = post.keywords || ['AI', '헬스케어', '일상'];
+    const keywords = getPostKeywords(post);
 
     return (
       <article className="mx-auto max-w-3xl">
@@ -111,7 +123,7 @@ const BlogBoard = () => {
     <div className="space-y-4">
       {posts.map((post) => {
         const preview = post.excerpt || stripHtml(post.contentHtml).slice(0, 160);
-        const keywords = post.keywords || ['AI', '헬스케어', '일상'];
+        const keywords = getPostKeywords(post);
 
         return (
           <button
@@ -212,38 +224,40 @@ const BlogBoard = () => {
         <button
           type="button"
           onClick={() => openPost(latestPost)}
-          className="group overflow-hidden rounded-[28px] border border-border bg-white text-left shadow-sm transition-all hover:border-primary/50 hover:shadow-md"
+          className="group w-full max-w-4xl overflow-hidden rounded-[28px] border border-border bg-white text-left shadow-sm transition-all hover:border-primary/50 hover:shadow-md"
         >
-          {latestPost.heroImage && (
-            <div className="aspect-[16/8] overflow-hidden bg-background">
-              <img
-                src={latestPost.heroImage.src}
-                alt={latestPost.heroImage.alt}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-              />
-            </div>
-          )}
+          <div className="grid md:grid-cols-[300px,1fr]">
+            {latestPost.heroImage && (
+              <div className="overflow-hidden bg-background">
+                <img
+                  src={latestPost.heroImage.src}
+                  alt={latestPost.heroImage.alt}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.02] aspect-[4/3] md:aspect-auto"
+                />
+              </div>
+            )}
 
-          <div className="p-6 md:p-8">
-            <div className="flex flex-wrap items-center gap-2">
-              {(latestPost.keywords || ['AI', '헬스케어', '일상']).map((keyword) => (
-                <span
-                  key={`${latestPost.slug}-${keyword}`}
-                  className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold ${KEYWORD_STYLES[keyword] || 'border-border bg-white text-muted'}`}
-                >
-                  {keyword}
-                </span>
-              ))}
-            </div>
+            <div className="p-5 md:p-6">
+              <div className="flex flex-wrap items-center gap-2">
+                {getPostKeywords(latestPost).map((keyword) => (
+                  <span
+                    key={`${latestPost.slug}-${keyword}`}
+                    className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[11px] font-semibold ${KEYWORD_STYLES[keyword] || 'border-border bg-white text-muted'}`}
+                  >
+                    {keyword}
+                  </span>
+                ))}
+              </div>
 
-            <h4 className="mt-4 text-2xl font-bold leading-tight text-text transition-colors group-hover:text-primary md:text-3xl">
-              {latestPost.title}
-            </h4>
-            <p className="mt-3 text-sm text-muted">{formatDate(latestPost.createdAt)}</p>
-            <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted">
-              {latestPost.excerpt || stripHtml(latestPost.contentHtml).slice(0, 180)}
-            </p>
+              <h4 className="mt-4 text-xl font-bold leading-tight text-text transition-colors group-hover:text-primary md:text-2xl">
+                {latestPost.title}
+              </h4>
+              <p className="mt-3 text-sm text-muted">{formatDate(latestPost.createdAt)}</p>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted md:text-[15px]">
+                {latestPost.excerpt || stripHtml(latestPost.contentHtml).slice(0, 150)}
+              </p>
+            </div>
           </div>
         </button>
       )}

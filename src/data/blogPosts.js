@@ -3,7 +3,7 @@ export const blogPosts = [
     slug: 'first-daily-post-starting-this-blog',
     title: '첫 글을 올리며, 기록을 다시 시작해보려 합니다',
     category: '일상',
-    keywords: ['AI', '헬스케어', '일상'],
+    keywords: ['일상'],
     createdAt: '2026-03-30T18:05:00+09:00',
     excerpt: '오래 비워두었던 블로그 칸에 첫 글을 올리며, 앞으로 이 공간에 어떤 기록을 남기고 싶은지 차분히 적어보았습니다.',
     heroImage: {
