@@ -44,7 +44,7 @@ const BlogBoard = () => {
         </button>
 
         <div className="bg-white/5 border border-border rounded-2xl p-6 overflow-y-auto custom-scrollbar flex-1">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70 mb-3">Static Blog</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70 mb-3">Blog</p>
           <h2 className="text-2xl font-bold text-text mb-2">{viewPost.title}</h2>
           <p className="text-xs text-muted mb-6">{formatDate(viewPost.createdAt)}</p>
 
@@ -61,8 +61,8 @@ const BlogBoard = () => {
     <div className="flex flex-col h-full">
       <div className="flex flex-wrap items-end justify-between gap-4 mb-6">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70 mb-2">Static Blog</p>
-          <h3 className="text-2xl font-bold text-text">Repository-backed posts</h3>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70 mb-2">Blog</p>
+          <h3 className="text-2xl font-bold text-text">최근 글</h3>
         </div>
       </div>
 
@@ -70,7 +70,7 @@ const BlogBoard = () => {
         <div className="flex flex-1 flex-col items-center justify-center rounded-2xl border border-dashed border-border bg-white/5 px-6 text-center">
           <p className="text-base font-semibold text-text">아직 게시된 글이 없습니다.</p>
           <p className="mt-2 max-w-md text-sm leading-relaxed text-muted">
-            첫 글을 올리려면 `src/data/blogPosts.js`에 게시글 객체를 추가한 뒤 다시 배포하세요.
+            곧 첫 번째 글이 이 공간에 올라올 예정입니다.
           </p>
         </div>
       ) : (
