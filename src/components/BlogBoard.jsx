@@ -5,6 +5,24 @@ import { Lock, Unlock, Plus, X, Edit2, Trash2, ChevronLeft } from 'lucide-react'
 import RichTextEditor from './RichTextEditor';
 import DOMPurify from 'dompurify';
 
+const getFirestoreErrorMessage = (error, action = '작업') => {
+  const normalizedMessage = `${error?.code ?? ''} ${error?.message ?? ''}`.toLowerCase();
+
+  if (normalizedMessage.includes('firestore api has not been used') || normalizedMessage.includes('firestore.googleapis.com')) {
+    return 'Cloud Firestore API가 아직 활성화되지 않았습니다. Firebase Console에서 Firestore Database를 생성하고, Google Cloud Console에서 Cloud Firestore API를 활성화한 뒤 다시 시도해주세요.';
+  }
+
+  if (normalizedMessage.includes('permission-denied')) {
+    return `현재 Firebase 보안 규칙 때문에 ${action}에 실패했습니다. Firestore 규칙에서 이 프로젝트의 쓰기 권한을 확인해주세요.`;
+  }
+
+  if (normalizedMessage.includes('unavailable')) {
+    return `Firebase 연결이 일시적으로 불안정해 ${action}에 실패했습니다. 잠시 후 다시 시도해주세요.`;
+  }
+
+  return `${action} 중 오류가 발생했습니다. ${error?.message ?? 'Firebase 설정을 확인해주세요.'}`;
+};
+
 const BlogBoard = () => {
   const [posts, setPosts] = useState([]);
   const [isAdmin, setIsAdmin] = useState(false);
@@ -16,6 +34,8 @@ const BlogBoard = () => {
   const [content, setContent] = useState('');
   const [currentEditId, setCurrentEditId] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [isSaving, setIsSaving] = useState(false);
+  const [statusMessage, setStatusMessage] = useState('');
 
   const resetEditor = () => {
     setTitle('');
@@ -31,6 +51,7 @@ const BlogBoard = () => {
 
   const fetchPosts = async () => {
     setLoading(true);
+    setStatusMessage('');
     try {
       const q = query(collection(db, 'posts'), orderBy('createdAt', 'desc'));
       const querySnapshot = await getDocs(q);
@@ -41,6 +62,7 @@ const BlogBoard = () => {
       setPosts(fetchedPosts);
     } catch (error) {
       console.error("Error fetching posts: ", error);
+      setStatusMessage(getFirestoreErrorMessage(error, '게시글 불러오기'));
     }
     setLoading(false);
   };
@@ -78,6 +100,9 @@ const BlogBoard = () => {
       return;
     }
 
+    setIsSaving(true);
+    setStatusMessage('');
+
     try {
       if (currentEditId) {
         await updateDoc(doc(db, 'posts', currentEditId), {
@@ -98,10 +123,14 @@ const BlogBoard = () => {
       setTitle('');
       setContent('');
       setCurrentEditId(null);
-      fetchPosts();
+      await fetchPosts();
     } catch (error) {
       console.error("Error saving post: ", error);
-      alert("저장 중 오류가 발생했습니다.");
+      const message = getFirestoreErrorMessage(error, '게시글 저장');
+      setStatusMessage(message);
+      alert(message);
+    } finally {
+      setIsSaving(false);
     }
   };
 
@@ -116,11 +145,15 @@ const BlogBoard = () => {
   const handleDelete = async (postId) => {
     if (window.confirm("정말 이 게시물을 삭제하시겠습니까?")) {
       try {
+        setStatusMessage('');
         await deleteDoc(doc(db, 'posts', postId));
         if (viewPost?.id === postId) setViewPost(null);
-        fetchPosts();
+        await fetchPosts();
       } catch (error) {
         console.error("Error deleting post: ", error);
+        const message = getFirestoreErrorMessage(error, '게시글 삭제');
+        setStatusMessage(message);
+        alert(message);
       }
     }
   };
@@ -164,6 +197,11 @@ const BlogBoard = () => {
         />
         
         <div className="flex-1 mb-4 flex flex-col">
+          {statusMessage && (
+            <div className="mb-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+              {statusMessage}
+            </div>
+          )}
           <RichTextEditor value={content} onChange={setContent} />
         </div>
         
@@ -181,9 +219,10 @@ const BlogBoard = () => {
             </button>
             <button 
               onClick={handleSavePost}
-              className="px-6 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20"
+              disabled={isSaving}
+              className="px-6 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {currentEditId ? '수정 완료' : '등록하기'}
+              {isSaving ? '저장 중...' : currentEditId ? '수정 완료' : '등록하기'}
             </button>
           </div>
         </div>
@@ -252,6 +291,12 @@ const BlogBoard = () => {
       </div>
 
       <div className="flex-1 overflow-y-auto custom-scrollbar space-y-3 pr-2">
+        {statusMessage && (
+          <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+            {statusMessage}
+          </div>
+        )}
+
         {loading ? (
           <div className="flex justify-center items-center h-full">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
