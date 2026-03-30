@@ -17,6 +17,18 @@ const BlogBoard = () => {
   const [currentEditId, setCurrentEditId] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const resetEditor = () => {
+    setTitle('');
+    setContent('');
+    setCurrentEditId(null);
+  };
+
+  const startNewPost = () => {
+    resetEditor();
+    setViewPost(null);
+    setIsEditing(true);
+  };
+
   const fetchPosts = async () => {
     setLoading(true);
     try {
@@ -41,10 +53,19 @@ const BlogBoard = () => {
     if (isAdmin) {
       setIsAdmin(false);
       setIsEditing(false);
+      resetEditor();
     } else {
+      const expectedPassword = import.meta.env.VITE_ADMIN_PASSWORD;
+
+      if (!expectedPassword) {
+        alert("관리자 비밀번호가 현재 배포 환경에 설정되지 않았습니다. Vercel 환경변수를 다시 확인해주세요.");
+        return;
+      }
+
       const password = window.prompt("블로그 관리자 비밀번호를 입력하세요:");
-      if (password === import.meta.env.VITE_ADMIN_PASSWORD) {
+      if (password === expectedPassword) {
         setIsAdmin(true);
+        startNewPost();
       } else if (password !== null) {
         alert("비밀번호가 틀렸습니다.");
       }
@@ -112,11 +133,17 @@ const BlogBoard = () => {
   // Editor View
   if (isEditing) {
     return (
-      <div className="flex flex-col h-full animate-in fade-in slide-in-from-bottom-4 duration-500">
+      <div className="flex flex-col min-h-[720px] animate-in fade-in slide-in-from-bottom-4 duration-500">
         <div className="flex justify-between items-center mb-4">
-          <h3 className="text-xl font-bold text-text">{currentEditId ? '게시글 수정' : '새 게시글 작성'}</h3>
+          <div>
+            <h3 className="text-xl font-bold text-text">{currentEditId ? '게시글 수정' : '새 게시글 작성'}</h3>
+            <p className="mt-1 text-sm text-muted">글자 크기, 폰트, 색상, 링크, 이미지, 영상 업로드까지 바로 사용할 수 있습니다.</p>
+          </div>
           <button 
-            onClick={() => setIsEditing(false)}
+            onClick={() => {
+              setIsEditing(false);
+              resetEditor();
+            }}
             className="p-2 text-muted hover:text-text hover:bg-white/10 rounded-full transition-colors"
           >
             <X size={20} />
@@ -135,13 +162,25 @@ const BlogBoard = () => {
           <RichTextEditor value={content} onChange={setContent} />
         </div>
         
-        <div className="flex justify-end pt-12">
-          <button 
-            onClick={handleSavePost}
-            className="px-6 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20"
-          >
-            {currentEditId ? '수정 완료' : '등록하기'}
-          </button>
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-border pt-6">
+          <p className="text-sm text-muted">본문에 이미지를 넣으려면 툴바의 이미지 아이콘을, 영상을 넣으려면 비디오 아이콘을 사용하세요.</p>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => {
+                setIsEditing(false);
+                resetEditor();
+              }}
+              className="px-4 py-2 border border-border rounded-lg font-medium text-text hover:border-primary/40 hover:text-primary transition-colors"
+            >
+              취소
+            </button>
+            <button 
+              onClick={handleSavePost}
+              className="px-6 py-2 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20"
+            >
+              {currentEditId ? '수정 완료' : '등록하기'}
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -199,12 +238,7 @@ const BlogBoard = () => {
         
         {isAdmin && (
           <button 
-            onClick={() => {
-              setTitle('');
-              setContent('');
-              setCurrentEditId(null);
-              setIsEditing(true);
-            }}
+            onClick={startNewPost}
             className="flex items-center gap-1.5 px-3 py-1.5 bg-primary/10 text-primary hover:bg-primary/20 rounded-md transition-colors text-sm font-medium"
           >
             <Plus size={16} /> 새 게시글

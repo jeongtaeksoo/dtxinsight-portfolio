@@ -34,3 +34,37 @@
 ::-webkit-scrollbar-track { @apply bg-background; }
 ::-webkit-scrollbar-thumb { @apply bg-border rounded-full; }
 ::-webkit-scrollbar-thumb:hover { @apply bg-primary/40; }
+
+.blog-editor .ql-toolbar.ql-snow {
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  padding: 12px;
+}
+
+.blog-editor .ql-container.ql-snow {
+  border: 0;
+}
+
+.blog-editor .ql-editor {
+  min-height: 420px;
+  color: #111827;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.blog-editor .ql-editor.ql-blank::before {
+  color: #9ca3af;
+  font-style: normal;
+}
+
+.blog-editor .ql-editor img {
+  max-width: 100%;
+  border-radius: 16px;
+  margin: 16px 0;
+}
+
+.blog-editor .ql-editor a.blog-video-link {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
