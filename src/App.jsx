@@ -4,6 +4,7 @@ import NarrativeScroll from './components/NarrativeScroll'
 import ResearchProjects from './components/ResearchProjects'
 import Publications from './components/Publications'
 import Skills from './components/Skills'
+import BlogBoard from './components/BlogBoard'
 import Layout from './components/Layout'
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
       <ResearchProjects />
       <Publications />
       <Skills />
+      <section id="blog" className="py-16">
+        <BlogBoard />
+      </section>
     </Layout>
   );
 }
