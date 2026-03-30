@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ChevronLeft, X } from 'lucide-react';
 import DOMPurify from 'dompurify';
@@ -63,6 +63,7 @@ const BlogBoard = () => {
   const [viewPostSlug, setViewPostSlug] = useState(null);
   const [isArchiveOpen, setIsArchiveOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const previewRailRef = useRef(null);
   const language = resolveBlogLocale(i18n.resolvedLanguage || i18n.language);
 
   const posts = useMemo(() => (
@@ -90,7 +91,67 @@ const BlogBoard = () => {
     }))
   ), [language, t]);
 
-  const previewPosts = posts.slice(0, 5);
+  const previewPosts = useMemo(() => posts.slice(0, 5), [posts]);
+  const previewRailPosts = useMemo(
+    () => (previewPosts.length > 1 ? [...previewPosts, ...previewPosts] : previewPosts),
+    [previewPosts]
+  );
+
+  useEffect(() => {
+    const rail = previewRailRef.current;
+
+    if (!rail || previewPosts.length <= 1) {
+      return undefined;
+    }
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (reduceMotion) {
+      return undefined;
+    }
+
+    let frameId;
+    let isPaused = false;
+    const resetPoint = () => rail.scrollWidth / 2;
+
+    const tick = () => {
+      if (!isPaused) {
+        rail.scrollLeft += 0.45;
+
+        if (rail.scrollLeft >= resetPoint()) {
+          rail.scrollLeft = 0;
+        }
+      }
+
+      frameId = window.requestAnimationFrame(tick);
+    };
+
+    const pause = () => {
+      isPaused = true;
+    };
+
+    const resume = () => {
+      isPaused = false;
+    };
+
+    rail.addEventListener('mouseenter', pause);
+    rail.addEventListener('mouseleave', resume);
+    rail.addEventListener('focusin', pause);
+    rail.addEventListener('focusout', resume);
+
+    frameId = window.requestAnimationFrame(tick);
+
+    return () => {
+      if (frameId) {
+        window.cancelAnimationFrame(frameId);
+      }
+
+      rail.removeEventListener('mouseenter', pause);
+      rail.removeEventListener('mouseleave', resume);
+      rail.removeEventListener('focusin', pause);
+      rail.removeEventListener('focusout', resume);
+    };
+  }, [previewPosts.length]);
 
   const openArchive = () => {
     setViewPostSlug(null);
@@ -297,18 +358,21 @@ const BlogBoard = () => {
           </p>
         </div>
       ) : (
-        <div className="-mr-2 overflow-x-auto pb-3 pr-2 custom-scrollbar">
+        <div
+          ref={previewRailRef}
+          className="-mr-2 overflow-hidden pb-3 pr-2 blog-preview-rail"
+        >
           <div className="flex min-w-max snap-x gap-4 pr-4">
-            {previewPosts.map((post, index) => {
+            {previewRailPosts.map((post, index) => {
               const keywords = getPostKeywords(post);
 
               return (
                 <button
-                  key={post.slug}
+                  key={`${post.slug}-${index}`}
                   type="button"
                   onClick={() => openPost(post)}
                   className="group relative aspect-square w-[208px] shrink-0 snap-start overflow-hidden rounded-[28px] border border-border bg-white text-left shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md sm:w-[220px] md:w-[228px]"
-                  style={{ marginLeft: index === 0 ? 0 : index * 6 }}
+                  style={{ marginLeft: index === 0 ? 0 : (index % previewPosts.length) * 6 }}
                 >
                   {post.heroImage && (
                     <img

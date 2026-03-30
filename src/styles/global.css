@@ -152,6 +152,15 @@
   text-underline-offset: 0.16em;
 }
 
+.blog-preview-rail {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.blog-preview-rail::-webkit-scrollbar {
+  display: none;
+}
+
 .ql-font-arial {
   font-family: Arial, Helvetica, sans-serif;
 }
