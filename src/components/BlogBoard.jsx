@@ -63,10 +63,6 @@ const BlogBoard = () => {
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70 mb-2">Static Blog</p>
           <h3 className="text-2xl font-bold text-text">Repository-backed posts</h3>
-          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
-            이 블로그는 Firebase 없이 저장소의 정적 데이터로 배포됩니다. 새 글은
-            `src/data/blogPosts.js`를 수정하고 재배포하면 반영됩니다.
-          </p>
         </div>
       </div>
 

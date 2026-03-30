@@ -43,10 +43,6 @@ const Contact = () => {
                     <div>
                         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70 mb-3">Static Blog</p>
                         <h3 className="text-2xl font-bold text-text mb-4">Repository-backed publishing</h3>
-                        <p className="text-sm leading-relaxed text-muted max-w-md">
-                            블로그는 이제 Firebase 없이 정적 데이터로 배포됩니다. 새 글은 저장소의
-                            블로그 데이터 파일을 수정한 뒤 배포하면 공개됩니다.
-                        </p>
                     </div>
 
                     <a
