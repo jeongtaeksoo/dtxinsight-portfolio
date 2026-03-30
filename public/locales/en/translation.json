@@ -217,6 +217,9 @@
         "viewPost": "Read Post",
         "backToList": "All Posts",
         "closeArchive": "Close blog archive",
+        "filterAll": "All",
+        "filteredEmptyTitle": "There are no posts in this category yet.",
+        "filteredEmptyDescription": "Choose another keyword to see only the posts in that category.",
         "emptyTitle": "No posts have been published yet.",
         "emptyDescription": "The first post will appear in this space soon.",
         "postFallback": "Post"

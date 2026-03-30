@@ -217,6 +217,9 @@
         "viewPost": "글 보기",
         "backToList": "전체 글 목록",
         "closeArchive": "블로그 목록 닫기",
+        "filterAll": "전체",
+        "filteredEmptyTitle": "선택한 카테고리의 글이 아직 없습니다.",
+        "filteredEmptyDescription": "다른 키워드를 선택하면 해당 카테고리 글만 따로 볼 수 있습니다.",
         "emptyTitle": "아직 게시된 글이 없습니다.",
         "emptyDescription": "곧 첫 번째 글이 이 공간에 올라올 예정입니다.",
         "postFallback": "Post"

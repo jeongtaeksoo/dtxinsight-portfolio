@@ -217,6 +217,9 @@
         "viewPost": "記事を見る",
         "backToList": "記事一覧",
         "closeArchive": "ブログ一覧を閉じる",
+        "filterAll": "すべて",
+        "filteredEmptyTitle": "このカテゴリにはまだ記事がありません。",
+        "filteredEmptyDescription": "別のキーワードを選ぶと、そのカテゴリの記事だけを表示できます。",
         "emptyTitle": "まだ公開された記事がありません。",
         "emptyDescription": "最初の記事がまもなくこの場所に表示されます。",
         "postFallback": "記事"

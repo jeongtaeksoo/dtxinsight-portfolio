@@ -2,7 +2,12 @@ import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ChevronLeft, X } from 'lucide-react';
 import DOMPurify from 'dompurify';
-import { blogPosts, getLocalizedBlogPost, resolveBlogLocale } from '../data/blogPosts';
+import {
+  blogPosts,
+  getBlogCategoryLabel,
+  getLocalizedBlogPost,
+  resolveBlogLocale,
+} from '../data/blogPosts';
 
 const sanitizeBlogContent = (html) => DOMPurify.sanitize(html, {
   ADD_TAGS: ['video', 'source', 'figure', 'figcaption'],
@@ -24,6 +29,8 @@ const DATE_LOCALES = {
 const stripHtml = (html = '') => (
   html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()
 );
+
+const BLOG_FILTERS = ['all', 'ai', 'healthcare', 'daily'];
 
 const formatDate = (dateString, language) => {
   const date = new Date(dateString);
@@ -55,6 +62,7 @@ const BlogBoard = () => {
   const { t, i18n } = useTranslation();
   const [viewPostSlug, setViewPostSlug] = useState(null);
   const [isArchiveOpen, setIsArchiveOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const language = resolveBlogLocale(i18n.resolvedLanguage || i18n.language);
 
   const posts = useMemo(() => (
@@ -66,11 +74,27 @@ const BlogBoard = () => {
     () => posts.find((post) => post.slug === viewPostSlug) ?? null,
     [posts, viewPostSlug]
   );
+  const filteredPosts = useMemo(() => {
+    if (selectedCategory === 'all') {
+      return posts;
+    }
+
+    return posts.filter((post) => post.category === selectedCategory);
+  }, [posts, selectedCategory]);
+  const archiveFilters = useMemo(() => (
+    BLOG_FILTERS.map((category) => ({
+      value: category,
+      label: category === 'all'
+        ? t('blogSection.filterAll')
+        : getBlogCategoryLabel(category, language),
+    }))
+  ), [language, t]);
 
   const previewPosts = posts.slice(0, 3);
 
   const openArchive = () => {
     setViewPostSlug(null);
+    setSelectedCategory('all');
     setIsArchiveOpen(true);
   };
 
@@ -81,6 +105,7 @@ const BlogBoard = () => {
 
   const closeOverlay = () => {
     setViewPostSlug(null);
+    setSelectedCategory('all');
     setIsArchiveOpen(false);
   };
 
@@ -138,8 +163,38 @@ const BlogBoard = () => {
   };
 
   const renderArchiveList = () => (
-    <div className="space-y-4">
-      {posts.map((post) => {
+    <div>
+      <div className="mb-6 flex flex-wrap gap-2">
+        {archiveFilters.map((filter) => {
+          const isActive = selectedCategory === filter.value;
+
+          return (
+            <button
+              key={filter.value}
+              type="button"
+              onClick={() => setSelectedCategory(filter.value)}
+              className={`inline-flex items-center rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+                isActive
+                  ? 'border-primary bg-primary text-white'
+                  : 'border-border bg-white text-muted hover:border-primary/40 hover:text-text'
+              }`}
+            >
+              {filter.label}
+            </button>
+          );
+        })}
+      </div>
+
+      {filteredPosts.length === 0 ? (
+        <div className="rounded-2xl border border-dashed border-border bg-background px-6 py-12 text-center">
+          <p className="text-base font-semibold text-text">{t('blogSection.filteredEmptyTitle')}</p>
+          <p className="mt-2 text-sm leading-relaxed text-muted">
+            {t('blogSection.filteredEmptyDescription')}
+          </p>
+        </div>
+      ) : (
+        <div className="space-y-4">
+          {filteredPosts.map((post) => {
         const preview = post.excerpt || stripHtml(post.contentHtml).slice(0, 160);
         const keywords = getPostKeywords(post);
 
@@ -177,7 +232,9 @@ const BlogBoard = () => {
             )}
           </button>
         );
-      })}
+          })}
+        </div>
+      )}
     </div>
   );
 
