@@ -61,8 +61,13 @@ const RichTextEditor = ({ value, onChange }) => {
   const imageInputRef = useRef(null);
   const videoInputRef = useRef(null);
   const applyingExternalValueRef = useRef(false);
+  const onChangeRef = useRef(onChange);
   const [uploadingLabel, setUploadingLabel] = useState('');
   const [uploadError, setUploadError] = useState('');
+
+  useEffect(() => {
+    onChangeRef.current = onChange;
+  }, [onChange]);
 
   const insertMediaAtCursor = (type, url) => {
     const quill = quillInstanceRef.current;
@@ -112,10 +117,26 @@ const RichTextEditor = ({ value, onChange }) => {
     }
   };
 
+  const resetEditorHost = () => {
+    const host = editorElementRef.current;
+
+    if (!host) {
+      return;
+    }
+
+    const shell = host.parentElement;
+    shell?.querySelectorAll(':scope > .ql-toolbar').forEach((toolbar) => toolbar.remove());
+
+    host.innerHTML = '';
+    host.className = 'blog-editor';
+  };
+
   useEffect(() => {
     if (!editorElementRef.current || quillInstanceRef.current) {
       return undefined;
     }
+
+    resetEditorHost();
 
     const quill = new Quill(editorElementRef.current, {
       theme: 'snow',
@@ -144,7 +165,7 @@ const RichTextEditor = ({ value, onChange }) => {
         return;
       }
 
-      onChange(normalizeEditorHtml(quill.root.innerHTML));
+      onChangeRef.current(normalizeEditorHtml(quill.root.innerHTML));
     };
 
     quill.on('text-change', handleTextChange);
@@ -154,8 +175,9 @@ const RichTextEditor = ({ value, onChange }) => {
     return () => {
       quill.off('text-change', handleTextChange);
       quillInstanceRef.current = null;
+      resetEditorHost();
     };
-  }, [onChange, value]);
+  }, []);
 
   useEffect(() => {
     const quill = quillInstanceRef.current;
