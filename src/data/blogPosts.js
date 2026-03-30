@@ -49,174 +49,170 @@ export const getLocalizedBlogPost = (post, language = DEFAULT_BLOG_LOCALE) => {
 
 export const blogPosts = [
   {
-    slug: 'why-hospitals-start-with-documentation-before-diagnosis-in-generative-ai',
+    slug: 'why-kakao-healthcare-looks-bigger-than-a-single-diabetes-app',
     category: 'healthcare',
-    createdAt: '2026-03-31T11:05:00+09:00',
+    createdAt: '2026-03-31T14:20:00+09:00',
     heroImage: {
       src: '/blog/healthcare-ai-workflow-hero.jpg',
     },
     locales: {
       ko: {
-        title: '병원은 왜 생성형 AI를 진료보다 기록 업무부터 바꾸고 있을까',
+        title: '카카오헬스케어는 왜 ‘파스타 앱’보다 연결 구조가 더 중요해 보일까',
         keywords: ['헬스케어'],
-        excerpt: '최근 병원 현장에서는 생성형 AI를 진단 그 자체보다 문서화, 분류, 전환 관리, 접근성 개선 같은 워크플로 업무에 먼저 붙이는 흐름이 더 뚜렷하게 보입니다.',
+        excerpt: '카카오헬스케어를 보고 있으면 요즘 디지털 헬스의 승부가 단일 앱 기능보다 생활 데이터, 병원 EHR, 카카오톡 접점을 어떻게 하나의 흐름으로 잇느냐에 달려 있다는 점이 더 선명하게 보입니다.',
         heroImage: {
-          alt: '병원에서 의료진이 컴퓨터 앞에서 환자 정보와 업무 흐름을 함께 검토하는 모습',
-          caption: '병원 현장에서 생성형 AI는 대개 가장 먼저 기록, 정리, 연결 업무부터 바꾸기 시작합니다.',
+          alt: '의료진이 병원 컴퓨터 앞에서 환자 데이터와 디지털 건강관리 흐름을 함께 확인하는 모습',
+          caption: '카카오헬스케어의 핵심은 앱 하나보다 생활 데이터와 병원 워크플로를 이어 붙이는 연결 구조에 더 가까워 보입니다.',
         },
         contentHtml: `
-          <p>헬스케어에서 생성형 AI 이야기를 할 때 사람들의 시선은 자연스럽게 진단으로 쏠립니다. 정말 의사를 대신할 수 있는지, 판독을 더 정확하게 할 수 있는지, 임상 판단을 어디까지 맡길 수 있는지가 가장 큰 질문처럼 보이기 때문입니다.</p>
-          <p>그런데 2026년 3월 31일 기준으로 실제 병원 현장에서 먼저 커지고 있는 영역은 조금 다릅니다. 진단 그 자체보다 문서화, 코딩, 분류, 전환 관리, 언어 장벽 해소, 예약과 접수 같은 워크플로 업무에서 생성형 AI의 존재감이 더 빠르게 커지고 있습니다.</p>
-          <p>이 흐름은 우연이라기보다 꽤 현실적인 선택에 가깝습니다. 병원은 왜 생성형 AI를 진료 판단보다 기록 업무부터 바꾸고 있을까요.</p>
+          <p>디지털 헬스 서비스는 생각보다 쉽게 잊힙니다. 처음에는 흥미롭지만 기록이 번거롭고, 병원 진료와 연결되지 않고, 결국 내 생활 안에서 따로 노는 순간 손이 잘 안 가게 되기 때문입니다.</p>
+          <p>그래서 카카오헬스케어를 볼 때도 저는 단순히 “혈당 관리 앱을 잘 만들었나”보다 조금 다른 지점을 먼저 보게 됩니다. 파스타, 병원 EHR 연동, 카카오톡 기반 케어챗이 실제로 하나의 환자 흐름처럼 이어질 수 있느냐가 더 중요해 보입니다.</p>
+          <p>지금 이 회사가 흥미로운 이유도 바로 그 연결 구조에 있습니다.</p>
 
-          <h3>가장 먼저 효과가 보이는 곳이 기록과 행정이기 때문입니다</h3>
-          <p>병원은 이미 오래전부터 사람과 시간이 부족한 구조 안에서 움직여 왔습니다. 진료실 안에서는 의사와 간호사, 코디네이터, 행정팀이 각자 다른 종류의 기록과 확인 업무를 반복합니다. 그래서 생성형 AI가 가장 먼저 가치를 보이는 지점도 자연스럽게 이 영역이 됩니다.</p>
-          <p>3월 초 HIMSS26을 전후로 나온 현장 기사들을 보면, Cleveland Clinic은 AI를 임상 문서화, 코딩, 패혈증 감지 같은 워크플로에 붙여 생산성을 높이고 있다고 설명했고, McLeod Health 사례에서는 재무 지표보다 임상 워크플로의 마찰을 줄이는 쪽에 초점을 맞췄다는 메시지가 반복되었습니다.</p>
-          <p>이런 맥락에서는 생성형 AI가 “의사를 대신하는 도구”보다 “기록과 정리 부담을 덜어주는 도구”로 먼저 받아들여지는 편이 훨씬 자연스럽습니다.</p>
-          <blockquote>병원에서 AI의 첫 승부처는 판단 그 자체보다, 사람이 매일 반복해서 떠안는 문서와 조정 업무에 더 가깝습니다.</blockquote>
+          <h3>앱 하나만으로는 오래 남기 어렵습니다</h3>
+          <p>건강관리 앱이 자주 부딪히는 한계는 분명합니다. 사용자는 열심히 기록하지만, 그 데이터가 진료실 안에서는 잘 보이지 않습니다. 반대로 병원은 진료 중 쓸 수 있는 정보가 필요하지만, 환자 일상 데이터가 병원 시스템과 따로 놀면 결국 참고 자료 이상이 되기 어렵습니다.</p>
+          <p>카카오헬스케어가 이 문제를 꽤 정확하게 짚고 있다는 느낌이 드는 대목은, 처음부터 회사를 <code>Virtual Care</code>, <code>Digital Transformation of Hospitals</code>, <code>Data Enabler</code> 세 축으로 설명하고 있다는 점입니다. 소비자용 앱만 키우는 회사라기보다, 생활 속 데이터와 병원 업무 흐름을 한 줄로 잇는 회사를 지향하고 있다는 뜻에 가깝습니다.</p>
+          <blockquote>디지털 헬스의 승부는 데이터를 더 많이 모으는 데보다, 그 데이터가 다시 의료 현장 안으로 들어오게 만드는 데서 갈리는 경우가 많습니다.</blockquote>
 
-          <h3>앰비언트 문서화가 특히 빠르게 퍼지는 이유가 있습니다</h3>
-          <p>최근 업계 기사에서 가장 자주 보이는 표현 중 하나가 ambient speech AI입니다. Becker's는 이 흐름을 전자차트(EHR) 도입 이후 가장 강한 수준의 채택 압력이 있는 기술로 소개했고, 현장에서는 이것이 단순 받아쓰기나 기존 음성 인식과는 다르다는 점을 강조합니다.</p>
-          <p>핵심은 진료 중 대화를 맥락 있게 정리해 문서 초안을 만들어준다는 점입니다. 이 방식은 의사의 임상 판단을 직접 바꾸지 않으면서도, 체감되는 피로도와 퇴근 후 차트 정리 시간을 크게 줄일 수 있습니다. 그래서 실제로는 위험이 비교적 낮고 체감 효용은 매우 큰 영역으로 받아들여집니다.</p>
-          <p>헬스케어 AI가 현장에서 빠르게 자리 잡으려면, 이렇게 “바로 쓸 수 있고, 바로 덜 힘들어지는” 사용 사례가 먼저 나오는 편이 맞습니다.</p>
+          <h3>파스타의 진짜 포인트는 기록을 쉽게 만들고, 읽히게 만든다는 점입니다</h3>
+          <p>파스타는 연속혈당측정기와 바로 연결되고, 식사나 운동을 사진과 음성으로 기록할 수 있게 설계됐습니다. iF 디자인 어워드 수상 소개에서도 카카오헬스케어는 입력의 번거로움, 데이터 리터러시 문제, 가족 간 공유의 불편, 병원 EMR 연동까지를 함께 풀어야 할 사용자 문제로 제시했습니다.</p>
+          <p>이건 꽤 중요한 포인트입니다. 헬스케어 앱이 실패하는 이유 중 하나는 데이터가 없어서가 아니라, 데이터를 남기는 과정이 피곤하고 결과를 읽는 일이 더 어렵기 때문입니다. 파스타는 이 지점을 먼저 줄이려는 방향으로 보입니다.</p>
+          <p>여기에 최근에는 체중 관리와 비만 환자 지원 기능까지 더해지면서, 단일 혈당 앱보다는 대사질환 관리 플랫폼 쪽으로 조금씩 몸집을 넓히는 모습도 보입니다.</p>
 
-          <h3>병원은 진단보다 보조와 연결 업무에서 먼저 신뢰를 쌓고 있습니다</h3>
-          <p>이 흐름은 문서화에만 머물지 않습니다. MobiHealthNews에서 다룬 AWS의 Amazon Connect Health 사례를 보면, 환자 확인, 앰비언트 문서화, 행정 업무 자동화를 EHR와 연결하는 방향이 전면에 나옵니다. 같은 시기 기사에서는 AI 기반 행동건강 분류(triage)가 대기 시간을 줄이는 데 활용되는 사례도 소개됐습니다.</p>
-          <p>Healthcare IT News에서는 퇴원 안내문 번역처럼 언어 장벽을 낮추는 사용 사례도 다뤘습니다. 이것 역시 진단을 대신하는 일은 아니지만, 실제 환자 경험과 운영 효율에 바로 닿는 영역입니다.</p>
+          <h3>분기점은 병원 EHR 안으로 들어가기 시작했다는 점입니다</h3>
+          <p>그래도 결국 더 중요한 장면은 병원 쪽입니다. 전자신문 보도를 보면 파스타는 주요 병원 EHR 연동을 확대하고 있고, 의료진용 대시보드인 <code>파스타 커넥트 프로</code>는 이미 많은 병원에서 활용되고 있습니다. 이 단계로 넘어가면 환자가 앱에 남긴 생활 데이터가 병원 밖 자기관리 기록에서 끝나지 않고, 진료 과정에서 다시 읽히는 정보가 됩니다.</p>
+          <p>이 변화는 생각보다 큽니다. 의료진이 별도 플랫폼을 또 열지 않아도 병원 시스템 안에서 데이터를 볼 수 있다면, 디지털 헬스는 더 이상 부가 기능이 아니라 실제 진료 보조 흐름에 가까워집니다. 환자 입장에서도 “내가 기록한 것이 결국 아무 데도 쓰이지 않는다”는 허탈감이 줄어듭니다.</p>
           <ul>
-            <li>문서화와 요약은 반복성이 높고 효과 측정이 비교적 쉽습니다.</li>
-            <li>접수, 확인, 분류, 전환 관리는 병목이 자주 생기는 영역입니다.</li>
-            <li>번역과 설명 보조는 환자 경험과 안전에 직접 연결되지만, 최종 책임은 여전히 사람에게 남겨둘 수 있습니다.</li>
+            <li>환자는 일상 데이터를 남기고</li>
+            <li>의료진은 그 데이터를 기존 업무 화면 안에서 확인하고</li>
+            <li>진료 이후 관리도 다시 디지털 채널로 이어집니다.</li>
           </ul>
-          <p>즉 병원은 생성형 AI를 가장 민감한 판단 단계에 곧바로 넣기보다, 보조와 연결 업무에서 먼저 신뢰를 쌓아가는 모습에 가깝습니다.</p>
+          <p>카카오헬스케어의 전략이 의미 있어 보이는 이유는 이 세 단계를 한 번에 보려 한다는 점입니다.</p>
 
-          <h3>규제와 거버넌스도 이런 순서를 더 강하게 만듭니다</h3>
-          <p>여기에는 규제 환경도 큰 영향을 줍니다. FDA는 2026년 1월 29일 자 Clinical Decision Support Software 최종 가이던스를 다시 공지했고, 3월 11일에는 이를 설명하는 타운홀까지 열었습니다. 이 가이던스는 어떤 소프트웨어 기능이 비기기(non-device) CDS에 가까운지, 또 어떤 기능은 여전히 의료기기 규제 대상이 될 수 있는지를 더 분명하게 설명합니다.</p>
-          <p>이런 흐름을 병원 입장에서 해석하면 방향이 선명해집니다. 설명 가능성과 검토 가능성이 높은 보조 기능, 예를 들어 요약, 문서 초안, 정보 정리, 위험 신호 표시 같은 영역부터 먼저 붙이는 편이 훨씬 운영하기 쉽습니다. 반대로 진단을 직접 대체하거나, 의료진이 결과를 거의 그대로 따르게 만드는 구조는 임상·법적 책임이 훨씬 무겁습니다.</p>
-          <p>그래서 병원은 기술이 약해서가 아니라, 책임 구조가 다르기 때문에 기록과 운영부터 먼저 바꾸고 있다고 보는 편이 더 정확합니다.</p>
+          <h3>케어챗은 병원 앞과 뒤를 붙이는 접점에 가깝습니다</h3>
+          <p>여기서 케어챗이 들어옵니다. 케어챗은 카카오톡 기반으로 예약, 결제, 증명서 발급 같은 병원 컨시어지 기능을 처리하는 서비스입니다. 이미 여러 병원에 도입돼 가입자가 늘고 있다는 기사도 나왔습니다.</p>
+          <p>파스타가 생활 속 건강 데이터를 다루는 쪽이라면, 케어챗은 환자가 병원을 이용하는 접점을 다룹니다. 이 두 서비스가 같이 움직이면 진료 전, 진료 중, 진료 후의 동선이 조금 더 한 회사의 흐름 안으로 모이게 됩니다. 병원 입장에서 보면 업무 효율과 환자 접점 관리가 연결되고, 환자 입장에서는 익숙한 카카오톡 환경에서 병원 경험이 이어진다는 장점이 생깁니다.</p>
 
-          <h3>결국 중요한 것은 ‘진단 AI’보다 ‘현장에 붙는 AI’입니다</h3>
-          <p>헬스케어에서 생성형 AI가 의미 있으려면, 화려한 데모보다 실제로 업무에 붙는 방식이 더 중요합니다. 기록 시간을 줄였는지, 중복 입력을 줄였는지, 전환 정보를 더 빨리 확인하게 했는지, 언어 장벽을 낮췄는지처럼 구체적인 변화가 먼저 보여야 합니다.</p>
-          <p>Healthcare IT News에서 반복해 나온 메시지도 비슷했습니다. 임상 우선순위와 맞아야 하고, 측정 가능해야 하며, 신뢰와 교육, 거버넌스가 함께 가야 한다는 점입니다. 헬스케어는 다른 산업보다 더 느리게 보일 수 있지만, 그 대신 한 번 자리를 잡으면 운영 구조 전체에 영향을 줍니다.</p>
-          <p>그래서 지금 병원 현장의 생성형 AI를 볼 때는 “왜 아직 진단을 대신하지 못하나”라고 묻기보다, “어떤 워크플로부터 바꾸고 있으며 그 순서가 왜 그렇게 잡혔나”를 먼저 보는 편이 훨씬 현실에 가깝습니다.</p>
+          <h3>그래서 카카오헬스케어는 앱 회사보다 ‘연결 회사’로 보는 편이 더 맞을 수 있습니다</h3>
+          <p>최근 카카오헬스케어의 움직임을 보면, 혈당 관리에 머물지 않고 체중, 비만, 시니어하우징 같은 생활 밀착형 만성질환 관리 쪽으로 범위를 넓히려는 의도가 비교적 선명합니다. 이 확장이 설득력을 가지려면 결국 각 서비스가 따로 성장하는 것보다, 생활 데이터와 병원 데이터, 환자 접점이 실제로 한 줄로 이어져야 합니다.</p>
+          <p>물론 아직은 풀어야 할 숙제도 분명합니다. 사용자가 얼마나 오래 남는지, 의료진이 실제 진료에 얼마나 자주 참고하는지, 앱 편의성이 임상적 유용성으로 이어지는지 같은 질문은 계속 남습니다. 디지털 헬스에서는 다운로드 수만으로는 충분하지 않기 때문입니다.</p>
+          <p>그래도 지금 카카오헬스케어를 볼 때 가장 흥미로운 지점은, 좋은 앱 하나를 만드는 데서 멈추지 않으려 한다는 점입니다. 파스타보다 더 크게 봐야 할 것은, 이 회사가 건강관리와 병원 이용의 사이를 어떻게 잇고 있는가 하는 구조 그 자체인지도 모르겠습니다.</p>
 
           <h3>참고자료</h3>
           <ul>
-            <li><a href="https://www.beckershospitalreview.com/rankings-and-ratings/klas-says-ambient-speech-ai-is-nothing-like-any-healthcare-tech-since-the-ehr-heres-why/" target="_blank" rel="noreferrer">Becker's Hospital Review: ambient speech AI adoption</a></li>
-            <li><a href="https://www.healthcarefinancenews.com/news/ais-value-healthcare-goes-beyond-hard-roi" target="_blank" rel="noreferrer">Healthcare Finance News: AI’s value in healthcare goes beyond hard ROI</a></li>
-            <li><a href="https://cloudgate.healthcareitnews.com/news/embed-ai-clinically-measurable-sustainable-and-trusted-ways" target="_blank" rel="noreferrer">Healthcare IT News: Embed AI clinically in measurable, sustainable and trusted ways</a></li>
-            <li><a href="https://www.mobihealthnews.com/news/qa-aws-launches-amazon-connect-health-streamline-healthcare-workflows" target="_blank" rel="noreferrer">MobiHealthNews: AWS launches Amazon Connect Health</a></li>
-            <li><a href="https://www.mobihealthnews.com/video/how-cleveland-clinic-infusing-ai-across-workflows" target="_blank" rel="noreferrer">MobiHealthNews: How Cleveland Clinic is infusing AI across workflows</a></li>
-            <li><a href="https://www.mobihealthnews.com/video/ai-accelerates-triage-behavioral-health-treatment" target="_blank" rel="noreferrer">MobiHealthNews: AI accelerates triage for behavioral health treatment</a></li>
-            <li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software" target="_blank" rel="noreferrer">FDA: Clinical Decision Support Software Guidance</a></li>
-            <li><a href="https://www.fda.gov/medical-devices/medical-devices-news-and-events/town-hall-clinical-decision-support-software-final-guidance-03112026" target="_blank" rel="noreferrer">FDA: CDS final guidance town hall, March 11, 2026</a></li>
+            <li><a href="https://recruit.kakaohealthcare.com/" target="_blank" rel="noreferrer">Kakao Healthcare recruit site: company vision and business structure</a></li>
+            <li><a href="https://kakaohealthcare.com/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4-%ED%99%A9%ED%9D%AC-jpm-healthcare-conference-%ED%98%88%EB%8B%B9-%EA%B4%80%EB%A6%AC-%ED%8C%8C%EC%8A%A4%ED%83%80-2%EC%9B%94-%EA%B5%AD/" target="_blank" rel="noreferrer">Kakao Healthcare: JPM Healthcare Conference and PASTA/EMR linkage plan</a></li>
+            <li><a href="https://kakaohealthcare.com/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4-if-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%96%B4%EC%9B%8C%EB%93%9C/" target="_blank" rel="noreferrer">Kakao Healthcare: iF Design Award 2025 note on PASTA UX and EMR linkage</a></li>
+            <li><a href="https://www.etnews.com/20250410000235" target="_blank" rel="noreferrer">ETNews: PASTA EHR integration expansion and Connect Pro adoption</a></li>
+            <li><a href="https://www.etnews.com/20240731000094" target="_blank" rel="noreferrer">ETNews: Karechat adoption in hospitals</a></li>
+            <li><a href="https://www.etnews.com/20250217000092" target="_blank" rel="noreferrer">ETNews: senior housing and PHR-based care linkage with Caring</a></li>
+            <li><a href="https://www.newsis.com/view/NISX20260203_0003500235" target="_blank" rel="noreferrer">Newsis: obesity patient support added to PASTA with Novo Nordisk</a></li>
           </ul>
         `,
       },
       en: {
-        title: 'Why Hospitals Are Letting Generative AI Change Documentation Before Diagnosis',
+        title: 'Why Kakao Healthcare Looks Bigger Than a Single Diabetes App',
         keywords: ['Healthcare'],
-        excerpt: 'In real hospital operations, generative AI is showing up first in documentation, coding, triage, transitions and access work rather than in direct diagnostic judgment.',
+        excerpt: 'Kakao Healthcare is interesting not just because of PASTA itself, but because it is trying to connect daily health data, hospital EHR workflows and KakaoTalk-based patient touchpoints into one continuous path.',
         heroImage: {
-          alt: 'Clinical staff in a hospital reviewing patient information and workflow tasks on a computer',
-          caption: 'In many health systems, generative AI begins by changing recording, organizing and coordination work before it changes clinical judgment.',
+          alt: 'Clinical staff reviewing patient data and digital health workflows in front of a hospital computer',
+          caption: 'The more interesting part of Kakao Healthcare may be less the app itself and more the structure connecting personal data, hospital workflows and patient touchpoints.',
         },
         contentHtml: `
-          <p>When people talk about generative AI in healthcare, attention quickly jumps to diagnosis. Can it read better, decide faster, or replace part of a clinician's judgment?</p>
-          <p>But as of March 31, 2026, the strongest pattern in real hospital operations looks different. Generative AI is showing up first in documentation, coding, triage, transition management, language support and administrative workflows rather than in direct diagnostic decision-making.</p>
-          <p>That is not a sign that the technology is weak. It is a sign that hospitals are making a practical choice about where value appears first and where risk is easier to manage.</p>
+          <p>Digital health products disappear more easily than they should. People try them, record diligently for a while, and then quietly stop when the data never really comes back into care.</p>
+          <p>That is why Kakao Healthcare feels interesting in a slightly different way. The real question is not only whether PASTA is a good diabetes app. It is whether Kakao Healthcare can connect everyday patient data, hospital EHR workflows and KakaoTalk-based hospital touchpoints into one usable path.</p>
+          <p>That wider structure is what makes the company worth watching.</p>
 
-          <h3>The first visible gains are in documentation and admin burden</h3>
-          <p>Hospitals have long operated under time pressure and staffing strain. Clinicians, nurses, coordinators and operations teams all carry layers of repetitive recording and verification work. That is exactly why generative AI is finding traction there first.</p>
-          <p>In early March around HIMSS26, Cleveland Clinic described using AI across workflows such as clinical documentation, coding and sepsis detection, while McLeod Health leaders emphasized reducing friction in clinical workflows rather than chasing financial return alone. That is a useful signal. Hospitals are rewarding tools that remove daily drag before they reward tools that attempt to take over judgment.</p>
-          <blockquote>In healthcare, AI often proves itself first by reducing burden, not by replacing the clinician.</blockquote>
+          <h3>A standalone app is rarely enough</h3>
+          <p>Many health apps run into the same wall. Patients log data, but clinicians do not see it inside their normal workflow. Hospitals want useful patient context, but if that information lives outside the clinical system, it often stays optional and fragmented.</p>
+          <p>Kakao Healthcare seems aware of this from the way it describes itself: hyper-personalized virtual care, digital transformation of hospitals and data infrastructure. That framing matters. It suggests a company trying to connect personal health management with institutional care operations rather than just scaling a consumer wellness app.</p>
+          <blockquote>The harder problem in digital health is often not collecting data, but making that data reappear where care decisions actually happen.</blockquote>
 
-          <h3>Ambient documentation is spreading because the value is immediate</h3>
-          <p>One of the clearest examples is ambient speech AI. Becker's described it as a category seeing a level of adoption pressure unlike almost anything since the EHR transition. The appeal is straightforward: capture the encounter, understand the context, and produce a useful documentation draft without turning the visit into a typing exercise.</p>
-          <p>This matters because it changes a painful part of the workday without directly taking ownership of diagnosis. It reduces charting time, after-hours cleanup and cognitive fatigue while keeping the clinician in the review loop. That makes the value both visible and operationally easier to trust.</p>
+          <h3>PASTA matters because it lowers input friction and makes data readable</h3>
+          <p>PASTA was designed around CGM connectivity, easy food and exercise logging, and simplified reporting. Kakao Healthcare's own product and design materials repeatedly frame the challenge as one of input burden, data readability, family sharing and EMR linkage, not just analytics.</p>
+          <p>That is a practical choice. Health apps often fail because the record-keeping is tiring and the output is harder to understand than the raw numbers themselves. PASTA appears to be trying to reduce both problems at once.</p>
+          <p>More recently, the service has also been expanding beyond glucose alone into weight and obesity support, which makes it look less like a single-condition app and more like an expanding chronic care platform.</p>
 
-          <h3>Hospitals are building trust through augmentation and coordination</h3>
-          <p>The same pattern appears beyond note creation. MobiHealthNews' reporting on Amazon Connect Health highlighted administrative work, patient verification and ambient documentation tied into EHR workflows. Separate HIMSS coverage also showed AI-assisted triage in behavioral health and workflow examples from Cleveland Clinic focused on coding and documentation.</p>
-          <p>Healthcare IT News also pointed to practical uses such as reducing language barriers in discharge notes. None of these examples fully replace clinical reasoning. What they do is improve the flow around care: faster intake, clearer handoffs, better documentation and less repetitive friction.</p>
+          <h3>The real inflection point is when the data enters hospital workflow</h3>
+          <p>The more important signal, though, is on the provider side. ETNews reported that PASTA's EHR integration has been expanding across major hospitals, while the clinician dashboard <code>PASTA Connect Pro</code> has already been adopted widely. Once everyday app data starts appearing inside hospital workflow, digital health changes status. It stops being a side record and starts becoming part of care support.</p>
+          <p>That shift matters for both sides. Clinicians can review patient lifestyle and glucose patterns without opening a separate system, and patients have a clearer reason to keep logging because the information may actually be used in care.</p>
           <ul>
-            <li>Documentation is repetitive and easier to measure.</li>
-            <li>Triage and intake address visible bottlenecks.</li>
-            <li>Translation and communication support improve access without removing human oversight.</li>
+            <li>Patients generate data in daily life.</li>
+            <li>Clinicians review it inside familiar systems.</li>
+            <li>Follow-up then continues through digital touchpoints.</li>
           </ul>
 
-          <h3>Regulation and governance reinforce this order of adoption</h3>
-          <p>Regulatory context matters here. The FDA reissued its final Clinical Decision Support Software guidance on January 29, 2026 and held a town hall on March 11, 2026 to discuss it. The guidance clarifies how the agency thinks about CDS functions that may fall outside device regulation and those that still remain within device oversight.</p>
-          <p>From a hospital operations perspective, that makes the adoption sequence easier to understand. Summaries, documentation drafts, information organization and other support functions are generally easier to explain, review and govern than systems that risk becoming de facto diagnostic authorities.</p>
-          <p>So hospitals are not necessarily moving slowly because they lack ambition. They are moving in an order that fits clinical accountability.</p>
+          <h3>Karechat handles the hospital touchpoints before and after the visit</h3>
+          <p>This is where Karechat becomes important. Kakao Healthcare has been expanding Karechat as a KakaoTalk-based hospital concierge layer for booking, payment and related patient tasks. PASTA handles self-management data, while Karechat handles hospital-facing touchpoints.</p>
+          <p>Together, those services create a more continuous patient path: before the visit, during clinical review and after the encounter. From the hospital perspective, that can mean better operational flow and a cleaner digital front door. From the patient perspective, it means less switching between disconnected tools.</p>
 
-          <h3>The real question is not whether AI can diagnose, but where it fits safely today</h3>
-          <p>For healthcare leaders, the more useful question right now is not simply whether generative AI can do more. It is where it can be embedded in ways that are measurable, sustainable and trusted. That is also the message running through recent HIMSS26 reporting: align AI with clinical priorities, educate the workforce, measure impact transparently and keep governance close to deployment.</p>
-          <p>Healthcare may look slower than other sectors, but that is partly because the threshold for trust is higher. And that is exactly why the current order of adoption makes sense. Before AI changes diagnosis at scale, it is changing the work that surrounds care.</p>
+          <h3>So Kakao Healthcare may be more interesting as a connector than as an app company</h3>
+          <p>Recent moves into obesity support, senior housing partnerships and broader chronic care suggest the company is trying to grow along the line of connected care rather than remain narrowly tied to one diabetes product. That strategy makes sense only if the pieces really connect.</p>
+          <p>There are still obvious questions. Retention matters. Clinical usefulness matters. Wide deployment does not automatically mean better outcomes. But the company becomes easier to read if you look at the architecture first: app data, hospital systems and patient channel working together.</p>
+          <p>That may be the most useful way to understand Kakao Healthcare right now. The real story is probably larger than PASTA alone.</p>
 
           <h3>References</h3>
           <ul>
-            <li><a href="https://www.beckershospitalreview.com/rankings-and-ratings/klas-says-ambient-speech-ai-is-nothing-like-any-healthcare-tech-since-the-ehr-heres-why/" target="_blank" rel="noreferrer">Becker's Hospital Review: ambient speech AI adoption</a></li>
-            <li><a href="https://www.healthcarefinancenews.com/news/ais-value-healthcare-goes-beyond-hard-roi" target="_blank" rel="noreferrer">Healthcare Finance News: AI’s value in healthcare goes beyond hard ROI</a></li>
-            <li><a href="https://cloudgate.healthcareitnews.com/news/embed-ai-clinically-measurable-sustainable-and-trusted-ways" target="_blank" rel="noreferrer">Healthcare IT News: Embed AI clinically in measurable, sustainable and trusted ways</a></li>
-            <li><a href="https://www.mobihealthnews.com/news/qa-aws-launches-amazon-connect-health-streamline-healthcare-workflows" target="_blank" rel="noreferrer">MobiHealthNews: AWS launches Amazon Connect Health</a></li>
-            <li><a href="https://www.mobihealthnews.com/video/how-cleveland-clinic-infusing-ai-across-workflows" target="_blank" rel="noreferrer">MobiHealthNews: How Cleveland Clinic is infusing AI across workflows</a></li>
-            <li><a href="https://www.mobihealthnews.com/video/ai-accelerates-triage-behavioral-health-treatment" target="_blank" rel="noreferrer">MobiHealthNews: AI accelerates triage for behavioral health treatment</a></li>
-            <li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software" target="_blank" rel="noreferrer">FDA: Clinical Decision Support Software Guidance</a></li>
-            <li><a href="https://www.fda.gov/medical-devices/medical-devices-news-and-events/town-hall-clinical-decision-support-software-final-guidance-03112026" target="_blank" rel="noreferrer">FDA: CDS final guidance town hall, March 11, 2026</a></li>
+            <li><a href="https://recruit.kakaohealthcare.com/" target="_blank" rel="noreferrer">Kakao Healthcare recruit site: company vision and business structure</a></li>
+            <li><a href="https://kakaohealthcare.com/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4-%ED%99%A9%ED%9D%AC-jpm-healthcare-conference-%ED%98%88%EB%8B%B9-%EA%B4%80%EB%A6%AC-%ED%8C%8C%EC%8A%A4%ED%83%80-2%EC%9B%94-%EA%B5%AD/" target="_blank" rel="noreferrer">Kakao Healthcare: JPM Healthcare Conference and PASTA/EMR linkage plan</a></li>
+            <li><a href="https://kakaohealthcare.com/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4-if-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%96%B4%EC%9B%8C%EB%93%9C/" target="_blank" rel="noreferrer">Kakao Healthcare: iF Design Award 2025 note on PASTA UX and EMR linkage</a></li>
+            <li><a href="https://www.etnews.com/20250410000235" target="_blank" rel="noreferrer">ETNews: PASTA EHR integration expansion and Connect Pro adoption</a></li>
+            <li><a href="https://www.etnews.com/20240731000094" target="_blank" rel="noreferrer">ETNews: Karechat adoption in hospitals</a></li>
+            <li><a href="https://www.etnews.com/20250217000092" target="_blank" rel="noreferrer">ETNews: senior housing and PHR-based care linkage with Caring</a></li>
+            <li><a href="https://www.newsis.com/view/NISX20260203_0003500235" target="_blank" rel="noreferrer">Newsis: obesity patient support added to PASTA with Novo Nordisk</a></li>
           </ul>
         `,
       },
       ja: {
-        title: '病院はなぜ生成AIを診断より先に記録業務へ入れているのか',
+        title: 'カカオヘルスケアは、なぜ単なる糖尿病アプリ以上に見えるのか',
         keywords: ['ヘルスケア'],
-        excerpt: '病院の現場では、生成AIは診断そのものよりも、記録、コーディング、トリアージ、連携、アクセス改善のようなワークフロー業務から先に入り始めています。',
+        excerpt: 'カカオヘルスケアが面白く見えるのは、PASTAというアプリ単体よりも、日常データ、病院EHR、そしてカカオトーク基盤の患者接点を一つの流れとして結ぼうとしているからです。',
         heroImage: {
-          alt: '病院で医療スタッフがコンピュータの前で患者情報と業務フローを確認している様子',
-          caption: '多くの医療機関で、生成AIはまず記録、整理、連携の仕事から変え始めています。',
+          alt: '病院で医療スタッフが患者データとデジタルヘルスの流れを同時に確認している様子',
+          caption: 'カカオヘルスケアの本当のポイントは、アプリ単体よりも、個人データと病院ワークフローをつなぐ構造にあるように見えます。',
         },
         contentHtml: `
-          <p>ヘルスケアで生成AIを語るとき、人々の視線は自然と診断に向かいます。本当に医師を代替できるのか、より正確に読めるのか、臨床判断をどこまで任せられるのかという問いがいちばん大きく見えるからです。</p>
-          <p>ただ、2026年3月31日時点で実際の病院現場を見ていると、先に広がっているのは少し別の領域です。診断そのものより、文書化、コーディング、トリアージ、移行管理、言語支援、接続や確認のようなワークフロー業務で生成AIの存在感が強まっています。</p>
-          <p>これは技術が足りないからというより、価値が早く見え、責任構造を組みやすい場所から入っていると考えるほうが自然です。</p>
+          <p>デジタルヘルスのサービスは、思っている以上に忘れられやすいものです。最初は面白くても、記録が面倒で、そのデータが診療の中でほとんど使われなければ、だんだん続かなくなってしまいます。</p>
+          <p>だからカカオヘルスケアを見るときも、私は「PASTAという糖尿病アプリがどれだけ良いか」だけではなく、日常の健康データ、病院EHR、そしてカカオトーク基盤の患者接点を本当に一つの流れとしてつなげられるのかを先に見たくなります。</p>
+          <p>この会社の面白さは、むしろその接続構造にあるように思えます。</p>
 
-          <h3>最初に効果が見えやすいのが記録と事務だからです</h3>
-          <p>病院はもともと時間不足と人手不足の中で動いています。医師、看護師、コーディネーター、事務チームは、それぞれ異なる種類の記録と確認業務を何度も繰り返しています。だからこそ、生成AIが最初に価値を出しやすい場所もそこになります。</p>
-          <p>HIMSS26前後の報道では、Cleveland Clinicが臨床文書化、コーディング、敗血症検知などのワークフローにAIを活用していると説明し、McLeod Healthの事例でも財務ROIより臨床ワークフローの摩擦を減らすことに焦点を置いていたと伝えられました。</p>
-          <p>この流れを見ると、生成AIがまず「医師を置き換えるもの」ではなく、「記録と整理の負担を減らすもの」として受け入れられている理由がよく分かります。</p>
-          <blockquote>医療現場でAIが最初に証明しやすい価値は、判断の代替よりも、毎日積み上がる負担の軽減にあります。</blockquote>
+          <h3>アプリ単体では長く残りにくいです</h3>
+          <p>多くの健康アプリがぶつかる壁は似ています。患者は日々の情報を記録しますが、そのデータが医療者の通常業務の中で見られません。病院側も役に立つ生活情報は欲しいのに、診療システムとつながっていなければ、結局は周辺的な参考情報にとどまりがちです。</p>
+          <p>カカオヘルスケアがこの問題を意識していることは、会社の説明の仕方からも感じられます。<code>Virtual Care</code>、<code>Digital Transformation of Hospitals</code>、<code>Data Enabler</code>という三つの軸は、単なる消費者向けアプリ会社ではなく、個人の管理と医療機関の運用をつなぐ会社を目指していることを示しています。</p>
+          <blockquote>デジタルヘルスで難しいのは、データを集めることより、そのデータを医療の現場に戻していくことなのかもしれません。</blockquote>
 
-          <h3>アンビエント文書化が広がるのには理由があります</h3>
-          <p>最近の業界記事で頻繁に出てくるのが ambient speech AI という言葉です。Becker'sはこの流れを、EHR導入以降でも特に強い採用圧力がある技術の一つとして紹介しています。診療中の会話を文脈ごと捉え、意味のある記録の下書きに変えるという価値がとても分かりやすいからです。</p>
-          <p>ここで重要なのは、臨床判断そのものを乗っ取るのではなく、記録負担と認知的疲労を減らすことです。診療後のチャート整理時間や残業を減らしつつ、最終確認は医療者が担える。この構造が、現場にとって受け入れやすい理由になっています。</p>
+          <h3>PASTAの価値は、記録の負担を下げて読みやすくすることです</h3>
+          <p>PASTAはCGMとの連携、写真や音声での食事・運動記録、わかりやすいレポートに重点を置いています。iFデザインアワードの紹介でも、入力の負担、データの読みづらさ、家族共有の不便さ、EMR連携までがまとめて課題として挙げられていました。</p>
+          <p>これはとても現実的です。健康アプリが続かない理由は、分析が足りないからではなく、記録が面倒で、結果が理解しづらいからという場合が少なくありません。PASTAはその両方を減らそうとしているように見えます。</p>
+          <p>さらに最近は体重や肥満支援にも広がっていて、単一の血糖アプリより、慢性疾患管理の基盤に近づこうとしている印象があります。</p>
 
-          <h3>病院は補助と連携の領域で先に信頼を積み上げています</h3>
-          <p>この流れは文書化だけにとどまりません。MobiHealthNewsが伝えたAmazon Connect Healthの事例では、患者確認、アンビエント文書化、行政・運用業務の自動化がEHRとつながる形で前面に出ています。同じ時期には、行動医療のトリアージにAIを使って待機時間を短縮する事例も紹介されました。</p>
-          <p>Healthcare IT Newsでは、退院説明文の言語障壁を下げるAI活用も取り上げられています。これらは診断の代替ではありませんが、患者体験と運用効率にすぐ影響する領域です。</p>
+          <h3>本当の分岐点は、データが病院ワークフローに入ることです</h3>
+          <p>より大きなポイントは病院側にあります。報道によれば、PASTAのEHR連携は主要病院で広がっており、医療者向けの<code>PASTA Connect Pro</code>もすでに多くの病院で使われています。生活データが病院の業務画面に入ってくると、デジタルヘルスは外側の記録ではなく、診療支援の一部に近づきます。</p>
+          <p>これは患者にとっても医療者にとっても意味があります。医療者は別システムを開かずに生活パターンを見られ、患者は自分の記録が実際のケアに活かされる可能性を感じやすくなります。</p>
           <ul>
-            <li>文書化と要約は反復性が高く、効果を測りやすいです。</li>
-            <li>トリアージや受付支援はボトルネックに直結します。</li>
-            <li>翻訳や説明支援は、人の最終監督を残しながらアクセス改善に結びつきます。</li>
+            <li>患者は日常の中でデータを残し、</li>
+            <li>医療者はその情報を既存システムの中で確認し、</li>
+            <li>診療後の接点は再びデジタルチャネルに戻ります。</li>
           </ul>
 
-          <h3>規制とガバナンスもこの順番を後押ししています</h3>
-          <p>ここには規制環境も大きく関わっています。FDAは2026年1月29日付でClinical Decision Support Softwareの最終ガイダンスを再発行し、3月11日にはその内容を扱うタウンホールも開催しました。このガイダンスは、どのようなCDS機能が非デバイスに近く、どのような機能が引き続き医療機器として扱われ得るのかをより明確にしています。</p>
-          <p>病院の立場から見ると、説明可能性と監査可能性の高い補助機能、たとえば要約、下書き、情報整理、注意喚起のような機能から先に入れるほうがはるかに運用しやすいのです。反対に、診断を実質的に置き換えるような構造は、臨床責任も法的責任も一気に重くなります。</p>
+          <h3>Karechatは来院前後の接点をつなぐ役割に近いです</h3>
+          <p>ここでKarechatの意味が出てきます。Karechatはカカオトーク基盤で予約、決済、証明書発行などを扱う病院コンシェルジュ型サービスです。PASTAが自己管理データを扱う側なら、Karechatは病院利用の接点を扱う側です。</p>
+          <p>この二つが一緒に動くと、診療前、診療中、診療後の流れが少しずつ一つの会社の体験設計の中に収まってきます。病院にとっては運用効率と患者接点がつながり、患者にとっては慣れたカカオトーク環境で病院利用の体験がつながっていく構造になります。</p>
 
-          <h3>大事なのは「診断AI」より「現場に貼り付くAI」です</h3>
-          <p>ヘルスケアで生成AIが意味を持つには、派手なデモより、実際の業務にどう貼り付くかのほうが重要です。記録時間が減ったのか、重複入力が減ったのか、移行情報を早く読めるようになったのか、言語の壁を下げられたのか。そうした変化が先に見える必要があります。</p>
-          <p>最近のHIMSS26関連報道でも、臨床上の優先順位と整合すること、効果が測定できること、教育とガバナンスが一緒に進むことが繰り返し強調されていました。医療は他産業より慎重に見えるかもしれませんが、それは信頼の閾値が高いからです。</p>
-          <p>だから今の病院現場を理解するうえでは、「なぜまだ診断を置き換えないのか」より、「どのワークフローから変え始めているのか」を見るほうが、ずっと現実に近いと思います。</p>
+          <h3>だからカカオヘルスケアはアプリ会社より“つなぐ会社”として見るほうがしっくりきます</h3>
+          <p>最近の動きを見ると、カカオヘルスケアは血糖管理だけにとどまらず、肥満支援、シニアハウジング、より広い慢性疾患管理へと広げようとしています。ただし、その戦略が本当に意味を持つのは、それぞれのサービスが別々に増えるのではなく、一つの流れとして接続されるときです。</p>
+          <p>もちろん課題も残ります。利用継続率はどうか、医療者がどれだけ実際に参照するのか、利便性が臨床的価値につながるのか。デジタルヘルスでは、導入件数だけでは十分ではありません。</p>
+          <p>それでも今のカカオヘルスケアを理解するうえでは、PASTA単体より、その後ろにある接続構造を見るほうがずっと面白いと思います。</p>
 
           <h3>参考資料</h3>
           <ul>
-            <li><a href="https://www.beckershospitalreview.com/rankings-and-ratings/klas-says-ambient-speech-ai-is-nothing-like-any-healthcare-tech-since-the-ehr-heres-why/" target="_blank" rel="noreferrer">Becker's Hospital Review: ambient speech AI adoption</a></li>
-            <li><a href="https://www.healthcarefinancenews.com/news/ais-value-healthcare-goes-beyond-hard-roi" target="_blank" rel="noreferrer">Healthcare Finance News: AI’s value in healthcare goes beyond hard ROI</a></li>
-            <li><a href="https://cloudgate.healthcareitnews.com/news/embed-ai-clinically-measurable-sustainable-and-trusted-ways" target="_blank" rel="noreferrer">Healthcare IT News: Embed AI clinically in measurable, sustainable and trusted ways</a></li>
-            <li><a href="https://www.mobihealthnews.com/news/qa-aws-launches-amazon-connect-health-streamline-healthcare-workflows" target="_blank" rel="noreferrer">MobiHealthNews: AWS launches Amazon Connect Health</a></li>
-            <li><a href="https://www.mobihealthnews.com/video/how-cleveland-clinic-infusing-ai-across-workflows" target="_blank" rel="noreferrer">MobiHealthNews: How Cleveland Clinic is infusing AI across workflows</a></li>
-            <li><a href="https://www.mobihealthnews.com/video/ai-accelerates-triage-behavioral-health-treatment" target="_blank" rel="noreferrer">MobiHealthNews: AI accelerates triage for behavioral health treatment</a></li>
-            <li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software" target="_blank" rel="noreferrer">FDA: Clinical Decision Support Software Guidance</a></li>
-            <li><a href="https://www.fda.gov/medical-devices/medical-devices-news-and-events/town-hall-clinical-decision-support-software-final-guidance-03112026" target="_blank" rel="noreferrer">FDA: CDS final guidance town hall, March 11, 2026</a></li>
+            <li><a href="https://recruit.kakaohealthcare.com/" target="_blank" rel="noreferrer">Kakao Healthcare recruit site: company vision and business structure</a></li>
+            <li><a href="https://kakaohealthcare.com/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4-%ED%99%A9%ED%9D%AC-jpm-healthcare-conference-%ED%98%88%EB%8B%B9-%EA%B4%80%EB%A6%AC-%ED%8C%8C%EC%8A%A4%ED%83%80-2%EC%9B%94-%EA%B5%AD/" target="_blank" rel="noreferrer">Kakao Healthcare: JPM Healthcare Conference and PASTA/EMR linkage plan</a></li>
+            <li><a href="https://kakaohealthcare.com/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%97%AC%EC%8A%A4%EC%BC%80%EC%96%B4-if-%EB%94%94%EC%9E%90%EC%9D%B8-%EC%96%B4%EC%9B%8C%EB%93%9C/" target="_blank" rel="noreferrer">Kakao Healthcare: iF Design Award 2025 note on PASTA UX and EMR linkage</a></li>
+            <li><a href="https://www.etnews.com/20250410000235" target="_blank" rel="noreferrer">ETNews: PASTA EHR integration expansion and Connect Pro adoption</a></li>
+            <li><a href="https://www.etnews.com/20240731000094" target="_blank" rel="noreferrer">ETNews: Karechat adoption in hospitals</a></li>
+            <li><a href="https://www.etnews.com/20250217000092" target="_blank" rel="noreferrer">ETNews: senior housing and PHR-based care linkage with Caring</a></li>
+            <li><a href="https://www.newsis.com/view/NISX20260203_0003500235" target="_blank" rel="noreferrer">Newsis: obesity patient support added to PASTA with Novo Nordisk</a></li>
           </ul>
         `,
       },
