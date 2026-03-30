@@ -41,8 +41,11 @@ const Contact = () => {
                 {/* Right Side: Blog Note */}
                 <div className="bg-card rounded-2xl p-8 border border-border/50 shadow-sm relative overflow-hidden text-left bg-zinc-50 dark:bg-zinc-800/10 flex flex-col justify-between min-h-[320px]">
                     <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70 mb-3">Static Blog</p>
-                        <h3 className="text-2xl font-bold text-text mb-4">Repository-backed publishing</h3>
+                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70 mb-3">Blog</p>
+                        <h3 className="text-2xl font-bold text-text mb-4">기록과 포스팅</h3>
+                        <p className="max-w-md text-sm leading-relaxed text-muted">
+                            일상에서 시작한 생각과 AI, 헬스케어에 대한 기록을 이 공간에 차분히 쌓아가고 있습니다.
+                        </p>
                     </div>
 
                     <a
