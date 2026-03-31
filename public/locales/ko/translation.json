@@ -299,8 +299,8 @@
     },
     "contact": {
         "eyebrow": "Collaboration",
-        "title": "함께 만들 수 있는 일을 이야기해봅시다",
-        "subtitle": "디지털 헬스 실증, 임상시험 운영, AI 기반 헬스케어 도구 기획처럼 연구와 실행 관점을 함께 맞춰야 하는 주제라면 초기 방향부터 구체적으로 이야기 나누기 좋습니다.",
+        "title": "편하게 이야기 나눠보세요",
+        "subtitle": "디지털 헬스, 임상 연구, AI 활용처럼 함께 고민해볼 주제가 있다면 가볍게 연락 주셔도 좋습니다. 아이디어를 정리하는 단계의 대화도 괜찮습니다.",
         "primaryCta": "이메일 보내기",
         "secondaryCta": "LinkedIn에서 연결하기",
         "collaborationItems": [
