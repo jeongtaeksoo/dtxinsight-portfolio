@@ -27,6 +27,7 @@
         "secondaryCta": "Start a Conversation",
         "resume": "Resume",
         "profileLabel": "Profile",
+        "orcidCta": "ORCID Profile",
         "stats": [
             {
                 "value": "390M KRW",
@@ -37,7 +38,7 @@
                 "label": "SCI/ESCI/KCI papers including submissions"
             },
             {
-                "value": "2",
+                "value": "RCT",
                 "label": "Randomized controlled trials operated"
             }
         ]

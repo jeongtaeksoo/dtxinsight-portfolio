@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion as Motion } from 'framer-motion';
 import { ArrowRight, Download, Mail } from 'lucide-react';
+import { OrcidIcon } from './Icons';
 import profileImg from '../assets/profile_id_photo.webp';
 
 const Hero = () => {
@@ -112,6 +113,15 @@ const Hero = () => {
               </p>
               <h2 className="mt-2 text-2xl font-semibold text-text">{t('hero.name')}</h2>
               <p className="mt-2 text-sm leading-relaxed text-muted">{t('hero.affiliation')}</p>
+              <a
+                href="https://orcid.org/0009-0001-1451-5457"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-2 text-xs font-semibold text-text transition-colors hover:border-primary hover:text-primary"
+              >
+                <OrcidIcon size={15} />
+                {t('hero.orcidCta')}
+              </a>
             </div>
           </div>
         </Motion.div>

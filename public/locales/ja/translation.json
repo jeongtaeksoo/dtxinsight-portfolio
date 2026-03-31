@@ -27,6 +27,7 @@
         "secondaryCta": "協業について話す",
         "resume": "履歴書",
         "profileLabel": "プロフィール",
+        "orcidCta": "ORCIDプロフィール",
         "stats": [
             {
                 "value": "3.9億KRW",
@@ -37,7 +38,7 @@
                 "label": "SCI・ESCI・KCI論文（投稿含む）"
             },
             {
-                "value": "2件",
+                "value": "RCT",
                 "label": "ランダム化比較試験の運営"
             }
         ]
