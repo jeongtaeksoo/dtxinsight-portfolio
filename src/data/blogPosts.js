@@ -49,6 +49,178 @@ export const getLocalizedBlogPost = (post, language = DEFAULT_BLOG_LOCALE) => {
 
 export const blogPosts = [
   {
+    slug: 'what-you-miss-if-you-see-jnpmedi-only-as-clinical-trial-saas',
+    category: 'healthcare',
+    createdAt: '2026-03-31T11:55:00+09:00',
+    heroImage: {
+      src: '/blog/jnpmedi-rdc-hero-generated.jpg',
+    },
+    locales: {
+      ko: {
+        title: '제이앤피메디를 임상시험 SaaS로만 보면 놓치는 것들',
+        keywords: ['헬스케어'],
+        excerpt: '제이앤피메디를 단순한 임상시험 소프트웨어 회사로 이해하면 사업의 절반만 보게 됩니다. 메이븐 클리니컬 클라우드와 프로페셔널 서비스가 함께 움직이는 구조를 봐야 이 회사의 방향이 더 선명해집니다.',
+        heroImage: {
+          alt: '임상 운영 전략 회의실에서 세 명의 실무자가 데이터 대시보드와 시험 운영 흐름도를 함께 검토하는 모습',
+          caption: '제이앤피메디를 이해할 때 중요한 것은 화면 하나보다, 임상 운영과 데이터, 규제 대응을 한 흐름으로 엮으려는 방식입니다.',
+        },
+        contentHtml: `
+          <p>제이앤피메디를 처음 접하면 많은 사람이 먼저 소프트웨어 회사를 떠올립니다. 실제로 가장 먼저 눈에 들어오는 것도 메이븐 클리니컬 클라우드이고, 외부 기사에서도 종종 임상시험 데이터 플랫폼 기업으로 소개되기 때문입니다.</p>
+          <p>그런데 회사가 스스로를 설명하는 문장을 조금만 더 자세히 보면 이야기가 달라집니다. 제이앤피메디는 단순한 임상시험 SaaS 기업이 아니라, 메이븐 클리니컬 클라우드를 중심으로 프로페셔널 서비스를 결합해 연구개발과 상용화까지 잇는 <strong>Life Science RDC company</strong>라고 자신을 소개합니다.</p>
+          <p>이 차이는 생각보다 큽니다. 임상시험용 소프트웨어를 파는 회사로 읽느냐, 라이프사이언스 사업의 실행 구조를 설계하는 회사로 읽느냐에 따라 제이앤피메디의 현재 위치와 앞으로의 방향이 완전히 다르게 보이기 때문입니다.</p>
+
+          <h3>메이븐이 있다는 사실보다, 메이븐만으로 설명되지 않는다는 점이 중요합니다</h3>
+          <p>메이븐 클리니컬 클라우드는 분명 제이앤피메디의 중심축입니다. 설립 초기 투자 유치 기사에서도 회사는 메이븐을 제약, 바이오, 디지털 치료제, 디지털 의료기기까지 폭넓게 적용 가능한 임상시험 데이터 관리 플랫폼으로 설명했습니다. 여기까지만 보면 “국산 임상시험 SaaS 회사”라는 이해가 크게 틀린 말은 아닙니다.</p>
+          <p>하지만 지금의 제이앤피메디를 보려면 이 한 줄 설명에서 한 발 더 나아가야 합니다. 회사 메인 페이지와 프로페셔널 서비스 소개를 보면, 메이븐은 단일 제품이라기보다 임상 운영과 데이터 관리 전반을 얹을 수 있는 운영 레이어에 가깝게 배치되어 있습니다.</p>
+          <blockquote>즉, 메이븐은 이 회사의 전부라기보다 기반에 가깝고, 제이앤피메디는 그 기반 위에 어떤 서비스를 얹을 것인가까지 같이 설계하려는 회사로 읽는 편이 더 정확합니다.</blockquote>
+
+          <h3>핵심은 기능 수보다 모듈이 닿는 범위입니다</h3>
+          <p>프로페셔널 서비스 페이지를 보면 제이앤피메디가 왜 자신을 RDC라고 부르는지 감이 옵니다. 이 회사는 대상자 모집과 원격 방문, 전자 동의, 무작위배정 같은 분산형 임상시험 요소를 묶은 DCT 스위트뿐 아니라, 투자와 라이선싱을 위한 가상 데이터룸, 문서 관리, eTMF, 프로젝트 매니지먼트, 클라우드 운영까지 한 회사의 범위 안에 두고 있습니다.</p>
+          <p>이 구조가 의미 있는 이유는 임상 현장에서 문제가 늘 한 군데에서만 생기지 않기 때문입니다. 실제 프로젝트에서는 피험자 모집, 데이터 수집, 문서 관리, 규제 대응, 투자 실사, 해외 파트너 커뮤니케이션이 따로 움직이지 않습니다. 어느 한쪽이 막히면 나머지도 같이 느려집니다.</p>
+          <p>그래서 제이앤피메디를 제대로 보려면 “어떤 기능이 있나”보다 “어디까지 하나의 흐름으로 엮으려 하나”를 먼저 봐야 합니다. 그 기준으로 보면 이 회사는 기능형 툴 벤더보다 운영형 파트너에 조금 더 가까워 보입니다.</p>
+
+          <h3>분산형 임상시험을 대하는 태도도 이 회사의 성격을 잘 보여줍니다</h3>
+          <p>제이앤피메디가 일찍부터 분산형 임상시험을 전면에 둔 것도 같은 맥락에서 읽힙니다. 회사는 KiMES와 KoNECT 같은 현장에서 DCT 플랫폼을 꾸준히 소개해 왔고, 미국 FDA가 분산형 요소를 포함한 임상시험 최종 가이드를 내놓았을 때는 한국어 번역본까지 배포했습니다.</p>
+          <p>이 장면이 중요한 이유는, 단순히 원격 전자 동의나 eCOA 같은 기능을 갖췄다는 얘기에서 끝나지 않기 때문입니다. 규제가 어떻게 정리되고 있고, 현장에서는 그 변화가 어떤 운영 문제로 이어지는지까지 같이 해석해 주는 쪽으로 움직였다는 뜻에 가깝습니다.</p>
+          <p>헬스케어 산업에서는 기능보다 해석이 더 비쌀 때가 많습니다. 특히 디지털 치료제나 디지털 의료기기처럼 제품과 임상, 규제 문서, 데이터 설계가 서로 강하게 얽힌 분야에서는 더 그렇습니다.</p>
+
+          <h3>최근의 확장 포인트는 소프트웨어 판매보다 실행 서비스 쪽에 더 가깝습니다</h3>
+          <p>외부 보도를 보면 제이앤피메디는 최근 CRO와 컨설팅 서비스 확장을 전면에 내세우고 있습니다. 전자신문은 회사가 CRO와 컨설팅 서비스 확대를 통해 매출이 크게 성장했다고 전했고, 공식 행사인 JNPMEDI CONNECT도 규제, 임상 운영, AI 기반 데이터 전략, 투자 트렌드를 한꺼번에 다루는 방식으로 기획됐습니다.</p>
+          <p>이 흐름은 꽤 상징적입니다. 보통 소프트웨어 기업이라면 제품 기능 고도화를 중심 서사로 밀기 쉽습니다. 그런데 제이앤피메디는 최근 커뮤니케이션에서 오히려 제품 기능 자체보다, 규제 대응부터 글로벌 개발 전략, 데이터 운영, 투자와 라이선스까지 이어지는 실행 역량을 함께 보여주려는 모습이 더 강합니다.</p>
+          <ul>
+            <li>메이븐은 데이터와 운영의 기반으로 남고,</li>
+            <li>프로페셔널 서비스는 그 위에서 실제 프로젝트를 굴리는 손발 역할을 하며,</li>
+            <li>회사의 자기 정의는 점점 “툴 제공자”보다 “실행 구조를 설계하는 파트너” 쪽으로 옮겨갑니다.</li>
+          </ul>
+
+          <h3>그래서 제이앤피메디는 임상시험용 소프트웨어 회사보다 ‘실행 레이어 회사’로 보는 편이 맞습니다</h3>
+          <p>개인적으로 제이앤피메디를 흥미롭게 보는 이유도 여기에 있습니다. 국내에서 임상시험 디지털화 이야기를 하면 종종 eConsent나 ePRO 같은 개별 기능 단위로 대화가 쪼개지는데, 제이앤피메디는 비교적 일찍부터 그 기능들을 한 회사의 운영 모델 안에 넣으려 했기 때문입니다.</p>
+          <p>물론 앞으로 봐야 할 숙제도 분명합니다. 서비스 범위가 넓어질수록 특정 영역의 깊이가 약해질 수 있고, 플랫폼과 컨설팅을 동시에 가져가는 구조는 반복 가능한 표준화와 사람 의존도를 함께 관리해야 합니다. 또 글로벌 확장 국면에서는 규제 준수, 문서 품질, 데이터 표준화 수준이 더 날카롭게 검증될 수밖에 없습니다.</p>
+          <p>그럼에도 지금 시점에서 제이앤피메디를 단순한 임상시험 SaaS로만 읽는 것은 아쉽습니다. 이 회사는 메이븐을 파는 곳이라기보다, 메이븐을 기반으로 임상과 데이터, 규제, 사업 개발의 접점을 하나의 실행 구조로 묶으려는 회사에 더 가깝기 때문입니다.</p>
+
+          <h3>참고자료</h3>
+          <ul>
+            <li><a href="https://www.jnpmedi.com/" target="_blank" rel="noreferrer">JNPMEDI 공식 홈페이지</a></li>
+            <li><a href="https://www.jnpmedi.com/professional_services" target="_blank" rel="noreferrer">JNPMEDI Professional Services</a></li>
+            <li><a href="https://www.jnpmedi.com/media/?bmode=view&idx=112327110" target="_blank" rel="noreferrer">제이앤피메디, FDA DCT 최종 지침 한국어 번역본 배포</a></li>
+            <li><a href="https://www.jnpmedi.com/media/?bmode=view&idx=167442583" target="_blank" rel="noreferrer">2025 JNPMEDI CONNECT 개최</a></li>
+            <li><a href="https://www.etnews.com/20221122000152" target="_blank" rel="noreferrer">전자신문, 140억원 시리즈A 투자 유치</a></li>
+            <li><a href="https://m.etnews.com/20250130000049?obj=Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJyZWZlcmVyIjtOO3M6NzoiZm9yd2FyZCI7czoxMzoid2ViIHRvIG1vYmlsZSI7fQ%3D%3D" target="_blank" rel="noreferrer">전자신문, CRO·컨설팅 서비스 확장과 매출 성장</a></li>
+            <li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/decentralized-clinical-trials-drugs-biological-products-and-devices" target="_blank" rel="noreferrer">FDA, Conducting Clinical Trials With Decentralized Elements</a></li>
+          </ul>
+        `,
+      },
+      en: {
+        title: 'What You Miss If You See JNPMEDI Only as a Clinical Trial SaaS Company',
+        keywords: ['Healthcare'],
+        excerpt: 'If you describe JNPMEDI only as a clinical trial software company, you only see half of the picture. The combination of Maven Clinical Cloud and professional services explains the company much better.',
+        heroImage: {
+          alt: 'Three professionals in a clinical operations meeting reviewing dashboards and trial workflow diagrams on a large screen',
+          caption: 'The point of JNPMEDI is not a single interface but the attempt to connect trial operations, data management, and regulatory execution into one working structure.',
+        },
+        contentHtml: `
+          <p>When people first come across JNPMEDI, many of them naturally think of a software company. That reaction makes sense. Maven Clinical Cloud is the most visible product, and outside coverage often introduces the company as a clinical trial data platform provider.</p>
+          <p>But once you look more carefully at how the company describes itself, the framing starts to shift. JNPMEDI does not stop at calling itself a clinical trial SaaS business. On its official site, it describes itself as a <strong>Life Science RDC company</strong> that combines Maven Clinical Cloud with professional services spanning development, clinical research, regulatory work, and licensing.</p>
+          <p>That difference matters. Reading JNPMEDI as a software vendor leads to one conclusion. Reading it as a company trying to design the execution layer of life science projects leads to a very different one.</p>
+
+          <h3>Maven matters, but Maven alone does not explain the company anymore</h3>
+          <p>Maven Clinical Cloud is still the core foundation. Earlier investment coverage described it as a proprietary clinical trial data platform that could be applied across pharma, biotech, digital therapeutics, and digital medical devices. At that stage, the “clinical SaaS” label was understandable.</p>
+          <p>Today, though, that label feels incomplete. JNPMEDI’s homepage and service pages make it clear that Maven is being positioned less like a standalone product and more like an operating layer on top of which the company can deliver broader execution support.</p>
+          <blockquote>In other words, Maven looks less like the whole business and more like the base layer that allows the rest of the business to exist.</blockquote>
+
+          <h3>The real signal is not the feature list but the range of workflow it touches</h3>
+          <p>The professional services page is especially revealing. JNPMEDI places decentralized trial modules such as eConsent, screening, remote visits, and RTSM next to investment and licensing support, document management, eTMF, project management, and AWS-based cloud services.</p>
+          <p>That mix is important because clinical projects rarely break in just one place. Recruitment, data capture, documentation, compliance, due diligence, and partner communication usually move together. When one layer slows down, the rest of the program tends to feel it as well.</p>
+          <p>That is why JNPMEDI makes more sense when you ask not “what features does it sell?” but “how much of the operating chain is it trying to connect?” By that standard, it increasingly looks closer to an execution partner than a narrow tool vendor.</p>
+
+          <h3>Its approach to decentralized trials says a lot about how the company thinks</h3>
+          <p>JNPMEDI has been early and explicit about decentralized clinical trials. The company has repeatedly presented DCT-related capabilities in industry venues, and when the FDA finalized its guidance on conducting clinical trials with decentralized elements, JNPMEDI even distributed a Korean translation.</p>
+          <p>That is a meaningful signal. It suggests the company is not only selling remote-trial features but also trying to interpret how regulatory change should be translated into actual operating practice for local teams.</p>
+          <p>In healthcare, interpretation can be as valuable as functionality. That is especially true in areas such as digital therapeutics and digital medical devices, where product strategy, trial design, documentation, and data architecture are tightly linked.</p>
+
+          <h3>The recent expansion story is really about services as much as software</h3>
+          <p>Recent coverage also points in that direction. External reporting has highlighted the company’s expansion in CRO and consulting services, while JNPMEDI’s own CONNECT event has framed its agenda around regulation, clinical operations, AI-based data strategy, and investment trends rather than software features alone.</p>
+          <p>That is telling. A pure software company usually keeps the spotlight on product capability. JNPMEDI, by contrast, increasingly presents itself through the lens of execution across the full life science pathway.</p>
+          <ul>
+            <li>Maven remains the data and operations foundation.</li>
+            <li>Professional services become the hands-on layer that moves projects forward.</li>
+            <li>The company’s identity shifts from selling tools to shaping execution structure.</li>
+          </ul>
+
+          <h3>So the better way to read JNPMEDI is as an execution-layer company</h3>
+          <p>That is what makes JNPMEDI interesting to watch. Discussions about clinical trial digitization often get fragmented into feature-level talk about eConsent, ePRO, or remote visits. JNPMEDI has been trying to place those pieces inside a larger operating model much earlier than many people realize.</p>
+          <p>There are still open questions, of course. The broader the service scope becomes, the harder it is to keep depth and repeatability at the same time. A company that combines platform and consulting has to manage both product standardization and human dependency very carefully. Global expansion will also bring sharper scrutiny on compliance, document quality, and data standards.</p>
+          <p>Even so, calling JNPMEDI only a clinical trial SaaS company now feels too small. It looks more like a company trying to bind clinical operations, data, regulation, and business development into one practical execution model built on top of Maven.</p>
+
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://www.jnpmedi.com/" target="_blank" rel="noreferrer">JNPMEDI official website</a></li>
+            <li><a href="https://www.jnpmedi.com/professional_services" target="_blank" rel="noreferrer">JNPMEDI Professional Services</a></li>
+            <li><a href="https://www.jnpmedi.com/media/?bmode=view&idx=112327110" target="_blank" rel="noreferrer">JNPMEDI: Korean translation of FDA DCT final guidance</a></li>
+            <li><a href="https://www.jnpmedi.com/media/?bmode=view&idx=167442583" target="_blank" rel="noreferrer">2025 JNPMEDI CONNECT</a></li>
+            <li><a href="https://www.etnews.com/20221122000152" target="_blank" rel="noreferrer">ETNews: Series A investment in JNPMEDI</a></li>
+            <li><a href="https://m.etnews.com/20250130000049?obj=Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJyZWZlcmVyIjtOO3M6NzoiZm9yd2FyZCI7czoxMzoid2ViIHRvIG1vYmlsZSI7fQ%3D%3D" target="_blank" rel="noreferrer">ETNews: CRO and consulting expansion with rapid revenue growth</a></li>
+            <li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/decentralized-clinical-trials-drugs-biological-products-and-devices" target="_blank" rel="noreferrer">FDA: Conducting Clinical Trials With Decentralized Elements</a></li>
+          </ul>
+        `,
+      },
+      ja: {
+        title: 'JNPMEDIを単なる臨床試験SaaSとして見ると見落とすこと',
+        keywords: ['ヘルスケア'],
+        heroImage: {
+          alt: '臨床オペレーション会議で三人の実務者が大きな画面のダッシュボードと試験フロー図を確認している様子',
+          caption: 'JNPMEDIを理解するうえで大事なのは、一つの画面よりも、臨床運営とデータ、規制対応を一つの流れとして束ねようとする姿勢です。',
+        },
+        excerpt: 'JNPMEDIを単なる臨床試験ソフトウェア会社として理解すると、会社の半分しか見えてきません。Maven Clinical CloudとProfessional Servicesを一緒に見ると、この会社の輪郭がかなりはっきりします。',
+        contentHtml: `
+          <p>JNPMEDIを初めて見ると、多くの人はまずソフトウェア会社だと感じると思います。実際、最初に目に入るのはMaven Clinical Cloudですし、外部記事でも臨床試験データプラットフォーム企業として紹介されることが多いからです。</p>
+          <p>ただ、会社が自分自身をどう説明しているかを少し丁寧に見ると、印象は変わってきます。JNPMEDIは単なる臨床試験SaaS企業ではなく、Maven Clinical Cloudを基盤にProfessional Servicesを組み合わせ、研究開発から商用化までつなぐ <strong>Life Science RDC company</strong> と自らを定義しています。</p>
+          <p>この違いは小さくありません。ソフトウェア会社として読むのか、ライフサイエンス事業の実行レイヤーを設計する会社として読むのかで、会社の位置づけはかなり変わって見えるからです。</p>
+
+          <h3>Mavenは重要ですが、それだけではもう説明しきれません</h3>
+          <p>Maven Clinical Cloudは今でも中心です。初期の投資記事でも、Mavenは製薬、バイオ、デジタル治療、デジタル医療機器まで幅広く使える臨床試験データプラットフォームとして説明されていました。その段階では「臨床SaaS」という見方も自然でした。</p>
+          <p>ただ、今のJNPMEDIを見ると、その説明だけでは足りません。公式サイトやサービス紹介を見ると、Mavenは単独プロダクトというより、より大きな実行支援を載せるための基盤レイヤーとして置かれています。</p>
+          <blockquote>つまりMavenは会社そのものではなく、会社全体を支える土台として読むほうがしっくりきます。</blockquote>
+
+          <h3>本当に見るべきなのは機能の数ではなく、つなごうとしている範囲です</h3>
+          <p>Professional Servicesの説明を見ると、この会社がなぜ自分をRDCと呼ぶのかがよく分かります。JNPMEDIはeConsent、遠隔訪問、RTSMのような分散型試験モジュールだけでなく、投資・ライセンシング支援、文書管理、eTMF、プロジェクトマネジメント、AWS基盤支援まで、一つの流れの中に置いています。</p>
+          <p>これは実務的に重要です。臨床プロジェクトは、被験者募集だけ、データだけ、文書だけで止まることはほとんどありません。採用、運用、記録、規制、実査、パートナー対応が同時に動くからです。</p>
+          <p>だからJNPMEDIを理解するには、「何を売っているか」より「どこまでを一つの運営構造として束ねようとしているか」を見る必要があります。その意味では、ツールベンダーというより実行パートナーに近づいているように見えます。</p>
+
+          <h3>分散型臨床試験への向き合い方にも会社の性格が出ています</h3>
+          <p>JNPMEDIは分散型臨床試験を早い段階から前に出してきました。業界イベントでDCT関連機能を紹介してきただけでなく、FDAが分散型要素を含む臨床試験の最終ガイダンスを出した際には、韓国語翻訳版まで配布しています。</p>
+          <p>ここが重要なのは、単に遠隔機能を売っているだけではないからです。規制の変化を現場がどう受け止め、どう実装すべきかまで一緒に解釈しようとしているように見えるからです。</p>
+          <p>ヘルスケアでは、機能そのものより解釈の価値が大きい場面が少なくありません。特にデジタル治療やデジタル医療機器のように、製品、臨床、規制文書、データ設計が強く結びつく領域ではなおさらです。</p>
+
+          <h3>最近の拡張は、ソフト販売より実行サービス寄りです</h3>
+          <p>最近の報道を見ても、その方向ははっきりしています。外部記事ではCROやコンサルティングサービスの拡張が強調されており、JNPMEDI CONNECTの公式アジェンダも規制、臨床運営、AIベースのデータ戦略、投資トレンドを横断する形で組まれていました。</p>
+          <p>これは象徴的です。純粋なソフトウェア企業なら、もっと製品機能の進化を前面に出すはずです。JNPMEDIはむしろ、ライフサイエンス事業全体の実行力をどう支えるかという文脈で自社を見せようとしている印象が強いです。</p>
+          <ul>
+            <li>Mavenはデータと運営の基盤として残り、</li>
+            <li>Professional Servicesがその上で現実のプロジェクトを動かし、</li>
+            <li>会社の自己定義はツール提供者から実行構造の設計者へと少しずつ移っています。</li>
+          </ul>
+
+          <h3>だからJNPMEDIは“臨床SaaS企業”より“実行レイヤー企業”として見るほうが自然です</h3>
+          <p>私がJNPMEDIを面白いと思うのもそこです。臨床のデジタル化を語るとき、話題はeConsentやePROのような機能単位に割れがちですが、JNPMEDIはそれらを早い段階から一つの運営モデルにまとめようとしてきました。</p>
+          <p>もちろん課題もあります。サービス範囲が広がるほど、各領域の深さと再現性を両立するのは難しくなります。プラットフォームとコンサルティングを同時に持つ企業は、標準化と人依存のバランスをかなり慎重に扱う必要があります。グローバル展開が進めば、規制順守、文書品質、データ標準化もより厳しく見られるはずです。</p>
+          <p>それでも今のJNPMEDIを単なる臨床試験SaaSとしてだけ見るのは少し小さすぎます。Mavenを土台にしながら、臨床運営、データ、規制、事業開発を一つの実行構造に束ねようとしている会社として見るほうが、今の姿に近いと思います。</p>
+
+          <h3>参考資料</h3>
+          <ul>
+            <li><a href="https://www.jnpmedi.com/" target="_blank" rel="noreferrer">JNPMEDI公式サイト</a></li>
+            <li><a href="https://www.jnpmedi.com/professional_services" target="_blank" rel="noreferrer">JNPMEDI Professional Services</a></li>
+            <li><a href="https://www.jnpmedi.com/media/?bmode=view&idx=112327110" target="_blank" rel="noreferrer">FDA DCT最終ガイダンス韓国語版配布</a></li>
+            <li><a href="https://www.jnpmedi.com/media/?bmode=view&idx=167442583" target="_blank" rel="noreferrer">2025 JNPMEDI CONNECT</a></li>
+            <li><a href="https://www.etnews.com/20221122000152" target="_blank" rel="noreferrer">ETNews: シリーズA投資誘致</a></li>
+            <li><a href="https://m.etnews.com/20250130000049?obj=Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJyZWZlcmVyIjtOO3M6NzoiZm9yd2FyZCI7czoxMzoid2ViIHRvIG1vYmlsZSI7fQ%3D%3D" target="_blank" rel="noreferrer">ETNews: CRO・コンサル拡張と売上成長</a></li>
+            <li><a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/decentralized-clinical-trials-drugs-biological-products-and-devices" target="_blank" rel="noreferrer">FDA: Conducting Clinical Trials With Decentralized Elements</a></li>
+          </ul>
+        `,
+      },
+    },
+  },
+  {
     slug: 'practical-way-to-connect-obsidian-and-claude-code',
     category: 'ai',
     createdAt: '2026-03-31T15:40:00+09:00',
