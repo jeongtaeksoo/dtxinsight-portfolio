@@ -22,7 +22,8 @@ const Publications = () => {
     const [showAllPapers, setShowAllPapers] = useState(false);
 
     const publications = t('publications.items', { returnObjects: true }) || [];
-    const summaryStats = t('publications.summaryStats', { returnObjects: true }) || [];
+    const summaryHighlights = t('publications.summaryHighlights', { returnObjects: true }) || [];
+    const summaryStatLine = t('publications.summaryStatLine');
     const focusItems = t('publications.focusItems', { returnObjects: true }) || [];
     const featuredPublications = publications.slice(0, 3);
     const additionalCount = Math.max(publications.length - featuredPublications.length, 0);
@@ -45,23 +46,17 @@ const Publications = () => {
                         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70">
                             {t('publications.summaryEyebrow')}
                         </p>
-                        <h3 className="mt-3 text-xl font-semibold leading-snug text-text">
-                            {t('publications.summaryTitle')}
-                        </h3>
-                        <p className="mt-3 text-sm leading-7 text-muted">
-                            {t('publications.summaryDescription')}
-                        </p>
-
-                        <div className="mt-5 grid gap-3">
-                            {summaryStats.map((stat) => (
-                                <div
-                                    key={stat.label}
-                                    className="rounded-xl border border-border bg-surface px-4 py-3"
-                                >
-                                    <p className="text-lg font-semibold text-text">{stat.value}</p>
-                                    <p className="mt-1 text-xs leading-relaxed text-muted">{stat.label}</p>
-                                </div>
+                        <ul className="mt-4 space-y-3">
+                            {summaryHighlights.map((item) => (
+                                <li key={item} className="flex items-start gap-3 text-sm leading-6 text-text">
+                                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
+                                    <span>{item}</span>
+                                </li>
                             ))}
+                        </ul>
+
+                        <div className="mt-5 rounded-xl border border-border bg-surface px-4 py-3">
+                            <p className="text-sm font-semibold leading-6 text-text">{summaryStatLine}</p>
                         </div>
 
                         <div className="mt-6 border-t border-border pt-5">

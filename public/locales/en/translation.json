@@ -140,12 +140,6 @@
         "intro": "These projects show the mix of trial operations, validation design, and policy-facing communication that I bring into healthcare work.",
         "featuredLabel": "Featured studies",
         "policyLabel": "Policy-facing communication",
-        "signalTitle": "What this section shows",
-        "signalItems": [
-            "Experience spanning both multi-center trial operations and research design",
-            "Experience translating hospital operations into policy-facing and external communication",
-            "A tendency to treat digital health validation as an operating model, not just a pilot"
-        ],
         "projects": [
             {
                 "title": "Randomized Controlled Trial Management (MCI)",
@@ -160,7 +154,7 @@
             {
                 "title": "Government-Level Digital Health Demonstration",
                 "category": "Regulatory Affairs & Presentation",
-                "description": "Led the Q&A session for a mid-term digital health demonstration review attended by MOHW and KHIDI stakeholders, translating clinical research outcomes into a policy-facing discussion."
+                "description": "Led the Q&A session for a mid-term digital health demonstration review attended by MOHW and KHIDI stakeholders."
             }
         ]
     },
@@ -196,28 +190,18 @@
         "coreSummary": "Core Summary",
         "closeBtn": "Close",
         "summaryComingSoon": "Summary coming soon.",
-        "summaryEyebrow": "At a glance",
-        "summaryTitle": "A compact view of the work behind the papers",
-        "summaryDescription": "Instead of listing everything at once, I surface the papers that best show how I work across trial operations, generative AI intervention design, and usability-focused validation.",
-        "summaryStats": [
-            {
-                "value": "5",
-                "label": "Indexed papers including one under review"
-            },
-            {
-                "value": "2",
-                "label": "Randomized controlled trial tracks"
-            },
-            {
-                "value": "3",
-                "label": "Core themes: operations, AI intervention, usability"
-            }
+        "summaryEyebrow": "Research Focus",
+        "summaryHighlights": [
+            "Intervention design grounded in clinical operations",
+            "Structuring generative AI for cognitive intervention",
+            "Digital health design that includes usability validation"
         ],
-        "focusTitle": "What to notice first",
+        "summaryStatLine": "5 papers · 2 RCT tracks · experience integrating 3 core themes",
+        "focusTitle": "Core Perspective",
         "focusItems": [
-            "Experience in running and coordinating real clinical studies",
-            "A consistent interest in intervention design, not just model performance",
-            "A bias toward tools and workflows that can hold up in actual care settings"
+            "Clinical work is not just a paper. It is an execution structure.",
+            "What works in the field matters more than model novelty alone.",
+            "Digital health should be validated through usability, not just concept."
         ],
         "viewAllCta": "View full publication list",
         "morePapersHint": "{{count}} more in the full list",
