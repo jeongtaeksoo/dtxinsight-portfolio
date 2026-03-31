@@ -49,6 +49,181 @@ export const getLocalizedBlogPost = (post, language = DEFAULT_BLOG_LOCALE) => {
 
 export const blogPosts = [
   {
+    slug: 'why-ai-trends-now-are-about-productization-speed',
+    category: 'ai',
+    createdAt: '2026-03-31T22:08:00+09:00',
+    heroImage: {
+      src: '/blog/ai-productization-speed-hero-generated.webp',
+    },
+    locales: {
+      ko: {
+        title: '지금 AI 최신 동향의 핵심은 왜 모델 경쟁보다 제품화 속도에 있을까',
+        keywords: ['AI'],
+        excerpt: '최근 AI 흐름의 중심은 더 높은 성능표보다, 검색과 도구 호출, 긴 문맥, 실제 실행까지 묶어 일을 끝내는 제품으로 바뀌고 있다는 점에 있습니다.',
+        heroImage: {
+          alt: '여러 개의 업무 패널과 브라우저 창, 지원 인터페이스가 한 화면에 겹쳐진 에디토리얼 스타일 일러스트',
+          caption: '요즘 AI의 차이는 모델 이름 하나보다, 검색하고 정리하고 실행까지 이어지는 제품 경험에서 더 또렷하게 드러납니다.',
+        },
+        contentHtml: `
+          <p>요즘 AI 뉴스를 따라가다 보면 흐름이 너무 빠르게 바뀌어서, 결국 누가 더 똑똑한 모델을 냈는지만 보게 될 때가 많습니다. 이번 주에는 어떤 모델이 더 높은 점수를 받았는지, 누가 더 긴 문맥을 처리하는지, 어떤 벤더가 또 새 버전을 붙였는지부터 확인하게 되니까요.</p>
+          <p>그런데 최근 공식 발표들을 이어서 읽어보면 초점은 조금 다른 쪽으로 이동하고 있습니다. 모델 하나의 성능보다, 검색하고, 파일을 읽고, 도구를 부르고, 경우에 따라 컴퓨터까지 직접 다루면서 실제 업무를 끝내게 만드는 제품 구조가 더 중요해지고 있습니다.</p>
+          <p>그래서 저는 지금 AI 최신 동향의 핵심을 단순한 모델 경쟁보다 <strong>제품화 속도</strong>에서 보는 편이 더 정확하다고 생각합니다. AI가 얼마나 똑똑한가보다, 얼마나 빨리 실제 작업 흐름 안으로 들어가고 있는가가 시장의 결을 더 잘 보여주기 때문입니다.</p>
+
+          <h3>이제 경쟁 단위는 모델 점수보다 완료율에 가까워졌습니다</h3>
+          <p>OpenAI 개발자 문서는 지금 시작 모델로 GPT-5.4를 전면에 두고 있습니다. 그런데 그 설명을 보면 단순한 텍스트 모델 소개에 머물지 않습니다. Web search, file search, image generation, code interpreter, hosted shell, computer use, MCP 같은 도구 지원이 같은 문맥 안에서 함께 제시됩니다.</p>
+          <p>Google도 비슷합니다. 최근 Gemini 3.1 Pro와 3.1 Flash-Lite를 소개하면서 API, Vertex AI, 앱, NotebookLM까지 한 번에 묶어 말하고 있습니다. Anthropic 역시 Sonnet 4.6 발표에서 1M 토큰 문맥, computer use, web search, memory, compaction, 각종 도구 연계를 함께 전면에 세웠습니다.</p>
+          <blockquote>지금 AI 시장의 질문은 누가 가장 똑똑한가보다, 누가 가장 자주 일을 끝내게 만드는가에 더 가까워졌습니다.</blockquote>
+          <p>이 변화는 꽤 중요합니다. 예전에는 모델이 좋으면 그 위에 제품을 얹는다는 느낌이 강했다면, 지금은 모델과 도구, 실행 환경, UI, 비용 구조가 하나의 제품으로 묶여 움직입니다. 실무자 입장에서는 성능표 한 줄보다 실제 완료율과 handoff 감소가 더 중요한 지표가 됩니다.</p>
+
+          <h3>멀티모달과 긴 문맥은 더 이상 부가 기능이 아닙니다</h3>
+          <p>최근 발표를 보면 멀티모달과 긴 문맥은 더 이상 “있으면 좋은 기능”처럼 소개되지 않습니다. Google은 Gemini 3.1 Flash-Lite를 대규모 고빈도 워크로드용 모델로 설명하면서 속도와 비용을 강조했고, 앞선 2.5 계열에서는 도구 연결과 1M 문맥 길이를 분명히 전면에 내세웠습니다.</p>
+          <p>Anthropic도 Sonnet 4.6에서 1M 토큰 문맥을 코드베이스, 계약서, 연구 문서처럼 실제로 긴 자료를 한 번에 다뤄야 하는 작업과 연결해 설명합니다. OpenAI 역시 최신 모델 페이지에서 긴 문맥과 함께 vision, file search, computer use 같은 실전 도구를 묶어서 보여줍니다.</p>
+          <p>이 말은 결국 AI가 더 이상 한두 문단짜리 프롬프트 놀이에 머물지 않는다는 뜻입니다. 이제는 문서 묶음, 스프레드시트, 브라우저 탭, 이미지, 검색 결과처럼 실제 업무에 흩어진 재료를 같은 흐름 안에서 다루는 쪽이 표준에 가까워지고 있습니다.</p>
+
+          <h3>코파일럿에서 오퍼레이터로 이동하지만, 인간 검토는 더 중요해졌습니다</h3>
+          <p>흥미로운 점은 제품 경험이 더 자율적으로 바뀌고 있다는 사실입니다. Meta는 최근 Facebook과 Instagram 안에서 Meta AI support assistant를 글로벌하게 확대하면서, 단순 답변이 아니라 비밀번호 재설정이나 프로필 설정 변경처럼 사용자의 문제를 처음부터 끝까지 해결하도록 설계했다고 설명했습니다.</p>
+          <p>이런 움직임만 보면 이제 AI가 곧바로 사람을 완전히 대신할 것처럼 보일 수 있습니다. 하지만 같은 시기에 나온 Anthropic Economic Index는 조금 더 현실적인 장면을 보여줍니다. Claude.ai에서는 자동화보다 보조와 협업이 다시 더 많아졌고, 가장 많이 쓰이는 작업도 여전히 코딩 수정이나 문서 작업처럼 사람의 검토가 남아 있는 영역에 집중되어 있습니다.</p>
+          <p>즉, 최근 흐름은 “완전 자동화가 바로 온다”보다 “AI가 더 많은 단계를 맡되, 중요한 판단은 여전히 사람과 함께 묶인다”에 가깝습니다. 제품은 점점 오퍼레이터처럼 보이지만, 실제 실무에서는 인간 검토 지점을 어디에 두는지가 오히려 더 중요해지고 있습니다.</p>
+
+          <h3>지금 실무자가 진짜 봐야 할 것은 모델 순위표가 아닙니다</h3>
+          <p>그래서 AI 흐름을 빠르게 따라가야 하는 사람이라면, 매주 모델 이름만 바뀌는 뉴스를 좇는 것보다 아래 질문을 먼저 보는 편이 낫습니다.</p>
+          <ul>
+            <li>이 모델은 검색, 파일, 브라우저, 사내 도구까지 실제 작업 재료를 얼마나 자연스럽게 연결하는가</li>
+            <li>속도와 비용, reasoning 설정이 내 업무 빈도와 맞는가</li>
+            <li>결과를 바로 실행해도 되는가, 아니면 어디에서 사람 검토를 넣어야 하는가</li>
+            <li>한 번의 멋진 데모가 아니라, 반복 업무에서 실제로 시간을 줄여주는가</li>
+          </ul>
+          <p>지금 강한 팀은 가장 비싼 모델만 붙이는 팀이 아니라, 어떤 작업은 빠르게 처리하고 어떤 작업은 깊게 검토해야 하는지 구분하는 팀입니다. 모델을 고르는 일보다 흐름을 설계하는 일이 더 중요해진 셈입니다.</p>
+
+          <h3>결국 최신성의 핵심은 더 좋은 모델이 아니라 더 빠른 제품화입니다</h3>
+          <p>물론 모델 성능 경쟁 자체가 끝난 것은 아닙니다. 여전히 더 긴 문맥, 더 나은 추론, 더 강한 코드 처리 능력은 중요합니다. 다만 그 성능이 시장에서 의미를 가지는 방식이 달라졌습니다. 이제는 그 성능이 얼마나 빨리 실제 UI와 도구, 워크플로 안으로 들어가느냐가 더 큰 차이를 만듭니다.</p>
+          <p>그래서 지금 AI 최신 동향을 한 줄로 요약하면 이렇습니다. <strong>벤치마크 경쟁은 계속되지만, 진짜 승부는 제품화 속도에서 난다.</strong> 앞으로도 새 모델 소식은 계속 쏟아지겠지만, 실제로 오래 남는 차이는 결국 일을 끝내는 경험을 누가 더 잘 만들었는지에서 드러날 가능성이 높습니다.</p>
+
+          <h3>참고자료</h3>
+          <ul>
+            <li><a href="https://developers.openai.com/api/docs/models" target="_blank" rel="noreferrer">OpenAI API Docs: Models overview</a></li>
+            <li><a href="https://developers.openai.com/api/docs/models/gpt-5.4" target="_blank" rel="noreferrer">OpenAI API Docs: GPT-5.4</a></li>
+            <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/" target="_blank" rel="noreferrer">Google: Gemini 3.1 Pro</a></li>
+            <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite" target="_blank" rel="noreferrer">Google: Gemini 3.1 Flash-Lite</a></li>
+            <li><a href="https://www.anthropic.com/news/claude-sonnet-4-6" target="_blank" rel="noreferrer">Anthropic: Introducing Claude Sonnet 4.6</a></li>
+            <li><a href="https://www.anthropic.com/research/anthropic-economic-index-january-2026-report" target="_blank" rel="noreferrer">Anthropic Economic Index report: Economic primitives</a></li>
+            <li><a href="https://about.fb.com/news/2026/03/boosting-your-support-and-safety-on-metas-apps-with-ai/" target="_blank" rel="noreferrer">Meta: Boosting Your Support and Safety on Meta's Apps With AI</a></li>
+          </ul>
+        `,
+      },
+      en: {
+        title: 'Why the Real AI Trend Now Is Productization Speed, Not Just Model Rankings',
+        keywords: ['AI'],
+        excerpt: 'The latest AI shift is not only about higher benchmark scores. It is about turning search, tools, long context, and execution into products that actually finish work.',
+        heroImage: {
+          alt: 'An editorial-style illustration of overlapping work panels, browser windows, and support interfaces on a single screen',
+          caption: 'The clearest AI differences now show up less in model names and more in product experiences that can search, organize, and act in one flow.',
+        },
+        contentHtml: `
+          <p>If you follow AI news every day, it is easy to think the whole story is still a race of model names. Which model scored higher, which lab shipped the longer context window, which release looks strongest this week.</p>
+          <p>But when you line up the recent official announcements, the center of gravity looks a little different. What matters more now is not only how smart the model is on its own, but how quickly it is being turned into a product that can search, read files, call tools, and in some cases even operate a computer to finish real work.</p>
+          <p>That is why I think the most useful way to read the latest AI trend is through <strong>productization speed</strong>, not just model competition. The smarter question is no longer only who built the best model, but who is moving that capability into everyday workflows the fastest.</p>
+
+          <h3>The unit of competition is moving closer to completion rate</h3>
+          <p>OpenAI's current API docs place GPT-5.4 at the front, but the important part is how it is presented. The model page is not just about text generation. It sits next to web search, file search, image generation, code interpreter, hosted shell, computer use, and MCP support as part of one usable system.</p>
+          <p>Google is telling a similar story. Its recent Gemini 3.1 Pro and 3.1 Flash-Lite releases are framed across the API, Vertex AI, consumer products, and enterprise surfaces at once. Anthropic does the same with Sonnet 4.6, emphasizing a 1M-token context window, computer use, web search, memory, compaction, and broader tool support.</p>
+          <blockquote>The market question is shifting from who is smartest to who can help users finish work more often.</blockquote>
+          <p>That change matters. A year ago, it still made sense to think of a model first and a product second. Now the model, the tool layer, the interface, and the cost-speed tradeoff increasingly arrive as one package. In practice, users care less about a leaderboard line and more about whether the system reduces handoffs and actually closes the loop.</p>
+
+          <h3>Multimodality and long context are becoming work conditions, not bonus features</h3>
+          <p>Recent releases no longer treat multimodality and long context as side benefits. Google describes Gemini 3.1 Flash-Lite as a model for high-volume workloads where cost and speed matter, while its recent Gemini family messaging also keeps tools and large context lengths close to the center. Anthropic describes Sonnet 4.6's 1M-token context in terms of codebases, contracts, and research documents, not as a lab curiosity.</p>
+          <p>OpenAI's latest model pages also combine long context with vision and tool use in a way that points to real task environments rather than isolated prompts. The practical meaning is simple: AI is moving away from short prompt-response moments and toward handling the messy set of materials that real work actually uses.</p>
+          <p>Documents, spreadsheets, browser tabs, images, search results, and internal tools are becoming part of the same operating surface. That is a bigger shift than any single benchmark chart.</p>
+
+          <h3>We are moving from copilots to operators, but human review matters more, not less</h3>
+          <p>Another notable change is that AI products are becoming more action-oriented. Meta's recent support announcement describes the Meta AI support assistant not as a system that only answers questions, but as one that can help resolve account problems from start to finish, including actions like password resets and profile updates.</p>
+          <p>That could make the present moment look more automated than it really is. Anthropic's January 15, 2026 Economic Index offers a more grounded picture. On Claude.ai, augmentation became more common again than automation, and the most common tasks remained concentrated in coding fixes and other domains where people still review, refine, and steer the work.</p>
+          <p>So the real direction is not full replacement overnight. It is that AI is taking over more steps while humans keep the review points that matter. Products are starting to feel more like operators, but in real work the placement of human judgment is becoming even more important.</p>
+
+          <h3>What professionals should watch now</h3>
+          <p>For anyone trying to keep up with AI seriously, it is more useful to ask a few practical questions than to chase every new ranking.</p>
+          <ul>
+            <li>How well does this system connect search, files, browsers, and internal tools into one workflow?</li>
+            <li>Do its latency, cost, and reasoning settings fit the frequency and stakes of my work?</li>
+            <li>Where should a person still review before the output is allowed to act?</li>
+            <li>Does it save time in repeated work, not just in a polished demo?</li>
+          </ul>
+          <p>The teams that use AI well are rarely the teams that only buy the biggest model. They are the teams that separate fast tasks from deep ones and design the handoff between automation and judgment carefully.</p>
+
+          <h3>The latest edge comes from shipping, not just inventing</h3>
+          <p>None of this means model quality stopped mattering. Better reasoning, stronger coding, and larger usable context windows are still central. What has changed is how that quality becomes valuable in the market. The bigger difference now comes from how quickly those gains are turned into tools, interfaces, and workflow products people can actually use.</p>
+          <p>So if I had to summarize the current AI trend in one line, it would be this: <strong>benchmark competition continues, but the real race is in productization speed.</strong> New models will keep arriving. The more durable difference, though, will likely be who turns them into dependable work experiences the fastest.</p>
+
+          <h3>Sources</h3>
+          <ul>
+            <li><a href="https://developers.openai.com/api/docs/models" target="_blank" rel="noreferrer">OpenAI API Docs: Models overview</a></li>
+            <li><a href="https://developers.openai.com/api/docs/models/gpt-5.4" target="_blank" rel="noreferrer">OpenAI API Docs: GPT-5.4</a></li>
+            <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/" target="_blank" rel="noreferrer">Google: Gemini 3.1 Pro</a></li>
+            <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite" target="_blank" rel="noreferrer">Google: Gemini 3.1 Flash-Lite</a></li>
+            <li><a href="https://www.anthropic.com/news/claude-sonnet-4-6" target="_blank" rel="noreferrer">Anthropic: Introducing Claude Sonnet 4.6</a></li>
+            <li><a href="https://www.anthropic.com/research/anthropic-economic-index-january-2026-report" target="_blank" rel="noreferrer">Anthropic Economic Index report: Economic primitives</a></li>
+            <li><a href="https://about.fb.com/news/2026/03/boosting-your-support-and-safety-on-metas-apps-with-ai/" target="_blank" rel="noreferrer">Meta: Boosting Your Support and Safety on Meta's Apps With AI</a></li>
+          </ul>
+        `,
+      },
+      ja: {
+        title: 'いまAIの最新動向で本当に重要なのは、モデル競争より製品化の速さです',
+        keywords: ['AI'],
+        excerpt: '最近のAIの変化は、単に性能表が上がることではありません。検索、ツール、長い文脈、実行までを束ねて、実際に仕事を終わらせる製品へ移っている点にあります。',
+        heroImage: {
+          alt: '複数の業務パネル、ブラウザ画面、サポート画面が重なって見えるエディトリアル風のイラスト',
+          caption: 'いまAIの差が最もはっきり出るのは、モデル名よりも、検索して整理し実行までつなぐ製品体験のほうです。',
+        },
+        contentHtml: `
+          <p>毎日のようにAIニュースを追っていると、結局はモデル名の競争だけが続いているように見えることがあります。どこがより高いスコアを出したのか、どのモデルがより長い文脈を扱えるのか、今週は誰が新しい版を出したのか。</p>
+          <p>ただ、最近の公式発表を並べて読むと、重心は少し別の場所へ移っています。大事なのはモデル単体の賢さだけではなく、それがどれだけ早く検索、ファイル読解、ツール呼び出し、場合によってはコンピュータ操作まで含む製品へ変わり、現実の仕事を終わらせるところまで届いているかです。</p>
+          <p>だから私は、いまのAI最新動向を読むとき、単純なモデル競争より <strong>製品化の速さ</strong> を軸に見るほうが自然だと思っています。誰が最も強いモデルを作ったかだけでなく、その能力を誰がいちばん早く日常のワークフローに落とし込んでいるかが、いまの市場をよく表しているからです。</p>
+
+          <h3>競争の単位は、スコアより完了率に近づいています</h3>
+          <p>OpenAIの現行APIドキュメントはGPT-5.4を前面に置いていますが、重要なのはその見せ方です。単なるテキスト生成モデルとしてではなく、web search、file search、image generation、code interpreter、hosted shell、computer use、MCPといった機能群と一体のものとして提示されています。</p>
+          <p>Googleも似た流れです。Gemini 3.1 Proや3.1 Flash-Liteの説明では、API、Vertex AI、一般向け製品、企業向け製品までを一つの流れで語っています。AnthropicもSonnet 4.6で、1Mトークン文脈、computer use、web search、memory、compaction、各種ツール連携をまとめて前面に出しています。</p>
+          <blockquote>いまの市場の問いは、誰が最も賢いかより、誰が最も多くの仕事を最後まで終わらせられるかに近づいています。</blockquote>
+          <p>この変化は小さくありません。以前はまずモデルがあり、その上に製品が載る感覚でした。今はモデル、ツール層、UI、速度とコストの設計が最初から一つの製品として動いています。実務では、リーダーボードの順位より、手戻りを減らして本当にループを閉じられるかが重要になります。</p>
+
+          <h3>マルチモーダルと長い文脈は、もう追加機能ではありません</h3>
+          <p>最近の発表では、マルチモーダルや長い文脈は「あると便利」な要素として扱われていません。GoogleはGemini 3.1 Flash-Liteを高頻度・大規模ワークロード向けに位置づけ、速度とコストを前面に出していますし、近年のGemini系発表でもツール連携と大きな文脈長が中心にあります。AnthropicもSonnet 4.6の1Mトークン文脈を、コードベース、契約書、研究資料のような現実の長い作業材料と結びつけて説明しています。</p>
+          <p>OpenAIの最新モデルページも、長い文脈をvisionや各種ツールと並べて示しています。つまりAIは、短いプロンプト一往復の世界から離れ、実際の仕事で散らばっている材料を同じ流れで扱う方向へ進んでいるということです。</p>
+          <p>文書、表計算、ブラウザのタブ、画像、検索結果、社内ツールが同じ作業面に乗ってくる。ここが最近の大きな変化であり、単一のベンチマークより意味のある動きだと思います。</p>
+
+          <h3>コパイロットからオペレーターへ進みつつありますが、人の確認はむしろ重要です</h3>
+          <p>もう一つ目立つのは、AI製品がより行動的になっていることです。Metaは最近、FacebookとInstagramでMeta AI support assistantの展開を広げ、単に質問に答えるだけでなく、パスワード再設定やプロフィール設定変更のように、問題解決を最初から最後まで支援する形を打ち出しました。</p>
+          <p>こうした動きだけを見ると、すぐに完全自動化へ向かっているようにも見えます。ただ、Anthropicが2026年1月15日に公開したEconomic Indexは、もう少し現実的な景色を見せています。Claude.aiでは自動化よりも補助・協働の利用が再び多くなり、中心的な用途も依然としてコード修正や文書作業のように、人が見直しながら進める領域に集中していました。</p>
+          <p>つまり本当の流れは、「一気に完全代替」ではなく、「AIが受け持つ工程は増えるが、重要な判断点には人が残る」という方向です。製品はますますオペレーターのように見えても、実務では人間の判断をどこに置くかが、かえって前より重要になっています。</p>
+
+          <h3>いま実務者が本当に見るべきもの</h3>
+          <p>だからAIを本気で追う人ほど、毎週のモデル順位より、次のような問いを先に見たほうが実用的です。</p>
+          <ul>
+            <li>検索、ファイル、ブラウザ、社内ツールを一つの流れにどれだけ自然につなげられるか</li>
+            <li>速度、コスト、reasoning設定が自分の仕事の頻度と重さに合っているか</li>
+            <li>どこまで自動で動かし、どこで人が確認すべきか</li>
+            <li>一度きりのデモではなく、繰り返し業務で本当に時間を減らせるか</li>
+          </ul>
+          <p>AIをうまく使っているチームは、常に一番大きいモデルだけを選んでいるわけではありません。速く終える仕事と、深く考える仕事を分け、そこに合う流れを設計しているチームです。モデル選び以上に、フロー設計が重要になってきたとも言えます。</p>
+
+          <h3>結局、最新性の本質は発明より実装の速さにあります</h3>
+          <p>もちろんモデル性能そのものが不要になったわけではありません。より良い推論、より強いコーディング能力、より大きく使える文脈長は今も重要です。ただ、その価値が市場で現れる仕方が変わりました。いま大きな差になるのは、その能力がどれだけ早くツール、UI、実務ワークフローへ組み込まれるかです。</p>
+          <p>だから、いまのAI最新動向を一行でまとめるならこうです。<strong>ベンチマーク競争は続いているが、本当の勝負は製品化の速さで決まる。</strong> 新しいモデルはこれからも次々に出てくるはずです。でも長く残る差は、結局それを誰がいちばん信頼できる仕事体験へ変えたかに表れる可能性が高いと思います。</p>
+
+          <h3>参考資料</h3>
+          <ul>
+            <li><a href="https://developers.openai.com/api/docs/models" target="_blank" rel="noreferrer">OpenAI API Docs: Models overview</a></li>
+            <li><a href="https://developers.openai.com/api/docs/models/gpt-5.4" target="_blank" rel="noreferrer">OpenAI API Docs: GPT-5.4</a></li>
+            <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/" target="_blank" rel="noreferrer">Google: Gemini 3.1 Pro</a></li>
+            <li><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-lite" target="_blank" rel="noreferrer">Google: Gemini 3.1 Flash-Lite</a></li>
+            <li><a href="https://www.anthropic.com/news/claude-sonnet-4-6" target="_blank" rel="noreferrer">Anthropic: Introducing Claude Sonnet 4.6</a></li>
+            <li><a href="https://www.anthropic.com/research/anthropic-economic-index-january-2026-report" target="_blank" rel="noreferrer">Anthropic Economic Index report: Economic primitives</a></li>
+            <li><a href="https://about.fb.com/news/2026/03/boosting-your-support-and-safety-on-metas-apps-with-ai/" target="_blank" rel="noreferrer">Meta: Boosting Your Support and Safety on Meta's Apps With AI</a></li>
+          </ul>
+        `,
+      },
+    },
+  },
+  {
     slug: 'what-you-miss-if-you-see-jnpmedi-only-as-clinical-trial-saas',
     category: 'healthcare',
     createdAt: '2026-03-31T11:55:00+09:00',
