@@ -3,17 +3,14 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
 const WindowCard = ({ title, type, date, authors, children, onClick, className = "" }) => {
-    const Component = onClick ? motion.button : motion.div;
-
     return (
-        <Component
+        <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className={`group flex flex-col overflow-hidden rounded-xl border border-border bg-surface transition-all hover:border-primary hover:shadow-md ${onClick ? 'cursor-pointer text-left' : ''} ${className}`}
+            className={`group bg-surface border border-border rounded-xl overflow-hidden transition-all cursor-pointer flex flex-col hover:border-primary hover:shadow-md ${className}`}
             onClick={onClick}
-            type={onClick ? 'button' : undefined}
         >
             {/* Card Header */}
             <div className="px-5 pt-5 flex items-center justify-between gap-2">
@@ -48,7 +45,7 @@ const WindowCard = ({ title, type, date, authors, children, onClick, className =
                     <ArrowUpRight size={14} className="text-muted group-hover:text-primary transition-colors shrink-0 mt-0.5" />
                 </div>
             </div>
-        </Component>
+        </motion.div>
     );
 };
 

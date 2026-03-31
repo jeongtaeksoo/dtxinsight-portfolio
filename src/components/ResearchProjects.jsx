@@ -8,7 +8,7 @@ const ResearchProjects = () => {
     const projects = (t('research.projects', { returnObjects: true }) || []);
 
     return (
-        <section id="research" className="scroll-mt-28 py-16">
+        <section id="research" className="py-16">
             <div>
                 <div className="flex items-center gap-4 mb-10">
                     <h2 className="text-3xl font-bold text-text">{t('research.title')}</h2>

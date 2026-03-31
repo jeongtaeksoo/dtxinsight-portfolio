@@ -114,7 +114,7 @@ const BlogBoard = () => {
 
     const tick = () => {
       if (!isPaused) {
-        rail.scrollLeft += 0.22;
+        rail.scrollLeft += 0.45;
 
         if (rail.scrollLeft >= resetPoint()) {
           rail.scrollLeft = 0;
@@ -359,7 +359,6 @@ const BlogBoard = () => {
         <div
           ref={previewRailRef}
           className="-mr-2 overflow-hidden pb-3 pr-2 blog-preview-rail"
-          aria-label={t('blogSection.recentPosts')}
         >
           <div className="flex min-w-max snap-x gap-4 pr-4">
             {previewRailPosts.map((post, index) => {
