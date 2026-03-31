@@ -31,6 +31,7 @@ const stripHtml = (html = '') => (
 );
 
 const BLOG_FILTERS = ['all', 'ai', 'healthcare', 'daily'];
+const PREVIEW_RAIL_SCROLL_STEP = 0.45;
 
 const formatDate = (dateString, language) => {
   const date = new Date(dateString);
@@ -114,7 +115,7 @@ const BlogBoard = () => {
 
     const tick = () => {
       if (!isPaused) {
-        rail.scrollLeft += 0.22;
+        rail.scrollLeft += PREVIEW_RAIL_SCROLL_STEP;
 
         if (rail.scrollLeft >= resetPoint()) {
           rail.scrollLeft = 0;
