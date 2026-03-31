@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { ExternalLink, X } from 'lucide-react';
 import { motion as Motion, AnimatePresence } from 'framer-motion';
 import WindowCard from './WindowCard';
-import poster1 from '../assets/poster_1.jpg';
-import poster2 from '../assets/poster_2.jpg';
-import poster3 from '../assets/poster_3.png';
+import poster1 from '../assets/poster_1.webp';
+import poster2 from '../assets/poster_2.webp';
+import poster3 from '../assets/poster_3.webp';
 
 const statusStyle = (status) => {
     if (status === 'Published' || status === '게재 완료' || status === '掲載完了')
@@ -19,8 +19,13 @@ const Publications = () => {
     const { t } = useTranslation();
     const [selectedPoster, setSelectedPoster] = useState(null);
     const [selectedPaper, setSelectedPaper] = useState(null);
+    const [showAllPapers, setShowAllPapers] = useState(false);
 
     const publications = t('publications.items', { returnObjects: true }) || [];
+    const summaryStats = t('publications.summaryStats', { returnObjects: true }) || [];
+    const focusItems = t('publications.focusItems', { returnObjects: true }) || [];
+    const featuredPublications = publications.slice(0, 3);
+    const additionalCount = Math.max(publications.length - featuredPublications.length, 0);
     const posters = [
         { id: 1, src: poster1, title: 'KOSCOPP 2024', link: 'https://www.karm.or.kr/workshop/?abyear=202402&mode=green_view&sid=5985' },
         { id: 2, src: poster2, title: 'ICDT 2024', link: 'https://www.karm.or.kr/workshop/?abyear=202402&mode=green_search' },
@@ -34,70 +39,197 @@ const Publications = () => {
                 <div className="h-px flex-grow bg-gradient-to-r from-border to-transparent" />
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
-                {/* Papers List */}
-                <div className="space-y-4">
-                    <h3 className="text-sm font-semibold text-muted uppercase tracking-widest mb-5">{t('publications.journalPapers')}</h3>
-                    {publications.map((pub, index) => (
-                        <WindowCard
-                            key={index}
-                            title={pub.title}
-                            type={pub.journal}
-                            date={pub.date || pub.year}
-                            authors={pub.authors}
-                            onClick={() => setSelectedPaper(pub)}
-                        >
-                            <div className="flex flex-wrap items-center gap-2 mt-2">
-                                <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${statusStyle(pub.status)}`}>
-                                    {pub.role} · {pub.status || 'Published'}
-                                </span>
-                                {pub.doi && (
-                                    <a
-                                        href={pub.doi}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        onClick={(e) => e.stopPropagation()}
-                                        className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs bg-accent-bg text-primary hover:bg-primary/10 transition-colors"
-                                    >
-                                        DOI <ExternalLink size={10} />
-                                    </a>
-                                )}
-                            </div>
-                        </WindowCard>
-                    ))}
-                </div>
+            <div className="grid gap-10 lg:grid-cols-[320px_minmax(0,1fr)]">
+                <aside className="space-y-6">
+                    <div className="rounded-2xl border border-border bg-white p-6 shadow-sm">
+                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70">
+                            {t('publications.summaryEyebrow')}
+                        </p>
+                        <h3 className="mt-3 text-xl font-semibold leading-snug text-text">
+                            {t('publications.summaryTitle')}
+                        </h3>
+                        <p className="mt-3 text-sm leading-7 text-muted">
+                            {t('publications.summaryDescription')}
+                        </p>
 
-                {/* Posters */}
+                        <div className="mt-5 grid gap-3">
+                            {summaryStats.map((stat) => (
+                                <div
+                                    key={stat.label}
+                                    className="rounded-xl border border-border bg-surface px-4 py-3"
+                                >
+                                    <p className="text-lg font-semibold text-text">{stat.value}</p>
+                                    <p className="mt-1 text-xs leading-relaxed text-muted">{stat.label}</p>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="mt-6 border-t border-border pt-5">
+                            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted">
+                                {t('publications.focusTitle')}
+                            </p>
+                            <ul className="mt-4 space-y-3">
+                                {focusItems.map((item) => (
+                                    <li key={item} className="flex items-start gap-3 text-sm leading-6 text-text">
+                                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
+                                        <span>{item}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
+                        <button
+                            type="button"
+                            onClick={() => setShowAllPapers(true)}
+                            className="mt-6 inline-flex items-center gap-2 rounded-xl border border-border bg-white px-4 py-3 text-sm font-semibold text-text transition-colors hover:border-primary hover:text-primary"
+                        >
+                            {t('publications.viewAllCta')}
+                            <span className="text-xs text-muted">({publications.length})</span>
+                        </button>
+                    </div>
+
+                    <div>
+                        <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-muted">
+                            {t('publications.posterTitle')}
+                        </h3>
+                        <div className="grid grid-cols-3 gap-3">
+                            {posters.map((poster) => (
+                                <Motion.button
+                                    key={poster.id}
+                                    type="button"
+                                    layoutId={`poster-${poster.id}`}
+                                    onClick={() => setSelectedPoster(poster)}
+                                    className="group relative aspect-[3/4] overflow-hidden rounded-xl border border-border bg-surface transition-all hover:border-primary"
+                                    aria-label={poster.title}
+                                >
+                                    <img
+                                        src={poster.src}
+                                        alt={poster.title}
+                                        loading="lazy"
+                                        decoding="async"
+                                        sizes="(min-width: 1024px) 90px, 30vw"
+                                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-black/55 opacity-0 transition-opacity group-hover:opacity-100" />
+                                </Motion.button>
+                            ))}
+                        </div>
+                    </div>
+                </aside>
+
                 <div>
-                    <h3 className="text-sm font-semibold text-muted uppercase tracking-widest mb-5">{t('publications.posterTitle')}</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        {posters.map((poster) => (
-                            <Motion.button
-                                key={poster.id}
-                                type="button"
-                                layoutId={`poster-${poster.id}`}
-                                onClick={() => setSelectedPoster(poster)}
-                                className="group relative aspect-[3/4] bg-surface rounded-xl overflow-hidden border border-border hover:border-primary transition-all cursor-pointer"
-                                aria-label={poster.title}
+                    <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+                        <h3 className="text-sm font-semibold uppercase tracking-widest text-muted">
+                            {t('publications.journalPapers')}
+                        </h3>
+                        {additionalCount > 0 && (
+                            <span className="text-xs font-medium text-muted">
+                                {t('publications.morePapersHint', { count: additionalCount })}
+                            </span>
+                        )}
+                    </div>
+
+                    <div className="grid gap-4">
+                        {featuredPublications.map((pub, index) => (
+                            <WindowCard
+                                key={index}
+                                title={pub.title}
+                                type={pub.journal}
+                                date={pub.date || pub.year}
+                                authors={pub.authors}
+                                onClick={() => setSelectedPaper(pub)}
                             >
-                                <img
-                                    src={poster.src}
-                                    alt={poster.title}
-                                    loading="lazy"
-                                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                />
-                                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-                                    <span className="text-xs font-semibold text-white leading-tight mb-1">{poster.title}</span>
-                                    {poster.link && (
-                                        <span className="text-[10px] text-white/80 flex items-center gap-1">
-                                            <ExternalLink size={10} /> {t('publications.linkAvailable')}
-                                        </span>
+                                <div className="flex flex-wrap items-center gap-2 mt-2">
+                                    <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${statusStyle(pub.status)}`}>
+                                        {pub.role} · {pub.status || 'Published'}
+                                    </span>
+                                    {pub.doi && (
+                                        <a
+                                            href={pub.doi}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={(e) => e.stopPropagation()}
+                                            className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs bg-accent-bg text-primary hover:bg-primary/10 transition-colors"
+                                        >
+                                            DOI <ExternalLink size={10} />
+                                        </a>
                                     )}
                                 </div>
-                            </Motion.button>
+                            </WindowCard>
                         ))}
                     </div>
                 </div>
+            </div>
+
+            <AnimatePresence>
+                {showAllPapers && (
+                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 pointer-events-none">
+                        <Motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setShowAllPapers(false)}
+                            className="absolute inset-0 bg-black/50 backdrop-blur-sm pointer-events-auto"
+                        />
+                        <Motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 20 }}
+                            className="relative z-10 flex max-h-[85vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl pointer-events-auto"
+                        >
+                            <div className="flex items-center justify-between border-b border-border bg-gray-50 px-5 py-4">
+                                <div>
+                                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-muted">
+                                        {t('publications.fullListLabel')}
+                                    </p>
+                                    <h4 className="mt-1 text-lg font-semibold text-text">
+                                        {t('publications.fullListTitle')}
+                                    </h4>
+                                </div>
+                                <button
+                                    onClick={() => setShowAllPapers(false)}
+                                    className="rounded-lg p-1.5 transition-colors hover:bg-gray-200"
+                                    aria-label={t('publications.closeBtn')}
+                                >
+                                    <X size={16} className="text-muted" />
+                                </button>
+                            </div>
+
+                            <div className="grid gap-4 overflow-y-auto p-5 md:grid-cols-2">
+                                {publications.map((pub, index) => (
+                                    <WindowCard
+                                        key={index}
+                                        title={pub.title}
+                                        type={pub.journal}
+                                        date={pub.date || pub.year}
+                                        authors={pub.authors}
+                                        className="h-full"
+                                        onClick={() => {
+                                            setShowAllPapers(false);
+                                            setSelectedPaper(pub);
+                                        }}
+                                    >
+                                        <div className="flex flex-wrap items-center gap-2 mt-2">
+                                            <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${statusStyle(pub.status)}`}>
+                                                {pub.role} · {pub.status || 'Published'}
+                                            </span>
+                                            {pub.doi && (
+                                                <span className="inline-flex items-center gap-1 rounded bg-accent-bg px-2 py-0.5 text-xs text-primary">
+                                                    DOI <ExternalLink size={10} />
+                                                </span>
+                                            )}
+                                        </div>
+                                    </WindowCard>
+                                ))}
+                            </div>
+                        </Motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
+
+            {/* Posters */}
+            <div className="sr-only">
+                {t('publications.posterTitle')}
             </div>
 
             {/* Poster Modal */}

@@ -17,7 +17,7 @@
         "affiliation": "Former Research Associate, Dept. of Rehabilitation Medicine, International St. Mary's Hospital, Catholic Kwandong University",
         "eyebrow": "Clinical Research × Digital Health",
         "tagline": "Connecting clinical trial operations with AI-enabled digital health execution",
-        "summary": "I work across hospital operations, study design, data flow, and rapid prototyping to help digital health ideas become projects that can actually be tested and run in the field.",
+        "summary": "I translate hospital reality, study design, data flow, and rapid prototyping into digital health projects that can actually be tested, operated, and improved in the field.",
         "focusItems": [
             "Multi-center RCT operations",
             "Digital health validation design",
@@ -137,6 +137,15 @@
     },
     "research": {
         "title": "Research Highlights",
+        "intro": "These projects show the mix of trial operations, validation design, and policy-facing communication that I bring into healthcare work.",
+        "featuredLabel": "Featured studies",
+        "policyLabel": "Policy-facing communication",
+        "signalTitle": "What this section shows",
+        "signalItems": [
+            "I can handle clinical trial execution and research design at the same time",
+            "I can translate hospital operations into language that policy and external stakeholders can use",
+            "I approach digital health validation as an execution system, not a one-off pilot"
+        ],
         "projects": [
             {
                 "title": "Randomized Controlled Trial Management (MCI)",
@@ -151,7 +160,7 @@
             {
                 "title": "Government-Level Digital Health Demonstration",
                 "category": "Regulatory Affairs & Presentation",
-                "description": "Led Q&A at MOHW/KHIDI mid-term demonstration review attended by Director-General of Advanced Medical Technology, Deputy Director of Health IT Policy, and KHIDI Biohealth Innovation Division Head — representing clinical research outcomes to national policy stakeholders."
+                "description": "Led the Q&A session for a mid-term digital health demonstration review attended by MOHW and KHIDI stakeholders, translating clinical research outcomes into a policy-facing discussion."
             }
         ]
     },
@@ -179,7 +188,7 @@
     },
     "publications": {
         "title": "Selected Publications",
-        "journalPapers": "Journal Papers",
+        "journalPapers": "Featured papers",
         "posterTitle": "Conference Posters",
         "linkAvailable": "Link available",
         "posterLinkCta": "View abstract / paper",
@@ -187,6 +196,33 @@
         "coreSummary": "Core Summary",
         "closeBtn": "Close",
         "summaryComingSoon": "Summary coming soon.",
+        "summaryEyebrow": "At a glance",
+        "summaryTitle": "A compact view of the work behind the papers",
+        "summaryDescription": "Instead of listing everything at once, I surface the papers that best show how I work across trial operations, generative AI intervention design, and usability-focused validation.",
+        "summaryStats": [
+            {
+                "value": "5",
+                "label": "Indexed papers including one under review"
+            },
+            {
+                "value": "2",
+                "label": "Randomized controlled trial tracks"
+            },
+            {
+                "value": "3",
+                "label": "Core themes: operations, AI intervention, usability"
+            }
+        ],
+        "focusTitle": "What to notice first",
+        "focusItems": [
+            "Experience in running and coordinating real clinical studies",
+            "A consistent interest in intervention design, not just model performance",
+            "A bias toward tools and workflows that can hold up in actual care settings"
+        ],
+        "viewAllCta": "View full publication list",
+        "morePapersHint": "{{count}} more in the full list",
+        "fullListLabel": "Archive",
+        "fullListTitle": "Complete publication list",
         "roles": {
             "first": "1st Author",
             "co": "Co-author"

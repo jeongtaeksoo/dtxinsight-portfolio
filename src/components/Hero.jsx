@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion as Motion } from 'framer-motion';
 import { ArrowRight, Download, Mail } from 'lucide-react';
-import profileImg from '../assets/profile_id_photo.png';
+import profileImg from '../assets/profile_id_photo.webp';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -98,6 +98,10 @@ const Hero = () => {
               <img
                 src={profileImg}
                 alt={t('hero.name')}
+                width="780"
+                height="1069"
+                fetchPriority="high"
+                decoding="async"
                 className="aspect-[4/5] w-full object-cover object-top"
               />
             </div>

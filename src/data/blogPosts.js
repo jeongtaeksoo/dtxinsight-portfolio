@@ -53,7 +53,7 @@ export const blogPosts = [
     category: 'healthcare',
     createdAt: '2026-03-31T11:55:00+09:00',
     heroImage: {
-      src: '/blog/jnpmedi-rdc-hero-generated.jpg',
+      src: '/blog/jnpmedi-rdc-hero-generated.webp',
     },
     locales: {
       ko: {
@@ -225,7 +225,7 @@ export const blogPosts = [
     category: 'ai',
     createdAt: '2026-03-31T15:40:00+09:00',
     heroImage: {
-      src: '/blog/obsidian-claude-code-hero-generated.jpg',
+      src: '/blog/obsidian-claude-code-hero-generated.webp',
     },
     locales: {
       ko: {
@@ -427,7 +427,7 @@ export const blogPosts = [
     category: 'healthcare',
     createdAt: '2026-03-31T14:20:00+09:00',
     heroImage: {
-      src: '/blog/healthcare-ai-workflow-hero-generated.jpg',
+      src: '/blog/healthcare-ai-workflow-hero-generated.webp',
     },
     locales: {
       ko: {
@@ -597,7 +597,7 @@ export const blogPosts = [
     category: 'ai',
     createdAt: '2026-03-31T10:10:00+09:00',
     heroImage: {
-      src: '/blog/openclaw-manus-hero-generated.jpg',
+      src: '/blog/openclaw-manus-hero-generated.webp',
     },
     locales: {
       ko: {
@@ -772,7 +772,7 @@ export const blogPosts = [
     category: 'ai',
     createdAt: '2026-03-30T18:45:00+09:00',
     heroImage: {
-      src: '/blog/ai-workflow-teams-hero-generated.jpg',
+      src: '/blog/ai-workflow-teams-hero-generated.webp',
     },
     locales: {
       ko: {
@@ -953,7 +953,7 @@ export const blogPosts = [
     category: 'daily',
     createdAt: '2026-03-30T18:05:00+09:00',
     heroImage: {
-      src: '/blog/first-daily-post-hero-generated.jpg',
+      src: '/blog/first-daily-post-hero-generated.webp',
     },
     locales: {
       ko: {
