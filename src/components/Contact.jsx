@@ -1,14 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { GmailIcon, LinkedInIcon, OrcidIcon } from './Icons';
+import { GmailIcon, LinkedInIcon } from './Icons';
 
 const Contact = () => {
     const { t } = useTranslation();
     const collaborationItems = t('contact.collaborationItems', { returnObjects: true }) || [];
-
-    const links = [
-        { href: 'https://orcid.org/0009-0001-1451-5457', Icon: OrcidIcon, label: 'ORCID' },
-    ];
 
     return (
         <section id="contact" className="scroll-mt-28 mt-20 border-t border-border">
@@ -56,20 +52,6 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
-                    {links.map(({ href, Icon: LinkIcon, label }) => (
-                        <a
-                            key={label}
-                            href={href}
-                            target={href.startsWith('mailto') ? undefined : '_blank'}
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2.5 rounded-lg border border-border bg-white px-5 py-2.5 text-sm font-medium text-text transition-colors hover:border-primary hover:text-primary"
-                        >
-                            {React.createElement(LinkIcon, { size: 17 })}
-                            {label}
-                        </a>
-                    ))}
-                </div>
             </div>
 
             <footer className="border-t border-border bg-white dark:bg-transparent">
