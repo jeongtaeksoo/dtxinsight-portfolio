@@ -1,4 +1,7 @@
 {
+    "layout": {
+        "skipToContent": "Skip to content"
+    },
     "nav": {
         "about": "About",
         "research": "Research",
@@ -12,15 +15,32 @@
     "hero": {
         "name": "Taeksoo Jeong",
         "affiliation": "Former Research Associate, Dept. of Rehabilitation Medicine, International St. Mary's Hospital, Catholic Kwandong University",
-        "credential": "RN",
-        "tagline": "Clinical Research Coordinator & AI-driven Healthcare Innovator",
+        "eyebrow": "Clinical Research × Digital Health",
+        "tagline": "Connecting clinical trial operations with AI-enabled digital health execution",
+        "summary": "I work across hospital operations, study design, data flow, and rapid prototyping to help digital health ideas become projects that can actually be tested and run in the field.",
+        "focusItems": [
+            "Multi-center RCT operations",
+            "Digital health validation design",
+            "AI prototyping"
+        ],
+        "primaryCta": "See Featured Work",
+        "secondaryCta": "Start a Conversation",
         "resume": "Resume",
-        "researchBtn": "View Research",
-        "contactBtn": "Contact Me",
-        "stat1Value": "390M KRW",
-        "stat1Label": "R&D Scale",
-        "stat2Value": "5",
-        "stat2Label": "SCI/ESCI/KCI Papers (Incl. Submissions)"
+        "profileLabel": "Profile",
+        "stats": [
+            {
+                "value": "390M KRW",
+                "label": "Multi-center R&D operations managed"
+            },
+            {
+                "value": "5",
+                "label": "SCI/ESCI/KCI papers including submissions"
+            },
+            {
+                "value": "2",
+                "label": "Randomized controlled trials operated"
+            }
+        ]
     },
     "timeline": {
         "title": "Career Timeline",
@@ -70,9 +90,30 @@
         ]
     },
     "about": {
-        "title": "Philosophy & Approach",
-        "description1": "I believe the future of healthcare lies at the intersection of rigorous clinical validation and adaptive AI. With a background in nursing and clinical research, I ensure new technologies are not only cutting-edge but also clinically meaningful and patient-centered.",
-        "description2": "Worked as a Clinical Research Coordinator at International St. Mary's Hospital, designing strategies to accelerate drug development and improve patient outcomes through digital biomarkers and decentralized clinical trial methodologies."
+        "eyebrow": "Positioning",
+        "title": "I build the execution layer between clinical work and product work",
+        "description1": "Clinical trial operations, digital health validation, and AI prototyping should not move in separate lanes. The real work is making hospital reality, study design, data flow, and user experience fit into one working structure.",
+        "description2": "With a nursing background and CRC experience, I understand protocol-driven research and on-site clinical operations while also moving quickly from idea to testable workflow. That makes me especially useful on projects that need translation between researchers, hospitals, and product teams.",
+        "collaborationTitle": "Strong fit for collaborations like these",
+        "collaborationItems": [
+            "Digital health projects that need both hospital validation and research design",
+            "Teams that need one partner who can understand both clinical operations and product language",
+            "Early-stage AI projects that need fast, field-aware validation in healthcare settings"
+        ],
+        "pillars": [
+            {
+                "title": "Clinical trial operations",
+                "description": "Running multi-center RCTs with stable coordination across investigators, documents, timelines, and data."
+            },
+            {
+                "title": "Validation design",
+                "description": "Structuring pilots and demonstrations with both research questions and field constraints in mind."
+            },
+            {
+                "title": "AI prototyping",
+                "description": "Turning early ideas into screens and workflows that can be reviewed, tested, and refined quickly."
+            }
+        ]
     },
     "highlights": {
         "items": [
@@ -115,24 +156,35 @@
         ]
     },
     "innovation": {
-        "label": "Featured Innovation",
-        "title": "Generative AI-based Cognitive Intervention Framework",
-        "description": "The 'Hwiwasoo' project, co-founded with a PhD student in Applied Physics at Hokkaido University to address cognitive decline and digital exclusion in older adults. It implements a triple-agent (Coach-Teacher-Companion) system to create a Context-Adaptive Cognitive Flow in daily life, maximizing user engagement.",
-        "features": [
-            "Coach-Teacher-Companion Triple Agent",
-            "Context-Adaptive Cognitive Flow",
-            "Senior-friendly Digital Interface"
+        "label": "Featured Project",
+        "title": "Hwiwasoo: a generative AI cognitive intervention framework",
+        "description": "Hwiwasoo started as a project to reduce cognitive decline and digital exclusion in older adults. The work centers on a Coach-Teacher-Companion triple-agent structure that turns cognitive intervention into a more natural daily flow while staying grounded in practical clinical use.",
+        "featureTitles": [
+            "Operating model",
+            "Interaction design",
+            "Clinical readiness"
         ],
-        "cta": "Hwiwasoo"
+        "features": [
+            "A Coach-Teacher-Companion structure that separates roles and clarifies the flow of intervention.",
+            "A Context-Adaptive Cognitive Flow that adjusts difficulty and guidance to everyday context.",
+            "An approach that considers senior-friendly interfaces and clinical protocol design together."
+        ],
+        "proofTitle": "What this project demonstrates",
+        "proofItems": [
+            "The ability to carry a research idea all the way into a usable intervention flow",
+            "A view of generative AI as structured cognitive support rather than a generic chatbot",
+            "A working intersection of healthcare research, product thinking, and field operations"
+        ],
+        "cta": "View Project"
     },
     "publications": {
         "title": "Selected Publications",
+        "journalPapers": "Journal Papers",
         "posterTitle": "Conference Posters",
-        "innovationFeatureTitles": [
-            "Context-Aware",
-            "Multi-Modal",
-            "Evidence-Based"
-        ],
+        "linkAvailable": "Link available",
+        "posterLinkCta": "View abstract / paper",
+        "detailsTitle": "Publication Details",
+        "coreSummary": "Core Summary",
         "closeBtn": "Close",
         "summaryComingSoon": "Summary coming soon.",
         "roles": {
@@ -191,22 +243,22 @@
         ]
     },
     "skills": {
-        "title": "Core Competencies",
+        "title": "Capabilities I bring into collaboration",
         "items": {
-            "clinical": "Clinical Trials",
+            "clinical": "Multi-center operations",
             "vibecording": "AI Prototyping",
-            "data": "Project Management",
-            "design": "Study Design",
-            "comm": "Publications & Presentation",
-            "ai": "AI"
+            "data": "Research-product alignment",
+            "design": "Validation design",
+            "comm": "Academic communication",
+            "ai": "Digital health AI"
         },
         "descriptions": {
-            "clinical": "Multi-center RCT Operation & Protocol Design",
-            "vibecording": "Rapid prototyping of clinical AI tools via AI-assisted development (Vite, React, Python)",
-            "data": "Design of Multi-center RCT & Multidisciplinary Convergence Technology",
-            "design": "Clinical Trial & Demonstration Study Design",
-            "comm": "SCI/ESCI/KCI papers (incl. submissions) & conference poster presentations",
-            "ai": "Generative AI-based Digital Therapeutics Research"
+            "clinical": "Multi-center RCT execution with protocol-aware coordination and clinical communication",
+            "vibecording": "Rapid prototyping of clinical AI tools and workflows with Vite, React, and Python",
+            "data": "Organizing requirements and execution between research teams and product teams",
+            "design": "Designing pilots, demonstrations, and validation structures for real-world use",
+            "comm": "Turning results into papers, abstracts, and presentation-ready narratives",
+            "ai": "Testing and shaping generative AI features for healthcare contexts"
         }
     },
     "blogSection": {
@@ -225,11 +277,28 @@
         "postFallback": "Post"
     },
     "contact": {
-        "title": "Connect",
-        "subtitle": "Interested in collaboration or have questions about my work?",
+        "eyebrow": "Collaboration",
+        "title": "Let’s talk about the work we could build together",
+        "subtitle": "If the topic sits between digital health validation, clinical trial operations, and AI-enabled healthcare tools, I can usually help connect research logic with execution reality.",
+        "primaryCta": "Send an email",
+        "secondaryCta": "Connect on LinkedIn",
+        "collaborationItems": [
+            {
+                "title": "Hospital validation",
+                "description": "Projects that need a study and operations structure grounded in real hospital workflows"
+            },
+            {
+                "title": "Digital health planning",
+                "description": "Teams that need to shape product ideas with clinical context and data flow in mind"
+            },
+            {
+                "title": "AI workflow validation",
+                "description": "Early-stage AI tools that need fast testing and sharper framing for healthcare use"
+            }
+        ],
         "footer": {
-            "rights": "© 2025 DTX Insight. All rights reserved.",
-            "tagline": "Clinical Research × AI Innovation"
+            "rights": "© 2026 DTX Insight. All rights reserved.",
+            "tagline": "Clinical Research × Digital Health Execution"
         }
     }
 }

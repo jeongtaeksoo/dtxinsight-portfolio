@@ -1,4 +1,7 @@
 {
+    "layout": {
+        "skipToContent": "본문으로 건너뛰기"
+    },
     "nav": {
         "about": "소개",
         "research": "연구",
@@ -12,15 +15,32 @@
     "hero": {
         "name": "정택수",
         "affiliation": "前 가톨릭관동대학교 국제성모병원 재활의학과 연구원",
-        "credential": "RN",
-        "tagline": "Clinical Research Coordinator & AI-driven Healthcare Innovator",
-        "resume": "Resume",
-        "researchBtn": "연구 보기",
-        "contactBtn": "연락하기",
-        "stat1Value": "3.9억 KRW",
-        "stat1Label": "R&D 규모",
-        "stat2Value": "5편",
-        "stat2Label": "SCI·ESCI·KCI 논문(투고 포함)"
+        "eyebrow": "Clinical Research × Digital Health",
+        "tagline": "임상시험 운영과 AI 디지털헬스 실증을 연결합니다",
+        "summary": "병원 현장과 연구 설계, 데이터 운영, 프로토타이핑을 한 흐름으로 묶어 실제로 작동하는 디지털 헬스 프로젝트를 설계합니다.",
+        "focusItems": [
+            "다기관 RCT 운영",
+            "디지털 헬스 실증 설계",
+            "AI 프로토타이핑"
+        ],
+        "primaryCta": "대표 혁신 보기",
+        "secondaryCta": "협업 문의",
+        "resume": "이력서",
+        "profileLabel": "Profile",
+        "stats": [
+            {
+                "value": "3.9억 KRW",
+                "label": "다기관 R&D 운영 규모"
+            },
+            {
+                "value": "5편",
+                "label": "SCI·ESCI·KCI 논문(투고 포함)"
+            },
+            {
+                "value": "2건",
+                "label": "무작위 대조 임상시험 운영"
+            }
+        ]
     },
     "timeline": {
         "title": "커리어 타임라인",
@@ -70,9 +90,30 @@
         ]
     },
     "about": {
-        "title": "철학 & 접근법",
-        "description1": "헬스케어의 미래는 엄격한 임상 검증과 적응형 인공지능의 교차점에 있다고 믿습니다. 저는 간호학 배경과 임상연구 경험을 바탕으로, 새로운 기술이 최첨단일 뿐만 아니라 임상적으로 의미 있고 환자 중심적이도록 보장합니다.",
-        "description2": ""
+        "eyebrow": "Positioning",
+        "title": "임상과 제품 사이의 실행 구조를 만듭니다",
+        "description1": "저는 임상시험 운영, 디지털 헬스 실증, 생성형 AI 기반 프로토타이핑이 따로 움직이지 않아야 한다고 봅니다. 좋은 아이디어보다 중요한 것은 병원 현장과 연구 설계, 데이터 흐름, 사용자 경험이 실제로 맞물리게 만드는 일입니다.",
+        "description2": "간호학 배경과 CRC 경험을 바탕으로 연구 프로토콜과 현장 운영을 이해하고, 동시에 AI 기반 도구를 빠르게 검증 가능한 형태로 옮기는 데 강점이 있습니다. 그래서 연구자와 병원, 제품팀 사이의 번역 작업이 필요한 프로젝트에 특히 잘 맞습니다.",
+        "collaborationTitle": "이런 협업에 강합니다",
+        "collaborationItems": [
+            "병원 실증과 연구 설계를 함께 잡아야 하는 디지털 헬스 프로젝트",
+            "임상 운영 언어와 제품 언어를 함께 이해하는 파트너가 필요한 팀",
+            "AI 기능을 의료 현장에 맞게 빠르게 검증하고 싶은 초기 단계 프로젝트"
+        ],
+        "pillars": [
+            {
+                "title": "임상시험 운영",
+                "description": "다기관 RCT, 연구자 커뮤니케이션, 일정·문서·데이터 흐름을 안정적으로 관리합니다."
+            },
+            {
+                "title": "디지털 헬스 실증 설계",
+                "description": "연구 질문과 현장 제약을 함께 고려해 실증사업과 파일럿 구조를 설계합니다."
+            },
+            {
+                "title": "AI 프로토타이핑",
+                "description": "아이디어 수준의 기능을 빠르게 검증 가능한 화면과 워크플로로 옮깁니다."
+            }
+        ]
     },
     "highlights": {
         "items": [
@@ -115,24 +156,35 @@
         ]
     },
     "innovation": {
-        "label": "특집 혁신",
-        "title": "생성형 AI 기반 인지 중재 프레임워크",
-        "description": "고령자의 인지기능 저하와 디지털 배제를 해결하기 위해 홋카이도 대학교 응용물리학 박사과정과 함께 공동으로 시작한 '휘와수' 프로젝트입니다. 3중 에이전트(Coach-Teacher-Companion) 시스템을 통해 일상생활 속 자연스러운 인지훈련 흐름(Context-Adaptive Cognitive Flow)을 구현하여 사용자 참여를 극대화합니다.",
-        "features": [
-            "Coach-Teacher-Companion 3중 에이전트",
-            "Context-Adaptive Cognitive Flow",
-            "고령자 친화적 디지털 인터페이스"
+        "label": "Featured Project",
+        "title": "휘와수: 생성형 AI 기반 인지 중재 프레임워크",
+        "description": "휘와수는 고령자의 인지 저하와 디지털 배제를 줄이기 위해 시작한 프로젝트입니다. Coach-Teacher-Companion 3중 에이전트 구조를 통해 일상 속에서 자연스럽게 이어지는 인지 훈련 경험을 설계하고, 연구와 실사용이 이어질 수 있는 디지털 치료 흐름을 만드는 데 초점을 둡니다.",
+        "featureTitles": [
+            "운영 구조",
+            "상호작용 설계",
+            "임상 적용성"
         ],
-        "cta": "Hwiwasoo"
+        "features": [
+            "Coach-Teacher-Companion 3중 에이전트로 역할을 분리해 개입 흐름을 설계합니다.",
+            "일상 맥락에 따라 난이도와 개입 방식을 조정하는 Context-Adaptive Cognitive Flow를 구현합니다.",
+            "고령자 친화적 인터페이스와 임상 적용 프로토콜을 함께 고려합니다."
+        ],
+        "proofTitle": "이 프로젝트가 보여주는 것",
+        "proofItems": [
+            "연구 아이디어를 실제 사용 흐름까지 연결할 수 있다는 점",
+            "생성형 AI를 단순 챗봇이 아니라 인지 중재 구조로 설계했다는 점",
+            "헬스케어 연구, 제품 사고, 현장 이해가 한 프로젝트 안에서 만난다는 점"
+        ],
+        "cta": "프로젝트 보기"
     },
     "publications": {
         "title": "주요 논문",
+        "journalPapers": "Journal Papers",
         "posterTitle": "학회 포스터",
-        "innovationFeatureTitles": [
-            "맥락 인식",
-            "멀티모달",
-            "근거 기반"
-        ],
+        "linkAvailable": "링크 보기",
+        "posterLinkCta": "초록 / 원문 보기",
+        "detailsTitle": "논문 상세",
+        "coreSummary": "핵심 요약",
         "closeBtn": "닫기",
         "summaryComingSoon": "요약 준비 중입니다.",
         "roles": {
@@ -191,22 +243,22 @@
         ]
     },
     "skills": {
-        "title": "핵심 역량",
+        "title": "협업에 필요한 역량",
         "items": {
-            "clinical": "임상시험",
+            "clinical": "다기관 임상 운영",
             "vibecording": "AI 프로토타이핑",
-            "data": "프로젝트 관리",
-            "design": "연구 설계",
-            "comm": "논문 작성 & 학회 발표",
-            "ai": "AI"
+            "data": "연구-제품 조율",
+            "design": "실증 연구 설계",
+            "comm": "학술 커뮤니케이션",
+            "ai": "디지털 헬스 AI"
         },
         "descriptions": {
-            "clinical": "다기관 RCT 운영 및 프로토콜 설계",
-            "vibecording": "AI 기반 임상 도구 신속 프로토타이핑 (Vite, React, Python)",
-            "data": "다기관 임상시험 및 다학제 융합 기술 설계",
-            "design": "임상시험 및 실증 연구 설계",
-            "comm": "SCI·ESCI·KCI 논문(투고 포함) 작성 및 학회 포스터 발표",
-            "ai": "생성형 AI 기반 디지털 치료제 연구"
+            "clinical": "다기관 RCT 운영, 연구자 커뮤니케이션, 프로토콜 기반 실행",
+            "vibecording": "AI 기반 임상 도구와 워크플로의 빠른 프로토타이핑",
+            "data": "연구팀과 제품팀 사이의 요구사항 정리 및 실행 조율",
+            "design": "실증사업, 파일럿, 임상 적용을 고려한 연구 구조 설계",
+            "comm": "논문, 초록, 발표 자료로 결과를 명확하게 정리",
+            "ai": "생성형 AI를 의료 현장에 맞는 형태로 검증하고 구체화"
         }
     },
     "blogSection": {
@@ -225,11 +277,28 @@
         "postFallback": "Post"
     },
     "contact": {
-        "title": "연결하기",
-        "subtitle": "협업에 관심이 있거나 제 업무에 대해 궁금한 점이 있으신가요?",
+        "eyebrow": "Collaboration",
+        "title": "함께 만들 수 있는 일을 이야기해봅시다",
+        "subtitle": "디지털 헬스 실증, 임상시험 운영, AI 기반 헬스케어 도구 기획처럼 연구와 실행이 함께 필요한 주제라면 더 빠르게 맞춰볼 수 있습니다.",
+        "primaryCta": "이메일 보내기",
+        "secondaryCta": "LinkedIn에서 연결하기",
+        "collaborationItems": [
+            {
+                "title": "병원 실증",
+                "description": "병원 현장에 맞는 연구 설계와 운영 구조가 필요한 프로젝트"
+            },
+            {
+                "title": "디지털 헬스 기획",
+                "description": "제품 아이디어를 임상 맥락과 데이터 흐름까지 포함해 구체화해야 하는 경우"
+            },
+            {
+                "title": "AI 도구 검증",
+                "description": "생성형 AI 기능을 의료 현장에 맞게 빠르게 시험하고 정리해야 하는 초기 단계"
+            }
+        ],
         "footer": {
-            "rights": "© 2025 DTX Insight. All rights reserved.",
-            "tagline": "임상연구 × AI 혁신"
+            "rights": "© 2026 DTX Insight. All rights reserved.",
+            "tagline": "Clinical Research × Digital Health Execution"
         }
     }
 }
