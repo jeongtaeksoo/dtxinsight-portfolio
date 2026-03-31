@@ -22,7 +22,7 @@ const Hero = () => {
             {t('hero.eyebrow')}
           </p>
 
-          <h1 className="max-w-4xl text-4xl font-bold leading-[1.08] text-text md:text-6xl text-balance">
+          <h1 className="max-w-3xl text-3xl font-bold leading-[1.12] text-text md:text-5xl text-balance">
             {t('hero.tagline')}
           </h1>
 
