@@ -6,6 +6,7 @@ const ResearchProjects = () => {
     const { t } = useTranslation();
 
     const projects = (t('research.projects', { returnObjects: true }) || []);
+    const intro = t('research.intro');
 
     return (
         <section id="research" className="scroll-mt-28 py-16">
@@ -15,9 +16,11 @@ const ResearchProjects = () => {
                     <div className="h-px flex-grow bg-gradient-to-r from-border to-transparent"></div>
                 </div>
 
-                <p className="max-w-3xl text-sm leading-7 text-muted md:text-base">
-                    {t('research.intro')}
-                </p>
+                {intro ? (
+                    <p className="max-w-3xl text-sm leading-7 text-muted md:text-base">
+                        {intro}
+                    </p>
+                ) : null}
 
                 <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                     {projects.map((project, index) => (
