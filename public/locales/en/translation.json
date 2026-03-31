@@ -16,7 +16,7 @@
         "name": "Taeksoo Jeong",
         "affiliation": "Former Research Associate, Dept. of Rehabilitation Medicine, International St. Mary's Hospital, Catholic Kwandong University",
         "eyebrow": "Clinical Research × Digital Health",
-        "tagline": "Connecting clinical trial operations with AI-enabled digital health execution",
+        "tagline": "Bridging clinical trial operations and AI-enabled digital health validation",
         "summary": "I translate hospital reality, study design, data flow, and rapid prototyping into digital health projects that can actually be tested, operated, and improved in the field.",
         "focusItems": [
             "Multi-center RCT operations",
@@ -91,7 +91,7 @@
     },
     "about": {
         "eyebrow": "Positioning",
-        "title": "I build the execution layer between clinical work and product work",
+        "title": "I design and coordinate the execution layer between clinical work and product work",
         "description1": "Clinical trial operations, digital health validation, and AI prototyping should not move in separate lanes. The real work is making hospital reality, study design, data flow, and user experience fit into one working structure.",
         "description2": "With a nursing background and CRC experience, I understand protocol-driven research and on-site clinical operations while also moving quickly from idea to testable workflow. That makes me especially useful on projects that need translation between researchers, hospitals, and product teams.",
         "collaborationTitle": "Strong fit for collaborations like these",
@@ -142,9 +142,9 @@
         "policyLabel": "Policy-facing communication",
         "signalTitle": "What this section shows",
         "signalItems": [
-            "I can handle clinical trial execution and research design at the same time",
-            "I can translate hospital operations into language that policy and external stakeholders can use",
-            "I approach digital health validation as an execution system, not a one-off pilot"
+            "Experience spanning both multi-center trial operations and research design",
+            "Experience translating hospital operations into policy-facing and external communication",
+            "A tendency to treat digital health validation as an operating model, not just a pilot"
         ],
         "projects": [
             {
@@ -167,7 +167,7 @@
     "innovation": {
         "label": "Featured Project",
         "title": "Hwiwasoo: a generative AI cognitive intervention framework",
-        "description": "Hwiwasoo started as a project to reduce cognitive decline and digital exclusion in older adults. The work centers on a Coach-Teacher-Companion triple-agent structure that turns cognitive intervention into a more natural daily flow while staying grounded in practical clinical use.",
+        "description": "Hwiwasoo started as a project to reduce cognitive decline and digital exclusion in older adults. The work centers on a Coach-Teacher-Companion triple-agent structure that explores a cognitive intervention flow that can continue in everyday life while staying grounded in practical clinical use.",
         "featureTitles": [
             "Operating model",
             "Interaction design",
@@ -180,9 +180,9 @@
         ],
         "proofTitle": "What this project demonstrates",
         "proofItems": [
-            "The ability to carry a research idea all the way into a usable intervention flow",
-            "A view of generative AI as structured cognitive support rather than a generic chatbot",
-            "A working intersection of healthcare research, product thinking, and field operations"
+            "How a research idea can be shaped into a usable intervention flow",
+            "An attempt to frame generative AI as structured cognitive support rather than a generic chatbot",
+            "A project where healthcare research, product thinking, and field operations had to be coordinated together"
         ],
         "cta": "View Project"
     },
@@ -315,7 +315,7 @@
     "contact": {
         "eyebrow": "Collaboration",
         "title": "Let’s talk about the work we could build together",
-        "subtitle": "If the topic sits between digital health validation, clinical trial operations, and AI-enabled healthcare tools, I can usually help connect research logic with execution reality.",
+        "subtitle": "If the topic sits between digital health validation, clinical trial operations, and AI-enabled healthcare tools, I am usually most useful when research logic and execution reality need to be aligned from the early direction-setting stage.",
         "primaryCta": "Send an email",
         "secondaryCta": "Connect on LinkedIn",
         "collaborationItems": [
