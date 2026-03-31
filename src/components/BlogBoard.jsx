@@ -67,9 +67,7 @@ const BlogBoard = () => {
   const language = resolveBlogLocale(i18n.resolvedLanguage || i18n.language);
 
   const posts = useMemo(() => (
-    [...blogPosts]
-      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
-      .map((post) => getLocalizedBlogPost(post, language))
+    blogPosts.map((post) => getLocalizedBlogPost(post, language))
   ), [language]);
   const viewPost = useMemo(
     () => posts.find((post) => post.slug === viewPostSlug) ?? null,
