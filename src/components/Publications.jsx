@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ExternalLink, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 import WindowCard from './WindowCard';
 import poster1 from '../assets/poster_1.jpg';
 import poster2 from '../assets/poster_2.jpg';
@@ -21,9 +21,6 @@ const Publications = () => {
     const [selectedPaper, setSelectedPaper] = useState(null);
 
     const publications = t('publications.items', { returnObjects: true }) || [];
-    const innovationFeatureTitles = t('publications.innovationFeatureTitles', { returnObjects: true }) || ['Context-Aware', 'Multi-Modal', 'Evidence-Based'];
-    const innovationFeatures = t('innovation.features', { returnObjects: true }) || [];
-
     const posters = [
         { id: 1, src: poster1, title: 'KOSCOPP 2024', link: 'https://www.karm.or.kr/workshop/?abyear=202402&mode=green_view&sid=5985' },
         { id: 2, src: poster2, title: 'ICDT 2024', link: 'https://www.karm.or.kr/workshop/?abyear=202402&mode=green_search' },
@@ -31,7 +28,7 @@ const Publications = () => {
     ];
 
     return (
-        <section id="publications" className="py-16 border-t border-border">
+        <section id="publications" className="scroll-mt-28 py-16 border-t border-border">
             <div className="flex items-center gap-4 mb-10">
                 <h2 className="text-3xl font-bold text-text">{t('publications.title')}</h2>
                 <div className="h-px flex-grow bg-gradient-to-r from-border to-transparent" />
@@ -40,7 +37,7 @@ const Publications = () => {
             <div className="grid lg:grid-cols-2 gap-12">
                 {/* Papers List */}
                 <div className="space-y-4">
-                    <h3 className="text-sm font-semibold text-muted uppercase tracking-widest mb-5">Journal Papers</h3>
+                    <h3 className="text-sm font-semibold text-muted uppercase tracking-widest mb-5">{t('publications.journalPapers')}</h3>
                     {publications.map((pub, index) => (
                         <WindowCard
                             key={index}
@@ -75,58 +72,30 @@ const Publications = () => {
                     <h3 className="text-sm font-semibold text-muted uppercase tracking-widest mb-5">{t('publications.posterTitle')}</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         {posters.map((poster) => (
-                            <motion.div
+                            <Motion.button
                                 key={poster.id}
+                                type="button"
                                 layoutId={`poster-${poster.id}`}
                                 onClick={() => setSelectedPoster(poster)}
                                 className="group relative aspect-[3/4] bg-surface rounded-xl overflow-hidden border border-border hover:border-primary transition-all cursor-pointer"
+                                aria-label={poster.title}
                             >
                                 <img
                                     src={poster.src}
                                     alt={poster.title}
+                                    loading="lazy"
                                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
                                     <span className="text-xs font-semibold text-white leading-tight mb-1">{poster.title}</span>
                                     {poster.link && (
                                         <span className="text-[10px] text-white/80 flex items-center gap-1">
-                                            <ExternalLink size={10} /> Link available
+                                            <ExternalLink size={10} /> {t('publications.linkAvailable')}
                                         </span>
                                     )}
                                 </div>
-                            </motion.div>
+                            </Motion.button>
                         ))}
-                    </div>
-
-                    <div id="innovation" className="mt-8 p-6 rounded-xl border border-border bg-accent-bg/60">
-                        <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary mb-3">
-                            {t('innovation.label')}
-                        </span>
-                        <h4 className="text-xl font-bold text-text mb-3">
-                            {t('innovation.title')}
-                        </h4>
-                        <p className="text-sm text-muted leading-relaxed mb-4">
-                            {t('innovation.description')}
-                        </p>
-
-                        <a
-                            href="https://hwiwasoo.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-semibold bg-primary text-white hover:bg-primary/90 transition-colors mb-4"
-                        >
-                            {t('innovation.cta')}
-                            <ExternalLink size={13} />
-                        </a>
-
-                        <div className="grid sm:grid-cols-3 gap-3">
-                            {innovationFeatureTitles.map((title, idx) => (
-                                <div key={title} className="p-3 rounded-lg bg-surface border border-border">
-                                    <p className="text-xs font-semibold text-primary mb-1">{title}</p>
-                                    <p className="text-sm text-text leading-relaxed">{innovationFeatures[idx] || ''}</p>
-                                </div>
-                            ))}
-                        </div>
                     </div>
                 </div>
             </div>
@@ -135,14 +104,14 @@ const Publications = () => {
             <AnimatePresence>
                 {selectedPoster && (
                     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 pointer-events-none">
-                        <motion.div
+                        <Motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setSelectedPoster(null)}
                             className="absolute inset-0 bg-black/70 backdrop-blur-sm pointer-events-auto"
                         />
-                        <motion.div
+                        <Motion.div
                             layoutId={`poster-${selectedPoster.id}`}
                             className="relative z-10 w-full max-w-2xl max-h-full aspect-[3/4] bg-white rounded-xl overflow-hidden shadow-2xl pointer-events-auto"
                         >
@@ -154,6 +123,7 @@ const Publications = () => {
                             <button
                                 onClick={() => setSelectedPoster(null)}
                                 className="absolute top-3 right-3 p-1.5 bg-white/90 hover:bg-white rounded-full text-text transition-colors shadow-sm"
+                                aria-label={t('publications.closeBtn')}
                             >
                                 <X size={18} />
                             </button>
@@ -167,11 +137,11 @@ const Publications = () => {
                                         className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold bg-white text-black hover:bg-gray-100 hover:scale-105 transition-all shadow-lg"
                                         onClick={(e) => e.stopPropagation()}
                                     >
-                                        초록 / 원문 보기 <ExternalLink size={14} />
+                                        {t('publications.posterLinkCta')} <ExternalLink size={14} />
                                     </a>
                                 )}
                             </div>
-                        </motion.div>
+                        </Motion.div>
                     </div>
                 )}
             </AnimatePresence>
@@ -180,14 +150,14 @@ const Publications = () => {
             <AnimatePresence>
                 {selectedPaper && (
                     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 pointer-events-none">
-                        <motion.div
+                        <Motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setSelectedPaper(null)}
                             className="absolute inset-0 bg-black/50 backdrop-blur-sm pointer-events-auto"
                         />
-                        <motion.div
+                        <Motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
@@ -195,10 +165,11 @@ const Publications = () => {
                         >
                             {/* Modal Header */}
                             <div className="h-12 bg-gray-50 flex items-center justify-between px-5 border-b border-border">
-                                <span className="text-xs font-semibold text-muted uppercase tracking-widest">Publication Details</span>
+                                <span className="text-xs font-semibold text-muted uppercase tracking-widest">{t('publications.detailsTitle')}</span>
                                 <button
                                     onClick={() => setSelectedPaper(null)}
                                     className="p-1.5 hover:bg-gray-200 rounded-lg transition-colors"
+                                    aria-label={t('publications.closeBtn')}
                                 >
                                     <X size={16} className="text-muted" />
                                 </button>
@@ -237,7 +208,7 @@ const Publications = () => {
                                         <div className="space-y-3">
                                             <h4 className="text-xs font-bold text-muted uppercase tracking-widest flex items-center gap-2">
                                                 <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                                Core Summary
+                                                {t('publications.coreSummary')}
                                             </h4>
                                             <div className="text-text leading-relaxed text-sm whitespace-pre-line bg-gray-50 p-5 rounded-xl border border-border">
                                                 {selectedPaper.summary}
@@ -259,7 +230,7 @@ const Publications = () => {
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </Motion.div>
                     </div>
                 )}
             </AnimatePresence>

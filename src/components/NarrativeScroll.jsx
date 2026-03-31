@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 const NarrativeScroll = () => {
@@ -19,7 +19,7 @@ const NarrativeScroll = () => {
 
                 <div className="space-y-7">
                     {items.map((item, index) => (
-                        <motion.div
+                        <Motion.div
                             key={index}
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
@@ -55,7 +55,7 @@ const NarrativeScroll = () => {
                                     </p>
                                 )}
                             </div>
-                        </motion.div>
+                        </Motion.div>
                     ))}
                 </div>
             </div>

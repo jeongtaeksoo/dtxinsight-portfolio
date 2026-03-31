@@ -1,4 +1,7 @@
 {
+    "layout": {
+        "skipToContent": "本文へ移動"
+    },
     "nav": {
         "about": "紹介",
         "research": "研究",
@@ -12,15 +15,32 @@
     "hero": {
         "name": "チョン・テクス",
         "affiliation": "前 カトリック関東大学国際聖母病院 リハビリテーション医学科 研究員",
-        "credential": "RN",
-        "tagline": "Clinical Research Coordinator & AI-driven Healthcare Innovator",
-        "resume": "Resume",
-        "researchBtn": "研究を見る",
-        "contactBtn": "お問い合わせ",
-        "stat1Value": "3.9億KRW",
-        "stat1Label": "R&D規模",
-        "stat2Value": "5本",
-        "stat2Label": "SCI・ESCI・KCI論文（投稿含む）"
+        "eyebrow": "Clinical Research × Digital Health",
+        "tagline": "臨床試験運営とAIデジタルヘルス実証をつなぎます",
+        "summary": "病院現場、研究設計、データ運用、プロトタイピングをひとつの流れとしてまとめ、実際に現場で動かせるデジタルヘルスプロジェクトへ落とし込みます。",
+        "focusItems": [
+            "多施設RCT運営",
+            "デジタルヘルス実証設計",
+            "AIプロトタイピング"
+        ],
+        "primaryCta": "代表プロジェクトを見る",
+        "secondaryCta": "協業について話す",
+        "resume": "履歴書",
+        "profileLabel": "Profile",
+        "stats": [
+            {
+                "value": "3.9億KRW",
+                "label": "多施設R&D運営規模"
+            },
+            {
+                "value": "5本",
+                "label": "SCI・ESCI・KCI論文（投稿含む）"
+            },
+            {
+                "value": "2件",
+                "label": "ランダム化比較試験の運営"
+            }
+        ]
     },
     "timeline": {
         "title": "キャリアタイムライン",
@@ -70,9 +90,30 @@
         ]
     },
     "about": {
-        "title": "哲学とアプローチ",
-        "description1": "ヘルスケアの未来は、厳格な臨床検証と適応型AIの交差点にあると信じています。看護学の背景と臨床研究の経験を活かし、新しい技術が最先端であるだけでなく、臨床的に意味があり、患者中心的であることを保証します。",
-        "description2": "以前、カトリック関東大学国際聖母病院で臨床研究コーディネーターとして在職し、デジタルバイオマーカーと分散型臨床試験の方法論を通じて、新薬開発を加速させ、患者の予後를 改善する戦略を設計していました。"
+        "eyebrow": "Positioning",
+        "title": "臨床とプロダクトの間に実行構造をつくります",
+        "description1": "臨床試験運営、デジタルヘルス実証、生成AIプロトタイピングは別々に動くべきではないと考えています。大切なのは、病院現場、研究設計、データの流れ、ユーザー体験がひとつの構造として噛み合うことです。",
+        "description2": "看護学の背景とCRC経験をもとに、プロトコルベースの研究運営と現場実務を理解しながら、AIベースのツールを検証可能なワークフローへ素早く落とし込めます。研究者、病院、プロダクトチームの間をつなぐ役割が必要なプロジェクトに特に向いています。",
+        "collaborationTitle": "特に相性のよい協業",
+        "collaborationItems": [
+            "病院実証と研究設計を同時に進める必要があるデジタルヘルス案件",
+            "臨床運営の言語とプロダクトの言語を両方理解する相手が必要なチーム",
+            "医療現場に合わせてAI機能を素早く検証したい初期段階のプロジェクト"
+        ],
+        "pillars": [
+            {
+                "title": "臨床試験運営",
+                "description": "多施設RCTにおける研究者連携、文書、日程、データの流れを安定して管理します。"
+            },
+            {
+                "title": "実証設計",
+                "description": "研究課題と現場制約を同時に見ながら、実証やパイロットの構造を設計します。"
+            },
+            {
+                "title": "AIプロトタイピング",
+                "description": "初期アイデアを、確認・検証・改善できる画面とワークフローへ素早く変えます。"
+            }
+        ]
     },
     "highlights": {
         "items": [
@@ -115,24 +156,35 @@
         ]
     },
     "innovation": {
-        "label": "特集イノベーション",
-        "title": "生成AIベースの認知介入フレームワーク",
-        "description": "高齢者の認知機能低下とデジタル排除を解決するために、北海道大学・応用物理学専攻の博士課程の学生と共同で開始した「휘와수(Hwiwasoo)」プロジェクトです。3重エージェント(Coach-Teacher-Companion)システムを通じて日常生活の中での自然な認知訓練の流れ(Context-Adaptive Cognitive Flow)を実現し、ユーザー参加を最大化します。",
-        "features": [
-            "Coach-Teacher-Companion 3重エージェント",
-            "Context-Adaptive Cognitive Flow",
-            "高齢者向けデジタルインターフェース"
+        "label": "Featured Project",
+        "title": "Hwiwasoo: 生成AIベースの認知介入フレームワーク",
+        "description": "Hwiwasooは、高齢者の認知低下とデジタル排除を減らすために始まったプロジェクトです。Coach-Teacher-Companionの3重エージェント構造を通じて、日常の中で自然に続く認知介入の流れを設計し、研究と実使用がつながるデジタル治療の形を目指しています。",
+        "featureTitles": [
+            "運用構造",
+            "相互作用設計",
+            "臨床適用性"
         ],
-        "cta": "Hwiwasoo"
+        "features": [
+            "Coach-Teacher-Companionの3重エージェントで役割を分け、介入の流れを設計します。",
+            "日常の文脈に合わせて難易度と介入方法を調整するContext-Adaptive Cognitive Flowを実装します。",
+            "高齢者向けインターフェースと臨床適用プロトコルを同時に考慮します。"
+        ],
+        "proofTitle": "このプロジェクトが示すもの",
+        "proofItems": [
+            "研究アイデアを実際の使用フローまでつなげられること",
+            "生成AIを単なるチャットボットではなく認知介入構造として設計していること",
+            "ヘルスケア研究、プロダクト思考、現場理解が一つのプロジェクトで交わること"
+        ],
+        "cta": "プロジェクトを見る"
     },
     "publications": {
         "title": "主な論文",
+        "journalPapers": "Journal Papers",
         "posterTitle": "学会ポスター",
-        "innovationFeatureTitles": [
-            "コンテキスト認識",
-            "マルチモーダル",
-            "エビデンスベース"
-        ],
+        "linkAvailable": "リンクあり",
+        "posterLinkCta": "抄録 / 原文を見る",
+        "detailsTitle": "論文詳細",
+        "coreSummary": "要点まとめ",
         "closeBtn": "閉じる",
         "summaryComingSoon": "要約を準備中です。",
         "roles": {
@@ -191,22 +243,22 @@
         ]
     },
     "skills": {
-        "title": "コアコンピタンス",
+        "title": "協業に持ち込める強み",
         "items": {
-            "clinical": "臨床試験",
+            "clinical": "多施設臨床運営",
             "vibecording": "AIプロトタイピング",
-            "data": "プロジェクト管理",
-            "design": "研究設計",
-            "comm": "論文執筆・学会発表",
-            "ai": "AI"
+            "data": "研究とプロダクトの調整",
+            "design": "実証研究設計",
+            "comm": "学術コミュニケーション",
+            "ai": "デジタルヘルスAI"
         },
         "descriptions": {
-            "clinical": "多機関RCTの運営およびプロトコル設計",
-            "vibecording": "Vite・React・PythonによるAI支援臨床ツールの高速プロトタイピング",
-            "data": "多機関臨床試験および多学際融合技術の設計",
-            "design": "臨床試験および実証研究の設計",
-            "comm": "SCI・ESCI・KCI論文（投稿含む）執筆および学会ポスター発表",
-            "ai": "生成AIベースのデジタル治療薬研究"
+            "clinical": "多施設RCTの実行、研究者連携、プロトコルに沿った運営",
+            "vibecording": "Vite・React・Pythonによる臨床AIツールとワークフローの高速試作",
+            "data": "研究チームとプロダクトチームの要件整理と実行調整",
+            "design": "実証事業、パイロット、臨床適用を見据えた検証構造の設計",
+            "comm": "論文、抄録、発表資料として結果を明確に整理",
+            "ai": "医療文脈に合わせて生成AI機能を検証し具体化"
         }
     },
     "blogSection": {
@@ -225,11 +277,28 @@
         "postFallback": "記事"
     },
     "contact": {
-        "title": "お問い合わせ",
-        "subtitle": "コラボレーションに興味がある方、または私の仕事について質問がありますか？",
+        "eyebrow": "Collaboration",
+        "title": "一緒につくれる仕事について話しましょう",
+        "subtitle": "デジタルヘルス実証、臨床試験運営、AIベースのヘルスケアツール企画のように、研究と実行が同時に必要なテーマであれば特に力を発揮できます。",
+        "primaryCta": "メールを送る",
+        "secondaryCta": "LinkedInでつながる",
+        "collaborationItems": [
+            {
+                "title": "病院実証",
+                "description": "病院現場に合った研究設計と運営構造が必要なプロジェクト"
+            },
+            {
+                "title": "デジタルヘルス企画",
+                "description": "プロダクトのアイデアを臨床文脈とデータフローまで含めて具体化したい場合"
+            },
+            {
+                "title": "AIツール検証",
+                "description": "生成AI機能を医療現場に合わせて素早く試し、整理したい初期段階"
+            }
+        ],
         "footer": {
-            "rights": "© 2025 DTX Insight. All rights reserved.",
-            "tagline": "臨床研究 × AI イノベーション"
+            "rights": "© 2026 DTX Insight. All rights reserved.",
+            "tagline": "Clinical Research × Digital Health Execution"
         }
     }
 }

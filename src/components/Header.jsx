@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 import logo from '/logo.png';
 
 const Header = () => {
@@ -24,9 +24,9 @@ const Header = () => {
 
     const navLinks = [
         { name: t('nav.about'), href: '#about' },
+        { name: t('nav.innovation'), href: '#innovation' },
         { name: t('nav.research'), href: '#research' },
         { name: t('nav.publications'), href: '#publications' },
-        { name: t('nav.innovation'), href: '#innovation' },
         { name: t('nav.blog'), href: '#blog' },
         { name: t('nav.contact'), href: '#contact' },
     ];
@@ -114,7 +114,7 @@ const Header = () => {
             {/* Mobile Menu */}
             <AnimatePresence>
                 {isMobileMenuOpen && (
-                    <motion.div
+                    <Motion.div
                         className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-border shadow-md px-4 pb-5 pt-3"
                         initial="closed"
                         animate="open"
@@ -122,7 +122,7 @@ const Header = () => {
                         variants={menuVariants}
                     >
                         {/* Language Switch */}
-                        <motion.div
+                        <Motion.div
                             className="flex gap-2 pb-4 mb-3 border-b border-border justify-center"
                             custom={0}
                             variants={itemVariants}
@@ -136,11 +136,11 @@ const Header = () => {
                                     {lang.label}
                                 </button>
                             ))}
-                        </motion.div>
+                        </Motion.div>
 
                         {/* Nav Links */}
                         {navLinks.map((link, index) => (
-                            <motion.a
+                            <Motion.a
                                 key={link.name}
                                 href={link.href}
                                 className="flex items-center gap-3 py-3 text-sm font-medium text-text hover:text-primary transition-colors border-b border-border last:border-0"
@@ -150,9 +150,9 @@ const Header = () => {
                             >
                                 <span className="w-1.5 h-1.5 rounded-full bg-primary/50" />
                                 {link.name}
-                            </motion.a>
+                            </Motion.a>
                         ))}
-                    </motion.div>
+                    </Motion.div>
                 )}
             </AnimatePresence>
         </header>
