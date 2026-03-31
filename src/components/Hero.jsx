@@ -111,17 +111,19 @@ const Hero = () => {
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70">
                 {t('hero.profileLabel')}
               </p>
-              <h2 className="mt-2 text-2xl font-semibold text-text">{t('hero.name')}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{t('hero.affiliation')}</p>
-              <a
-                href="https://orcid.org/0009-0001-1451-5457"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-2 text-xs font-semibold text-text transition-colors hover:border-primary hover:text-primary"
-              >
-                <OrcidIcon size={15} />
-                {t('hero.orcidCta')}
-              </a>
+              <div className="mt-2 flex flex-wrap items-center justify-between gap-3">
+                <h2 className="text-2xl font-semibold text-text">{t('hero.name')}</h2>
+                <a
+                  href="https://orcid.org/0009-0001-1451-5457"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-2 text-xs font-semibold text-text transition-colors hover:border-primary hover:text-primary"
+                >
+                  <OrcidIcon size={15} />
+                  {t('hero.orcidCta')}
+                </a>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-muted">{t('hero.affiliation')}</p>
             </div>
           </div>
         </Motion.div>
