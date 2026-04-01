@@ -49,6 +49,151 @@ export const getLocalizedBlogPost = (post, language = DEFAULT_BLOG_LOCALE) => {
 
 export const blogPosts = [
   {
+    slug: 'why-naver-healthcare-looks-more-like-a-clinical-ai-stack',
+    category: 'healthcare',
+    createdAt: '2026-04-01T11:20:00+09:00',
+    heroImage: {
+      src: '/blog/naver-healthcare-stack-hero-generated.webp',
+    },
+    locales: {
+      ko: {
+        title: '네이버헬스케어는 왜 환자용 앱보다 의료 현장용 AI 스택으로 봐야 할까',
+        keywords: ['헬스케어'],
+        excerpt: '지금 네이버헬스케어를 읽는 더 흥미로운 방법은 환자용 앱 하나를 찾는 것이 아니라, CareCall과 Voice EMR, Nursing Agent, 의료데이터 보안을 함께 묶은 의료 AI 운영 구조를 보는 일에 가깝습니다.',
+        heroImage: {
+          alt: '병동 스테이션에서 간호사와 의사가 디지털 문서화 화면을 함께 검토하는 모습',
+          caption: '네이버헬스케어의 흥미로운 지점은 환자용 앱 하나보다, 병동과 문서화, 돌봄 흐름을 잇는 의료 AI 운영 구조에 있습니다.',
+        },
+        contentHtml: `
+          <p>네이버헬스케어를 떠올리면 많은 사람들이 아직 하나의 서비스 이름부터 찾게 됩니다. 그런데 공개 자료를 이어서 보면 네이버의 헬스케어 움직임은 환자용 앱 하나를 크게 키우는 그림보다, 의료 현장과 공공 영역에 들어가는 여러 AI 기능을 층층이 쌓는 방식에 더 가깝게 보입니다.</p>
+          <p>이건 제가 공개 자료를 묶어 읽은 해석입니다. 하지만 근거는 꽤 분명합니다. 2026년 3월 16일 시행 기준 네이버클라우드 프라이버시 센터에는 CLOVA CareCall, CLOVA Charty, CLOVA Nursing Agent가 함께 보이고, 의료 음성인식 기반 의무기록 처리 내용도 따로 남아 있습니다. 여기에 2025년 3월 11일 CLOVA 기술 블로그의 Voice EMR, Nursing Agent 설명을 겹쳐 읽으면 그림은 더 선명해집니다.</p>
+          <p>그래서 지금 네이버헬스케어를 볼 때 더 흥미로운 질문은 “대중 앱이 무엇인가”보다 “어떤 의료 업무 층을 먼저 바꾸고 있는가”일지 모릅니다.</p>
+
+          <h3>공개된 서비스 조각만 봐도 단일 앱 그림과는 조금 다릅니다</h3>
+          <p>현재 공개된 프라이버시 센터 기준으로 보면 네이버클라우드가 의료 쪽에서 다루는 서비스 표면은 한 가지가 아닙니다. CareCall은 돌봄과 안부 확인 쪽에 가깝고, Charty와 Voice EMR은 음성 기반 의무기록과 진료 문서화 흐름에 닿아 있으며, Nursing Agent는 병동 커뮤니케이션과 우선순위 판단 쪽에 가깝습니다.</p>
+          <p>물론 이런 목록만으로 곧바로 사업 전략 전체를 단정할 수는 없습니다. 다만 이 조합이 의미하는 바는 분명합니다. 네이버가 헬스케어에서 보고 있는 문제를 ‘환자에게 앱 하나 더 주는 일’보다, 실제 의료 현장에서 반복되고 시간이 많이 드는 커뮤니케이션과 기록, 분류 업무로 읽고 있다는 신호에 더 가깝습니다.</p>
+          <blockquote>네이버헬스케어의 중심은 소비자용 건강관리 앱보다, 의료진의 시간을 다시 배분하게 만드는 운영 레이어일 가능성이 더 커 보입니다.</blockquote>
+
+          <h3>Voice EMR과 Nursing Agent는 진료실과 병동의 시간을 줄이는 쪽을 보여줍니다</h3>
+          <p>CLOVA 기술 블로그에서 가장 인상적인 부분도 이 지점입니다. Voice EMR은 의사와 환자 대화를 실시간으로 분석해 의무기록을 정리하는 서비스로 소개되고, Healthcare AI 팀은 응급실처럼 소음과 발음 오류가 많은 환경에서도 필요한 정보만 가려내기 위해 경량 모델과 LLM을 함께 쓰는 구조를 설명합니다.</p>
+          <p>Nursing Agent 쪽은 더 직접적입니다. 네이버는 병동에서 환자 요청을 우선순위별로 분류하고, 간호사가 바로 대응해야 할 일과 에이전트가 먼저 처리할 수 있는 일을 가르는 흐름을 보여줍니다. 기술 블로그에 따르면 현재 서비스는 80~90%대 정확도를 유지하며 개선 중이라고 합니다. 핵심은 화려한 AI 데모가 아니라 병동의 병목을 줄이는 운영 자동화에 있습니다.</p>
+          <p>이 구조는 네이버헬스케어를 이해하는 데 중요합니다. 지금 네이버가 앞세우는 의료 AI의 장면은 “의학적 판단을 대신하는 AI”보다 “의료진이 환자를 보는 시간과 문서를 쓰는 시간을 다시 나누게 하는 AI”에 훨씬 가깝습니다.</p>
+
+          <h3>CareCall이 있다는 점은 병원 밖 돌봄과 공공 보건까지 시야에 둔다는 뜻일 수 있습니다</h3>
+          <p>여기에 CareCall이 더해지면 그림이 조금 더 넓어집니다. CLOVA AI Research 페이지는 CareCall 연구를 HCI와 디지털 헬스·웰빙 영역 안에 두고 있습니다. 즉 네이버의 헬스케어 AI가 진료실 안 기록 업무만 겨냥하는 것이 아니라, 사람과 AI가 어떻게 상호작용하며 돌봄을 이어 갈 것인가까지 함께 다루고 있다는 뜻으로 읽힙니다.</p>
+          <p>이 대목이 중요한 이유는 국내 헬스케어 AI가 자주 “진단 AI” 이미지로만 소비되기 때문입니다. 하지만 실제 현장에서 먼저 도입되는 것은 의외로 안부 확인, 상담 연결, 문서 정리, 요청 분류 같은 커뮤니케이션 업무인 경우가 많습니다. CareCall과 EMR, Nursing Agent가 같이 보인다는 사실은 네이버도 이 우선순위를 꽤 현실적으로 잡고 있다는 인상을 줍니다.</p>
+
+          <h3>결국 병원이 쓰려면 보안과 인프라 신뢰가 같이 보여야 합니다</h3>
+          <p>헬스케어에서 서비스 아이디어만으로는 충분하지 않습니다. 병원과 공공기관은 실제로 데이터를 어디에 두고, 누가 접근하고, 어떤 기준으로 보호하는지를 함께 봅니다. 네이버클라우드의 현재 인증 페이지에 ISO/IEC 27799가 명시돼 있는 점은 이런 맥락에서 꽤 상징적입니다. 이 인증은 의료정보 보호 경영체계와 연결되는 국제 기준이기 때문입니다.</p>
+          <p>네이버클라우드가 공개한 2025년 11월 회사 브로슈어도 같은 결을 보여줍니다. 삼성서울병원은 의료데이터 연구·분석용 보안 플랫폼 사례로, 서울대학교병원은 네트워크 분리를 통한 의료데이터 보안 강화 사례로 소개됩니다. 이건 네이버헬스케어의 무게 중심이 단순한 앱 배포보다, 병원이 실제로 받아들일 수 있는 데이터·보안 기반에 놓여 있음을 시사합니다.</p>
+
+          <h3>그래서 네이버헬스케어는 ‘앱’보다 ‘의료 AI 운영 스택’으로 읽는 편이 더 자연스럽습니다</h3>
+          <p>공개 자료만 놓고 보면 아직 네이버헬스케어 전체를 하나의 제품 이름으로 묶어 설명하기는 어렵습니다. 상용화 범위, 매출 기여, 실제 도입 규모처럼 더 확인해야 할 부분도 남아 있습니다. 그렇지만 지금 보이는 조각들은 꽤 같은 방향을 가리킵니다. 병원과 공공 영역에서 반복되는 음성, 문서, 요청, 돌봄 업무를 AI로 줄이고, 그 위를 보안과 인프라로 받치는 구조 말입니다.</p>
+          <p>그래서 저는 네이버헬스케어를 볼 때 환자용 앱 이름부터 찾기보다, 한국어 음성 기반 의무기록, 병동 에이전트, 공공 돌봄형 상호작용, 의료데이터 보안이라는 네 개의 층을 함께 봐야 한다고 생각합니다. 그 편이 지금 네이버가 의료에서 어디로 가고 있는지를 더 정확하게 보여주기 때문입니다.</p>
+
+          <h3>참고자료</h3>
+          <ul>
+            <li><a href="https://clova.ai/tech-blog/%EB%84%A4%EC%9D%B4%EB%B2%84-ai-%EC%9D%98%EB%A3%8C%EC%A7%84%EC%9D%98-%EC%8B%9C%EA%B0%84%EC%9D%84-%EB%90%98%EC%B0%BE%EB%8B%A4-healthcare-ai%ED%8C%80%EC%9D%98-%EC%9D%B4%EC%95%BC%EA%B8%B0" target="_blank" rel="noreferrer">CLOVA Tech Blog: 네이버 AI, 의료진의 시간을 되찾다 | Healthcare AI팀의 이야기</a></li>
+            <li><a href="https://clova.ai/en/ai-research" target="_blank" rel="noreferrer">CLOVA AI Research: AI Research &amp; Safety</a></li>
+            <li><a href="https://privacy.navercloudcorp.com/" target="_blank" rel="noreferrer">NAVER Cloud Privacy Center</a></li>
+            <li><a href="https://privacy.navercloudcorp.com/Compliance/certificate_ncc" target="_blank" rel="noreferrer">NAVER Cloud Privacy Center: Certifications</a></li>
+            <li><a href="https://www.navercloudcorp.com/NAVER_Cloud_251114_EN.pdf" target="_blank" rel="noreferrer">NAVER Cloud company brochure (Nov. 2025)</a></li>
+          </ul>
+        `,
+      },
+      en: {
+        title: 'Why NAVER Healthcare Looks More Like a Clinical AI Stack Than a Consumer App',
+        keywords: ['Healthcare'],
+        excerpt: 'The more useful way to read NAVER healthcare now is not to look for one patient-facing app, but to look at a layered operational stack built around CareCall, voice documentation, ward agents, medical-data security and hospital infrastructure.',
+        heroImage: {
+          alt: 'A nurse and a physician reviewing a digital documentation screen together at a ward station',
+          caption: 'The more interesting part of NAVER healthcare may be less a single patient app and more an operating layer connecting wards, documentation and care workflows.',
+        },
+        contentHtml: `
+          <p>When people hear NAVER healthcare, many still look first for a patient-facing app. But if you line up NAVER's public materials, the more convincing picture looks different. It looks less like a single consumer health product and more like a layered AI stack entering hospitals and public-care workflows.</p>
+          <p>This is an inference from public materials, not a line NAVER states in one place. Still, the pattern is fairly consistent. In the current NAVER Cloud privacy center policy effective March 16, 2026, CLOVA CareCall, CLOVA Charty and CLOVA Nursing Agent appear together, while AI speech-recognition-based medical records are also described. Read that next to the March 11, 2025 CLOVA tech blog on Voice EMR and Nursing Agent, and the direction becomes easier to see.</p>
+          <p>So the more interesting question is not “what is NAVER's consumer health app?” but “which layers of healthcare work is NAVER trying to change first?”</p>
+
+          <h3>The public service surface already looks broader than a single app</h3>
+          <p>Based on the currently public privacy-center materials, NAVER Cloud's healthcare surface is not one thing. CareCall sits closer to outreach and follow-up. Charty and Voice EMR sit closer to voice-based documentation and clinical records. Nursing Agent sits closer to ward communication and prioritization.</p>
+          <p>That list alone does not prove the full business strategy. But it does suggest what kind of problems NAVER is choosing to work on. The signal looks less like “one more wellness app” and more like communication, documentation and triage tasks that repeatedly consume clinical time.</p>
+          <blockquote>The center of gravity appears to be less consumer health management and more the operating layer that gives clinicians time back.</blockquote>
+
+          <h3>Voice EMR and Nursing Agent point to the clinic room and the ward, not just the patient phone</h3>
+          <p>The March 2025 CLOVA tech blog makes that especially clear. Voice EMR is introduced as a service that analyzes physician-patient conversation in real time and organizes medical records. The Healthcare AI team also explains a structure where a lightweight model filters noisy, messy clinical speech before handing selected information to an LLM.</p>
+          <p>Nursing Agent is even more operational. NAVER describes a system that classifies patient requests by priority and separates what nurses need to address immediately from what an agent can handle first. In NAVER's own description, the service is operating in the 80 to 90 percent accuracy range and continues to improve. That sounds much more like ward workflow automation than a flashy AI demo.</p>
+          <p>This distinction matters. The public face of NAVER's healthcare AI is still closer to redistributing clinical time and documentation load than to replacing medical judgment.</p>
+
+          <h3>CareCall widens the story beyond the hospital walls</h3>
+          <p>CareCall makes the picture broader. On the CLOVA AI Research page, the CareCall papers sit inside HCI and digital health and well-being work. That placement suggests NAVER is not thinking only about clinical documentation, but also about how AI supports interaction, follow-up and continuity of care.</p>
+          <p>That is important because healthcare AI is often discussed as if the main story were diagnostic intelligence. In reality, many of the earliest practical deployments happen in check-ins, follow-up calls, documentation support and request routing. Seeing CareCall next to EMR and Nursing Agent makes NAVER's priorities look more grounded in that operational reality.</p>
+
+          <h3>Hospitals care about trust, so infrastructure and security matter as much as models</h3>
+          <p>In healthcare, a compelling feature is never enough by itself. Hospitals and public institutions also care where data sits, who can access it and how it is protected. NAVER Cloud's current certification page explicitly lists ISO/IEC 27799, which is closely tied to medical information security management.</p>
+          <p>The November 2025 NAVER Cloud company brochure points in the same direction. Samsung Medical Center is presented as a case of a secure platform for medical-data research and analysis, while Seoul National University Hospital is presented as a medical-data security case based on network isolation. That makes NAVER's healthcare posture look heavier on hospital-grade data and security foundations than on app distribution alone.</p>
+
+          <h3>So the better way to read NAVER healthcare may be as a Korean clinical AI operating stack</h3>
+          <p>Public materials still leave real gaps. They do not fully show commercialization scale, adoption depth or how tightly the pieces are integrated. So it would be too strong to claim a single unified strategy with certainty.</p>
+          <p>But the visible pieces do point in the same direction: Korean-language voice documentation, ward agents, care interaction and hospital-grade security infrastructure. That is why NAVER healthcare looks easier to understand as a clinical AI operating stack than as a single consumer app story.</p>
+
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://clova.ai/tech-blog/%EB%84%A4%EC%9D%B4%EB%B2%84-ai-%EC%9D%98%EB%A3%8C%EC%A7%84%EC%9D%98-%EC%8B%9C%EA%B0%84%EC%9D%84-%EB%90%98%EC%B0%BE%EB%8B%A4-healthcare-ai%ED%8C%80%EC%9D%98-%EC%9D%B4%EC%95%BC%EA%B8%B0" target="_blank" rel="noreferrer">CLOVA Tech Blog: NAVER AI, giving time back to medical staff</a></li>
+            <li><a href="https://clova.ai/en/ai-research" target="_blank" rel="noreferrer">CLOVA AI Research: AI Research &amp; Safety</a></li>
+            <li><a href="https://privacy.navercloudcorp.com/" target="_blank" rel="noreferrer">NAVER Cloud Privacy Center</a></li>
+            <li><a href="https://privacy.navercloudcorp.com/Compliance/certificate_ncc" target="_blank" rel="noreferrer">NAVER Cloud Privacy Center: Certifications</a></li>
+            <li><a href="https://www.navercloudcorp.com/NAVER_Cloud_251114_EN.pdf" target="_blank" rel="noreferrer">NAVER Cloud company brochure (Nov. 2025)</a></li>
+          </ul>
+        `,
+      },
+      ja: {
+        title: 'NAVERヘルスケアは、なぜ患者向けアプリより医療現場向けAIスタックとして見るほうが自然なのか',
+        keywords: ['ヘルスケア'],
+        excerpt: 'いまNAVERヘルスケアを読むうえで大事なのは、単一の患者向けアプリを探すことより、CareCall、音声記録、病棟エージェント、医療データ保護を束ねた運用レイヤーを見ることです。',
+        heroImage: {
+          alt: '病棟ステーションで看護師と医師がデジタル記録画面を一緒に確認している様子',
+          caption: 'NAVERヘルスケアの面白さは、患者向けアプリ一つより、病棟と記録業務、ケア動線をつなぐAI運用構造にあるように見えます。',
+        },
+        contentHtml: `
+          <p>NAVERヘルスケアと聞くと、多くの人はまず患者向けアプリの名前を探したくなります。けれど公開資料をつなげて読むと、見えてくる姿は少し違います。消費者向けの健康アプリを一つ大きくするというより、病院や公的ケアの現場に入っていくAIの層を積み上げているように見えるのです。</p>
+          <p>これは公開資料をまとめて読んだうえでの解釈です。ただし根拠はあります。2026年3月16日施行のNAVER Cloudプライバシーセンターでは、CLOVA CareCall、CLOVA Charty、CLOVA Nursing Agentが並び、医療向け音声認識による記録処理も示されています。これを2025年3月11日のCLOVA技術ブログにあるVoice EMRとNursing Agentの説明と重ねると、方向性はかなり見えやすくなります。</p>
+          <p>だから今見るべき問いは、「NAVERの患者向けアプリは何か」より、「医療業務のどの層から先に変えようとしているのか」なのだと思います。</p>
+
+          <h3>公開されているサービスの断片だけでも、単一アプリの絵には見えません</h3>
+          <p>現在公開されているプライバシーセンターの情報を見ると、NAVER Cloudの医療向けサービス面は一つではありません。CareCallはフォローアップや安否確認に近く、ChartyやVoice EMRは音声ベースの文書化や診療記録に近く、Nursing Agentは病棟内コミュニケーションと優先度判断に近い位置にあります。</p>
+          <p>もちろん、この一覧だけで事業戦略の全体像を断定することはできません。ただ、どの課題に重心を置いているかはかなり伝わります。つまり「もう一つの健康管理アプリ」より、医療現場で時間を消耗しやすいコミュニケーション、記録、振り分け作業のほうに近いのです。</p>
+          <blockquote>重心は消費者向け健康管理より、医療者に時間を返す運用レイヤーのほうにあるように見えます。</blockquote>
+
+          <h3>Voice EMRとNursing Agentは、患者のスマホより診察室と病棟を向いています</h3>
+          <p>2025年3月のCLOVA技術ブログでも、その点はかなり明確です。Voice EMRは医師と患者の会話をリアルタイムに解析し、診療記録を整理するサービスとして紹介されています。またHealthcare AIチームは、騒音や発音の乱れが多い臨床環境で、軽量モデルとLLMを組み合わせて必要な情報だけを扱う仕組みを説明しています。</p>
+          <p>Nursing Agentはさらに運用寄りです。患者の依頼を優先度で分類し、看護師がすぐ対応すべきものと、エージェントが先に処理できるものを分ける流れが描かれています。NAVERの説明では精度は80〜90%台を維持しながら改善中とのことで、これは派手なAI演出というより病棟業務の自動化に近い話です。</p>
+          <p>ここで重要なのは、NAVERの医療AIが今のところ「医療判断の代替」より「記録と対応の時間を再配分する仕組み」として見えていることです。</p>
+
+          <h3>CareCallがあることで、病院の外のケアまで視野に入っているように見えます</h3>
+          <p>CareCallが入ると全体像は少し広がります。CLOVA AI Researchのページでは、CareCallの研究がHCIとデジタルヘルス・ウェルビーイングの文脈に置かれています。つまりNAVERは診療記録だけでなく、人とAIの相互作用、フォローアップ、ケアの連続性まで含めて考えているように見えます。</p>
+          <p>この点はかなり重要です。ヘルスケアAIはしばしば診断AIとして語られますが、実際に先に入るのは安否確認、問い合わせ対応、文書整理、依頼の振り分けのようなコミュニケーション業務であることが少なくありません。CareCallとEMR、Nursing Agentが並んで見えること自体、NAVERの優先順位がかなり現実的であることを示しているように思えます。</p>
+
+          <h3>病院で使われるには、モデル性能だけでなく保護基盤も必要です</h3>
+          <p>ヘルスケアでは、機能の面白さだけでは足りません。病院や公的機関は、データがどこに置かれ、誰がアクセスし、どう守られるのかも同時に見ます。NAVER Cloudの認証ページにISO/IEC 27799が明記されていることは、その意味でかなり象徴的です。医療情報保護と結びついた国際認証だからです。</p>
+          <p>2025年11月のNAVER Cloud会社紹介資料も同じ方向を示します。Samsung Medical Centerは医療データ研究・分析向けの安全なプラットフォーム事例として、Seoul National University Hospitalはネットワーク分離による医療データ保護の事例として紹介されています。これはNAVERヘルスケアの重心が、アプリ配布より病院で受け入れられるデータ・保護基盤にあることをうかがわせます。</p>
+
+          <h3>だからNAVERヘルスケアは、患者向けアプリより医療AI運用スタックとして読むほうが自然です</h3>
+          <p>公開資料だけでは、商用化の規模や導入の深さ、各要素の結びつきを完全には判断できません。なので単一の統合戦略を断定するのはまだ早いと思います。</p>
+          <p>それでも見えている断片はかなり同じ方向を指しています。韓国語の音声記録、病棟エージェント、ケアの相互作用、そして病院向けのデータ保護基盤です。だからこそNAVERヘルスケアは、単一の消費者アプリより、医療現場向けAIの運用スタックとして見るほうが理解しやすいのだと思います。</p>
+
+          <h3>参考資料</h3>
+          <ul>
+            <li><a href="https://clova.ai/tech-blog/%EB%84%A4%EC%9D%B4%EB%B2%84-ai-%EC%9D%98%EB%A3%8C%EC%A7%84%EC%9D%98-%EC%8B%9C%EA%B0%84%EC%9D%84-%EB%90%98%EC%B0%BE%EB%8B%A4-healthcare-ai%ED%8C%80%EC%9D%98-%EC%9D%B4%EC%95%BC%EA%B8%B0" target="_blank" rel="noreferrer">CLOVA Tech Blog: NAVER AI, 医療者の時間を取り戻す</a></li>
+            <li><a href="https://clova.ai/en/ai-research" target="_blank" rel="noreferrer">CLOVA AI Research: AI Research &amp; Safety</a></li>
+            <li><a href="https://privacy.navercloudcorp.com/" target="_blank" rel="noreferrer">NAVER Cloud Privacy Center</a></li>
+            <li><a href="https://privacy.navercloudcorp.com/Compliance/certificate_ncc" target="_blank" rel="noreferrer">NAVER Cloud Privacy Center: Certifications</a></li>
+            <li><a href="https://www.navercloudcorp.com/NAVER_Cloud_251114_EN.pdf" target="_blank" rel="noreferrer">NAVER Cloud company brochure (Nov. 2025)</a></li>
+          </ul>
+        `,
+      },
+    },
+  },
+  {
     slug: 'why-ai-trends-now-are-about-productization-speed',
     category: 'ai',
     createdAt: '2026-03-31T22:08:00+09:00',
