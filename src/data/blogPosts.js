@@ -58,7 +58,7 @@ export const blogPosts = [
     locales: {
       ko: {
         title: '헬스케어에서 Agentic AI, Physical AI, Digital Twin은 결국 한 흐름으로 만납니다',
-        keywords: ['헬스케어', 'Agentic AI', 'Physical AI', 'Digital Twin'],
+        keywords: ['헬스케어'],
         excerpt: '헬스케어 AI의 다음 장면은 챗봇 하나가 아니라, 에이전트가 조정하고 물리 시스템이 실행하며 디지털 트윈이 미리 시뮬레이션하는 운영 구조에 더 가깝습니다.',
         heroImage: {
           alt: '의료진 대시보드와 병실 센서, 환자 상태 모델이 하나의 운영 화면처럼 연결된 의료 AI 일러스트',
@@ -106,7 +106,7 @@ export const blogPosts = [
       },
       en: {
         title: 'In Healthcare, Agentic AI, Physical AI, and Digital Twin Are Starting to Converge',
-        keywords: ['Healthcare', 'Agentic AI', 'Physical AI', 'Digital Twin'],
+        keywords: ['Healthcare'],
         excerpt: 'The next healthcare AI stack looks less like a single chatbot and more like an operating loop where agents coordinate, physical systems execute, and digital twins simulate ahead of action.',
         heroImage: {
           alt: 'A healthcare AI illustration combining a clinical dashboard, room sensors, and a patient-state model in one operational scene',
@@ -149,7 +149,7 @@ export const blogPosts = [
       },
       ja: {
         title: 'ヘルスケアでは Agentic AI、Physical AI、Digital Twin がひとつの流れとしてつながり始めています',
-        keywords: ['ヘルスケア', 'Agentic AI', 'Physical AI', 'Digital Twin'],
+        keywords: ['ヘルスケア'],
         excerpt: 'これからのヘルスケアAIは、単一のチャットボットよりも、デジタルツインが予測し、エージェントが調整し、フィジカルAIが実行する運用ループに近づいていきます。',
         heroImage: {
           alt: '臨床ダッシュボード、病室センサー、患者状態モデルが一つの画面でつながって見える医療AIイラスト',
