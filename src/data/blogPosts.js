@@ -57,7 +57,7 @@ export const blogPosts = [
     },
     locales: {
       ko: {
-        title: '네이버헬스케어는 왜 환자용 앱보다 의료 현장용 AI 스택으로 봐야 할까',
+        title: '네이버헬스케어의 진짜 무게중심은 병원 안쪽 AI에 더 가깝다',
         keywords: ['헬스케어'],
         excerpt: '지금 네이버헬스케어를 읽는 더 흥미로운 방법은 환자용 앱 하나를 찾는 것이 아니라, CareCall과 Voice EMR, Nursing Agent, 의료데이터 보안을 함께 묶은 의료 AI 운영 구조를 보는 일에 가깝습니다.',
         heroImage: {
@@ -102,7 +102,7 @@ export const blogPosts = [
         `,
       },
       en: {
-        title: 'Why NAVER Healthcare Looks More Like a Clinical AI Stack Than a Consumer App',
+        title: 'NAVER Healthcare Looks Closer to Hospital Operations AI Than to a Consumer App',
         keywords: ['Healthcare'],
         excerpt: 'The more useful way to read NAVER healthcare now is not to look for one patient-facing app, but to look at a layered operational stack built around CareCall, voice documentation, ward agents, medical-data security and hospital infrastructure.',
         heroImage: {
@@ -147,7 +147,7 @@ export const blogPosts = [
         `,
       },
       ja: {
-        title: 'NAVERヘルスケアは、なぜ患者向けアプリより医療現場向けAIスタックとして見るほうが自然なのか',
+        title: 'NAVERヘルスケアの重心は、患者向けアプリより病院内AIに近い',
         keywords: ['ヘルスケア'],
         excerpt: 'いまNAVERヘルスケアを読むうえで大事なのは、単一の患者向けアプリを探すことより、CareCall、音声記録、病棟エージェント、医療データ保護を束ねた運用レイヤーを見ることです。',
         heroImage: {
