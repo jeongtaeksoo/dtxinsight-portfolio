@@ -36,6 +36,14 @@ const Contact = () => {
                                 <LinkedInIcon size={17} />
                                 {t('contact.secondaryCta')}
                             </a>
+                            <a
+                                href="https://calendly.com/jeongtaeksoo8/meet-with-me"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center rounded-xl border border-primary/30 bg-primary/5 px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+                            >
+                                {t('contact.tertiaryCta')}
+                            </a>
                         </div>
                     </div>
 
