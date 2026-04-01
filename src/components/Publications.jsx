@@ -10,6 +10,8 @@ import poster3 from '../assets/poster_3.webp';
 const statusStyle = (status) => {
     if (status === 'Published' || status === '게재 완료' || status === '掲載完了')
         return 'bg-green-50 text-green-700 border border-green-200';
+    if (status === 'Accepted' || status === '게재 확정' || status === '採択')
+        return 'bg-emerald-50 text-emerald-700 border border-emerald-200';
     if (status === 'Under Review' || status === '심사 중' || status === '審査中')
         return 'bg-blue-50 text-blue-700 border border-blue-200';
     return 'bg-yellow-50 text-yellow-700 border border-yellow-200';
