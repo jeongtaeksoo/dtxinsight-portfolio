@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion as Motion } from 'framer-motion';
-import { ArrowRight, Download, Mail } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 import { OrcidIcon } from './Icons';
 import profileImg from '../assets/profile_id_photo.webp';
 
@@ -63,14 +63,6 @@ const Hero = () => {
             >
               <Mail size={16} />
               {t('hero.secondaryCta')}
-            </a>
-            <a
-              href="/RESUME.pdf"
-              download="RESUME.pdf"
-              className="inline-flex items-center gap-2 rounded-xl bg-primary/10 px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/15"
-            >
-              <Download size={16} />
-              {t('hero.resume')}
             </a>
           </div>
 
