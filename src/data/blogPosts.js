@@ -49,6 +49,930 @@ export const getLocalizedBlogPost = (post, language = DEFAULT_BLOG_LOCALE) => {
 
 export const blogPosts = [
   {
+    slug: 'why-ai-agent-design-is-now-about-state-and-tool-boundaries',
+    category: 'ai',
+    createdAt: '2026-04-02T23:45:00+09:00',
+    heroImage: {
+      src: '/blog/ai-agent-state-tools-hero-generated.webp',
+    },
+    locales: {
+      ko: {
+        title: '지금 AI 에이전트 설계의 핵심은 왜 모델보다 상태 관리와 도구 경계에 있을까',
+        keywords: ['AI'],
+        excerpt: '요즘 공식 자료를 읽어보면 AI 에이전트 경쟁의 무게중심이 모델 점수보다 상태 관리, 도구 실행 위치, 승인 경계 쪽으로 빠르게 이동하고 있습니다.',
+        heroImage: {
+          alt: '상태 타임라인, 승인 게이트, 도구 호출 카드가 보이는 AI 에이전트 워크플로 대시보드를 개발자가 검토하는 장면',
+          caption: '지금의 AI 에이전트 설계는 모델 하나의 지능보다, 상태를 어디에 두고 도구를 어떻게 열어 줄지에서 더 크게 갈립니다.',
+        },
+        contentHtml: `
+          <p>한동안 AI 글을 쓸 때마다 모델 순위표부터 보는 습관이 있었습니다. 어떤 모델이 더 정확한지, 더 긴 문맥을 읽는지, 더 저렴한지가 가장 중요한 질문처럼 보였기 때문입니다.</p>
+          <p>그런데 최근 OpenAI, Anthropic, Google의 공식 자료를 나란히 읽어보면 다른 흐름이 더 분명하게 보입니다. 지금 에이전트 설계의 핵심은 “어떤 모델을 썼는가”보다 <strong>누가 상태를 들고 있는가</strong>, <strong>도구가 어디서 실행되는가</strong>, <strong>언제 사람 승인을 끼워 넣는가</strong> 쪽으로 이동하고 있습니다.</p>
+          <p>이 변화는 단순한 문서 정리가 아닙니다. 실제 서비스 운영에서 장애가 덜 나고, 감사가 쉬워지고, 비용과 속도를 조절하기 쉬운 구조가 무엇인지 플랫폼들이 점점 더 노골적으로 보여주고 있다는 뜻입니다.</p>
+
+          <h3>모델 비교표만으로는 지금 변화를 다 설명할 수 없다</h3>
+          <p>OpenAI는 현재 문서에서 대화 상태를 자동으로 관리하는 stateful API 흐름을 전면에 두고 있습니다. Anthropic은 반대로 Messages API가 stateless라는 점을 분명히 하면서, 애플리케이션이 매 턴 필요한 문맥을 직접 조립하도록 설명합니다. Google은 2025년 12월 Interactions API를 소개하면서 아예 server-side state, background execution, remote MCP 지원을 핵심 기능으로 내세웠습니다.</p>
+          <blockquote>이건 세 회사가 같은 기능을 복제하고 있다는 뜻이 아닙니다. 하지만 공통적으로 “이제 모델은 혼자 쓰는 텍스트 엔진이 아니라, 상태와 도구를 묶는 시스템 안에서 써야 한다”는 방향으로 움직이고 있다는 뜻은 분명합니다.</blockquote>
+          <p>그래서 이제 실무자는 모델 벤치마크보다 먼저 세 가지를 물어야 합니다. 상태를 서버가 가질지 애플리케이션이 직접 관리할지, 도구 실행을 모델이 직접 트리거하게 할지 사람이 승인할지, 그리고 이 작업이 실시간 대화형인지 백그라운드 장기 작업인지 말입니다.</p>
+
+          <h3>첫 번째 설계 결정은 누가 상태를 소유하느냐다</h3>
+          <p>이 부분은 생각보다 운영 차이를 크게 만듭니다. OpenAI의 현재 문서는 Responses API와 Conversations API를 함께 써서 상태를 오래 살아 있는 대화 객체로 유지할 수 있다고 설명합니다. 반대로 Anthropic은 Messages API가 stateless이기 때문에, 매 요청마다 필요한 대화 기록을 직접 보내야 한다고 안내합니다.</p>
+          <p>둘 중 어느 쪽이 무조건 낫다는 이야기는 아닙니다. 중요한 건 <strong>당신의 시스템이 어느 책임을 어디에 둘지 명확히 고르는 것</strong>입니다.</p>
+          <ul>
+            <li>짧은 워크플로와 엄격한 감사가 중요하면, 상태를 애플리케이션이 직접 관리하는 쪽이 더 읽기 쉽습니다.</li>
+            <li>장기 대화, 다중 세션, 여러 기기 간 이어쓰기 경험이 중요하면, 플랫폼이 제공하는 stateful 흐름이 개발 속도를 크게 줄여줄 수 있습니다.</li>
+            <li>도중에 승인, 멈춤, 재개, 재시도가 많은 업무라면 상태 저장 구조를 먼저 정하고 모델을 붙이는 편이 훨씬 덜 흔들립니다.</li>
+          </ul>
+          <p>실무에서 자주 실패하는 경우는 상태 전략 없이 채팅창부터 만드는 경우입니다. 이러면 처음에는 데모가 빠르지만, 곧바로 “이전 승인 내역은 어디 있지”, “도구 호출 결과는 무슨 기준으로 다시 넣지”, “다음 턴에 어떤 문맥만 유지해야 하지” 같은 문제가 터집니다.</p>
+
+          <h3>두 번째 설계 결정은 도구가 어디서 실행되고 누가 승인하느냐다</h3>
+          <p>Anthropic의 tool use 문서는 이 지점을 매우 분명하게 나눕니다. 어떤 도구는 애플리케이션이 실행하는 client tools이고, 어떤 도구는 Anthropic 인프라에서 바로 실행되는 server tools입니다. OpenAI의 MCP and Connectors 문서도 비슷한 방향을 보여줍니다. 모델이 remote MCP server나 connector를 사용할 수는 있지만, 기본적으로는 데이터가 공유되기 전에 개발자 승인 흐름을 거치게 되어 있습니다. Google도 2026년 3월 tooling updates에서 built-in tools와 custom functions를 한 요청 안에서 섞고, tool call 사이에 context를 순환시키는 흐름을 공식으로 밀기 시작했습니다.</p>
+          <p>이건 결국 “도구를 붙일 수 있는가”의 문제가 아니라 “어느 도구를 어떤 신뢰 수준에서 붙일 것인가”의 문제입니다.</p>
+          <ol>
+            <li>읽기 전용 도구와 쓰기 도구를 먼저 분리합니다.</li>
+            <li>쓰기 도구는 초안 생성, 내부 메모 저장처럼 좁은 행동으로 쪼갭니다.</li>
+            <li>MCP는 편의 기능으로 먼저 보지 말고, 제3자 시스템과 데이터를 주고받는 신뢰 경계로 먼저 봅니다.</li>
+            <li>승인을 건너뛰는 규칙은 “모든 도구”가 아니라 일부 저위험 도구부터 시작합니다.</li>
+          </ol>
+          <p>저는 이 지점에서 구조가 갈린다고 봅니다. 비슷한 모델을 써도 어떤 팀은 안정적이고 어떤 팀은 불안정한 이유가 여기에 있습니다. 한쪽은 모델에 넓은 권한을 열어두고, 다른 한쪽은 모델이 쓸 수 있는 표면을 좁게 잘라두기 때문입니다.</p>
+
+          <h3>세 번째 설계 결정은 실시간 대화와 장기 작업을 분리하는 것이다</h3>
+          <p>Google은 2026년 3월 Gemini 3.1 Flash Live를 소개하면서 low-latency voice and vision agents를 전면에 내세웠습니다. 동시에 2025년 12월 Interactions API에서는 background execution을 별도 핵심 기능으로 설명했습니다. 이 조합이 중요한 이유는 하나입니다. 이제 플랫폼이 공식적으로도 <strong>실시간 상호작용 경로</strong>와 <strong>길게 도는 에이전트 루프</strong>를 다른 문제로 보고 있다는 뜻이기 때문입니다.</p>
+          <p>서비스 설계에서도 이 구분이 필요합니다.</p>
+          <ul>
+            <li>음성 상담, 실시간 코파일럿, 라이브 화면 보조처럼 지연이 곧 품질인 작업은 별도 실시간 경로로 둡니다.</li>
+            <li>리서치, 긴 문서 조합, 승인 대기, 여러 도구를 거치는 오퍼레이션은 백그라운드 작업으로 둡니다.</li>
+            <li>두 흐름을 한 엔드포인트와 한 세션 정책으로 억지로 묶으면 비용, 지연, 실패 처리 모두 나빠집니다.</li>
+          </ul>
+          <p>즉 “에이전트 하나”라는 말이 아키텍처 하나를 뜻하지는 않습니다. 오히려 요즘은 실시간 루프, 비동기 루프, 승인 루프를 분리한 뒤 같은 제품 안에서 묶는 쪽이 더 자연스러워 보입니다.</p>
+
+          <h3>바로 적용하려면 이 다섯 가지부터 정하면 된다</h3>
+          <p>이 글을 읽고 내일부터 바로 적용하려면, 모델 프롬프트보다 아래 다섯 가지를 먼저 문서로 적어보는 편이 좋습니다.</p>
+          <ol>
+            <li><strong>State owner</strong>: 상태를 플랫폼이 들고 갈지, 애플리케이션 데이터베이스가 들고 갈지 정합니다.</li>
+            <li><strong>Tool table</strong>: 읽기 전용, 저위험 쓰기, 고위험 쓰기 도구를 나누고 승인 정책을 붙입니다.</li>
+            <li><strong>Execution lane</strong>: 실시간, 동기, 비동기, 장기 작업을 분리합니다.</li>
+            <li><strong>Audit payload</strong>: 입력, 근거 문서, 도구 호출, 승인자, 최종 실행 결과를 무엇까지 남길지 정합니다.</li>
+            <li><strong>Failure policy</strong>: 모델이 확신이 낮을 때, 도구가 실패할 때, 사람이 자리를 비웠을 때 어디서 멈출지 정합니다.</li>
+          </ol>
+          <p>이 다섯 가지가 먼저 잡히면 모델 교체는 상대적으로 쉬워집니다. 반대로 이 다섯 가지가 비어 있으면 더 좋은 모델을 넣어도 운영은 계속 흔들립니다.</p>
+
+          <h3>지금은 더 똑똑한 모델보다 더 잘 자른 에이전트가 이긴다</h3>
+          <p>최근 공식 자료들을 보면, 플랫폼들은 모두 더 많은 도구와 더 긴 문맥을 제공하고 있습니다. 하지만 그보다 더 중요한 신호는, 그 도구와 문맥을 <strong>어떻게 잘라서 안전하게 연결할지</strong>를 제품 중심으로 설명하기 시작했다는 점입니다.</p>
+          <p>이제 에이전트 설계는 “어떤 모델이 제일 똑똑한가”만 묻는 단계에서 조금 벗어나야 합니다. 상태를 어디에 둘지, 도구를 어디서 실행할지, 사람 승인을 언제 넣을지, 실시간 경로와 장기 경로를 어떻게 나눌지. 실제 서비스 품질은 오히려 이 질문들에서 더 크게 갈립니다.</p>
+          <p>그래서 지금 AI 에이전트를 만드는 팀에게 필요한 건 모델 숭배보다 시스템 감각에 가깝습니다. 더 강한 모델 하나보다, 더 잘 잘린 상태와 도구 경계가 먼저 이깁니다.</p>
+
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://developers.openai.com/api/docs/guides/conversation-state" target="_blank" rel="noreferrer">OpenAI API Docs: Conversation state</a></li>
+            <li><a href="https://developers.openai.com/api/docs/guides/tools-connectors-mcp" target="_blank" rel="noreferrer">OpenAI API Docs: MCP and Connectors</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/working-with-messages" target="_blank" rel="noreferrer">Anthropic Docs: Working with Messages</a></li>
+            <li><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview" target="_blank" rel="noreferrer">Anthropic Docs: Tool use with Claude</a></li>
+            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/interactions-api/" target="_blank" rel="noreferrer">Google: Interactions API</a></li>
+            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tooling-updates/" target="_blank" rel="noreferrer">Google: Gemini API tooling updates</a></li>
+            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-3-1-flash-live/" target="_blank" rel="noreferrer">Google: Gemini 3.1 Flash Live</a></li>
+          </ul>
+        `,
+      },
+      en: {
+        title: 'Why AI Agent Design Is Now More About State and Tool Boundaries Than Model Rankings',
+        keywords: ['AI'],
+        excerpt: 'Recent official docs from OpenAI, Anthropic, and Google all suggest the same shift: real agent quality now depends less on model rankings and more on state ownership, tool execution, and approval boundaries.',
+        heroImage: {
+          alt: 'A developer reviewing an AI agent workflow dashboard with state timeline, approval gates, and tool-call cards',
+          caption: 'In current agent design, the harder problem is rarely the model alone. It is where state lives and how tool access is bounded.',
+        },
+        contentHtml: `
+          <p>For a while, it was easy to treat AI product strategy as a model leaderboard problem. Which model reasons better, which one is cheaper, which one has the longer context window.</p>
+          <p>But when you read OpenAI, Anthropic, and Google’s current official materials side by side, a different pattern stands out. The real design center is moving toward <strong>who owns state</strong>, <strong>where tools execute</strong>, and <strong>where human approval belongs</strong>.</p>
+          <p>That matters because these are not cosmetic implementation details. They shape reliability, observability, cost control, auditability, and how safely an agent can operate inside a real product.</p>
+
+          <h3>Model scorecards no longer explain the whole system</h3>
+          <p>OpenAI’s current docs highlight stateful conversation flows through the Responses and Conversations APIs. Anthropic is explicit that the Messages API is stateless and that your application is responsible for bringing the right history back each turn. Google’s Interactions API goes further and presents server-side state, background execution, and remote MCP support as first-class features for modern agentic applications.</p>
+          <blockquote>This does not mean the platforms are identical. It means they are all pointing toward the same architectural reality: an agent is no longer just a prompt wrapped around a model. It is a system that manages state, tools, approvals, and execution lanes.</blockquote>
+          <p>Once you see that, benchmark comparisons become less central. They still matter, but they stop being the first design question.</p>
+
+          <h3>The first design decision is who should own state</h3>
+          <p>This is where teams quietly diverge. OpenAI’s current guidance makes it easier to persist state through long-running conversation objects. Anthropic’s guidance keeps the responsibility in your application by making each Messages API call stateless. Google’s Interactions API explicitly offers optional server-side state to reduce context-management complexity.</p>
+          <p>The practical question is not which philosophy is universally better. It is which one matches your product.</p>
+          <ul>
+            <li>If auditability and exact replay matter most, app-managed state is often easier to inspect.</li>
+            <li>If long sessions, cross-device continuity, or resumable agent work matter most, platform-managed state can remove a lot of plumbing.</li>
+            <li>If approvals, retries, and resumptions are common, your state strategy should be decided before prompt tuning begins.</li>
+          </ul>
+          <p>Many agent projects become messy because teams start with a chat surface and only later ask where approvals, tool outputs, and resumable context should live. By then, the product shape is already working against them.</p>
+
+          <h3>The second design decision is where tools run and who approves them</h3>
+          <p>Anthropic’s tool-use docs draw a clean line between client tools and server tools. Some tools run in your application, with Claude returning a structured tool call that you execute. Other tools run on Anthropic’s side. OpenAI’s MCP and Connectors docs show a similar concern from another angle: models can use connectors and remote MCP servers, but approvals are requested by default before data is shared. Google’s March 2026 tooling updates point in the same direction by letting developers combine built-in tools with custom functions while circulating context across tool calls.</p>
+          <p>That means the real question is not “can the model call tools?” The real question is “which tools should be exposed at which trust level?”</p>
+          <ol>
+            <li>Separate read-only tools from write tools.</li>
+            <li>Break write tools into narrow actions such as draft creation, internal note creation, or approval preparation.</li>
+            <li>Treat MCP first as a trust boundary, not just a convenience layer.</li>
+            <li>Relax approvals only for clearly low-risk tools, not for everything at once.</li>
+          </ol>
+          <p>In practice, this is often what separates stable agent systems from noisy ones. Similar models can behave very differently depending on how wide their tool surface is and how carefully approval paths are designed.</p>
+
+          <h3>The third decision is to split real-time interaction from long-running work</h3>
+          <p>Google’s March 26, 2026 announcement for Gemini 3.1 Flash Live puts low-latency voice and vision agents front and center. But Google’s Interactions API also emphasizes background execution for long-running inference loops. That combination is the important signal: platforms are increasingly treating real-time interaction and long-horizon agent work as different operational lanes.</p>
+          <p>Your product should usually do the same.</p>
+          <ul>
+            <li>Voice copilots and live assistants belong in a real-time path where latency is part of product quality.</li>
+            <li>Research, multi-step document synthesis, approval-driven operations, and deep tool chains belong in asynchronous or background paths.</li>
+            <li>Forcing both patterns into one agent loop usually makes latency, cost, and failure handling worse.</li>
+          </ul>
+          <p>So “one agent” does not need to mean one architecture. More often, it means several execution lanes presented as one product experience.</p>
+
+          <h3>If you want to apply this now, define these five things first</h3>
+          <p>Before tuning prompts or debating providers, write down five decisions.</p>
+          <ol>
+            <li><strong>State owner</strong>: does state live in the platform or in your own application?</li>
+            <li><strong>Tool table</strong>: which tools are read-only, low-risk write, or high-risk write?</li>
+            <li><strong>Execution lane</strong>: which tasks are real-time, synchronous, asynchronous, or long-running?</li>
+            <li><strong>Audit payload</strong>: what context, tool calls, approvals, and outputs must be logged?</li>
+            <li><strong>Failure policy</strong>: where does the system stop when confidence is low, tools fail, or approval is missing?</li>
+          </ol>
+          <p>Once these are clear, changing the underlying model becomes much easier. If they are unclear, even a stronger model rarely fixes the operational mess.</p>
+
+          <h3>The winning systems now are not just smarter. They are better cut.</h3>
+          <p>All three major platforms are expanding context, tools, and agent capabilities. But the more important shift is that they are increasingly explaining how those capabilities should be organized inside systems, not just how powerful the models are in isolation.</p>
+          <p>That is why the best near-term advantage in agent design is often not raw intelligence. It is cleaner state ownership, narrower tool boundaries, better approval gates, and a more deliberate split between live and background work.</p>
+          <p>Right now, a well-bounded agent usually beats a loosely designed one faster than a slightly stronger model does.</p>
+
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://developers.openai.com/api/docs/guides/conversation-state" target="_blank" rel="noreferrer">OpenAI API Docs: Conversation state</a></li>
+            <li><a href="https://developers.openai.com/api/docs/guides/tools-connectors-mcp" target="_blank" rel="noreferrer">OpenAI API Docs: MCP and Connectors</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/working-with-messages" target="_blank" rel="noreferrer">Anthropic Docs: Working with Messages</a></li>
+            <li><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview" target="_blank" rel="noreferrer">Anthropic Docs: Tool use with Claude</a></li>
+            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/interactions-api/" target="_blank" rel="noreferrer">Google: Interactions API</a></li>
+            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tooling-updates/" target="_blank" rel="noreferrer">Google: Gemini API tooling updates</a></li>
+            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-3-1-flash-live/" target="_blank" rel="noreferrer">Google: Gemini 3.1 Flash Live</a></li>
+          </ul>
+        `,
+      },
+      ja: {
+        title: 'なぜ今のAIエージェント設計では、モデル性能より状態管理とツール境界が重要なのか',
+        keywords: ['AI'],
+        excerpt: '最近の公式資料を読むと、AIエージェントの競争軸はモデル順位そのものより、状態の持ち方、ツール実行の位置、承認境界へと移りつつあります。',
+        heroImage: {
+          alt: '状態タイムライン、承認ゲート、ツール呼び出しカードが表示されたAIエージェントのワークフローダッシュボードを開発者が見ている様子',
+          caption: 'いまのAIエージェント設計では、モデル単体の賢さより、状態をどこに置き、ツールをどう制限するかが大きな差になります。',
+        },
+        contentHtml: `
+          <p>少し前まで、AIプロダクトの競争はモデル比較で決まるように見えていました。どのモデルがより賢いか、どれが安いか、どれが長い文脈を読めるかです。</p>
+          <p>ですが、OpenAI、Anthropic、Googleの最近の公式資料を並べて読むと、別の流れがはっきり見えてきます。いま重要なのは、<strong>誰が状態を持つのか</strong>、<strong>ツールがどこで実行されるのか</strong>、<strong>人の承認をどこで入れるのか</strong>です。</p>
+          <p>これは実装の細部ではありません。信頼性、監査性、コスト制御、失敗時の扱いまでまとめて左右する、システム設計そのものの話です。</p>
+
+          <h3>モデル比較だけでは、今の変化を説明しきれない</h3>
+          <p>OpenAIは現在のドキュメントで、Responses APIとConversations APIを通じたstatefulな流れを前面に出しています。Anthropicは逆に、Messages APIがstatelessであり、毎ターン必要な履歴をアプリケーション側が渡すべきだと明確にしています。Googleは2025年12月にInteractions APIを紹介し、server-side state、background execution、remote MCP supportを現代的なagentic applicationの中心機能として扱いました。</p>
+          <blockquote>各社が同じ形を取っているわけではありません。ただし共通して、「エージェントはモデル単体ではなく、状態・ツール・承認を含むシステムとして設計すべきだ」という方向を示しているのは確かです。</blockquote>
+          <p>そのため、ベンチマーク順位は依然として重要でも、最初の設計判断ではなくなりつつあります。</p>
+
+          <h3>最初の設計判断は、状態を誰が持つかです</h3>
+          <p>ここでチームの設計思想がかなり分かれます。OpenAIの現在の案内では、会話状態を長く生きる会話オブジェクトとして維持しやすくなっています。AnthropicはMessages APIをstatelessとして扱い、必要な履歴を毎回アプリ側が組み立てる前提です。GoogleのInteractions APIは、optional server-side stateを複雑な文脈管理を減らす機能として打ち出しています。</p>
+          <p>重要なのは、どちらが普遍的に正しいかではなく、自分のプロダクトに合う責任分担を先に決めることです。</p>
+          <ul>
+            <li>監査や再現性が最優先なら、アプリ側で状態を管理するほうが読みやすいことが多いです。</li>
+            <li>長いセッション、複数デバイス、途中再開が重要なら、statefulな仕組みが実装負荷を大きく下げます。</li>
+            <li>承認、停止、再開、再試行が多い業務ほど、先に状態戦略を決めてからモデルを入れるべきです。</li>
+          </ul>
+          <p>先にチャット画面だけを作ってしまうと、あとから承認履歴やツール結果、再開用の文脈をどこに置くのかで苦しくなります。</p>
+
+          <h3>次の設計判断は、ツールがどこで動き、誰が承認するかです</h3>
+          <p>Anthropicのtool use文書は、client toolsとserver toolsをはっきり分けています。アプリ側で実行するツールもあれば、Anthropic側で実行されるツールもあります。OpenAIのMCP and Connectors文書でも、remote MCP serverやconnectorは使える一方で、データ共有前にapprovalが求められるのが基本です。Googleも2026年3月のtooling updatesで、built-in toolsとcustom functionsを同じリクエストで扱い、tool call間でcontextを循環させる流れを前に出しました。</p>
+          <p>つまり本当の問いは「ツールを呼べるか」ではありません。「どのツールを、どの信頼レベルで開くか」です。</p>
+          <ol>
+            <li>読み取り専用ツールと書き込みツールを分ける</li>
+            <li>書き込みツールは下書き作成や内部メモ保存のように細かく分ける</li>
+            <li>MCPは便利機能ではなく、まず信頼境界として扱う</li>
+            <li>承認を外すのは低リスクツールの一部から始める</li>
+          </ol>
+          <p>似たモデルを使っていても、安定するチームと不安定なチームが分かれるのは、ここでツール表面をどれだけきれいに切れているかの差が大きいと感じます。</p>
+
+          <h3>リアルタイム対話と長期処理は分けて考えたほうがいい</h3>
+          <p>Googleは2026年3月26日にGemini 3.1 Flash Liveを出し、low-latencyな音声・視覚エージェントを前面に出しました。一方でInteractions APIではbackground executionを別の中心機能として説明しています。これは、リアルタイム対話と長く走るエージェント処理を同じ問題として見ないほうがいい、という強いサインです。</p>
+          <p>サービス設計でも同じです。</p>
+          <ul>
+            <li>音声アシスタントやライブ支援のように遅延そのものが品質になる仕事は、専用のリアルタイム経路に置く</li>
+            <li>調査、長文要約、承認待ち、多段ツール呼び出しは、非同期やバックグラウンド経路に置く</li>
+            <li>両方をひとつのエージェントループに押し込むと、遅延もコストも失敗処理も悪化しやすい</li>
+          </ul>
+          <p>つまり「エージェントが一つ」という言葉は、「アーキテクチャも一つ」である必要はないということです。</p>
+
+          <h3>すぐ適用するなら、まずこの五つを決める</h3>
+          <p>プロンプト改善やモデル比較の前に、次の五つを文書化すると設計がかなり安定します。</p>
+          <ol>
+            <li><strong>State owner</strong>: 状態はプラットフォームに持たせるのか、自前アプリに持たせるのか</li>
+            <li><strong>Tool table</strong>: 読み取り専用、低リスク書き込み、高リスク書き込みをどう分けるか</li>
+            <li><strong>Execution lane</strong>: リアルタイム、同期、非同期、長期処理をどう分けるか</li>
+            <li><strong>Audit payload</strong>: 入力、根拠、ツール呼び出し、承認、最終出力のどこまでを残すか</li>
+            <li><strong>Failure policy</strong>: 低信頼、ツール失敗、承認待ちのときにどこで止まるか</li>
+          </ol>
+          <p>これが決まっていれば、後からモデルを入れ替えるのは比較的簡単です。逆にここが曖昧だと、より強いモデルを入れても運用は安定しません。</p>
+
+          <h3>今勝つのは、より賢いモデルだけではなく、よりきれいに切られたエージェントです</h3>
+          <p>各社とも文脈長やツール能力を広げています。ただ本当に重要なのは、その能力をシステムの中でどう整理するかまで説明し始めていることです。</p>
+          <p>だから今のAIエージェント設計で効いてくる差は、純粋なモデル知能だけではありません。状態の持ち方、ツール境界、承認ゲート、リアルタイム経路とバックグラウンド経路の分け方です。</p>
+          <p>いまは少し強いモデル一つより、よく切られた状態とツール境界を持つエージェントのほうが、先に勝ちやすいと感じます。</p>
+
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://developers.openai.com/api/docs/guides/conversation-state" target="_blank" rel="noreferrer">OpenAI API Docs: Conversation state</a></li>
+            <li><a href="https://developers.openai.com/api/docs/guides/tools-connectors-mcp" target="_blank" rel="noreferrer">OpenAI API Docs: MCP and Connectors</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/working-with-messages" target="_blank" rel="noreferrer">Anthropic Docs: Working with Messages</a></li>
+            <li><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview" target="_blank" rel="noreferrer">Anthropic Docs: Tool use with Claude</a></li>
+            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/interactions-api/" target="_blank" rel="noreferrer">Google: Interactions API</a></li>
+            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tooling-updates/" target="_blank" rel="noreferrer">Google: Gemini API tooling updates</a></li>
+            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-3-1-flash-live/" target="_blank" rel="noreferrer">Google: Gemini 3.1 Flash Live</a></li>
+          </ul>
+        `,
+      },
+    },
+  },
+  {
+    slug: 'practical-way-to-automate-internal-services-with-claude-opus',
+    category: 'ai',
+    createdAt: '2026-04-02T19:35:00+09:00',
+    heroImage: {
+      src: '/blog/claude-opus-internal-automation-hero-generated.webp',
+    },
+    locales: {
+      ko: {
+        title: 'Claude Opus로 내부 서비스 자동화를 붙이는 가장 현실적인 방법',
+        keywords: ['AI'],
+        excerpt: '사내 자동화는 챗봇 하나를 붙이는 일보다, 되돌릴 수 있는 업무를 좁게 잡고 Claude Opus를 판단 엔진으로 쓰는 쪽이 훨씬 빨리 성과가 납니다.',
+        heroImage: {
+          alt: '운영 담당자가 티켓 큐와 문서 요약, 승인 체크리스트가 보이는 내부 자동화 대시보드를 검토하는 장면',
+          caption: 'Claude Opus 자동화는 채팅창보다, 내부 도구와 승인 흐름을 묶은 운영 화면으로 볼 때 더 정확해집니다.',
+        },
+        contentHtml: `
+          <p>사내 서비스 자동화를 처음 붙일 때 많은 팀이 채팅창부터 만듭니다. 하지만 실제로는 답변형 UI보다, 하나의 업무를 끝까지 끊김 없이 처리하는 작은 운영 루프를 먼저 만드는 편이 훨씬 덜 흔들립니다.</p>
+          <p>2026년 4월 2일 기준 Anthropic 공식 문서는 복잡한 도구 호출과 애매한 질의에 최신 Claude Opus 4.6을 권합니다. 이 말은 곧 Claude Opus를 “대답 잘하는 모델”보다 <strong>판단과 조정의 중심</strong>으로 써야 한다는 뜻에 가깝습니다.</p>
+          <p>그래서 이 글은 데모보다 운영을 기준으로 씁니다. 어떤 업무부터 고를지, 시스템을 어떻게 자를지, 도구 스키마는 어떻게 만들지, 어디서 사람 승인을 걸지, 그리고 보안 경계는 어떻게 그을지까지 바로 적용할 수 있게 정리해 보겠습니다.</p>
+
+          <h3>어떤 업무부터 붙여야 실패가 덜할까</h3>
+          <p>첫 자동화 대상은 “정답을 내는 일”보다 “실수를 빨리 되돌릴 수 있는 일”이어야 합니다. Claude Opus가 아무리 강해도, 조직이 처음부터 돌이킬 수 없는 권한을 모델에 넘기면 운영이 금방 경직됩니다.</p>
+          <blockquote>처음 자동화할 일은 고난도 판단 업무가 아니라, 맥락은 복잡하지만 결과를 검토하고 되돌리기 쉬운 업무여야 합니다.</blockquote>
+          <p>바로 붙이기 좋은 예시는 대체로 이런 쪽입니다.</p>
+          <ul>
+            <li>사내 운영 요청을 읽고 적절한 큐로 분류하기</li>
+            <li>Slack, 이메일, 폼으로 들어온 문의를 표준 티켓 초안으로 바꾸기</li>
+            <li>긴 운영 문서나 장애 보고를 읽고 요약 메모와 후속 조치 목록 만들기</li>
+            <li>내부 FAQ 응답 초안을 작성하고 누락 정보만 다시 묻기</li>
+            <li>결재 전 검토 메모, 리스크 체크리스트, 승인 포인트 정리하기</li>
+          </ul>
+          <p>반대로 처음부터 피하는 편이 나은 업무도 분명합니다.</p>
+          <ul>
+            <li>모델 출력이 곧바로 외부 고객이나 파트너에게 발송되는 업무</li>
+            <li>재무 이체, 계정 권한 변경, 계약 상태 변경처럼 되돌리기 어려운 작업</li>
+            <li>근로평가, 징계, 민감한 HR 판단처럼 설명 책임이 큰 의사결정</li>
+            <li>원문 근거를 보존하지 않으면 안 되는 법무·감사 업무</li>
+          </ul>
+
+          <h3>권장 아키텍처는 챗봇이 아니라 얇은 운영 파이프라인이다</h3>
+          <p>실무에서는 Claude Opus를 화면 한가운데 두기보다, 아래와 같은 파이프라인 안의 한 단계로 두는 편이 훨씬 안정적입니다.</p>
+          <ol>
+            <li>요청 수집: Slack, 이메일, 폼, 사내 포털에서 요청을 받습니다.</li>
+            <li>사전 필터: 포맷 오류, 민감정보, 금칙 패턴, 프롬프트 인젝션 징후를 먼저 걸러냅니다.</li>
+            <li>문맥 수집: 관련 문서, 정책, 과거 티켓, 사용자 속성을 필요한 범위만 좁혀서 붙입니다.</li>
+            <li>Claude Opus 판단: 분류, 요약, 누락 정보, 다음 행동, 승인 필요 여부를 결정하게 합니다.</li>
+            <li>도구 호출: 티켓 생성, 초안 저장, 내부 코멘트 작성처럼 좁은 스키마의 도구만 호출합니다.</li>
+            <li>승인 및 실행: 사람 검토가 필요한 경우 멈추고, 승인 후에만 쓰기 작업을 실행합니다.</li>
+            <li>감사 로그: 입력, 근거 문서, 모델 판단, 승인자, 최종 실행 결과를 남깁니다.</li>
+          </ol>
+          <p>Anthropic 문서가 도구 설명과 스키마를 자세히 쓰라고 강조하는 이유도 여기 있습니다. 자동화는 결국 “모델이 무엇을 읽고 무엇을 호출할 수 있는가”를 잘 자르는 문제이기 때문입니다.</p>
+          <p>실제로는 Claude Opus를 한 번만 부르는 구조보다, <strong>가볍게 걸러내는 단계</strong>와 <strong>깊게 판단하는 단계</strong>를 분리하는 편이 좋습니다. Anthropic의 가드레일 문서도 유해성 스크린이나 입력 검증에는 Claude Haiku 4.5 같은 경량 모델을 앞단에 둘 수 있다고 안내합니다. 비용과 지연을 줄이려면 이 분리가 꽤 중요합니다.</p>
+
+          <h3>API 세팅은 서버에서 시작해야 한다</h3>
+          <p>여기서부터가 많은 분들이 막히는 지점입니다. Anthropic Console에서 API 키를 만든 다음, 그 키는 반드시 서버 환경변수로만 보관합니다. 프런트엔드에 넣는 순간 보안 설계가 무너집니다.</p>
+          <p>특히 Vite에서는 <code>VITE_</code>로 시작하는 환경변수가 브라우저 번들에 포함됩니다. 따라서 <code>VITE_ANTHROPIC_API_KEY</code> 같은 이름은 쓰면 안 됩니다. 안전한 구조는 항상 “브라우저 → 내 서버 → Anthropic API”입니다.</p>
+          <p>현재 프로젝트가 정적 사이트라면 더더욱 그렇습니다. 브라우저에서 Claude를 직접 부르지 말고, 작은 Node 서버나 서버리스 함수 하나를 두고 그 뒤에서만 Anthropic SDK를 호출해야 합니다.</p>
+          <p>처음에는 아래 네 단계만 따라가면 됩니다.</p>
+          <ol>
+            <li>Anthropic Console에서 API 키를 발급합니다.</li>
+            <li>백엔드나 서버리스 함수 실행 환경에 <code>ANTHROPIC_API_KEY</code>를 저장합니다.</li>
+            <li><code>/api/internal-triage</code> 같은 내부 엔드포인트를 하나 만듭니다.</li>
+            <li>브라우저나 사내 화면은 Anthropic이 아니라 그 엔드포인트만 호출합니다.</li>
+          </ol>
+          <p>Node 기준 최소 예시는 아래 정도면 충분합니다.</p>
+          <pre><code>npm install @anthropic-ai/sdk express dotenv</code></pre>
+          <pre><code>ANTHROPIC_API_KEY=your_api_key_here
+PORT=3001</code></pre>
+          <pre><code>import 'dotenv/config';
+import express from 'express';
+import Anthropic from '@anthropic-ai/sdk';
+
+const app = express();
+app.use(express.json());
+
+const anthropic = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+});
+
+app.post('/api/internal-triage', async (req, res) => {
+  const { requestText, requester } = req.body ?? {};
+
+  if (!requestText || !requestText.trim()) {
+    return res.status(400).json({ error: 'requestText is required' });
+  }
+
+  const message = await anthropic.messages.create({
+    model: 'claude-opus-4-6',
+    max_tokens: 800,
+    system: 'You classify internal support requests and respond with JSON only.',
+    messages: [
+      {
+        role: 'user',
+        content: [
+          {
+            type: 'text',
+            text:
+              'requester: ' +
+              (requester ?? 'unknown') +
+              '\nrequest: ' +
+              requestText,
+          },
+        ],
+      },
+    ],
+  });
+
+  const textBlock = message.content.find((block) => block.type === 'text');
+
+  res.json({
+    model: message.model,
+    result: textBlock?.text ?? '',
+  });
+});
+
+app.listen(process.env.PORT ?? 3001);</code></pre>
+          <p>이 코드는 완성형 자동화가 아니라 <strong>첫 연결 확인용 스모크 테스트</strong>입니다. 먼저 이 단계에서 서버가 정상 응답하는지 확인한 뒤, 그다음에 앞 절에서 설명한 JSON 출력 계약과 도구 호출을 붙이는 편이 안전합니다.</p>
+          <pre><code>curl http://localhost:3001/api/internal-triage \
+  -H "Content-Type: application/json" \
+  -d '{"requestText":"노트북 교체 요청입니다. 자산번호는 아직 없습니다.","requester":"minji@company.com"}'</code></pre>
+          <p>응답이 오면 프런트엔드는 Anthropic SDK를 직접 쓰지 말고, 자기 서버만 호출하면 됩니다. 예를 들어 사내 포털이나 Vite 화면에서는 아래처럼 붙입니다.</p>
+          <pre><code>const response = await fetch('/api/internal-triage', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    requestText,
+    requester: currentUser.email,
+  }),
+});
+
+const data = await response.json();</code></pre>
+          <p>핵심은 세 가지입니다. 키는 서버에만 둡니다. 첫 호출은 좁은 엔드포인트 하나로 검증합니다. 모델이 어떤 구조로 답해야 하는지는 서버에서 검증 가능한 계약으로 고정합니다.</p>
+
+          <h3>바로 쓸 수 있는 최소 구현 예시는 이렇게 잡으면 된다</h3>
+          <p>예를 들어 운영팀 지원 요청 자동화를 만든다고 가정해 보겠습니다. 사용자는 자유롭게 요청을 쓰고, 모델은 그 글을 읽어 적절한 큐와 우선순위, 요약, 누락 정보, 사람 승인 필요 여부를 뽑습니다. 이때 핵심은 프롬프트를 멋지게 쓰는 일이 아니라, <strong>최종 산출물의 모양을 먼저 고정</strong>하는 일입니다.</p>
+          <p>Anthropic의 Messages API는 상태를 서버가 기억해 주는 방식이 아니라 매 호출마다 전체 대화 맥락을 보내는 stateless 구조입니다. 그래서 워크플로 상태는 애플리케이션이 직접 관리하고, 모델에는 현재 단계에 필요한 정보만 넣는 편이 좋습니다.</p>
+          <p>저라면 첫 버전을 아래 정도로 자릅니다.</p>
+          <pre><code>{
+  "queue": "it_support | finance_ops | people_ops",
+  "priority": "low | normal | high",
+  "summary": "한두 문장 요약",
+  "missing_fields": ["asset_id", "cost_center"],
+  "needs_human_approval": true,
+  "reason": "왜 이 큐와 우선순위로 판단했는지"
+}</code></pre>
+          <p>이 구조가 좋은 이유는 세 가지입니다. 첫째, 사람이 검토하기 쉽습니다. 둘째, 나중에 평가셋을 만들기 쉽습니다. 셋째, 실제 실행 도구와 느슨하게 연결할 수 있습니다. 예를 들어 <code>queue</code>가 맞고 <code>missing_fields</code>가 비어 있을 때만 티켓 초안을 생성하게 만들 수 있습니다.</p>
+          <p>모델이 실제로 호출할 도구도 크면 안 됩니다. “Jira에 알아서 등록” 같은 도구보다, 아래처럼 좁은 스키마로 하나씩 끊는 편이 훨씬 안전합니다.</p>
+          <pre><code>{
+  "name": "create_ticket_draft",
+  "description": "Create an internal ticket draft only after the request has been classified and summarized. Never send externally. Use this for draft creation only.",
+  "strict": true,
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "queue": { "type": "string", "enum": ["it_support", "finance_ops", "people_ops"] },
+      "priority": { "type": "string", "enum": ["low", "normal", "high"] },
+      "summary": { "type": "string" },
+      "requester": { "type": "string" },
+      "needs_human_approval": { "type": "boolean" }
+    },
+    "required": ["queue", "priority", "summary", "requester", "needs_human_approval"],
+    "additionalProperties": false
+  }
+}</code></pre>
+          <p>이렇게 해두면 모델이 잘못된 필드를 상상해 넣을 여지가 크게 줄어듭니다. 구조화된 출력이나 strict tool use는 사내 자동화에서 생각보다 큰 차이를 만듭니다. 자유 텍스트를 파싱해 후처리하는 구조는 첫 데모는 빨라도 운영 안정성이 급격히 떨어집니다.</p>
+
+          <h3>프롬프트는 길게 쓰는 것보다 경계를 선명하게 쓰는 편이 낫다</h3>
+          <p>Claude Opus는 맥락을 길게 읽을 수 있지만, 자동화 품질은 긴 프롬프트보다 <strong>잘린 경계</strong>에서 더 많이 나옵니다. Anthropic의 프롬프트 가이드도 명확하고 직접적인 지시, 예시 제공, XML 태그, 자기 점검 요청을 권합니다.</p>
+          <p>실무에서는 보통 아래 다섯 줄만 명확해도 많이 안정됩니다.</p>
+          <ul>
+            <li>너의 역할: 분류기인지, 요약기인지, 승인 보조자인지</li>
+            <li>읽을 수 있는 데이터: 어떤 문서와 필드를 보아도 되는지</li>
+            <li>할 수 있는 일: 어떤 도구를 어떤 조건에서 호출할 수 있는지</li>
+            <li>하면 안 되는 일: 외부 발송, 권한 변경, 재무 반영 같은 금지 행동</li>
+            <li>멈춰야 하는 조건: 누락 정보, 정책 충돌, 낮은 확신, 민감한 요청</li>
+          </ul>
+          <p>프롬프트 말미에는 “끝내기 전에 정책 기준과 필수 필드 충족 여부를 스스로 확인하라” 같은 자기 점검 문장을 꼭 넣는 편이 좋습니다. Anthropic 문서도 self-check가 코딩과 복잡한 판단에서 오류를 안정적으로 줄인다고 설명합니다.</p>
+
+          <h3>보안은 Files API와 MCP를 쓰기 전에 먼저 정리해야 한다</h3>
+          <p>여기서부터가 진짜 운영 차이입니다. Anthropic 문서를 보면 Messages API는 Zero Data Retention 계약이 있는 조직에서 ZDR 대상이 될 수 있습니다. 반면, Files API는 문서를 반복 업로드하지 않게 해 주는 대신 베타 기능이고 ZDR 대상이 아닙니다. 파일은 워크스페이스 범위로 공유되고, 직접 삭제하기 전까지 남습니다.</p>
+          <p>또 Files API는 현재 파일당 최대 500MB, 조직당 총 100GB까지 저장할 수 있습니다. 이 말은 곧 편하다고 해서 HR 문서, 계약서, 재무 원장, 환자정보 같은 민감 자료를 무심코 올리면 안 된다는 뜻입니다. 내부 자동화 1차 버전에서는 민감 원문 전체를 업로드하기보다, 사내 백엔드에서 필요한 필드만 요약해 Claude Opus에 넘기는 방식이 더 안전합니다.</p>
+          <p>MCP connector도 비슷합니다. Anthropic 문서 기준으로 이 기능은 원격 MCP 서버를 Messages API에 직접 연결해 주지만 베타이고 ZDR 대상이 아닙니다. 그래서 첫 내부 자동화에서 곧바로 원격 MCP를 열기보다, 애플리케이션 서버 안에서 직접 도구를 호출하고 Claude에는 <strong>좁은 클라이언트 도구 표면</strong>만 보여주는 편이 더 감사하기 쉽습니다.</p>
+          <p>길고 반복적인 정책 문서를 계속 넣어야 한다면 prompt caching도 실무적으로 유용합니다. 최근 문서 기준으로 캐시는 KV cache와 해시를 저장하고 원문 텍스트를 그대로 저장하지 않으며, 기본 수명은 5분짜리 ephemeral입니다. 다만 Opus 4.6과 Opus 4.5에서는 캐시 가능한 최소 길이가 4096 토큰이므로, 짧은 프롬프트에는 굳이 억지로 붙일 필요가 없습니다.</p>
+          <ul>
+            <li>민감한 내부 데이터는 기본적으로 직접 압축해 전달합니다.</li>
+            <li>베타 기능은 편의보다 보안 검토를 먼저 통과시킵니다.</li>
+            <li>웹 검색, 웹 페치, 코드 실행 같은 서버 도구는 공개 자료 처리와 내부 자료 처리를 분리해서 씁니다.</li>
+            <li>모델에게는 원문 전체보다 필요한 사실과 근거만 넘깁니다.</li>
+          </ul>
+
+          <h3>사람 승인은 어디에 두는가가 자동화 품질을 결정한다</h3>
+          <p>자동화가 잘 붙는 팀은 모델에게 모든 권한을 주지 않습니다. 대신 모델이 멈춰야 하는 지점을 아주 분명하게 둡니다. Anthropic 문서도 파괴적이거나 되돌리기 어려운 행동에는 명시적 확인을 두는 쪽을 권합니다.</p>
+          <p>사내 서비스 자동화에서는 보통 아래 구분이 실용적입니다.</p>
+          <ul>
+            <li>자동 허용: 분류, 태깅, 요약, 초안 생성, 내부 메모 작성</li>
+            <li>조건부 허용: 티켓 초안 생성, 우선순위 제안, 담당자 추천</li>
+            <li>반드시 승인: 외부 발송, 데이터 수정, 비용 반영, 권한 변경, 고객 커뮤니케이션</li>
+          </ul>
+          <p>여기서 중요한 것은 승인 UI도 모델 친화적으로 만드는 일입니다. 단순히 “승인/반려” 버튼만 두기보다, 모델이 본 근거와 누락 정보, 예상 영향, 실행될 도구 목록을 함께 보여줘야 검토 시간이 짧아집니다. 사람이 빨리 읽고 판단할 수 없으면 자동화는 결국 병목을 옮긴 것밖에 되지 않습니다.</p>
+
+          <h3>롤아웃은 20건 데모보다 300건 평가셋이 낫다</h3>
+          <p>Anthropic의 평가 가이드에서 특히 좋은 부분은 성공 기준을 한 가지로 잡지 말라는 대목입니다. 내부 자동화라면 최소한 정확도만 볼 수 없습니다. 업무 적합도, 개인정보 보존, 지연시간, 비용, 사람 검토 시간까지 같이 봐야 합니다.</p>
+          <p>처음 붙일 때는 실제 요청 200건에서 500건 정도를 모아서 평가셋으로 만드는 편이 좋습니다. 문서에도 자동화 가능한 평가에서는 적은 수의 고급 수작업 채점보다, 더 많은 케이스를 자동 채점하는 편이 낫다고 나와 있습니다.</p>
+          <p>제가 먼저 볼 지표는 보통 이렇습니다.</p>
+          <ul>
+            <li>정확한 큐 분류율</li>
+            <li>누락 필드 탐지 재현율</li>
+            <li>사람 승인 필요 여부 판단 정확도</li>
+            <li>잘못된 자동 실행 비율</li>
+            <li>평균 검토 시간과 평균 처리 시간</li>
+            <li>요청 1건당 토큰 비용</li>
+          </ul>
+          <p>오프라인 백로그 처리처럼 실시간이 아닌 작업은 Message Batches API를 검토할 수도 있습니다. 다만 이 역시 ZDR 대상이 아니라는 점을 기억해야 합니다. 보안 요구가 높은 조직이라면 실시간 Messages API 기반의 짧은 루프가 오히려 운영상 더 편할 수 있습니다.</p>
+
+          <h3>실무에서 잘 먹히는 운영 팁은 의외로 단순하다</h3>
+          <p>마지막으로, 실제 붙여 보면 금방 체감되는 팁만 추리면 이 정도입니다.</p>
+          <ul>
+            <li>Claude Opus는 파서보다 심사관에 가깝게 씁니다. OCR, 단순 정규화, 거친 전처리는 더 싼 계층에 둡니다.</li>
+            <li>도구 이름은 동사 중심으로 짧게 짓고, 입력 스키마는 가능한 한 좁게 유지합니다.</li>
+            <li>사내 백엔드가 이미 아는 정보는 다시 모델에게 묻지 않습니다. 사용자 부서, 권한, 비용센터 같은 값은 서버가 채웁니다.</li>
+            <li>모델이 읽는 문맥은 “관련 있는 최소한”으로 줄입니다. 데이터베이스 덤프 전체를 넘기면 오히려 흔들립니다.</li>
+            <li>첫 워크플로는 한 팀, 한 큐, 한 승인자 구조로 시작합니다. 성공 범위를 넓히는 일은 두 번째입니다.</li>
+          </ul>
+          <p>Claude Opus로 내부 서비스를 자동화한다는 말은 결국 사람의 판단을 통째로 치우는 일이 아닙니다. 사람이 정말 판단해야 할 순간만 더 또렷하게 남기고, 그 앞뒤의 마찰을 걷어내는 쪽에 가깝습니다. 그 순서를 지키면 첫 자동화는 생각보다 빨리 붙고, 그다음부터는 확장할 근거도 훨씬 분명해집니다.</p>
+
+          <h3>참고자료</h3>
+          <ul>
+            <li><a href="https://platform.claude.com/docs/en/get-started" target="_blank" rel="noreferrer">Anthropic Docs: Get started with Claude</a></li>
+            <li><a href="https://platform.claude.com/docs/en/api/typescript/messages/create" target="_blank" rel="noreferrer">Anthropic Docs: Create a Message (TypeScript)</a></li>
+            <li><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools" target="_blank" rel="noreferrer">Anthropic Docs: Define tools</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/working-with-messages" target="_blank" rel="noreferrer">Anthropic Docs: Using the Messages API</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/files" target="_blank" rel="noreferrer">Anthropic Docs: Files API</a></li>
+            <li><a href="https://platform.claude.com/docs/en/agents-and-tools/mcp-connector" target="_blank" rel="noreferrer">Anthropic Docs: MCP connector</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" target="_blank" rel="noreferrer">Anthropic Docs: Prompt caching</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" target="_blank" rel="noreferrer">Anthropic Docs: Prompting best practices</a></li>
+            <li><a href="https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks" target="_blank" rel="noreferrer">Anthropic Docs: Mitigate jailbreaks and prompt injections</a></li>
+            <li><a href="https://platform.claude.com/docs/en/test-and-evaluate/develop-tests" target="_blank" rel="noreferrer">Anthropic Docs: Define success criteria and build evaluations</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/zero-data-retention" target="_blank" rel="noreferrer">Anthropic Docs: Zero Data Retention</a></li>
+          </ul>
+        `,
+      },
+      en: {
+        title: 'The Most Practical Way to Automate Internal Services with Claude Opus',
+        keywords: ['AI'],
+        excerpt: 'Internal automation works better when Claude Opus is treated as a judgment engine inside a narrow workflow, not as a free-form chatbot sitting on top of every internal system.',
+        heroImage: {
+          alt: 'An operations lead reviewing an internal automation dashboard with a ticket queue, document summary, and approval checklist',
+          caption: 'Claude Opus becomes more useful in internal operations when it sits inside a tool-and-approval workflow rather than a generic chat interface.',
+        },
+        contentHtml: `
+          <p>When teams first try internal automation, they often start by building a chat interface. In practice, the faster win usually comes from a much smaller move: pick one reversible workflow, keep the boundaries tight, and let Claude Opus handle judgment inside that loop.</p>
+          <p>As of April 2, 2026, Anthropic’s official tool-use documentation recommends the latest Claude Opus 4.6 for complex tools and ambiguous queries. That makes Claude Opus a strong fit not for “chatting with internal systems,” but for deciding what should happen next inside a controlled service workflow.</p>
+          <p>That is the lens that matters for real rollout. The useful questions are not only prompt quality or model intelligence. They are which jobs to automate first, what the output contract should be, where human approval belongs, and how retention and tool boundaries should be handled.</p>
+
+          <h3>Start with work that is reversible, structured, and annoying</h3>
+          <p>The first internal workflow should not be the most strategic one. It should be the one that creates friction every day but can still be reviewed and corrected easily.</p>
+          <blockquote>The safest first automation target is not a final decision. It is a bounded operational judgment that a human can inspect quickly and reverse safely.</blockquote>
+          <p>That usually means tasks like these.</p>
+          <ul>
+            <li>Routing internal requests into the right queue</li>
+            <li>Turning Slack, email, or form submissions into ticket drafts</li>
+            <li>Summarizing long incident notes or policy documents into action items</li>
+            <li>Drafting responses for internal FAQ or operations support</li>
+            <li>Preparing review memos before a human approval step</li>
+          </ul>
+          <p>It usually does not mean direct external communication, irreversible financial actions, permission changes, or sensitive people decisions on day one.</p>
+
+          <h3>The right architecture is a thin operations pipeline</h3>
+          <p>The stable pattern is rarely “user asks the model, then the model does everything.” A better pattern is a narrow pipeline.</p>
+          <ol>
+            <li>Collect the request from Slack, email, forms, or an internal portal.</li>
+            <li>Run a lightweight pre-screen for malformed input, prompt-injection signs, and policy violations.</li>
+            <li>Retrieve only the policy, history, and user context needed for this step.</li>
+            <li>Ask Claude Opus to classify, summarize, identify missing fields, and decide whether approval is required.</li>
+            <li>Expose only narrow write tools such as draft creation or internal note creation.</li>
+            <li>Pause at approval gates before any irreversible action.</li>
+            <li>Store an audit trail of context, decision, human approver, and final execution.</li>
+          </ol>
+          <p>Anthropic’s own guidance on tool definitions points in this direction. Tool descriptions and schemas are not documentation fluff. They are part of the control surface.</p>
+          <p>It is also worth splitting cheap filtering from deep reasoning. Anthropic’s jailbreak guidance explicitly notes that a lightweight model such as Claude Haiku 4.5 can be used for screens and validation before a stronger model takes over.</p>
+
+          <h3>API setup should begin on the server, not in the browser</h3>
+          <p>This is the part many teams skip too quickly. After creating an API key in Anthropic Console, store it only as a server-side environment variable. The moment it lands in frontend code, the security model is already broken.</p>
+          <p>This matters even more in Vite. Variables prefixed with <code>VITE_</code> are exposed to the browser bundle, so <code>VITE_ANTHROPIC_API_KEY</code> is exactly what you should not create. The safe shape is always “browser → your server → Anthropic API.”</p>
+          <p>If your current product is only a static frontend, that does not change the rule. Add a small Node service or a serverless function and call Anthropic only there.</p>
+          <p>The first setup path can stay very small.</p>
+          <ol>
+            <li>Create an API key in Anthropic Console.</li>
+            <li>Store it as <code>ANTHROPIC_API_KEY</code> in your backend or serverless runtime.</li>
+            <li>Create one narrow endpoint such as <code>/api/internal-triage</code>.</li>
+            <li>Point the browser UI only at that endpoint, never at Anthropic directly.</li>
+          </ol>
+          <p>A minimal Node example is enough for the first smoke test.</p>
+          <pre><code>npm install @anthropic-ai/sdk express dotenv</code></pre>
+          <pre><code>ANTHROPIC_API_KEY=your_api_key_here
+PORT=3001</code></pre>
+          <pre><code>import 'dotenv/config';
+import express from 'express';
+import Anthropic from '@anthropic-ai/sdk';
+
+const app = express();
+app.use(express.json());
+
+const anthropic = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+});
+
+app.post('/api/internal-triage', async (req, res) => {
+  const { requestText, requester } = req.body ?? {};
+
+  if (!requestText || !requestText.trim()) {
+    return res.status(400).json({ error: 'requestText is required' });
+  }
+
+  const message = await anthropic.messages.create({
+    model: 'claude-opus-4-6',
+    max_tokens: 800,
+    system: 'You classify internal support requests and respond with JSON only.',
+    messages: [
+      {
+        role: 'user',
+        content: [
+          {
+            type: 'text',
+            text:
+              'requester: ' +
+              (requester ?? 'unknown') +
+              '\nrequest: ' +
+              requestText,
+          },
+        ],
+      },
+    ],
+  });
+
+  const textBlock = message.content.find((block) => block.type === 'text');
+
+  res.json({
+    model: message.model,
+    result: textBlock?.text ?? '',
+  });
+});
+
+app.listen(process.env.PORT ?? 3001);</code></pre>
+          <p>This is not the final workflow. It is the first connectivity check. Once this route responds safely, replace the free-form <code>result</code> with the structured contract from the next section and then add tool calls and approval gates.</p>
+          <pre><code>curl http://localhost:3001/api/internal-triage \
+  -H "Content-Type: application/json" \
+  -d '{"requestText":"I need a laptop replacement. I do not have the asset number yet.","requester":"minji@company.com"}'</code></pre>
+          <p>On the frontend, keep the browser dumb. It should call your server, not Anthropic.</p>
+          <pre><code>const response = await fetch('/api/internal-triage', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    requestText,
+    requester: currentUser.email,
+  }),
+});
+
+const data = await response.json();</code></pre>
+          <p>The practical rule is simple: keep the key on the server, prove the first request with one narrow endpoint, and make the response shape something your backend can validate.</p>
+
+          <h3>Define the output contract before you write the prompt</h3>
+          <p>Suppose the workflow is internal support intake. The user writes freely. Claude Opus reads the request and returns the queue, priority, summary, missing fields, and whether human approval is required. That output shape should be fixed before you start tuning prompts.</p>
+          <p>The Messages API is stateless, so your application should own the workflow state and only send the model what the current step actually needs. In production, that keeps the system more inspectable and easier to recover.</p>
+          <p>A minimal first response object might look like this.</p>
+          <pre><code>{
+  "queue": "it_support | finance_ops | people_ops",
+  "priority": "low | normal | high",
+  "summary": "one or two sentence summary",
+  "missing_fields": ["asset_id", "cost_center"],
+  "needs_human_approval": true,
+  "reason": "why this queue and priority were selected"
+}</code></pre>
+          <p>Then make the write tool just as narrow.</p>
+          <pre><code>{
+  "name": "create_ticket_draft",
+  "description": "Create an internal ticket draft only after classification and summarization. Never send externally. Use this for draft creation only.",
+  "strict": true,
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "queue": { "type": "string", "enum": ["it_support", "finance_ops", "people_ops"] },
+      "priority": { "type": "string", "enum": ["low", "normal", "high"] },
+      "summary": { "type": "string" },
+      "requester": { "type": "string" },
+      "needs_human_approval": { "type": "boolean" }
+    },
+    "required": ["queue", "priority", "summary", "requester", "needs_human_approval"],
+    "additionalProperties": false
+  }
+}</code></pre>
+          <p>That is much easier to trust than free-form text plus downstream parsing. Structured outputs and strict tools are one of the biggest reliability upgrades you can make for internal service automation.</p>
+
+          <h3>Prompts matter, but boundaries matter more</h3>
+          <p>Claude Opus can handle long context, but long prompts are not the main source of quality. Clear boundaries usually matter more. Anthropic’s prompting guide emphasizes direct instructions, examples, XML tags, and self-checks.</p>
+          <p>In practice, five things should always be explicit.</p>
+          <ul>
+            <li>The model’s role in this step</li>
+            <li>Which data it may read</li>
+            <li>Which tools it may call and under what conditions</li>
+            <li>Which actions are forbidden</li>
+            <li>Which conditions require it to stop and ask for human review</li>
+          </ul>
+          <p>Adding a self-check at the end of the instruction set is especially useful: verify required fields, verify policy compliance, and verify whether the task crossed an approval boundary.</p>
+
+          <h3>Security decisions start before Files API or MCP</h3>
+          <p>This is where many internal projects get sloppy. Anthropic’s documentation notes that the Messages API can be eligible for Zero Data Retention when an organization has a ZDR arrangement. Files API is different: it is beta, not ZDR eligible, scoped to the workspace of the API key, and files persist until deleted.</p>
+          <p>That means convenience should not drive the first design. Files API is useful for repeated documents, but it should not become the default place to push sensitive HR, legal, finance, or regulated records without a retention review. Anthropic’s current limits also matter operationally: up to 500 MB per file and 100 GB total storage per organization.</p>
+          <p>The MCP connector has a similar warning profile. Anthropic documents it as beta and not ZDR eligible. For a first internal automation rollout, it is often cleaner to keep the execution layer inside your own backend and expose only narrow client-side tools to Claude instead of opening broad remote tool surfaces too early.</p>
+          <p>Prompt caching can be helpful when you repeatedly send long policy blocks or internal playbooks. Anthropic’s current docs say prompt caching stores KV cache representations and cryptographic hashes rather than raw prompt text, with an ephemeral 5-minute default lifetime. Still, caching should be an optimization choice, not an excuse to skip data classification.</p>
+
+          <h3>Approval design is what makes automation feel safe</h3>
+          <p>The strongest internal automations do not remove humans everywhere. They remove humans from the wrong places and keep them exactly where accountability matters. Anthropic’s guidance on agentic behavior also recommends explicit confirmation for destructive or hard-to-reverse actions.</p>
+          <p>A practical split looks like this.</p>
+          <ul>
+            <li>Auto-allow: classification, tagging, summarization, internal drafts</li>
+            <li>Conditionally allow: ticket draft creation, assignee suggestion, priority recommendation</li>
+            <li>Always require approval: external send, data mutation, permission changes, cost impact, customer-facing output</li>
+          </ul>
+          <p>The approval screen should show more than buttons. Show the evidence the model used, missing fields, expected side effects, and the exact tool call that would run next. If the reviewer cannot read it quickly, the automation has only moved the bottleneck.</p>
+
+          <h3>Roll out with an evaluation set, not a pretty demo</h3>
+          <p>Anthropic’s evaluation guidance is unusually practical here. Success should be multidimensional. For internal service automation, accuracy alone is not enough. You also need privacy preservation, latency, price, and review effort.</p>
+          <p>A good first rollout usually starts with a few hundred real historical cases. Anthropic explicitly recommends prioritizing volume over perfect manual grading when you can automate evaluation. That matches operational reality.</p>
+          <p>The first dashboard should probably include metrics like these.</p>
+          <ul>
+            <li>Correct queue-routing rate</li>
+            <li>Recall for missing required fields</li>
+            <li>Approval-needed classification accuracy</li>
+            <li>Unsafe auto-action rate</li>
+            <li>Average review time and end-to-end handling time</li>
+            <li>Token cost per request</li>
+          </ul>
+          <p>For offline backlogs, Message Batches can be useful, but note the retention implications before reaching for them.</p>
+
+          <h3>The operational tips that matter most are surprisingly simple</h3>
+          <ul>
+            <li>Use Claude Opus as the reviewer and planner, not as the cheapest parser in the stack.</li>
+            <li>Keep tools narrow, action-oriented, and schema-constrained.</li>
+            <li>Let your backend fill values it already knows instead of asking the model again.</li>
+            <li>Pass only the minimum relevant context, not raw database dumps.</li>
+            <li>Start with one team, one queue, and one reviewer before broadening scope.</li>
+          </ul>
+          <p>Automating internal services with Claude Opus is not really about removing human judgment. It is about preserving the moments where judgment matters and stripping away the operational friction around them. Once that boundary is designed well, the first automation usually lands faster than expected.</p>
+
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://platform.claude.com/docs/en/get-started" target="_blank" rel="noreferrer">Anthropic Docs: Get started with Claude</a></li>
+            <li><a href="https://platform.claude.com/docs/en/api/typescript/messages/create" target="_blank" rel="noreferrer">Anthropic Docs: Create a Message (TypeScript)</a></li>
+            <li><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools" target="_blank" rel="noreferrer">Anthropic Docs: Define tools</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/working-with-messages" target="_blank" rel="noreferrer">Anthropic Docs: Using the Messages API</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/files" target="_blank" rel="noreferrer">Anthropic Docs: Files API</a></li>
+            <li><a href="https://platform.claude.com/docs/en/agents-and-tools/mcp-connector" target="_blank" rel="noreferrer">Anthropic Docs: MCP connector</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" target="_blank" rel="noreferrer">Anthropic Docs: Prompt caching</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" target="_blank" rel="noreferrer">Anthropic Docs: Prompting best practices</a></li>
+            <li><a href="https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks" target="_blank" rel="noreferrer">Anthropic Docs: Mitigate jailbreaks and prompt injections</a></li>
+            <li><a href="https://platform.claude.com/docs/en/test-and-evaluate/develop-tests" target="_blank" rel="noreferrer">Anthropic Docs: Define success criteria and build evaluations</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/zero-data-retention" target="_blank" rel="noreferrer">Anthropic Docs: Zero Data Retention</a></li>
+          </ul>
+        `,
+      },
+      ja: {
+        title: 'Claude Opusで社内サービス自動化を組み込む、いちばん現実的な進め方',
+        keywords: ['AI'],
+        excerpt: '社内自動化は、Claude Opusを何でも答えるチャットとして置くより、狭い業務ループの判断エンジンとして使うほうがはるかに安定します。',
+        heroImage: {
+          alt: 'チケットキュー、文書要約、承認チェックリストが表示された社内自動化ダッシュボードを運用担当者が確認している様子',
+          caption: 'Claude Opusは汎用チャット画面より、社内ツールと承認フローの中に置いたほうが実務で力を発揮します。',
+        },
+        contentHtml: `
+          <p>社内サービス自動化を始めるとき、多くのチームは先にチャット画面を作ろうとします。けれど実務では、自由会話の入り口より、ひとつの業務を最後まで安全に流せる小さな運用ループを先に作るほうがずっと現実的です。</p>
+          <p>2026年4月2日時点で、Anthropicの公式ドキュメントは複雑なツール利用や曖昧な問い合わせには最新の Claude Opus 4.6 を勧めています。つまり Claude Opus は「社内システムに話しかけるAI」より、<strong>判断と調整の中心</strong>として置くほうが向いています。</p>
+          <p>実際に重要なのは、どの業務から始めるか、出力の形をどう固定するか、どこで人に戻すか、そして保持と権限の境界をどう切るかです。</p>
+
+          <h3>最初に自動化すべきなのは、戻せる業務です</h3>
+          <p>最初の対象は、最も重要な意思決定ではありません。毎日面倒で、でも人が見ればすぐに直せる業務です。</p>
+          <blockquote>最初の自動化対象は、最終判断そのものではなく、人が素早く確認し、必要なら安全に差し戻せる運用判断であるべきです。</blockquote>
+          <p>たとえば次のような仕事です。</p>
+          <ul>
+            <li>社内依頼を適切なキューへ振り分ける</li>
+            <li>Slack、メール、フォームの依頼をチケット草案に変える</li>
+            <li>長い障害メモや運用文書を要約し、次のアクションを整理する</li>
+            <li>社内FAQや運用サポートの返答草案を作る</li>
+            <li>承認前の確認メモをまとめる</li>
+          </ul>
+          <p>逆に、外部送信、権限変更、金額反映、人事判断のような戻しにくい操作を最初から任せるのは避けたほうが安全です。</p>
+
+          <h3>安定する形は、薄い運用パイプラインです</h3>
+          <p>実務でうまくいきやすいのは、「ユーザーが話す、モデルが全部やる」という形ではありません。もっと細いパイプラインです。</p>
+          <ol>
+            <li>Slack、メール、フォーム、社内ポータルから依頼を受ける</li>
+            <li>入力形式エラー、プロンプトインジェクション兆候、ポリシー違反を軽く先に弾く</li>
+            <li>必要な規程、履歴、ユーザー属性だけを絞って文脈として渡す</li>
+            <li>Claude Opusに分類、要約、不足項目、承認要否を判断させる</li>
+            <li>下書き作成など狭いスキーマのツールだけを見せる</li>
+            <li>不可逆な操作の前で承認を要求する</li>
+            <li>根拠、判断、承認者、実行結果を監査ログとして残す</li>
+          </ol>
+          <p>Anthropicのツール定義ガイドが説明文とスキーマを丁寧に書くよう勧めるのはこのためです。自動化は結局、モデルに見せる道具の幅をどう切るかで安定度が変わります。</p>
+          <p>また、安価な前段フィルタと深い判断を分けるのも有効です。Anthropicのガードレール文書でも、入力スクリーニングには Claude Haiku 4.5 のような軽量モデルを使えると案内されています。</p>
+
+          <h3>API設定は、必ずサーバー側から始めます</h3>
+          <p>ここが最初のつまずきやすい場所です。Anthropic Console で API キーを発行したら、そのキーは必ずサーバー環境変数としてだけ保管します。フロントエンドに置いた時点で、保護の前提が崩れます。</p>
+          <p>特に Vite では、<code>VITE_</code> で始まる環境変数はブラウザ用バンドルに公開されます。つまり <code>VITE_ANTHROPIC_API_KEY</code> のような名前は作ってはいけません。安全な形は常に「ブラウザ → 自分のサーバー → Anthropic API」です。</p>
+          <p>今のプロダクトが静的フロントエンドだけでも同じです。小さな Node サービスかサーバーレス関数を用意し、Anthropic の呼び出しはそこだけに閉じ込めます。</p>
+          <p>最初のセットアップは次の四段階で十分です。</p>
+          <ol>
+            <li>Anthropic Console で API キーを発行する</li>
+            <li>バックエンドまたはサーバーレス実行環境に <code>ANTHROPIC_API_KEY</code> として保存する</li>
+            <li><code>/api/internal-triage</code> のような細い内部エンドポイントを一つ作る</li>
+            <li>ブラウザ UI は Anthropic ではなく、そのエンドポイントだけを呼ぶ</li>
+          </ol>
+          <p>最初の接続確認なら、Node の最小例で十分です。</p>
+          <pre><code>npm install @anthropic-ai/sdk express dotenv</code></pre>
+          <pre><code>ANTHROPIC_API_KEY=your_api_key_here
+PORT=3001</code></pre>
+          <pre><code>import 'dotenv/config';
+import express from 'express';
+import Anthropic from '@anthropic-ai/sdk';
+
+const app = express();
+app.use(express.json());
+
+const anthropic = new Anthropic({
+  apiKey: process.env.ANTHROPIC_API_KEY,
+});
+
+app.post('/api/internal-triage', async (req, res) => {
+  const { requestText, requester } = req.body ?? {};
+
+  if (!requestText || !requestText.trim()) {
+    return res.status(400).json({ error: 'requestText is required' });
+  }
+
+  const message = await anthropic.messages.create({
+    model: 'claude-opus-4-6',
+    max_tokens: 800,
+    system: 'You classify internal support requests and respond with JSON only.',
+    messages: [
+      {
+        role: 'user',
+        content: [
+          {
+            type: 'text',
+            text:
+              'requester: ' +
+              (requester ?? 'unknown') +
+              '\nrequest: ' +
+              requestText,
+          },
+        ],
+      },
+    ],
+  });
+
+  const textBlock = message.content.find((block) => block.type === 'text');
+
+  res.json({
+    model: message.model,
+    result: textBlock?.text ?? '',
+  });
+});
+
+app.listen(process.env.PORT ?? 3001);</code></pre>
+          <p>これは完成版の自動化ではなく、最初の疎通確認です。まずこの段階で安全に応答することを確かめ、その後で次の節にある構造化出力契約とツール呼び出し、承認ゲートを足していきます。</p>
+          <pre><code>curl http://localhost:3001/api/internal-triage \
+  -H "Content-Type: application/json" \
+  -d '{"requestText":"ノートPCの交換を依頼したいです。資産番号はまだ分かりません。","requester":"minji@company.com"}'</code></pre>
+          <p>フロントエンドは Anthropic SDK を直接使わず、自分のサーバーだけを呼びます。</p>
+          <pre><code>const response = await fetch('/api/internal-triage', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    requestText,
+    requester: currentUser.email,
+  }),
+});
+
+const data = await response.json();</code></pre>
+          <p>実務上のルールは単純です。キーはサーバーにだけ置く。最初の一回は細いエンドポイントで疎通確認する。モデルの返答はバックエンドで検証できる形に固定する。この三つです。</p>
+
+          <h3>プロンプトより先に、出力契約を決めます</h3>
+          <p>たとえば運用サポート受付を自動化するなら、ユーザーは自由入力で依頼を出し、Claude Opusはキュー、優先度、要約、不足項目、人の承認が必要かどうかを返します。この出力の形は、プロンプト調整より先に固定したほうがうまくいきます。</p>
+          <p>Messages APIは stateless なので、会話状態はアプリ側が持ち、モデルには今のステップに必要な情報だけを渡します。そのほうが障害時の復元もしやすく、監査もしやすくなります。</p>
+          <p>最小構成なら次のような形です。</p>
+          <pre><code>{
+  "queue": "it_support | finance_ops | people_ops",
+  "priority": "low | normal | high",
+  "summary": "一文から二文の要約",
+  "missing_fields": ["asset_id", "cost_center"],
+  "needs_human_approval": true,
+  "reason": "なぜそのキューと優先度にしたか"
+}</code></pre>
+          <p>書き込み側のツールも同じくらい狭く保ちます。</p>
+          <pre><code>{
+  "name": "create_ticket_draft",
+  "description": "分類と要約が済んだ後にだけ、社内チケットの草案を作成する。外部送信には使わない。草案作成専用。",
+  "strict": true,
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "queue": { "type": "string", "enum": ["it_support", "finance_ops", "people_ops"] },
+      "priority": { "type": "string", "enum": ["low", "normal", "high"] },
+      "summary": { "type": "string" },
+      "requester": { "type": "string" },
+      "needs_human_approval": { "type": "boolean" }
+    },
+    "required": ["queue", "priority", "summary", "requester", "needs_human_approval"],
+    "additionalProperties": false
+  }
+}</code></pre>
+          <p>自由文を後で解析する方式より、構造化出力と strict tool use のほうが社内自動化では圧倒的に運用しやすくなります。</p>
+
+          <h3>長いプロンプトより、境界の明確さが効きます</h3>
+          <p>Claude Opusは長い文脈を扱えますが、品質を決めるのはプロンプトの長さより境界の明確さです。Anthropicのプロンプトガイドも、明確で直接的な指示、例示、XMLタグ、自己確認を勧めています。</p>
+          <p>実務では、少なくとも次の五つを必ず明示します。</p>
+          <ul>
+            <li>このステップでの役割</li>
+            <li>読んでよいデータ範囲</li>
+            <li>呼び出してよいツールと条件</li>
+            <li>禁止される操作</li>
+            <li>止まって人に戻すべき条件</li>
+          </ul>
+          <p>最後に、必須項目とポリシー整合性を自己確認させる一文を入れるだけでも、仕上がりはかなり安定します。</p>
+
+          <h3>Files APIとMCPを使う前に、保持方針を決めます</h3>
+          <p>ここが運用で一番差が出るところです。Anthropicの文書では、Messages APIはZDR契約のある組織では Zero Data Retention の対象になりえます。一方で Files API はベータで、ZDR対象ではなく、APIキーの属するワークスペース単位で共有され、削除するまで残ります。</p>
+          <p>つまり便利だからという理由だけで、HR文書、契約書、財務データ、規制対象データをそのまま上げるべきではありません。最初の社内自動化では、社内バックエンドで必要な事実だけを抽出して Claude Opus に渡す構成のほうが安全です。現行ドキュメントでは Files API の上限は1ファイル500MB、組織全体100GBです。</p>
+          <p>MCP connector も同様に、Anthropic文書ではベータかつ ZDR対象外です。最初の社内自動化では、遠隔MCPを広く開くより、自社バックエンドで実行レイヤーを管理し、Claudeには狭いクライアントツールだけを見せるほうが監査しやすいです。</p>
+          <p>長い規程文書を何度も渡す場合は prompt caching が役立ちます。Anthropicの最近の文書では、キャッシュは生の文章ではなくKVキャッシュ表現とハッシュを保持し、既定寿命は5分の ephemeral です。ただし Opus 4.6 と Opus 4.5 では最低4096トークンが必要なので、短い入力に無理に使う必要はありません。</p>
+
+          <h3>承認の置き方で、自動化の安心感は決まります</h3>
+          <p>強い自動化は、人をすべて外すことではありません。人が要らない場所から外し、責任が残る場所には確実に残すことです。Anthropicのガイドも、破壊的または戻しにくい操作には明示的な確認を置くことを勧めています。</p>
+          <p>実務では次の分け方が扱いやすいです。</p>
+          <ul>
+            <li>自動許可: 分類、タグ付け、要約、社内草案作成</li>
+            <li>条件付き許可: チケット草案作成、担当候補提案、優先度提案</li>
+            <li>必ず承認: 外部送信、データ変更、権限変更、金額反映、顧客向け文面</li>
+          </ul>
+          <p>承認画面はボタンだけでは不十分です。モデルが見た根拠、不足項目、予想される影響、次に実行されるツール呼び出しまで見せて、レビュアーが短時間で読めるようにする必要があります。</p>
+
+          <h3>きれいなデモより、評価セットで始めたほうが伸びます</h3>
+          <p>Anthropicの評価ガイドで特に実務的なのは、成功基準を一つにしないことです。社内自動化では正答率だけでは足りません。業務適合性、プライバシー保全、遅延、コスト、レビュー負荷を一緒に見なければなりません。</p>
+          <p>最初の導入では、実際の履歴ケースを数百件集めて評価セットを作るほうが有効です。文書でも、自動評価が可能なら、少数の高品質手採点より多くのケースを回すほうがよいと勧めています。</p>
+          <p>最初に追う指標は次のようなものです。</p>
+          <ul>
+            <li>正しいキュー振り分け率</li>
+            <li>必須不足項目の検出再現率</li>
+            <li>承認必要判定の精度</li>
+            <li>危険な自動実行率</li>
+            <li>平均レビュー時間と処理時間</li>
+            <li>1件あたりのトークン費用</li>
+          </ul>
+
+          <h3>最後に残る運用コツは、むしろ単純です</h3>
+          <ul>
+            <li>Claude Opusはパーサーより審査役として使います。</li>
+            <li>ツールは狭く、動詞中心で、スキーマを厳しく保ちます。</li>
+            <li>バックエンドがすでに知っている値はモデルに再推論させません。</li>
+            <li>渡す文脈は必要最小限に絞ります。</li>
+            <li>最初は一つのチーム、一つのキュー、一人のレビュアーで始めます。</li>
+          </ul>
+          <p>Claude Opusで社内サービスを自動化するというのは、人間の判断そのものを消すことではありません。本当に判断が必要な瞬間だけを鮮明に残し、その前後の摩擦を減らすことに近いです。その境界がきれいに引ければ、最初の自動化は思ったより早く現場に乗ります。</p>
+
+          <h3>参考資料</h3>
+          <ul>
+            <li><a href="https://platform.claude.com/docs/en/get-started" target="_blank" rel="noreferrer">Anthropic Docs: Get started with Claude</a></li>
+            <li><a href="https://platform.claude.com/docs/en/api/typescript/messages/create" target="_blank" rel="noreferrer">Anthropic Docs: Create a Message (TypeScript)</a></li>
+            <li><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/define-tools" target="_blank" rel="noreferrer">Anthropic Docs: Define tools</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/working-with-messages" target="_blank" rel="noreferrer">Anthropic Docs: Using the Messages API</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/files" target="_blank" rel="noreferrer">Anthropic Docs: Files API</a></li>
+            <li><a href="https://platform.claude.com/docs/en/agents-and-tools/mcp-connector" target="_blank" rel="noreferrer">Anthropic Docs: MCP connector</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching" target="_blank" rel="noreferrer">Anthropic Docs: Prompt caching</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" target="_blank" rel="noreferrer">Anthropic Docs: Prompting best practices</a></li>
+            <li><a href="https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/mitigate-jailbreaks" target="_blank" rel="noreferrer">Anthropic Docs: Mitigate jailbreaks and prompt injections</a></li>
+            <li><a href="https://platform.claude.com/docs/en/test-and-evaluate/develop-tests" target="_blank" rel="noreferrer">Anthropic Docs: Define success criteria and build evaluations</a></li>
+            <li><a href="https://platform.claude.com/docs/en/build-with-claude/zero-data-retention" target="_blank" rel="noreferrer">Anthropic Docs: Zero Data Retention</a></li>
+          </ul>
+        `,
+      },
+    },
+  },
+  {
     slug: 'how-agentic-ai-physical-ai-and-digital-twin-come-together-in-healthcare',
     category: 'healthcare',
     createdAt: '2026-04-01T12:40:00+09:00',
