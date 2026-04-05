@@ -183,7 +183,7 @@
     "publications": {
         "title": "主な論文",
         "journalPapers": "論文5本",
-        "posterTitle": "学会発表記録",
+        "posterTitle": "ポスター記録",
         "linkAvailable": "リンクあり",
         "posterLinkCta": "公式記録を見る",
         "detailsTitle": "論文詳細",
@@ -204,7 +204,7 @@
         "presentations": [
             {
                 "date": "2024",
-                "title": "KOSCOPP 2024",
+                "title": "大韓リハビリテーション医学会 秋季学術大会 2024",
                 "venue": "学会ポスター発表",
                 "format": "Poster",
                 "link": "https://www.karm.or.kr/workshop/?abyear=202402&mode=green_view&sid=5985"
@@ -217,7 +217,7 @@
                 "link": "https://journals.sagepub.com/doi/epub/10.1177/17474930251371448"
             },
             {
-                "date": "2026-04-17 to 2026-04-18",
+                "date": "2026",
                 "title": "大韓リハビリテーション医学会 春季学術大会 2026",
                 "venue": "学会ポスター発表",
                 "format": "Poster",

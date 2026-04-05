@@ -183,7 +183,7 @@
     "publications": {
         "title": "주요 논문",
         "journalPapers": "논문 5편",
-        "posterTitle": "학회 발표 기록",
+        "posterTitle": "포스터 기록",
         "linkAvailable": "링크 보기",
         "posterLinkCta": "공식 기록 보기",
         "detailsTitle": "논문 상세",
@@ -204,7 +204,7 @@
         "presentations": [
             {
                 "date": "2024",
-                "title": "KOSCOPP 2024",
+                "title": "대한재활의학회 추계학술대회 2024",
                 "venue": "학회 포스터 발표",
                 "format": "Poster",
                 "link": "https://www.karm.or.kr/workshop/?abyear=202402&mode=green_view&sid=5985"
@@ -217,7 +217,7 @@
                 "link": "https://journals.sagepub.com/doi/epub/10.1177/17474930251371448"
             },
             {
-                "date": "2026-04-17 to 2026-04-18",
+                "date": "2026",
                 "title": "대한재활의학회 춘계학술대회 2026",
                 "venue": "학회 포스터 발표",
                 "format": "Poster",
