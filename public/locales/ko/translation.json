@@ -182,10 +182,10 @@
     },
     "publications": {
         "title": "주요 논문",
-        "journalPapers": "대표 논문 3편",
-        "posterTitle": "학회 포스터",
+        "journalPapers": "논문 5편",
+        "posterTitle": "학회 발표 기록",
         "linkAvailable": "링크 보기",
-        "posterLinkCta": "초록 / 원문 보기",
+        "posterLinkCta": "공식 기록 보기",
         "detailsTitle": "논문 상세",
         "coreSummary": "핵심 요약",
         "closeBtn": "닫기",
@@ -201,6 +201,29 @@
         "morePapersHint": "추가 {{count}}편은 전체 목록에서 확인할 수 있습니다",
         "fullListLabel": "아카이브",
         "fullListTitle": "전체 논문 목록",
+        "presentations": [
+            {
+                "date": "2024",
+                "title": "KOSCOPP 2024",
+                "venue": "학회 포스터 발표",
+                "format": "Poster",
+                "link": "https://www.karm.or.kr/workshop/?abyear=202402&mode=green_view&sid=5985"
+            },
+            {
+                "date": "2025",
+                "title": "AI-Driven Cognitive Intervention E-Poster",
+                "venue": "전자 포스터 발표 기록",
+                "format": "E-Poster",
+                "link": "https://journals.sagepub.com/doi/epub/10.1177/17474930251371448"
+            },
+            {
+                "date": "2026-04-17 to 2026-04-18",
+                "title": "대한재활의학회 춘계학술대회 2026",
+                "venue": "학회 포스터 발표",
+                "format": "Poster",
+                "link": "https://www.karm.or.kr/workshop/?abyear=202601&mode=green_view&sid=6566"
+            }
+        ],
         "roles": {
             "first": "제1저자",
             "co": "공저자"

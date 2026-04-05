@@ -182,10 +182,10 @@
     },
     "publications": {
         "title": "Selected Publications",
-        "journalPapers": "Featured papers",
-        "posterTitle": "Conference Posters",
+        "journalPapers": "All papers",
+        "posterTitle": "Conference Presentations",
         "linkAvailable": "Link available",
-        "posterLinkCta": "View abstract / paper",
+        "posterLinkCta": "View official record",
         "detailsTitle": "Publication Details",
         "coreSummary": "Core Summary",
         "closeBtn": "Close",
@@ -201,6 +201,29 @@
         "morePapersHint": "{{count}} more in the full list",
         "fullListLabel": "Archive",
         "fullListTitle": "Complete publication list",
+        "presentations": [
+            {
+                "date": "2024",
+                "title": "KOSCOPP 2024",
+                "venue": "Conference poster presentation",
+                "format": "Poster",
+                "link": "https://www.karm.or.kr/workshop/?abyear=202402&mode=green_view&sid=5985"
+            },
+            {
+                "date": "2025",
+                "title": "AI-Driven Cognitive Intervention E-Poster",
+                "venue": "Conference e-poster record",
+                "format": "E-Poster",
+                "link": "https://journals.sagepub.com/doi/epub/10.1177/17474930251371448"
+            },
+            {
+                "date": "Apr 17-18, 2026",
+                "title": "Korean Academy of Rehabilitation Medicine Spring Conference 2026",
+                "venue": "Conference poster presentation",
+                "format": "Poster",
+                "link": "https://www.karm.or.kr/workshop/?abyear=202601&mode=green_view&sid=6566"
+            }
+        ],
         "roles": {
             "first": "1st Author",
             "co": "Co-author"
