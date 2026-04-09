@@ -49,6 +49,285 @@ export const getLocalizedBlogPost = (post, language = DEFAULT_BLOG_LOCALE) => {
 
 export const blogPosts = [
   {
+    slug: 'how-to-use-ai-agents-on-threads-and-x-for-real-work',
+    category: 'ai',
+    createdAt: '2026-04-09T23:40:00+09:00',
+    heroImage: {
+      src: '/blog/threads-x-ai-agent-hero.svg',
+    },
+    locales: {
+      ko: {
+        title: 'Threads와 X에서 AI 에이전트를 어떻게 써야 실제 성과가 날까',
+        keywords: ['AI'],
+        excerpt: '같은 소셜 플랫폼처럼 보여도, X는 실시간 신호 탐지와 승인형 응답에, Threads는 대화 확장과 인사이트 기반 운영에 더 잘 맞습니다.',
+        heroImage: {
+          alt: '왼쪽에는 X 실시간 피드 카드가, 오른쪽에는 Threads 대화 카드가, 가운데에는 신호 스캔과 답변 초안, 스케줄링이 표시된 AI 에이전트 패널이 놓인 대시보드 일러스트',
+          caption: '소셜용 AI 에이전트는 모든 플랫폼에서 똑같이 움직일수록 약해집니다. X는 신호를 잡고, Threads는 대화를 키우는 식으로 역할을 나눌 때 훨씬 현실적입니다.',
+        },
+        contentHtml: `
+          <p>소셜 채널에 AI 에이전트를 붙인다고 하면 많은 분들이 먼저 자동 포스팅부터 떠올립니다. 하지만 2026년 4월 9일 기준으로 보면, 지금 실무에서 성과가 나는 방식은 “둘 다 자동으로 많이 올리는 구조”가 아닙니다.</p>
+          <p><strong>X는 실시간 신호를 빨리 잡고, 문의와 반응을 구조화하는 쪽</strong>에 더 잘 맞습니다. 반대로 <strong>Threads는 대화를 길게 키우고, 주제 태그와 인사이트로 커뮤니티를 넓히는 쪽</strong>에 더 잘 맞습니다. 둘을 같은 플랫폼처럼 다루면 오히려 성과가 흐려집니다.</p>
+          <p>이 글은 Threads와 X에 AI 에이전트를 어떻게 붙여야 실제로 도움이 되는지, 그리고 어디까지 자동화하고 어디서 사람 승인을 남겨야 하는지를 공식 기능과 최근 업데이트 기준으로 정리한 글입니다.</p>
+
+          <h3>핵심은 “한 에이전트, 두 역할”이 아니라 “두 플랫폼, 다른 역할”이다</h3>
+          <p>이 구분은 감으로 하는 얘기가 아닙니다. X 공식 문서는 여전히 검색, 스트림, DM, 자동응답 정책을 중심으로 설계되어 있습니다. 반면 Threads는 2024년 8월부터 인사이트, 다중 초안, 예약 발행을 넣었고, 2024년 10월에는 replies가 전체 조회의 거의 절반을 만든다고 직접 밝혔습니다. 2025년에는 topic, custom feed, follow import, fediverse feed, community까지 붙었습니다.</p>
+          <blockquote>제 해석은 단순합니다. X에서는 AI 에이전트를 “리스너이자 분류기”로 두는 편이 좋고, Threads에서는 “대화 설계자이자 운영 보조”로 두는 편이 좋습니다.</blockquote>
+          <p>즉, X는 먼저 세상이 무슨 말을 하는지 읽는 곳이고, Threads는 읽어낸 신호를 더 긴 대화와 커뮤니티 흐름으로 바꾸는 곳에 가깝습니다.</p>
+
+          <h3>X에서는 AI 에이전트를 신호 탐지와 승인형 응답에 붙이는 편이 맞다</h3>
+          <p>X API는 여전히 실시간 감지 역량이 강합니다. 최근 검색은 지난 7일 데이터를 다루고, filtered stream은 규칙에 맞는 게시물을 거의 실시간으로 받을 수 있으며, X 문서는 filtered stream의 P99 지연을 대략 6~7초 수준으로 설명합니다. 여기에 full-archive search와 counts를 섞으면 짧은 반응뿐 아니라 장기 흐름까지 같이 볼 수 있습니다.</p>
+          <p>이 구조에서 AI 에이전트가 잘하는 일은 꽤 분명합니다.</p>
+          <ol>
+            <li>키워드와 계정, 해시태그 기준으로 게시물을 계속 받아온다.</li>
+            <li>불만, 질문, 구매 신호, 기능 요청, 경쟁사 언급으로 자동 분류한다.</li>
+            <li>같은 주제를 묶어서 “오늘 바로 반응할 것”, “이번 주 콘텐츠로 풀 것”, “나중에 제품 개선 백로그로 넘길 것”으로 나눈다.</li>
+            <li>DM이나 reply 초안을 만들되, 실제 발송은 사람이 승인한다.</li>
+          </ol>
+          <p>특히 고객지원이나 세일즈 초기 접점에서는 DM 구조가 유용합니다. X는 공식 문서에서 Direct Messages와 group conversations를 지원하고, <code>dm.write</code>, <code>dm.read</code> 스코프도 따로 제시합니다. 즉, AI 에이전트는 멘션에서 바로 모든 답을 공개적으로 던지기보다, 우선순위가 높은 대화를 private channel로 넘기는 도우미로 설계하는 편이 더 현실적입니다.</p>
+          <p>다만 자동응답은 조심해야 합니다. X의 2025년 10월 기준 자동화 규칙은 키워드 검색만으로 무작위 reply를 보내는 방식을 허용하지 않고, AI 기반 자동 reply bot도 사전 서면 승인을 요구합니다. 게다가 웹 화면을 스크립트로 긁어 자동화하는 방식은 계정 영구 정지까지 갈 수 있다고 명시합니다.</p>
+          <p>그래서 X에서 안전한 실무 패턴은 이쪽입니다.</p>
+          <ul>
+            <li>읽기: 검색, 스트림, 카운트, 멘션 수집은 적극적으로 자동화한다.</li>
+            <li>쓰기: 게시물 초안, 요약, DM 초안까지만 자동화하고 발행은 승인형으로 둔다.</li>
+            <li>응답: 사용자가 먼저 반응했거나 DM을 보낸 경우에만 후속 자동화를 붙인다.</li>
+            <li>리스크: “많이 답하기”보다 “맞는 사람에게 정확히 답하기”를 우선한다.</li>
+          </ul>
+
+          <h3>Threads에서는 AI 에이전트를 대화 확장과 운영 루틴에 붙이는 편이 더 낫다</h3>
+          <p>Threads는 최근 업데이트를 보면 방향이 꽤 선명합니다. 2024년 8월 Meta는 creators와 businesses를 위해 insights, multiple drafts, scheduling을 발표했습니다. 2024년 10월에는 replies가 전체 조회의 거의 절반을 차지하고, 주 2~5회 게시가 audience build에 도움이 된다고 설명했습니다. 2025년 3월에는 topic이 포함된 게시물이 더 많은 조회를 받는다고 했고, 2025년 10월 업데이트에서는 reply approvals로 댓글 공개 여부를 직접 고를 수 있게 했습니다.</p>
+          <p>여기에 2025년 4월에는 Threads 웹에서 custom feeds, auto-update, favorite searches, insights column, 그리고 X부터 시작하는 follow list import 테스트를 붙였습니다. 2025년 6월에는 fediverse search와 dedicated feed를 넣어 Threads 밖의 작성자도 안으로 끌어왔고, 2025년 10월에는 communities를 공개하면서 주제 중심의 공간을 더 분명히 만들었습니다. 2026년 2월의 Dear Algo는 사용자가 공개 글로 피드 선호를 직접 조절하는 AI 기능까지 보여줬습니다.</p>
+          <p>이 기능들을 묶어 보면, Threads에서 AI 에이전트가 가장 잘하는 일은 “대화를 길게 키우는 운영 루프”입니다.</p>
+          <ol>
+            <li>X에서 발견한 신호를 Threads 문법에 맞는 질문형 포스트로 바꾼다.</li>
+            <li>주제 태그와 톤을 맞춰서 초안을 여러 개 저장한다.</li>
+            <li>예약 발행으로 리듬을 유지한다.</li>
+            <li>인사이트를 읽어 어떤 주제가 replies와 views를 만들었는지 비교한다.</li>
+            <li>reply approvals와 필터로 대화 질을 관리한다.</li>
+            <li>custom feed, fediverse, communities를 통해 비슷한 관심사의 대화를 계속 탐색한다.</li>
+          </ol>
+          <p>즉, Threads에서는 AI 에이전트를 “콘텐츠 공장”으로 쓰는 것보다, <strong>대화 큐레이터</strong>로 두는 편이 낫습니다. 같은 신호라도 X에서는 속도와 분류가 중요하고, Threads에서는 그 신호를 누가 더 오래 이야기하게 만들 수 있는지가 중요하기 때문입니다.</p>
+          <p>제가 보기에 Threads용 AI 에이전트는 특히 아래 같은 운영에 잘 맞습니다.</p>
+          <ul>
+            <li>브랜드 계정이 아니라 개인 브랜드나 1인 사업자의 의견형 포스팅 운영</li>
+            <li>뉴스 링크를 던지는 대신 해석과 질문을 던지는 포맷 실험</li>
+            <li>한 주제에 대한 댓글 흐름을 보고 후속 글을 이어가는 연재형 운영</li>
+            <li>커뮤니티 안에서 반복 등장하는 질문을 잡아 다음 글 주제로 연결하는 루프</li>
+          </ul>
+
+          <h3>실제로는 이렇게 쓰는 편이 가장 안정적이다</h3>
+          <p>혼자 운영하는 경우라면 거창한 에이전트 시스템보다 아래 7단계만 먼저 붙여도 충분합니다.</p>
+          <ol>
+            <li><strong>감시 키워드 정의</strong>: 제품명, 경쟁사명, 문제 키워드, 구매 의도 키워드, 산업 키워드를 정합니다.</li>
+            <li><strong>X 스캔</strong>: recent search와 filtered stream으로 오늘의 신호를 모읍니다.</li>
+            <li><strong>에이전트 분류</strong>: 질문, 불만, 트렌드, 리드, 콘텐츠 후보로 나눕니다.</li>
+            <li><strong>Threads 변환</strong>: 가장 쓸 만한 2~3개를 해설형 포스트와 질문형 포스트로 바꿉니다.</li>
+            <li><strong>사람 승인</strong>: 실제 게시 전에는 제목, 톤, 민감 표현만 사람이 검토합니다.</li>
+            <li><strong>예약 발행과 댓글 운영</strong>: Threads는 예약과 replies 운영, X는 멘션·DM triage에 집중합니다.</li>
+            <li><strong>인사이트 환류</strong>: 어떤 topic, 어떤 질문, 어떤 시간대가 가장 반응이 좋았는지 다시 반영합니다.</li>
+          </ol>
+          <p>이 구조의 장점은 두 가지입니다. 첫째, X의 속도와 Threads의 대화성을 동시에 살릴 수 있습니다. 둘째, 자동화가 있어도 계정 리스크를 과하게 높이지 않습니다.</p>
+
+          <h3>하지 않는 편이 나은 방식도 분명하다</h3>
+          <p>반대로 실무에서 자주 보이는 나쁜 패턴도 있습니다.</p>
+          <ul>
+            <li>같은 문장을 X와 Threads에 그대로 동시 복붙하는 것</li>
+            <li>X에서 키워드만 보고 자동 reply를 무차별 발송하는 것</li>
+            <li>Threads를 외부 링크 유도 채널처럼만 쓰는 것</li>
+            <li>AI가 만든 답변을 승인 없이 바로 멘션과 DM으로 보내는 것</li>
+            <li>플랫폼별 말투 차이를 무시하고 한 톤으로만 운영하는 것</li>
+          </ul>
+          <p>지금 공개된 기능만 놓고 보면, Threads는 “계속 얘기하고 싶게 만드는 구조”가 강하고 X는 “무슨 일이 벌어지는지 제일 먼저 잡는 구조”가 강합니다. 이건 제가 2024년 8월부터 2026년 2월까지의 Meta와 X 공식 업데이트를 묶어 해석한 결론입니다.</p>
+
+          <h3>지금 바로 시작한다면, X는 듣고 Threads는 키우는 구조로 가면 된다</h3>
+          <p>AI 에이전트를 소셜에 붙일 때 진짜 중요한 질문은 “얼마나 많이 자동화할까”가 아닙니다. <strong>어떤 플랫폼에서 어떤 종류의 일을 맡길까</strong>입니다.</p>
+          <p>X에서는 듣기, 분류, DM 전환, 승인형 응답이 중심이 되는 편이 좋습니다. Threads에서는 해설형 초안, 예약 발행, 댓글 선별, 인사이트 환류, 커뮤니티 연결이 중심이 되는 편이 좋습니다. 이 역할 분리를 해두면 AI 에이전트는 단순 복붙 도구가 아니라 실제 운영자처럼 움직이기 시작합니다.</p>
+          <p>저는 지금 시점에서 소셜용 AI 에이전트를 이렇게 정의하는 편이 맞다고 봅니다. X에서 먼저 신호를 잡고, Threads에서 그 신호를 사람이 계속 머무는 대화로 바꾸는 도구입니다.</p>
+
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://about.fb.com/news/2024/08/new-threads-features-for-creators-and-businesses/" target="_blank" rel="noreferrer">Meta Newsroom: New Threads Features for Creators and Businesses</a></li>
+            <li><a href="https://about.fb.com/news/2024/10/find-your-community-with-new-threads-educational-insights/" target="_blank" rel="noreferrer">Meta Newsroom: Find Your Community With New Threads Educational Insights</a></li>
+            <li><a href="https://about.fb.com/news/2025/03/new-threads-features-more-personalized-experience-you-control/" target="_blank" rel="noreferrer">Meta Newsroom: New Threads Features for a More Personalized Experience That You Control</a></li>
+            <li><a href="https://about.fb.com/news/2025/04/new-features-threads-web-experience/" target="_blank" rel="noreferrer">Meta Newsroom: New Features for the Threads Web Experience</a></li>
+            <li><a href="https://about.fb.com/news/2025/06/its-now-easier-see-more-fediverse-content-threads/" target="_blank" rel="noreferrer">Meta Newsroom: It’s Now Easier to See More Fediverse Content on Threads</a></li>
+            <li><a href="https://about.fb.com/news/2025/10/introducing-threads-communities-find-your-people/" target="_blank" rel="noreferrer">Meta Newsroom: Introducing Threads Communities</a></li>
+            <li><a href="https://about.fb.com/news/2026/02/threads-dear-algo/" target="_blank" rel="noreferrer">Meta Newsroom: Control Your Threads Feed With New Dear Algo Feature</a></li>
+            <li><a href="https://techcrunch.com/2024/06/18/threads-finally-launches-its-api-for-developers/" target="_blank" rel="noreferrer">TechCrunch: Threads finally launches its API for developers</a></li>
+            <li><a href="https://docs.x.com/x-api/introduction" target="_blank" rel="noreferrer">X Docs: X API introduction</a></li>
+            <li><a href="https://docs.x.com/x-api/posts/search-recent-posts" target="_blank" rel="noreferrer">X Docs: Search recent Posts</a></li>
+            <li><a href="https://docs.x.com/x-api/posts/filtered-stream/introduction" target="_blank" rel="noreferrer">X Docs: Filtered Stream</a></li>
+            <li><a href="https://docs.x.com/enterprise-api/direct-messages/manage/quickstart" target="_blank" rel="noreferrer">X Docs: Direct Messages Quickstart</a></li>
+            <li><a href="https://help.x.com/en/rules-and-policies/x-automation" target="_blank" rel="noreferrer">X Help: Automation rules</a></li>
+          </ul>
+        `,
+      },
+      en: {
+        title: 'How to Use AI Agents on Threads and X for Real Work, Not Just Auto-Posting',
+        keywords: ['AI'],
+        excerpt: 'Even though they look like similar social platforms, X is stronger for real-time signal detection and approval-based responses, while Threads is stronger for conversation compounding and insight-led community growth.',
+        heroImage: {
+          alt: 'A dashboard illustration showing an X signal feed on the left, Threads conversation cards on the right, and an AI agent panel in the center for scanning, drafting, and routing',
+          caption: 'Social AI agents get stronger when they stop treating every platform the same. X is better for catching signals early, while Threads is better for extending the conversation.',
+        },
+        contentHtml: `
+          <p>When people say they want to use an AI agent on social media, they often mean one thing: automate posting. But as of April 9, 2026, that is still the least interesting use case.</p>
+          <p>If you look at recent Meta and X product updates together, a more practical split appears. <strong>X works better as a listening and routing surface</strong>. <strong>Threads works better as a conversation-building and operating surface</strong>. If you force the same agent behavior onto both, the result usually gets worse, not better.</p>
+          <p>This matters because the most effective social AI setup is not a single bot shouting into every channel. It is a workflow that gives different jobs to different platforms.</p>
+
+          <h3>X is where AI agents should listen first</h3>
+          <p>X still has the stronger real-time data posture. The current docs position recent search for the last seven days, filtered stream for near real-time matching posts, and full-archive search and counts for longer pattern analysis. The filtered stream introduction even calls out roughly 6-7 seconds of P99 latency, which is fast enough for product monitoring, campaign response, and issue detection.</p>
+          <p>That makes X a strong place for an agent to do four concrete jobs:</p>
+          <ol>
+            <li>Watch for questions, complaints, buying signals, competitor mentions, and urgent keywords.</li>
+            <li>Cluster incoming posts into themes instead of dumping a noisy feed on a human operator.</li>
+            <li>Draft replies or DM handoffs for approval.</li>
+            <li>Turn repeated patterns into content ideas for later publishing.</li>
+          </ol>
+          <p>The DM layer matters more than many teams expect. X officially documents Direct Messages and group conversations, with dedicated <code>dm.read</code> and <code>dm.write</code> scopes. In practice, that means an agent can be useful as a triage and escalation layer, not only as a public-post assistant.</p>
+          <p>But X is also the place where the guardrails are clearest. Its automation rules say keyword-triggered mass auto-replies are not allowed, non-API website scripting can lead to permanent suspension, and AI-powered reply bots require prior written approval from X. So the practical model is simple: automate reading aggressively, automate writing cautiously, and keep sending behind approval.</p>
+
+          <h3>Threads is where AI agents should help shape the conversation</h3>
+          <p>Threads has evolved in a different direction. In August 2024, Meta introduced insights, multiple drafts, and scheduling for creators and businesses. In October 2024, Meta said replies account for almost half of views on Threads and recommended posting 2-5 times per week for audience growth. In March 2025, Meta said posts that include a topic generally receive more views, and in the October 30, 2025 update it added reply approvals so people can decide which replies appear publicly.</p>
+          <p>Then the platform kept leaning into operating tools: custom feeds, auto-updating web columns, and follow import from X in April 2025; fediverse search and a dedicated fediverse feed in June 2025; communities in October 2025; and Dear Algo in February 2026 as an AI-powered way for users to temporarily reshape what they see.</p>
+          <p>Put together, those features point to a very different agent role. On Threads, the best AI agent is not a spammy auto-poster. It is a <strong>conversation designer</strong>.</p>
+          <ol>
+            <li>Rewrite raw signals from X into Threads-native prompts, takes, and explainers.</li>
+            <li>Add the right topic framing and save multiple variants as drafts.</li>
+            <li>Schedule a steady cadence instead of posting in bursts.</li>
+            <li>Read insights and compare which topics, formats, and prompts generate replies.</li>
+            <li>Use reply approvals and filters to keep the discussion useful.</li>
+            <li>Use custom feeds, fediverse discovery, and communities to keep expanding the right audience.</li>
+          </ol>
+          <p>That is why Threads works especially well for founders, solo operators, educators, and subject-matter creators. The winning move is rarely “publish more.” It is “publish the right interpretation, then stay inside the replies long enough to grow a community around it.”</p>
+
+          <h3>A practical operating loop looks like this</h3>
+          <p>If I were setting this up for one person or a small team today, I would keep it narrow.</p>
+          <ol>
+            <li>Define watchlists on X: product terms, competitor names, pain points, intent signals, and market keywords.</li>
+            <li>Let an agent scan recent search and filtered stream, then classify what it sees.</li>
+            <li>Pick the two or three patterns worth turning into content.</li>
+            <li>Rewrite those patterns into Threads posts that invite discussion instead of just dropping links.</li>
+            <li>Require human approval before publishing or sending any sensitive response.</li>
+            <li>Use Threads insights and reply quality to decide what to expand next.</li>
+          </ol>
+          <p>In other words, X becomes the sensing layer, and Threads becomes the compounding layer.</p>
+
+          <h3>What not to automate</h3>
+          <ul>
+            <li>Do not blast the same copy to X and Threads without changing the format.</li>
+            <li>Do not run keyword-only auto-reply campaigns on X.</li>
+            <li>Do not treat Threads like a pure outbound link channel.</li>
+            <li>Do not let AI send DMs or public replies without approval on high-risk topics.</li>
+            <li>Do not confuse speed with usefulness; the highest-volume workflow is often the weakest one.</li>
+          </ul>
+          <p>This final split is an inference from the public product surface, but it is a strong one. X keeps investing in search, streams, DMs, and automation rules. Threads keeps investing in drafts, scheduling, insights, topics, communities, and discovery. That is enough to shape a real operating model.</p>
+
+          <h3>The best setup right now is simple</h3>
+          <p>Use X to catch weak signals before they become obvious. Use Threads to turn those signals into a point of view, then into a conversation, then into a community rhythm. That is a much stronger role for an AI agent than blind cross-posting ever was.</p>
+
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://about.fb.com/news/2024/08/new-threads-features-for-creators-and-businesses/" target="_blank" rel="noreferrer">Meta Newsroom: New Threads Features for Creators and Businesses</a></li>
+            <li><a href="https://about.fb.com/news/2024/10/find-your-community-with-new-threads-educational-insights/" target="_blank" rel="noreferrer">Meta Newsroom: Find Your Community With New Threads Educational Insights</a></li>
+            <li><a href="https://about.fb.com/news/2025/03/new-threads-features-more-personalized-experience-you-control/" target="_blank" rel="noreferrer">Meta Newsroom: New Threads Features for a More Personalized Experience That You Control</a></li>
+            <li><a href="https://about.fb.com/news/2025/04/new-features-threads-web-experience/" target="_blank" rel="noreferrer">Meta Newsroom: New Features for the Threads Web Experience</a></li>
+            <li><a href="https://about.fb.com/news/2025/06/its-now-easier-see-more-fediverse-content-threads/" target="_blank" rel="noreferrer">Meta Newsroom: It’s Now Easier to See More Fediverse Content on Threads</a></li>
+            <li><a href="https://about.fb.com/news/2025/10/introducing-threads-communities-find-your-people/" target="_blank" rel="noreferrer">Meta Newsroom: Introducing Threads Communities</a></li>
+            <li><a href="https://about.fb.com/news/2026/02/threads-dear-algo/" target="_blank" rel="noreferrer">Meta Newsroom: Control Your Threads Feed With New Dear Algo Feature</a></li>
+            <li><a href="https://techcrunch.com/2024/06/18/threads-finally-launches-its-api-for-developers/" target="_blank" rel="noreferrer">TechCrunch: Threads finally launches its API for developers</a></li>
+            <li><a href="https://docs.x.com/x-api/introduction" target="_blank" rel="noreferrer">X Docs: X API introduction</a></li>
+            <li><a href="https://docs.x.com/x-api/posts/search-recent-posts" target="_blank" rel="noreferrer">X Docs: Search recent Posts</a></li>
+            <li><a href="https://docs.x.com/x-api/posts/filtered-stream/introduction" target="_blank" rel="noreferrer">X Docs: Filtered Stream</a></li>
+            <li><a href="https://docs.x.com/enterprise-api/direct-messages/manage/quickstart" target="_blank" rel="noreferrer">X Docs: Direct Messages Quickstart</a></li>
+            <li><a href="https://help.x.com/en/rules-and-policies/x-automation" target="_blank" rel="noreferrer">X Help: Automation rules</a></li>
+          </ul>
+        `,
+      },
+      ja: {
+        title: 'ThreadsとXでAIエージェントをどう使えば、実務の成果につながるのか',
+        keywords: ['AI'],
+        excerpt: '同じようなソーシャルに見えても、Xはリアルタイムの兆候検知と承認付き応答に、Threadsは会話拡張とインサイト起点の運用に向いています。',
+        heroImage: {
+          alt: '左にXのシグナルフィード、右にThreadsの会話カード、中央にスキャンと下書きとルーティングを行うAIエージェントのパネルが置かれたダッシュボード風イラスト',
+          caption: 'ソーシャル向けAIエージェントは、すべてのプラットフォームを同じように扱わないほうが強くなります。Xは兆候をつかみ、Threadsは会話を育てる側に向いています。',
+        },
+        contentHtml: `
+          <p>ソーシャル運用にAIエージェントを入れたいと言うと、多くの場合は自動投稿を想像します。ですが、2026年4月9日時点で実務に効くのは、ただ投稿を増やす形ではありません。</p>
+          <p>最近のMetaとXの公式アップデートを並べてみると、役割の分け方がかなりはっきりしています。<strong>Xは兆候を早く拾い、反応を整理する場所</strong>です。<strong>Threadsは視点を会話に変え、コミュニティとして育てる場所</strong>です。ここを同じ運用にすると、むしろ弱くなります。</p>
+          <p>つまり、強いソーシャルAIは「一つのボットで全部やる」設計ではなく、「プラットフォームごとに違う仕事を持たせる」設計です。</p>
+
+          <h3>Xでは、AIエージェントを聞き役と仕分け役に置くほうがいい</h3>
+          <p>Xの公開ドキュメントは、いまも検索、ストリーム、DM、そして自動化ルールを中心に組み立てられています。Recent Searchは直近7日、Filtered Streamは条件に合う投稿をほぼリアルタイムで受け取れますし、ドキュメントではFiltered StreamのP99遅延をおよそ6〜7秒と説明しています。さらにFull-Archive SearchやCountsを組み合わせれば、短期の反応と長期の流れを同時に見られます。</p>
+          <p>この前提だと、X上のAIエージェントは次のような仕事に向きます。</p>
+          <ol>
+            <li>質問、苦情、購買シグナル、競合言及、急上昇キーワードを拾う</li>
+            <li>ノイズの多い投稿群をテーマごとにまとめる</li>
+            <li>返信案やDM移行案を作る</li>
+            <li>同じパターンを後続コンテンツの種に変える</li>
+          </ol>
+          <p>特にDMは重要です。XはDirect Messagesとgroup conversationsを公式に案内しており、<code>dm.read</code>と<code>dm.write</code>のスコープも用意しています。つまり、AIエージェントは公開返信を乱発する存在ではなく、会話を適切な場所へ送るトリアージ層として使うほうが現実的です。</p>
+          <p>ただし、Xではガードレールもかなり明確です。キーワード検索だけで自動返信することは認められておらず、AIを使った自動返信ボットは事前の明示的な承認が必要です。また、Web画面をスクリプトで直接自動化する方法は、アカウント停止につながり得るとヘルプに明記されています。</p>
+          <p>だから、Xで安全に運用するなら「読む自動化は強く、送る自動化は慎重に」という原則が合っています。</p>
+
+          <h3>Threadsでは、AIエージェントを会話設計と運用補助に置くほうがいい</h3>
+          <p>Threadsの進化は別方向です。2024年8月にMetaはinsights、multiple drafts、schedulingを導入しました。2024年10月には、Repliesが閲覧のほぼ半分を占めること、そして週2〜5回の投稿がオーディエンス形成に役立つことを明かしました。2025年3月にはtopic付き投稿のほうが閲覧されやすいと述べ、2025年10月の更新ではreply approvalsを追加して公開する返信を選べるようにしました。</p>
+          <p>さらに2025年4月にはcustom feeds、auto-update、favorite searches、insights column、そしてXから始まるfollow importのテストを導入し、2025年6月にはfediverse検索と専用フィード、2025年10月にはcommunities、2026年2月にはDear AlgoというAIベースのフィード調整機能まで出しています。</p>
+          <p>この流れを見ると、Threads上で強いAIエージェントは自動投稿機ではなく、<strong>会話キュレーター</strong>です。</p>
+          <ol>
+            <li>Xで拾った兆候を、Threads向けの問いや解説に書き換える</li>
+            <li>topicの文脈を合わせて複数の下書きを保存する</li>
+            <li>予約投稿で一定のリズムをつくる</li>
+            <li>insightsを見て、どの話題やフォーマットがreplyを生んだかを比べる</li>
+            <li>reply approvalsやfiltersで会話の質を保つ</li>
+            <li>custom feeds、fediverse、communitiesで適切な読者との接点を広げる</li>
+          </ol>
+          <p>つまりThreadsでは、「何本投稿したか」より「どれだけ会話が続いたか」が重要です。AIエージェントはここで、視点の言い換え、下書きの比較、返信導線の整理、コミュニティ観察に使うほうが効果的です。</p>
+
+          <h3>いま実務で使うなら、この運用ループが現実的です</h3>
+          <ol>
+            <li>Xで監視キーワードを定義する</li>
+            <li>Recent SearchとFiltered Streamで今日の変化を集める</li>
+            <li>AIエージェントが質問、苦情、トレンド、リード候補に分ける</li>
+            <li>価値の高いパターンだけをThreads向けの解説や問いに変える</li>
+            <li>投稿や返信は人が承認してから出す</li>
+            <li>Threadsのinsightsとreplyの質を見て次のテーマを決める</li>
+          </ol>
+          <p>この構造なら、Xの速度とThreadsの会話性をそれぞれ生かせますし、アカウントリスクも抑えやすくなります。</p>
+
+          <h3>やらないほうがいいこと</h3>
+          <ul>
+            <li>XとThreadsに同じ文面をそのまま流すこと</li>
+            <li>Xでキーワードだけを見て自動返信を乱発すること</li>
+            <li>Threadsを単なるリンク誘導チャネルとして扱うこと</li>
+            <li>高リスクなDMや公開返信を承認なしでAIに送らせること</li>
+            <li>プラットフォームごとの文脈差を無視すること</li>
+          </ul>
+          <p>この役割分担は、公開されている機能群を束ねて見たときの実務的な解釈です。Xは検索、ストリーム、DM、ポリシーが強く、Threadsは下書き、予約、インサイト、トピック、コミュニティが強い。この差は、実際の運用モデルにそのまま反映したほうがいいと思います。</p>
+
+          <h3>今の最適解は、Xで拾ってThreadsで育てることです</h3>
+          <p>ソーシャル向けAIエージェントで本当に大事なのは、自動化量ではなく、どのプラットフォームでどの仕事を任せるかです。Xでは聞く、分類する、DMへつなぐ。Threadsでは視点を育てる、会話を続ける、コミュニティを広げる。この分担を決めるだけで、AIエージェントは単なる自動投稿ツールではなく、実際の運用者に近い動き方になります。</p>
+
+          <h3>References</h3>
+          <ul>
+            <li><a href="https://about.fb.com/news/2024/08/new-threads-features-for-creators-and-businesses/" target="_blank" rel="noreferrer">Meta Newsroom: New Threads Features for Creators and Businesses</a></li>
+            <li><a href="https://about.fb.com/news/2024/10/find-your-community-with-new-threads-educational-insights/" target="_blank" rel="noreferrer">Meta Newsroom: Find Your Community With New Threads Educational Insights</a></li>
+            <li><a href="https://about.fb.com/news/2025/03/new-threads-features-more-personalized-experience-you-control/" target="_blank" rel="noreferrer">Meta Newsroom: New Threads Features for a More Personalized Experience That You Control</a></li>
+            <li><a href="https://about.fb.com/news/2025/04/new-features-threads-web-experience/" target="_blank" rel="noreferrer">Meta Newsroom: New Features for the Threads Web Experience</a></li>
+            <li><a href="https://about.fb.com/news/2025/06/its-now-easier-see-more-fediverse-content-threads/" target="_blank" rel="noreferrer">Meta Newsroom: It’s Now Easier to See More Fediverse Content on Threads</a></li>
+            <li><a href="https://about.fb.com/news/2025/10/introducing-threads-communities-find-your-people/" target="_blank" rel="noreferrer">Meta Newsroom: Introducing Threads Communities</a></li>
+            <li><a href="https://about.fb.com/news/2026/02/threads-dear-algo/" target="_blank" rel="noreferrer">Meta Newsroom: Control Your Threads Feed With New Dear Algo Feature</a></li>
+            <li><a href="https://techcrunch.com/2024/06/18/threads-finally-launches-its-api-for-developers/" target="_blank" rel="noreferrer">TechCrunch: Threads finally launches its API for developers</a></li>
+            <li><a href="https://docs.x.com/x-api/introduction" target="_blank" rel="noreferrer">X Docs: X API introduction</a></li>
+            <li><a href="https://docs.x.com/x-api/posts/search-recent-posts" target="_blank" rel="noreferrer">X Docs: Search recent Posts</a></li>
+            <li><a href="https://docs.x.com/x-api/posts/filtered-stream/introduction" target="_blank" rel="noreferrer">X Docs: Filtered Stream</a></li>
+            <li><a href="https://docs.x.com/enterprise-api/direct-messages/manage/quickstart" target="_blank" rel="noreferrer">X Docs: Direct Messages Quickstart</a></li>
+            <li><a href="https://help.x.com/en/rules-and-policies/x-automation" target="_blank" rel="noreferrer">X Help: Automation rules</a></li>
+          </ul>
+        `,
+      },
+    },
+  },
+  {
     slug: 'why-ai-agent-design-is-now-about-state-and-tool-boundaries',
     category: 'ai',
     createdAt: '2026-04-02T23:45:00+09:00',

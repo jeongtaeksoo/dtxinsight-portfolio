@@ -1,0 +1,70 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#F6F1E7"/>
+  <rect x="48" y="48" width="1504" height="804" rx="36" fill="#13212D"/>
+  <rect x="96" y="96" width="1408" height="708" rx="28" fill="url(#panelBg)"/>
+
+  <rect x="148" y="164" width="368" height="516" rx="28" fill="#0E1820" stroke="#2F4656" stroke-width="2"/>
+  <rect x="542" y="164" width="516" height="516" rx="28" fill="#162635" stroke="#426276" stroke-width="2"/>
+  <rect x="1084" y="164" width="368" height="516" rx="28" fill="#0E1820" stroke="#2F4656" stroke-width="2"/>
+
+  <text x="184" y="220" fill="#F6F1E7" font-family="Georgia, 'Times New Roman', serif" font-size="56" font-weight="700">X</text>
+  <text x="1130" y="220" fill="#F6F1E7" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">Threads</text>
+  <text x="626" y="220" fill="#F6F1E7" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="700">AI Agent</text>
+  <text x="626" y="254" fill="#94A9B8" font-family="'Courier New', monospace" font-size="22">listen  classify  draft  route</text>
+
+  <rect x="184" y="264" width="296" height="66" rx="18" fill="#203544"/>
+  <circle cx="224" cy="297" r="12" fill="#F97352"/>
+  <rect x="252" y="287" width="188" height="20" rx="10" fill="#DCE8F0" fill-opacity="0.9"/>
+
+  <rect x="184" y="356" width="296" height="94" rx="20" fill="#1B2E3B"/>
+  <rect x="208" y="380" width="118" height="16" rx="8" fill="#7FB2D9"/>
+  <rect x="208" y="408" width="236" height="14" rx="7" fill="#DCE8F0" fill-opacity="0.82"/>
+  <rect x="208" y="432" width="198" height="14" rx="7" fill="#DCE8F0" fill-opacity="0.55"/>
+
+  <rect x="184" y="476" width="296" height="94" rx="20" fill="#1B2E3B"/>
+  <rect x="208" y="500" width="146" height="16" rx="8" fill="#F3C96A"/>
+  <rect x="208" y="528" width="230" height="14" rx="7" fill="#DCE8F0" fill-opacity="0.82"/>
+  <rect x="208" y="552" width="176" height="14" rx="7" fill="#DCE8F0" fill-opacity="0.55"/>
+
+  <rect x="588" y="286" width="424" height="74" rx="22" fill="#22384A"/>
+  <circle cx="630" cy="323" r="18" fill="#F97352"/>
+  <rect x="664" y="311" width="290" height="24" rx="12" fill="#F6F1E7"/>
+
+  <rect x="588" y="394" width="424" height="110" rx="24" fill="#203443"/>
+  <text x="622" y="438" fill="#F6F1E7" font-family="'Courier New', monospace" font-size="26">signal scan</text>
+  <text x="622" y="476" fill="#F6F1E7" font-family="'Courier New', monospace" font-size="26">reply copilot</text>
+
+  <rect x="588" y="538" width="424" height="94" rx="24" fill="#203443"/>
+  <text x="622" y="584" fill="#F6F1E7" font-family="'Courier New', monospace" font-size="26">threads rewrite</text>
+  <text x="622" y="618" fill="#F6F1E7" font-family="'Courier New', monospace" font-size="26">schedule + insights</text>
+
+  <path d="M516 323H566" stroke="#F97352" stroke-width="6" stroke-linecap="round"/>
+  <path d="M1038 323H1088" stroke="#F97352" stroke-width="6" stroke-linecap="round"/>
+  <path d="M516 523H566" stroke="#F3C96A" stroke-width="6" stroke-linecap="round"/>
+  <path d="M1038 523H1088" stroke="#F3C96A" stroke-width="6" stroke-linecap="round"/>
+
+  <rect x="1120" y="264" width="296" height="94" rx="20" fill="#1B2E3B"/>
+  <rect x="1144" y="288" width="152" height="16" rx="8" fill="#F97352"/>
+  <rect x="1144" y="316" width="228" height="14" rx="7" fill="#DCE8F0" fill-opacity="0.82"/>
+  <rect x="1144" y="340" width="188" height="14" rx="7" fill="#DCE8F0" fill-opacity="0.55"/>
+
+  <rect x="1120" y="388" width="296" height="94" rx="20" fill="#1B2E3B"/>
+  <rect x="1144" y="412" width="138" height="16" rx="8" fill="#7FD0A6"/>
+  <rect x="1144" y="440" width="232" height="14" rx="7" fill="#DCE8F0" fill-opacity="0.82"/>
+  <rect x="1144" y="464" width="164" height="14" rx="7" fill="#DCE8F0" fill-opacity="0.55"/>
+
+  <rect x="1120" y="512" width="296" height="94" rx="20" fill="#1B2E3B"/>
+  <rect x="1144" y="536" width="128" height="16" rx="8" fill="#F3C96A"/>
+  <rect x="1144" y="564" width="220" height="14" rx="7" fill="#DCE8F0" fill-opacity="0.82"/>
+  <rect x="1144" y="588" width="176" height="14" rx="7" fill="#DCE8F0" fill-opacity="0.55"/>
+
+  <text x="160" y="736" fill="#F6F1E7" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">Use X to catch signals. Use Threads to compound conversations.</text>
+  <text x="160" y="780" fill="#9BB2C0" font-family="'Courier New', monospace" font-size="22">April 9, 2026  /  social listening, reply approval, topic tags, communities, insights</text>
+
+  <defs>
+    <linearGradient id="panelBg" x1="96" y1="96" x2="1504" y2="804" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#172835"/>
+      <stop offset="1" stop-color="#101A22"/>
+    </linearGradient>
+  </defs>
+</svg>
