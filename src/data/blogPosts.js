@@ -49,47 +49,44 @@ export const getLocalizedBlogPost = (post, language = DEFAULT_BLOG_LOCALE) => {
 
 export const blogPosts = [
   {
-    slug: 'how-to-track-latest-ai-agent-tech-with-threads-and-x',
+    slug: 'how-to-use-ai-agents-well-in-2026',
     category: 'ai',
-    createdAt: '2026-04-09T23:58:00+09:00',
+    createdAt: '2026-04-10T00:18:00+09:00',
     heroImage: {
       src: '/blog/threads-x-ai-agent-hero.svg',
     },
     locales: {
       ko: {
-        title: 'Threads와 X로 최신 AI Agent 기술을 정리하는 방법',
+        title: '2026년 AI Agent를 잘 쓰는 방법',
         keywords: ['AI', 'AI Agent'],
-        excerpt: '2026년 4월 9일 기준으로 Threads와 X에서 반복해서 보이는 AI agent 화제는 MCP, 상태 관리, browser use, 실시간 음성, 그리고 tracing·guardrails입니다. 중요한 건 유행을 좇는 게 아니라 이 신호를 공식 문서와 연결해 실제 도입 순서를 만드는 일입니다.',
+        excerpt: '2026년 4월 10일 기준으로 AI agent를 잘 쓰는 핵심은 더 강한 모델 하나를 붙이는 것이 아니라, MCP 같은 연결층, 상태 관리, 좁은 툴 경계, 승인 구조, tracing·guardrails를 먼저 설계하는 일입니다.',
         heroImage: {
-          alt: '왼쪽에는 X 검색 결과와 리스트가, 오른쪽에는 Threads 커스텀 피드와 저장된 게시물이, 가운데에는 MCP, state, browser, voice, guardrail 카드를 띄운 AI 기술 레이더 대시보드 일러스트',
-          caption: 'Threads와 X는 에이전트가 글을 대신 올리는 장소보다, 최신 AI agent 기술 신호를 먼저 모으고 검증 우선순위를 정하는 레이더에 더 가깝습니다.',
+          alt: '여러 업무 카드와 MCP, state, tools, browser, voice, guardrail 레이어가 하나의 AI agent 운영 보드 위에 정렬된 일러스트',
+          caption: '지금 AI agent를 잘 쓰는 방식은 거대한 자율성을 한 번에 붙이는 것이 아니라, 작은 업무 단위에 도구 경계와 승인 구조를 먼저 세우는 것입니다.',
         },
         contentHtml: `
-          <p>2026년 4월 9일 기준으로 Threads와 X를 계속 보고 있으면, 요즘 AI agent 화제는 놀랄 만큼 몇 가지 축으로 좁혀집니다. 매번 새로운 회사와 데모가 튀어나오지만, 실제로 반복해서 보이는 키워드는 <strong>MCP, 상태 저장과 background execution, 툴 조합, browser/computer use, 실시간 음성, 그리고 tracing·guardrails</strong>입니다.</p>
-          <p>여기서 중요한 건 소셜 피드를 정답처럼 읽지 않는 것입니다. Threads와 X는 최종 문서가 아니라 <strong>신호가 가장 빨리 모이는 레이더</strong>에 가깝습니다. 그래서 AI agent를 잘 쓰고 싶다면, 에이전트를 “자동 포스터”가 아니라 “기술 레이더 + 검증 보조”로 쓰는 편이 훨씬 낫습니다.</p>
-          <p>이 글은 Threads와 X에서 무엇을 봐야 하는지, 그리고 2026년 4월 9일 기준으로 실제 도입 검토할 만한 AI agent 기술이 무엇인지 공식 문서까지 연결해 정리한 글입니다.</p>
+          <p>2026년 4월 10일 기준으로 AI agent를 잘 쓴다는 말은 더 이상 “모델 하나 붙여서 자동화했다”는 뜻이 아닙니다. 지금 더 중요한 질문은 <strong>어떤 업무를 어디까지 맡길지, 어떤 도구를 어떤 순서로 호출하게 할지, 그리고 어디서 사람 승인을 남길지</strong>입니다.</p>
+          <p>최근 공식 문서와 제품 업데이트를 함께 보면, 지금 AI agent를 잘 쓰는 팀이 공통으로 신경 쓰는 축은 꽤 분명합니다. <strong>MCP 같은 연결층, 상태 저장과 background execution, 툴 조합, browser/computer use, 실시간 음성, 그리고 tracing·guardrails</strong>입니다.</p>
+          <p>이 글은 지금 시점에서 AI agent를 어떻게 설계하고 어디부터 도입하는 게 현실적인지, 그리고 무엇은 바로 써도 되고 무엇은 아직 조심해야 하는지를 정리한 글입니다.</p>
 
-          <h3>Threads와 X를 같은 용도로 보면 오히려 놓치는 게 많다</h3>
-          <p><strong>X는 여전히 가장 빠른 기술 신호층</strong>에 가깝습니다. 최근 검색은 최근 7일 게시물을 바로 찾을 수 있고, filtered stream은 규칙에 맞는 게시물을 거의 실시간으로 받습니다. 리스트와 pinned list도 지원해서 특정 연구자, 프레임워크 제작자, 스타트업 계정만 따로 묶어 볼 수 있습니다.</p>
-          <p><strong>Threads는 속보보다 패턴을 길게 읽는 데 더 낫습니다.</strong> 2025년 4월 웹 업데이트 이후 custom feeds, favorite searches, liked/saved posts, auto-update, insights column이 붙었고, 2025년 6월에는 fediverse 검색과 dedicated feed, 2025년 10월에는 communities, 2026년 2월에는 Dear Algo까지 추가됐습니다. 즉, Threads는 “무슨 발표가 나왔나”보다 “어떤 주제가 며칠째 대화를 유지하나”를 보기 좋습니다.</p>
-          <p>제 해석은 단순합니다. <strong>X에서는 먼저 신호를 모으고, Threads에서는 어떤 신호가 오래 살아남는지 본다</strong>는 겁니다. 이 둘을 함께 보면, 최신 기술을 쫓되 과장된 데모에 덜 끌려가게 됩니다.</p>
+          <h3>왜 많은 AI agent 프로젝트가 아직도 실패하는가</h3>
+          <p>실패하는 프로젝트는 보통 처음부터 너무 많은 걸 기대합니다. 브라우저도 열고, 여러 SaaS에 쓰기 권한도 주고, 사람 승인도 없이 “알아서 잘하는 agent”를 만들려고 합니다. 데모는 화려하지만 운영은 빨리 흔들립니다.</p>
+          <p>반대로 잘 되는 프로젝트는 더 작게 시작합니다. 읽기 중심 업무부터 붙이고, 도구 수를 제한하고, 세션과 로그를 남기고, 실제 쓰기 작업은 승인형으로 둡니다. 결국 중요한 건 모델의 환상이 아니라 <strong>업무 경계의 설계</strong>입니다.</p>
 
-          <h3>2026년 4월 9일 기준으로 지금 정말 봐야 할 AI agent 기술 6가지</h3>
+          <h3>2026년 4월 10일 기준으로 지금 정말 봐야 할 AI agent 기술 6가지</h3>
 
-          <h3>1. MCP와 커넥터가 사실상 기본 인터페이스가 됐다</h3>
-          <p>지금 X에서 가장 자주 반복되는 주제 중 하나가 MCP입니다. 흥미로운 건 이게 더 이상 커뮤니티 밈이 아니라는 점입니다. X 개발자 문서는 아예 <em>Agent Resources</em>와 공식 MCP 서버 문서를 따로 두고 있고, XMCP로 200개가 넘는 X API 엔드포인트를 AI 툴에서 바로 호출하게 만듭니다. OpenAI는 Responses API에서 remote MCP servers와 connectors를 공식 가이드로 안내하고 있고, Anthropic도 2025년 4월 4일 베타 헤더를 쓰는 MCP connector를 Messages API에 붙였습니다.</p>
-          <p>즉, 지금의 최신 agent 기술은 “모든 서비스마다 커스텀 래퍼를 다시 짜는 것”이 아니라 <strong>표준화된 도구 연결층 위에 에이전트를 올리는 것</strong>에 가깝습니다.</p>
-          <p>실무적으로는 이 순서가 좋습니다.</p>
+          <h3>1. MCP와 커넥터가 기본 연결층이 되고 있다</h3>
+          <p>최근 agent 설계에서 가장 큰 변화는 서비스마다 커스텀 래퍼를 다시 짜는 방식에서 점점 멀어지고 있다는 점입니다. OpenAI는 Responses API에서 remote MCP servers와 connectors를 공식 가이드로 설명하고 있고, Anthropic도 MCP connector를 Messages API에 붙였습니다. 즉, 최신 agent는 모델만 똑똑한 것이 아니라 <strong>도구와 시스템을 붙이는 방식이 표준화</strong>되고 있습니다.</p>
+          <p>실무적으로는 이 순서가 가장 안전합니다.</p>
           <ol>
             <li>먼저 read-only MCP부터 붙입니다.</li>
             <li>tool allow-list를 걸어 에이전트가 쓸 수 있는 범위를 좁힙니다.</li>
             <li>write 도구는 승인형으로만 엽니다.</li>
           </ol>
 
-          <h3>2. 상태 저장과 background execution이 기본값이 됐다</h3>
-          <p>에이전트를 아직도 “긴 프롬프트 한 번”처럼 다루면 최신 흐름과 멀어집니다. OpenAI는 Conversations API로 응답 간 상태를 저장할 수 있게 했고, background mode로 오래 걸리는 작업을 비동기로 돌릴 수 있게 했습니다. Agents SDK도 sessions를 기본 메모리 단위로 제공하고, OpenAI-hosted conversation session이나 SQLite, Redis 같은 구현을 이미 열어놨습니다. Google도 Deep Research를 Interactions API로 열었고, Gemini 3.1 Flash Live 문서에서는 session management를 전제로 설명합니다.</p>
+          <h3>2. 상태 저장과 background execution이 사실상 기본값이 됐다</h3>
+          <p>에이전트를 아직도 “긴 프롬프트 한 번”처럼 다루면 최신 흐름과 멉니다. OpenAI는 Conversations API로 상태를 저장하고, background mode로 오래 걸리는 작업을 비동기로 돌릴 수 있게 했습니다. Agents SDK도 sessions를 기본 메모리 단위로 제공하고, Google 역시 Deep Research와 Live 계열 문서에서 session management를 전제로 설명합니다.</p>
           <p>이 변화는 꽤 본질적입니다. 요즘 agent는 더 이상 “똑똑한 단답형 모델”이 아니라 <strong>상태를 가진 작업 단위</strong>로 보는 편이 맞습니다.</p>
-          <p>그래서 저는 agent를 설계할 때 아래 원칙을 먼저 둡니다.</p>
           <ul>
             <li>대화 ID나 작업 ID를 먼저 만든다.</li>
             <li>모든 중간 산출물을 세션에 쌓는다.</li>
@@ -97,9 +94,8 @@ export const blogPosts = [
           </ul>
 
           <h3>3. 툴은 많이 붙이는 것보다, 같이 잘 쓰는 게 중요해졌다</h3>
-          <p>최근 발표를 보면 진짜 변화는 “툴을 하나 더 추가했다”가 아닙니다. <strong>한 번의 요청 안에서 여러 종류의 툴을 자연스럽게 조합하는 능력</strong>이 빠르게 좋아지고 있습니다. Google은 2026년 3월 17일 업데이트에서 built-in tools와 custom function을 같은 요청에 섞고, tool call 간 context circulation을 보존한다고 밝혔습니다. Anthropic은 tool use 문서에서 JSON schema와 설명을 얼마나 명확히 쓰느냐가 결과를 좌우한다고 계속 강조합니다. OpenAI도 built-in tools, function calling, remote MCP를 한 흐름으로 묶고 있습니다.</p>
+          <p>최근 변화의 핵심은 “툴을 하나 더 추가했다”가 아닙니다. <strong>한 번의 요청 안에서 여러 종류의 툴을 자연스럽게 조합하는 능력</strong>이 좋아지고 있다는 점입니다. Google은 built-in tools와 custom function을 같은 요청에 섞고, tool call 간 context circulation을 보존한다고 설명합니다. Anthropic은 tool use 문서에서 JSON schema와 설명의 명확성을 계속 강조하고, OpenAI도 built-in tools, function calling, remote MCP를 한 흐름으로 묶고 있습니다.</p>
           <p>결국 최신 기술의 핵심은 “툴 20개”가 아니라 “<strong>세 개의 좋은 툴을 어떻게 안전하게 연결하느냐</strong>”입니다.</p>
-          <p>제가 추천하는 기본 세트는 이 정도입니다.</p>
           <ul>
             <li>읽기 도구 1개: web search나 문서 검색</li>
             <li>사내 데이터 도구 1개: CRM, 티켓, DB, 노션 중 하나</li>
@@ -107,9 +103,8 @@ export const blogPosts = [
           </ul>
 
           <h3>4. Browser use와 computer use는 가장 뜨겁지만, 가장 늦게 도입해야 한다</h3>
-          <p>X를 보면 2026년 3월에도 browser-native agent 이야기가 계속 올라옵니다. Browser Use CLI 2.0, Notte Anything API, Browserbase Search API 같은 발표가 대표적입니다. OpenAI의 computer use는 여전히 beta이고, Anthropic의 computer use도 beta입니다. Google도 2025년 10월에 Gemini 2.5 Computer Use model preview를 공개했습니다.</p>
-          <p>이 말은 곧, <strong>관심은 가장 뜨겁지만 안정성은 아직 가장 조심해야 하는 구간</strong>이라는 뜻입니다. 실제 브라우저를 클릭하고 입력하는 agent는 데모는 화려하지만, 인증 세션, DOM 변경, 예외 처리, 프롬프트 인젝션, 잘못된 클릭 같은 리스크를 같이 데려옵니다.</p>
-          <p>그래서 browser 계열 agent는 이렇게 쓰는 편이 맞습니다.</p>
+          <p>browser-native agent는 커뮤니티에서 가장 많이 회자되는 축 중 하나입니다. 하지만 공식 제품 흐름을 보면 OpenAI의 computer use는 아직 beta이고, Anthropic의 computer use도 beta이며, Google의 Computer Use model도 preview입니다. 관심은 가장 뜨겁지만 운영 안정성은 아직 가장 조심해야 하는 구간입니다.</p>
+          <p>실제 브라우저를 클릭하고 입력하는 agent는 데모는 화려하지만, 인증 세션, DOM 변경, 예외 처리, 프롬프트 인젝션, 잘못된 클릭 같은 리스크를 같이 데려옵니다.</p>
           <ol>
             <li>API나 MCP가 없는 서비스에서만 쓴다.</li>
             <li>먼저 search-fetch-parse로 해결하고, 안 될 때만 브라우저를 띄운다.</li>
@@ -117,12 +112,11 @@ export const blogPosts = [
           </ol>
 
           <h3>5. 실시간 음성 에이전트는 프런트도어에서 강해지고 있다</h3>
-          <p>실시간 음성은 이제 보조 기능이 아니라 agent 카테고리로 굳어지는 중입니다. OpenAI Agents SDK는 Voice Agents를 별도 가이드로 두고 있고, RealtimeSession, handoff, approvals까지 음성 흐름 안에 넣습니다. Google은 2026년 3월 26일 Gemini 3.1 Flash Live를 preview로 공개하며 실시간 voice·vision agent를 전면에 내세웠고, noisy environment에서 tool triggering과 task completion이 개선됐다고 설명했습니다.</p>
-          <p>다만 음성 agent는 백오피스 자동화보다 <strong>접점 설계</strong>에 먼저 붙이는 편이 좋습니다. 예를 들면 고객 intake, 내부 업무 접수, 현장 지원, 요약 후 handoff 같은 일입니다. 즉, 음성은 “모든 일을 대신하는 agent”보다 “문제를 받아서 적절한 흐름으로 넘기는 front door agent”에 더 잘 맞습니다.</p>
+          <p>실시간 음성은 이제 보조 기능이 아니라 독립된 agent 카테고리로 굳어지는 중입니다. OpenAI Agents SDK는 Voice Agents를 별도 가이드로 두고 있고, RealtimeSession, handoff, approvals까지 음성 흐름 안에 넣습니다. Google도 Gemini 3.1 Flash Live를 preview로 공개하며 실시간 voice·vision agent를 전면에 내세웠습니다.</p>
+          <p>다만 음성 agent는 백오피스 자동화보다 <strong>접점 설계</strong>에 먼저 붙이는 편이 좋습니다. 예를 들면 고객 intake, 내부 업무 접수, 현장 지원, 요약 후 handoff 같은 일입니다.</p>
 
           <h3>6. eval, tracing, 승인 경계가 없으면 그것은 아직 운영이 아니다</h3>
-          <p>제가 Threads와 X를 같이 보면서 가장 강하게 느끼는 점은, 지금 시장이 “더 강한 모델”보다 “더 운영 가능한 agent” 쪽으로 조금씩 이동하고 있다는 것입니다. OpenAI의 practical guide는 사람 개입과 도구 가드레일을 핵심 원칙으로 잡고 있고, Agents SDK는 tracing을 기본으로 켭니다. Exa 사례를 소개한 LangChain의 2026년 2월 X 포스트도 결국 observability와 token usage visibility를 강조합니다. Deep research도 2026년 2월 10일 업데이트에서 trusted sites 제한, 실시간 진행 추적, 중간 개입을 전면으로 내세웠습니다.</p>
-          <p>즉, 최신 기술을 따라간다는 건 브라우저를 클릭하게 만드는 것보다 먼저 아래를 만드는 일입니다.</p>
+          <p>지금 시장은 “더 강한 모델”보다 “더 운영 가능한 agent” 쪽으로 이동하고 있습니다. OpenAI의 practical guide는 사람 개입과 도구 가드레일을 핵심 원칙으로 잡고 있고, Agents SDK는 tracing을 기본으로 켭니다. Deep research도 trusted sites 제한, 진행 추적, 중간 개입 같은 운영 요소를 전면에 둡니다.</p>
           <ul>
             <li>어떤 툴 호출이 성공이었는지 측정하는 기준</li>
             <li>누가 언제 승인해야 하는지에 대한 경계</li>
@@ -130,15 +124,14 @@ export const blogPosts = [
           </ul>
 
           <h3>제가 추천하는 실제 사용 순서는 이렇습니다</h3>
-          <p>Threads와 X를 매일 보는 것만으로는 최신 기술이 정리되지 않습니다. <strong>에이전트가 이 피드를 대신 구조화해야</strong> 합니다.</p>
           <ol>
-            <li><strong>X에 감시 쿼리 세트 만들기</strong>: <code>"MCP" OR "Model Context Protocol" OR "Agents SDK" OR "background mode" OR "computer use" OR "browser use" OR "realtime agent" -is:reply</code> 같은 식으로 핵심 키워드를 잡습니다.</li>
-            <li><strong>Threads에 커스텀 피드와 저장 루틴 만들기</strong>: 발표 계정만이 아니라 연구자, 구현자, 실제 사용 후기를 올리는 사람들을 묶고, liked/saved posts와 communities로 오래 남는 주제를 모읍니다.</li>
-            <li><strong>에이전트로 분류하기</strong>: 들어온 신호를 <em>지금 도입</em>, <em>공식 문서 검증 필요</em>, <em>데모는 강하지만 아직 보류</em> 세 칸으로 나눕니다.</li>
-            <li><strong>24시간 안에 공식 문서로 교차 검증하기</strong>: X나 Threads에서 반복된 주제만 OpenAI, Anthropic, Google, X docs 원문으로 다시 확인합니다.</li>
-            <li><strong>주간 메모로 압축하기</strong>: “이번 주에는 무엇을 실험하고, 무엇은 그냥 지켜볼지”를 한 장으로 정리합니다.</li>
+            <li><strong>읽기 중심 업무 하나를 고릅니다</strong>: 고객 문의 분류, 문서 요약, 이슈 triage, 내부 검색 같은 일입니다.</li>
+            <li><strong>툴을 2~3개만 붙입니다</strong>: 검색 1개, 내부 데이터 1개, 행동 1개 정도면 충분합니다.</li>
+            <li><strong>상태 저장과 비동기 실행을 먼저 넣습니다</strong>: 세션, 작업 ID, 재실행 흐름을 먼저 만듭니다.</li>
+            <li><strong>write action은 승인형으로 둡니다</strong>: 메일 발송, 티켓 수정, DB 쓰기, 외부 시스템 변경은 마지막 단계입니다.</li>
+            <li><strong>trace와 eval을 붙입니다</strong>: 성공률, 실패 패턴, 승인 취소 사유를 쌓아야 agent가 실제로 좋아집니다.</li>
           </ol>
-          <p>이 흐름을 타면, 소셜에서 본 화제를 바로 쫓는 대신 <strong>신호 → 검증 → 실험</strong> 순서가 생깁니다. 저는 지금 시점에서 이게 AI agent를 가장 현실적으로 잘 쓰는 방식이라고 봅니다.</p>
+          <p>이 흐름을 타면, agent는 “똑똑한 데모”가 아니라 <strong>운영 가능한 시스템</strong>으로 바뀝니다.</p>
 
           <h3>지금 바로 시작한다면, 무엇부터 해야 할까</h3>
           <ul>
@@ -146,23 +139,10 @@ export const blogPosts = [
             <li><strong>조심해서 볼 것</strong>: browser/computer use, 고위험 write action 자동화</li>
             <li><strong>목적이 분명할 때만 붙일 것</strong>: realtime voice agent, fully autonomous research loops</li>
           </ul>
-          <p>정리하면 이렇습니다. Threads와 X에서 최신 AI agent 기술을 읽는다는 건 “누가 가장 요란하게 발표했나”를 보는 일이 아닙니다. <strong>같은 주제가 얼마나 반복되고, 공식 문서가 어디까지 따라왔고, 지금 내 시스템에 넣어도 되는 수준인지</strong>를 구분하는 일입니다. 지금은 그 판단 기준이 꽤 선명합니다. MCP, state, tool orchestration, browser use, realtime voice, 그리고 tracing과 guardrails입니다.</p>
+          <p>정리하면 이렇습니다. 지금 AI agent를 잘 쓴다는 건 모델을 한 번 더 바꾸는 일이 아니라, <strong>작은 업무 경계, 명확한 툴 계약, 상태 저장, 승인 구조, 그리고 추적 가능한 실행</strong>을 먼저 만드는 일입니다. 2026년의 핵심 키워드는 분명하지만, 진짜 차이를 만드는 건 결국 설계와 운영입니다.</p>
 
           <h3>References</h3>
           <ul>
-            <li><a href="https://about.fb.com/news/2025/04/new-features-threads-web-experience/" target="_blank" rel="noreferrer">Meta Newsroom: New Features for the Threads Web Experience</a></li>
-            <li><a href="https://about.fb.com/news/2024/08/new-threads-features-for-creators-and-businesses/" target="_blank" rel="noreferrer">Meta Newsroom: New Threads Features for Creators and Businesses</a></li>
-            <li><a href="https://about.fb.com/news/2024/10/find-your-community-with-new-threads-educational-insights/" target="_blank" rel="noreferrer">Meta Newsroom: Find Your Community With New Threads Educational Insights</a></li>
-            <li><a href="https://about.fb.com/news/2025/03/new-threads-features-more-personalized-experience-you-control/" target="_blank" rel="noreferrer">Meta Newsroom: New Threads Features for a More Personalized Experience That You Control</a></li>
-            <li><a href="https://about.fb.com/news/2025/06/its-now-easier-see-more-fediverse-content-threads/" target="_blank" rel="noreferrer">Meta Newsroom: It’s Now Easier to See More Fediverse Content on Threads</a></li>
-            <li><a href="https://about.fb.com/news/2025/10/introducing-threads-communities-find-your-people/" target="_blank" rel="noreferrer">Meta Newsroom: Introducing Threads Communities</a></li>
-            <li><a href="https://about.fb.com/news/2026/02/threads-dear-algo/" target="_blank" rel="noreferrer">Meta Newsroom: Control Your Threads Feed With New Dear Algo Feature</a></li>
-            <li><a href="https://docs.x.com/x-api/posts/search-recent-posts" target="_blank" rel="noreferrer">X Docs: Search recent Posts</a></li>
-            <li><a href="https://docs.x.com/x-api/lists/list-tweets/introduction" target="_blank" rel="noreferrer">X Docs: List Posts</a></li>
-            <li><a href="https://docs.x.com/x-api/lists/pinned-lists/introduction" target="_blank" rel="noreferrer">X Docs: Pinned Lists</a></li>
-            <li><a href="https://docs.x.com/x-api/posts/filtered-stream/introduction" target="_blank" rel="noreferrer">X Docs: Filtered Stream</a></li>
-            <li><a href="https://docs.x.com/tools/ai" target="_blank" rel="noreferrer">X Docs: Agent Resources</a></li>
-            <li><a href="https://docs.x.com/tools/mcp" target="_blank" rel="noreferrer">X Docs: MCP Servers</a></li>
             <li><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" target="_blank" rel="noreferrer">OpenAI: A practical guide to building AI agents</a></li>
             <li><a href="https://platform.openai.com/docs/guides/tools-connectors-mcp?lang=javascript" target="_blank" rel="noreferrer">OpenAI API: Connectors and MCP servers</a></li>
             <li><a href="https://platform.openai.com/docs/guides/background" target="_blank" rel="noreferrer">OpenAI API: Background mode</a></li>
@@ -180,81 +160,71 @@ export const blogPosts = [
             <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/deep-research-agent-gemini-api/" target="_blank" rel="noreferrer">Google: Build with Gemini Deep Research</a></li>
             <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-3-1-flash-live/" target="_blank" rel="noreferrer">Google: Build real-time conversational agents with Gemini 3.1 Flash Live</a></li>
             <li><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-computer-use-model/" target="_blank" rel="noreferrer">Google: Introducing the Gemini 2.5 Computer Use model</a></li>
-            <li><a href="https://x.com/publickey/status/2035720866911465833" target="_blank" rel="noreferrer">X: Browser Use CLI 2.0 post</a></li>
-            <li><a href="https://x.com/nottecore/highlights" target="_blank" rel="noreferrer">X: Notte highlights</a></li>
-            <li><a href="https://x.com/therealdanvega/status/2036559022346948639" target="_blank" rel="noreferrer">X: Dan Vega on Browserbase Search API</a></li>
-            <li><a href="https://x.com/LangChain/status/2022732667305730397" target="_blank" rel="noreferrer">X: LangChain on Exa observability</a></li>
           </ul>
         `,
       },
       en: {
-        title: 'How to Track the Latest AI Agent Tech with Threads and X',
+        title: 'How to Use AI Agents Well in 2026',
         keywords: ['AI', 'AI Agent'],
-        excerpt: 'As of April 9, 2026, the AI agent themes that keep repeating across Threads and X are MCP, stateful execution, browser use, realtime voice, and tracing-plus-guardrails. The important move is not chasing every launch, but using those feeds to spot repeated signals and then verifying them against official docs.',
+        excerpt: 'As of April 10, 2026, using AI agents well is less about swapping to a stronger model and more about designing connectors, state, narrow tool boundaries, approval flows, and tracing before you scale autonomy.',
         heroImage: {
-          alt: 'A dashboard illustration showing X search results and lists on the left, Threads custom feeds and saved posts on the right, and an AI radar panel in the center with MCP, state, browser, voice, and guardrail cards',
-          caption: 'Threads and X are more useful as a radar for new AI agent capabilities than as places where an agent blindly auto-posts. The real value is finding the signal, then deciding what deserves verification.',
+          alt: 'An illustration of an AI operations board with task cards and layered MCP, state, tools, browser, voice, and guardrail modules arranged around a central agent workspace',
+          caption: 'The best AI agent setups in 2026 do not start with maximum autonomy. They start with a small workflow, clear tool boundaries, and explicit approval points.',
         },
         contentHtml: `
-          <p>As of April 9, 2026, if you keep watching Threads and X long enough, the AI agent conversation stops looking infinite and starts collapsing into a few repeated themes. New companies and demos keep appearing, but the topics that consistently recur are <strong>MCP, state and background execution, tool combinations, browser or computer use, realtime voice, and tracing plus guardrails</strong>.</p>
-          <p>The key mistake is treating social feeds as the final source of truth. Threads and X are better understood as a <strong>signal layer</strong>. That means the best use of an AI agent here is not blind auto-posting. It is building a research operator that spots repeated themes, clusters them, and checks them against official docs before you adopt anything.</p>
-          <p>This is the practical frame I would use today: X for faster technical signal collection, Threads for slower pattern confirmation, and official documentation for the final decision.</p>
+          <p>As of April 10, 2026, using AI agents well no longer means attaching a strong model and automating everything. The harder and more important questions are <strong>which workflow the agent owns, which tools it is allowed to call, where state lives, and where a human still approves the next step</strong>.</p>
+          <p>If you look across the official product surface today, the themes that matter most are clear: <strong>MCP-style connectivity, state and background execution, tool orchestration, browser or computer use, realtime voice, and tracing plus guardrails</strong>.</p>
+          <p>This is the frame I would use now: do not begin with maximum autonomy. Begin with a narrow workflow and infrastructure that lets the agent fail safely.</p>
 
-          <h3>X is for weak-signal detection, Threads is for durable pattern reading</h3>
-          <p>X still gives you the sharper real-time surface. Recent Search covers the last seven days, Filtered Stream delivers near real-time matches, and Lists plus pinned Lists make it possible to watch a narrow set of researchers, founders, framework maintainers, or platform teams.</p>
-          <p>Threads is less useful as a breaking-news wire and more useful as a long-horizon curation surface. After the April 24, 2025 web update, it gained custom feeds, favorite searches, liked and saved posts, auto-update, and insights columns. Then came fediverse search and a dedicated feed in June 2025, communities in October 2025, and Dear Algo in February 2026. In practice, that makes Threads good for seeing which ideas keep generating conversation after the launch-day excitement fades.</p>
+          <h3>Why many AI agent projects still fail</h3>
+          <p>The common failure mode is easy to recognize. Teams start by giving an agent a browser, write access to multiple SaaS tools, and an expectation that it will figure everything out. The demo looks impressive, but the first production edge case breaks trust.</p>
+          <p>The better path is smaller. Start with read-heavy work, limit the tool set, keep durable session state, and place high-risk write actions behind explicit approval. In practice, the difference comes less from the model and more from boundary design.</p>
 
           <h3>The six AI agent themes worth taking seriously right now</h3>
 
           <h3>1. MCP and connectors are becoming the default integration layer</h3>
-          <p>This is no longer just a community meme. X now documents official agent resources, including XMCP and Docs MCP. OpenAI documents remote MCP servers and connectors in the Responses API. Anthropic ships an MCP connector for the Messages API. That convergence matters: the modern agent stack is increasingly built on standardized tool connectivity rather than one-off wrappers for every service.</p>
-          <p>The practical move is to start with read-only MCP servers, restrict tool access with allow-lists, and only add write-capable tools behind explicit approval.</p>
+          <p>Modern agent systems are moving away from custom wrappers for every service. OpenAI documents remote MCP servers and connectors in the Responses API. Anthropic ships an MCP connector for the Messages API. The useful agent stack is increasingly built on standardized connectivity rather than bespoke glue code.</p>
+          <p>The practical move is simple: start with read-only connectors, restrict tool access with allow-lists, and only add write-capable tools behind explicit approval.</p>
 
           <h3>2. Stateful agents and background jobs are replacing one-shot prompt chains</h3>
-          <p>If you still treat an agent as one giant prompt, you are behind the curve. OpenAI now has Conversations for server-managed state, background mode for long-running async work, and session memory in the Agents SDK. Google’s Deep Research runs through the Interactions API, and Gemini 3.1 Flash Live explicitly talks about session management for ongoing conversations.</p>
-          <p>The implication is simple: agents now need job IDs, resumability, and memory boundaries. A production agent is increasingly a stateful workflow, not a single completion.</p>
+          <p>If you still treat an agent as one giant prompt, you are behind the curve. OpenAI now has Conversations for managed state, background mode for long-running async work, and sessions in the Agents SDK. Google Deep Research and live agent tooling also assume session management. A production agent is increasingly a resumable workflow, not a single completion.</p>
 
-          <h3>3. The real progress is in tool orchestration, not just tool count</h3>
-          <p>One of the clearest changes in 2026 is that platforms are getting better at mixing tools inside a single run. Google’s March 17, 2026 tooling update added combined built-in and custom tools plus context circulation across tool calls. Anthropic keeps emphasizing clear JSON schema and tool descriptions. OpenAI is pushing built-in tools, function calling, and remote MCP under one roof.</p>
-          <p>That means the winning design is rarely “twenty tools.” It is usually “three or four good tools with clear read-write boundaries.”</p>
+          <h3>3. The real progress is in tool orchestration, not tool count</h3>
+          <p>The important change is not that models have access to more tools. It is that platforms are getting better at combining them inside one run. Google documents mixed built-in and custom tools with context circulation. Anthropic keeps emphasizing good schema design and clear tool descriptions. OpenAI is aligning built-in tools, function calling, and remote MCP under one stack.</p>
+          <p>In practice, three good tools with clear read-write boundaries beat twenty loosely defined ones.</p>
 
-          <h3>4. Browser use and computer use are hot, but they should be adopted last</h3>
-          <p>X is full of browser-agent launches right now. Browser Use CLI 2.0, Notte’s browser automation releases, and Browserbase Search API examples all point to the same thing: developer attention is heavily shifting toward browser-native agents. Official platforms are moving too. OpenAI computer use is still beta, Anthropic computer use is still beta, and Google’s Gemini 2.5 Computer Use model is still in preview.</p>
-          <p>So the right interpretation is not “browser agents are ready for everything.” It is “browser agents are strategically important, but still the riskiest production surface.” Use them only when there is no clean API or MCP path, prefer search-fetch-parse before opening a full browser session, and keep high-risk actions behind a human approval boundary.</p>
+          <h3>4. Browser use and computer use are strategically important, but still risky</h3>
+          <p>Browser-native agents get a lot of attention, but the official product surface is still cautious. OpenAI computer use is beta, Anthropic computer use is beta, and Google computer use is still preview. That is enough to take seriously, but not enough to make it your default automation layer.</p>
+          <p>Use browser agents only when there is no clean API or MCP path, prefer search-fetch-parse before a full browser session, and keep login, payment, deletion, and external side effects behind a human approval boundary.</p>
 
           <h3>5. Realtime voice agents are becoming a real category</h3>
-          <p>Voice is no longer just an add-on demo. OpenAI now documents Voice Agents as a first-class SDK path with session history, handoffs, tools, and approvals. Google launched Gemini 3.1 Flash Live in preview on March 26, 2026 and positioned it for low-latency voice and vision agents with better tool triggering and stronger task completion in noisy settings.</p>
-          <p>But voice agents are best introduced at the front door: intake, triage, field support, or live assistance. They are usually more valuable as a routing and collection layer than as a fully autonomous back-office worker.</p>
+          <p>Voice is no longer just an add-on demo. OpenAI now documents Voice Agents as a first-class SDK path with session history, handoffs, tools, and approvals. Google Gemini 3.1 Flash Live also positions low-latency voice and vision agents as a serious interaction model.</p>
+          <p>The best use case is usually at the front door: intake, triage, live assistance, or field support. Voice agents are often more useful as a routing layer than as a fully autonomous back-office worker.</p>
 
           <h3>6. Evals, tracing, and approvals are now part of the core stack</h3>
-          <p>The market conversation is shifting from “which model is smarter?” toward “which agent is safer and easier to operate?” OpenAI’s practical guide puts human intervention and tool safeguards at the center. The Agents SDK includes tracing by default. OpenAI deep research now emphasizes trusted-site restriction, progress tracking, and interruption. Even social examples like LangChain’s Exa write-up keep coming back to observability and token visibility.</p>
-          <p>If you cannot answer what success looks like for each tool call, who approves risky actions, and how you reconstruct a failed run, you do not yet have a production agent system.</p>
+          <p>The market is shifting from “which model is smarter?” toward “which agent is safer and easier to operate?” OpenAI practical guidance puts human intervention and tool safeguards at the center. The Agents SDK includes tracing by default. Deep research emphasizes trusted-site restriction, progress tracking, and interruption.</p>
+          <p>If you cannot explain what success looks like for each tool call, who approves risky actions, and how to reconstruct a failed run, you do not yet have a production agent system.</p>
 
-          <h3>The operating loop I would use</h3>
+          <h3>The operating pattern I would recommend</h3>
           <ol>
-            <li>Create X watchlists and search queries for terms like <code>MCP</code>, <code>Agents SDK</code>, <code>background mode</code>, <code>computer use</code>, <code>browser use</code>, <code>deep research</code>, and <code>realtime agent</code>.</li>
-            <li>Build Threads custom feeds around researchers, builders, and practitioners rather than only official company accounts.</li>
-            <li>Let an agent cluster signals into three buckets: adopt now, verify against docs, and interesting but still mostly demo-driven.</li>
-            <li>Within 24 hours, check the official OpenAI, Anthropic, Google, and X docs for the repeated themes only.</li>
-            <li>Write a weekly memo that turns noisy launches into a small decision list: what to try, what to ignore, and what to revisit later.</li>
+            <li>Choose one read-heavy workflow first, such as support triage, internal search, document summarization, or issue classification.</li>
+            <li>Attach only two or three tools: one for search, one for internal data, and one for a downstream action.</li>
+            <li>Add session state and async execution before expanding capability.</li>
+            <li>Keep write actions approval-based until you have evidence that the workflow is stable.</li>
+            <li>Instrument tracing and simple evals so the system improves through real runs, not only demos.</li>
           </ol>
-          <p>If you do that, social media stops being distraction and starts becoming a structured discovery layer. That is, in my view, one of the best ways to use AI agents right now.</p>
+          <p>If you do that, the agent stops being a clever demo and starts becoming an operable system.</p>
+
+          <h3>What to adopt now, and what to treat carefully</h3>
+          <ul>
+            <li><strong>Adopt now</strong>: MCP, read-only connectors, session memory, background jobs, tracing</li>
+            <li><strong>Treat carefully</strong>: browser or computer use, high-risk write automation</li>
+            <li><strong>Use when the purpose is very clear</strong>: realtime voice agents, fully autonomous research loops</li>
+          </ul>
+          <p>In short, using AI agents well in 2026 is less about choosing the loudest new capability and more about building <strong>small workflow boundaries, explicit tool contracts, durable state, human approval, and observable execution</strong>. The technology is moving fast, but operational discipline is still what separates a useful agent from an expensive experiment.</p>
 
           <h3>References</h3>
           <ul>
-            <li><a href="https://about.fb.com/news/2025/04/new-features-threads-web-experience/" target="_blank" rel="noreferrer">Meta Newsroom: New Features for the Threads Web Experience</a></li>
-            <li><a href="https://about.fb.com/news/2024/08/new-threads-features-for-creators-and-businesses/" target="_blank" rel="noreferrer">Meta Newsroom: New Threads Features for Creators and Businesses</a></li>
-            <li><a href="https://about.fb.com/news/2024/10/find-your-community-with-new-threads-educational-insights/" target="_blank" rel="noreferrer">Meta Newsroom: Find Your Community With New Threads Educational Insights</a></li>
-            <li><a href="https://about.fb.com/news/2025/03/new-threads-features-more-personalized-experience-you-control/" target="_blank" rel="noreferrer">Meta Newsroom: New Threads Features for a More Personalized Experience That You Control</a></li>
-            <li><a href="https://about.fb.com/news/2025/06/its-now-easier-see-more-fediverse-content-threads/" target="_blank" rel="noreferrer">Meta Newsroom: It’s Now Easier to See More Fediverse Content on Threads</a></li>
-            <li><a href="https://about.fb.com/news/2025/10/introducing-threads-communities-find-your-people/" target="_blank" rel="noreferrer">Meta Newsroom: Introducing Threads Communities</a></li>
-            <li><a href="https://about.fb.com/news/2026/02/threads-dear-algo/" target="_blank" rel="noreferrer">Meta Newsroom: Control Your Threads Feed With New Dear Algo Feature</a></li>
-            <li><a href="https://docs.x.com/x-api/posts/search-recent-posts" target="_blank" rel="noreferrer">X Docs: Search recent Posts</a></li>
-            <li><a href="https://docs.x.com/x-api/lists/list-tweets/introduction" target="_blank" rel="noreferrer">X Docs: List Posts</a></li>
-            <li><a href="https://docs.x.com/x-api/lists/pinned-lists/introduction" target="_blank" rel="noreferrer">X Docs: Pinned Lists</a></li>
-            <li><a href="https://docs.x.com/x-api/posts/filtered-stream/introduction" target="_blank" rel="noreferrer">X Docs: Filtered Stream</a></li>
-            <li><a href="https://docs.x.com/tools/ai" target="_blank" rel="noreferrer">X Docs: Agent Resources</a></li>
-            <li><a href="https://docs.x.com/tools/mcp" target="_blank" rel="noreferrer">X Docs: MCP Servers</a></li>
             <li><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" target="_blank" rel="noreferrer">OpenAI: A practical guide to building AI agents</a></li>
             <li><a href="https://platform.openai.com/docs/guides/tools-connectors-mcp?lang=javascript" target="_blank" rel="noreferrer">OpenAI API: Connectors and MCP servers</a></li>
             <li><a href="https://platform.openai.com/docs/guides/background" target="_blank" rel="noreferrer">OpenAI API: Background mode</a></li>
@@ -272,76 +242,66 @@ export const blogPosts = [
             <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/deep-research-agent-gemini-api/" target="_blank" rel="noreferrer">Google: Build with Gemini Deep Research</a></li>
             <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-3-1-flash-live/" target="_blank" rel="noreferrer">Google: Build real-time conversational agents with Gemini 3.1 Flash Live</a></li>
             <li><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-computer-use-model/" target="_blank" rel="noreferrer">Google: Introducing the Gemini 2.5 Computer Use model</a></li>
-            <li><a href="https://x.com/publickey/status/2035720866911465833" target="_blank" rel="noreferrer">X: Browser Use CLI 2.0 post</a></li>
-            <li><a href="https://x.com/nottecore/highlights" target="_blank" rel="noreferrer">X: Notte highlights</a></li>
-            <li><a href="https://x.com/therealdanvega/status/2036559022346948639" target="_blank" rel="noreferrer">X: Dan Vega on Browserbase Search API</a></li>
-            <li><a href="https://x.com/LangChain/status/2022732667305730397" target="_blank" rel="noreferrer">X: LangChain on Exa observability</a></li>
           </ul>
         `,
       },
       ja: {
-        title: 'ThreadsとXで最新のAIエージェント技術を整理する方法',
+        title: '2026年にAIエージェントをうまく使う方法',
         keywords: ['AI', 'AI Agent'],
-        excerpt: '2026年4月9日時点でThreadsとXで繰り返し見えるAIエージェントの話題は、MCP、状態管理、browser use、リアルタイム音声、そしてtracingとguardrailsです。大事なのは流行を追い回すことではなく、その信号を公式ドキュメントで検証して導入順を決めることです。',
+        excerpt: '2026年4月10日時点でAIエージェントをうまく使う鍵は、強いモデルに置き換えることではなく、MCPのような接続層、状態管理、狭いツール境界、承認フロー、そしてtracingを先に設計することです。',
         heroImage: {
-          alt: '左にXの検索結果とリスト、右にThreadsのカスタムフィードと保存済み投稿、中央にMCP、state、browser、voice、guardrailのカードを表示したAI技術レーダーのダッシュボード風イラスト',
-          caption: 'ThreadsとXは、エージェントが投稿を代行する場所というより、最新のAIエージェント技術の信号を集めて検証の優先順位を決めるためのレーダーとして使うほうが現実的です。',
+          alt: '複数の業務カードとMCP、state、tools、browser、voice、guardrailのレイヤーが中央のAIエージェント作業領域の周囲に配置された運用ボードのイラスト',
+          caption: '2026年のAIエージェント運用で重要なのは、最大の自律性から始めることではなく、小さな業務に明確なツール境界と承認ポイントを置くことです。',
         },
         contentHtml: `
-          <p>2026年4月9日時点でThreadsとXを見続けると、AIエージェントの話題は無限に広がっているようで、実際にはいくつかの軸に収束していきます。毎週新しい会社やデモは出ますが、繰り返し現れるのは <strong>MCP、状態管理とbackground execution、ツールの組み合わせ、browser/computer use、リアルタイム音声、そしてtracingとguardrails</strong> です。</p>
-          <p>ここで重要なのは、ソーシャルの投稿をそのまま正解として受け取らないことです。ThreadsとXは最終的な仕様書ではなく、<strong>信号が最も早く集まるレーダー</strong> に近い存在です。だからAIエージェントの一番よい使い方は、自動投稿機ではなく、技術の兆候を拾って公式ドキュメントと突き合わせる調査オペレーターとして使うことだと思います。</p>
+          <p>2026年4月10日時点でAIエージェントをうまく使うということは、「強いモデルを付けて全部自動化すること」ではありません。むしろ重要なのは、<strong>どの業務を任せるのか、どのツールをどの順番で呼ばせるのか、状態をどこに持たせるのか、どこで人の承認を残すのか</strong> を先に決めることです。</p>
+          <p>いまの公式ドキュメントを並べてみると、重要な軸はかなり明確です。<strong>MCPのような接続層、状態管理とbackground execution、ツール連携、browser/computer use、リアルタイム音声、そしてtracingとguardrails</strong> です。</p>
 
-          <h3>Xは弱い信号を先に拾い、Threadsは残る話題を見極める場所</h3>
-          <p>Xは依然としてリアルタイム性が強いです。Recent Search、Filtered Stream、Lists、Pinned Listsを使えば、研究者、OSSメンテナ、スタートアップ創業者、APIチームだけを細く追えます。</p>
-          <p>一方でThreadsは、速報よりも長く残る話題を読むのに向いています。2025年4月のWeb更新でcustom feeds、favorite searches、liked/saved posts、auto-update、insights columnが加わり、その後もfediverse feed、communities、Dear Algoといった機能が増えました。つまりThreadsは「何が発表されたか」より「何が数日後も会話として残っているか」を追うための面が強いです。</p>
+          <h3>なぜ多くのAIエージェント案件はまだ失敗するのか</h3>
+          <p>よくある失敗は、最初からブラウザ操作、複数SaaSへの書き込み、そして「自律的に全部できるはず」という期待を同時に乗せてしまうことです。デモは派手でも、本番の例外ケースで一気に信頼を失います。</p>
+          <p>うまくいく案件は逆に小さく始まります。読む仕事から始め、ツール数を絞り、セッションとログを残し、高リスクな書き込みは承認型にします。結局のところ差を生むのは、モデルよりも <strong>業務境界の設計</strong> です。</p>
 
           <h3>いま本当に見るべきAIエージェント技術 6つ</h3>
 
-          <h3>1. MCPとコネクタが標準の接続層になりつつある</h3>
-          <p>Xは公式にAgent ResourcesとMCP Serversを文書化し、XMCPで200以上のAPI操作をAIツールから呼べるようにしています。OpenAIはResponses APIでremote MCP serversとconnectorsを案内し、AnthropicもMessages APIにMCP connectorを用意しています。つまり、最新のagent設計は個別ラッパーを量産する方向ではなく、標準化された接続層の上に組み上がる方向へ進んでいます。</p>
-          <p>実務では、まずread-onlyのMCPから始め、allow-listで範囲を絞り、write系ツールは承認付きにするのが安全です。</p>
+          <h3>1. MCPとコネクタが基本の接続層になってきた</h3>
+          <p>OpenAIはResponses APIでremote MCP serversとconnectorsを案内し、AnthropicもMessages APIにMCP connectorを用意しています。つまり、最近のagent設計は個別ラッパーを量産する方向ではなく、標準化された接続層の上に積み上がる方向へ進んでいます。</p>
+          <p>実務では、まずread-only connectorから始め、allow-listで範囲を絞り、write系ツールは承認付きにするのが安全です。</p>
 
           <h3>2. 状態を持つagentとbackground jobが前提になった</h3>
-          <p>agentを長いプロンプト一発として扱う考え方は、かなり古くなりつつあります。OpenAIはConversations、background mode、Agents SDKのsessionsを用意し、GoogleもDeep ResearchをInteractions APIで提供し、Gemini 3.1 Flash Liveでもsession managementを前提にしています。今のagentは、再開可能で、途中経過を持ち、作業単位として追跡できることが前提になっています。</p>
+          <p>OpenAIはConversations、background mode、Agents SDKのsessionsを提供し、GoogleもDeep ResearchやLive系でsession managementを前提にしています。今のagentは、再開可能で、途中経過を持ち、作業単位として追跡できることが前提です。</p>
 
-          <h3>3. 重要なのはツールの数ではなく、ツールの連携設計</h3>
-          <p>Googleの2026年3月17日の更新では、built-in toolsとcustom functionsを同じリクエストで混ぜ、context circulationを保持できるようになりました。Anthropicはtool useで明確なJSON schemaを重視し、OpenAIもbuilt-in tools、function calling、remote MCPを一つの流れで扱っています。つまり、勝ち筋は20個のツールより、3〜4個の良いツールをどう安全につなぐかにあります。</p>
+          <h3>3. 重要なのはツールの数ではなく、ツール連携の設計</h3>
+          <p>Googleはbuilt-in toolsとcustom functionsを同じリクエストで混ぜ、context circulationを保持できるようにしました。Anthropicはtool useで明確なschemaを重視し、OpenAIもbuilt-in tools、function calling、remote MCPを一つの流れで扱っています。つまり、20個のツールより、3〜4個の良いツールをどう安全につなぐかのほうが重要です。</p>
 
-          <h3>4. Browser useとcomputer useは熱いが、導入は最後でいい</h3>
-          <p>Xでは2026年3月もBrowser Use CLI 2.0、Notte、Browserbase Search APIのようなbrowser-native agentの話が目立ちます。ただし、OpenAIのcomputer useもAnthropicのcomputer useもまだbetaで、GoogleのComputer Use modelもpreviewです。注目度は高い一方で、実運用ではもっとも不安定で危険な面でもあります。</p>
-          <p>なので、APIやMCPで解けないところだけに使い、まずsearch-fetch-parseで済ませ、最後の手段としてブラウザを開くのが妥当です。削除、支払い、認証済み操作は必ず人の承認を挟むべきです。</p>
+          <h3>4. Browser useとcomputer useは重要だが、導入は最後でいい</h3>
+          <p>OpenAIのcomputer useもAnthropicのcomputer useもまだbetaで、GoogleのComputer Use modelもpreviewです。注目度は高い一方で、実運用ではもっとも不安定で危険な面でもあります。APIやMCPで解けないところだけに使い、まずsearch-fetch-parseで済ませ、最後の手段としてブラウザを開くのが妥当です。</p>
 
           <h3>5. リアルタイム音声agentは独立したカテゴリになった</h3>
-          <p>OpenAIはVoice Agentsを専用ガイドとして分け、RealtimeSessionやhandoff、approvalsまで音声の流れに入れています。Googleも2026年3月26日にGemini 3.1 Flash Liveをpreviewで出し、低遅延のvoice and vision agentsを前面に押し出しました。音声agentは万能な自律workerというより、受付、トリアージ、現場支援のようなfront doorに強いと見るのが現実的です。</p>
+          <p>OpenAIはVoice Agentsを専用ガイドとして分け、RealtimeSessionやhandoff、approvalsまで音声の流れに含めています。GoogleもGemini 3.1 Flash Liveで低遅延のvoice and vision agentsを前面に出しています。音声agentは万能な自律workerというより、受付、トリアージ、現場支援のようなfront doorに強いと見るのが現実的です。</p>
 
           <h3>6. eval、tracing、承認境界がなければ、まだ運用ではない</h3>
-          <p>市場の関心は「どのモデルが賢いか」から「どのagentが運用しやすいか」へ少しずつ移っています。OpenAIのpractical guideは人の介入とガードレールを中心に置き、Agents SDKはtracingを標準で持ちます。OpenAI deep researchもtrusted sites制限、進捗の追跡、中断と再指定を前面に出しています。失敗した実行を再現できない、危険な操作の承認者が決まっていない、成功条件を測れないなら、それはまだ本番のagentではありません。</p>
+          <p>OpenAIのpractical guideは人の介入とガードレールを中心に置き、Agents SDKはtracingを標準で持ちます。Deep researchもtrusted sites制限、進捗の追跡、中断を前面に出しています。成功条件を測れない、危険な操作の承認者が決まっていない、失敗した実行を再現できないなら、それはまだ本番のagentではありません。</p>
 
           <h3>私ならこう運用します</h3>
           <ol>
-            <li>Xで <code>MCP</code>、<code>Agents SDK</code>、<code>background mode</code>、<code>computer use</code>、<code>browser use</code>、<code>deep research</code>、<code>realtime agent</code> などの監視クエリを作る</li>
-            <li>Threadsでは研究者、実装者、利用者を中心にcustom feedを作る</li>
-            <li>agentに <em>今すぐ試す</em>、<em>公式ドキュメント確認待ち</em>、<em>まだデモ寄り</em> の三つに分類させる</li>
-            <li>24時間以内にOpenAI、Anthropic、Google、X docsで交差検証する</li>
-            <li>週次メモにして、試すものと見送るものを明確にする</li>
+            <li>まず読む仕事を一つ選ぶ</li>
+            <li>検索、内部データ、行動の3系統から2〜3個だけツールを付ける</li>
+            <li>セッション状態と非同期実行を先に入れる</li>
+            <li>書き込み操作は承認型にする</li>
+            <li>traceとevalを付けて、実行ログから改善する</li>
           </ol>
-          <p>このやり方なら、ThreadsとXは単なるノイズではなく、実際に使えるAI技術レーダーになります。いまAIエージェントをうまく使う方法として、かなり現実的な形だと思います。</p>
+          <p>この流れを踏めば、agentは「賢いデモ」ではなく、運用できるシステムに変わっていきます。</p>
+
+          <h3>今すぐ入れるものと、慎重に見るもの</h3>
+          <ul>
+            <li><strong>今すぐ入れるもの</strong>: MCP、read-only connectors、session memory、background jobs、tracing</li>
+            <li><strong>慎重に見るもの</strong>: browser/computer use、高リスクなwrite automation</li>
+            <li><strong>目的が明確な時だけ使うもの</strong>: realtime voice agent、fully autonomous research loops</li>
+          </ul>
+          <p>要するに、2026年にAIエージェントをうまく使うというのは、派手な新機能を追いかけることではなく、<strong>小さな業務境界、明確なツール契約、状態管理、人の承認、追跡可能な実行</strong> を先に整えることです。技術は速く動いていますが、差を生むのはやはり運用設計です。</p>
 
           <h3>References</h3>
           <ul>
-            <li><a href="https://about.fb.com/news/2025/04/new-features-threads-web-experience/" target="_blank" rel="noreferrer">Meta Newsroom: New Features for the Threads Web Experience</a></li>
-            <li><a href="https://about.fb.com/news/2024/08/new-threads-features-for-creators-and-businesses/" target="_blank" rel="noreferrer">Meta Newsroom: New Threads Features for Creators and Businesses</a></li>
-            <li><a href="https://about.fb.com/news/2024/10/find-your-community-with-new-threads-educational-insights/" target="_blank" rel="noreferrer">Meta Newsroom: Find Your Community With New Threads Educational Insights</a></li>
-            <li><a href="https://about.fb.com/news/2025/03/new-threads-features-more-personalized-experience-you-control/" target="_blank" rel="noreferrer">Meta Newsroom: New Threads Features for a More Personalized Experience That You Control</a></li>
-            <li><a href="https://about.fb.com/news/2025/06/its-now-easier-see-more-fediverse-content-threads/" target="_blank" rel="noreferrer">Meta Newsroom: It’s Now Easier to See More Fediverse Content on Threads</a></li>
-            <li><a href="https://about.fb.com/news/2025/10/introducing-threads-communities-find-your-people/" target="_blank" rel="noreferrer">Meta Newsroom: Introducing Threads Communities</a></li>
-            <li><a href="https://about.fb.com/news/2026/02/threads-dear-algo/" target="_blank" rel="noreferrer">Meta Newsroom: Control Your Threads Feed With New Dear Algo Feature</a></li>
-            <li><a href="https://docs.x.com/x-api/posts/search-recent-posts" target="_blank" rel="noreferrer">X Docs: Search recent Posts</a></li>
-            <li><a href="https://docs.x.com/x-api/lists/list-tweets/introduction" target="_blank" rel="noreferrer">X Docs: List Posts</a></li>
-            <li><a href="https://docs.x.com/x-api/lists/pinned-lists/introduction" target="_blank" rel="noreferrer">X Docs: Pinned Lists</a></li>
-            <li><a href="https://docs.x.com/x-api/posts/filtered-stream/introduction" target="_blank" rel="noreferrer">X Docs: Filtered Stream</a></li>
-            <li><a href="https://docs.x.com/tools/ai" target="_blank" rel="noreferrer">X Docs: Agent Resources</a></li>
-            <li><a href="https://docs.x.com/tools/mcp" target="_blank" rel="noreferrer">X Docs: MCP Servers</a></li>
             <li><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" target="_blank" rel="noreferrer">OpenAI: A practical guide to building AI agents</a></li>
             <li><a href="https://platform.openai.com/docs/guides/tools-connectors-mcp?lang=javascript" target="_blank" rel="noreferrer">OpenAI API: Connectors and MCP servers</a></li>
             <li><a href="https://platform.openai.com/docs/guides/background" target="_blank" rel="noreferrer">OpenAI API: Background mode</a></li>
@@ -359,10 +319,6 @@ export const blogPosts = [
             <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/deep-research-agent-gemini-api/" target="_blank" rel="noreferrer">Google: Build with Gemini Deep Research</a></li>
             <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-3-1-flash-live/" target="_blank" rel="noreferrer">Google: Build real-time conversational agents with Gemini 3.1 Flash Live</a></li>
             <li><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-computer-use-model/" target="_blank" rel="noreferrer">Google: Introducing the Gemini 2.5 Computer Use model</a></li>
-            <li><a href="https://x.com/publickey/status/2035720866911465833" target="_blank" rel="noreferrer">X: Browser Use CLI 2.0 post</a></li>
-            <li><a href="https://x.com/nottecore/highlights" target="_blank" rel="noreferrer">X: Notte highlights</a></li>
-            <li><a href="https://x.com/therealdanvega/status/2036559022346948639" target="_blank" rel="noreferrer">X: Dan Vega on Browserbase Search API</a></li>
-            <li><a href="https://x.com/LangChain/status/2022732667305730397" target="_blank" rel="noreferrer">X: LangChain on Exa observability</a></li>
           </ul>
         `,
       },
