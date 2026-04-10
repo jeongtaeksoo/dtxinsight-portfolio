@@ -53,272 +53,246 @@ export const blogPosts = [
     category: 'ai',
     createdAt: '2026-04-10T00:18:00+09:00',
     heroImage: {
-      src: '/blog/threads-x-ai-agent-hero.svg',
+      src: '/blog/ai-agent-cli-workflow-hero.svg',
     },
     locales: {
       ko: {
-        title: '2026년 AI Agent를 잘 쓰는 방법',
-        keywords: ['AI', 'AI Agent'],
-        excerpt: '2026년 4월 10일 기준으로 AI agent를 잘 쓰는 핵심은 더 강한 모델 하나를 붙이는 것이 아니라, MCP 같은 연결층, 상태 관리, 좁은 툴 경계, 승인 구조, tracing·guardrails를 먼저 설계하는 일입니다.',
+        title: '왜 AI Agent는 CLI에서 먼저 강해지는가',
+        keywords: ['AI', 'AI Agent', 'CLI', 'MCP'],
+        excerpt: '2026년 4월 10일 기준으로 실전 AI agent는 채팅 UI보다 CLI에서 더 자주 성공합니다. 파일, Git, 로그, API, MCP, 승인 흐름을 같은 작업면에 둘 수 있기 때문입니다.',
         heroImage: {
-          alt: '여러 업무 카드와 MCP, state, tools, browser, voice, guardrail 레이어가 하나의 AI agent 운영 보드 위에 정렬된 일러스트',
-          caption: '지금 AI agent를 잘 쓰는 방식은 거대한 자율성을 한 번에 붙이는 것이 아니라, 작은 업무 단위에 도구 경계와 승인 구조를 먼저 세우는 것입니다.',
+          alt: '터미널 창, 작업 카드, MCP 연결, 승인 게이트, 백그라운드 잡이 한 화면에 정리된 CLI 중심 AI agent 워크플로 일러스트',
+          caption: '요즘 실전 AI agent는 화려한 채팅창보다 CLI 위에서 더 빨리 안정화됩니다. 이유는 도구 연결, 재현성, 승인 경계를 한 자리에서 다룰 수 있기 때문입니다.',
         },
         contentHtml: `
-          <p>2026년 4월 10일 기준으로 AI agent를 잘 쓴다는 말은 더 이상 “모델 하나 붙여서 자동화했다”는 뜻이 아닙니다. 지금 더 중요한 질문은 <strong>어떤 업무를 어디까지 맡길지, 어떤 도구를 어떤 순서로 호출하게 할지, 그리고 어디서 사람 승인을 남길지</strong>입니다.</p>
-          <p>최근 공식 문서와 제품 업데이트를 함께 보면, 지금 AI agent를 잘 쓰는 팀이 공통으로 신경 쓰는 축은 꽤 분명합니다. <strong>MCP 같은 연결층, 상태 저장과 background execution, 툴 조합, browser/computer use, 실시간 음성, 그리고 tracing·guardrails</strong>입니다.</p>
-          <p>이 글은 지금 시점에서 AI agent를 어떻게 설계하고 어디부터 도입하는 게 현실적인지, 그리고 무엇은 바로 써도 되고 무엇은 아직 조심해야 하는지를 정리한 글입니다.</p>
+          <p>2026년 4월 10일 기준으로 실전 AI agent는 종종 채팅창보다 <strong>CLI</strong>에서 먼저 자리를 잡습니다. 이유는 단순합니다. 코드, 파일, Git, 로그, API, MCP, 승인 프롬프트, 실행 기록을 같은 작업면에서 다룰 수 있기 때문입니다. 화려한 UI보다 먼저 필요한 것은 <strong>명확한 실행면</strong>입니다.</p>
+          <p>요즘 새로운 agent 기술은 Threads나 X 같은 플랫폼에서 가장 먼저 눈에 들어오는 경우가 많습니다. 하지만 실제로 팀이 도입을 결정할 때는 분위기만 보면 안 됩니다. 제가 보는 기준은 늘 같습니다. <strong>커뮤니티는 신호를 주고, 공식 문서는 경계를 정해 줍니다.</strong> Claude Code, Codex CLI, Gemini CLI처럼 최근 흐름을 대표하는 도구들도 결국 이 패턴 안에서 읽는 편이 정확합니다.</p>
+          <p>그래서 지금 AI agent를 잘 쓰는 법을 한 문장으로 줄이면 이렇습니다. <strong>먼저 CLI에서 작게 이기고, 그다음에 브라우저나 음성을 붙여라.</strong></p>
 
-          <h3>왜 많은 AI agent 프로젝트가 아직도 실패하는가</h3>
-          <p>실패하는 프로젝트는 보통 처음부터 너무 많은 걸 기대합니다. 브라우저도 열고, 여러 SaaS에 쓰기 권한도 주고, 사람 승인도 없이 “알아서 잘하는 agent”를 만들려고 합니다. 데모는 화려하지만 운영은 빨리 흔들립니다.</p>
-          <p>반대로 잘 되는 프로젝트는 더 작게 시작합니다. 읽기 중심 업무부터 붙이고, 도구 수를 제한하고, 세션과 로그를 남기고, 실제 쓰기 작업은 승인형으로 둡니다. 결국 중요한 건 모델의 환상이 아니라 <strong>업무 경계의 설계</strong>입니다.</p>
+          <h3>왜 많은 AI agent가 결국 CLI로 돌아오는가</h3>
+          <p>첫째, CLI는 도구 연결이 가장 쉽습니다. 파일을 읽고, diff를 보고, Git 상태를 확인하고, 테스트를 돌리고, 로그를 읽고, 내부 API를 호출하는 일이 모두 자연스럽게 이어집니다. 에이전트가 실제 일을 하려면 결국 이런 표면과 만나야 하는데, CLI는 그 연결 비용이 가장 낮습니다.</p>
+          <p>둘째, CLI는 재현성이 좋습니다. 어떤 명령을 실행했는지, 어떤 파일이 바뀌었는지, 어디서 실패했는지 남기기 쉽습니다. 실전 agent에서 중요한 건 “한 번 똑똑해 보이는 것”이 아니라 <strong>실패했을 때 다시 추적할 수 있는 것</strong>입니다.</p>
+          <p>셋째, CLI는 승인 구조를 붙이기 쉽습니다. 읽기 전용 명령은 자동으로 돌리고, 쓰기 명령은 승인형으로 막고, 고위험 작업은 사람이 직접 확인하게 만드는 식의 경계를 설계하기 좋습니다. 이 점 때문에 운영 안정성에서 차이가 크게 납니다.</p>
 
-          <h3>2026년 4월 10일 기준으로 지금 정말 봐야 할 AI agent 기술 6가지</h3>
+          <h3>CLI에서 특히 잘 맞는 AI agent 업무</h3>
+          <ul>
+            <li><strong>코드와 문서 분석</strong>: 저장소 구조 읽기, 이슈 triage, PR 요약, 릴리스 노트 초안, 기술 문서 정리</li>
+            <li><strong>내부 운영 자동화</strong>: 로그 점검, 장애 초안 정리, 배포 전 체크, 반복성 있는 데이터 정리</li>
+            <li><strong>리서치와 비교 작업</strong>: 여러 문서를 모아 요약하고, GitHub나 웹을 읽고, 근거 링크를 정리하는 일</li>
+            <li><strong>승인형 액션</strong>: 이메일 초안 작성, 티켓 생성 초안, 캘린더 제안, 내부 메모 저장처럼 마지막 버튼만 사람이 누르면 되는 일</li>
+          </ul>
+          <p>반대로 처음부터 웹 챗봇 형태로 모든 걸 풀려 하면, 도구 호출과 상태 관리가 화면 뒤로 숨어버립니다. 그래서 데모는 쉬워도 운영은 흔들리기 쉽습니다.</p>
 
-          <h3>1. MCP와 커넥터가 기본 연결층이 되고 있다</h3>
-          <p>최근 agent 설계에서 가장 큰 변화는 서비스마다 커스텀 래퍼를 다시 짜는 방식에서 점점 멀어지고 있다는 점입니다. OpenAI는 Responses API에서 remote MCP servers와 connectors를 공식 가이드로 설명하고 있고, Anthropic도 MCP connector를 Messages API에 붙였습니다. 즉, 최신 agent는 모델만 똑똑한 것이 아니라 <strong>도구와 시스템을 붙이는 방식이 표준화</strong>되고 있습니다.</p>
-          <p>실무적으로는 이 순서가 가장 안전합니다.</p>
+          <h3>최근 흐름이 보여 주는 것: agent는 점점 CLI 제품이 되고 있다</h3>
+          <p>최근 흐름을 보면 이 방향은 우연이 아닙니다. Anthropic은 Claude Code를 통해 터미널 안에서 코드베이스 탐색, 수정, 테스트, Git 워크플로를 묶고 있습니다. OpenAI도 Codex CLI를 공식 문서로 안내하면서 터미널 안에서 코드 읽기, 명령 실행, 승인형 수정 흐름을 전면에 두고 있습니다. Google 역시 Gemini CLI를 별도 문서와 저장소로 운영하며, 셸 명령과 MCP 연동을 핵심 사용면으로 설명합니다.</p>
+          <p>중요한 건 세 회사가 같은 인터페이스를 복제했다는 사실이 아닙니다. <strong>실전 agent를 어디서 운영하는 것이 가장 현실적인가</strong>에 대한 답이 비슷해지고 있다는 점이 중요합니다. 그 답이 지금은 대체로 CLI입니다.</p>
+
+          <h3>CLI-first 설계에서 핵심은 MCP, 상태, 승인 테이블이다</h3>
+          <p>CLI 위에 agent를 올린다고 해서 아무 명령이나 열어주면 안 됩니다. 오히려 CLI-first일수록 경계를 더 잘라야 합니다.</p>
           <ol>
-            <li>먼저 read-only MCP부터 붙입니다.</li>
-            <li>tool allow-list를 걸어 에이전트가 쓸 수 있는 범위를 좁힙니다.</li>
-            <li>write 도구는 승인형으로만 엽니다.</li>
+            <li><strong>먼저 읽기 전용 도구부터 붙입니다</strong>. 웹 검색, 문서 읽기, Git 조회, 이슈 조회처럼 실패 비용이 낮은 표면부터 연결합니다.</li>
+            <li><strong>MCP와 커넥터는 신뢰 경계로 다룹니다</strong>. 편의 기능이 아니라 어떤 외부 시스템에 어떤 권한으로 닿는지 정하는 레이어로 봐야 합니다.</li>
+            <li><strong>세션과 background execution을 먼저 설계합니다</strong>. 요즘 agent는 단발 프롬프트보다 재개 가능한 작업 단위에 가깝기 때문입니다.</li>
+            <li><strong>쓰기 도구는 승인형으로 남깁니다</strong>. 파일 수정, 이슈 생성, 배포, 외부 시스템 변경은 사람 확인이 들어가야 합니다.</li>
+            <li><strong>trace와 eval을 남깁니다</strong>. 어떤 명령이 성공이었는지, 어느 승인 단계에서 멈췄는지 남겨야 agent가 좋아집니다.</li>
           </ol>
+          <p>실전에서 실패하는 팀은 대체로 도구 수를 늘리는 데 집중합니다. 잘 되는 팀은 반대로 <strong>도구 표면을 줄이고, 상태와 승인 표를 먼저 고정</strong>합니다.</p>
 
-          <h3>2. 상태 저장과 background execution이 사실상 기본값이 됐다</h3>
-          <p>에이전트를 아직도 “긴 프롬프트 한 번”처럼 다루면 최신 흐름과 멉니다. OpenAI는 Conversations API로 상태를 저장하고, background mode로 오래 걸리는 작업을 비동기로 돌릴 수 있게 했습니다. Agents SDK도 sessions를 기본 메모리 단위로 제공하고, Google 역시 Deep Research와 Live 계열 문서에서 session management를 전제로 설명합니다.</p>
-          <p>이 변화는 꽤 본질적입니다. 요즘 agent는 더 이상 “똑똑한 단답형 모델”이 아니라 <strong>상태를 가진 작업 단위</strong>로 보는 편이 맞습니다.</p>
-          <ul>
-            <li>대화 ID나 작업 ID를 먼저 만든다.</li>
-            <li>모든 중간 산출물을 세션에 쌓는다.</li>
-            <li>끊겼다가 다시 이어질 수 있게 만든다.</li>
-          </ul>
+          <h3>브라우저와 음성은 언제 붙이는가</h3>
+          <p>browser use나 computer use는 흥미롭지만, 기본값으로 두기에는 아직 변수가 많습니다. 로그인 세션, DOM 변경, 프롬프트 인젝션, 잘못된 클릭, 외부 부작용 같은 문제가 곧바로 운영 리스크로 이어집니다. 그래서 저는 <strong>API나 MCP가 없는 표면에서만 브라우저를 마지막 수단으로 쓰는 편</strong>이 맞다고 봅니다.</p>
+          <p>음성도 마찬가지입니다. 실시간 intake, 현장 지원, 회의 전 정리처럼 접점이 중요한 경우에는 강력하지만, 백오피스 업무 전체를 음성 agent로 푸는 것은 대부분 과합니다. 많은 경우 핵심 처리 루프는 여전히 CLI 쪽에 두고, 음성은 앞단 인터페이스로 쓰는 편이 더 안정적입니다.</p>
 
-          <h3>3. 툴은 많이 붙이는 것보다, 같이 잘 쓰는 게 중요해졌다</h3>
-          <p>최근 변화의 핵심은 “툴을 하나 더 추가했다”가 아닙니다. <strong>한 번의 요청 안에서 여러 종류의 툴을 자연스럽게 조합하는 능력</strong>이 좋아지고 있다는 점입니다. Google은 built-in tools와 custom function을 같은 요청에 섞고, tool call 간 context circulation을 보존한다고 설명합니다. Anthropic은 tool use 문서에서 JSON schema와 설명의 명확성을 계속 강조하고, OpenAI도 built-in tools, function calling, remote MCP를 한 흐름으로 묶고 있습니다.</p>
-          <p>결국 최신 기술의 핵심은 “툴 20개”가 아니라 “<strong>세 개의 좋은 툴을 어떻게 안전하게 연결하느냐</strong>”입니다.</p>
-          <ul>
-            <li>읽기 도구 1개: web search나 문서 검색</li>
-            <li>사내 데이터 도구 1개: CRM, 티켓, DB, 노션 중 하나</li>
-            <li>행동 도구 1개: 이메일 초안, 이슈 생성, 캘린더 제안 중 하나</li>
-          </ul>
-
-          <h3>4. Browser use와 computer use는 가장 뜨겁지만, 가장 늦게 도입해야 한다</h3>
-          <p>browser-native agent는 커뮤니티에서 가장 많이 회자되는 축 중 하나입니다. 하지만 공식 제품 흐름을 보면 OpenAI의 computer use는 아직 beta이고, Anthropic의 computer use도 beta이며, Google의 Computer Use model도 preview입니다. 관심은 가장 뜨겁지만 운영 안정성은 아직 가장 조심해야 하는 구간입니다.</p>
-          <p>실제 브라우저를 클릭하고 입력하는 agent는 데모는 화려하지만, 인증 세션, DOM 변경, 예외 처리, 프롬프트 인젝션, 잘못된 클릭 같은 리스크를 같이 데려옵니다.</p>
+          <h3>최신 AI agent 기술을 따라가는 실제 방법</h3>
+          <p>여기서 Threads와 X의 역할이 나옵니다. 두 플랫폼은 공식 발표보다 빠르게 <strong>새로운 워크플로, 데모, 실패 사례, 작은 팁</strong>이 퍼지는 곳입니다. 저는 이런 플랫폼을 “판단의 근거”가 아니라 <strong>레이더</strong>로 씁니다.</p>
           <ol>
-            <li>API나 MCP가 없는 서비스에서만 쓴다.</li>
-            <li>먼저 search-fetch-parse로 해결하고, 안 될 때만 브라우저를 띄운다.</li>
-            <li>로그인이나 결제, 삭제 같은 고위험 액션은 반드시 사람 승인 뒤에 둔다.</li>
+            <li>Threads와 X에서 새 agent 워크플로와 출시 신호를 먼저 잡습니다.</li>
+            <li>바로 공식 문서, GitHub 저장소, 릴리스 노트로 넘어가 실제 지원 범위를 확인합니다.</li>
+            <li>작은 CLI 워크플로로 직접 테스트합니다. 예를 들면 문서 검색, 코드 수정 초안, 로그 triage처럼 좁은 일 하나만 붙입니다.</li>
+            <li>괜찮으면 그다음에만 브라우저, 음성, 장기 루프를 붙입니다.</li>
           </ol>
+          <p>이 루프를 유지하면 커뮤니티의 속도는 가져가되, 제품 문서의 경계를 놓치지 않게 됩니다.</p>
 
-          <h3>5. 실시간 음성 에이전트는 프런트도어에서 강해지고 있다</h3>
-          <p>실시간 음성은 이제 보조 기능이 아니라 독립된 agent 카테고리로 굳어지는 중입니다. OpenAI Agents SDK는 Voice Agents를 별도 가이드로 두고 있고, RealtimeSession, handoff, approvals까지 음성 흐름 안에 넣습니다. Google도 Gemini 3.1 Flash Live를 preview로 공개하며 실시간 voice·vision agent를 전면에 내세웠습니다.</p>
-          <p>다만 음성 agent는 백오피스 자동화보다 <strong>접점 설계</strong>에 먼저 붙이는 편이 좋습니다. 예를 들면 고객 intake, 내부 업무 접수, 현장 지원, 요약 후 handoff 같은 일입니다.</p>
-
-          <h3>6. eval, tracing, 승인 경계가 없으면 그것은 아직 운영이 아니다</h3>
-          <p>지금 시장은 “더 강한 모델”보다 “더 운영 가능한 agent” 쪽으로 이동하고 있습니다. OpenAI의 practical guide는 사람 개입과 도구 가드레일을 핵심 원칙으로 잡고 있고, Agents SDK는 tracing을 기본으로 켭니다. Deep research도 trusted sites 제한, 진행 추적, 중간 개입 같은 운영 요소를 전면에 둡니다.</p>
-          <ul>
-            <li>어떤 툴 호출이 성공이었는지 측정하는 기준</li>
-            <li>누가 언제 승인해야 하는지에 대한 경계</li>
-            <li>왜 그런 답이 나왔는지 추적 가능한 실행 로그</li>
-          </ul>
-
-          <h3>제가 추천하는 실제 사용 순서는 이렇습니다</h3>
+          <h3>제가 추천하는 도입 순서</h3>
           <ol>
-            <li><strong>읽기 중심 업무 하나를 고릅니다</strong>: 고객 문의 분류, 문서 요약, 이슈 triage, 내부 검색 같은 일입니다.</li>
-            <li><strong>툴을 2~3개만 붙입니다</strong>: 검색 1개, 내부 데이터 1개, 행동 1개 정도면 충분합니다.</li>
-            <li><strong>상태 저장과 비동기 실행을 먼저 넣습니다</strong>: 세션, 작업 ID, 재실행 흐름을 먼저 만듭니다.</li>
-            <li><strong>write action은 승인형으로 둡니다</strong>: 메일 발송, 티켓 수정, DB 쓰기, 외부 시스템 변경은 마지막 단계입니다.</li>
-            <li><strong>trace와 eval을 붙입니다</strong>: 성공률, 실패 패턴, 승인 취소 사유를 쌓아야 agent가 실제로 좋아집니다.</li>
+            <li><strong>CLI에서 읽기 중심 업무 하나를 고릅니다</strong>: 저장소 분석, 문서 요약, 이슈 triage, 로그 점검이 좋습니다.</li>
+            <li><strong>도구를 2~3개만 붙입니다</strong>: 검색 1개, 내부 데이터 1개, 승인형 행동 1개면 충분합니다.</li>
+            <li><strong>MCP와 allow-list를 먼저 넣습니다</strong>: 에이전트가 만질 표면을 줄이는 단계입니다.</li>
+            <li><strong>세션과 백그라운드 작업을 설계합니다</strong>: 다시 이어서 실행할 수 있어야 운영이 됩니다.</li>
+            <li><strong>브라우저와 음성은 나중에 붙입니다</strong>: 기본 처리 루프가 안정화된 뒤에만 확장하는 편이 좋습니다.</li>
           </ol>
-          <p>이 흐름을 타면, agent는 “똑똑한 데모”가 아니라 <strong>운영 가능한 시스템</strong>으로 바뀝니다.</p>
-
-          <h3>지금 바로 시작한다면, 무엇부터 해야 할까</h3>
-          <ul>
-            <li><strong>바로 도입할 것</strong>: MCP, read-only connectors, session memory, background jobs, tracing</li>
-            <li><strong>조심해서 볼 것</strong>: browser/computer use, 고위험 write action 자동화</li>
-            <li><strong>목적이 분명할 때만 붙일 것</strong>: realtime voice agent, fully autonomous research loops</li>
-          </ul>
-          <p>정리하면 이렇습니다. 지금 AI agent를 잘 쓴다는 건 모델을 한 번 더 바꾸는 일이 아니라, <strong>작은 업무 경계, 명확한 툴 계약, 상태 저장, 승인 구조, 그리고 추적 가능한 실행</strong>을 먼저 만드는 일입니다. 2026년의 핵심 키워드는 분명하지만, 진짜 차이를 만드는 건 결국 설계와 운영입니다.</p>
+          <p>정리하면, 지금 AI agent를 잘 쓴다는 것은 더 강한 모델을 고르는 일이 아니라 <strong>CLI라는 명확한 작업면 위에 작은 업무 경계, 도구 표면, 승인 구조, 추적 가능한 실행</strong>을 먼저 세우는 일입니다. 최신 기술은 계속 쏟아지지만, 실제 성과는 여전히 이 기본기에서 갈립니다.</p>
 
           <h3>References</h3>
           <ul>
             <li><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" target="_blank" rel="noreferrer">OpenAI: A practical guide to building AI agents</a></li>
+            <li><a href="https://developers.openai.com/codex/cli" target="_blank" rel="noreferrer">OpenAI: Codex CLI</a></li>
             <li><a href="https://platform.openai.com/docs/guides/tools-connectors-mcp?lang=javascript" target="_blank" rel="noreferrer">OpenAI API: Connectors and MCP servers</a></li>
             <li><a href="https://platform.openai.com/docs/guides/background" target="_blank" rel="noreferrer">OpenAI API: Background mode</a></li>
-            <li><a href="https://developers.openai.com/api/docs/guides/conversation-state" target="_blank" rel="noreferrer">OpenAI API: Conversation state</a></li>
-            <li><a href="https://platform.openai.com/docs/guides/tools-computer-use/" target="_blank" rel="noreferrer">OpenAI API: Computer use</a></li>
-            <li><a href="https://platform.openai.com/docs/guides/agents-sdk/" target="_blank" rel="noreferrer">OpenAI API: Agents SDK</a></li>
-            <li><a href="https://openai.github.io/openai-agents-python/tracing/" target="_blank" rel="noreferrer">OpenAI Agents SDK: Tracing</a></li>
-            <li><a href="https://openai.github.io/openai-agents-python/sessions/" target="_blank" rel="noreferrer">OpenAI Agents SDK: Sessions</a></li>
-            <li><a href="https://openai.github.io/openai-agents-js/guides/voice-agents/" target="_blank" rel="noreferrer">OpenAI Agents SDK: Voice Agents</a></li>
-            <li><a href="https://openai.com/index/introducing-deep-research/" target="_blank" rel="noreferrer">OpenAI: Introducing deep research</a></li>
+            <li><a href="https://docs.anthropic.com/en/docs/claude-code/overview" target="_blank" rel="noreferrer">Anthropic Docs: Claude Code overview</a></li>
             <li><a href="https://docs.anthropic.com/en/docs/agents-and-tools/mcp-connector" target="_blank" rel="noreferrer">Anthropic Docs: MCP connector</a></li>
-            <li><a href="https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/implement-tool-use" target="_blank" rel="noreferrer">Anthropic Docs: How to implement tool use</a></li>
-            <li><a href="https://docs.anthropic.com/en/docs/build-with-claude/computer-use" target="_blank" rel="noreferrer">Anthropic Docs: Computer use tool</a></li>
+            <li><a href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noreferrer">Google: Gemini CLI repository</a></li>
+            <li><a href="https://geminicli.com/docs/cli/" target="_blank" rel="noreferrer">Google: Gemini CLI documentation</a></li>
             <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tooling-updates/" target="_blank" rel="noreferrer">Google: Gemini API tooling updates</a></li>
-            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/deep-research-agent-gemini-api/" target="_blank" rel="noreferrer">Google: Build with Gemini Deep Research</a></li>
-            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-3-1-flash-live/" target="_blank" rel="noreferrer">Google: Build real-time conversational agents with Gemini 3.1 Flash Live</a></li>
-            <li><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-computer-use-model/" target="_blank" rel="noreferrer">Google: Introducing the Gemini 2.5 Computer Use model</a></li>
           </ul>
         `,
       },
       en: {
-        title: 'How to Use AI Agents Well in 2026',
-        keywords: ['AI', 'AI Agent'],
-        excerpt: 'As of April 10, 2026, using AI agents well is less about swapping to a stronger model and more about designing connectors, state, narrow tool boundaries, approval flows, and tracing before you scale autonomy.',
+        title: 'Why AI Agents Work Best in CLI-First Workflows',
+        keywords: ['AI', 'AI Agent', 'CLI', 'MCP'],
+        excerpt: 'As of April 10, 2026, practical AI agents often succeed in the CLI before they succeed in a chat UI, because files, Git, logs, APIs, MCP, and approvals can all live on the same execution surface.',
         heroImage: {
-          alt: 'An illustration of an AI operations board with task cards and layered MCP, state, tools, browser, voice, and guardrail modules arranged around a central agent workspace',
-          caption: 'The best AI agent setups in 2026 do not start with maximum autonomy. They start with a small workflow, clear tool boundaries, and explicit approval points.',
+          alt: 'A CLI-first AI agent workflow illustration with terminal windows, MCP links, approval gates, and background jobs arranged around a central execution board',
+          caption: 'The practical advantage of CLI-first agents is not nostalgia. It is that tools, approvals, logs, and repeatable execution can all be kept in one place.',
         },
         contentHtml: `
-          <p>As of April 10, 2026, using AI agents well no longer means attaching a strong model and automating everything. The harder and more important questions are <strong>which workflow the agent owns, which tools it is allowed to call, where state lives, and where a human still approves the next step</strong>.</p>
-          <p>If you look across the official product surface today, the themes that matter most are clear: <strong>MCP-style connectivity, state and background execution, tool orchestration, browser or computer use, realtime voice, and tracing plus guardrails</strong>.</p>
-          <p>This is the frame I would use now: do not begin with maximum autonomy. Begin with a narrow workflow and infrastructure that lets the agent fail safely.</p>
+          <p>As of April 10, 2026, practical AI agents often become useful in the <strong>CLI</strong> before they become useful in a polished chat UI. The reason is straightforward. Files, code, Git, logs, APIs, MCP connections, approval prompts, and execution traces can all live on the same surface. That makes the terminal less of an old interface and more of a very strong control plane.</p>
+          <p>New agent ideas often show up first on Threads and X as demos, workflows, or early reactions. But those platforms are best used as radar, not as the final source of truth. For real adoption decisions, I still anchor on official docs, repos, and release notes. Claude Code, Codex CLI, and Gemini CLI all make more sense when read through that lens.</p>
+          <p>The practical rule I would use now is simple: <strong>win first in a narrow CLI workflow, then expand to browser or voice only when the core loop is stable.</strong></p>
 
-          <h3>Why many AI agent projects still fail</h3>
-          <p>The common failure mode is easy to recognize. Teams start by giving an agent a browser, write access to multiple SaaS tools, and an expectation that it will figure everything out. The demo looks impressive, but the first production edge case breaks trust.</p>
-          <p>The better path is smaller. Start with read-heavy work, limit the tool set, keep durable session state, and place high-risk write actions behind explicit approval. In practice, the difference comes less from the model and more from boundary design.</p>
+          <h3>Why so many useful AI agents end up in the CLI</h3>
+          <p>First, the CLI is where tool connectivity is easiest. Agents need to read files, inspect repositories, run tests, check logs, call internal APIs, and move outputs between systems. That stack already fits naturally in the terminal.</p>
+          <p>Second, the CLI is easier to audit and replay. You can see which command ran, which file changed, what failed, and what approval was given. In production, that matters more than a pretty demo.</p>
+          <p>Third, the CLI makes approval boundaries clearer. Read-only commands can run automatically, write actions can stay gated, and high-risk operations can require explicit confirmation. This is one of the main reasons CLI-first agents stabilize faster.</p>
 
-          <h3>The six AI agent themes worth taking seriously right now</h3>
-
-          <h3>1. MCP and connectors are becoming the default integration layer</h3>
-          <p>Modern agent systems are moving away from custom wrappers for every service. OpenAI documents remote MCP servers and connectors in the Responses API. Anthropic ships an MCP connector for the Messages API. The useful agent stack is increasingly built on standardized connectivity rather than bespoke glue code.</p>
-          <p>The practical move is simple: start with read-only connectors, restrict tool access with allow-lists, and only add write-capable tools behind explicit approval.</p>
-
-          <h3>2. Stateful agents and background jobs are replacing one-shot prompt chains</h3>
-          <p>If you still treat an agent as one giant prompt, you are behind the curve. OpenAI now has Conversations for managed state, background mode for long-running async work, and sessions in the Agents SDK. Google Deep Research and live agent tooling also assume session management. A production agent is increasingly a resumable workflow, not a single completion.</p>
-
-          <h3>3. The real progress is in tool orchestration, not tool count</h3>
-          <p>The important change is not that models have access to more tools. It is that platforms are getting better at combining them inside one run. Google documents mixed built-in and custom tools with context circulation. Anthropic keeps emphasizing good schema design and clear tool descriptions. OpenAI is aligning built-in tools, function calling, and remote MCP under one stack.</p>
-          <p>In practice, three good tools with clear read-write boundaries beat twenty loosely defined ones.</p>
-
-          <h3>4. Browser use and computer use are strategically important, but still risky</h3>
-          <p>Browser-native agents get a lot of attention, but the official product surface is still cautious. OpenAI computer use is beta, Anthropic computer use is beta, and Google computer use is still preview. That is enough to take seriously, but not enough to make it your default automation layer.</p>
-          <p>Use browser agents only when there is no clean API or MCP path, prefer search-fetch-parse before a full browser session, and keep login, payment, deletion, and external side effects behind a human approval boundary.</p>
-
-          <h3>5. Realtime voice agents are becoming a real category</h3>
-          <p>Voice is no longer just an add-on demo. OpenAI now documents Voice Agents as a first-class SDK path with session history, handoffs, tools, and approvals. Google Gemini 3.1 Flash Live also positions low-latency voice and vision agents as a serious interaction model.</p>
-          <p>The best use case is usually at the front door: intake, triage, live assistance, or field support. Voice agents are often more useful as a routing layer than as a fully autonomous back-office worker.</p>
-
-          <h3>6. Evals, tracing, and approvals are now part of the core stack</h3>
-          <p>The market is shifting from “which model is smarter?” toward “which agent is safer and easier to operate?” OpenAI practical guidance puts human intervention and tool safeguards at the center. The Agents SDK includes tracing by default. Deep research emphasizes trusted-site restriction, progress tracking, and interruption.</p>
-          <p>If you cannot explain what success looks like for each tool call, who approves risky actions, and how to reconstruct a failed run, you do not yet have a production agent system.</p>
-
-          <h3>The operating pattern I would recommend</h3>
-          <ol>
-            <li>Choose one read-heavy workflow first, such as support triage, internal search, document summarization, or issue classification.</li>
-            <li>Attach only two or three tools: one for search, one for internal data, and one for a downstream action.</li>
-            <li>Add session state and async execution before expanding capability.</li>
-            <li>Keep write actions approval-based until you have evidence that the workflow is stable.</li>
-            <li>Instrument tracing and simple evals so the system improves through real runs, not only demos.</li>
-          </ol>
-          <p>If you do that, the agent stops being a clever demo and starts becoming an operable system.</p>
-
-          <h3>What to adopt now, and what to treat carefully</h3>
+          <h3>What kinds of agent work fit the CLI best</h3>
           <ul>
-            <li><strong>Adopt now</strong>: MCP, read-only connectors, session memory, background jobs, tracing</li>
-            <li><strong>Treat carefully</strong>: browser or computer use, high-risk write automation</li>
-            <li><strong>Use when the purpose is very clear</strong>: realtime voice agents, fully autonomous research loops</li>
+            <li><strong>Code and documentation work</strong>: repository analysis, issue triage, PR summaries, release notes, and technical documentation drafts</li>
+            <li><strong>Internal operations</strong>: log inspection, incident prep, deployment checks, and repetitive data cleanup</li>
+            <li><strong>Research and comparison tasks</strong>: reading multiple sources, collecting citations, and summarizing product or API differences</li>
+            <li><strong>Approval-based actions</strong>: drafting emails, preparing tickets, suggesting calendar changes, or staging edits for a human to confirm</li>
           </ul>
-          <p>In short, using AI agents well in 2026 is less about choosing the loudest new capability and more about building <strong>small workflow boundaries, explicit tool contracts, durable state, human approval, and observable execution</strong>. The technology is moving fast, but operational discipline is still what separates a useful agent from an expensive experiment.</p>
+          <p>By contrast, if the first version of the agent only exists as a chat surface, tool calls and state management often become hidden too early. That makes the demo easy and the operating model weak.</p>
+
+          <h3>The current trend is not accidental: agents are becoming CLI products</h3>
+          <p>Recent product direction makes this fairly clear. Anthropic positions Claude Code around terminal-native codebase work, editing, testing, and Git workflows. OpenAI documents Codex CLI as a terminal-first coding agent with execution and approval flows. Google maintains Gemini CLI as its own product surface, with shell commands and MCP integration treated as core parts of the experience.</p>
+          <p>The important point is not that every vendor copied the same interface. The important point is that the answer to “where does an agent do real work most reliably?” is converging. Right now, that answer is very often the CLI.</p>
+
+          <h3>In a CLI-first design, MCP, state, and approvals matter more than autonomy theater</h3>
+          <p>Putting an agent in the terminal does not mean giving it unlimited access. In fact, CLI-first setups need sharper boundaries.</p>
+          <ol>
+            <li><strong>Start with read-only tools</strong>: search, document reading, Git inspection, issue reading, and low-risk internal queries.</li>
+            <li><strong>Treat MCP and connectors as trust boundaries</strong>: they define which external systems are reachable and with what level of power.</li>
+            <li><strong>Design session state and background execution early</strong>: modern agents are resumable work units, not just one-shot prompts.</li>
+            <li><strong>Keep write tools approval-based</strong>: file edits, ticket creation, deployments, and external mutations should remain gated.</li>
+            <li><strong>Instrument tracing and simple evals</strong>: the system only improves if you can tell which runs succeeded and where they stopped.</li>
+          </ol>
+          <p>The common failure mode is to keep adding more tools. The better move is usually the opposite: narrow the surface, define the state model, and lock down the approval table first.</p>
+
+          <h3>Where browser use and voice actually belong</h3>
+          <p>Browser use and computer use are important, but they are still higher-variance surfaces. Login sessions, DOM changes, prompt injection, misclicks, and external side effects all make them harder to operate safely. That is why I see browser control as a last resort for systems that do not expose a clean API or MCP path.</p>
+          <p>Voice has a different role. It is strong at intake, live assistance, and front-door experiences, but it is rarely the best place to run the full operational loop. In many products, the reliable pattern is still voice in front and CLI in the core.</p>
+
+          <h3>How to track the latest agent technology without getting lost</h3>
+          <p>This is where Threads and X are genuinely useful. They surface new workflows, launch reactions, tiny implementation patterns, and failure stories earlier than most official channels. I treat them as <strong>signal discovery</strong>, not as final evidence.</p>
+          <ol>
+            <li>Catch new launches, demos, and workflow ideas on Threads and X.</li>
+            <li>Immediately verify them against official docs, GitHub repositories, and release notes.</li>
+            <li>Test the idea in one narrow CLI workflow, such as document search, code drafting, or log triage.</li>
+            <li>Only after that, consider adding browser control, voice, or longer autonomous loops.</li>
+          </ol>
+          <p>That loop gives you the speed of the social layer without outsourcing judgment to it.</p>
+
+          <h3>The rollout order I would recommend</h3>
+          <ol>
+            <li><strong>Pick one read-heavy CLI workflow first</strong>: repository analysis, summarization, issue triage, or log review.</li>
+            <li><strong>Attach only two or three tools</strong>: one for search, one for internal data, and one approval-based action.</li>
+            <li><strong>Add MCP and an allow-list early</strong>: reduce the reachable surface before you expand capability.</li>
+            <li><strong>Design sessions and background jobs</strong>: a useful agent should be resumable.</li>
+            <li><strong>Add browser or voice later</strong>: only after the core execution loop is already stable.</li>
+          </ol>
+          <p>In short, using AI agents well in 2026 is not mainly about picking the loudest new model feature. It is about building <strong>clear workflow boundaries, constrained tool access, durable state, approval gates, and observable execution on a surface that supports real work</strong>. Right now, that surface is often the CLI.</p>
 
           <h3>References</h3>
           <ul>
             <li><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" target="_blank" rel="noreferrer">OpenAI: A practical guide to building AI agents</a></li>
+            <li><a href="https://developers.openai.com/codex/cli" target="_blank" rel="noreferrer">OpenAI: Codex CLI</a></li>
             <li><a href="https://platform.openai.com/docs/guides/tools-connectors-mcp?lang=javascript" target="_blank" rel="noreferrer">OpenAI API: Connectors and MCP servers</a></li>
             <li><a href="https://platform.openai.com/docs/guides/background" target="_blank" rel="noreferrer">OpenAI API: Background mode</a></li>
-            <li><a href="https://developers.openai.com/api/docs/guides/conversation-state" target="_blank" rel="noreferrer">OpenAI API: Conversation state</a></li>
-            <li><a href="https://platform.openai.com/docs/guides/tools-computer-use/" target="_blank" rel="noreferrer">OpenAI API: Computer use</a></li>
-            <li><a href="https://platform.openai.com/docs/guides/agents-sdk/" target="_blank" rel="noreferrer">OpenAI API: Agents SDK</a></li>
-            <li><a href="https://openai.github.io/openai-agents-python/tracing/" target="_blank" rel="noreferrer">OpenAI Agents SDK: Tracing</a></li>
-            <li><a href="https://openai.github.io/openai-agents-python/sessions/" target="_blank" rel="noreferrer">OpenAI Agents SDK: Sessions</a></li>
-            <li><a href="https://openai.github.io/openai-agents-js/guides/voice-agents/" target="_blank" rel="noreferrer">OpenAI Agents SDK: Voice Agents</a></li>
-            <li><a href="https://openai.com/index/introducing-deep-research/" target="_blank" rel="noreferrer">OpenAI: Introducing deep research</a></li>
+            <li><a href="https://docs.anthropic.com/en/docs/claude-code/overview" target="_blank" rel="noreferrer">Anthropic Docs: Claude Code overview</a></li>
             <li><a href="https://docs.anthropic.com/en/docs/agents-and-tools/mcp-connector" target="_blank" rel="noreferrer">Anthropic Docs: MCP connector</a></li>
-            <li><a href="https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/implement-tool-use" target="_blank" rel="noreferrer">Anthropic Docs: How to implement tool use</a></li>
-            <li><a href="https://docs.anthropic.com/en/docs/build-with-claude/computer-use" target="_blank" rel="noreferrer">Anthropic Docs: Computer use tool</a></li>
+            <li><a href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noreferrer">Google: Gemini CLI repository</a></li>
+            <li><a href="https://geminicli.com/docs/cli/" target="_blank" rel="noreferrer">Google: Gemini CLI documentation</a></li>
             <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tooling-updates/" target="_blank" rel="noreferrer">Google: Gemini API tooling updates</a></li>
-            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/deep-research-agent-gemini-api/" target="_blank" rel="noreferrer">Google: Build with Gemini Deep Research</a></li>
-            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-3-1-flash-live/" target="_blank" rel="noreferrer">Google: Build real-time conversational agents with Gemini 3.1 Flash Live</a></li>
-            <li><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-computer-use-model/" target="_blank" rel="noreferrer">Google: Introducing the Gemini 2.5 Computer Use model</a></li>
           </ul>
         `,
       },
       ja: {
-        title: '2026年にAIエージェントをうまく使う方法',
-        keywords: ['AI', 'AI Agent'],
-        excerpt: '2026年4月10日時点でAIエージェントをうまく使う鍵は、強いモデルに置き換えることではなく、MCPのような接続層、状態管理、狭いツール境界、承認フロー、そしてtracingを先に設計することです。',
+        title: 'なぜAIエージェントはCLIで先に強くなるのか',
+        keywords: ['AI', 'AI Agent', 'CLI', 'MCP'],
+        excerpt: '2026年4月10日時点で、実務で使えるAIエージェントは洗練されたチャットUIより先にCLIで成功することが多いです。ファイル、Git、ログ、API、MCP、承認フローを同じ実行面に置けるからです。',
         heroImage: {
-          alt: '複数の業務カードとMCP、state、tools、browser、voice、guardrailのレイヤーが中央のAIエージェント作業領域の周囲に配置された運用ボードのイラスト',
-          caption: '2026年のAIエージェント運用で重要なのは、最大の自律性から始めることではなく、小さな業務に明確なツール境界と承認ポイントを置くことです。',
+          alt: 'ターミナル画面、MCP接続、承認ゲート、バックグラウンドジョブが一つのボードに整理されたCLI中心のAIエージェント運用イラスト',
+          caption: 'CLI-firstの強みは古い操作感ではありません。ツール接続、承認、ログ、再現可能な実行を一つの面で扱えることです。',
         },
         contentHtml: `
-          <p>2026年4月10日時点でAIエージェントをうまく使うということは、「強いモデルを付けて全部自動化すること」ではありません。むしろ重要なのは、<strong>どの業務を任せるのか、どのツールをどの順番で呼ばせるのか、状態をどこに持たせるのか、どこで人の承認を残すのか</strong> を先に決めることです。</p>
-          <p>いまの公式ドキュメントを並べてみると、重要な軸はかなり明確です。<strong>MCPのような接続層、状態管理とbackground execution、ツール連携、browser/computer use、リアルタイム音声、そしてtracingとguardrails</strong> です。</p>
+          <p>2026年4月10日時点で、実務で役立つAIエージェントは洗練されたチャット画面より先に <strong>CLI</strong> で居場所を作ることが多いです。理由は明快です。コード、ファイル、Git、ログ、API、MCP接続、承認プロンプト、実行ログを同じ面で扱えるからです。いま必要なのは派手なUIより、<strong>明確な実行面</strong> です。</p>
+          <p>新しいagentの使い方はThreadsやXで最初に見かけることが増えました。ただし、それらは判断の根拠というよりレーダーです。実際に導入を決めるときは、公式ドキュメント、GitHubリポジトリ、リリースノートで境界を確認する必要があります。Claude Code、Codex CLI、Gemini CLIもその文脈で見ると意味がはっきりします。</p>
+          <p>いま私が勧める原則は一つです。<strong>まずCLIの狭いワークフローで勝ち、ブラウザや音声はコアループが安定してから足す</strong> ことです。</p>
 
-          <h3>なぜ多くのAIエージェント案件はまだ失敗するのか</h3>
-          <p>よくある失敗は、最初からブラウザ操作、複数SaaSへの書き込み、そして「自律的に全部できるはず」という期待を同時に乗せてしまうことです。デモは派手でも、本番の例外ケースで一気に信頼を失います。</p>
-          <p>うまくいく案件は逆に小さく始まります。読む仕事から始め、ツール数を絞り、セッションとログを残し、高リスクな書き込みは承認型にします。結局のところ差を生むのは、モデルよりも <strong>業務境界の設計</strong> です。</p>
+          <h3>なぜ多くの有用なAIエージェントはCLIに落ち着くのか</h3>
+          <p>第一に、CLIはツール接続が最もしやすい場所です。ファイルを読み、リポジトリを見て、テストを回し、ログを確認し、内部APIを叩き、結果を別のシステムへ渡す。こうした仕事はもともとターミナルと相性が良いです。</p>
+          <p>第二に、CLIは監査と再現がしやすいです。どのコマンドを実行したか、どのファイルが変わったか、どこで失敗したか、どの承認が入ったかを追いやすい。実運用ではこの差が大きいです。</p>
+          <p>第三に、CLIは承認境界を作りやすいです。読み取りは自動で流し、書き込みは承認型にし、高リスク操作は必ず人が確認する。こうした設計がしやすいので、CLI-firstのagentは安定化が速いです。</p>
 
-          <h3>いま本当に見るべきAIエージェント技術 6つ</h3>
-
-          <h3>1. MCPとコネクタが基本の接続層になってきた</h3>
-          <p>OpenAIはResponses APIでremote MCP serversとconnectorsを案内し、AnthropicもMessages APIにMCP connectorを用意しています。つまり、最近のagent設計は個別ラッパーを量産する方向ではなく、標準化された接続層の上に積み上がる方向へ進んでいます。</p>
-          <p>実務では、まずread-only connectorから始め、allow-listで範囲を絞り、write系ツールは承認付きにするのが安全です。</p>
-
-          <h3>2. 状態を持つagentとbackground jobが前提になった</h3>
-          <p>OpenAIはConversations、background mode、Agents SDKのsessionsを提供し、GoogleもDeep ResearchやLive系でsession managementを前提にしています。今のagentは、再開可能で、途中経過を持ち、作業単位として追跡できることが前提です。</p>
-
-          <h3>3. 重要なのはツールの数ではなく、ツール連携の設計</h3>
-          <p>Googleはbuilt-in toolsとcustom functionsを同じリクエストで混ぜ、context circulationを保持できるようにしました。Anthropicはtool useで明確なschemaを重視し、OpenAIもbuilt-in tools、function calling、remote MCPを一つの流れで扱っています。つまり、20個のツールより、3〜4個の良いツールをどう安全につなぐかのほうが重要です。</p>
-
-          <h3>4. Browser useとcomputer useは重要だが、導入は最後でいい</h3>
-          <p>OpenAIのcomputer useもAnthropicのcomputer useもまだbetaで、GoogleのComputer Use modelもpreviewです。注目度は高い一方で、実運用ではもっとも不安定で危険な面でもあります。APIやMCPで解けないところだけに使い、まずsearch-fetch-parseで済ませ、最後の手段としてブラウザを開くのが妥当です。</p>
-
-          <h3>5. リアルタイム音声agentは独立したカテゴリになった</h3>
-          <p>OpenAIはVoice Agentsを専用ガイドとして分け、RealtimeSessionやhandoff、approvalsまで音声の流れに含めています。GoogleもGemini 3.1 Flash Liveで低遅延のvoice and vision agentsを前面に出しています。音声agentは万能な自律workerというより、受付、トリアージ、現場支援のようなfront doorに強いと見るのが現実的です。</p>
-
-          <h3>6. eval、tracing、承認境界がなければ、まだ運用ではない</h3>
-          <p>OpenAIのpractical guideは人の介入とガードレールを中心に置き、Agents SDKはtracingを標準で持ちます。Deep researchもtrusted sites制限、進捗の追跡、中断を前面に出しています。成功条件を測れない、危険な操作の承認者が決まっていない、失敗した実行を再現できないなら、それはまだ本番のagentではありません。</p>
-
-          <h3>私ならこう運用します</h3>
-          <ol>
-            <li>まず読む仕事を一つ選ぶ</li>
-            <li>検索、内部データ、行動の3系統から2〜3個だけツールを付ける</li>
-            <li>セッション状態と非同期実行を先に入れる</li>
-            <li>書き込み操作は承認型にする</li>
-            <li>traceとevalを付けて、実行ログから改善する</li>
-          </ol>
-          <p>この流れを踏めば、agentは「賢いデモ」ではなく、運用できるシステムに変わっていきます。</p>
-
-          <h3>今すぐ入れるものと、慎重に見るもの</h3>
+          <h3>CLIと相性が良いAIエージェント業務</h3>
           <ul>
-            <li><strong>今すぐ入れるもの</strong>: MCP、read-only connectors、session memory、background jobs、tracing</li>
-            <li><strong>慎重に見るもの</strong>: browser/computer use、高リスクなwrite automation</li>
-            <li><strong>目的が明確な時だけ使うもの</strong>: realtime voice agent、fully autonomous research loops</li>
+            <li><strong>コードと文書の仕事</strong>: リポジトリ分析、issue triage、PR要約、リリースノート、技術文書の下書き</li>
+            <li><strong>内部オペレーション</strong>: ログ確認、障害準備、デプロイ前チェック、反復的なデータ整形</li>
+            <li><strong>調査と比較</strong>: 複数ソースの読み込み、根拠リンク整理、APIや製品差分の要約</li>
+            <li><strong>承認型アクション</strong>: メール下書き、チケット作成案、予定提案、変更のステージング</li>
           </ul>
-          <p>要するに、2026年にAIエージェントをうまく使うというのは、派手な新機能を追いかけることではなく、<strong>小さな業務境界、明確なツール契約、状態管理、人の承認、追跡可能な実行</strong> を先に整えることです。技術は速く動いていますが、差を生むのはやはり運用設計です。</p>
+          <p>逆に、最初の形をチャットUIだけにすると、ツール呼び出しや状態管理が早い段階で見えにくくなります。そのためデモは作りやすくても運用設計が弱くなりがちです。</p>
+
+          <h3>最近の流れは偶然ではない。agentはCLI製品になりつつある</h3>
+          <p>AnthropicはClaude Codeでターミナル内のコード探索、編集、テスト、Gitワークフローを前面に出しています。OpenAIもCodex CLIを公式に案内し、ターミナル上でのコード読解、コマンド実行、承認型編集フローを重視しています。GoogleもGemini CLIを独立した製品面として運用し、シェルコマンドやMCP連携を中心体験として扱っています。</p>
+          <p>重要なのは、各社が同じUIを真似たことではありません。<strong>エージェントが実務を最も確実にこなせる場所はどこか</strong> という問いへの答えが、かなり近づいてきたことです。その答えが今はCLIであることが多いのです。</p>
+
+          <h3>CLI-first設計ではMCP、状態、承認テーブルが核心になる</h3>
+          <p>ターミナルに置くからといって、何でも実行させてよいわけではありません。むしろCLI-firstほど境界を厳しく切るべきです。</p>
+          <ol>
+            <li><strong>まずread-only toolsから始める</strong>: 検索、文書読解、Git参照、issue参照、低リスクな内部問い合わせ</li>
+            <li><strong>MCPとconnectorsを信頼境界として扱う</strong>: 外部システムへどの権限で届くかを決めるレイヤーです。</li>
+            <li><strong>session stateとbackground executionを先に設計する</strong>: 今のagentは一発のプロンプトではなく、再開可能な作業単位です。</li>
+            <li><strong>write toolsは承認型のままにする</strong>: ファイル編集、チケット作成、デプロイ、外部更新は必ず人の確認を通します。</li>
+            <li><strong>tracingと簡単なevalを残す</strong>: どの実行が成功だったか、どこで止まったかが見えないと改善できません。</li>
+          </ol>
+          <p>失敗しやすいチームはツールを増やし続けます。うまくいくチームは逆に、<strong>到達可能な表面を絞り、状態モデルと承認表を先に固定</strong> します。</p>
+
+          <h3>ブラウザと音声はどこで使うべきか</h3>
+          <p>browser useやcomputer useは重要ですが、まだ変動が大きい面でもあります。ログインセッション、DOM変更、prompt injection、誤クリック、外部副作用などが運用リスクになります。だから私は、APIやMCPがない表面だけでブラウザを最後の手段として使うのが妥当だと考えます。</p>
+          <p>音声は別の役割があります。受付、ライブ支援、最初の問い合わせには強い一方で、業務の中核ループ全部を任せる場所ではないことが多いです。多くの製品では、前段に音声、中心にCLIという構成のほうが安定します。</p>
+
+          <h3>最新のAI agent技術を追いかける実際の方法</h3>
+          <p>ここでThreadsとXが役に立ちます。新しいワークフロー、初期デモ、細かい実装パターン、失敗談は公式発表より先に流れてくることが多いからです。ただし、私はそれを <strong>signal discovery</strong> として扱います。最終判断ではありません。</p>
+          <ol>
+            <li>ThreadsとXで新しい発売、デモ、ワークフローの信号を拾う</li>
+            <li>すぐに公式ドキュメント、GitHubリポジトリ、リリースノートで裏を取る</li>
+            <li>文書検索、コード下書き、ログ triage のような狭いCLIワークフローで試す</li>
+            <li>それからブラウザ制御、音声、長い自律ループを検討する</li>
+          </ol>
+          <p>この順序なら、ソーシャル層の速さを取り込みつつ、判断自体は外部の盛り上がりに預けずに済みます。</p>
+
+          <h3>私が勧める導入順序</h3>
+          <ol>
+            <li><strong>まず読む仕事中心のCLIワークフローを一つ選ぶ</strong>: リポジトリ分析、要約、issue triage、ログ確認などです。</li>
+            <li><strong>ツールは2〜3個だけ付ける</strong>: 検索1つ、内部データ1つ、承認型アクション1つで十分です。</li>
+            <li><strong>MCPとallow-listを早めに入れる</strong>: 到達可能な表面を狭めてから能力を広げます。</li>
+            <li><strong>sessionとbackground jobを設計する</strong>: 役立つagentは再開可能であるべきです。</li>
+            <li><strong>ブラウザと音声は後から足す</strong>: コアループが安定してから拡張するほうが安全です。</li>
+          </ol>
+          <p>要するに、2026年にAIエージェントをうまく使うというのは、派手な新機能を追うことではなく、<strong>明確なワークフロー境界、制限されたツール表面、永続状態、承認ゲート、観測可能な実行</strong> を、実務に強い面の上に作ることです。その面は今のところCLIであることが多いです。</p>
 
           <h3>References</h3>
           <ul>
             <li><a href="https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/" target="_blank" rel="noreferrer">OpenAI: A practical guide to building AI agents</a></li>
+            <li><a href="https://developers.openai.com/codex/cli" target="_blank" rel="noreferrer">OpenAI: Codex CLI</a></li>
             <li><a href="https://platform.openai.com/docs/guides/tools-connectors-mcp?lang=javascript" target="_blank" rel="noreferrer">OpenAI API: Connectors and MCP servers</a></li>
             <li><a href="https://platform.openai.com/docs/guides/background" target="_blank" rel="noreferrer">OpenAI API: Background mode</a></li>
-            <li><a href="https://developers.openai.com/api/docs/guides/conversation-state" target="_blank" rel="noreferrer">OpenAI API: Conversation state</a></li>
-            <li><a href="https://platform.openai.com/docs/guides/tools-computer-use/" target="_blank" rel="noreferrer">OpenAI API: Computer use</a></li>
-            <li><a href="https://platform.openai.com/docs/guides/agents-sdk/" target="_blank" rel="noreferrer">OpenAI API: Agents SDK</a></li>
-            <li><a href="https://openai.github.io/openai-agents-python/tracing/" target="_blank" rel="noreferrer">OpenAI Agents SDK: Tracing</a></li>
-            <li><a href="https://openai.github.io/openai-agents-python/sessions/" target="_blank" rel="noreferrer">OpenAI Agents SDK: Sessions</a></li>
-            <li><a href="https://openai.github.io/openai-agents-js/guides/voice-agents/" target="_blank" rel="noreferrer">OpenAI Agents SDK: Voice Agents</a></li>
-            <li><a href="https://openai.com/index/introducing-deep-research/" target="_blank" rel="noreferrer">OpenAI: Introducing deep research</a></li>
+            <li><a href="https://docs.anthropic.com/en/docs/claude-code/overview" target="_blank" rel="noreferrer">Anthropic Docs: Claude Code overview</a></li>
             <li><a href="https://docs.anthropic.com/en/docs/agents-and-tools/mcp-connector" target="_blank" rel="noreferrer">Anthropic Docs: MCP connector</a></li>
-            <li><a href="https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/implement-tool-use" target="_blank" rel="noreferrer">Anthropic Docs: How to implement tool use</a></li>
-            <li><a href="https://docs.anthropic.com/en/docs/build-with-claude/computer-use" target="_blank" rel="noreferrer">Anthropic Docs: Computer use tool</a></li>
+            <li><a href="https://github.com/google-gemini/gemini-cli" target="_blank" rel="noreferrer">Google: Gemini CLI repository</a></li>
+            <li><a href="https://geminicli.com/docs/cli/" target="_blank" rel="noreferrer">Google: Gemini CLI documentation</a></li>
             <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tooling-updates/" target="_blank" rel="noreferrer">Google: Gemini API tooling updates</a></li>
-            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/deep-research-agent-gemini-api/" target="_blank" rel="noreferrer">Google: Build with Gemini Deep Research</a></li>
-            <li><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-3-1-flash-live/" target="_blank" rel="noreferrer">Google: Build real-time conversational agents with Gemini 3.1 Flash Live</a></li>
-            <li><a href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-computer-use-model/" target="_blank" rel="noreferrer">Google: Introducing the Gemini 2.5 Computer Use model</a></li>
           </ul>
         `,
       },

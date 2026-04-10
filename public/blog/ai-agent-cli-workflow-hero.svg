@@ -1,0 +1,57 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#F5F0E5"/>
+  <rect x="48" y="48" width="1504" height="804" rx="36" fill="#101920"/>
+  <rect x="92" y="92" width="1416" height="716" rx="28" fill="url(#panel)"/>
+
+  <rect x="140" y="146" width="720" height="520" rx="28" fill="#0D141A" stroke="#31414D" stroke-width="2"/>
+  <rect x="892" y="146" width="568" height="240" rx="28" fill="#13202A" stroke="#41566A" stroke-width="2"/>
+  <rect x="892" y="426" width="568" height="240" rx="28" fill="#13202A" stroke="#41566A" stroke-width="2"/>
+
+  <text x="184" y="214" fill="#F4F0E7" font-family="Georgia, 'Times New Roman', serif" font-size="48" font-weight="700">CLI Agent Workflow</text>
+  <text x="184" y="250" fill="#91A7B7" font-family="'Courier New', monospace" font-size="22">files  git  logs  api  mcp  approvals  traces</text>
+
+  <rect x="184" y="290" width="632" height="66" rx="18" fill="#16242E"/>
+  <circle cx="226" cy="323" r="9" fill="#F97352"/>
+  <circle cx="254" cy="323" r="9" fill="#F3C96A"/>
+  <circle cx="282" cy="323" r="9" fill="#7FD0A6"/>
+  <text x="320" y="331" fill="#E9F0F5" font-family="'Courier New', monospace" font-size="26">$ codex run triage --repo app --approve write</text>
+
+  <rect x="184" y="384" width="632" height="96" rx="20" fill="#111B22"/>
+  <text x="214" y="426" fill="#7FD0A6" font-family="'Courier New', monospace" font-size="24">READ</text>
+  <text x="314" y="426" fill="#E9F0F5" font-family="'Courier New', monospace" font-size="24">repo map, docs, logs, release notes</text>
+  <text x="214" y="460" fill="#F3C96A" font-family="'Courier New', monospace" font-size="24">PLAN</text>
+  <text x="314" y="460" fill="#E9F0F5" font-family="'Courier New', monospace" font-size="24">tool allow-list, session, background job</text>
+
+  <rect x="184" y="510" width="300" height="112" rx="20" fill="#16242E"/>
+  <text x="214" y="554" fill="#F4F0E7" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700">MCP</text>
+  <text x="214" y="590" fill="#A7BBC8" font-family="'Courier New', monospace" font-size="20">read-only first</text>
+  <text x="214" y="616" fill="#A7BBC8" font-family="'Courier New', monospace" font-size="20">narrow trust boundary</text>
+
+  <rect x="516" y="510" width="300" height="112" rx="20" fill="#16242E"/>
+  <text x="546" y="554" fill="#F4F0E7" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700">Approvals</text>
+  <text x="546" y="590" fill="#A7BBC8" font-family="'Courier New', monospace" font-size="20">draft before write</text>
+  <text x="546" y="616" fill="#A7BBC8" font-family="'Courier New', monospace" font-size="20">high-risk stays gated</text>
+
+  <text x="932" y="214" fill="#F4F0E7" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700">Why CLI Wins First</text>
+  <rect x="936" y="246" width="480" height="32" rx="10" fill="#233745"/>
+  <rect x="936" y="298" width="446" height="24" rx="10" fill="#DCE8F0" fill-opacity="0.82"/>
+  <rect x="936" y="336" width="396" height="24" rx="10" fill="#DCE8F0" fill-opacity="0.52"/>
+
+  <text x="932" y="494" fill="#F4F0E7" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700">Where Social Helps</text>
+  <rect x="936" y="526" width="430" height="32" rx="10" fill="#233745"/>
+  <rect x="936" y="578" width="460" height="24" rx="10" fill="#DCE8F0" fill-opacity="0.82"/>
+  <rect x="936" y="616" width="382" height="24" rx="10" fill="#DCE8F0" fill-opacity="0.52"/>
+
+  <path d="M860 323H892" stroke="#F97352" stroke-width="6" stroke-linecap="round"/>
+  <path d="M860 566H892" stroke="#F3C96A" stroke-width="6" stroke-linecap="round"/>
+
+  <rect x="142" y="716" width="1316" height="72" rx="20" fill="#0D141A" stroke="#2C3D48" stroke-width="2"/>
+  <text x="182" y="762" fill="#F4F0E7" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700">Catch signals on Threads and X. Validate in docs. Run the workflow in the CLI.</text>
+
+  <defs>
+    <linearGradient id="panel" x1="92" y1="92" x2="1508" y2="808" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#16232C"/>
+      <stop offset="1" stop-color="#0F171D"/>
+    </linearGradient>
+  </defs>
+</svg>
