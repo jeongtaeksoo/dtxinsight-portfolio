@@ -84,8 +84,7 @@
             },
             {
                 "date": "2026.05",
-                "badge": "2026.05 - 現在",
-                "title": "成均館大学校 × ハンギル眼科病院 臨床研究員",
+                "title": "成均館大学校 × ハンギル眼科病院 研究員",
                 "note": "AIベース眼科研究 · LuxMind 協業"
             },
             {
@@ -211,21 +210,21 @@
             {
                 "date": "2024",
                 "title": "大韓リハビリテーション医学会 秋季学術大会 2024",
-                "venue": "学会ポスター発表",
+                "venue": "学会ポスター",
                 "format": "Poster",
                 "link": "https://www.karm.or.kr/workshop/?abyear=202402&mode=green_view&sid=5985"
             },
             {
                 "date": "2025",
                 "title": "AI-Driven Cognitive Intervention E-Poster",
-                "venue": "電子ポスター発表記録",
+                "venue": "電子ポスター",
                 "format": "E-Poster",
                 "link": "https://journals.sagepub.com/doi/epub/10.1177/17474930251371448"
             },
             {
                 "date": "2026",
                 "title": "大韓リハビリテーション医学会 春季学術大会 2026",
-                "venue": "学会ポスター発表",
+                "venue": "学会ポスター",
                 "format": "Poster",
                 "link": "https://www.karm.or.kr/workshop/?abyear=202601&mode=green_view&sid=6566"
             }

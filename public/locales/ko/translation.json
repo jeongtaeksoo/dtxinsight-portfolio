@@ -84,8 +84,7 @@
             },
             {
                 "date": "2026.05",
-                "badge": "2026.05 - 현재",
-                "title": "성균관대학교 × 한길안과병원 임상연구원",
+                "title": "성균관대학교 × 한길안과병원 연구원",
                 "note": "AI 기반 안과 연구 · LuxMind 협업"
             },
             {
@@ -211,21 +210,21 @@
             {
                 "date": "2024",
                 "title": "대한재활의학회 추계학술대회 2024",
-                "venue": "학회 포스터 발표",
+                "venue": "학회 포스터",
                 "format": "Poster",
                 "link": "https://www.karm.or.kr/workshop/?abyear=202402&mode=green_view&sid=5985"
             },
             {
                 "date": "2025",
                 "title": "AI-Driven Cognitive Intervention E-Poster",
-                "venue": "전자 포스터 발표 기록",
+                "venue": "전자 포스터",
                 "format": "E-Poster",
                 "link": "https://journals.sagepub.com/doi/epub/10.1177/17474930251371448"
             },
             {
                 "date": "2026",
                 "title": "대한재활의학회 춘계학술대회 2026",
-                "venue": "학회 포스터 발표",
+                "venue": "학회 포스터",
                 "format": "Poster",
                 "link": "https://www.karm.or.kr/workshop/?abyear=202601&mode=green_view&sid=6566"
             }
