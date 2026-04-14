@@ -97,34 +97,36 @@ const Publications = () => {
                     </div>
 
                     <div className="grid gap-4 md:grid-cols-2">
-                        {publications.map((pub, index) => (
-                            <WindowCard
-                                key={index}
-                                title={pub.title}
-                                type={pub.journal}
-                                date={pub.date || pub.year}
-                                authors={pub.authors}
-                                className="h-full"
-                                onClick={() => setSelectedPaper(pub)}
-                            >
-                                <div className="flex flex-wrap items-center gap-2 mt-2">
-                                    <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${statusStyle(pub.status)}`}>
-                                        {pub.role} · {pub.status || 'Published'}
-                                    </span>
-                                    {pub.doi && (
-                                        <a
-                                            href={pub.doi}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            onClick={(e) => e.stopPropagation()}
-                                            className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs bg-accent-bg text-primary hover:bg-primary/10 transition-colors"
-                                        >
-                                            DOI <ExternalLink size={10} />
-                                        </a>
-                                    )}
-                                </div>
-                            </WindowCard>
-                        ))}
+                        {publications.map((pub, index) => {
+                            return (
+                                <WindowCard
+                                    key={index}
+                                    title={pub.title}
+                                    type={pub.journal}
+                                    date={pub.date || pub.year}
+                                    authors={pub.authors}
+                                    className="h-full"
+                                    onClick={() => setSelectedPaper(pub)}
+                                >
+                                    <div className="flex flex-wrap items-center gap-2 mt-2">
+                                        <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium ${statusStyle(pub.status)}`}>
+                                            {pub.role} · {pub.status || 'Published'}
+                                        </span>
+                                        {pub.doi && (
+                                            <a
+                                                href={pub.doi}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                onClick={(e) => e.stopPropagation()}
+                                                className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs bg-accent-bg text-primary hover:bg-primary/10 transition-colors"
+                                            >
+                                                DOI <ExternalLink size={10} />
+                                            </a>
+                                        )}
+                                    </div>
+                                </WindowCard>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
