@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { sanitizeInlineHtml } from '../utils/sanitizeHtml';
 
 const WindowCard = ({ title, type, date, authors, children, onClick, className = "" }) => {
     const Component = onClick ? motion.button : motion.div;
@@ -40,7 +41,7 @@ const WindowCard = ({ title, type, date, authors, children, onClick, className =
                     {authors ? (
                         <span 
                             className="text-xs text-muted font-serif leading-relaxed line-clamp-2" 
-                            dangerouslySetInnerHTML={{ __html: authors }} 
+                            dangerouslySetInnerHTML={{ __html: sanitizeInlineHtml(authors) }} 
                         />
                     ) : (
                         <div />

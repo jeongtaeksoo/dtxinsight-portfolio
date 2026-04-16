@@ -5,7 +5,7 @@ import DigitalHealthProjects from './components/DigitalHealthProjects'
 import ResearchProjects from './components/ResearchProjects'
 import Publications from './components/Publications'
 import Skills from './components/Skills'
-import BlogBoard from './components/BlogBoard'
+import DeferredBlogSection from './components/DeferredBlogSection'
 import Layout from './components/Layout'
 
 function App() {
@@ -18,9 +18,7 @@ function App() {
       <Publications />
       <NarrativeScroll />
       <Skills />
-      <section id="blog" className="py-16">
-        <BlogBoard />
-      </section>
+      <DeferredBlogSection />
     </Layout>
   );
 }

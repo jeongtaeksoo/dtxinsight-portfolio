@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ExternalLink, X } from 'lucide-react';
-import { motion as Motion, AnimatePresence } from 'framer-motion';
+import { ExternalLink } from 'lucide-react';
 import WindowCard from './WindowCard';
+import AccessibleModal from './AccessibleModal';
 
 const statusStyle = (status) => {
     if (status === 'Published' || status === '게재 완료' || status === '掲載完了')
@@ -22,6 +22,7 @@ const Publications = () => {
     const presentations = t('publications.presentations', { returnObjects: true }) || [];
     const summaryHighlights = t('publications.summaryHighlights', { returnObjects: true }) || [];
     const summaryStatLine = t('publications.summaryStatLine');
+    const publicationDialogTitleId = 'publication-dialog-title';
 
     return (
         <section id="publications" className="scroll-mt-28 py-16 border-t border-border">
@@ -131,94 +132,83 @@ const Publications = () => {
                 </div>
             </div>
 
-            {/* Paper Details Modal */}
-            <AnimatePresence>
+            <AccessibleModal
+                isOpen={Boolean(selectedPaper)}
+                onClose={() => setSelectedPaper(null)}
+                titleId={publicationDialogTitleId}
+                closeLabel={t('publications.closeBtn')}
+                containerClassName="items-center justify-center p-4 md:p-10"
+                overlayClassName="bg-black/50 backdrop-blur-sm"
+                panelClassName="flex w-full max-w-2xl flex-col overflow-hidden rounded-xl bg-white shadow-2xl"
+                headerClassName="flex items-center justify-between gap-4 border-b border-border bg-gray-50 px-5 py-3"
+                closeButtonClassName="rounded-lg p-1.5 text-muted transition-colors hover:bg-gray-200"
+                bodyClassName="max-h-[80vh] overflow-y-auto p-7"
+                header={(
+                    <span
+                        id={publicationDialogTitleId}
+                        className="text-xs font-semibold uppercase tracking-widest text-muted"
+                    >
+                        {t('publications.detailsTitle')}
+                    </span>
+                )}
+            >
                 {selectedPaper && (
-                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 pointer-events-none">
-                        <Motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            onClick={() => setSelectedPaper(null)}
-                            className="absolute inset-0 bg-black/50 backdrop-blur-sm pointer-events-auto"
-                        />
-                        <Motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            className="relative z-10 w-full max-w-2xl bg-white rounded-xl overflow-hidden shadow-2xl pointer-events-auto flex flex-col"
-                        >
-                            {/* Modal Header */}
-                            <div className="h-12 bg-gray-50 flex items-center justify-between px-5 border-b border-border">
-                                <span className="text-xs font-semibold text-muted uppercase tracking-widest">{t('publications.detailsTitle')}</span>
-                                <button
-                                    onClick={() => setSelectedPaper(null)}
-                                    className="p-1.5 hover:bg-gray-200 rounded-lg transition-colors"
-                                    aria-label={t('publications.closeBtn')}
+                    <div className="space-y-5">
+                        <div>
+                            <p className="mb-2 font-mono text-xs uppercase tracking-wider text-primary">
+                                {selectedPaper.journal} ({selectedPaper.date})
+                            </p>
+                            <h3 className="text-xl font-bold leading-snug text-text">
+                                {selectedPaper.title}
+                            </h3>
+                        </div>
+
+                        <div className="flex flex-wrap items-center gap-2">
+                            <span className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${statusStyle(selectedPaper.status)}`}>
+                                {selectedPaper.role} · {selectedPaper.status}
+                            </span>
+                            {selectedPaper.doi && (
+                                <a
+                                    href={selectedPaper.doi}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 rounded-full bg-accent-bg px-3 py-1 text-xs font-semibold text-primary transition-colors hover:bg-primary/10"
                                 >
-                                    <X size={16} className="text-muted" />
-                                </button>
-                            </div>
+                                    DOI <ExternalLink size={11} />
+                                </a>
+                            )}
+                        </div>
 
-                            <div className="p-7 overflow-y-auto max-h-[80vh]">
-                                <div className="space-y-5">
-                                    <div>
-                                        <p className="text-primary font-mono text-xs mb-2 uppercase tracking-wider">
-                                            {selectedPaper.journal} ({selectedPaper.date})
-                                        </p>
-                                        <h3 className="text-xl font-bold text-text leading-snug">
-                                            {selectedPaper.title}
-                                        </h3>
-                                    </div>
+                        <div className="h-px w-full bg-border" />
 
-                                    <div className="flex flex-wrap items-center gap-2">
-                                        <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${statusStyle(selectedPaper.status)}`}>
-                                            {selectedPaper.role} · {selectedPaper.status}
-                                        </span>
-                                        {selectedPaper.doi && (
-                                            <a
-                                                href={selectedPaper.doi}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs bg-accent-bg text-primary hover:bg-primary/10 transition-colors font-semibold"
-                                            >
-                                                DOI <ExternalLink size={11} />
-                                            </a>
-                                        )}
-                                    </div>
-
-                                    <div className="h-px bg-border w-full" />
-
-                                    {selectedPaper.summary ? (
-                                        <div className="space-y-3">
-                                            <h4 className="text-xs font-bold text-muted uppercase tracking-widest flex items-center gap-2">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                                                {t('publications.coreSummary')}
-                                            </h4>
-                                            <div className="text-text leading-relaxed text-sm whitespace-pre-line bg-gray-50 p-5 rounded-xl border border-border">
-                                                {selectedPaper.summary}
-                                            </div>
-                                        </div>
-                                    ) : (
-                                        <div className="text-center py-8 text-muted text-sm italic">
-                                            {t('publications.summaryComingSoon')}
-                                        </div>
-                                    )}
-
-                                    <div className="flex justify-center pt-2">
-                                        <button
-                                            onClick={() => setSelectedPaper(null)}
-                                            className="px-6 py-2 bg-gray-100 hover:bg-gray-200 text-text text-xs rounded-lg transition-colors border border-border font-semibold"
-                                        >
-                                            {t('publications.closeBtn')}
-                                        </button>
-                                    </div>
+                        {selectedPaper.summary ? (
+                            <div className="space-y-3">
+                                <h4 className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-muted">
+                                    <div className="h-1.5 w-1.5 rounded-full bg-primary" />
+                                    {t('publications.coreSummary')}
+                                </h4>
+                                <div className="rounded-xl border border-border bg-gray-50 p-5 text-sm leading-relaxed text-text whitespace-pre-line">
+                                    {selectedPaper.summary}
                                 </div>
                             </div>
-                        </Motion.div>
+                        ) : (
+                            <div className="py-8 text-center text-sm italic text-muted">
+                                {t('publications.summaryComingSoon')}
+                            </div>
+                        )}
+
+                        <div className="flex justify-center pt-2">
+                            <button
+                                type="button"
+                                onClick={() => setSelectedPaper(null)}
+                                className="rounded-lg border border-border bg-gray-100 px-6 py-2 text-xs font-semibold text-text transition-colors hover:bg-gray-200"
+                            >
+                                {t('publications.closeBtn')}
+                            </button>
+                        </div>
                     </div>
                 )}
-            </AnimatePresence>
+            </AccessibleModal>
         </section>
     );
 };

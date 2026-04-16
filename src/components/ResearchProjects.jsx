@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import WindowCard from './WindowCard';
+import { sanitizeInlineHtml } from '../utils/sanitizeHtml';
 
 const ResearchProjects = () => {
     const { t } = useTranslation();
@@ -30,7 +31,7 @@ const ResearchProjects = () => {
                             type={project.category}
                             className="h-full"
                         >
-                            <p dangerouslySetInnerHTML={{ __html: project.description }} />
+                            <p dangerouslySetInnerHTML={{ __html: sanitizeInlineHtml(project.description) }} />
                         </WindowCard>
                     ))}
                 </div>
