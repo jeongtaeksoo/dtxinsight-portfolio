@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { motion as Motion } from 'framer-motion';
 import { ArrowRight, Mail } from 'lucide-react';
 import { OrcidIcon } from './Icons';
-import profileImg from '../assets/profile_id_photo.webp';
+import profileImg from '../assets/profile_id_photo.jpeg';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -91,8 +91,8 @@ const Hero = () => {
               <img
                 src={profileImg}
                 alt={t('hero.name')}
-                width="780"
-                height="1069"
+                width="600"
+                height="800"
                 fetchPriority="high"
                 decoding="async"
                 className="aspect-[4/5] w-full object-cover object-top"
