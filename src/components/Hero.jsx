@@ -5,10 +5,29 @@ import { ArrowRight, Mail } from 'lucide-react';
 import { OrcidIcon } from './Icons';
 import profileImg from '../assets/profile_id_photo.jpeg';
 
+const getSeoulDateStamp = () => {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Seoul',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(new Date());
+
+  const year = parts.find((part) => part.type === 'year')?.value ?? '0000';
+  const month = parts.find((part) => part.type === 'month')?.value ?? '01';
+  const day = parts.find((part) => part.type === 'day')?.value ?? '01';
+
+  return `${year}-${month}-${day}`;
+};
+
 const Hero = () => {
   const { t } = useTranslation();
   const stats = t('hero.stats', { returnObjects: true }) || [];
   const focusItems = t('hero.focusItems', { returnObjects: true }) || [];
+  const displayAffiliation =
+    getSeoulDateStamp() >= '2026-05-01'
+      ? t('hero.affiliationFuture')
+      : t('hero.affiliation');
 
   return (
     <section id="top" className="pt-32 pb-16 md:pt-40 md:pb-24">
@@ -115,7 +134,7 @@ const Hero = () => {
                   {t('hero.orcidCta')}
                 </a>
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-muted">{t('hero.affiliation')}</p>
+              <p className="mt-3 text-sm leading-relaxed text-muted">{displayAffiliation}</p>
             </div>
           </div>
         </Motion.div>
