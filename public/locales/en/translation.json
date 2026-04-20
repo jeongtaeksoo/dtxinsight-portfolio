@@ -14,8 +14,9 @@
     },
     "hero": {
         "name": "Taeksoo Jeong",
-        "affiliationCurrent": "Current · Intelligent Multimedia Research Center, Sungkyunkwan University",
-        "affiliationCurrentMeta": "26.5 -",
+        "affiliationCurrentLine1": "Current · Sungkyunkwan University",
+        "affiliationCurrentLine2": "Intelligent Multimedia Research Center",
+        "affiliationCurrentMeta": "26.05 -",
         "affiliationCurrentNote": "Hangil Eye Hospital · Lux mind (Concurrent Role)",
         "affiliationPrevious": "Former Research Associate, Dept. of Rehabilitation Medicine, International St. Mary's Hospital, Catholic Kwandong University",
         "eyebrow": "Clinical Research × Digital Health",

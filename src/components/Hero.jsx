@@ -10,7 +10,8 @@ const Hero = () => {
   const stats = t('hero.stats', { returnObjects: true }) || [];
   const focusItems = t('hero.focusItems', { returnObjects: true }) || [];
   const currentAffiliation = {
-    title: t('hero.affiliationCurrent'),
+    line1: t('hero.affiliationCurrentLine1'),
+    line2: t('hero.affiliationCurrentLine2'),
     meta: t('hero.affiliationCurrentMeta'),
     note: t('hero.affiliationCurrentNote'),
     previous: t('hero.affiliationPrevious'),
@@ -122,18 +123,21 @@ const Hero = () => {
                 </a>
               </div>
               <div className="mt-3 space-y-3">
-                <div className="rounded-2xl border border-border bg-surface px-3 py-3">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <p className="text-sm font-semibold leading-relaxed text-text">
-                      {currentAffiliation.title}
+                <div>
+                  <p className="text-sm font-semibold leading-relaxed text-text">
+                    {currentAffiliation.line1}
+                  </p>
+                  <p className="text-sm font-semibold leading-relaxed text-text">
+                    {currentAffiliation.line2}
+                  </p>
+                  <div className="mt-1 flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
+                    <p className="text-sm leading-relaxed text-muted">
+                      {currentAffiliation.note}
                     </p>
-                    <span className="rounded-full bg-primary/10 px-2 py-1 text-[11px] font-semibold text-primary">
+                    <span className="text-xs font-semibold text-primary/80">
                       {currentAffiliation.meta}
                     </span>
                   </div>
-                  <p className="mt-2 text-sm leading-relaxed text-muted">
-                    {currentAffiliation.note}
-                  </p>
                 </div>
                 <p className="text-sm leading-relaxed text-muted">
                   {currentAffiliation.previous}
