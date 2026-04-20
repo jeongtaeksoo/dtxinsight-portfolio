@@ -72,9 +72,16 @@ const Publications = () => {
                                         {presentation.venue}
                                     </p>
                                     <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
-                                        <span className="inline-flex rounded-full border border-border bg-surface px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
-                                            {presentation.format}
-                                        </span>
+                                        <div className="flex flex-wrap items-center gap-2">
+                                            <span className="inline-flex rounded-full border border-border bg-surface px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
+                                                {presentation.format}
+                                            </span>
+                                            {presentation.role && (
+                                                <span className="inline-flex rounded-full border border-border bg-white px-3 py-1 text-[11px] font-medium text-muted">
+                                                    {presentation.role}
+                                                </span>
+                                            )}
+                                        </div>
                                         <a
                                             href={presentation.link}
                                             target="_blank"
