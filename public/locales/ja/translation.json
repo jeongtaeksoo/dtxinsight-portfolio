@@ -14,8 +14,10 @@
     },
     "hero": {
         "name": "チョン・テクス",
-        "affiliation": "前 カトリック関東大学国際聖母病院 リハビリテーション医学科 研究員",
-        "affiliationFuture": "成均館大学校 知能型マルチメディア研究センター · ハンギル眼科病院 · Lux mind（兼職）",
+        "affiliationCurrent": "現 成均館大学校 知能型マルチメディア研究センター",
+        "affiliationCurrentMeta": "26.5 -",
+        "affiliationCurrentNote": "ハンギル眼科病院 · Lux mind（兼職）",
+        "affiliationPrevious": "前 カトリック関東大学国際聖母病院 リハビリテーション医学科 研究員",
         "eyebrow": "Clinical Research × Digital Health",
         "tagline": "臨床運営を土台にしたデジタルヘルス実証",
         "summary": "多施設臨床試験の運営経験を土台に、病院現場、研究設計、データ運用を一つの流れとしてつなぎ、現場で実際に動かせるデジタルヘルスプロジェクトを設計・調整します。",

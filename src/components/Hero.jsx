@@ -5,29 +5,16 @@ import { ArrowRight, Mail } from 'lucide-react';
 import { OrcidIcon } from './Icons';
 import profileImg from '../assets/profile_id_photo.jpeg';
 
-const getSeoulDateStamp = () => {
-  const parts = new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'Asia/Seoul',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-  }).formatToParts(new Date());
-
-  const year = parts.find((part) => part.type === 'year')?.value ?? '0000';
-  const month = parts.find((part) => part.type === 'month')?.value ?? '01';
-  const day = parts.find((part) => part.type === 'day')?.value ?? '01';
-
-  return `${year}-${month}-${day}`;
-};
-
 const Hero = () => {
   const { t } = useTranslation();
   const stats = t('hero.stats', { returnObjects: true }) || [];
   const focusItems = t('hero.focusItems', { returnObjects: true }) || [];
-  const displayAffiliation =
-    getSeoulDateStamp() >= '2026-05-01'
-      ? t('hero.affiliationFuture')
-      : t('hero.affiliation');
+  const currentAffiliation = {
+    title: t('hero.affiliationCurrent'),
+    meta: t('hero.affiliationCurrentMeta'),
+    note: t('hero.affiliationCurrentNote'),
+    previous: t('hero.affiliationPrevious'),
+  };
 
   return (
     <section id="top" className="pt-32 pb-16 md:pt-40 md:pb-24">
@@ -134,7 +121,24 @@ const Hero = () => {
                   {t('hero.orcidCta')}
                 </a>
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-muted">{displayAffiliation}</p>
+              <div className="mt-3 space-y-3">
+                <div className="rounded-2xl border border-border bg-surface px-3 py-3">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <p className="text-sm font-semibold leading-relaxed text-text">
+                      {currentAffiliation.title}
+                    </p>
+                    <span className="rounded-full bg-primary/10 px-2 py-1 text-[11px] font-semibold text-primary">
+                      {currentAffiliation.meta}
+                    </span>
+                  </div>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                    {currentAffiliation.note}
+                  </p>
+                </div>
+                <p className="text-sm leading-relaxed text-muted">
+                  {currentAffiliation.previous}
+                </p>
+              </div>
             </div>
           </div>
         </Motion.div>

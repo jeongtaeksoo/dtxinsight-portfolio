@@ -14,8 +14,10 @@
     },
     "hero": {
         "name": "정택수",
-        "affiliation": "前 가톨릭관동대학교 국제성모병원 재활의학과 연구원",
-        "affiliationFuture": "성균관대학교 지능형멀티미디어연구센터 · 한길안과병원 · Lux mind(겸직)",
+        "affiliationCurrent": "現 성균관대학교 지능형멀티미디어연구센터",
+        "affiliationCurrentMeta": "26.5 -",
+        "affiliationCurrentNote": "한길안과병원 · Lux mind(겸직)",
+        "affiliationPrevious": "前 가톨릭관동대학교 국제성모병원 재활의학과 연구원",
         "eyebrow": "Clinical Research × Digital Health",
         "tagline": "임상 운영 기반 디지털 헬스 실증",
         "summary": "다기관 임상시험 운영 경험을 바탕으로, 병원 현장과 연구 설계, 데이터 운영을 한 흐름으로 묶어 실제로 작동하는 디지털 헬스 프로젝트를 설계하고 조율합니다.",
