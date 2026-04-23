@@ -37,58 +37,6 @@ export const getLocalizedBlogPostPreview = (post, language = DEFAULT_BLOG_LOCALE
 
 export const blogPostIndex = [
   {
-    "slug": "how-to-use-ai-agents-well-in-2026",
-    "category": "ai",
-    "createdAt": "2026-04-10T00:18:00+09:00",
-    "heroImage": {
-      "src": "/blog/ai-agent-cli-workflow-hero.svg"
-    },
-    "locales": {
-      "ko": {
-        "title": "왜 AI Agent는 CLI에서 먼저 강해지는가",
-        "excerpt": "2026년 4월 10일 기준으로 실전 AI agent는 채팅 UI보다 CLI에서 더 자주 성공합니다. 파일, Git, 로그, API, MCP, 승인 흐름을 같은 작업면에 둘 수 있기 때문입니다.",
-        "keywords": [
-          "AI",
-          "AI Agent",
-          "CLI",
-          "MCP"
-        ],
-        "heroImage": {
-          "alt": "터미널 창, 작업 카드, MCP 연결, 승인 게이트, 백그라운드 잡이 한 화면에 정리된 CLI 중심 AI agent 워크플로 일러스트",
-          "caption": "요즘 실전 AI agent는 화려한 채팅창보다 CLI 위에서 더 빨리 안정화됩니다. 이유는 도구 연결, 재현성, 승인 경계를 한 자리에서 다룰 수 있기 때문입니다."
-        }
-      },
-      "en": {
-        "title": "Why AI Agents Work Best in CLI-First Workflows",
-        "excerpt": "As of April 10, 2026, practical AI agents often succeed in the CLI before they succeed in a chat UI, because files, Git, logs, APIs, MCP, and approvals can all live on the same execution surface.",
-        "keywords": [
-          "AI",
-          "AI Agent",
-          "CLI",
-          "MCP"
-        ],
-        "heroImage": {
-          "alt": "A CLI-first AI agent workflow illustration with terminal windows, MCP links, approval gates, and background jobs arranged around a central execution board",
-          "caption": "The practical advantage of CLI-first agents is not nostalgia. It is that tools, approvals, logs, and repeatable execution can all be kept in one place."
-        }
-      },
-      "ja": {
-        "title": "なぜAIエージェントはCLIで先に強くなるのか",
-        "excerpt": "2026年4月10日時点で、実務で使えるAIエージェントは洗練されたチャットUIより先にCLIで成功することが多いです。ファイル、Git、ログ、API、MCP、承認フローを同じ実行面に置けるからです。",
-        "keywords": [
-          "AI",
-          "AI Agent",
-          "CLI",
-          "MCP"
-        ],
-        "heroImage": {
-          "alt": "ターミナル画面、MCP接続、承認ゲート、バックグラウンドジョブが一つのボードに整理されたCLI中心のAIエージェント運用イラスト",
-          "caption": "CLI-firstの強みは古い操作感ではありません。ツール接続、承認、ログ、再現可能な実行を一つの面で扱えることです。"
-        }
-      }
-    }
-  },
-  {
     "slug": "why-ai-agent-design-is-now-about-state-and-tool-boundaries",
     "category": "ai",
     "createdAt": "2026-04-02T23:45:00+09:00",
