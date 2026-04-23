@@ -45,7 +45,7 @@ export const blogPostIndex = [
     },
     "locales": {
       "ko": {
-        "title": "지금 AI 에이전트 설계의 핵심은 왜 모델보다 상태 관리와 도구 경계에 있을까",
+        "title": "AI 에이전트 설계, 이제는 모델보다 상태와 도구 경계가 중요합니다",
         "excerpt": "요즘 공식 자료를 읽어보면 AI 에이전트 경쟁의 무게중심이 모델 점수보다 상태 관리, 도구 실행 위치, 승인 경계 쪽으로 빠르게 이동하고 있습니다.",
         "keywords": [
           "AI"
@@ -56,7 +56,7 @@ export const blogPostIndex = [
         }
       },
       "en": {
-        "title": "Why AI Agent Design Is Now More About State and Tool Boundaries Than Model Rankings",
+        "title": "AI Agent Design Now Depends More on State and Tool Boundaries Than Model Rankings",
         "excerpt": "Recent official docs from OpenAI, Anthropic, and Google all suggest the same shift: real agent quality now depends less on model rankings and more on state ownership, tool execution, and approval boundaries.",
         "keywords": [
           "AI"
@@ -67,7 +67,7 @@ export const blogPostIndex = [
         }
       },
       "ja": {
-        "title": "なぜ今のAIエージェント設計では、モデル性能より状態管理とツール境界が重要なのか",
+        "title": "AIエージェント設計では、いまモデル性能より状態管理とツール境界が重要です",
         "excerpt": "最近の公式資料を読むと、AIエージェントの競争軸はモデル順位そのものより、状態の持ち方、ツール実行の位置、承認境界へと移りつつあります。",
         "keywords": [
           "AI"
@@ -88,7 +88,7 @@ export const blogPostIndex = [
     },
     "locales": {
       "ko": {
-        "title": "Claude Opus로 내부 서비스 자동화를 붙이는 가장 현실적인 방법",
+        "title": "Claude Opus로 사내 자동화를 설계하는 가장 현실적인 방법",
         "excerpt": "사내 자동화는 챗봇 하나를 붙이는 일보다, 되돌릴 수 있는 업무를 좁게 잡고 Claude Opus를 판단 엔진으로 쓰는 쪽이 훨씬 빨리 성과가 납니다.",
         "keywords": [
           "AI"
@@ -99,7 +99,7 @@ export const blogPostIndex = [
         }
       },
       "en": {
-        "title": "The Most Practical Way to Automate Internal Services with Claude Opus",
+        "title": "The Most Practical Way to Build Internal Automation with Claude Opus",
         "excerpt": "Internal automation works better when Claude Opus is treated as a judgment engine inside a narrow workflow, not as a free-form chatbot sitting on top of every internal system.",
         "keywords": [
           "AI"
@@ -110,7 +110,7 @@ export const blogPostIndex = [
         }
       },
       "ja": {
-        "title": "Claude Opusで社内サービス自動化を組み込む、いちばん現実的な進め方",
+        "title": "Claude Opusで社内自動化を設計する、もっとも現実的な方法",
         "excerpt": "社内自動化は、Claude Opusを何でも答えるチャットとして置くより、狭い業務ループの判断エンジンとして使うほうがはるかに安定します。",
         "keywords": [
           "AI"
@@ -131,7 +131,7 @@ export const blogPostIndex = [
     },
     "locales": {
       "ko": {
-        "title": "헬스케어에서 Agentic AI, Physical AI, Digital Twin은 결국 한 흐름으로 만납니다",
+        "title": "헬스케어 AI의 다음 단계는 Agentic AI·Physical AI·Digital Twin의 결합입니다",
         "excerpt": "헬스케어 AI의 다음 장면은 챗봇 하나가 아니라, 에이전트가 조정하고 물리 시스템이 실행하며 디지털 트윈이 미리 시뮬레이션하는 운영 구조에 더 가깝습니다.",
         "keywords": [
           "헬스케어"
@@ -142,7 +142,7 @@ export const blogPostIndex = [
         }
       },
       "en": {
-        "title": "In Healthcare, Agentic AI, Physical AI, and Digital Twin Are Starting to Converge",
+        "title": "The Next Healthcare AI Stack Is a Convergence of Agentic AI, Physical AI, and Digital Twins",
         "excerpt": "The next healthcare AI stack looks less like a single chatbot and more like an operating loop where agents coordinate, physical systems execute, and digital twins simulate ahead of action.",
         "keywords": [
           "Healthcare"
@@ -153,7 +153,7 @@ export const blogPostIndex = [
         }
       },
       "ja": {
-        "title": "ヘルスケアでは Agentic AI、Physical AI、Digital Twin がひとつの流れとしてつながり始めています",
+        "title": "次のヘルスケアAIは、Agentic AI・Physical AI・Digital Twinの結合です",
         "excerpt": "これからのヘルスケアAIは、単一のチャットボットよりも、デジタルツインが予測し、エージェントが調整し、フィジカルAIが実行する運用ループに近づいていきます。",
         "keywords": [
           "ヘルスケア"
@@ -174,7 +174,7 @@ export const blogPostIndex = [
     },
     "locales": {
       "ko": {
-        "title": "네이버헬스케어를 보다 보면 앱보다 병원 쪽 AI가 먼저 보입니다",
+        "title": "네이버헬스케어의 핵심은 앱보다 병원 AI 스택에 있습니다",
         "excerpt": "지금 네이버헬스케어를 읽는 더 흥미로운 방법은 환자용 앱 하나를 찾는 것이 아니라, CareCall과 Voice EMR, Nursing Agent, 의료데이터 보안을 함께 묶은 의료 AI 운영 구조를 보는 일에 가깝습니다.",
         "keywords": [
           "헬스케어"
@@ -185,7 +185,7 @@ export const blogPostIndex = [
         }
       },
       "en": {
-        "title": "When I Look at NAVER Healthcare, Hospital AI Stands Out More Than Consumer Apps",
+        "title": "NAVER Healthcare Looks More Like a Hospital AI Stack Than a Consumer App",
         "excerpt": "The more useful way to read NAVER healthcare now is not to look for one patient-facing app, but to look at a layered operational stack built around CareCall, voice documentation, ward agents, medical-data security and hospital infrastructure.",
         "keywords": [
           "Healthcare"
@@ -196,7 +196,7 @@ export const blogPostIndex = [
         }
       },
       "ja": {
-        "title": "NAVERヘルスケアを見ていると、アプリより病院のAIが先に浮かびます",
+        "title": "NAVERヘルスケアの核心は、アプリより病院AIスタックにあります",
         "excerpt": "いまNAVERヘルスケアを読むうえで大事なのは、単一の患者向けアプリを探すことより、CareCall、音声記録、病棟エージェント、医療データ保護を束ねた運用レイヤーを見ることです。",
         "keywords": [
           "ヘルスケア"
@@ -217,7 +217,7 @@ export const blogPostIndex = [
     },
     "locales": {
       "ko": {
-        "title": "지금 AI 최신 동향의 핵심은 왜 모델 경쟁보다 제품화 속도에 있을까",
+        "title": "지금 AI 경쟁에서 더 중요한 것은 모델 성능보다 제품화 속도입니다",
         "excerpt": "최근 AI 흐름의 중심은 더 높은 성능표보다, 검색과 도구 호출, 긴 문맥, 실제 실행까지 묶어 일을 끝내는 제품으로 바뀌고 있다는 점에 있습니다.",
         "keywords": [
           "AI"
@@ -228,7 +228,7 @@ export const blogPostIndex = [
         }
       },
       "en": {
-        "title": "Why the Real AI Trend Now Is Productization Speed, Not Just Model Rankings",
+        "title": "In AI Right Now, Productization Speed Matters More Than Model Rankings",
         "excerpt": "The latest AI shift is not only about higher benchmark scores. It is about turning search, tools, long context, and execution into products that actually finish work.",
         "keywords": [
           "AI"
@@ -239,7 +239,7 @@ export const blogPostIndex = [
         }
       },
       "ja": {
-        "title": "いまAIの最新動向で本当に重要なのは、モデル競争より製品化の速さです",
+        "title": "いまAI競争で重要なのは、モデル性能より製品化の速さです",
         "excerpt": "最近のAIの変化は、単に性能表が上がることではありません。検索、ツール、長い文脈、実行までを束ねて、実際に仕事を終わらせる製品へ移っている点にあります。",
         "keywords": [
           "AI"
@@ -260,7 +260,7 @@ export const blogPostIndex = [
     },
     "locales": {
       "ko": {
-        "title": "제이앤피메디를 임상시험 SaaS로만 보면 놓치는 것들",
+        "title": "제이앤피메디를 임상시험 SaaS로만 보면 놓치는 사업 구조",
         "excerpt": "제이앤피메디를 단순한 임상시험 소프트웨어 회사로 이해하면 사업의 절반만 보게 됩니다. 메이븐 클리니컬 클라우드와 프로페셔널 서비스가 함께 움직이는 구조를 봐야 이 회사의 방향이 더 선명해집니다.",
         "keywords": [
           "헬스케어"
@@ -271,7 +271,7 @@ export const blogPostIndex = [
         }
       },
       "en": {
-        "title": "What You Miss If You See JNPMEDI Only as a Clinical Trial SaaS Company",
+        "title": "What You Miss About JNPMEDI If You Only See It as Clinical Trial SaaS",
         "excerpt": "If you describe JNPMEDI only as a clinical trial software company, you only see half of the picture. The combination of Maven Clinical Cloud and professional services explains the company much better.",
         "keywords": [
           "Healthcare"
@@ -282,7 +282,7 @@ export const blogPostIndex = [
         }
       },
       "ja": {
-        "title": "JNPMEDIを単なる臨床試験SaaSとして見ると見落とすこと",
+        "title": "JNPMEDIを臨床試験SaaSとしてだけ見ると見落とす事業構造",
         "excerpt": "JNPMEDIを単なる臨床試験ソフトウェア会社として理解すると、会社の半分しか見えてきません。Maven Clinical CloudとProfessional Servicesを一緒に見ると、この会社の輪郭がかなりはっきりします。",
         "keywords": [
           "ヘルスケア"
@@ -303,7 +303,7 @@ export const blogPostIndex = [
     },
     "locales": {
       "ko": {
-        "title": "옵시디언과 Claude Code를 연결해 쓰는 가장 현실적인 방법",
+        "title": "옵시디언과 Claude Code를 연결하는 가장 현실적인 세 가지 방법",
         "excerpt": "요즘 커뮤니티에서 말하는 옵시디언과 Claude 연결은 대체로 세 갈래입니다. shared vault, 옵시디언 내부 플러그인, MCP 서버형을 구분해서 보면 어떤 방식이 내 작업에 맞는지 훨씬 선명해집니다.",
         "keywords": [
           "AI"
@@ -314,7 +314,7 @@ export const blogPostIndex = [
         }
       },
       "en": {
-        "title": "The Most Practical Way to Connect Obsidian and Claude Code",
+        "title": "Three Practical Ways to Connect Obsidian and Claude Code",
         "excerpt": "What people call “Obsidian plus Claude” now usually means three different things: a shared vault workflow, an embedded Obsidian plugin, or an MCP server bridge. Once those are separated, the tradeoffs become much clearer.",
         "keywords": [
           "AI"
@@ -325,7 +325,7 @@ export const blogPostIndex = [
         }
       },
       "ja": {
-        "title": "ObsidianとClaude Codeをつなげて使う、いちばん現実的な方法",
+        "title": "ObsidianとClaude Codeをつなぐ、現実的な3つの方法",
         "excerpt": "最近よく見かける「ObsidianとClaudeの連携」は、実は一つの方法ではありません。shared vault、Obsidian内プラグイン、MCPサーバー型を分けて見ると、自分に合う形がかなりわかりやすくなります。",
         "keywords": [
           "AI"
@@ -346,7 +346,7 @@ export const blogPostIndex = [
     },
     "locales": {
       "ko": {
-        "title": "카카오헬스케어는 왜 ‘파스타 앱’보다 연결 구조가 더 중요해 보일까",
+        "title": "카카오헬스케어는 파스타 앱보다 연결 구조로 봐야 합니다",
         "excerpt": "카카오헬스케어를 보고 있으면 요즘 디지털 헬스의 승부가 단일 앱 기능보다 생활 데이터, 병원 EHR, 카카오톡 접점을 어떻게 하나의 흐름으로 잇느냐에 달려 있다는 점이 더 선명하게 보입니다.",
         "keywords": [
           "헬스케어"
@@ -357,7 +357,7 @@ export const blogPostIndex = [
         }
       },
       "en": {
-        "title": "Why Kakao Healthcare Looks Bigger Than a Single Diabetes App",
+        "title": "Kakao Healthcare Makes More Sense as a Connected Care Stack Than as Just PASTA",
         "excerpt": "Kakao Healthcare is interesting not just because of PASTA itself, but because it is trying to connect daily health data, hospital EHR workflows and KakaoTalk-based patient touchpoints into one continuous path.",
         "keywords": [
           "Healthcare"
@@ -368,7 +368,7 @@ export const blogPostIndex = [
         }
       },
       "ja": {
-        "title": "カカオヘルスケアは、なぜ単なる糖尿病アプリ以上に見えるのか",
+        "title": "カカオヘルスケアは、PASTA単体より接続構造で見るべきです",
         "excerpt": "カカオヘルスケアが面白く見えるのは、PASTAというアプリ単体よりも、日常データ、病院EHR、そしてカカオトーク基盤の患者接点を一つの流れとして結ぼうとしているからです。",
         "keywords": [
           "ヘルスケア"
@@ -389,7 +389,7 @@ export const blogPostIndex = [
     },
     "locales": {
       "ko": {
-        "title": "오픈클로(OpenClaw)와 마누스, 지금 AI 에이전트의 결이 어떻게 갈리는가",
+        "title": "오픈클로와 마누스는 서로 다른 방향의 AI 에이전트입니다",
         "excerpt": "둘 다 에이전트라는 이름을 쓰지만, 오픈클로는 내가 소유하는 게이트웨이에 가깝고 마누스는 결과물을 받아보는 클라우드 동료에 더 가깝습니다.",
         "keywords": [
           "AI"
@@ -400,7 +400,7 @@ export const blogPostIndex = [
         }
       },
       "en": {
-        "title": "OpenClaw and Manus: How the Shape of AI Agents Is Splitting Right Now",
+        "title": "OpenClaw and Manus Represent Two Different Directions for AI Agents",
         "excerpt": "Both are called agents, but OpenClaw feels closer to a gateway you operate and own, while Manus feels closer to a cloud coworker that brings finished work back to you.",
         "keywords": [
           "AI"
@@ -411,7 +411,7 @@ export const blogPostIndex = [
         }
       },
       "ja": {
-        "title": "OpenClawとManus、いまAIエージェントの方向性はどう分かれているのか",
+        "title": "OpenClawとManusは、異なる方向を向いたAIエージェントです",
         "excerpt": "どちらもエージェントと呼ばれますが、OpenClawは自分で運用するゲートウェイに近く、Manusは完成した仕事を返してくれるクラウドの同僚に近い存在です。",
         "keywords": [
           "AI"
@@ -432,7 +432,7 @@ export const blogPostIndex = [
     },
     "locales": {
       "ko": {
-        "title": "지금 AI를 잘 쓰는 팀은 무엇이 다른가",
+        "title": "AI를 잘 쓰는 팀은 모델보다 반복 업무부터 줄입니다",
         "excerpt": "요즘 팀의 차이는 더 강한 모델을 먼저 찾았는지보다, 반복 업무를 어디서 줄였는지에서 더 선명하게 드러납니다.",
         "keywords": [
           "AI"
@@ -443,7 +443,7 @@ export const blogPostIndex = [
         }
       },
       "en": {
-        "title": "What Sets Teams That Use AI Well Apart Right Now",
+        "title": "Teams That Use AI Well Reduce Repetitive Work Before Chasing Better Models",
         "excerpt": "The gap between teams is showing up less in who found the strongest model first and more in who reduced repetitive work first.",
         "keywords": [
           "AI"
@@ -454,7 +454,7 @@ export const blogPostIndex = [
         }
       },
       "ja": {
-        "title": "今、AIをうまく使うチームは何が違うのか",
+        "title": "AIをうまく使うチームは、モデル探しより先に反復業務を減らします",
         "excerpt": "いま差が出ているのは、強いモデルを先に見つけたチームよりも、反復業務をどこで減らしたかを先に見たチームです。",
         "keywords": [
           "AI"
@@ -475,7 +475,7 @@ export const blogPostIndex = [
     },
     "locales": {
       "ko": {
-        "title": "첫 글을 올리며, 기록을 다시 시작해보려 합니다",
+        "title": "기록을 다시 시작하며 첫 글을 올립니다",
         "excerpt": "오래 비워두었던 블로그 칸에 첫 글을 올리며, 앞으로 이 공간에 어떤 기록을 남기고 싶은지 차분히 적어보았습니다.",
         "keywords": [
           "일상"
@@ -486,7 +486,7 @@ export const blogPostIndex = [
         }
       },
       "en": {
-        "title": "With This First Post, I Want to Start Writing Again",
+        "title": "Starting This Blog Again, One Post at a Time",
         "excerpt": "As I upload the first post to a blog space that sat empty for a while, I wanted to write down what kind of record I hope to leave here.",
         "keywords": [
           "Daily"
@@ -497,7 +497,7 @@ export const blogPostIndex = [
         }
       },
       "ja": {
-        "title": "最初の投稿として、また記録を始めてみようと思います",
+        "title": "記録を再開しながら、最初の投稿を載せます",
         "excerpt": "しばらく空いていたブログ欄に最初の文章を載せながら、この場所にどんな記録を残したいのかを静かに書いてみました。",
         "keywords": [
           "日常"
