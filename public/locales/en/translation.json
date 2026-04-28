@@ -105,7 +105,7 @@
             },
             {
                 "date": "2026",
-                "title": "Accepted by Frontiers in Neurology (Co-author)",
+                "title": "Published in Frontiers in Neurology (Co-author)",
                 "note": null
             }
         ]
@@ -298,8 +298,8 @@
                 "journal": "Frontiers in Neurology",
                 "date": "2026",
                 "role": "Co-author",
-                "status": "Accepted",
-                "doi": "https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1813694/abstract",
+                "status": "Published",
+                "doi": "https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1813694/full",
                 "summary": "This randomized controlled trial evaluated the clinical efficacy of Zenicog®, an AI-driven, self-guided, home-based cognitive rehabilitation program for older adults with Mild Cognitive Impairment (MCI). The intervention was designed as an accessible alternative to conventional clinic-based therapy in response to the growing need for scalable cognitive care in aging populations.\n\nSeventy participants were recruited, and 62 were included in the final analysis. Using a delayed-treatment parallel randomized design with an exploratory crossover phase, the intervention group completed a five-week home program consisting of 24 sessions. For the primary outcome, Global Cognitive Function measured by K-MMSE2, the intervention group showed significantly higher scores than the control group at the end of Period 1 (median 28.0 vs. 26.0, p < 0.001). Clinical success, defined as K-MMSE2 >= 27, was achieved by 93.9% of the intervention group versus 0% of the control group.\n\nNo significant between-group differences were observed in domain-specific cognitive tests such as Digit Span and TMT. However, usability and satisfaction were high at 4.5/5 or above, and no participants dropped out because of adverse effects. These findings suggest that minimally supervised AI-driven telerehabilitation can be a feasible and scalable strategy for improving global cognitive function in patients with MCI.",
                 "authors": "Minsong Kim, Si-Woon Park*, Doo Young Kim, <b>Taeksoo Jeong</b>"
             }
