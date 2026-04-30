@@ -111,7 +111,16 @@ const Hero = () => {
                 {t('hero.profileLabel')}
               </p>
               <div className="mt-2 flex flex-wrap items-center justify-between gap-3">
-                <h2 className="text-2xl font-semibold text-text">{t('hero.name')}</h2>
+                <h2 className="inline-flex items-start gap-1.5 text-2xl font-semibold text-text">
+                  <span>{t('hero.name')}</span>
+                  <span
+                    className="mt-0.5 inline-flex rounded-full border border-primary/20 bg-primary/8 px-1.5 py-0.5 text-[10px] font-bold leading-none tracking-[0.12em] text-primary"
+                    title="Registered Nurse"
+                    aria-label="Registered Nurse"
+                  >
+                    RN
+                  </span>
+                </h2>
                 <a
                   href="https://orcid.org/0009-0001-1451-5457"
                   target="_blank"
