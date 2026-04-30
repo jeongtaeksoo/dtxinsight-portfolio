@@ -134,9 +134,11 @@ const Hero = () => {
                     <p className="text-sm leading-relaxed text-muted">
                       {currentAffiliation.note}
                     </p>
-                    <span className="text-xs font-semibold text-primary/80">
-                      {currentAffiliation.meta}
-                    </span>
+                    {currentAffiliation.meta ? (
+                      <span className="text-xs font-semibold text-primary/80">
+                        {currentAffiliation.meta}
+                      </span>
+                    ) : null}
                   </div>
                 </div>
                 <p className="text-sm leading-relaxed text-muted">
