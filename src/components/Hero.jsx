@@ -21,6 +21,7 @@ const Hero = () => {
     <section id="top" className="pt-32 pb-16 md:pt-40 md:pb-24">
       <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.15fr)_320px] lg:gap-14">
         <Motion.div
+          className="order-2 lg:order-1"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55 }}
@@ -87,7 +88,7 @@ const Hero = () => {
         </Motion.div>
 
         <Motion.div
-          className="relative mx-auto w-full max-w-[300px] lg:max-w-[320px]"
+          className="relative order-1 mx-auto w-full max-w-[300px] lg:order-2 lg:max-w-[320px]"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.12 }}
