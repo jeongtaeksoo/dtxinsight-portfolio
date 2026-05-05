@@ -4,13 +4,14 @@
     },
     "nav": {
         "about": "紹介",
-        "research": "研究",
-        "innovation": "革新",
+        "research": "研究実績",
+        "innovation": "事例",
         "publications": "論文",
-        "contact": "連絡先",
-        "blog": "ブログ",
+        "contact": "コーヒーチャット",
+        "blog": "記事",
         "highlights": "ハイライト",
-        "projects": "プロジェクト"
+        "projects": "プロジェクト",
+        "capabilities": "強み"
     },
     "hero": {
         "name": "チョン・テクス",
@@ -19,31 +20,48 @@
         "affiliationCurrentMeta": "",
         "affiliationCurrentNote": "ハンギル眼科病院 · Lux mind（兼職）",
         "affiliationPrevious": "前 カトリック関東大学国際聖母病院 リハビリテーション医学科 研究員",
-        "eyebrow": "Clinical Research × Digital Health",
-        "tagline": "臨床運営を土台にしたデジタルヘルス実証",
-        "summary": "多施設臨床試験の運営経験を土台に、病院現場、研究設計、データ運用を一つの流れとしてつなぎ、現場で実際に動かせるデジタルヘルスプロジェクトを設計・調整します。",
+        "eyebrow": "Research Editorial Portfolio",
+        "tagline": "臨床研究運営とデジタルヘルスの製品化をつなぎます",
+        "summary": "病院現場、研究プロトコル、データフロー、AIプロトタイプを一つの流れに整え、実際の臨床環境で検証できるデジタルヘルスプロジェクトづくりを支援します。",
+        "identityLine": "看護師免許 · 臨床研究オペレーター · AIデジタルヘルスビルダー",
         "focusItems": [
-            "多施設RCT運営",
-            "デジタルヘルス実証設計",
-            "AIプロトタイピング"
+            "臨床運営の言語",
+            "製品実行の構造",
+            "AI検証フロー"
         ],
-        "primaryCta": "代表プロジェクトを見る",
-        "secondaryCta": "協業について話す",
-        "profileLabel": "プロフィール",
-        "orcidCta": "ORCIDプロフィール",
+        "topicTags": [
+            "#臨床運営",
+            "#多施設RCT",
+            "#デジタルヘルス",
+            "#ヘルスケアAI",
+            "#AIプロトタイピング"
+        ],
+        "primaryCta": "代表事例を見る",
+        "secondaryCta": "コーヒーチャット",
+        "profileLabel": "現在の所属",
+        "orcidCta": "ORCID",
         "stats": [
             {
-                "value": "3.9億KRW",
-                "label": "多施設R&D運営規模"
+                "value": "2件",
+                "label": "CRIS登録RCT運営"
             },
             {
                 "value": "5本",
-                "label": "SCI・ESCI・KCI論文（投稿含む）"
+                "label": "SCI・ESCI・KCI論文成果"
             },
             {
-                "value": "RCT",
-                "label": "ランダム化比較試験の運営"
+                "value": "CTC",
+                "label": "AI認知介入フレームワーク"
             }
+        ],
+        "romanizedName": "Taeksoo Jeong",
+        "role": "Clinical Research × AI Digital Health",
+        "audience": "病院・研究者、デジタルヘルス製品チーム、ヘルスケアAI初期チームのための臨床実証・運営パートナー",
+        "proofLabel": "エビデンス・スナップショット",
+        "proofItems": [
+            "多施設RCT運営経験",
+            "高齢者向けAI認知介入フレームワーク",
+            "論文・ポスターによる研究コミュニケーション"
         ]
     },
     "timeline": {
@@ -112,26 +130,26 @@
     },
     "about": {
         "eyebrow": "ポジショニング",
-        "title": "臨床とプロダクトの間にある実行構造を設計し、調整します",
-        "description1": "臨床試験運営、デジタルヘルス実証、生成AIプロトタイピングは別々に動くべきではないと考えています。大切なのは、病院現場、研究設計、データの流れ、ユーザー体験がひとつの構造として噛み合うことです。",
-        "description2": "看護学の背景とCRC経験をもとに、プロトコルベースの研究運営と現場実務を理解しながら、AIベースのツールを検証可能なワークフローへ素早く落とし込めます。研究者、病院、プロダクトチームの間をつなぐ役割が必要なプロジェクトに特に向いています。",
-        "collaborationTitle": "特に相性のよい協業",
+        "title": "研究者とプロダクトチームの間に、実行可能な構造をつくります",
+        "description1": "優れたデジタルヘルスのアイデアも、病院現場、研究設計、データ取得、ユーザー動線が噛み合わなければ検証が難しくなります。私はその間にある実行構造を設計し、調整することに集中しています。",
+        "description2": "看護学の背景とCRC経験をもとに、プロトコル中心の研究運営を理解しながら、AIツールのアイデアを確認可能な画面とワークフローへ素早く変換します。",
+        "collaborationTitle": "相性のよい協業",
         "collaborationItems": [
             "病院実証と研究設計を同時に進める必要があるデジタルヘルス案件",
             "臨床運営の言語とプロダクトの言語を両方理解する相手が必要なチーム",
-            "医療現場に合わせてAI機能を素早く検証したい初期段階のプロジェクト"
+            "医療現場の文脈に合わせて生成AI機能を素早く検証したい初期段階のプロジェクト"
         ],
         "pillars": [
             {
-                "title": "臨床試験運営",
+                "title": "Clinical operations",
                 "description": "多施設RCTにおける研究者連携、文書、日程、データの流れを安定して管理します。"
             },
             {
-                "title": "実証設計",
+                "title": "Validation design",
                 "description": "研究課題と現場制約を同時に見ながら、実証やパイロットの構造を設計します。"
             },
             {
-                "title": "AIプロトタイピング",
+                "title": "AI prototyping",
                 "description": "初期アイデアを、確認・検証・改善できる画面とワークフローへ素早く変えます。"
             }
         ]
@@ -157,52 +175,80 @@
         ]
     },
     "research": {
-        "title": "研究ハイライト",
-        "intro": "",
+        "title": "研究実績",
+        "intro": "臨床有効性検証、多施設運営、政策関係者とのコミュニケーションを独立した実績として整理しています。",
         "featuredLabel": "代表的な研究",
         "policyLabel": "政策・実証コミュニケーション",
         "projects": [
             {
+                "year": "2024-2025",
                 "title": "ランダム化比較試験 (MCI)",
-                "category": "臨床有効性検証&運営",
-                "description": "軽度認知障害（MCI）の高齢者を対象としたZenicog®認知リハビリテーションプログラムの効果を検証するためのランダム化比較試験（RCT） (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
+                "category": "臨床有効性検証",
+                "role": "CRC / 研究運営",
+                "description": "軽度認知障害（MCI）の高齢者を対象に、Zenicog®認知リハビリテーションプログラムの有効性を検証するRCTを運営。",
+                "evidenceLabel": "CRIS",
+                "evidenceLink": "https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L",
+                "proof": "3.9億KRW規模の多施設R&D運営における主要研究トラック"
             },
             {
+                "year": "2024-2025",
                 "title": "多施設共同ランダム化比較試験 (Stroke)",
-                "category": "臨床有効性検証&運営",
-                "description": "亜急性期脳卒中患者を対象としたZenicog®認知リハビリテーションプログラムの効果を検証するためのランダム化比較試験（RCT） (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
+                "category": "多施設臨床運営",
+                "role": "CRC / 多施設調整",
+                "description": "亜急性期脳卒中患者を対象に、Zenicog®認知リハビリテーションプログラムの有効性を検証するRCTを運営。",
+                "evidenceLabel": "CRIS",
+                "evidenceLink": "https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L",
+                "proof": "ランダム化比較試験の運営と研究者コミュニケーション"
             },
             {
+                "year": "2024",
                 "title": "政府デジタルヘルスケア実証事業発表",
-                "category": "規制・政策対応",
-                "description": "保健福祉部や韓国保健産業振興院の関係者が参加した実証事業の中間報告Q&Aを主導しました。"
+                "category": "政策・実証コミュニケーション",
+                "role": "中間報告Q&A主導",
+                "description": "保健福祉部や韓国保健産業振興院の関係者が参加した実証事業の中間報告Q&Aを主導。",
+                "evidenceLabel": "",
+                "evidenceLink": "",
+                "proof": "政府・機関関係者に対する実証文脈の説明"
             }
-        ]
+        ],
+        "eyebrow": "研究実績",
+        "metaLabels": {
+            "year": "期間",
+            "role": "役割",
+            "evidence": "根拠"
+        },
+        "evidenceCta": "根拠を見る"
     },
     "innovation": {
-        "label": "代表プロジェクト",
-        "title": "Hwiwasoo: 生成AIベースの認知介入フレームワーク",
-        "description": "Hwiwasooは、高齢者の認知低下とデジタル排除を減らすために始まったプロジェクトです。Coach-Teacher-Companionの3重エージェント構造を通じて、日常の中で自然に続く認知介入の流れを設計し、研究から実使用へつながる認知介入の流れを具体化することを目指しています。",
+        "label": "代表事例",
+        "title": "Hwiwasoo: 生成AIによる認知介入の構造化",
+        "description": "Hwiwasooは、高齢者の認知低下とデジタル排除を減らすために始まった代表事例です。Coach-Teacher-Companionの3重エージェント構造により、日常の認知トレーニング体験、研究プロトコル、実使用の流れをつなげています。",
         "featureTitles": [
-            "運用構造",
-            "相互作用設計",
-            "臨床適用性"
+            "Coach",
+            "Teacher",
+            "Companion"
         ],
         "features": [
-            "Coach-Teacher-Companionの3重エージェントで役割を分け、介入の流れを設計します。",
-            "日常の文脈に合わせて難易度と介入方法を調整するContext-Adaptive Cognitive Flowを実装します。",
-            "高齢者向けインターフェースと臨床適用プロトコルを同時に考慮します。"
+            "目標と難易度を調整する運営レイヤー",
+            "課題を説明しトレーニングの流れを保つ教育レイヤー",
+            "情緒的な継続性と日常文脈を支える伴走レイヤー"
         ],
-        "proofTitle": "このプロジェクトが示すもの",
+        "proofTitle": "事例の根拠",
         "proofItems": [
-            "研究アイデアを実際の使用フローへ具体化していく過程",
-            "生成AIを単なるチャットボットではなく、認知介入の構造として扱う試み",
-            "ヘルスケア研究、プロダクト思考、現場理解を一つのプロジェクトで調整した経験"
+            "高齢者向けインターフェースと臨床プロトコル設計を同時に考慮",
+            "北海道大学の研究者と共同で創始したフレームワーク",
+            "MDPI Healthcareの共同第1著者論文として発表"
         ],
-        "cta": "プロジェクトを見る"
+        "cta": "プロジェクトを見る",
+        "problemLabel": "課題",
+        "problem": "高齢者向け認知介入では、継続性、テクノロジー不安、デジタルアクセスを同時に扱う必要があります。",
+        "roleLabel": "自分の役割",
+        "role": "臨床プロトコルの視点とAIプロトタイピングの視点をつなぎ、介入構造と検証フローを整理しました。",
+        "outcomeLabel": "成果物",
+        "outcome": "共同第1著者論文として発表し、生成AIを汎用チャットボットではなく構造化された認知支援として説明するフレームワークを提示しました。"
     },
     "publications": {
-        "title": "主な論文",
+        "title": "論文",
         "journalPapers": "論文5本",
         "posterTitle": "ポスター記録",
         "linkAvailable": "リンクあり",
@@ -211,13 +257,13 @@
         "coreSummary": "要点まとめ",
         "closeBtn": "閉じる",
         "summaryComingSoon": "要約を準備中です。",
-        "summaryEyebrow": "Research Focus",
+        "summaryEyebrow": "Publication index",
         "summaryHighlights": [
-            "臨床運営に基づく介入設計",
-            "生成AIによる認知介入の構造化",
-            "使用性検証まで含めたデジタルヘルス設計"
+            "SCI・ESCI・KCI論文5本",
+            "共同第1著者論文1本",
+            "RCTおよびAI認知リハビリ研究が中心"
         ],
-        "summaryStatLine": "5本の論文 · 2件のRCT · 3つの軸をまたぐ経験",
+        "summaryStatLine": "論文5本 · ポスター3件 · 臨床運営に基づく研究成果",
         "viewAllCta": "全文献を見る",
         "morePapersHint": "ほか{{count}}本は一覧で確認できます",
         "fullListLabel": "アーカイブ",
@@ -261,7 +307,8 @@
                 "status": "掲載完了",
                 "doi": "https://doi.org/10.3389/fneur.2025.1636017",
                 "summary": "最近の多施設共同ランダム化比較試験において、AIベースの認知遠隔リハビリテーションは、従来の療法士監視下の認知リハビリテーションと同等の有効性を示しました。\n\n亜急性期（6ヶ月以内）の脳卒中患者63名を2つのグループに無作為に割り当て、6週間で計24回のセッションを実施した結果、主要な認知指標（K-MMSE2、TMT、Digit Span）すべてにおいて有意な改善が見られました。\n\n非監視型の**AI自己運営遠隔リハビリテーションは、療法士主導群と比較して非劣性（non-inferiority）**が立証され、ユーザビリティ満足度も高く得られました。\n\nこの結果は、リアルタイムのパーソナライズと遠隔モニタリングが可能なAI認知リハビリテーションプラットフォームが、既存の治療と同レベル의 臨床的価値を有することを示唆しています。",
-                "authors": "Suebeen Kim, Si-Woon Park, <b>Taeksoo Jeong</b>, Min-Soo Kang, Doo Young Kim*"
+                "authors": "Suebeen Kim, Si-Woon Park, <b>Taeksoo Jeong</b>, Min-Soo Kang, Doo Young Kim*",
+                "statusKey": "published"
             },
             {
                 "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
@@ -271,7 +318,8 @@
                 "status": "掲載完了",
                 "doi": "https://www.mdpi.com/2227-9032/13/24/3225",
                 "summary": "デジタル格差（digital exclusion）とテクノロジー不安により、高齢者の認知介入の実際の適用には依然として高い障壁が存在します。本研究は、これらの限界を解決するために、Coach–Teacher–Companion（CTC）構造のマルチエージェント生成AIフレームワークを提案する臨床プロトコル論文です。\n\n本フレームワークは、日常生活に自然に認知訓練を統合し、適応型の難易度調整と感情モニタリングを通じて、認知・行動・感情のサポートを同時に提供するように設計されています。特に、デジタルリテラシー（MDPQ-16）、テクノロジー不安（CARS）、感情的安全性（PANAS）の評価を含む、臨床適用のための方法論적・倫理的な安全策を体系的に提示しています。\n\n6週間のパイロット妥当性研究プロトコル（n=14）を通じて、**ユーザビリティ（SUS）、ユーザーエクスペリエンス（UEQ-S）、アドヒアランス、感情の安定性、主要な認知指標（MMSE, TMT, Digit Span）**を評価するように設計されており、本研究は高齢者向けの生成AIベースの認知介入の臨床適用の可能性を構造的に提示する初期の根拠を提供します。",
-                "authors": "<b>Taeksoo Jeong</b><sup>†</sup>, Geonhwi Hwang<sup>†</sup>, Doo Young Kim*"
+                "authors": "<b>Taeksoo Jeong</b><sup>†</sup>, Geonhwi Hwang<sup>†</sup>, Doo Young Kim*",
+                "statusKey": "published"
             },
             {
                 "title": "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
@@ -281,7 +329,8 @@
                 "status": "掲載完了",
                 "doi": "https://doi.org/10.5535/arm.250060",
                 "summary": "AIベースのモバイル認知遠隔リハビリテーションの臨床的適用可能性とユーザビリティを評価した予備研究です。脳卒中患者および軽度認知障害（MCI）の高齢者13名を対象に、6週間で計24回のセッションからなるAI自己運営認知リハビリテーションプログラムを適用しました。\n\nMMSEスコアは介入前と比較して有意に向上し、Digit SpanおよびTrail Making Testでも全般的な改善傾向が見られました。全体的なユーザビリティ評価では製品の品質と満足度は高い水準を記録しましたが、「エラー許容度（tolerance for error）」の領域は相対的に低く、高齢者やデジタル脆弱層を考慮したUI/UX改善の必要性が確認されました。\n\n本研究は、療法士の常時介入なしでも実施可能なAIベースの認知遠隔リハビリテーションが、実際の臨床環境で安全かつ実現可能であり、認知機能の改善に潜在的な効果を持ち得ることを示しています。特にデジタル治療薬や遠隔リハビリテーションが拡大する流れの中で、ユーザビリティ中心の設計の重要性を提示した研究として意義があります。",
-                "authors": "Suebeen Kim, Doo Young Kim, Si-Woon Park*, Namo Jeon, <b>Taeksoo Jeong</b>, Min-Soo Kang, Sangwook Park"
+                "authors": "Suebeen Kim, Doo Young Kim, Si-Woon Park*, Namo Jeon, <b>Taeksoo Jeong</b>, Min-Soo Kang, Sangwook Park",
+                "statusKey": "published"
             },
             {
                 "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults With Mild Cognitive Impairment: A Pilot Study",
@@ -291,7 +340,8 @@
                 "status": "掲載完了",
                 "doi": "https://doi.org/10.12786/bn.2026.19.e2",
                 "summary": "本研究は、軽度認知障害（MCI）の高齢者を対象に、中枢コリン作動性機能の指標である短潜時求心性抑制（SAI）と認知機能との関連性を検討した予備研究です。\n\n計57名のMCI患者を対象にSAIと主要な認知指標（MMSE, Digit Span, TMT）を比較分析した結果、SAI値と特定の認知領域との間に有意な統計的相関や、年齢によるSAIの違いは観察されませんでした。\n\nしかし興味深いことに、認知機能スコアが同等であるにもかかわらず、参加者の21%でSAIの障害が確認されました。これは、測定可能な認知機能低下が現れる前に生じる早期の神経生理学的変化（コリン作動性機能障害）をSAIが反映している可能性を示唆しています。この結果は、SAIが認知症前臨床段階における認知的脆弱性を評価する客観的なバイオマーカーとして活用される可能性を示しています。",
-                "authors": "Suebeen Kim, <b>Taeksoo Jeong</b>, Sangwook Park, Doo Young Kim*"
+                "authors": "Suebeen Kim, <b>Taeksoo Jeong</b>, Sangwook Park, Doo Young Kim*",
+                "statusKey": "published"
             },
             {
                 "title": "AI-Driven Telerehabilitation for Older Adults with Mild Cognitive Impairment: A Randomized Controlled Trial",
@@ -301,12 +351,16 @@
                 "status": "掲載完了",
                 "doi": "https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1813694/full",
                 "summary": "本ランダム化比較試験は、軽度認知障害（MCI）の高齢者を対象に、AIベースの自己主導型・在宅認知リハビリテーションプログラム Zenicog® の臨床的有効性を評価した研究です。高齢化に伴い、外来中心の従来治療の物理的制約を補う、よりアクセスしやすい認知介入の必要性を背景に設計されました。\n\n70名が登録され、最終解析には62名が含まれました。研究は遅延治療型の並行ランダム化比較試験に探索的クロスオーバー相を組み合わせた設計で行われ、介入群は5週間で計24セッションの在宅プログラムを実施しました。主要評価項目である K-MMSE2 による全般的認知機能では、Period 1 終了時点で介入群が対照群より有意に高い成績（中央値 28.0 vs. 26.0, p < 0.001）を示し、K-MMSE2 27点以上を臨床的成功とした場合の達成率も 93.9% 対 0% でした。\n\n一方で、Digit Span や TMT などの領域別認知検査では有意差は確認されませんでした。それでも使用性と満足度は 4.5/5 以上と高く、有害事象による脱落はありませんでした。これらの結果は、最小限の監督で運用できる AI 主導の遠隔認知リハビリテーションが、MCI 患者の全般的認知機能改善に向けた実行可能かつ拡張性のある戦略になり得ることを示唆しています。",
-                "authors": "Minsong Kim, Doo Young Kim, <b>Taeksoo Jeong</b>, Si-Woon Park*"
+                "authors": "Minsong Kim, Doo Young Kim, <b>Taeksoo Jeong</b>, Si-Woon Park*",
+                "statusKey": "published"
             }
-        ]
+        ],
+        "eyebrow": "学術成果",
+        "detailsCta": "詳細を見る",
+        "doiCta": "DOI"
     },
     "skills": {
-        "title": "協業に持ち込める強み",
+        "title": "協業に持ち込める実行力",
         "items": {
             "clinical": "多施設臨床運営",
             "vibecording": "AIプロトタイピング",
@@ -322,12 +376,14 @@
             "design": "実証事業、パイロット、臨床適用を見据えた検証構造の設計",
             "comm": "論文、抄録、発表資料として結果を明確に整理",
             "ai": "医療文脈に合わせて生成AI機能を検証し具体化"
-        }
+        },
+        "eyebrow": "Collaboration Capabilities",
+        "intro": "単なるスキル一覧ではなく、病院実証と製品実行の間で実際に担える役割です。"
     },
     "blogSection": {
-        "label": "ブログ",
-        "recentPosts": "最新記事",
-        "viewSection": "ブログ一覧を見る",
+        "label": "Writing",
+        "recentPosts": "最近の記事",
+        "viewSection": "記事セクションを見る",
         "allPosts": "記事一覧",
         "viewPost": "記事を見る",
         "backToList": "記事一覧",
@@ -340,12 +396,12 @@
         "postFallback": "記事"
     },
     "contact": {
-        "eyebrow": "Collaboration",
-        "title": "気軽にご連絡ください",
-        "subtitle": "デジタルヘルス、臨床研究、AI活用のように一緒に考えてみたいテーマがあれば、気軽にご連絡ください。初期のアイデア整理のような段階でも大丈夫です。",
+        "eyebrow": "コーヒーチャット",
+        "title": "気軽にコーヒーチャットで話しましょう",
+        "subtitle": "デジタルヘルス、臨床研究、AI活用について一緒に考えてみたいテーマがあれば、気軽にご連絡ください。初期アイデアの整理段階でも大丈夫です。",
         "primaryCta": "メールを送る",
         "secondaryCta": "LinkedInでつながる",
-        "tertiaryCta": "コーヒーチャットを予約",
+        "tertiaryCta": "コーヒーチャットを提案",
         "collaborationItems": [
             {
                 "title": "病院実証",
@@ -364,5 +420,9 @@
             "rights": "© 2026 DTX Insight. All rights reserved.",
             "tagline": "Clinical Research × Digital Health Execution"
         }
+    },
+    "meta": {
+        "title": "チョン・テクス - DTX Insight",
+        "description": "臨床研究運営、デジタルヘルス実証、AIプロトタイピングをつなぐ研究者ポートフォリオです。"
     }
 }

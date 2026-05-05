@@ -8,54 +8,52 @@ const About = () => {
 
   return (
     <section id="about" className="scroll-mt-28 border-t border-border py-16">
-      <div className="mb-8">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-primary/70">
-          {t('about.eyebrow')}
-        </p>
-        <div className="flex items-center gap-4">
-          <h2 className="text-3xl font-bold text-text text-balance">{t('about.title')}</h2>
-          <div className="h-px flex-grow bg-gradient-to-r from-border to-transparent" />
+      <div className="grid gap-10 lg:grid-cols-[320px_minmax(0,1fr)]">
+        <div>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary/70">
+            {t('about.eyebrow')}
+          </p>
+          <h2 className="text-3xl font-bold leading-tight text-text md:text-4xl text-balance">
+            {t('about.title')}
+          </h2>
         </div>
-      </div>
 
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1.15fr)_360px]">
-        <div className="space-y-4">
-          <p className="text-base leading-8 text-text/90 md:text-lg">
+        <div className="space-y-6">
+          <p className="text-xl leading-9 text-text md:text-2xl">
             {t('about.description1')}
           </p>
-          <p className="text-sm leading-7 text-muted md:text-base">
+          <p className="max-w-3xl text-sm leading-7 text-muted md:text-base">
             {t('about.description2')}
           </p>
         </div>
+      </div>
 
-        <aside className="rounded-[28px] border border-border bg-white px-6 py-6 shadow-sm">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70">
+      <div className="mt-12 grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px]">
+        <div className="divide-y divide-border border-y border-border">
+          {pillars.map((pillar) => (
+            <div
+              key={pillar.title}
+              className="grid gap-3 py-5 md:grid-cols-[180px_minmax(0,1fr)]"
+            >
+              <p className="text-sm font-semibold text-primary">{pillar.title}</p>
+              <p className="text-sm leading-7 text-muted">{pillar.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <aside className="border-l border-border pl-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary/70">
             {t('about.collaborationTitle')}
           </p>
-          <div className="mt-4 space-y-3">
+          <div className="mt-5 space-y-4">
             {collaborationItems.map((item) => (
-              <div
-                key={item}
-                className="flex items-start gap-3 rounded-2xl border border-border bg-background px-4 py-3"
-              >
+              <div key={item} className="flex items-start gap-3">
                 <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <p className="text-sm leading-relaxed text-text">{item}</p>
               </div>
             ))}
           </div>
         </aside>
-      </div>
-
-      <div className="mt-8 grid gap-4 md:grid-cols-3">
-        {pillars.map((pillar) => (
-          <div
-            key={pillar.title}
-            className="rounded-[24px] border border-border bg-white px-5 py-5 shadow-sm"
-          >
-            <p className="text-sm font-semibold text-text">{pillar.title}</p>
-            <p className="mt-2 text-sm leading-7 text-muted">{pillar.description}</p>
-          </div>
-        ))}
       </div>
     </section>
   );

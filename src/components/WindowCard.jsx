@@ -12,7 +12,7 @@ const WindowCard = ({ title, type, date, authors, children, onClick, className =
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className={`group flex flex-col overflow-hidden rounded-xl border border-border bg-surface transition-all hover:border-primary hover:shadow-md ${onClick ? 'cursor-pointer text-left' : ''} ${className}`}
+            className={`group flex flex-col overflow-hidden rounded-xl border border-border bg-surface transition-[border-color,box-shadow] hover:border-primary hover:shadow-md ${onClick ? 'cursor-pointer text-left' : ''} ${className}`}
             onClick={onClick}
             type={onClick ? 'button' : undefined}
         >

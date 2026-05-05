@@ -16,13 +16,22 @@ const Skills = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="py-16">
-            <div className="flex items-center gap-4 mb-10">
-                <h2 className="text-3xl font-bold text-text">{t('skills.title')}</h2>
-                <div className="h-px flex-grow bg-gradient-to-r from-border to-transparent" />
+        <section id="capabilities" className="scroll-mt-28 border-t border-border py-16">
+            <div className="grid gap-10 lg:grid-cols-[320px_minmax(0,1fr)]">
+                <div>
+                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary/70">
+                        {t('skills.eyebrow')}
+                    </p>
+                    <h2 className="text-3xl font-bold leading-tight text-text md:text-4xl text-balance">
+                        {t('skills.title')}
+                    </h2>
+                </div>
+                <p className="max-w-3xl text-base leading-8 text-muted md:text-lg">
+                    {t('skills.intro')}
+                </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="mt-10 divide-y divide-border border-y border-border">
                 {skillDetails.map(({ Icon: SkillIcon, key }, index) => (
                     <Motion.div
                         key={key}
@@ -30,15 +39,13 @@ const Skills = () => {
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: index * 0.07 }}
-                        className="flex items-start gap-4 p-5 bg-surface border border-border rounded-xl hover:border-primary transition-colors"
+                        className="grid gap-4 py-5 md:grid-cols-[48px_220px_minmax(0,1fr)] md:items-start"
                     >
-                        <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-accent-bg flex items-center justify-center">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-white">
                             {React.createElement(SkillIcon, { size: 20, className: 'text-primary', strokeWidth: 1.5 })}
                         </div>
-                        <div>
-                            <p className="font-semibold text-text text-sm">{t(`skills.items.${key}`)}</p>
-                            <p className="text-xs text-muted mt-0.5 leading-relaxed">{t(`skills.descriptions.${key}`)}</p>
-                        </div>
+                        <p className="font-semibold text-text">{t(`skills.items.${key}`)}</p>
+                        <p className="text-sm text-muted leading-7">{t(`skills.descriptions.${key}`)}</p>
                     </Motion.div>
                 ))}
             </div>

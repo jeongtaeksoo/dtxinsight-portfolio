@@ -11,7 +11,7 @@ const Contact = () => {
             <div className="max-w-[1200px] mx-auto px-4 py-20">
                 <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_1.05fr] lg:gap-12">
                     <div className="text-center md:text-left">
-                        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-primary/70">
+                        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-primary/70">
                             {t('contact.eyebrow')}
                         </p>
                         <h2 className="text-3xl font-bold text-text mb-4 text-balance">{t('contact.title')}</h2>
@@ -22,7 +22,7 @@ const Contact = () => {
                         <div className="mt-8 flex flex-wrap justify-center gap-3 md:justify-start">
                             <a
                                 href="mailto:jeongtaeksoo8@gmail.com"
-                                className="inline-flex items-center gap-2.5 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary/90"
+                                className="inline-flex items-center gap-2.5 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4"
                             >
                                 <GmailIcon size={17} />
                                 {t('contact.primaryCta')}
@@ -31,7 +31,7 @@ const Contact = () => {
                                 href="https://www.linkedin.com/in/taeksoo-jeong-20685b296/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2.5 rounded-xl border border-border bg-white px-5 py-3 text-sm font-semibold text-text transition-colors hover:border-primary hover:text-primary"
+                                className="inline-flex items-center gap-2.5 rounded-full border border-border bg-white px-5 py-3 text-sm font-semibold text-text transition-colors hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4"
                             >
                                 <LinkedInIcon size={17} />
                                 {t('contact.secondaryCta')}
@@ -40,7 +40,7 @@ const Contact = () => {
                                 href="https://calendly.com/jeongtaeksoo8/30min"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center rounded-xl border border-primary/30 bg-primary/5 px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+                                className="inline-flex items-center rounded-full border border-primary/30 bg-primary/5 px-5 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4"
                             >
                                 {t('contact.tertiaryCta')}
                             </a>
@@ -51,7 +51,7 @@ const Contact = () => {
                         {collaborationItems.map((item) => (
                             <div
                                 key={item.title}
-                                className="rounded-[24px] border border-border bg-white px-5 py-5 shadow-sm"
+                                className="border-t border-border px-1 py-5"
                             >
                                 <p className="text-sm font-semibold text-text">{item.title}</p>
                                 <p className="mt-2 text-sm leading-7 text-muted">{item.description}</p>

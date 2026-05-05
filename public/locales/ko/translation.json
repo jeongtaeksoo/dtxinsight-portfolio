@@ -4,13 +4,14 @@
     },
     "nav": {
         "about": "소개",
-        "research": "연구",
-        "innovation": "혁신",
+        "research": "연구실적",
+        "innovation": "사례",
         "publications": "논문",
-        "contact": "연락처",
-        "blog": "Blog",
+        "contact": "커피챗",
+        "blog": "글",
         "highlights": "주요 성과",
-        "projects": "프로젝트"
+        "projects": "프로젝트",
+        "capabilities": "역량"
     },
     "hero": {
         "name": "정택수",
@@ -19,31 +20,48 @@
         "affiliationCurrentMeta": "",
         "affiliationCurrentNote": "한길안과병원 · Lux mind(겸직)",
         "affiliationPrevious": "前 가톨릭관동대학교 국제성모병원 재활의학과 연구원",
-        "eyebrow": "Clinical Research × Digital Health",
-        "tagline": "임상 운영 기반 디지털 헬스 실증",
-        "summary": "다기관 임상시험 운영 경험을 바탕으로, 병원 현장과 연구 설계, 데이터 운영을 한 흐름으로 묶어 실제로 작동하는 디지털 헬스 프로젝트를 설계하고 조율합니다.",
+        "eyebrow": "Research Editorial Portfolio",
+        "tagline": "임상 연구 운영과 디지털 헬스 제품화 사이를 연결합니다",
+        "summary": "병원 현장, 연구 프로토콜, 데이터 흐름, AI 프로토타입을 한 흐름으로 묶어 협업 파트너가 실제로 검증 가능한 디지털 헬스 프로젝트를 만들도록 돕습니다.",
+        "identityLine": "간호사 면허 · 임상 연구 운영자 · AI 디지털헬스 빌더",
         "focusItems": [
-            "다기관 RCT 운영",
-            "디지털 헬스 실증 설계",
-            "AI 프로토타이핑"
+            "임상 운영 언어",
+            "제품 실행 구조",
+            "AI 검증 흐름"
         ],
-        "primaryCta": "대표 혁신 보기",
-        "secondaryCta": "협업 문의",
-        "profileLabel": "Profile",
-        "orcidCta": "ORCID 프로필",
+        "topicTags": [
+            "#임상운영",
+            "#다기관RCT",
+            "#디지털헬스",
+            "#헬스케어AI",
+            "#AI프로토타이핑"
+        ],
+        "primaryCta": "대표 사례 보기",
+        "secondaryCta": "커피챗",
+        "profileLabel": "현재 소속",
+        "orcidCta": "ORCID",
         "stats": [
             {
-                "value": "3.9억 KRW",
-                "label": "다기관 R&D 운영 규모"
+                "value": "2건",
+                "label": "CRIS 등록 RCT 운영"
             },
             {
                 "value": "5편",
-                "label": "SCI·ESCI·KCI 논문(투고 포함)"
+                "label": "SCI·ESCI·KCI 논문 산출물"
             },
             {
-                "value": "RCT",
-                "label": "무작위 대조 임상시험 운영"
+                "value": "CTC",
+                "label": "AI 인지중재 프레임워크"
             }
+        ],
+        "romanizedName": "Taeksoo Jeong",
+        "role": "Clinical Research × AI Digital Health",
+        "audience": "병원·연구자, 디지털헬스 제품팀, 헬스케어 AI 초기팀을 위한 임상 실증/운영 파트너",
+        "proofLabel": "근거 스냅샷",
+        "proofItems": [
+            "다기관 RCT 운영 경험",
+            "고령자 AI 인지중재 프레임워크",
+            "논문·포스터 기반 연구 커뮤니케이션"
         ]
     },
     "timeline": {
@@ -112,26 +130,26 @@
     },
     "about": {
         "eyebrow": "Positioning",
-        "title": "임상과 제품 사이의 실행 구조를 설계하고 조율합니다",
-        "description1": "저는 임상시험 운영, 디지털 헬스 실증, 생성형 AI 기반 프로토타이핑이 따로 움직이지 않아야 한다고 봅니다. 좋은 아이디어보다 중요한 것은 병원 현장과 연구 설계, 데이터 흐름, 사용자 경험이 실제로 맞물리게 만드는 일입니다.",
-        "description2": "간호학 배경과 CRC 경험을 바탕으로 연구 프로토콜과 현장 운영을 이해하고, 동시에 AI 기반 도구를 빠르게 검증 가능한 형태로 옮기는 데 강점이 있습니다. 그래서 연구자와 병원, 제품팀 사이의 번역 작업이 필요한 프로젝트에 특히 잘 맞습니다.",
-        "collaborationTitle": "이런 협업에 강합니다",
+        "title": "연구자와 제품팀 사이에서 실행 가능한 구조를 만듭니다",
+        "description1": "좋은 디지털 헬스 아이디어도 병원 현장, 연구 설계, 데이터 수집, 사용자 흐름이 맞물리지 않으면 검증되기 어렵습니다. 저는 그 사이의 실행 구조를 설계하고 조율하는 역할에 집중합니다.",
+        "description2": "간호학 배경과 CRC 경험을 바탕으로 프로토콜 중심 연구 운영을 이해하고, 동시에 AI 기반 도구를 빠르게 검토 가능한 화면과 워크플로로 옮깁니다.",
+        "collaborationTitle": "함께 만들기 좋은 일",
         "collaborationItems": [
             "병원 실증과 연구 설계를 함께 잡아야 하는 디지털 헬스 프로젝트",
             "임상 운영 언어와 제품 언어를 함께 이해하는 파트너가 필요한 팀",
-            "AI 기능을 의료 현장에 맞게 빠르게 검증하고 싶은 초기 단계 프로젝트"
+            "생성형 AI 기능을 의료 현장 맥락에 맞게 빠르게 검증하고 싶은 초기 단계 프로젝트"
         ],
         "pillars": [
             {
-                "title": "임상시험 운영",
+                "title": "Clinical operations",
                 "description": "다기관 RCT, 연구자 커뮤니케이션, 일정·문서·데이터 흐름을 안정적으로 관리합니다."
             },
             {
-                "title": "디지털 헬스 실증 설계",
+                "title": "Validation design",
                 "description": "연구 질문과 현장 제약을 함께 고려해 실증사업과 파일럿 구조를 설계합니다."
             },
             {
-                "title": "AI 프로토타이핑",
+                "title": "AI prototyping",
                 "description": "아이디어 수준의 기능을 빠르게 검증 가능한 화면과 워크플로로 옮깁니다."
             }
         ]
@@ -157,52 +175,80 @@
         ]
     },
     "research": {
-        "title": "연구 하이라이트",
-        "intro": "",
+        "title": "연구실적",
+        "intro": "임상 효과성 검증, 다기관 운영, 정책 이해관계자 커뮤니케이션을 별도 실적으로 정리했습니다.",
         "featuredLabel": "대표 연구 2건",
         "policyLabel": "정책·실증 커뮤니케이션",
         "projects": [
             {
+                "year": "2024-2025",
                 "title": "무작위 대조 임상시험 (MCI)",
-                "category": "임상 효과성 검증&운영",
-                "description": "경도인지장애(MCI) 노인 대상 Zenicog® 인지재활 프로그램의 효과 검증을 위한 무작위 대조 연구(RCT) (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
+                "category": "임상 효과성 검증·운영",
+                "role": "CRC / 연구 운영",
+                "description": "경도인지장애(MCI) 노인 대상 Zenicog® 인지재활 프로그램의 효과 검증 RCT 운영.",
+                "evidenceLabel": "CRIS",
+                "evidenceLink": "https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L",
+                "proof": "다기관 R&D 운영 규모 3.9억 KRW 중 핵심 연구 트랙"
             },
             {
+                "year": "2024-2025",
                 "title": "다기관 무작위 대조 임상시험 (Stroke)",
-                "category": "임상 효과성 검증&운영",
-                "description": "아급성기 뇌졸중 환자 대상 Zenicog® 인지재활 프로그램의 효과 검증을 위한 무작위 대조 연구(RCT) (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
+                "category": "다기관 임상 운영",
+                "role": "CRC / 다기관 조율",
+                "description": "아급성기 뇌졸중 환자 대상 Zenicog® 인지재활 프로그램의 효과 검증 RCT 운영.",
+                "evidenceLabel": "CRIS",
+                "evidenceLink": "https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L",
+                "proof": "무작위 대조 임상시험 운영 및 연구자 커뮤니케이션"
             },
             {
+                "year": "2024",
                 "title": "정부 디지털 헬스케어 실증사업 발표",
-                "category": "규제·정책 대응",
-                "description": "보건복지부와 한국보건산업진흥원 관계자가 참여한 실증사업 중간보고 Q&A 세션을 주도하였습니다."
+                "category": "정책·실증 커뮤니케이션",
+                "role": "중간보고 Q&A 주도",
+                "description": "보건복지부와 한국보건산업진흥원 관계자가 참여한 실증사업 중간보고 Q&A 세션 주도.",
+                "evidenceLabel": "",
+                "evidenceLink": "",
+                "proof": "정부·기관 이해관계자 대상 실증 맥락 설명"
             }
-        ]
+        ],
+        "eyebrow": "연구 실적",
+        "metaLabels": {
+            "year": "기간",
+            "role": "역할",
+            "evidence": "근거"
+        },
+        "evidenceCta": "근거 보기"
     },
     "innovation": {
-        "label": "Featured Project",
-        "title": "휘와수: 생성형 AI 기반 인지 중재 프레임워크",
-        "description": "휘와수는 고령자의 인지 저하와 디지털 배제를 줄이기 위해 시작한 프로젝트입니다. Coach-Teacher-Companion 3중 에이전트 구조를 통해 일상 속에서 자연스럽게 이어지는 인지 훈련 경험을 설계하고, 연구에서 실사용으로 이어질 수 있는 인지 중재 흐름을 구체화하는 데 초점을 둡니다.",
+        "label": "대표 사례",
+        "title": "휘와수: 고령자 인지중재를 위한 생성형 AI 구조화",
+        "description": "휘와수는 고령자의 인지 저하와 디지털 배제를 줄이기 위해 시작한 대표 사례입니다. Coach-Teacher-Companion 3중 에이전트 구조로 일상 속 인지 훈련 경험을 설계하고, 연구 프로토콜과 실제 사용 흐름을 함께 고려했습니다.",
         "featureTitles": [
-            "운영 구조",
-            "상호작용 설계",
-            "임상 적용성"
+            "Coach",
+            "Teacher",
+            "Companion"
         ],
         "features": [
-            "Coach-Teacher-Companion 3중 에이전트로 역할을 분리해 개입 흐름을 설계합니다.",
-            "일상 맥락에 따라 난이도와 개입 방식을 조정하는 Context-Adaptive Cognitive Flow를 구현합니다.",
-            "고령자 친화적 인터페이스와 임상 적용 프로토콜을 함께 고려합니다."
+            "목표와 난이도를 조율하는 운영 레이어",
+            "훈련 과제를 설명하고 학습 흐름을 유지하는 교육 레이어",
+            "정서적 지속성과 일상 맥락을 보조하는 동반 레이어"
         ],
-        "proofTitle": "이 프로젝트가 보여주는 것",
+        "proofTitle": "사례 근거",
         "proofItems": [
-            "연구 아이디어를 실제 사용 흐름으로 구체화해온 과정",
-            "생성형 AI를 단순 챗봇이 아니라 인지 중재 구조로 풀어낸 시도",
-            "헬스케어 연구, 제품 사고, 현장 이해를 한 프로젝트 안에서 조율한 경험"
+            "고령자 친화적 인터페이스와 임상 적용 프로토콜을 함께 고려",
+            "Hokkaido University 연구자와 공동 창시한 프레임워크",
+            "MDPI Healthcare 공동 제1저자 논문으로 정리"
         ],
-        "cta": "프로젝트 보기"
+        "cta": "프로젝트 보기",
+        "problemLabel": "문제 정의",
+        "problem": "고령자 인지중재는 지속성, 기술 불안, 디지털 접근성 문제를 함께 해결해야 합니다.",
+        "roleLabel": "나의 역할",
+        "role": "임상 프로토콜 관점과 AI 프로토타이핑 관점을 연결해 개입 구조와 검증 흐름을 정리했습니다.",
+        "outcomeLabel": "산출물",
+        "outcome": "공동 제1저자 논문과 함께, 생성형 AI를 단순 챗봇이 아닌 인지중재 구조로 설명하는 프레임워크를 제안했습니다."
     },
     "publications": {
-        "title": "주요 논문",
+        "title": "논문",
         "journalPapers": "논문 5편",
         "posterTitle": "포스터 기록",
         "linkAvailable": "링크 보기",
@@ -211,13 +257,13 @@
         "coreSummary": "핵심 요약",
         "closeBtn": "닫기",
         "summaryComingSoon": "요약 준비 중입니다.",
-        "summaryEyebrow": "Research Focus",
+        "summaryEyebrow": "Publication index",
         "summaryHighlights": [
-            "임상 운영 기반 개입 설계",
-            "생성형 AI 인지중재 구조화",
-            "사용성 검증까지 포함한 디지털 헬스 설계"
+            "SCI·ESCI·KCI 논문 5편",
+            "공동 제1저자 1편",
+            "RCT 및 AI 인지재활 연구 중심"
         ],
-        "summaryStatLine": "5편 논문 · 2건 RCT · 3개 축 통합 경험",
+        "summaryStatLine": "5편 논문 · 3건 포스터 · 임상 운영 기반 연구 산출물",
         "viewAllCta": "전체 논문 보기",
         "morePapersHint": "추가 {{count}}편은 전체 목록에서 확인할 수 있습니다",
         "fullListLabel": "아카이브",
@@ -261,7 +307,8 @@
                 "status": "게재 완료",
                 "doi": "https://doi.org/10.3389/fneur.2025.1636017",
                 "summary": "최근 다기관 무작위대조시험에서 AI 기반 인지 텔레리해빌리테이션이 전통적 치료사 감독 인지재활과 동일한 효과를 보였습니다.\n\n급성기 이후(6개월 이내) 뇌졸중 환자 63명을 두 군으로 무작위 배정해 6주간 총 24회 세션을 수행했고, 주요 인지 지표(K-MMSE2, TMT, Digit Span) 모두 유의한 향상을 보였습니다.\n\n비감독형 **AI 자가운영 텔레리해빌리테이션은 전통적 치료사 주도군 대비 비열등성(non-inferiority)**이 입증되었으며, 사용성 만족도도 높게 나타났습니다.\n\n이 결과는 실시간 개인화 및 원격 모니터링이 가능한 AI 인지재활 플랫폼이 기존 치료와 동일 수준의 임상적 가치를 가진다는 근거를 제시합니다.",
-                "authors": "Suebeen Kim, Si-Woon Park, <b>Taeksoo Jeong</b>, Min-Soo Kang, Doo Young Kim*"
+                "authors": "Suebeen Kim, Si-Woon Park, <b>Taeksoo Jeong</b>, Min-Soo Kang, Doo Young Kim*",
+                "statusKey": "published"
             },
             {
                 "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
@@ -271,7 +318,8 @@
                 "status": "게재 완료",
                 "doi": "https://www.mdpi.com/2227-9032/13/24/3225",
                 "summary": "디지털 소외(digital exclusion)와 기술 불안으로 인해 고령층 인지중재의 실제 적용에는 여전히 높은 진입 장벽이 존재합니다. 본 연구는 이러한 한계를 해결하기 위해 Coach–Teacher–Companion(CTC) 구조의 다중 에이전트 생성형 AI 프레임워크를 제안하는 임상 프로토콜 논문입니다.\n\n본 프레임워크는 일상생활에 자연스럽게 인지 훈련을 통합하고, 적응형 난이도 조절과 정서 모니터링을 통해 인지·행동·정서 지원을 동시에 제공하도록 설계되었습니다. 특히 디지털 리터러시(MDPQ-16), 기술 불안(CARS), 정서 안전성(PANAS) 평가를 포함한 임상 적용을 위한 방법론적·윤리적 안전장치를 체계적으로 제시합니다.\n\n6주간의 파일럿 타당성 연구 프로토콜(n=14)을 통해 **사용성(SUS), 사용자 경험(UEQ-S), 순응도, 정서 안정성, 주요 인지 지표(MMSE, TMT, Digit Span)**를 평가하도록 설계되었으며, 본 연구는 고령층 대상 생성형 AI 기반 인지중재의 임상 적용 가능성을 구조적으로 제시하는 초기 근거를 제공합니다.",
-                "authors": "<b>Taeksoo Jeong</b><sup>†</sup>, Geonhwi Hwang<sup>†</sup>, Doo Young Kim*"
+                "authors": "<b>Taeksoo Jeong</b><sup>†</sup>, Geonhwi Hwang<sup>†</sup>, Doo Young Kim*",
+                "statusKey": "published"
             },
             {
                 "title": "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
@@ -281,7 +329,8 @@
                 "status": "게재 완료",
                 "doi": "https://doi.org/10.5535/arm.250060",
                 "summary": "AI 기반 모바일 인지 텔레리해빌리테이션의 임상적 적용 가능성과 사용성을 평가한 예비 연구입니다. 뇌졸중 환자 및 경도인지장애(MCI) 고령자 13명을 대상으로 6주간 총 24회 세션의 AI 자가운영 인지재활 프로그램을 적용했습니다.\n\nMMSE 점수는 중재 전 대비 유의하게 향상되었으며, Digit Span과 Trail Making Test에서도 전반적인 개선 경향을 보였습니다. 전체 사용성 평가에서 제품 품질과 만족도는 높은 수준을 기록했으나, 오류 허용성(tolerance for error) 영역은 상대적으로 낮아 고령자 및 디지털 취약계층을 고려한 UI/UX 개선 필요성이 확인되었습니다.\n\n본 연구는 치료사 상시 개입 없이도 수행 가능한 AI 기반 인지 텔레리해빌리테이션이 실제 임상 환경에서 안전하고 실현 가능하며, 인지 기능 개선에 잠재적 효과를 가질 수 있음을 보여줍니다. 특히 디지털 치료제 및 원격 재활이 확대되는 흐름 속에서, 사용성 중심 설계의 중요성을 함께 제시한 연구라는 점에서 의미가 있습니다.",
-                "authors": "Suebeen Kim, Doo Young Kim, Si-Woon Park*, Namo Jeon, <b>Taeksoo Jeong</b>, Min-Soo Kang, Sangwook Park"
+                "authors": "Suebeen Kim, Doo Young Kim, Si-Woon Park*, Namo Jeon, <b>Taeksoo Jeong</b>, Min-Soo Kang, Sangwook Park",
+                "statusKey": "published"
             },
             {
                 "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults With Mild Cognitive Impairment: A Pilot Study",
@@ -291,7 +340,8 @@
                 "status": "게재 완료",
                 "doi": "https://doi.org/10.12786/bn.2026.19.e2",
                 "summary": "본 연구는 경도인지장애(MCI) 고령자를 대상으로 중추 콜린성 기능의 지표인 단기구심성억제(SAI)와 인지 기능 간의 연관성을 탐색한 예비 연구입니다.\n\n총 57명의 MCI 환자를 대상으로 SAI와 주요 인지 지표(MMSE, Digit Span, TMT)를 비교 분석한 결과, SAI 값과 특정 인지 영역 간의 유의미한 통계적 상관관계나 연령에 따른 SAI의 차이는 관찰되지 않았습니다.\n\n하지만 흥미롭게도 인지 기능 점수가 유사함에도 불구하고 전체 참가자의 21%에서 SAI 손상이 확인되었습니다. 이는 향후 측정 가능한 인지 저하가 나타나기 이전에 발생하는 조기 신경생리학적 변화(콜린성 기능 장애)를 SAI가 반영할 가능성을 시사합니다. 이를 통해 SAI가 치매 전임상 단계에서 인지적 취약성을 평가하는 객관적 바이오마커로 활용될 잠재력을 확인하였습니다.",
-                "authors": "Suebeen Kim, <b>Taeksoo Jeong</b>, Sangwook Park, Doo Young Kim*"
+                "authors": "Suebeen Kim, <b>Taeksoo Jeong</b>, Sangwook Park, Doo Young Kim*",
+                "statusKey": "published"
             },
             {
                 "title": "AI-Driven Telerehabilitation for Older Adults with Mild Cognitive Impairment: A Randomized Controlled Trial",
@@ -301,12 +351,16 @@
                 "status": "게재 완료",
                 "doi": "https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1813694/full",
                 "summary": "본 무작위대조 임상시험은 경도인지장애(MCI) 고령자를 대상으로, AI 기반 자가주도형 재택 인지재활 프로그램 Zenicog®의 임상 효과를 평가한 연구입니다. 고령화로 인해 접근 가능한 인지중재의 필요성이 커지는 상황에서, 기존 대면 치료의 물리적 제약을 줄일 수 있는 대안으로 설계되었습니다.\n\n총 70명이 등록되었고 최종 분석에는 62명이 포함되었습니다. 연구는 지연치료형 평행 무작위 배정과 탐색적 교차 설계로 진행되었으며, 중재군은 5주 동안 총 24회의 홈 프로그램을 수행했습니다. 1차 평가지표인 K-MMSE2에서 중재군은 대조군보다 유의하게 높은 점수(중앙값 28.0 vs. 26.0, p < 0.001)를 보였고, K-MMSE2 27점 이상 기준의 임상적 성공률도 93.9% 대 0%로 확인되었습니다.\n\n반면 Digit Span, TMT 등 세부 인지영역 검사에서는 유의한 차이가 없었습니다. 그럼에도 사용성·만족도는 4.5/5 이상으로 높았고 이상반응으로 인한 중도탈락은 없었습니다. 이는 최소한의 감독만으로도 AI 기반 원격 인지재활이 MCI 환자의 전반적 인지기능 개선에 실현 가능하고 확장 가능한 전략이 될 수 있음을 시사합니다.",
-                "authors": "Minsong Kim, Doo Young Kim, <b>Taeksoo Jeong</b>, Si-Woon Park*"
+                "authors": "Minsong Kim, Doo Young Kim, <b>Taeksoo Jeong</b>, Si-Woon Park*",
+                "statusKey": "published"
             }
-        ]
+        ],
+        "eyebrow": "학술 산출물",
+        "detailsCta": "상세 보기",
+        "doiCta": "DOI"
     },
     "skills": {
-        "title": "협업에 필요한 역량",
+        "title": "협업에 가져갈 수 있는 실행 역량",
         "items": {
             "clinical": "다기관 임상 운영",
             "vibecording": "AI 프로토타이핑",
@@ -322,12 +376,14 @@
             "design": "실증사업, 파일럿, 임상 적용을 고려한 연구 구조 설계",
             "comm": "논문, 초록, 발표 자료로 결과를 명확하게 정리",
             "ai": "생성형 AI를 의료 현장에 맞는 형태로 검증하고 구체화"
-        }
+        },
+        "eyebrow": "Collaboration Capabilities",
+        "intro": "단순한 스킬 목록이 아니라, 병원 실증과 제품 실행 사이에서 실제로 맡을 수 있는 역할입니다."
     },
     "blogSection": {
-        "label": "Blog",
+        "label": "Writing",
         "recentPosts": "최근 글",
-        "viewSection": "블로그 섹션 보기",
+        "viewSection": "글 섹션 보기",
         "allPosts": "전체 글 목록",
         "viewPost": "글 보기",
         "backToList": "전체 글 목록",
@@ -340,12 +396,12 @@
         "postFallback": "Post"
     },
     "contact": {
-        "eyebrow": "Collaboration",
-        "title": "편하게 이야기 나눠보세요",
-        "subtitle": "디지털 헬스, 임상 연구, AI 활용처럼 함께 고민해볼 주제가 있다면 가볍게 연락 주셔도 좋습니다. 아이디어를 정리하는 단계의 대화도 괜찮습니다.",
+        "eyebrow": "커피챗",
+        "title": "가볍게 커피챗으로 이야기 나눠보세요",
+        "subtitle": "디지털 헬스, 임상 연구, AI 활용처럼 함께 고민해볼 주제가 있다면 편하게 연락 주세요. 아이디어를 정리하는 단계의 대화도 괜찮습니다.",
         "primaryCta": "이메일 보내기",
         "secondaryCta": "LinkedIn에서 연결하기",
-        "tertiaryCta": "커피챗하기",
+        "tertiaryCta": "커피챗 제안하기",
         "collaborationItems": [
             {
                 "title": "병원 실증",
@@ -364,5 +420,9 @@
             "rights": "© 2026 DTX Insight. All rights reserved.",
             "tagline": "Clinical Research × Digital Health Execution"
         }
+    },
+    "meta": {
+        "title": "정택수 - DTX Insight",
+        "description": "임상 연구 운영과 디지털 헬스, AI 프로토타이핑 사이를 연결하는 정택수의 연구자 포트폴리오입니다."
     }
 }

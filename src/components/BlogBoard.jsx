@@ -298,7 +298,7 @@ const BlogBoard = () => {
         </button>
 
         <div className="mb-5 flex flex-wrap items-center gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary/70">
             {t('blogSection.label')}
           </p>
           {keywords.map((keyword) => (
@@ -319,7 +319,11 @@ const BlogBoard = () => {
             <img
               src={post.heroImage.src}
               alt={post.heroImage.alt}
+              width="1200"
+              height="675"
               loading="lazy"
+              decoding="async"
+              sizes="(max-width: 768px) 100vw, 768px"
               className="w-full rounded-3xl object-cover shadow-sm"
             />
             {post.heroImage.caption && (
@@ -385,7 +389,7 @@ const BlogBoard = () => {
                 key={post.slug}
                 type="button"
                 onClick={() => openPost(post)}
-                className="group w-full rounded-2xl border border-border bg-background px-5 py-5 text-left transition-all hover:border-primary/50 hover:bg-white"
+                className="group w-full rounded-2xl border border-border bg-background px-5 py-5 text-left transition-[background-color,border-color] hover:border-primary/50 hover:bg-white"
               >
                 <div className="flex flex-wrap items-start gap-3">
                   <div>
@@ -426,7 +430,7 @@ const BlogBoard = () => {
       <div className="flex h-full flex-col">
         <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-primary/70">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary/70">
               {t('blogSection.label')}
             </p>
             <h3 className="text-2xl font-bold text-text">{t('blogSection.recentPosts')}</h3>
@@ -458,22 +462,29 @@ const BlogBoard = () => {
             <div className="flex min-w-max snap-x gap-4 pr-4">
               {previewRailPosts.map((post, index) => {
                 const keywords = getPostKeywords(post);
+                const isDuplicate = index >= previewPosts.length;
 
                 return (
                   <button
                     key={`${post.slug}-${index}`}
                     type="button"
                     onClick={() => openPost(post)}
-                    className="group relative aspect-square w-[208px] shrink-0 snap-start overflow-hidden rounded-[28px] border border-border bg-white text-left shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md sm:w-[220px] md:w-[228px]"
+                    aria-hidden={isDuplicate ? 'true' : undefined}
+                    tabIndex={isDuplicate ? -1 : undefined}
+                    className="group relative aspect-square w-[208px] shrink-0 snap-start overflow-hidden rounded-[28px] border border-border bg-white text-left shadow-sm transition-[transform,border-color,box-shadow] hover:-translate-y-0.5 hover:border-primary/50 hover:shadow-md sm:w-[220px] md:w-[228px]"
                     style={{ marginLeft: index === 0 ? 0 : (index % previewPosts.length) * 6 }}
                   >
                     {post.heroImage && (
-                      <img
-                        src={post.heroImage.src}
-                        alt={post.heroImage.alt}
-                        loading="lazy"
-                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                      />
+	                      <img
+	                        src={post.heroImage.src}
+	                        alt={post.heroImage.alt}
+                          width="456"
+                          height="456"
+	                        loading="lazy"
+                          decoding="async"
+                          sizes="228px"
+	                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+	                      />
                     )}
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/5" />
@@ -518,7 +529,7 @@ const BlogBoard = () => {
         bodyClassName="custom-scrollbar flex-1 overflow-y-auto px-5 py-6 md:px-7 md:py-8"
         header={(
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary/70">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary/70">
               {t('blogSection.label')}
             </p>
             <h3 id={dialogTitleId} className="mt-2 text-xl font-bold text-text md:text-2xl">

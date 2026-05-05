@@ -4,13 +4,14 @@
     },
     "nav": {
         "about": "About",
-        "research": "Research",
-        "innovation": "Innovation",
+        "research": "Projects",
+        "innovation": "Case",
         "publications": "Publications",
-        "contact": "Contact",
-        "blog": "Blog",
+        "contact": "Coffee Chat",
+        "blog": "Writing",
         "highlights": "Highlights",
-        "projects": "Projects"
+        "projects": "Projects",
+        "capabilities": "Capabilities"
     },
     "hero": {
         "name": "Taeksoo Jeong",
@@ -19,31 +20,48 @@
         "affiliationCurrentMeta": "",
         "affiliationCurrentNote": "Hangil Eye Hospital · Lux mind (Concurrent Role)",
         "affiliationPrevious": "Former Research Associate, Dept. of Rehabilitation Medicine, International St. Mary's Hospital, Catholic Kwandong University",
-        "eyebrow": "Clinical Research × Digital Health",
-        "tagline": "Digital health validation grounded in clinical operations",
-        "summary": "Drawing on multicenter clinical trial operations, I align hospital reality, study design, and data flow into digital health projects that can actually be tested, operated, and improved in the field.",
+        "eyebrow": "Research Editorial Portfolio",
+        "tagline": "I connect clinical research operations with digital health productization",
+        "summary": "I help collaboration partners shape digital health projects that can be tested in real clinical settings by aligning hospital workflows, research protocols, data flow, and AI prototypes.",
+        "identityLine": "Registered Nurse · Clinical Research Operator · AI Digital Health Builder",
         "focusItems": [
-            "Multi-center RCT operations",
-            "Digital health validation design",
-            "AI prototyping"
+            "Clinical operations language",
+            "Product execution structure",
+            "AI validation flow"
         ],
-        "primaryCta": "See Featured Work",
-        "secondaryCta": "Start a Conversation",
-        "profileLabel": "Profile",
-        "orcidCta": "ORCID Profile",
+        "topicTags": [
+            "#ClinicalOperations",
+            "#MulticenterRCT",
+            "#DigitalHealth",
+            "#HealthcareAI",
+            "#AIPrototyping"
+        ],
+        "primaryCta": "See featured case",
+        "secondaryCta": "Coffee Chat",
+        "profileLabel": "Current affiliation",
+        "orcidCta": "ORCID",
         "stats": [
             {
-                "value": "390M KRW",
-                "label": "Multi-center R&D operations managed"
+                "value": "2",
+                "label": "CRIS-registered RCT operations"
             },
             {
                 "value": "5",
-                "label": "SCI/ESCI/KCI papers including submissions"
+                "label": "SCI/ESCI/KCI paper outputs"
             },
             {
-                "value": "RCT",
-                "label": "Randomized controlled trials operated"
+                "value": "CTC",
+                "label": "AI cognitive intervention framework"
             }
+        ],
+        "romanizedName": "정택수",
+        "role": "Clinical Research × AI Digital Health",
+        "audience": "A clinical validation and operations partner for hospitals, researchers, digital health product teams, and early healthcare AI teams",
+        "proofLabel": "Evidence snapshot",
+        "proofItems": [
+            "Multi-center RCT operations",
+            "AI cognitive intervention framework for older adults",
+            "Research communication through papers and posters"
         ]
     },
     "timeline": {
@@ -112,27 +130,27 @@
     },
     "about": {
         "eyebrow": "Positioning",
-        "title": "I design and coordinate the execution layer between clinical work and product work",
-        "description1": "Clinical trial operations, digital health validation, and AI prototyping should not move in separate lanes. The real work is making hospital reality, study design, data flow, and user experience fit into one working structure.",
-        "description2": "With a nursing background and CRC experience, I understand protocol-driven research and on-site clinical operations while also moving quickly from idea to testable workflow. That makes me especially useful on projects that need translation between researchers, hospitals, and product teams.",
-        "collaborationTitle": "Strong fit for collaborations like these",
+        "title": "I build executable structures between researchers and product teams",
+        "description1": "Good digital health ideas are hard to validate unless hospital reality, study design, data capture, and user flow move together. My work focuses on designing and coordinating that execution layer.",
+        "description2": "With a nursing background and CRC experience, I understand protocol-driven research operations while also turning AI tool ideas into reviewable screens and workflows quickly.",
+        "collaborationTitle": "Best-fit collaborations",
         "collaborationItems": [
-            "Digital health projects that need both hospital validation and research design",
-            "Teams that need one partner who can understand both clinical operations and product language",
-            "Early-stage AI projects that need fast, field-aware validation in healthcare settings"
+            "Digital health projects that need both hospital validation and study design",
+            "Teams that need a partner fluent in both clinical operations and product language",
+            "Early-stage projects that need to validate generative AI features in healthcare contexts"
         ],
         "pillars": [
             {
-                "title": "Clinical trial operations",
-                "description": "Running multi-center RCTs with stable coordination across investigators, documents, timelines, and data."
+                "title": "Clinical operations",
+                "description": "Managing multi-center RCTs across investigators, timelines, documents, and data flow."
             },
             {
                 "title": "Validation design",
-                "description": "Structuring pilots and demonstrations with both research questions and field constraints in mind."
+                "description": "Designing pilots and demonstrations around both research questions and field constraints."
             },
             {
                 "title": "AI prototyping",
-                "description": "Turning early ideas into screens and workflows that can be reviewed, tested, and refined quickly."
+                "description": "Turning early ideas into testable screens and workflows quickly."
             }
         ]
     },
@@ -157,53 +175,81 @@
         ]
     },
     "research": {
-        "title": "Research Highlights",
-        "intro": "",
+        "title": "Research Projects",
+        "intro": "A separate record of clinical validation work, multi-center operations, and policy-facing communication.",
         "featuredLabel": "Featured studies",
         "policyLabel": "Policy-facing communication",
         "projects": [
             {
+                "year": "2024-2025",
                 "title": "Randomized Controlled Trial Management (MCI)",
-                "category": "Clinical Efficacy Validation & Operations",
-                "description": "Randomized Controlled Trial (RCT) to evaluate the effectiveness of the Zenicog® cognitive rehabilitation program in older adults with MCI (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
+                "category": "Clinical efficacy validation",
+                "role": "CRC / research operations",
+                "description": "Operated an RCT evaluating the Zenicog® cognitive rehabilitation program in older adults with MCI.",
+                "evidenceLabel": "CRIS",
+                "evidenceLink": "https://cris.nih.go.kr/cris/search/detailSearch.do?seq=31040&search_page=L",
+                "proof": "A core research track within 390M KRW multi-center R&D operations"
             },
             {
+                "year": "2024-2025",
                 "title": "Multi-center Randomized Controlled Trial (Stroke)",
-                "category": "Clinical Efficacy Validation & Operations",
-                "description": "Randomized Controlled Trial (RCT) to evaluate the effectiveness of the Zenicog® cognitive rehabilitation program in subacute stroke patients (<a href='https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L' target='_blank' rel='noopener noreferrer' class='underline decoration-primary text-primary hover:text-primary/80'>CRIS</a>)"
+                "category": "Multi-center clinical operations",
+                "role": "CRC / site coordination",
+                "description": "Operated an RCT evaluating the Zenicog® cognitive rehabilitation program in patients with subacute stroke.",
+                "evidenceLabel": "CRIS",
+                "evidenceLink": "https://cris.nih.go.kr/cris/search/detailSearch.do?seq=30196&search_page=L",
+                "proof": "Randomized controlled trial operations and investigator communication"
             },
             {
+                "year": "2024",
                 "title": "Government-Level Digital Health Demonstration",
-                "category": "Regulatory Affairs & Presentation",
-                "description": "Led the Q&A session for a mid-term digital health demonstration review attended by MOHW and KHIDI stakeholders."
+                "category": "Policy-facing communication",
+                "role": "Interim review Q&A lead",
+                "description": "Led the Q&A session for a mid-term digital health demonstration review attended by MOHW and KHIDI stakeholders.",
+                "evidenceLabel": "",
+                "evidenceLink": "",
+                "proof": "Explained demonstration context to government and institutional stakeholders"
             }
-        ]
+        ],
+        "eyebrow": "Research Projects",
+        "metaLabels": {
+            "year": "Period",
+            "role": "Role",
+            "evidence": "Evidence"
+        },
+        "evidenceCta": "View evidence"
     },
     "innovation": {
-        "label": "Featured Project",
-        "title": "Hwiwasoo: a generative AI cognitive intervention framework",
-        "description": "Hwiwasoo started as a project to reduce cognitive decline and digital exclusion in older adults. The work centers on a Coach-Teacher-Companion triple-agent structure that explores a cognitive intervention flow that can continue in everyday life while staying grounded in practical clinical use.",
+        "label": "Featured Case Study",
+        "title": "Hwiwasoo: structuring generative AI for cognitive intervention",
+        "description": "Hwiwasoo is a featured case study that began with the goal of reducing cognitive decline and digital exclusion in older adults. It uses a Coach-Teacher-Companion triple-agent structure to connect everyday cognitive training, study protocol thinking, and real-use flow.",
         "featureTitles": [
-            "Operating model",
-            "Interaction design",
-            "Clinical readiness"
+            "Coach",
+            "Teacher",
+            "Companion"
         ],
         "features": [
-            "A Coach-Teacher-Companion structure that separates roles and clarifies the flow of intervention.",
-            "A Context-Adaptive Cognitive Flow that adjusts difficulty and guidance to everyday context.",
-            "An approach that considers senior-friendly interfaces and clinical protocol design together."
+            "An operations layer that adjusts goals and difficulty",
+            "An education layer that explains tasks and keeps training coherent",
+            "A companion layer that supports emotional continuity and everyday context"
         ],
-        "proofTitle": "What this project demonstrates",
+        "proofTitle": "Case evidence",
         "proofItems": [
-            "How a research idea can be shaped into a usable intervention flow",
-            "An attempt to frame generative AI as structured cognitive support rather than a generic chatbot",
-            "A project where healthcare research, product thinking, and field operations had to be coordinated together"
+            "Senior-friendly interface thinking and clinical protocol design considered together",
+            "Framework co-founded with a researcher at Hokkaido University",
+            "Published as a co-first-author MDPI Healthcare paper"
         ],
-        "cta": "View Project"
+        "cta": "View project",
+        "problemLabel": "Problem",
+        "problem": "Cognitive interventions for older adults must address continuity, technology anxiety, and digital access together.",
+        "roleLabel": "My role",
+        "role": "I connected clinical protocol thinking with AI prototyping to clarify the intervention structure and validation flow.",
+        "outcomeLabel": "Output",
+        "outcome": "The work became a co-first-author paper and a framework for explaining generative AI as structured cognitive support rather than a generic chatbot."
     },
     "publications": {
-        "title": "Selected Publications",
-        "journalPapers": "All papers",
+        "title": "Publications",
+        "journalPapers": "5 papers",
         "posterTitle": "Poster Records",
         "linkAvailable": "Link available",
         "posterLinkCta": "View official record",
@@ -211,13 +257,13 @@
         "coreSummary": "Core Summary",
         "closeBtn": "Close",
         "summaryComingSoon": "Summary coming soon.",
-        "summaryEyebrow": "Research Focus",
+        "summaryEyebrow": "Publication index",
         "summaryHighlights": [
-            "Intervention design grounded in clinical operations",
-            "Structuring generative AI for cognitive intervention",
-            "Digital health design that includes usability validation"
+            "5 SCI/ESCI/KCI papers",
+            "1 co-first-author paper",
+            "Centered on RCT and AI cognitive rehabilitation research"
         ],
-        "summaryStatLine": "5 papers · 2 RCT tracks · experience integrating 3 core themes",
+        "summaryStatLine": "5 papers · 3 posters · research output grounded in clinical operations",
         "viewAllCta": "View full publication list",
         "morePapersHint": "{{count}} more in the full list",
         "fullListLabel": "Archive",
@@ -261,7 +307,8 @@
                 "status": "Published",
                 "doi": "https://doi.org/10.3389/fneur.2025.1636017",
                 "summary": "In a recent multicenter randomized controlled trial, AI-based cognitive telerehabilitation showed equivalent efficacy to traditional therapist-supervised cognitive rehabilitation.\n\n63 stroke patients in the subacute phase (within 6 months) were randomly assigned to two groups for a total of 24 sessions over 6 weeks. Both groups showed significant improvements in key cognitive indicators (K-MMSE2, TMT, Digit Span).\n\nUnsupervised **AI self-operated telerehabilitation demonstrated non-inferiority** compared to the therapist-led group, with high usability satisfaction.\n\nThese results suggest that AI cognitive rehabilitation platforms allowing real-time personalization and remote monitoring provide clinical value on par with conventional treatments.",
-                "authors": "Suebeen Kim, Si-Woon Park, <b>Taeksoo Jeong</b>, Min-Soo Kang, Doo Young Kim*"
+                "authors": "Suebeen Kim, Si-Woon Park, <b>Taeksoo Jeong</b>, Min-Soo Kang, Doo Young Kim*",
+                "statusKey": "published"
             },
             {
                 "title": "A Generative AI Framework for Cognitive Intervention in Older Adults: An Integrated Engineering Design and Clinical Protocol",
@@ -271,7 +318,8 @@
                 "status": "Published",
                 "doi": "https://www.mdpi.com/2227-9032/13/24/3225",
                 "summary": "Digital exclusion and technology anxiety remain significant barriers to the practical application of cognitive interventions for the elderly. This clinical protocol paper proposes a multi-agent generative AI framework with a Coach–Teacher–Companion (CTC) structure to address these limitations.\n\nThe framework is designed to naturally integrate cognitive training into daily life and provide simultaneous cognitive, behavioral, and emotional support through adaptive difficulty adjustment and emotional monitoring. It systematically presents methodological and ethical safeguards for clinical application, including assessments for digital literacy (MDPQ-16), technology anxiety (CARS), and emotional safety (PANAS).\n\nDesigned to evaluate **usability (SUS), user experience (UEQ-S), adherence, emotional stability, and key cognitive indicators (MMSE, TMT, Digit Span)** through a 6-week pilot feasibility study protocol (n=14), this study provide initial evidence for the structural feasibility of clinical application of generative AI-based cognitive intervention for the elderly.",
-                "authors": "<b>Taeksoo Jeong</b><sup>†</sup>, Geonhwi Hwang<sup>†</sup>, Doo Young Kim*"
+                "authors": "<b>Taeksoo Jeong</b><sup>†</sup>, Geonhwi Hwang<sup>†</sup>, Doo Young Kim*",
+                "statusKey": "published"
             },
             {
                 "title": "Artificial Intelligence-Guided Mobile Telerehabilitation for Individuals with Cognitive Impairment: A Feasibility Study",
@@ -281,7 +329,8 @@
                 "status": "Published",
                 "doi": "https://doi.org/10.5535/arm.250060",
                 "summary": "This preliminary study evaluates the clinical feasibility and usability of AI-based mobile cognitive telerehabilitation. 13 participants, including stroke patients and older adults with Mild Cognitive Impairment (MCI), underwent a 6-week, 24-session AI self-operated cognitive rehabilitation program.\n\nMMSE scores improved significantly compared to pre-intervention, with overall improvement trends in Digit Span and Trail Making Test. While product quality and satisfaction were high in the overall usability assessment, the 'tolerance for error' domain was relatively low, highlighting the need for UI/UX improvements considering the elderly and digitally vulnerable populations.\n\nThis study shows that AI-based cognitive telerehabilitation, feasible without constant therapist intervention, is safe and practicable in real clinical environments and has potential effects on cognitive function improvement. It is significant in presenting the importance of usability-centered design amidst the expansion of digital therapeutics and telerehabilitation.",
-                "authors": "Suebeen Kim, Doo Young Kim, Si-Woon Park*, Namo Jeon, <b>Taeksoo Jeong</b>, Min-Soo Kang, Sangwook Park"
+                "authors": "Suebeen Kim, Doo Young Kim, Si-Woon Park*, Namo Jeon, <b>Taeksoo Jeong</b>, Min-Soo Kang, Sangwook Park",
+                "statusKey": "published"
             },
             {
                 "title": "Short-Latency Afferent Inhibition and Cognitive Function in Older Adults With Mild Cognitive Impairment: A Pilot Study",
@@ -291,7 +340,8 @@
                 "status": "Published",
                 "doi": "https://doi.org/10.12786/bn.2026.19.e2",
                 "summary": "This pilot study investigated the association between Short-Latency Afferent Inhibition (SAI)—a marker of central cholinergic function—and cognitive performance in older adults with Mild Cognitive Impairment (MCI).\n\nAmong 57 MCI patients, no significant statistical associations were found between SAI values and specific cognitive domains (MMSE, Digit Span, TMT), nor were there significant age-related differences in SAI.\n\nInterestingly, however, 21% of the participants exhibited impaired SAI despite comparable cognitive test scores. This suggests that impaired SAI may reflect early neurophysiological changes and cholinergic dysfunction that precede measurable cognitive decline. The findings highlight the potential of SAI as an early objective biomarker for neurocognitive vulnerability in the preclinical stages of dementia.",
-                "authors": "Suebeen Kim, <b>Taeksoo Jeong</b>, Sangwook Park, Doo Young Kim*"
+                "authors": "Suebeen Kim, <b>Taeksoo Jeong</b>, Sangwook Park, Doo Young Kim*",
+                "statusKey": "published"
             },
             {
                 "title": "AI-Driven Telerehabilitation for Older Adults with Mild Cognitive Impairment: A Randomized Controlled Trial",
@@ -301,15 +351,19 @@
                 "status": "Published",
                 "doi": "https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1813694/full",
                 "summary": "This randomized controlled trial evaluated the clinical efficacy of Zenicog®, an AI-driven, self-guided, home-based cognitive rehabilitation program for older adults with Mild Cognitive Impairment (MCI). The intervention was designed as an accessible alternative to conventional clinic-based therapy in response to the growing need for scalable cognitive care in aging populations.\n\nSeventy participants were recruited, and 62 were included in the final analysis. Using a delayed-treatment parallel randomized design with an exploratory crossover phase, the intervention group completed a five-week home program consisting of 24 sessions. For the primary outcome, Global Cognitive Function measured by K-MMSE2, the intervention group showed significantly higher scores than the control group at the end of Period 1 (median 28.0 vs. 26.0, p < 0.001). Clinical success, defined as K-MMSE2 >= 27, was achieved by 93.9% of the intervention group versus 0% of the control group.\n\nNo significant between-group differences were observed in domain-specific cognitive tests such as Digit Span and TMT. However, usability and satisfaction were high at 4.5/5 or above, and no participants dropped out because of adverse effects. These findings suggest that minimally supervised AI-driven telerehabilitation can be a feasible and scalable strategy for improving global cognitive function in patients with MCI.",
-                "authors": "Minsong Kim, Doo Young Kim, <b>Taeksoo Jeong</b>, Si-Woon Park*"
+                "authors": "Minsong Kim, Doo Young Kim, <b>Taeksoo Jeong</b>, Si-Woon Park*",
+                "statusKey": "published"
             }
-        ]
+        ],
+        "eyebrow": "Academic Output",
+        "detailsCta": "Details",
+        "doiCta": "DOI"
     },
     "skills": {
-        "title": "Capabilities I bring into collaboration",
+        "title": "Execution capabilities I bring into collaboration",
         "items": {
             "clinical": "Multi-center operations",
-            "vibecording": "AI Prototyping",
+            "vibecording": "AI prototyping",
             "data": "Research-product alignment",
             "design": "Validation design",
             "comm": "Academic communication",
@@ -322,13 +376,15 @@
             "design": "Designing pilots, demonstrations, and validation structures for real-world use",
             "comm": "Turning results into papers, abstracts, and presentation-ready narratives",
             "ai": "Testing and shaping generative AI features for healthcare contexts"
-        }
+        },
+        "eyebrow": "Collaboration Capabilities",
+        "intro": "These are not just skills. They are the roles I can take between hospital validation and product execution."
     },
     "blogSection": {
-        "label": "Blog",
-        "recentPosts": "Latest Posts",
-        "viewSection": "View Blog Section",
-        "allPosts": "All Posts",
+        "label": "Writing",
+        "recentPosts": "Recent writing",
+        "viewSection": "View writing section",
+        "allPosts": "All writing",
         "viewPost": "Read Post",
         "backToList": "All Posts",
         "closeArchive": "Close blog archive",
@@ -340,12 +396,12 @@
         "postFallback": "Post"
     },
     "contact": {
-        "eyebrow": "Collaboration",
-        "title": "Feel free to reach out",
-        "subtitle": "If there is a topic around digital health, clinical research, or AI use that you would like to talk through together, feel free to get in touch. Early-stage ideas and light conversations are welcome too.",
+        "eyebrow": "Coffee Chat",
+        "title": "Open to a coffee chat",
+        "subtitle": "If there is a topic around digital health, clinical research, or AI use that you would like to think through together, feel free to reach out. Early-stage ideas are welcome too.",
         "primaryCta": "Send an email",
         "secondaryCta": "Connect on LinkedIn",
-        "tertiaryCta": "Book a coffee chat",
+        "tertiaryCta": "Suggest a coffee chat",
         "collaborationItems": [
             {
                 "title": "Hospital validation",
@@ -364,5 +420,9 @@
             "rights": "© 2026 DTX Insight. All rights reserved.",
             "tagline": "Clinical Research × Digital Health Execution"
         }
+    },
+    "meta": {
+        "title": "Taeksoo Jeong - DTX Insight",
+        "description": "A research editorial portfolio connecting clinical research operations, digital health validation, and AI prototyping."
     }
 }

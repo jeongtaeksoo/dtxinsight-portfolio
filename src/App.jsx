@@ -14,10 +14,10 @@ function App() {
       <Hero />
       <About />
       <DigitalHealthProjects />
+      <Skills />
       <ResearchProjects />
       <Publications />
       <NarrativeScroll />
-      <Skills />
       <DeferredBlogSection />
     </Layout>
   );

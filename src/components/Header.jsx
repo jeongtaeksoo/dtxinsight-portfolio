@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Coffee, Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { motion as Motion, AnimatePresence } from 'framer-motion';
 import logo from '/logo.png';
+
+const getScrollBehavior = () => (
+    typeof window !== 'undefined'
+    && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        ? 'auto'
+        : 'smooth'
+);
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -25,20 +32,21 @@ const Header = () => {
     const navLinks = [
         { name: t('nav.about'), href: '#about' },
         { name: t('nav.innovation'), href: '#innovation' },
+        { name: t('nav.capabilities'), href: '#capabilities' },
         { name: t('nav.research'), href: '#research' },
         { name: t('nav.publications'), href: '#publications' },
         { name: t('nav.blog'), href: '#blog' },
-        { name: t('nav.contact'), href: '#contact' },
     ];
 
     const handleNavClick = (e, href) => {
         e.preventDefault();
+        const behavior = getScrollBehavior();
         if (href === '#top') {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior });
         } else {
             const element = document.querySelector(href);
             if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+                element.scrollIntoView({ behavior });
             }
         }
         setIsMobileMenuOpen(false);
@@ -64,37 +72,45 @@ const Header = () => {
     };
 
     return (
-        <header className={`fixed top-0 left-0 w-full z-50 bg-white border-b border-border transition-all duration-300 ${isScrolled ? 'shadow-sm py-3' : 'py-4'}`}>
+        <header className={`fixed top-0 left-0 w-full z-50 bg-white/95 border-b border-border backdrop-blur transition-[box-shadow,padding] duration-300 ${isScrolled ? 'shadow-sm py-3' : 'py-4'}`}>
             <div className="max-w-[1200px] mx-auto px-4 flex justify-between items-center">
                 {/* Logo */}
-                <a href="#" onClick={(e) => handleNavClick(e, '#top')} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                <a href="#" onClick={(e) => handleNavClick(e, '#top')} className="flex items-center gap-3 transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4">
                     <img src={logo} alt="DTXInsight Logo" className="w-8 h-8 md:w-9 md:h-9 object-contain rounded-lg" />
-                    <span className="text-xl md:text-2xl font-bold tracking-tighter text-text">
+                    <span className="text-xl md:text-2xl font-bold text-text">
                         DTX<span className="text-primary">Insight</span>
                     </span>
                 </a>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-7">
+                <nav className="hidden lg:flex items-center gap-6">
                     {navLinks.map((link) => (
                         <a
                             key={link.name}
                             href={link.href}
                             onClick={(e) => handleNavClick(e, link.href)}
-                            className="text-sm font-medium text-muted hover:text-text transition-colors cursor-pointer"
+                            className="text-sm font-medium text-muted transition-colors hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4"
                         >
                             {link.name}
                         </a>
                     ))}
+                    <a
+                        href="#contact"
+                        onClick={(e) => handleNavClick(e, '#contact')}
+                        className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4"
+                    >
+                        <Coffee size={15} />
+                        {t('nav.contact')}
+                    </a>
                 </nav>
 
                 {/* Desktop Language Switch */}
-                <div className="hidden md:flex items-center gap-1 bg-gray-100 rounded-full px-2 py-1.5 border border-border">
+                <div className="hidden lg:flex items-center gap-1 bg-gray-100 rounded-full px-2 py-1.5 border border-border">
                     {languages.map((lang) => (
                         <button
                             key={lang.code}
                             onClick={() => changeLanguage(lang.code)}
-                            className={`px-3 py-1 text-xs font-semibold rounded-full transition-all duration-200 ${i18n.language === lang.code ? 'bg-primary text-white shadow-sm' : 'text-muted hover:text-text'}`}
+                            className={`px-3 py-1 text-xs font-semibold rounded-full transition-[background-color,color,box-shadow] duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${i18n.language?.startsWith(lang.code) ? 'bg-primary text-white shadow-sm' : 'text-muted hover:text-text'}`}
                         >
                             {lang.label}
                         </button>
@@ -103,7 +119,7 @@ const Header = () => {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-text p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                    className="lg:hidden text-text p-2 rounded-lg hover:bg-gray-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     aria-label="Toggle menu"
                 >
@@ -115,7 +131,7 @@ const Header = () => {
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <Motion.div
-                        className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-border shadow-md px-4 pb-5 pt-3"
+                        className="lg:hidden absolute top-full left-0 right-0 bg-white border-b border-border shadow-md px-4 pb-5 pt-3"
                         initial="closed"
                         animate="open"
                         exit="closed"
@@ -131,7 +147,7 @@ const Header = () => {
                                 <button
                                     key={lang.code}
                                     onClick={() => changeLanguage(lang.code)}
-                                    className={`px-4 py-1.5 text-xs font-semibold rounded-full border transition-all ${i18n.language === lang.code ? 'bg-primary text-white border-primary' : 'text-muted border-border hover:text-text hover:border-primary'}`}
+                                    className={`px-4 py-1.5 text-xs font-semibold rounded-full border transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 ${i18n.language?.startsWith(lang.code) ? 'bg-primary text-white border-primary' : 'text-muted border-border hover:text-text hover:border-primary'}`}
                                 >
                                     {lang.label}
                                 </button>
@@ -139,11 +155,11 @@ const Header = () => {
                         </Motion.div>
 
                         {/* Nav Links */}
-                        {navLinks.map((link, index) => (
+                        {[...navLinks, { name: t('nav.contact'), href: '#contact' }].map((link, index) => (
                             <Motion.a
                                 key={link.name}
                                 href={link.href}
-                                className="flex items-center gap-3 py-3 text-sm font-medium text-text hover:text-primary transition-colors border-b border-border last:border-0"
+                                className="flex items-center gap-3 py-3 text-sm font-medium text-text hover:text-primary transition-colors border-b border-border last:border-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                                 onClick={(e) => handleNavClick(e, link.href)}
                                 custom={index + 1}
                                 variants={itemVariants}
