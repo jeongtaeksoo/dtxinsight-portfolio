@@ -18,6 +18,7 @@ const Hero = () => {
     line1: t('hero.affiliationCurrentLine1'),
     line2: t('hero.affiliationCurrentLine2'),
     note: t('hero.affiliationCurrentNote'),
+    previous: t('hero.affiliationPrevious'),
   };
   const scrollToSection = (selector) => {
     document.querySelector(selector)?.scrollIntoView({ behavior: getScrollBehavior() });
@@ -125,6 +126,9 @@ const Hero = () => {
                 </p>
                 <p className="text-sm leading-relaxed text-muted">
                   {currentAffiliation.note}
+                </p>
+                <p className="pt-2 text-xs leading-relaxed text-muted">
+                  {currentAffiliation.previous}
                 </p>
               </div>
             </div>
