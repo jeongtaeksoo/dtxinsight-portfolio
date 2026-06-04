@@ -15,11 +15,11 @@
     },
     "hero": {
         "name": "チョン・テクス",
-        "affiliationCurrentLine1": "現 成均館大学校",
-        "affiliationCurrentLine2": "知能型マルチメディア研究センター",
+        "affiliationCurrentLine1": "前 カトリック関東大学国際聖母病院",
+        "affiliationCurrentLine2": "リハビリテーション医学科 研究員",
         "affiliationCurrentMeta": "",
-        "affiliationCurrentNote": "ハンギル眼科病院 · Lux mind（兼職）",
-        "affiliationPrevious": "前 カトリック関東大学国際聖母病院 リハビリテーション医学科 研究員",
+        "affiliationCurrentNote": "",
+        "affiliationPrevious": "",
         "eyebrow": "Research Editorial Portfolio",
         "tagline": "臨床研究運営とデジタルヘルスの製品化をつなぎます",
         "summary": "病院現場、研究プロトコル、データフロー、AIプロトタイプを一つの流れに整え、実際の臨床環境で検証できるデジタルヘルスプロジェクトづくりを支援します。",
@@ -38,7 +38,7 @@
         ],
         "primaryCta": "代表事例を見る",
         "secondaryCta": "コーヒーチャット",
-        "profileLabel": "現在の所属",
+        "profileLabel": "所属",
         "orcidCta": "ORCID",
         "stats": [
             {

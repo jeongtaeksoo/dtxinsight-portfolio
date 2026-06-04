@@ -118,18 +118,26 @@ const Hero = () => {
                 </a>
               </div>
               <div className="mt-3 space-y-1.5">
-                <p className="text-sm font-semibold leading-relaxed text-text">
-                  {currentAffiliation.line1}
-                </p>
-                <p className="text-sm font-semibold leading-relaxed text-text">
-                  {currentAffiliation.line2}
-                </p>
-                <p className="text-sm leading-relaxed text-muted">
-                  {currentAffiliation.note}
-                </p>
-                <p className="pt-2 text-xs leading-relaxed text-muted">
-                  {currentAffiliation.previous}
-                </p>
+                {currentAffiliation.line1 ? (
+                  <p className="text-sm font-semibold leading-relaxed text-text">
+                    {currentAffiliation.line1}
+                  </p>
+                ) : null}
+                {currentAffiliation.line2 ? (
+                  <p className="text-sm font-semibold leading-relaxed text-text">
+                    {currentAffiliation.line2}
+                  </p>
+                ) : null}
+                {currentAffiliation.note ? (
+                  <p className="text-sm leading-relaxed text-muted">
+                    {currentAffiliation.note}
+                  </p>
+                ) : null}
+                {currentAffiliation.previous ? (
+                  <p className="pt-2 text-xs leading-relaxed text-muted">
+                    {currentAffiliation.previous}
+                  </p>
+                ) : null}
               </div>
             </div>
           </div>

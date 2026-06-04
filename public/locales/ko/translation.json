@@ -15,11 +15,11 @@
     },
     "hero": {
         "name": "정택수",
-        "affiliationCurrentLine1": "現 성균관대학교",
-        "affiliationCurrentLine2": "지능형멀티미디어연구센터",
+        "affiliationCurrentLine1": "前 가톨릭관동대학교 국제성모병원",
+        "affiliationCurrentLine2": "재활의학과 연구원",
         "affiliationCurrentMeta": "",
-        "affiliationCurrentNote": "한길안과병원 · Lux mind(겸직)",
-        "affiliationPrevious": "前 가톨릭관동대학교 국제성모병원 재활의학과 연구원",
+        "affiliationCurrentNote": "",
+        "affiliationPrevious": "",
         "eyebrow": "Research Editorial Portfolio",
         "tagline": "임상 연구 운영과 디지털 헬스 제품화 사이를 연결합니다",
         "summary": "병원 현장, 연구 프로토콜, 데이터 흐름, AI 프로토타입을 한 흐름으로 묶어 협업 파트너가 실제로 검증 가능한 디지털 헬스 프로젝트를 만들도록 돕습니다.",
@@ -38,7 +38,7 @@
         ],
         "primaryCta": "대표 사례 보기",
         "secondaryCta": "커피챗",
-        "profileLabel": "현재 소속",
+        "profileLabel": "소속",
         "orcidCta": "ORCID",
         "stats": [
             {
