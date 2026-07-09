@@ -92,7 +92,7 @@
             },
             {
                 "date": "2025.07",
-                "title": "Started the Hwiwasoo Project",
+                "title": "Started the hwiwasoo Project",
                 "note": null
             },
             {
@@ -103,7 +103,7 @@
             {
                 "date": "2025.12",
                 "title": "Published in MDPI Healthcare (Co-first Author)",
-                "note": "Hwiwasoo Project — Co-founded with a PhD researcher at Hokkaido University. A generative AI cognitive training framework for older adults."
+                "note": "hwiwasoo Project — Co-founded with a PhD researcher at Hokkaido University. A generative AI cognitive training framework for older adults."
             },
             {
                 "date": "2025.12",
@@ -130,7 +130,7 @@
                 "date": "2026.05",
                 "badge": "2026.05 -",
                 "title": "2026 16th ICT Complex Global Piuda Project",
-                "note": "Hwiwasoo Team Lead · Team: Geonhwi Hwang (PhD Student, Hokkaido Univ.), Woonju Lee, MD (Director, Osaka iClinic), Subin Kim (Medical Student, Catholic Kwandong Univ.), Gyujin Ahn, MS (SKKU IMRC)"
+                "note": "hwiwasoo Team Lead · Team: Geonhwi Hwang (PhD Student, Hokkaido Univ.), Woonju Lee, MD (Director, Osaka iClinic), Subin Kim (Medical Student, Catholic Kwandong Univ.), Gyujin Ahn, MS (SKKU IMRC)"
             }
         ]
     },
@@ -227,8 +227,8 @@
     },
     "innovation": {
         "label": "Featured Case Study",
-        "title": "Hwiwasoo: structuring generative AI for cognitive intervention",
-        "description": "Hwiwasoo is a featured case study that began with the goal of reducing cognitive decline and digital exclusion in older adults. It uses a Coach-Teacher-Companion triple-agent structure to connect everyday cognitive training, study protocol thinking, and real-use flow.",
+        "title": "hwiwasoo: structuring generative AI for cognitive intervention",
+        "description": "hwiwasoo is a featured case study that began with the goal of reducing cognitive decline and digital exclusion in older adults. It uses a Coach-Teacher-Companion triple-agent structure to connect everyday cognitive training, study protocol thinking, and real-use flow.",
         "featureTitles": [
             "Coach",
             "Teacher",
