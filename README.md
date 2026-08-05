@@ -35,20 +35,12 @@ npm run dev
 npm run build
 ```
 
-##  Deployment
+## Deployment
 
-This site is deployed on Vercel and connected to **www.dtxinsight.com**.
+The site is deployed automatically to GitHub Pages at
+`https://<github-username>.github.io` whenever `main` is updated.
 
-```bash
-# One-time Vercel auth
-npx vercel login
-
-# Preview deployment
-npm run deploy:preview
-
-# Production deployment (www.dtxinsight.com)
-npm run deploy
-```
+Enable **Settings → Pages → Source: GitHub Actions** once in the repository.
 
 ##  License
 
