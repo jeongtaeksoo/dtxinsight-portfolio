@@ -121,7 +121,7 @@ const Publications = () => {
             <h3 className="mb-5 text-sm font-semibold uppercase tracking-[0.16em] text-muted">
               {t('publications.posterTitle')}
             </h3>
-            <div className="grid gap-px overflow-hidden border-y border-border bg-border md:grid-cols-3">
+            <div className="grid gap-px overflow-hidden border-y border-border bg-background md:grid-cols-3">
               {presentations.map((presentation) => (
                 <article
                   key={`${presentation.title}-${presentation.date}`}
