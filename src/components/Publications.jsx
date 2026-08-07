@@ -142,15 +142,17 @@ const Publications = () => {
                       </span>
                     ) : null}
                   </div>
-                  <a
-                    href={presentation.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-primary transition-colors hover:text-primary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-                  >
-                    {t('publications.posterLinkCta')}
-                    <ExternalLink size={12} />
-                  </a>
+                  {presentation.link ? (
+                    <a
+                      href={presentation.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-primary transition-colors hover:text-primary/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                    >
+                      {t('publications.posterLinkCta')}
+                      <ExternalLink size={12} />
+                    </a>
+                  ) : null}
                 </article>
               ))}
             </div>
