@@ -270,7 +270,7 @@
             "공동 제1저자 1편",
             "RCT 및 AI 인지재활 연구 중심"
         ],
-        "summaryStatLine": "5편 논문 · 3건 포스터 · 임상 운영 기반 연구 산출물",
+        "summaryStatLine": "5편 논문 · 4건 포스터 기록 · 임상 운영 기반 연구 산출물",
         "viewAllCta": "전체 논문 보기",
         "morePapersHint": "추가 {{count}}편은 전체 목록에서 확인할 수 있습니다",
         "fullListLabel": "아카이브",
@@ -299,6 +299,14 @@
                 "format": "Poster",
                 "role": "(co-author)",
                 "link": "https://www.karm.or.kr/workshop/?abyear=202601&mode=green_view&sid=6566"
+            },
+            {
+                "date": "2026",
+                "title": "MAPPING IMPLEMENTATION PRIORITIES IN STROKE COGNITIVE TELEREHABILITATION TO THE ADAPTIVE COACH-TEACHER-COMPANION FRAMEWORK",
+                "venue": "18th World Stroke Congress · COEX, Seoul · 21–23 October 2026",
+                "format": "Accepted e-Poster Viewing",
+                "role": "Abstract #207",
+                "link": "https://worldstrokecongress.org"
             }
         ],
         "roles": {

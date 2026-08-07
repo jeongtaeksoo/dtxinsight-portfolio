@@ -270,7 +270,7 @@
             "1 co-first-author paper",
             "Centered on RCT and AI cognitive rehabilitation research"
         ],
-        "summaryStatLine": "5 papers · 3 posters · research output grounded in clinical operations",
+        "summaryStatLine": "5 papers · 4 poster records · research output grounded in clinical operations",
         "viewAllCta": "View full publication list",
         "morePapersHint": "{{count}} more in the full list",
         "fullListLabel": "Archive",
@@ -299,6 +299,14 @@
                 "format": "Poster",
                 "role": "(co-author)",
                 "link": "https://www.karm.or.kr/workshop/?abyear=202601&mode=green_view&sid=6566"
+            },
+            {
+                "date": "2026",
+                "title": "MAPPING IMPLEMENTATION PRIORITIES IN STROKE COGNITIVE TELEREHABILITATION TO THE ADAPTIVE COACH-TEACHER-COMPANION FRAMEWORK",
+                "venue": "18th World Stroke Congress · COEX, Seoul · 21–23 October 2026",
+                "format": "Accepted e-Poster Viewing",
+                "role": "Abstract #207",
+                "link": "https://worldstrokecongress.org"
             }
         ],
         "roles": {
