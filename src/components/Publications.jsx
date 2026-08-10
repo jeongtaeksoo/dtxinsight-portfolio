@@ -16,6 +16,20 @@ const statusStyle = (statusKey) => (
 
 const stripMarkdownEmphasis = (text) => text.replace(/\*\*/g, '');
 
+const renderPresentationRole = (role) => {
+  const authorName = ['Taeksoo Jeong', '정택수', '鄭澤收'].find((name) => role.includes(name));
+  if (!authorName) return role;
+
+  const [before, after] = role.split(authorName);
+  return (
+    <>
+      {before}
+      <strong className="font-bold underline decoration-1 underline-offset-2">{authorName}</strong>
+      {after}
+    </>
+  );
+};
+
 const Publications = () => {
   const { t } = useTranslation();
   const [selectedPaper, setSelectedPaper] = useState(null);
@@ -138,7 +152,7 @@ const Publications = () => {
                     </span>
                     {presentation.role ? (
                       <span className="inline-flex rounded-full border border-border bg-white px-3 py-1 text-[11px] font-medium text-muted">
-                        {presentation.role}
+                        {renderPresentationRole(presentation.role)}
                       </span>
                     ) : null}
                   </div>
