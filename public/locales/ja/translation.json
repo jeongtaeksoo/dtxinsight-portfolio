@@ -270,7 +270,7 @@
             "共同第1著者論文1本",
             "RCTおよびAI認知リハビリ研究が中心"
         ],
-        "summaryStatLine": "論文5本 · ポスター記録4件 · 臨床運営に基づく研究成果",
+        "summaryStatLine": "論文5本 · 学会発表・ポスター記録6件 · 臨床運営に基づく研究成果",
         "viewAllCta": "全文献を見る",
         "morePapersHint": "ほか{{count}}本は一覧で確認できます",
         "fullListLabel": "アーカイブ",
@@ -283,6 +283,14 @@
                 "format": "Poster",
                 "role": "Namo Jeon · Doo Young Kim · Taeksoo Jeong · Sue Been Kim · Bum-Suk Lee · Min-Soo Kang · Si-Woon Park",
                 "link": "https://www.karm.or.kr/workshop/?abyear=202402&mode=green_view&sid=5985"
+            },
+            {
+                "date": "2024",
+                "title": "Predictive Value of Cognitive Function and ALT for Functional Ambulation Gain in MCA Stroke Patients",
+                "venue": "大韓リハビリテーション医学会 第52回秋季国際学術大会 · The-K Hotel Seoul · 2024年10月25–26日",
+                "format": "Poster",
+                "role": "Namo Jeon · Taeksoo Jeong · Doo Young Kim",
+                "link": "https://www.karm.or.kr/workshop/?abyear=202402&mode=green_view&sid=6013"
             },
             {
                 "date": "2025",

@@ -270,7 +270,7 @@
             "1 co-first-author paper",
             "Centered on RCT and AI cognitive rehabilitation research"
         ],
-        "summaryStatLine": "5 papers · 4 poster records · research output grounded in clinical operations",
+        "summaryStatLine": "5 papers · 6 conference presentation/poster records · research output grounded in clinical operations",
         "viewAllCta": "View full publication list",
         "morePapersHint": "{{count}} more in the full list",
         "fullListLabel": "Archive",
@@ -283,6 +283,14 @@
                 "format": "Poster",
                 "role": "Namo Jeon · Doo Young Kim · Taeksoo Jeong · Sue Been Kim · Bum-Suk Lee · Min-Soo Kang · Si-Woon Park",
                 "link": "https://www.karm.or.kr/workshop/?abyear=202402&mode=green_view&sid=5985"
+            },
+            {
+                "date": "2024",
+                "title": "Predictive Value of Cognitive Function and ALT for Functional Ambulation Gain in MCA Stroke Patients",
+                "venue": "52nd Korean Academy of Rehabilitation Medicine Autumn International Conference · The-K Hotel Seoul · 25–26 October 2024",
+                "format": "Poster",
+                "role": "Namo Jeon · Taeksoo Jeong · Doo Young Kim",
+                "link": "https://www.karm.or.kr/workshop/?abyear=202402&mode=green_view&sid=6013"
             },
             {
                 "date": "2025",
