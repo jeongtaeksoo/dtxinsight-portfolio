@@ -151,7 +151,7 @@ const Publications = () => {
                       {presentation.format}
                     </span>
                     {presentation.role ? (
-                      <span className="inline-flex rounded-full border border-border bg-white px-3 py-1 text-[11px] font-medium text-muted">
+                      <span className="text-[11px] font-medium leading-5 text-muted">
                         {renderPresentationRole(presentation.role)}
                       </span>
                     ) : null}
