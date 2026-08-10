@@ -329,7 +329,7 @@
                 "status": "Published",
                 "doi": "https://doi.org/10.3389/fneur.2025.1636017",
                 "summary": "In a recent multicenter randomized controlled trial, AI-based cognitive telerehabilitation showed equivalent efficacy to traditional therapist-supervised cognitive rehabilitation.\n\n63 stroke patients in the subacute phase (within 6 months) were randomly assigned to two groups for a total of 24 sessions over 6 weeks. Both groups showed significant improvements in key cognitive indicators (K-MMSE2, TMT, Digit Span).\n\nUnsupervised **AI self-operated telerehabilitation demonstrated non-inferiority** compared to the therapist-led group, with high usability satisfaction.\n\nThese results suggest that AI cognitive rehabilitation platforms allowing real-time personalization and remote monitoring provide clinical value on par with conventional treatments.",
-                "authors": "Suebeen Kim, Si-Woon Park, <b>Taeksoo Jeong</b>, Min-Soo Kang, Doo Young Kim*",
+                "authors": "Suebeen Kim, Si-Woon Park, <b><u>Taeksoo Jeong</u></b>, Min-Soo Kang, Doo Young Kim*",
                 "statusKey": "published"
             },
             {
@@ -340,7 +340,7 @@
                 "status": "Published",
                 "doi": "https://www.mdpi.com/2227-9032/13/24/3225",
                 "summary": "Digital exclusion and technology anxiety remain significant barriers to the practical application of cognitive interventions for the elderly. This clinical protocol paper proposes a multi-agent generative AI framework with a Coach–Teacher–Companion (CTC) structure to address these limitations.\n\nThe framework is designed to naturally integrate cognitive training into daily life and provide simultaneous cognitive, behavioral, and emotional support through adaptive difficulty adjustment and emotional monitoring. It systematically presents methodological and ethical safeguards for clinical application, including assessments for digital literacy (MDPQ-16), technology anxiety (CARS), and emotional safety (PANAS).\n\nDesigned to evaluate **usability (SUS), user experience (UEQ-S), adherence, emotional stability, and key cognitive indicators (MMSE, TMT, Digit Span)** through a 6-week pilot feasibility study protocol (n=14), this study provide initial evidence for the structural feasibility of clinical application of generative AI-based cognitive intervention for the elderly.",
-                "authors": "<b>Taeksoo Jeong</b><sup>†</sup>, Geonhwi Hwang<sup>†</sup>, Doo Young Kim*",
+                "authors": "<b><u>Taeksoo Jeong</u></b><sup>†</sup>, Geonhwi Hwang<sup>†</sup>, Doo Young Kim*",
                 "statusKey": "published"
             },
             {
@@ -351,7 +351,7 @@
                 "status": "Published",
                 "doi": "https://doi.org/10.5535/arm.250060",
                 "summary": "This preliminary study evaluates the clinical feasibility and usability of AI-based mobile cognitive telerehabilitation. 13 participants, including stroke patients and older adults with Mild Cognitive Impairment (MCI), underwent a 6-week, 24-session AI self-operated cognitive rehabilitation program.\n\nMMSE scores improved significantly compared to pre-intervention, with overall improvement trends in Digit Span and Trail Making Test. While product quality and satisfaction were high in the overall usability assessment, the 'tolerance for error' domain was relatively low, highlighting the need for UI/UX improvements considering the elderly and digitally vulnerable populations.\n\nThis study shows that AI-based cognitive telerehabilitation, feasible without constant therapist intervention, is safe and practicable in real clinical environments and has potential effects on cognitive function improvement. It is significant in presenting the importance of usability-centered design amidst the expansion of digital therapeutics and telerehabilitation.",
-                "authors": "Suebeen Kim, Doo Young Kim, Si-Woon Park*, Namo Jeon, <b>Taeksoo Jeong</b>, Min-Soo Kang, Sangwook Park",
+                "authors": "Suebeen Kim, Doo Young Kim, Si-Woon Park*, Namo Jeon, <b><u>Taeksoo Jeong</u></b>, Min-Soo Kang, Sangwook Park",
                 "statusKey": "published"
             },
             {
@@ -362,7 +362,7 @@
                 "status": "Published",
                 "doi": "https://doi.org/10.12786/bn.2026.19.e2",
                 "summary": "This pilot study investigated the association between Short-Latency Afferent Inhibition (SAI)—a marker of central cholinergic function—and cognitive performance in older adults with Mild Cognitive Impairment (MCI).\n\nAmong 57 MCI patients, no significant statistical associations were found between SAI values and specific cognitive domains (MMSE, Digit Span, TMT), nor were there significant age-related differences in SAI.\n\nInterestingly, however, 21% of the participants exhibited impaired SAI despite comparable cognitive test scores. This suggests that impaired SAI may reflect early neurophysiological changes and cholinergic dysfunction that precede measurable cognitive decline. The findings highlight the potential of SAI as an early objective biomarker for neurocognitive vulnerability in the preclinical stages of dementia.",
-                "authors": "Suebeen Kim, <b>Taeksoo Jeong</b>, Sangwook Park, Doo Young Kim*",
+                "authors": "Suebeen Kim, <b><u>Taeksoo Jeong</u></b>, Sangwook Park, Doo Young Kim*",
                 "statusKey": "published"
             },
             {
@@ -373,7 +373,7 @@
                 "status": "Published",
                 "doi": "https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2026.1813694/full",
                 "summary": "This randomized controlled trial evaluated the clinical efficacy of Zenicog®, an AI-driven, self-guided, home-based cognitive rehabilitation program for older adults with Mild Cognitive Impairment (MCI). The intervention was designed as an accessible alternative to conventional clinic-based therapy in response to the growing need for scalable cognitive care in aging populations.\n\nSeventy participants were recruited, and 62 were included in the final analysis. Using a delayed-treatment parallel randomized design with an exploratory crossover phase, the intervention group completed a five-week home program consisting of 24 sessions. For the primary outcome, Global Cognitive Function measured by K-MMSE2, the intervention group showed significantly higher scores than the control group at the end of Period 1 (median 28.0 vs. 26.0, p < 0.001). Clinical success, defined as K-MMSE2 >= 27, was achieved by 93.9% of the intervention group versus 0% of the control group.\n\nNo significant between-group differences were observed in domain-specific cognitive tests such as Digit Span and TMT. However, usability and satisfaction were high at 4.5/5 or above, and no participants dropped out because of adverse effects. These findings suggest that minimally supervised AI-driven telerehabilitation can be a feasible and scalable strategy for improving global cognitive function in patients with MCI.",
-                "authors": "Minsong Kim, Doo Young Kim, <b>Taeksoo Jeong</b>, Si-Woon Park*",
+                "authors": "Minsong Kim, Doo Young Kim, <b><u>Taeksoo Jeong</u></b>, Si-Woon Park*",
                 "statusKey": "published"
             }
         ],
