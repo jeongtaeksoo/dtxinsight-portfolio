@@ -7,7 +7,7 @@ const NarrativeScroll = () => {
     const items = t('timeline.items', { returnObjects: true }) || [];
 
     return (
-        <section className="py-16">
+        <section id="timeline" className="scroll-mt-28 border-t border-border py-16">
             <div className="flex items-center gap-4 mb-10">
                 <h2 className="text-3xl font-bold text-text">{t('timeline.title')}</h2>
                 <div className="h-px flex-grow bg-gradient-to-r from-border to-transparent" />

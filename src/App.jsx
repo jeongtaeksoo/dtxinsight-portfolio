@@ -13,11 +13,11 @@ function App() {
     <Layout>
       <Hero />
       <About />
-      <DigitalHealthProjects />
-      <Skills />
+      <NarrativeScroll />
       <ResearchProjects />
       <Publications />
-      <NarrativeScroll />
+      <DigitalHealthProjects />
+      <Skills />
       <DeferredBlogSection />
     </Layout>
   );
