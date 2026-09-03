@@ -6,7 +6,6 @@
         "about": "소개",
         "timeline": "타임라인",
         "research": "연구실적",
-        "innovation": "사례",
         "publications": "논문",
         "contact": "커피챗",
         "blog": "글",
@@ -37,7 +36,6 @@
             "#헬스케어AI",
             "#AI프로토타이핑"
         ],
-        "primaryCta": "대표 사례 보기",
         "secondaryCta": "커피챗",
         "profileLabel": "소속",
         "orcidCta": "ORCID",
@@ -225,35 +223,6 @@
             "evidence": "근거"
         },
         "evidenceCta": "근거 보기"
-    },
-    "innovation": {
-        "label": "대표 사례",
-        "title": "휘와수: 고령자 인지중재를 위한 생성형 AI 구조화",
-        "description": "휘와수는 고령자의 인지 저하와 디지털 배제를 줄이기 위해 시작한 대표 사례입니다. Coach-Teacher-Companion 3중 에이전트 구조로 일상 속 인지 훈련 경험을 설계하고, 연구 프로토콜과 실제 사용 흐름을 함께 고려했습니다.",
-        "featureTitles": [
-            "Coach",
-            "Teacher",
-            "Companion"
-        ],
-        "features": [
-            "목표와 난이도를 조율하는 운영 레이어",
-            "훈련 과제를 설명하고 학습 흐름을 유지하는 교육 레이어",
-            "정서적 지속성과 일상 맥락을 보조하는 동반 레이어"
-        ],
-        "proofTitle": "사례 근거",
-        "proofItems": [
-            "고령자 친화적 인터페이스와 임상 적용 프로토콜을 함께 고려",
-            "Hokkaido University 연구자와 공동 창시한 프레임워크",
-            "MDPI Healthcare 공동 제1저자 논문으로 정리",
-            "2026 제16회 ICT콤플렉스 글로벌 피우다 프로젝트 결선 진출 및 수행중\n2026.05 - 현재 | hwiwasoo\n정택수(팀장) · 황건휘(홋카이도대 박사과정) · 이운주 MD(오사카 이클리닉 원장) · 김수빈(가톨릭관동대 의대) · 안규진 MS(성균관대)"
-        ],
-        "cta": "프로젝트 보기",
-        "problemLabel": "문제 정의",
-        "problem": "고령자 인지중재는 지속성, 기술 불안, 디지털 접근성 문제를 함께 해결해야 합니다.",
-        "roleLabel": "나의 역할",
-        "role": "임상 프로토콜 관점과 AI 프로토타이핑 관점을 연결해 개입 구조와 검증 흐름을 정리했습니다.",
-        "outcomeLabel": "산출물",
-        "outcome": "공동 제1저자 논문과 함께, 생성형 AI를 단순 챗봇이 아닌 인지중재 구조로 설명하는 프레임워크를 제안했습니다."
     },
     "publications": {
         "title": "논문",

@@ -6,7 +6,6 @@
         "about": "About",
         "timeline": "Timeline",
         "research": "Projects",
-        "innovation": "Case",
         "publications": "Publications",
         "contact": "Coffee Chat",
         "blog": "Writing",
@@ -37,7 +36,6 @@
             "#HealthcareAI",
             "#AIPrototyping"
         ],
-        "primaryCta": "See featured case",
         "secondaryCta": "Coffee Chat",
         "profileLabel": "Affiliation",
         "orcidCta": "ORCID",
@@ -225,35 +223,6 @@
             "evidence": "Evidence"
         },
         "evidenceCta": "View evidence"
-    },
-    "innovation": {
-        "label": "Featured Case Study",
-        "title": "hwiwasoo: structuring generative AI for cognitive intervention",
-        "description": "hwiwasoo is a featured case study that began with the goal of reducing cognitive decline and digital exclusion in older adults. It uses a Coach-Teacher-Companion triple-agent structure to connect everyday cognitive training, study protocol thinking, and real-use flow.",
-        "featureTitles": [
-            "Coach",
-            "Teacher",
-            "Companion"
-        ],
-        "features": [
-            "An operations layer that adjusts goals and difficulty",
-            "An education layer that explains tasks and keeps training coherent",
-            "A companion layer that supports emotional continuity and everyday context"
-        ],
-        "proofTitle": "Case evidence",
-        "proofItems": [
-            "Senior-friendly interface thinking and clinical protocol design considered together",
-            "Framework co-founded with a researcher at Hokkaido University",
-            "Published as a co-first-author MDPI Healthcare paper",
-            "2026 16th ICT Complex Global Piuda Project finalist and ongoing\n2026.05 - Present | hwiwasoo\nTaeksoo Jeong (Team Lead) · Geonhwi Hwang (PhD Student, Hokkaido Univ.) · Woonju Lee, MD (Director, Osaka iClinic) · Subin Kim (Medical Student, Catholic Kwandong Univ.) · Gyujin Ahn, MS (SKKU)"
-        ],
-        "cta": "View project",
-        "problemLabel": "Problem",
-        "problem": "Cognitive interventions for older adults must address continuity, technology anxiety, and digital access together.",
-        "roleLabel": "My role",
-        "role": "I connected clinical protocol thinking with AI prototyping to clarify the intervention structure and validation flow.",
-        "outcomeLabel": "Output",
-        "outcome": "The work became a co-first-author paper and a framework for explaining generative AI as structured cognitive support rather than a generic chatbot."
     },
     "publications": {
         "title": "Publications",

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { ArrowRight } from 'lucide-react';
 import { OrcidIcon } from './Icons';
 import profileImg from '../assets/profile_id_photo.webp';
 
@@ -63,17 +62,6 @@ const Hero = () => {
           ) : null}
 
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-            <a
-              href="#innovation"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('#innovation');
-              }}
-              className="inline-flex items-center gap-2 border-b border-text pb-1 text-sm font-semibold text-text transition-colors hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4"
-            >
-              {t('hero.primaryCta')}
-              <ArrowRight size={16} />
-            </a>
             <a
               href="#contact"
               onClick={(e) => {

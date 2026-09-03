@@ -34,7 +34,6 @@ const Header = () => {
         { name: t('nav.timeline'), href: '#timeline' },
         { name: t('nav.research'), href: '#research' },
         { name: t('nav.publications'), href: '#publications' },
-        { name: t('nav.innovation'), href: '#innovation' },
         { name: t('nav.capabilities'), href: '#capabilities' },
         { name: t('nav.blog'), href: '#blog' },
     ];
