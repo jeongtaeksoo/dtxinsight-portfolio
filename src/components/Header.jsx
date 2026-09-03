@@ -35,7 +35,6 @@ const Header = () => {
         { name: t('nav.research'), href: '#research' },
         { name: t('nav.publications'), href: '#publications' },
         { name: t('nav.capabilities'), href: '#capabilities' },
-        { name: t('nav.blog'), href: '#blog' },
     ];
 
     const handleNavClick = (e, href) => {

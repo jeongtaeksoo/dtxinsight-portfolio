@@ -8,7 +8,6 @@
         "research": "연구실적",
         "publications": "논문",
         "contact": "커피챗",
-        "blog": "글",
         "highlights": "주요 성과",
         "projects": "프로젝트",
         "capabilities": "역량"
@@ -373,21 +372,6 @@
         },
         "eyebrow": "Collaboration Capabilities",
         "intro": "단순한 스킬 목록이 아니라, 병원 실증과 제품 실행 사이에서 실제로 맡을 수 있는 역할입니다."
-    },
-    "blogSection": {
-        "label": "Writing",
-        "recentPosts": "최근 글",
-        "viewSection": "글 섹션 보기",
-        "allPosts": "전체 글 목록",
-        "viewPost": "글 보기",
-        "backToList": "전체 글 목록",
-        "closeArchive": "블로그 목록 닫기",
-        "filterAll": "전체",
-        "filteredEmptyTitle": "선택한 카테고리의 글이 아직 없습니다.",
-        "filteredEmptyDescription": "다른 키워드를 선택하면 해당 카테고리 글만 따로 볼 수 있습니다.",
-        "emptyTitle": "아직 게시된 글이 없습니다.",
-        "emptyDescription": "곧 첫 번째 글이 이 공간에 올라올 예정입니다.",
-        "postFallback": "Post"
     },
     "contact": {
         "eyebrow": "커피챗",

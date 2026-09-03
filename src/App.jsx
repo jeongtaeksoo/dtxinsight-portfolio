@@ -4,7 +4,6 @@ import NarrativeScroll from './components/NarrativeScroll'
 import ResearchProjects from './components/ResearchProjects'
 import Publications from './components/Publications'
 import Skills from './components/Skills'
-import DeferredBlogSection from './components/DeferredBlogSection'
 import Layout from './components/Layout'
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
       <ResearchProjects />
       <Publications />
       <Skills />
-      <DeferredBlogSection />
     </Layout>
   );
 }

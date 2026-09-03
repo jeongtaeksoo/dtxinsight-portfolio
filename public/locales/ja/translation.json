@@ -8,7 +8,6 @@
         "research": "研究実績",
         "publications": "論文",
         "contact": "コーヒーチャット",
-        "blog": "記事",
         "highlights": "ハイライト",
         "projects": "プロジェクト",
         "capabilities": "強み"
@@ -373,21 +372,6 @@
         },
         "eyebrow": "Collaboration Capabilities",
         "intro": "単なるスキル一覧ではなく、病院実証と製品実行の間で実際に担える役割です。"
-    },
-    "blogSection": {
-        "label": "Writing",
-        "recentPosts": "最近の記事",
-        "viewSection": "記事セクションを見る",
-        "allPosts": "記事一覧",
-        "viewPost": "記事を見る",
-        "backToList": "記事一覧",
-        "closeArchive": "ブログ一覧を閉じる",
-        "filterAll": "すべて",
-        "filteredEmptyTitle": "このカテゴリにはまだ記事がありません。",
-        "filteredEmptyDescription": "別のキーワードを選ぶと、そのカテゴリの記事だけを表示できます。",
-        "emptyTitle": "まだ公開された記事がありません。",
-        "emptyDescription": "最初の記事がまもなくこの場所に表示されます。",
-        "postFallback": "記事"
     },
     "contact": {
         "eyebrow": "コーヒーチャット",
